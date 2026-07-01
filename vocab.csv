@@ -1,0 +1,1076 @@
+schedule  (Let's schedule a meeting.)	lịch, sắp xếp lịch  |  🇺🇸 🇬🇧 /ˈskɛ.dʒu.əl/	Meetings	B1
+colleague  (I'll check with my colleague.)	đồng nghiệp  |  🇺🇸 /ˈkɑliɡ/  🇬🇧 /ˈkɒliːɡ/	Meetings	B1
+issue  (There's an issue with the build.)	vấn đề, lỗi  |  🇺🇸 /ˈɪʃ(j)u/  🇬🇧 /ˈɪsjuː/	Tech	B1
+feature  (This feature needs testing.)	tính năng  |  🇺🇸 /ˈfitʃɚ/  🇬🇧 /ˈfiːtʃə/	Tech	B1
+actually  (Actually, I think we should wait.)	thực ra, thật ra  |  🇺🇸 /ˈæk.(t)ʃu.ə.li/  🇬🇧 /-ɪ/	Vocabulary	B1
+focus  (Let's focus on the core issue.)	tập trung  |  🇺🇸 🇬🇧 /ˈfəʊ.kəs/	Vocabulary	B1
+process  (The build process takes 5 minutes.)	quy trình, quá trình  |  🇺🇸 /ˈpɹɑsɛs/  🇬🇧 /ˈpɹəʊsɛs/	Tech	B1
+priority  (What's the priority here?)	ưu tiên  |  🇺🇸 🇬🇧 /pɹaɪˈɒɹɨti/	Vocabulary	B1
+specific  (Can you be more specific?)	cụ thể  |  🇺🇸 🇬🇧 /spəˈsɪf.ɪk/	Vocabulary	B1
+environment  (Check the staging environment.)	môi trường  |  🇺🇸 🇬🇧 /-mɪnt/	Tech	B1
+develop  (We're developing a new feature.)	phát triển  |  🇺🇸 /dɪˈvɛ.ləp/  🇬🇧 /dɛˈvɛ.ləp/	Tech	B1
+implement  (Let's implement this next sprint.)	triển khai, thực hiện  |  🇺🇸 🇬🇧 /ˈɪmpləmənt/	Tech	B1
+requirement  (The requirements are unclear.)	yêu cầu  |  🇺🇸 🇬🇧 /ɹɪˈkwʌɪəm(ə)nt/	Tech	B1
+scenario  (In this scenario, we need to...)	kịch bản, tình huống  |  🇺🇸 /sɪˈnæɹioʊ/  🇬🇧 /səˈneːɹi.əʉ/	Vocabulary	B1
+available  (I'm available after 3pm.)	rảnh, có thể, có sẵn  |  🇺🇸 🇬🇧 /əˈveɪləb(ə)l/	Meetings	B1
+suggest  (I'd suggest a different approach.)	đề xuất, gợi ý  |  🇺🇸 /sə(ɡ)ˈdʒɛst/  🇬🇧 /səˈdʒɛst/	Vocabulary	B1
+concern  (My concern is the deadline.)	lo ngại, mối lo  |  🇺🇸 /kənˈsɝn/  🇬🇧 /kənˈsɜːn/	Meetings	B1
+basically  (Basically, we need to refactor.)	về cơ bản  |  🇺🇸 🇬🇧 /ˈbeɪsɪk(ə)li/	Vocabulary	B1
+obviously  (Obviously that won't work.)	rõ ràng là  |  🇺🇸 /ˈɑ(b).vi.əs.li/  🇬🇧 /ˈɒ(b).vɪəs.li/	Vocabulary	B1
+architecture  (The architecture needs redesign.)	kiến trúc  |  🇺🇸 /ˈɑɹkɪtɛktʃɚ/  🇬🇧 /ˈɑː.kɪ.ˌtɛk.tʃə/	Tech	B1
+infrastructure  (We need to improve the infrastructure.)	cơ sở hạ tầng  |  🇺🇸 🇬🇧 /ˈɪnfɹəˌstɹʌk(t)ʃɚ/	Tech	B1
+performance  (Performance is degrading.)	hiệu suất  |  🇺🇸 [pɚ.ˈfɔɹ.məns]  🇬🇧 [pə.ˈfɔː.məns]	Tech	B1
+repository  (Clone the repository first.)	kho code, repo  |  🔊 /rɪˈpɒzɪtɔːri/ — rih-POZ-ih-tor-ee, nhấn âm 2	Tech	B1
+integrate  (We need to integrate this API.)	tích hợp  |  🇺🇸 🇬🇧 /ˈɪntəɡɹeɪt/	Tech	B1
+estimate  (What's your estimate?)	ước tính (danh từ)  |  🇺🇸 🇬🇧 /ˈɛstɨmɨt/	Meetings	B1
+previous  (The previous version had a bug.)	trước đó, trước đây  |  🇺🇸 /ˈpɹivi.əs/  🇬🇧 /ˈpɹiːvɪəs/	Vocabulary	B1
+comfortable  (Are you comfortable with this?)	thoải mái, OK với cái này  |  🇺🇸 🇬🇧 /ˈkʌm.fə.tə.bəl/	Meetings	B1
+definitely  (Definitely, let's do that.)	chắc chắn  |  🇺🇸 🇬🇧 /ˈdɛf.nɪt.li/	Vocabulary	B1
+interesting  (That's an interesting approach.)	thú vị  |  🇺🇸 /ˈɪnt(ʃ)ɹɛstɪŋ/  🇬🇧 /ˈɪnt(ə)ɹɛstɪŋ/	Vocabulary	B1
+Yesterday I worked on [X].	Hôm qua tôi đã làm [X]. — standup	Meetings	B1
+Today I'm going to [X].	Hôm nay tôi sẽ làm [X]. — standup	Meetings	B1
+I'm blocked by [X]. Could someone help?	Tôi đang bị chặn bởi [X]. Ai giúp được không? — standup	Meetings	B1
+No blockers today.	Hôm nay không có vấn đề gì. — standup	Meetings	B1
+I'll have this done by end of day.	Tôi sẽ xong trước cuối ngày. — cam kết deadline	Meetings	B1
+I'll need more time to investigate.	Tôi cần thêm thời gian để điều tra. — khi chưa rõ nguyên nhân	Meetings	B1
+Could you clarify what you mean by [X]?	Bạn có thể giải thích rõ hơn về [X] không? — hỏi làm rõ	Phrases	B1
+Sorry, I didn't catch that. Could you repeat?	Xin lỗi, tôi không nghe rõ. Bạn có thể nhắc lại không?	Phrases	B1
+What's the expected behavior here?	Hành vi mong đợi ở đây là gì? — hỏi về requirements	Phrases	B1
+Could you walk me through [X]?	Bạn có thể giải thích từng bước về [X] không?	Phrases	B1
+What do you mean exactly?	Ý bạn chính xác là gì?	Phrases	B1
+Just to confirm, you're saying [X]?	Để xác nhận, ý bạn là [X] đúng không?	Phrases	B1
+Got it.	Hiểu rồi. — xác nhận ngắn gọn	Phrases	B1
+Makes sense. / That makes sense.	Hợp lý. — đồng ý / đã hiểu	Phrases	B1
+I'll look into that and get back to you.	Tôi sẽ xem xét và phản hồi lại. — khi cần thêm thời gian	Phrases	B1
+I'll take that as an action item.	Tôi sẽ ghi đó là việc cần làm. — sau meeting	Phrases	B1
+Sounds good to me.	Nghe có vẻ ổn. — đồng ý nhẹ	Phrases	B1
+I'm on the same page.	Tôi hiểu đồng nhất với bạn.	Phrases	B1
+Let me double-check and confirm.	Để tôi kiểm tra lại và xác nhận.	Phrases	B1
+This looks good to me. / LGTM.	Trông ổn với tôi. / Looks Good To Me — code review approval	Phrases	B1
+Could we add a comment here to explain [X]?	Chúng ta có thể thêm comment ở đây giải thích [X] không? — code review	Phrases	B1
+I have a concern about [X] — [lý do].	Tôi có lo ngại về [X] — [lý do]. — code review / meeting	Phrases	B1
+What's the reason for this approach?	Lý do cho cách tiếp cận này là gì? — code review	Phrases	B1
+I'd suggest [alternative] instead.	Tôi đề xuất [phương án khác] thay thế. — code review	Phrases	B1
+Minor nit: [small issue].	Góp ý nhỏ: [vấn đề nhỏ]. — code review, không quan trọng lắm	Phrases	B1
+I'd like to suggest [X].	Tôi muốn đề xuất [X]. — meetings	Meetings	B1
+I think we should consider [X].	Tôi nghĩ chúng ta nên xem xét [X]. — meetings	Meetings	B1
+I see your point, but my concern is [X].	Tôi hiểu quan điểm của bạn, nhưng lo ngại của tôi là [X].	Meetings	B1
+Let me push back on that a bit.	Để tôi phản biện điều đó một chút. — lịch sự không đồng ý	Meetings	B1
+That's a valid point. However, [X].	Đó là điểm hợp lệ. Tuy nhiên, [X]. — đồng ý một phần	Meetings	B1
+We might want to think about [X].	Chúng ta có thể muốn nghĩ về [X]. — đề xuất nhẹ nhàng	Meetings	B1
+Let's circle back on this later.	Hãy quay lại vấn đề này sau. — hoãn thảo luận	Meetings	B1
+Let's table that for now.	Hãy gác cái đó lại.  |  🔊 "table" trong Mỹ = postpone, không phải "đưa lên bàn"	Meetings	B1
+Let's timebox this to [X] minutes.	Hãy giới hạn thời gian cho cái này là [X] phút.	Meetings	B1
+Let's take this offline.	Hãy thảo luận riêng ngoài cuộc họp này.	Meetings	B1
+Can we follow up on this async?	Chúng ta có thể theo dõi cái này qua Slack/email không?	Meetings	B1
+I'll send a summary after the meeting.	Tôi sẽ gửi tóm tắt sau cuộc họp.	Meetings	B1
+Could you...?	Bạn có thể...?  |  🔊 lịch sự hơn "Can you" — dùng khi nhờ vả	Phrases	B1
+Would it be possible to...?	Liệu có thể...? — formal, nhờ điều quan trọng	Phrases	B1
+I was wondering if...	Tôi đang tự hỏi liệu... — nhẹ nhàng, không áp đặt	Phrases	B1
+We might want to...	Chúng ta có thể muốn... — đề xuất không chắc chắn	Phrases	B1
+It might be worth...	Có thể đáng... — gợi ý khéo léo	Phrases	B1
+I'd suggest...	Tôi đề xuất... — chuyên nghiệp	Phrases	B1
+I'd recommend...	Tôi khuyến nghị... — tự tin hơn "I'd suggest"	Phrases	B1
+cache  (Clear the cache and try again.)	cache, bộ nhớ đệm  |  🇺🇸 🇬🇧 /kæʃ/	Tech	B1
+queue  (The message queue is backed up.)	hàng đợi  |  🇺🇸 /kju/  🇬🇧 /kjuː/	Tech	B1
+deploy  (We're ready to deploy to production.)	triển khai (lên server)  |  🇺🇸 🇬🇧 /dɪˈplɔɪ/	Tech	B1
+deployment  (The deployment failed at step 3.)	việc triển khai  |  🇺🇸 🇬🇧 /dɪˈplɔɪmənt/	Tech	B1
+debug  (I'm still debugging this issue.)	debug, tìm và sửa lỗi  |  🇺🇸 🇬🇧 /diːˈbʌɡ/	Tech	B1
+refactor  (We need to refactor this module.)	viết lại code cho sạch hơn  |  🔊 /riːˈfæktər/ — ree-FAK-ter, nhấn âm 2	Tech	B1
+parameter  (What does this parameter do?)	tham số  |  🇺🇸 🇬🇧 /pəˈɹæm.ɪ.tə/	Tech	B1
+exception  (An exception was thrown.)	ngoại lệ, lỗi runtime  |  🇺🇸 🇬🇧 /əkˈsɛpʃən/	Tech	B1
+boolean  (Return a boolean value.)	boolean, đúng/sai  |  🔊 /ˈbuːliən/ — BOO-lee-un, không phải "bo-lean"	Tech	B1
+integer  (Parse this string as an integer.)	số nguyên  |  🇺🇸 🇬🇧 /ˈɪn.tɪ.d͡ʒə(ɹ)/	Tech	B1
+schema  (Update the database schema.)	cấu trúc dữ liệu  |  🇺🇸 🇬🇧 /ˈskiːmə/	Tech	B1
+syntax  (There's a syntax error on line 42.)	cú pháp  |  🇺🇸 🇬🇧 /ˈsɪn.tæks/	Tech	B1
+library  (Install this library first.)	thư viện (code)  |  🇺🇸 /ˈlaɪbɹəɹi/  🇬🇧 /ˈlaɪbɹi/	Tech	B1
+framework  (Which framework are you using?)	framework, bộ khung  |  🇺🇸 🇬🇧 /ˈfɹeɪm.wɜːk/	Tech	B1
+algorithm  (This algorithm is O(n log n).)	thuật toán  |  🇺🇸 /ˈælɡəˌɹɪðm̩/  🇬🇧 /ˈælɡəɹɪðm̩/	Tech	B1
+asynchronous  (Use asynchronous calls here.)	bất đồng bộ  |  🇺🇸 🇬🇧 /eɪˈsɪŋkɹənəs/	Tech	B1
+authentication  (Set up OAuth authentication.)	xác thực  |  🔊 /ɔːˌθentɪˈkeɪʃən/ — aw-then-tih-KAY-shun, nhấn âm 4	Tech	B1
+configuration  (Update the configuration file.)	cấu hình  |  🔊 /kənˌfɪɡjʊˈreɪʃən/ — kun-fig-yuh-RAY-shun, nhấn âm 4	Tech	B1
+documentation  (Write the documentation first.)	tài liệu  |  🇺🇸 🇬🇧 /ˌdɒkjʊmənˈteɪʃən/	Tech	B1
+dependency  (Upgrade the dependency.)	thư viện phụ thuộc  |  🇺🇸 🇬🇧 /dɪˈpɛndənsi/	Tech	B1
+migration  (Run the database migration.)	migration, di chuyển dữ liệu  |  🇺🇸 🇬🇧 /maɪˈɡɹeɪʃ(ə)n/	Tech	B1
+deprecated  (This method is deprecated.)	đã lỗi thời, không dùng nữa  |  🇺🇸 🇬🇧 /ˈdɛp.ɹə.keɪt.ɪd/	Tech	B1
+middleware  (Add auth middleware to the pipeline.)	middleware, tầng trung gian  |  🔊 /ˈmɪdlweər/ — MID-ul-wair, nhấn âm 1	Tech	B1
+concurrent  (Handle concurrent requests.)	đồng thời, song song  |  🇺🇸 🇬🇧 /kɒŋˈkʌɹənt/	Tech	B1
+scalable  (Is this architecture scalable?)	có thể mở rộng  |  🔊 /ˈskeɪləbl/ — SKAY-luh-bul, nhấn âm 1	Tech	B1
+payload  (Check the request payload.)	dữ liệu gửi/nhận  |  🇺🇸 🇬🇧 /ˈpeɪloʊd/	Tech	B1
+timeout  (The request hit a timeout.)	hết thời gian chờ  |  🇺🇸 🇬🇧 /ˈtaɪm.aʊt/	Tech	B1
+variable  (Declare a variable.)	biến  |  🇺🇸 /ˈvæɹ.i.ə.bl̩/  🇬🇧 /ˈvɛəɹ.i.ə.bl̩/	Tech	B1
+temporary  (This is a temporary fix.)	tạm thời  |  🇺🇸 /ˈtɛmpəˌɹɛɹi/  🇬🇧 /ˈtɛmpəɹi/	Vocabulary	B1
+appropriate  (Is this approach appropriate?)	phù hợp, thích hợp  |  🔊 /əˈproʊpriɪt/ — uh-PROH-pree-it, nhấn âm 2	Vocabulary	B1
+alternative  (Do you have an alternative?)	phương án thay thế  |  🇺🇸 /ɔl.ˈtɝ.nə.tɪv/  🇬🇧 /ɒl.ˈtɜː(ɹ).nə.tɪv/	Vocabulary	B1
+automatically  (It runs automatically every night.)	tự động  |  🇺🇸 🇬🇧 /ˈɔːtəʊˌmæt.ɪk(.ə)li/	Tech	B1
+eventually  (It will eventually cause issues.)	cuối cùng, dần dần  |  🇺🇸 /ɪ.ˈvɛn.t͡ʃu.li/  🇬🇧 /ɪ.ˈvɛn.tjʊ.li/	Vocabulary	B1
+immediately  (Fix this immediately.)	ngay lập tức  |  🇺🇸 🇬🇧 /əˈmiːdi.ətli/	Vocabulary	B1
+efficiently  (We need to do this more efficiently.)	hiệu quả  |  🔊 /ɪˈfɪʃəntli/ — ih-FISH-unt-lee, nhấn âm 2	Vocabulary	B1
+significant  (A significant performance drop.)	đáng kể, quan trọng  |  🇺🇸 🇬🇧 /sɪɡˈnɪ.fɪ.kənt/	Vocabulary	B1
+determine  (We need to determine the root cause.)	xác định  |  🇺🇸 /dɪˈtɝmɪn/  🇬🇧 /dɪˈtɜːmɪn/	Tech	B1
+implementation  (The implementation is complete.)	việc triển khai, cách làm  |  🔊 /ˌɪmpləmenˈteɪʃən/ — im-pluh-men-TAY-shun, nhấn âm 4	Tech	B1
+relatively  (This is relatively straightforward.)	tương đối  |  🇺🇸 🇬🇧 [ˈɹɛl.ə.tʰɪv.li]	Vocabulary	B1
+orchestration  (Container orchestration with K8s.)	điều phối (containers)  |  🔊 /ˌɔːrkɪˈstreɪʃən/ — or-kih-STRAY-shun, nhấn âm 3	Tech	B1
+Just a heads up: [X].	Chỉ để báo trước: [X]. — thông báo sớm trước khi có vấn đề	Slack	B1
+Any updates on [X]?	Có cập nhật gì về [X] không? — check tiến độ qua Slack	Slack	B1
+Still on track for [deadline]?	Vẫn đúng tiến độ cho [deadline] không?	Slack	B1
+ETA on this?	Dự kiến xong khi nào? — Estimated Time of Arrival	Slack	B1
+Working on it.	Đang làm. — trả lời nhanh khi bị hỏi	Slack	B1
+Looping in [person] here.	Kéo [người] vào đây để họ nắm được. — add người vào thread	Slack	B1
+Quick question: [X]?	Câu hỏi nhanh: [X]? — mở đầu khi hỏi ngắn	Slack	B1
+Just checking in on [X].	Chỉ check xem [X] thế nào. — follow up nhẹ nhàng	Slack	B1
+This is blocking me — [X].	Cái này đang chặn tôi — [X]. — báo blocker qua Slack	Slack	B1
+Marking this as WIP.	Đánh dấu cái này là đang làm. — Work In Progress	Slack	B1
+I'll wrap up [X] by [time].	Tôi sẽ hoàn thành [X] trước [giờ]. — cam kết thời gian	Slack	B1
+Let me know if you need anything.	Cho tôi biết nếu bạn cần gì. — kết thúc message thân thiện	Slack	B1
+Happy to jump on a call if that's easier.	Sẵn sàng gọi nếu dễ hơn. — khi chat quá dài	Slack	B1
+Following up on my previous message.	Theo dõi tin nhắn trước của tôi. — nhắc lại khi chưa có reply	Slack	B1
+As discussed, [X].	Như đã thảo luận, [X]. — email/Slack sau meeting	Slack	B1
+Going forward, [X].	Từ giờ trở đi, [X]. — thông báo thay đổi quy trình	Slack	B1
+I'll be OOO on [date].	Tôi sẽ nghỉ ngày [date]. — OOO = Out Of Office	Slack	B1
+Pushing this to the next sprint.	Dời cái này sang sprint sau.	Slack	B1
+Let's keep this in the backlog for now.	Hãy để cái này trong backlog tạm thời.	Slack	B1
+Reach out if you have any questions.	Liên hệ nếu có câu hỏi. — kết thúc email/message	Slack	B1
+Per our conversation, [X].	Theo cuộc trò chuyện của chúng ta, [X]. — formal follow-up	Slack	B1
++1 on that.	Tôi đồng ý. — cách đồng ý nhanh trong Slack/comment	Slack	B1
+ping me when it's done	nhắn tôi khi xong — rất thông dụng trong Slack	Slack	B1
+let's sync up on this	hãy cùng nói chuyện về cái này — đề xuất gặp/gọi ngắn	Slack	B1
+Thanks for making time for this.	Cảm ơn bạn đã dành thời gian.  |  mở đầu meeting với khách hàng — tự nhiên hơn "Thank you for your time"	Meetings	B1
+Let me pull up my screen.	Để tôi mở màn hình lên.  |  🔊 "pull up" = mở/hiện lên — dùng khi share screen trong call	Meetings	B1
+Just to make sure I understand correctly...	Để chắc chắn tôi hiểu đúng... — xác nhận lại yêu cầu khách hàng	Meetings	B1
+We'll get back to you on that by [Friday].	Chúng tôi sẽ phản hồi về vấn đề đó trước [thứ 6].  |  dùng "we" không phải "I" khi nói thay team	Meetings	B1
+How's everything going on your end?	Mọi thứ bên bạn thế nào rồi? — mở đầu meeting nhẹ nhàng, tự nhiên hơn "How about you?"	Meetings	B1
+That's a great point — let me check with my team.	Điểm hay đó — để tôi xác nhận với team.  |  câu giờ lịch sự khi không chắc câu trả lời	Meetings	B1
+Here's a quick update on [X].	Đây là cập nhật nhanh về [X]. — mở đầu Slack message báo cáo tiến độ	Meetings	B1
+I'll drop the details in the chat.	Tôi sẽ gửi chi tiết vào chat.  |  🔊 "drop" ở đây = gửi/để vào — dùng trong call khi share link	Meetings	B1
+Does that make sense so far?	Đến đây có rõ không? — hỏi sau khi giải thích, lịch sự hơn "Do you understand?"	Meetings	B1
+I'll keep you posted.	Tôi sẽ cập nhật cho bạn biết.  |  = "I'll keep you in the loop" — kết thúc meeting/message	Meetings	B1
+We should have it resolved by [tomorrow].	Chúng tôi sẽ giải quyết xong trước [ngày mai].  |  "should have it resolved" nghe chuyên nghiệp hơn "will fix it"	Meetings	B1
+It's just a small delay.	Chỉ là delay nhỏ thôi. — trấn an khách hàng khi bị hỏi về timeline	Meetings	B1
+deadline  (We need to meet the deadline.)	thời hạn, hạn chót  |  🇺🇸 🇬🇧 /ˈdɛdˌlaɪn/	Vocabulary	B1
+feedback  (Please share your feedback.)	phản hồi, nhận xét  |  🇺🇸 🇬🇧 /ˈfiːdˌbæk/	Vocabulary	B1
+pipeline  (The CI/CD pipeline failed.)	quy trình tự động  |  🇺🇸 🇬🇧 /ˈpaɪpˌlaɪn/	Tech	B1
+bottleneck  (This is a bottleneck in our system.)	nút thắt, điểm nghẽn  |  🔊 /ˈbɒtlnek/ — BOT-ul-nek, nhấn âm 1	Tech	B1
+Can you take a look at this?	Bạn có thể xem qua cái này không? — nhờ nhẹ qua Slack	Slack	B1
+Let me know if you're blocked.	Cho tôi biết nếu bạn bị block. — check in teammate qua Slack	Slack	B1
+I'll defer to your judgment on this.	Tôi để bạn quyết định cái này. — nhường quyết định trong meeting	Meetings	B1
+Just to recap what we agreed on:	Tóm tắt lại những gì chúng ta đã đồng ý: — kết thúc meeting	Meetings	B1
+Does this approach make sense?	Cách tiếp cận này có hợp lý không? — hỏi ý kiến trong code review	Phrases	B1
+I'll flag this as a potential risk.	Tôi sẽ đánh dấu đây là rủi ro tiềm ẩn. — code review / planning	Phrases	B1
+achieve  (We achieved our sprint goal.)	đạt được, hoàn thành  |  🇺🇸 🇬🇧 /əˈtʃiːv/	Vocabulary	B1
+adapt  (We need to adapt our approach.)	thích nghi, điều chỉnh  |  🇺🇸 🇬🇧 /əˈdæpt/	Vocabulary	B1
+analyze  (Let me analyze the logs.)	phân tích  |  🇺🇸 🇬🇧 /ˈæn.ə.laɪz/	Vocabulary	B1
+apply  (Apply the patch and restart.)	áp dụng  |  🇺🇸 🇬🇧 /əˈplaɪ/	Vocabulary	B1
+confirm  (Can you confirm the deployment?)	xác nhận  |  🇺🇸 /kənˈfɝm/  🇬🇧 /kənˈfɜːm/	Vocabulary	B1
+evaluate  (We need to evaluate the options.)	đánh giá  |  🇺🇸 /ɪ̈ˈvaljəˌweɪt/  🇬🇧 /ɨˈvaljʊeɪt/	Vocabulary	B1
+identify  (Identify the root cause first.)	xác định, tìm ra  |  🇺🇸 🇬🇧 /aɪˈdɛn.tɪ.faɪ/	Vocabulary	B1
+indicate  (The logs indicate a memory leak.)	cho thấy, chỉ ra  |  🇺🇸 🇬🇧 /ˈɪndɪkeɪt/	Vocabulary	B1
+involve  (This task involves three teams.)	liên quan, bao gồm  |  🇺🇸 /ɪnˈvɑlv/  🇬🇧 /ɪnˈvɒlv/	Vocabulary	B1
+maintain  (We need to maintain backward compat.)	duy trì  |  🇺🇸 🇬🇧 /meɪnˈteɪn/	Vocabulary	B1
+modify  (Modify the config file.)	chỉnh sửa, thay đổi  |  🇺🇸 /ˈmɑdɪfaɪ/  🇬🇧 /ˈmɒdɪfaɪ/	Vocabulary	B1
+monitor  (Monitor the CPU usage.)	giám sát, theo dõi  |  🇺🇸 🇬🇧 /ˈmɒnɨtə/	Vocabulary	B1
+optimize  (We should optimize this query.)	tối ưu hóa  |  🇺🇸 /ˈɑptɪmaɪz/  🇬🇧 /ˈɒptɪmaɪz/	Vocabulary	B1
+resolve  (We resolved the issue overnight.)	giải quyết  |  🇺🇸 /ɹɪˈzɑlv/  🇬🇧 /ɹiːˈzɒlv/	Vocabulary	B1
+validate  (Validate the input before saving.)	kiểm tra tính hợp lệ  |  🇺🇸 /ˈvæl.ə.deɪt/  🇬🇧 /ˈvæl.ɪ.deɪt/	Vocabulary	B1
+verify  (Please verify the test results.)	xác minh, kiểm tra  |  🔊 /ˈverɪfaɪ/ — VER-ih-fy, nhấn âm 1	Vocabulary	B1
+generate  (This script generates the report.)	tạo ra, sinh ra  |  🇺🇸 /ˈdʒɛn.ə.ɹeɪt/  🇬🇧 /ˈdʒɛn.əɹ.eɪt/	Vocabulary	B1
+handle  (Handle the edge cases carefully.)	xử lý, giải quyết  |  🇺🇸 🇬🇧 /ˈhæn.dl/	Vocabulary	B1
+provide  (Can you provide more context?)	cung cấp  |  🇺🇸 🇬🇧 /pɹəˈvaɪd/	Vocabulary	B1
+submit  (Submit a pull request when done.)	gửi, nộp  |  🇺🇸 🇬🇧 /səbˈmɪt/	Vocabulary	B1
+accurate  (The data must be accurate.)	chính xác  |  🇺🇸 🇬🇧 /ˈæk.jə.ɹɪt/	Vocabulary	B1
+consistent  (Keep the naming consistent.)	nhất quán  |  🇺🇸 🇬🇧 /kənˈsɪstənt/	Vocabulary	B1
+efficient  (This is a more efficient solution.)	hiệu quả  |  🇺🇸 🇬🇧 /əˈfɪʃənt/	Vocabulary	B1
+flexible  (The design needs to be flexible.)	linh hoạt  |  🇺🇸 🇬🇧 /ˈflɛk.sə.bəl/	Vocabulary	B1
+minimal  (Use a minimal configuration.)	tối thiểu, nhỏ nhất  |  🇺🇸 🇬🇧 /mɪnəməl/	Vocabulary	B1
+reliable  (We need a more reliable approach.)	đáng tin cậy  |  🇺🇸 🇬🇧 /ɹɪˈlaɪəbəl/	Vocabulary	B1
+suitable  (Is this approach suitable?)	phù hợp  |  🇺🇸 🇬🇧 /ˈsuːtəbl/	Vocabulary	B1
+valid  (Is this a valid configuration?)	hợp lệ, chính xác  |  🇺🇸 🇬🇧 /ˈvælɪd/	Vocabulary	B1
+stable  (The system is now stable.)	ổn định  |  🇺🇸 🇬🇧 /ˈsteɪ.bəɫ/	Vocabulary	B1
+logical  (Is this the most logical approach?)	hợp lý, logic  |  🇺🇸 /ˈlɑdʒɪkəɫ/  🇬🇧 /ˈlɒdʒɪkəɫ/	Vocabulary	B1
+approach  (We need a different approach.)	hướng tiếp cận, cách  |  🇺🇸 /əˈpɹoʊt͡ʃ/  🇬🇧 /əˈpɹəʊt͡ʃ/	Vocabulary	B1
+aspect  (Consider all aspects of the problem.)	khía cạnh  |  🇺🇸 🇬🇧 /ˈæspɛkt/	Vocabulary	B1
+context  (We need more context here.)	ngữ cảnh, bối cảnh  |  🇺🇸 /ˈkɑːntɛkst/  🇬🇧 /ˈkɒntɛkst/	Vocabulary	B1
+criteria  (What are the acceptance criteria?)	tiêu chí  |  🇺🇸 🇬🇧 /kɹaɪˈtɪəɹ.i.ə/	Vocabulary	B1
+impact  (What is the impact on performance?)	tác động  |  🔊 /ˈɪmpækt/ — IM-pakt, nhấn âm 1 (noun)	Vocabulary	B1
+method  (Which method did you use?)	phương pháp, hàm  |  🇺🇸 🇬🇧 /ˈmɛθəd/	Vocabulary	B1
+pattern  (This is a common design pattern.)	mẫu thiết kế  |  🇺🇸 /ˈpætəɹn/  🇬🇧 /ˈpat(ə)n/	Vocabulary	B1
+scope  (That is out of scope for this sprint.)	phạm vi  |  🇺🇸 🇬🇧 /ˈskoʊp/	Vocabulary	B1
+strategy  (What is our testing strategy?)	chiến lược  |  🇺🇸 🇬🇧 /ˈstɹætədʒi/	Vocabulary	B1
+solution  (Do you have a solution in mind?)	giải pháp  |  🇺🇸 🇬🇧 /səˈl(j)uːʃən/	Vocabulary	B1
+structure  (Refactor the code structure.)	cấu trúc  |  🇺🇸 /ˈstɹʌktʃɚ/  🇬🇧 /ˈstɹʌktʃə(ɹ)/	Vocabulary	B1
+version  (Which version are you running?)	phiên bản  |  🇺🇸 /ˈvɝʒən/  🇬🇧 /ˈvɜːʃən/	Vocabulary	B1
+workflow  (Walk me through the workflow.)	quy trình làm việc  |  🇺🇸 🇬🇧 /ˈwɜːkfləʊ/	Vocabulary	B1
+target  (Our target is 99.9% uptime.)	mục tiêu  |  🇺🇸 /ˈtɑɹɡɪt/  🇬🇧 /tɑːɡɪt/	Vocabulary	B1
+allocate  (Allocate more memory to the process.)	cấp phát, phân bổ  |  🇺🇸 🇬🇧 /ˈæl.ə.keɪt/	Tech	B1
+compile  (The code fails to compile.)	biên dịch  |  🇺🇸 /kəmˈpaɪl/  🇬🇧 /kəmpʌɪl/	Tech	B1
+execute  (Execute the script manually.)	thực thi, chạy  |  🇺🇸 🇬🇧 /ˈɛksɪˌkjuːt/	Tech	B1
+filter  (Filter the results by date.)	lọc, bộ lọc  |  🇺🇸 /ˈfɪltɚ/  🇬🇧 /ˈfɪltə/	Tech	B1
+initialize  (Initialize the database on startup.)	khởi tạo  |  🔊 /ɪˈnɪʃəlaɪz/ — ih-NISH-uh-lyze, nhấn âm 2	Tech	B1
+install  (Install the dependencies first.)	cài đặt  |  🇺🇸 🇬🇧 /ɪnˈstɔːl/	Tech	B1
+merge  (Merge the feature branch into main.)	gộp, hợp nhất  |  🇺🇸 /mɝdʒ/  🇬🇧 /mɜːdʒ/	Tech	B1
+parse  (Parse the JSON response.)	phân tích cú pháp  |  🇺🇸 /pɑɹs/  🇬🇧 /pɑːz/	Tech	B1
+query  (Query the database for active users.)	truy vấn  |  🇺🇸 🇬🇧 /ˈkwɪə.ɹi/	Tech	B1
+render  (The component fails to render.)	hiển thị, vẽ  |  🇺🇸 /ˈɹɛn.dɚ/  🇬🇧 /ˈɹɛn.də/	Tech	B1
+trigger  (What triggers this event?)	kích hoạt, gây ra  |  🇺🇸 🇬🇧 /ˈtɹɪɡə/	Tech	B1
+upload  (Upload the file to S3.)	tải lên  |  🇺🇸 🇬🇧 /əpˈləʊd/	Tech	B1
+design  (Who designed this architecture?)	thiết kế  |  🇺🇸 🇬🇧 /dɪˈzaɪn/	Tech	B1
+detect  (The test detects memory leaks.)	phát hiện  |  🇺🇸 🇬🇧 /dɪˈtɛkt/	Tech	B1
+expand  (Expand the function to handle errors.)	mở rộng  |  🇺🇸 🇬🇧 /ɛkˈspænd/	Tech	B1
+load  (The page takes too long to load.)	tải, load  |  🇺🇸 /loʊd/  🇬🇧 /ləʊd/	Tech	B1
+log  (Check the error logs.)	nhật ký, log  |  🇺🇸 🇬🇧 /lɑɡ/	Tech	B1
+node  (Add a new node to the cluster.)	nút, node  |  🔊 /nəʊd/ — NOHD, 1 âm tiết	Tech	B1
+port  (The service runs on port 8080.)	cổng  |  🇺🇸 /pɔɹt/  🇬🇧 /pɔːt/	Tech	B1
+thread  (Use a background thread for this.)	luồng, thread  |  🇺🇸 🇬🇧 [θɾ̪̊ɛd]	Tech	B1
+token  (The auth token expired.)	mã thông báo, token  |  🇺🇸 /ˈtoʊkən/  🇬🇧 /ˈtəʊkən/	Tech	B1
+agenda  (Let me share the meeting agenda.)	chương trình cuộc họp  |  🇺🇸 🇬🇧 /əˈdʒɛn.də/	Meetings	B1
+align  (Let's align on the approach first.)	đồng thuận, thống nhất  |  🇺🇸 🇬🇧 /æˈlaɪn/	Meetings	B1
+assign  (Assign this task to someone.)	giao việc, phân công  |  🇺🇸 🇬🇧 /əˈsaɪn/	Meetings	B1
+clarify  (Could you clarify the requirements?)	làm rõ, giải thích  |  🇺🇸 🇬🇧 /ˈklæɹɪfaɪ/	Meetings	B1
+decision  (Who makes the final decision?)	quyết định  |  🇺🇸 🇬🇧 /dɪˈsɪʒən/	Meetings	B1
+delegate  (Delegate this to your team.)	uỷ quyền, giao cho  |  🔊 /ˈdelɪɡeɪt/ — DEL-ih-gayt, nhấn âm 1	Meetings	B1
+feedback  (I have some feedback on the design.)	phản hồi, nhận xét  |  🇺🇸 🇬🇧 /ˈfiːdˌbæk/	Meetings	B1
+milestone  (We hit the first milestone.)	mốc quan trọng  |  🔊 /ˈmaɪlstəʊn/ — MYL-stohn, nhấn âm 1	Meetings	B1
+objective  (What is the main objective?)	mục tiêu, mục đích  |  🇺🇸 /əbˈd͡ʒɛk.tɪv/  🇬🇧 /ɒbˈd͡ʒɛk.tɪv/	Meetings	B1
+proposal  (Let me walk you through the proposal.)	đề xuất  |  🇺🇸 /pɹəˈpoʊzəl/  🇬🇧 /pɹəˈpəʊzəl/	Meetings	B1
+deadline  (The deadline is next Friday.)	hạn chót, thời hạn  |  🇺🇸 🇬🇧 /ˈdɛdˌlaɪn/	Meetings	B1
+deliverable  (What are the deliverables?)	sản phẩm bàn giao  |  🇺🇸 🇬🇧 /dɪˈlɪvɹəbəɫ/	Meetings	B1
+I need a second pair of eyes on this.	Cần thêm người xem lại cái này. — nhờ review	Slack	B1
+Can you take ownership of this?	Bạn có thể nhận phần này không? — hỏi ai đó chịu trách nhiệm	Slack	B1
+Flagging this for visibility.	Đánh dấu để mọi người biết. — thông báo không cần hành động ngay	Slack	B1
+This is time-sensitive.	Cái này cần xử lý gấp. — báo cấp thiết	Slack	B1
+No action needed — just an FYI.	Không cần làm gì — chỉ để biết thôi. FYI = For Your Information	Slack	B1
+Could we get a quick sync on this?	Chúng ta có thể họp nhanh về cái này không?	Slack	B1
+I'll handle it from here.	Từ đây tôi sẽ xử lý. — nhận trách nhiệm từ đồng nghiệp	Slack	B1
+This needs a decision by EOD.	Cái này cần quyết định trước cuối ngày. EOD = End of Day	Slack	B1
+Do we have a ticket for this?	Chúng ta có ticket cho cái này chưa?	Slack	B1
+Blocked. Might need to pair on this.	Bị chặn rồi. Có lẽ cần làm cùng nhau.	Slack	B1
+Could you expand on that?	Bạn có thể giải thích rõ hơn không? — hỏi thêm chi tiết	Phrases	B1
+Let me make sure I understand.	Để tôi chắc chắn mình hiểu đúng. — xác nhận trước khi làm	Phrases	B1
+That's outside my area of expertise.	Điều đó ngoài chuyên môn của tôi. — lịch sự từ chối câu hỏi khó	Phrases	B1
+I'll escalate this if needed.	Tôi sẽ báo cấp trên nếu cần. — escalate = chuyển lên cấp cao hơn	Phrases	B1
+Let me pull up the ticket.	Để tôi mở ticket ra. — pull up = mở ra, tìm ra	Phrases	B1
+Are we all on the same page?	Chúng ta hiểu như nhau chưa? — kiểm tra sự đồng thuận	Phrases	B1
+I'll own this going forward.	Từ giờ tôi sẽ chịu trách nhiệm cái này. — nhận ownership	Phrases	B1
+This is a blocker for me.	Cái này đang block tôi. — báo vấn đề cần giải quyết ngay	Phrases	B1
+Any objections before we move forward?	Có ai phản đối trước khi chúng ta tiến hành không?	Phrases	B1
+I'll document this for future reference.	Tôi sẽ ghi lại để tham khảo sau. — cam kết viết tài liệu	Phrases	B1
+negotiate  (We need to negotiate the contract terms.)	đàm phán  |  🇺🇸 /nəˈɡoʊ.ʃi.eɪt/  🇬🇧 /nəˈɡəʊ.ʃi.eɪt/	Business	B1
+contract  (Sign the contract before the deadline.)	hợp đồng  |  🇺🇸 /ˈkɑntɹækt/  🇬🇧 /ˈkɒntɹækt/	Business	B1
+budget  (We're over budget this quarter.)	ngân sách  |  🇺🇸 🇬🇧 /ˈbʌdʒ.ɪt/	Business	B1
+revenue  (Revenue grew 20% year-over-year.)	doanh thu  |  🇺🇸 /ˈɹɛvəˌn(j)u/  🇬🇧 /ˈɹɛvənjuː/	Business	B1
+profit  (The project turned a profit last quarter.)	lợi nhuận  |  🇺🇸 /ˈpɹɑfɪt/  🇬🇧 /ˈpɹɒfɪt/	Business	B1
+invoice  (I'll send the invoice by end of day.)	hóa đơn  |  🇺🇸 🇬🇧 /ˈɪnˌvɔɪs/	Business	B1
+vendor  (Which vendor are we using for hosting?)	nhà cung cấp  |  🇺🇸 /ˈvɛn.dɚ/  🇬🇧 /ˈvɛn.də/	Business	B1
+quarterly  (We review KPIs on a quarterly basis.)	hàng quý  |  🔊 /ˈkwɔːrtərli/ — KWOR-ter-lee, nhấn âm 1	Business	B1
+fiscal  (Our fiscal year ends in December.)	tài chính (năm tài chính)  |  🇺🇸 🇬🇧 /ˈfɪskəl/	Business	B1
+audit  (The security audit is next week.)	kiểm toán, kiểm tra  |  🇺🇸 🇬🇧 /ɔː.dɪt/	Business	B1
+compliance  (We need to ensure compliance with GDPR.)	tuân thủ (quy định)  |  🇺🇸 🇬🇧 /kəmˈplaɪəns/	Business	B1
+merger  (The merger will be finalized next month.)	sáp nhập  |  🇺🇸 🇬🇧 /ˈmɜːdʒə/	Business	B1
+acquisition  (The acquisition cost $50 million.)	mua lại (công ty)  |  🇺🇸 🇬🇧 /æ.kwɪ.ˈzɪ.ʃən/	Business	B1
+forecast  (The Q4 forecast looks promising.)	dự báo  |  🇺🇸 /ˈfɔɹkæst/  🇬🇧 /ˈfɔːkɑːst/	Business	B1
+bid  (We submitted a bid for the project.)	đặt thầu, dự thầu  |  🇺🇸 🇬🇧 /bɪd/	Business	B1
+partnership  (We formed a partnership with AWS.)	quan hệ đối tác  |  🔊 /ˈpɑːrtnərʃɪp/ — PART-ner-ship, nhấn âm 1	Business	B1
+margin  (Our profit margin is too thin.)	biên lợi nhuận  |  🇺🇸 /ˈmɑːɹdʒ(ə)n/  🇬🇧 /ˈmɑːdʒɪn/	Business	B1
+overhead  (Cloud costs are part of overhead.)	chi phí vận hành, chi phí chung  |  🇺🇸 /ˈoʊvɚˌhɛd/  🇬🇧 /ˈəʊvəˌhɛd/	Business	B1
+liability  (That's a legal liability for the company.)	trách nhiệm pháp lý, nợ  |  🇺🇸 🇬🇧 /laɪəˈbɪlɪti/	Business	B1
+asset  (Our main asset is the engineering team.)	tài sản  |  🇺🇸 🇬🇧 /ˈæsɪt/	Business	B1
+equity  (He has 10% equity in the startup.)	vốn cổ phần, cổ phiếu  |  🇺🇸 🇬🇧 /ˈɛk.wɪ.ti/	Business	B1
+investor  (We're pitching to investors next week.)	nhà đầu tư  |  🇺🇸 🇬🇧 /ɪnˈvɛstɚ/	Business	B1
+pitch  (We have a pitch deck ready for the meeting.)	bài thuyết trình kêu gọi đầu tư  |  🇺🇸 🇬🇧 /pɪtʃ/	Business	B1
+ROI  (What's the expected ROI on this feature?)	tỷ suất hoàn vốn — Return On Investment	Business	B1
+KPI  (Set clear KPIs before the project starts.)	chỉ số hiệu suất — Key Performance Indicator	Business	B1
+onboarding  (The onboarding process takes two weeks.)	đào tạo nhân viên mới  |  🔊 /ˈɒnbɔːrdɪŋ/ — ON-bor-ding, nhấn âm 1	Office	B1
+offboarding  (We're handling John's offboarding today.)	thủ tục nghỉ việc  |  🔊 /ˈɒfbɔːrdɪŋ/ — OFF-bor-ding, nhấn âm 1	Office	B1
+probation  (She's still in the probation period.)	thử việc  |  🇺🇸 🇬🇧 /ˌpɹoʊˈbeɪʃən/	Office	B1
+promotion  (She got a promotion to senior engineer.)	thăng chức  |  🇺🇸 /pɹəˈmoʊʃən/  🇬🇧 /pɹəˈməʊʃən/	Office	B1
+raise  (I'm going to ask for a raise this quarter.)	tăng lương  |  🇺🇸 🇬🇧 /ɹeɪz/	Office	B1
+overtime  (I worked overtime to meet the deadline.)	làm thêm giờ  |  🇺🇸 🇬🇧 /ˈoʊvɚˌtaɪm/	Office	B1
+benefits  (The benefits include health insurance.)	phúc lợi  |  🔊 /ˈbenɪfɪts/ — BEN-ih-fits, nhấn âm 1	Office	B1
+reimbursement  (Submit receipts for reimbursement.)	hoàn tiền, thanh toán lại  |  🇺🇸 🇬🇧 /ˌɹiː.ɪmˈbɜːs.mənt/	Office	B1
+commute  (My commute takes 45 minutes each way.)	đi làm (di chuyển hàng ngày)  |  🇺🇸 🇬🇧 /kəˈmjuːt/	Office	B1
+hybrid  (We work hybrid — 3 days in office.)	kết hợp (văn phòng + từ xa)  |  🇺🇸 🇬🇧 /ˈhaɪ.bɹɪd/	Office	B1
+payroll  (HR handles payroll every 15th.)	bảng lương, quỹ lương  |  🇺🇸 🇬🇧 /ˈpeɪɹəʊl/	Office	B1
+resignation  (He submitted his resignation yesterday.)	đơn từ chức  |  🇺🇸 🇬🇧 /ɹɛzɪɡˈneɪʃən/	Office	B1
+annual leave  (I have 12 days of annual leave left.)	nghỉ phép năm	Office	B1
+sick leave  (She's on sick leave this week.)	nghỉ ốm, nghỉ bệnh	Office	B1
+expense  (Submit your travel expenses by Friday.)	chi phí  |  🇺🇸 🇬🇧 /ɪkˈspɛns/	Office	B1
+receipt  (Keep the receipt for reimbursement.)	biên lai, hóa đơn  |  🇺🇸 🇬🇧 /ɹɪˈsiːt/	Office	B1
+headcount  (We're growing headcount by 20% this year.)	số lượng nhân sự  |  🔊 /ˈhedkaʊnt/ — HED-kownt, nhấn âm 1	Office	B1
+turnover  (High turnover is costly for any team.)	tỷ lệ nghỉ việc; doanh số  |  🔊 /ˈtɜːrnəʊvər/ — TUR-noh-ver	Office	B1
+appraisal  (My annual appraisal is next week.)	đánh giá hiệu suất (hàng năm)  |  🇺🇸 🇬🇧 /əˈpɹeɪzəl/	Office	B1
+Given that [X], it makes sense to [Y].	Vì [X], hợp lý là [Y]. — nối logic, kết luận	Discussion	B2
+As a result of [X], we need to...	Kết quả của [X], chúng ta cần... — trình bày hậu quả	Discussion	B2
+In terms of [X], we're looking at...	Về mặt [X], chúng ta đang xem xét... — frame vấn đề	Discussion	B2
+The implication here is...	Hàm ý ở đây là... — rút ra kết luận	Discussion	B2
+This comes down to [core issue].	Vấn đề cốt lõi là [X]. — tóm tắt gốc rễ	Discussion	B2
+The trade-off here is [A] vs [B].	Sự đánh đổi ở đây là [A] vs [B]. — technical decision	Discussion	B2
+The reason we went with [X] is...	Lý do chúng tôi chọn [X] là... — giải thích quyết định	Discussion	B2
+We considered [alternative] but decided against it because...	Chúng tôi đã xem xét [X] nhưng không chọn vì...	Discussion	B2
+As far as I can tell...	Theo những gì tôi có thể biết... — khi không chắc chắn hoàn toàn	Discussion	B2
+I might be wrong, but...	Tôi có thể sai, nhưng... — thêm caution trước khi nói	Discussion	B2
+From what I understand...	Theo những gì tôi hiểu... — không cam kết 100%	Discussion	B2
+I'm not 100% sure, but my understanding is...	Tôi không chắc 100%, nhưng theo hiểu biết của tôi...	Discussion	B2
+Off the top of my head, I'd say...	Ngẫu hứng tôi nghĩ là... — câu giờ khi cần thời gian	Discussion	B2
+Let me double-check and get back to you.	Để tôi kiểm tra lại và phản hồi. — không đoán mò	Discussion	B2
+I'd need to look into that more before committing.	Tôi cần tìm hiểu thêm trước khi cam kết.	Discussion	B2
+I'd like to build on what [X] said...	Tôi muốn bổ sung ý kiến của [X]... — tham gia meeting tự nhiên	Discussion	B2
+To add to that point...	Để bổ sung cho điểm đó... — tiếp nối ý kiến người khác	Discussion	B2
+Stepping back for a moment...	Nhìn lại một chút... — zoom out, thay đổi góc nhìn	Discussion	B2
+To bring it back to the original question...	Để quay lại câu hỏi ban đầu... — redirect thảo luận	Discussion	B2
+I think we might be conflating two issues here.	Tôi nghĩ chúng ta đang nhầm lẫn hai vấn đề riêng biệt.	Discussion	B2
+Let me reframe that slightly...	Để tôi diễn đạt lại một chút... — sửa hiểu nhầm lịch sự	Discussion	B2
+That's a good point — it also raises the question of...	Đó là điểm hay — nó cũng đặt ra câu hỏi về...	Discussion	B2
+hit the ground running  (We need someone who can hit the ground running.)	bắt đầu ngay và hiệu quả	Idioms	B2
+in the weeds  (Let's not get in the weeds — focus on the big picture.)	bị sa vào chi tiết nhỏ, mất tầm nhìn tổng thể	Idioms	B2
+have bandwidth  (Do you have bandwidth to take this on?)	có thời gian / năng lực để xử lý thêm việc	Idioms	B2
+on the same page  (Let's make sure we're all on the same page.)	hiểu đồng nhất với nhau	Idioms	B2
+low-hanging fruit  (Let's start with the low-hanging fruit.)	việc dễ làm trước, kết quả nhanh	Idioms	B2
+spin up  (We need to spin up a new environment.)	khởi động, tạo mới (server, team, service)	Idioms	B2
+deep dive  (Let's do a deep dive into the performance issues.)	phân tích kỹ lưỡng, đào sâu	Idioms	B2
+move the needle  (Will this feature actually move the needle?)	tạo ra tác động đáng kể, có ý nghĩa	Idioms	B2
+north star  (What's our north star metric?)	mục tiêu định hướng dài hạn	Idioms	B2
+rubber stamp  (Don't just rubber stamp this — actually review it.)	phê duyệt mà không xem kỹ	Idioms	B2
+That's a good question. Let me think about that for a second...	Câu hỏi hay. Để tôi nghĩ một chút. — câu giờ khi bị hỏi bất ngờ	Discussion	B2
+I see where you're coming from, but I'd argue that...	Tôi hiểu quan điểm của bạn, nhưng tôi cho rằng... — phản biện lịch sự	Discussion	B2
+I'm not sure I fully agree — my concern is...	Tôi không chắc tôi đồng ý hoàn toàn — lo ngại của tôi là...	Discussion	B2
+That makes sense, though I wonder if...	Điều đó hợp lý, dù tôi tự hỏi liệu... — đồng ý một phần	Discussion	B2
+Have we considered [alternative]?	Chúng ta đã xem xét [phương án khác] chưa?	Discussion	B2
+The main risk with this approach is...	Rủi ro chính với cách tiếp cận này là... — trình bày rủi ro	Discussion	B2
+Let me clarify what I mean by that...	Để tôi giải thích rõ hơn ý tôi muốn nói...	Discussion	B2
+To put it simply, [X].	Nói một cách đơn giản, [X]. — giải thích lại cho dễ hiểu	Discussion	B2
+That being said, [X].	Dẫu vậy, [X]. — thừa nhận một điểm rồi phản bác	Discussion	B2
+It's worth noting that [X].	Đáng lưu ý là [X]. — thêm thông tin quan trọng vào thảo luận	Discussion	B2
+burn the midnight oil  (I burned the midnight oil to fix the bug.)	thức khuya làm việc	Idioms	B2
+think outside the box  (We need to think outside the box here.)	suy nghĩ sáng tạo, không theo lối mòn	Idioms	B2
+silver bullet  (There's no silver bullet for this problem.)	giải pháp thần kỳ giải quyết tất cả	Idioms	B2
+To elaborate on that point...	Để nói rõ hơn về điểm đó... — mở rộng ý kiến vừa nêu	Discussion	B2
+The underlying issue is...	Vấn đề căn bản là... — chỉ ra nguyên nhân sâu xa	Discussion	B2
+I'd push back on that assumption.	Tôi không đồng ý với giả định đó. — phản biện các giả thuyết	Discussion	B2
+Let's not conflate these two issues.	Chúng ta đừng nhầm lẫn hai vấn đề này. — tách biệt 2 vấn đề riêng	Discussion	B2
+The data suggests otherwise.	Dữ liệu cho thấy điều ngược lại. — dùng bằng chứng phản biện	Discussion	B2
+To play devil's advocate here...	Để thử phản biện một chút... — đề xuất quan điểm đối lập	Discussion	B2
+We're optimizing for the wrong thing.	Chúng ta đang tối ưu sai thứ. — chỉ ra hướng đi sai	Discussion	B2
+What's the worst-case scenario?	Kịch bản xấu nhất là gì? — đánh giá rủi ro	Discussion	B2
+Can we quantify the impact?	Chúng ta có thể đo lường tác động không? — yêu cầu con số cụ thể	Discussion	B2
+That introduces unnecessary complexity.	Điều đó tạo ra sự phức tạp không cần thiết. — phản biện over-eng	Discussion	B2
+I want to flag a potential risk.	Tôi muốn đề cập một rủi ro tiềm tàng. — raise risk trong meeting	Discussion	B2
+Let's pressure-test this assumption.	Hãy kiểm tra kỹ giả định này. — stress-test giải pháp	Discussion	B2
+What are the second-order effects?	Các tác động cấp hai là gì? — suy nghĩ về hậu quả gián tiếp	Discussion	B2
+We need to align on the definition of done.	Chúng ta cần thống nhất về định nghĩa 'xong'. — agile DoD	Discussion	B2
+move fast and break things  (We used to move fast and break things.)	phát triển nhanh dù có lỗi — tinh thần startup	Idioms	B2
+boil the ocean  (Don't try to boil the ocean — start small.)	cố giải quyết tất cả một lúc, quá tham vọng	Idioms	B2
+bikeshedding  (We spent an hour bikeshedding about variable names.)	tranh luận quá lâu về việc nhỏ không quan trọng	Idioms	B2
+dogfooding  (We dogfood our own product before shipping.)	tự dùng sản phẩm của mình trước khi ra mắt	Idioms	B2
+yak shaving  (I ended up yak shaving instead of fixing the bug.)	bị cuốn vào chuỗi việc nhỏ trước khi làm việc chính	Idioms	B2
+drinking from a firehose  (Starting this job felt like drinking from a firehose.)	bị ngập trong quá nhiều thông tin một lúc	Idioms	B2
+greenfield project  (This is a greenfield project — no legacy code.)	dự án xây dựng từ đầu, không có code cũ	Idioms	B2
+brownfield project  (We're dealing with a brownfield codebase.)	dự án phát triển trên hệ thống/code cũ	Idioms	B2
+rubber duck debugging  (Explain your code to a rubber duck first.)	giải thích code cho vịt cao su để tự tìm ra lỗi	Idioms	B2
+10x engineer  (We need a 10x engineer for this.)	kỹ sư hiệu suất gấp 10 người thường — khái niệm gây tranh cãi	Idioms	B2
+due diligence  (We need to do due diligence before signing.)	thẩm định kỹ lưỡng trước khi ký kết	Discussion	B2
+competitive advantage  (Our CI/CD speed is a competitive advantage.)	lợi thế cạnh tranh	Discussion	B2
+market penetration  (Their market penetration strategy is aggressive.)	chiến lược thâm nhập thị trường	Discussion	B2
+strategic alignment  (Ensure strategic alignment across teams.)	sự liên kết chiến lược giữa các nhóm	Discussion	B2
+opportunity cost  (Consider the opportunity cost of this decision.)	chi phí cơ hội — lợi ích bỏ lỡ khi chọn phương án này	Discussion	B2
+economies of scale  (We gain economies of scale as we grow.)	lợi thế kinh tế nhờ quy mô	Discussion	B2
+burn rate  (At this burn rate we have 6 months of runway.)	tốc độ đốt tiền — burn rate	Discussion	B2
+runway  (We have 12 months of runway after the funding round.)	thời gian hoạt động còn lại (trước khi hết tiền)  |  🇺🇸 🇬🇧 /ˈɹən-/	Discussion	B2
+pivot  (The startup pivoted from B2C to B2B.)	xoay chiều chiến lược — thay đổi hướng kinh doanh  |  🇺🇸 🇬🇧 /ˈpɪvət/	Discussion	B2
+vendor lock-in  (Avoid vendor lock-in with cloud providers.)	phụ thuộc vào một nhà cung cấp duy nhất	Discussion	B2
+commit  (Write a clear commit message.)	cam kết, lưu thay đổi code  |  🇺🇸 🇬🇧 /kəˈmɪt/	Tech	B1
+branch  (Create a branch for each feature.)	nhánh code  |  🇺🇸 🇬🇧 /bɹæntʃ/	Tech	B1
+rollback  (We had to rollback the release.)	quay lại phiên bản trước	Tech	B1
+release  (The release went smoothly this time.)	phát hành, bản phát hành  |  🇺🇸 🇬🇧 /ɹɪˈliːs/	Tech	B1
+pull request  (Open a pull request when ready.)	yêu cầu gộp code vào nhánh chính	Tech	B1
+code review  (All code must pass code review.)	xem xét và nhận xét code	Tech	B1
+approve  (The manager approved the PR.)	phê duyệt, chấp thuận  |  🇺🇸 🇬🇧 /əˈpɹuːv/	Tech	B1
+reject  (The PR was rejected due to failing tests.)	từ chối, không chấp nhận	Tech	B1
+rebase  (Rebase your branch before merging.)	tái cơ sở nhánh code	Tech	B1
+merge conflict  (Resolve the merge conflict first.)	xung đột khi gộp code	Tech	B1
+hotfix  (Deploy a hotfix to production now.)	vá lỗi khẩn cấp	Tech	B1
+patch  (Apply the security patch immediately.)	bản vá, vá lỗi  |  🇺🇸 🇬🇧 /pætʃ/	Tech	B1
+bug  (There is a bug in the login flow.)	lỗi phần mềm  |  🇺🇸 🇬🇧 /bʌɡ/	Tech	B1
+crash  (The app crash on startup.)	sập ứng dụng, crash  |  🇺🇸 🇬🇧 /kɹæʃ/	Tech	B1
+warning  (The compiler shows a warning here.)	cảnh báo  |  🇺🇸 /ˈwɔɹnɪŋ/  🇬🇧 /ˈwɔːnɪŋ/	Tech	B1
+stack trace  (Share the full stack trace.)	dấu vết lỗi trong stack	Tech	B1
+breakpoint  (Set a breakpoint on line 42.)	điểm dừng khi debug	Tech	B1
+legacy code  (This module is legacy code.)	code cũ, code kế thừa	Tech	B1
+clean code  (Always aim to write clean code.)	code sạch, dễ đọc	Tech	B1
+unit test  (Write a unit test for each function.)	kiểm thử đơn vị	Tech	B1
+mock  (Use a mock for the database in tests.)	dữ liệu/đối tượng giả để kiểm thử  |  🇺🇸 /mɑk/  🇬🇧 /mɒk/	Tech	B1
+coverage  (Our test coverage is only 40%.)	độ phủ kiểm thử  |  🇺🇸 🇬🇧 /ˈkʌv.əɹ.ɪdʒ/	Tech	B1
+staging  (Test on staging before production.)	môi trường thử nghiệm trước khi release	Tech	B1
+production  (Never test directly in production.)	môi trường sản xuất thực tế  |  🇺🇸 🇬🇧 /pɹəˈdʌkʃən/	Tech	B1
+endpoint  (Call the API endpoint with a POST.)	điểm cuối API	Tech	B1
+status code  (The server returns a 404 status code.)	mã trạng thái HTTP	Tech	B1
+header  (Set the Authorization header correctly.)	tiêu đề HTTP / header  |  🇺🇸 🇬🇧 /ˈhɛdə/	Tech	B1
+null  (Check for null before accessing the value.)	giá trị rỗng, null  |  🇺🇸 🇬🇧 /nʌl/	Tech	B1
+string  (Convert the integer to a string.)	kiểu dữ liệu chuỗi ký tự  |  🇺🇸 🇬🇧 /stɹɪŋ/	Tech	B1
+array  (Iterate over the array of results.)	mảng dữ liệu  |  🇺🇸 🇬🇧 /əˈɹeɪ/	Tech	B1
+index  (The index is out of bounds.)	chỉ số, index  |  🇺🇸 🇬🇧 /ˈɪndɛks/	Tech	B1
+column  (Which column stores the user email?)	cột (trong bảng dữ liệu)  |  🇺🇸 🇬🇧 /ˈkɑljəm/	Tech	B1
+row  (Delete all rows older than 30 days.)	hàng (trong bảng dữ liệu)  |  🇺🇸 /ˈɹoʊ/  🇬🇧 /ˈɹəʊ/	Tech	B1
+foreign key  (Add a foreign key constraint.)	khóa ngoại (database)	Tech	B1
+error handling  (Add proper error handling here.)	xử lý lỗi	Tech	B1
+logging  (Enable logging in debug mode.)	ghi nhật ký, logging	Tech	B1
+agree  (I agree with the proposed approach.)	đồng ý  |  🇺🇸 🇬🇧 /əˈɡɹi/	Vocabulary	B1
+disagree  (I disagree — this will cause issues.)	không đồng ý  |  🇺🇸 🇬🇧 /dɪsəˈɡɹiː/	Vocabulary	B1
+propose  (I'd like to propose a different solution.)	đề xuất, đề nghị  |  🇺🇸 /pɹəˈpoʊz/  🇬🇧 /pɹəˈpəʊz/	Meetings	B1
+wrap up  (Let's wrap up in the next five minutes.)	kết thúc, tóm gọn	Meetings	B1
+catch up  (Let's catch up on what I missed.)	cập nhật lại tình hình đã bỏ lỡ	Meetings	B1
+sync up  (Can we sync up this afternoon?)	cùng thống nhất thông tin	Meetings	B1
+follow up  (I'll follow up after the meeting.)	theo dõi, liên hệ lại	Meetings	B1
+action item  (Record that as an action item.)	việc cần làm được ghi lại sau họp	Meetings	B1
+minutes  (Who is taking the meeting minutes?)	biên bản cuộc họp  |  🇺🇸 🇬🇧 /ˈmɪnɪts/	Meetings	B1
+summary  (Send a summary to the team.)	bản tóm tắt  |  🇺🇸 🇬🇧 /ˈsʌməɹi/	Vocabulary	B1
+outline  (Outline the plan before coding.)	phác thảo, sơ lược  |  🇺🇸 🇬🇧 /ˈaʊtlaɪn/	Vocabulary	B1
+urgent  (This is urgent — fix it now.)	khẩn cấp  |  🇺🇸 /ˈɚdʒənt/  🇬🇧 /ˈɜːdʒənt/	Vocabulary	B1
+ETA  (What is the ETA for this fix?)	thời gian dự kiến hoàn thành  |  🇺🇸 /ˈeɪtə/  🇬🇧 /ˈiːtə/	Slack	B1
+ASAP  (Please fix this ASAP.)	càng sớm càng tốt	Slack	B1
+FYI  (FYI, the deploy window is at 5pm.)	để bạn biết (For Your Information)	Slack	B1
+WFH  (I am WFH today.)	làm việc từ nhà (Work From Home)	Slack	B1
+OOO  (I will be OOO next Monday.)	ngoài văn phòng / nghỉ (Out Of Office)	Slack	B1
+blocker  (Is there any blocker for this sprint?)	vật cản tiến độ công việc	Tech	B1
+sprint  (We plan two sprints per month.)	chu kỳ phát triển ngắn (agile)  |  🇺🇸 🇬🇧 /spɹɪnt/	Tech	B1
+backlog  (Add the ticket to the backlog.)	danh sách việc chưa làm  |  🇺🇸 🇬🇧 /ˈbæk.lɒɡ/	Tech	B1
+standup  (Standup is at 9am every morning.)	họp ngắn hàng ngày trong agile	Meetings	B1
+retrospective  (The retrospective is on Friday.)	họp đánh giá cuối sprint  |  🇺🇸 🇬🇧 /ˌɹɛtɹə(ʊ)ˈspɛktɪv/	Meetings	B1
+demo  (We demo to the client on Thursday.)	trình diễn sản phẩm  |  🇺🇸 /ˈdɛm.oʊ/  🇬🇧 /ˈdɛm.əʊ/	Meetings	B1
+ticket  (Create a Jira ticket for this bug.)	phiếu công việc (Jira, GitHub)  |  🇺🇸 🇬🇧 /ˈtɪkɪt/	Tech	B1
+upgrade  (Upgrade the Node.js version.)	nâng cấp  |  🇺🇸 🇬🇧 /ˈʌp.ɡɹeɪd/	Tech	B1
+downgrade  (Downgrade to the stable release.)	hạ phiên bản  |  🇺🇸 🇬🇧 /ˈdaʊnˌɡɹeɪd/	Tech	B1
+backup  (Backup the database before migration.)	sao lưu  |  🇺🇸 🇬🇧 /ˈbækˌʌp/	Tech	B1
+restore  (Restore the backup from last night.)	khôi phục, phục hồi  |  🇺🇸 /ɹɪˈstɔɹ/  🇬🇧 /ɹɪˈstɔː/	Tech	B1
+enable  (Enable the feature flag in config.)	bật, kích hoạt  |  🇺🇸 🇬🇧 /ɪˈneɪbəl/	Tech	B1
+disable  (Disable the old endpoint.)	tắt, vô hiệu hóa  |  🇺🇸 🇬🇧 [dɪsˈeɪbəɫ]	Tech	B1
+activate  (Activate the new license key.)	kích hoạt  |  🇺🇸 🇬🇧 /ˈæktɪˌveɪt/	Tech	B1
+deactivate  (Deactivate the account on request.)	hủy kích hoạt  |  🇺🇸 🇬🇧 /ˌdiːˈæktɪveɪt/	Tech	B1
+increase  (Increase the memory limit.)	tăng	Vocabulary	B1
+decrease  (Decrease the timeout value.)	giảm	Vocabulary	B1
+pause  (Pause the deployment pipeline.)	tạm dừng  |  🇺🇸 /pɔz/  🇬🇧 /pɔːz/	Tech	B1
+continue  (Continue after the tests pass.)	tiếp tục  |  🇺🇸 🇬🇧 /kənˈtɪnjuː/	Vocabulary	B1
+skip  (Skip this step in CI.)	bỏ qua  |  🇺🇸 🇬🇧 /skɪp/	Vocabulary	B1
+retry  (Retry the request after 5 seconds.)	thử lại  |  🇺🇸 🇬🇧 /riˈtɹaɪ/	Tech	B1
+containerize  (We plan to containerize the app.)	đóng gói vào container	Tech	B2
+provision  (Provision new servers using Terraform.)	cấp phát, khởi tạo hạ tầng  |  🇺🇸 🇬🇧 /pɹəˈvɪʒ.ən/	Tech	B2
+orchestrate  (Kubernetes orchestrates the containers.)	điều phối (hệ thống phân tán)  |  🇺🇸 🇬🇧 /ˈɔː(ɹ).kə.stɹeɪt/	Tech	B2
+microservice  (Each microservice owns its own database.)	kiến trúc vi dịch vụ	Tech	B2
+monolith  (Migrating from a monolith to microservices.)	ứng dụng kiến trúc đơn khối  |  🇺🇸 /ˈmɑnəˌlɪθ/  🇬🇧 /ˈmɒnlɪθ/	Tech	B2
+serverless  (Use serverless functions for this job.)	kiến trúc không cần quản lý server	Tech	B2
+webhook  (Configure the webhook to trigger on push.)	callback HTTP tự động từ dịch vụ ngoài	Tech	B2
+event-driven  (Our system is fully event-driven.)	hướng sự kiện	Tech	B2
+eventual consistency  (The system guarantees eventual consistency.)	nhất quán theo thời gian	Tech	B2
+idempotent  (Make the endpoint idempotent.)	không thay đổi kết quả khi gọi nhiều lần  |  🇺🇸 🇬🇧 /aɪ.dəmˈpoʊ.tənt/	Tech	B2
+observability  (Improve observability with distributed tracing.)	khả năng quan sát hệ thống	Tech	B2
+telemetry  (Collect telemetry from all services.)	thu thập dữ liệu vận hành từ xa	Tech	B2
+tracing  (Distributed tracing helps find bottlenecks.)	truy vết phân tán  |  🇺🇸 🇬🇧 /ˈtɹeɪsɪŋ/	Tech	B2
+metrics  (Export metrics to Prometheus.)	số liệu đo lường hệ thống	Tech	B2
+alerting  (Set up alerting for error spikes.)	cảnh báo tự động	Tech	B2
+incident  (We had a P1 incident last night.)	sự cố nghiêm trọng  |  🇺🇸 🇬🇧 /ˈɪn.sɪ.dənt/	Tech	B2
+postmortem  (Write a postmortem after each incident.)	báo cáo phân tích sự cố sau khi xảy ra	Tech	B2
+SLA  (Our SLA is 99.9% uptime.)	thỏa thuận mức dịch vụ (Service Level Agreement)	Tech	B2
+SLO  (Define SLOs before writing the SLA.)	mục tiêu mức dịch vụ (Service Level Objective)	Tech	B2
+SLI  (Choose the right SLIs to measure.)	chỉ số mức dịch vụ (Service Level Indicator)	Tech	B2
+rate limiting  (Enable rate limiting on the public API.)	giới hạn tốc độ truy cập	Tech	B2
+throttling  (Throttling prevents API abuse.)	kiểm soát lưu lượng, giảm tốc	Tech	B2
+circuit breaker  (Add a circuit breaker to the payment service.)	cầu dao ngắt tự động khi lỗi liên tiếp	Tech	B2
+retry policy  (Configure the retry policy for failed requests.)	chính sách thử lại khi thất bại	Tech	B2
+dead letter queue  (Route failed messages to the dead letter queue.)	hàng đợi chứa message xử lý thất bại	Tech	B2
+message queue  (Use a message queue to decouple services.)	hàng đợi tin nhắn	Tech	B2
+pub/sub  (Implement pub/sub for real-time updates.)	mô hình publish/subscribe	Tech	B2
+caching strategy  (Define a caching strategy for hot data.)	chiến lược lưu cache	Tech	B2
+CDN  (Serve static assets through a CDN.)	mạng phân phối nội dung (Content Delivery Network)	Tech	B2
+load balancer  (The load balancer distributes traffic.)	cân bằng tải	Tech	B2
+reverse proxy  (Nginx acts as a reverse proxy.)	proxy ngược	Tech	B2
+blue-green deployment  (Use blue-green deployment to reduce downtime.)	triển khai song song hai môi trường để chuyển đổi an toàn	Tech	B2
+canary release  (Roll out the change as a canary release.)	phát hành thử trên một phần nhỏ người dùng	Tech	B2
+feature flag  (Hide the feature behind a feature flag.)	cờ bật/tắt tính năng	Tech	B2
+A/B testing  (Run A/B testing for the new UI.)	thử nghiệm hai phương án với người dùng thực	Tech	B2
+technical specification  (Write a technical specification first.)	đặc tả kỹ thuật	Tech	B2
+system design  (Prepare for a system design interview.)	thiết kế hệ thống	Tech	B2
+architecture decision record  (Document this in an architecture decision record.)	tài liệu ghi lại quyết định kiến trúc	Tech	B2
+proactive  (Be proactive about raising blockers.)	chủ động	Vocabulary	B2
+stakeholder alignment  (Achieve stakeholder alignment before starting.)	sự đồng thuận của các bên liên quan	Business	B2
+cross-functional  (This requires a cross-functional team.)	liên chức năng, đa bộ phận	Business	B2
+bandwidth  (I don't have bandwidth for that this week.)	năng lực / thời gian xử lý thêm việc  |  🇺🇸 🇬🇧 /ˈbændwɪdθ/	Vocabulary	B2
+ownership  (Take full ownership of this feature.)	chịu trách nhiệm, làm chủ	Vocabulary	B2
+accountability  (Accountability starts with clear expectations.)	trách nhiệm giải trình  |  🇺🇸 🇬🇧 /ə.ˌkaʊn.tə.ˈbɪl.ət.i/	Business	B2
+trade-off  (Every design has a trade-off.)	sự đánh đổi	Vocabulary	B2
+pragmatic  (Be pragmatic — ship first, refine later.)	thực dụng, thiết thực  |  🇺🇸 🇬🇧 /pɹæɡˈmætɪk/	Vocabulary	B2
+iterative  (Take an iterative approach to building.)	lặp đi lặp lại, từng bước cải tiến  |  🇺🇸 🇬🇧 /ˈɪtəɹətɪv/	Vocabulary	B2
+incremental  (Deliver value in incremental releases.)	tăng dần, từng bước nhỏ	Vocabulary	B2
+holistic  (Take a holistic view of the system.)	toàn diện, tổng thể  |  🇺🇸 🇬🇧 /həʊˈlɪs.tɪk/	Vocabulary	B2
+elaborate  (Could you elaborate on that point?)	trình bày chi tiết hơn  |  🇺🇸 🇬🇧 /ɪˈlæbəɹeɪt/	Meetings	B2
+articulate  (He articulates complex ideas clearly.)	diễn đạt rõ ràng, mạch lạc  |  🇺🇸 /ɑːɹˈtɪk.jə.lət/  🇬🇧 /ɑː(ɹ)ˈtɪk.jʊ.lət/	Vocabulary	B2
+constructive  (Give constructive feedback, not criticism.)	xây dựng, mang tính đóng góp  |  🇺🇸 🇬🇧 /kənˈstɹʌktɪv/	Vocabulary	B2
+diplomatic  (Be diplomatic when giving tough feedback.)	khéo léo, tế nhị  |  🇺🇸 🇬🇧 /ˌdɪpləˈmætɪk/	Vocabulary	B2
+assertive  (Be assertive when pushing back.)	quyết đoán, tự tin bày tỏ quan điểm  |  🇺🇸 🇬🇧 /əˈsɝtɪv/	Vocabulary	B2
+ambiguous  (The requirements are still ambiguous.)	mơ hồ, không rõ ràng  |  🇺🇸 🇬🇧 /æmˈbɪɡjuəs/	Vocabulary	B2
+straightforward  (The fix is fairly straightforward.)	đơn giản, thẳng thắn	Vocabulary	B2
+summarize  (Please summarize the discussion.)	tóm tắt  |  🇺🇸 🇬🇧 /ˈsʌməˌɹaɪz/	Meetings	B2
+paraphrase  (Let me paraphrase to confirm I understand.)	diễn đạt lại bằng lời khác	Meetings	B2
+rephrase  (Could you rephrase the question?)	nói lại theo cách khác	Meetings	B2
+concise  (Keep your PR description concise.)	ngắn gọn, súc tích  |  🇺🇸 🇬🇧 /kənˈsaɪs/	Vocabulary	B2
+methodology  (Describe your testing methodology.)	phương pháp luận  |  🇺🇸 🇬🇧 /meθəˈdɒlədʒi/	Vocabulary	C1
+paradigm  (Functional programming is a different paradigm.)	mô hình, hệ thống tư duy  |  🇺🇸 /ˈpeɪɹ.ə.daɪm/  🇬🇧 /ˈpæ.ɹə.daɪm/	Vocabulary	C1
+heuristic  (Apply a heuristic to reduce search space.)	quy tắc kinh nghiệm, phép đơn giản hóa  |  🇺🇸 🇬🇧 /hjuˈɹɪstɪk/	Vocabulary	C1
+empirical  (The result is based on empirical evidence.)	dựa trên thực nghiệm, thực chứng  |  🇺🇸 🇬🇧 /ɪmˈpɪɹɪkəl/	Vocabulary	C1
+axiom  (Treat correctness as an axiom.)	tiên đề, điều hiển nhiên  |  🇺🇸 /ˈæks.i.əm/  🇬🇧 /ˈaks.ɪ.əm/	Vocabulary	C1
+corollary  (A corollary of this is that latency rises.)	hệ quả tất yếu  |  🇺🇸 🇬🇧 /kɔˈɹoʊˌlɛɹi/	Vocabulary	C1
+correlate  (Latency correlates with request size.)	tương quan, có liên hệ  |  🇺🇸 🇬🇧 /ˈkɒɹələt/	Vocabulary	C1
+extrapolate  (Extrapolate the trend to estimate next year.)	ngoại suy, suy diễn từ dữ liệu có sẵn  |  🇺🇸 🇬🇧 /ɛkˈstɹæp.əˌleɪt/	Vocabulary	C1
+substantiate  (Substantiate your claim with data.)	chứng minh, đưa ra bằng chứng  |  🇺🇸 🇬🇧 /səbˈstanʃɪeɪt/	Vocabulary	C1
+postulate  (We can postulate that the bottleneck is I/O.)	đặt giả thuyết, giả định	Vocabulary	C1
+converge  (The metrics converge after a few hours.)	hội tụ, tiến về một điểm  |  🇺🇸 🇬🇧 /kən.ˈvɜːdʒ/	Vocabulary	C1
+diverge  (The two implementations diverge here.)	phân kỳ, tách ra  |  🇺🇸 🇬🇧 /daɪˈvɜːdʒ/	Vocabulary	C1
+underpin  (Strong tests underpin a confident release.)	làm nền tảng, hỗ trợ  |  🇺🇸 /ˈʌn.dɚˌpɪn/  🇬🇧 /ˌʌn.dəˈpɪn/	Vocabulary	C1
+premise  (The premise of this design is eventual consistency.)	tiền đề, giả định cơ sở  |  🇺🇸 🇬🇧 /ˈpɹɛ.mɪs/	Vocabulary	C1
+inference  (Draw an inference from the profiling data.)	suy luận, kết luận rút ra  |  🇺🇸 🇬🇧 /ˈɪn.fə.ɹəns/	Vocabulary	C1
+assertion  (This assertion fails when input is null.)	khẳng định, mệnh đề kiểm tra  |  🇺🇸 /əˈsɜɹʃən/  🇬🇧 /əˈsɜːʃən/	Vocabulary	C1
+conjecture  (That is conjecture without evidence.)	phỏng đoán chưa được chứng minh  |  🇺🇸 /kənˈd͡ʒɛk.t͡ʃɚ/  🇬🇧 /kənˈd͡ʒɛk.t͡ʃə(ɹ)/	Vocabulary	C1
+iterate  (Iterate rapidly and gather feedback.)	lặp lại có chủ đích để cải thiện  |  🇺🇸 🇬🇧 /ˈaɪtəɹeɪt/	Vocabulary	C1
+meticulous  (Be meticulous when reviewing security code.)	tỉ mỉ, cẩn thận từng chi tiết  |  🇺🇸 🇬🇧 /mɨˈtɪkjuləs/	Vocabulary	C1
+judicious  (Make judicious use of caching.)	sáng suốt, dùng đúng lúc đúng chỗ  |  🇺🇸 🇬🇧 /dʒuˈdɪʃ.əs/	Vocabulary	C1
+astute  (She made an astute observation about the design.)	tinh tế, sắc sảo  |  🇺🇸 🇬🇧 /əsˈtjuːt/	Vocabulary	C1
+discerning  (A discerning reviewer will catch that edge case.)	có nhãn quan, tinh tường  |  🇺🇸 🇬🇧 /dɪˈsɜːn.iŋ/	Vocabulary	C1
+succinct  (Keep the commit message succinct.)	ngắn gọn và đầy đủ  |  🇺🇸 🇬🇧 /sə(k)ˈsɪŋkt/	Vocabulary	C1
+verbose  (The logs are too verbose in production.)	dài dòng, quá nhiều thông tin  |  🇺🇸 /və˞ˈboʊs/  🇬🇧 /vəˈbəʊs/	Vocabulary	C1
+eloquent  (He gave an eloquent explanation of the tradeoffs.)	hùng hồn, diễn đạt trôi chảy  |  🇺🇸 🇬🇧 /ˈɛl.əˌkwənt/	Vocabulary	C1
+lucid  (Write a lucid design document.)	rõ ràng, dễ hiểu (văn phong)  |  🇺🇸 🇬🇧 /ˈl(j)uːsɪd/	Vocabulary	C1
+cogent  (Present a cogent argument for the refactor.)	thuyết phục, chặt chẽ về lý luận  |  🇺🇸 /ˈko͡ʊd͡ʒn̩t/  🇬🇧 /ˈkə͡ʊd͡ʒn̩t/	Vocabulary	C1
+prescient  (A prescient engineer anticipated the scaling issue.)	có tầm nhìn xa, nhìn trước được vấn đề  |  🇺🇸 /ˈpɹɛʃ(i)ənt/  🇬🇧 /ˈpɹiːʃɪənt/	Vocabulary	C1
+agile mindset  (Adopt an agile mindset to embrace change.)	tư duy linh hoạt, thích ứng nhanh	Vocabulary	C1
+lean methodology  (Apply lean methodology to cut waste.)	phương pháp tinh gọn, loại bỏ lãng phí	Business	C1
+first principles  (Reason from first principles.)	tư duy từ nguyên lý cơ bản	Vocabulary	C1
+devil's advocate  (Let me play devil's advocate here.)	người cố tình phản biện để kiểm tra lập luận	Vocabulary	C1
+second-order effects  (Consider the second-order effects of this change.)	tác động gián tiếp, hậu quả bậc hai	Vocabulary	C1
+counterfactual  (Consider the counterfactual scenario.)	kịch bản phản thực tế, điều gì sẽ xảy ra nếu ngược lại  |  🇺🇸 🇬🇧 /ˌkaʊntɚˈfæktʃuəl/	Vocabulary	C1
+caveat  (There is one caveat: this only works at scale.)	điều kiện ngoại lệ, lưu ý quan trọng  |  🇺🇸 /-æt/  🇬🇧 /ˈkeɪ-/	Vocabulary	C1
+stipulate  (The contract stipulates a 30-day notice.)	quy định rõ, ấn định điều khoản  |  🇺🇸 🇬🇧 /ˈstɪpjuˌleɪt/	Business	C1
+hedge  (Hedge your estimate with uncertainty.)	phát biểu thận trọng, không cam kết hoàn toàn  |  🇺🇸 🇬🇧 /hɛdʒ/	Vocabulary	C1
+qualify  (Let me qualify that statement.)	giới hạn phạm vi phát biểu, thêm điều kiện  |  🇺🇸 /ˈkwɑl.ɪ.faɪ/  🇬🇧 /ˈkwɒl.ɪ.faɪ/	Vocabulary	C1
+nuanced  (The answer is more nuanced than a yes/no.)	có nhiều sắc thái, tinh tế	Vocabulary	C1
+implication  (Consider the implications of this change.)	hàm ý, tác động ngầm  |  🇺🇸 🇬🇧 /ˌɪmpləˈkeɪʃən/	Vocabulary	C1
+ramification  (Think through all ramifications before deciding.)	hệ lụy, hậu quả phái sinh  |  🇺🇸 🇬🇧 /ɹæmɪfɪˈkeɪʃən/	Vocabulary	C1
+prerequisite  (Docker is a prerequisite for this setup.)	điều kiện tiên quyết  |  🇺🇸 🇬🇧 /pɹiːˈɹɛkwɪzɪt/	Vocabulary	C1
+contingent  (The release is contingent on passing all tests.)	phụ thuộc vào, có điều kiện  |  🇺🇸 🇬🇧 /kənˈtɪn.dʒənt/	Vocabulary	C1
+tentative  (We have a tentative release date of July 15.)	tạm thời, chưa chắc chắn  |  🇺🇸 🇬🇧 /ˈtɛntətɪv/	Vocabulary	C1
+ambivalent  (I am ambivalent about adopting that library.)	lưỡng lự, không chắc nên chọn gì  |  🇺🇸 🇬🇧 /æmˈbɪv.ə.lənt/	Vocabulary	C1
+equivocal  (His response was equivocal — neither yes nor no.)	mơ hồ, có thể hiểu theo nhiều cách  |  🇺🇸 /ɪˈkwɪvək(ə)l/  🇬🇧 /əˈkwɪvəkəl/	Vocabulary	C1
+unequivocal  (The test failure is an unequivocal sign of a bug.)	rõ ràng, không thể nhầm lẫn  |  🇺🇸 🇬🇧 /ʌnɨˈkwɪvəkəl/	Vocabulary	C1
+fiduciary  (The board has a fiduciary duty to shareholders.)	nghĩa vụ quản lý tài sản người khác, ủy thác  |  🇺🇸 🇬🇧 /fʌɪˈdjuːʃəɹi/	Business	C1
+governance  (Strong governance prevents technical debt.)	quản trị, cơ chế kiểm soát  |  🇺🇸 🇬🇧 /ˈɡʌvənəns/	Business	C1
+regulatory  (Ensure the product meets regulatory requirements.)	liên quan đến quy định pháp lý  |  🇺🇸 🇬🇧 /ˈɹɛɡjələtɹi/	Business	C1
+vendor management  (Vendor management is part of the PM role.)	quản lý nhà cung cấp	Business	C1
+SaaS  (We sell a SaaS product billed monthly.)	phần mềm dạng dịch vụ (Software as a Service)	Tech	C1
+PaaS  (Heroku is a PaaS platform.)	nền tảng dạng dịch vụ (Platform as a Service)	Tech	C1
+IaaS  (AWS EC2 is an IaaS offering.)	cơ sở hạ tầng dạng dịch vụ (Infrastructure as a Service)	Tech	C1
+CAPEX  (Buying servers is CAPEX.)	chi phí đầu tư tài sản cố định (Capital Expenditure)	Business	C1
+OPEX  (Cloud hosting is OPEX.)	chi phí vận hành (Operational Expenditure)	Business	C1
+NPV  (Calculate the NPV of the project.)	giá trị hiện tại ròng (Net Present Value)	Business	C1
+product-market fit  (We haven't found product-market fit yet.)	sự phù hợp giữa sản phẩm và thị trường	Business	C1
+go-to-market  (Define the go-to-market strategy.)	chiến lược đưa sản phẩm ra thị trường	Business	C1
+total addressable market  (Research the total addressable market first.)	tổng quy mô thị trường có thể tiếp cận	Business	C1
+affect	tác động, ảnh hưởng  |  🇺🇸 🇬🇧 /əˈfɛkt/	Vocabulary	B1
+allow	cho phép  |  🇺🇸 🇬🇧 /əˈlaʊ/	Vocabulary	B1
+appear	xuất hiện, có vẻ như  |  🇺🇸 /əˈpiɹ/  🇬🇧 /əˈpiːɹ/	Vocabulary	B1
+argue	tranh luận, lập luận  |  🇺🇸 /ˈɑɹ.ɡju/  🇬🇧 /ˈɑː.ɡjuː/	Vocabulary	B1
+base	dựa trên, căn cứ vào  |  🇺🇸 🇬🇧 /beɪs/	Vocabulary	B1
+cause	gây ra, nguyên nhân  |  🇺🇸 /kɔz/  🇬🇧 /kɔːz/	Vocabulary	B1
+change	thay đổi  |  🇺🇸 🇬🇧 /tʃeɪndʒ/	Vocabulary	B1
+choose	lựa chọn  |  🇺🇸 🇬🇧 /t͡ʃuːz/	Vocabulary	B1
+claim	khẳng định, tuyên bố  |  🇺🇸 🇬🇧 /kleɪm/	Vocabulary	B1
+contain	chứa đựng, bao gồm  |  🇺🇸 🇬🇧 /kənˈteɪn/	Vocabulary	B1
+control	kiểm soát  |  🇺🇸 /kənˈt(ʃ)ɹoʊl/  🇬🇧 /kənˈtɹəʊl/	Vocabulary	B1
+cost	chi phí, tốn  |  🇺🇸 /ˈkɔst/  🇬🇧 /ˈkɒst/	Vocabulary	B1
+cover	bao quát, đề cập  |  🇺🇸 /ˈkʌvɚ/  🇬🇧 /ˈkʌvə/	Vocabulary	B1
+differ	khác nhau  |  🇺🇸 /ˈdɪfɚ/  🇬🇧 /ˈdɪfə/	Vocabulary	B1
+discover	khám phá, phát hiện  |  🇺🇸 /dɪsˈkʌvɚ/  🇬🇧 /dɪsˈkʊvə/	Vocabulary	B1
+experience	trải nghiệm, kinh nghiệm  |  🇺🇸 /ɪkˈspɪɹ.i.əns/  🇬🇧 /ɪkˈspɪə.ɹɪəns/	Vocabulary	B1
+fail	thất bại, không hoạt động  |  🇺🇸 🇬🇧 /feɪl/	Vocabulary	B1
+feel	cảm thấy  |  🇺🇸 🇬🇧 /fiːl/	Vocabulary	B1
+find	tìm thấy, nhận thấy  |  🇺🇸 🇬🇧 /faɪnd/	Vocabulary	B1
+follow	theo dõi, thực hiện theo  |  🇺🇸 /ˈfɑloʊ/  🇬🇧 /ˈfɒləʊ/	Vocabulary	B1
+gain	đạt được, thu được  |  🇺🇸 🇬🇧 /ɡeɪn/	Vocabulary	B1
+happen	xảy ra  |  🇺🇸 🇬🇧 /ˈhæpən/	Vocabulary	B1
+help	giúp đỡ  |  🇺🇸 🇬🇧 /hɛlp/	Vocabulary	B1
+hold	giữ, nắm giữ  |  🇺🇸 /hoʊld/  🇬🇧 /həʊld/	Vocabulary	B1
+include	bao gồm  |  🇺🇸 🇬🇧 /ɪnˈkluːd/	Vocabulary	B1
+influence	ảnh hưởng, tác động  |  🇺🇸 🇬🇧 /ˈɪn.flu.əns/	Vocabulary	B1
+keep	giữ, duy trì  |  🇺🇸 🇬🇧 /kiːp/	Vocabulary	B1
+lack	thiếu, thiếu hụt  |  🇺🇸 /læk/  🇬🇧 /lak/	Vocabulary	B1
+lead	dẫn đến, lãnh đạo  |  🇺🇸 🇬🇧 /lɛd/	Vocabulary	B1
+learn	học, học hỏi  |  🇺🇸 /lɝn/  🇬🇧 /lɜːn/	Vocabulary	B1
+lose	mất, thất bại  |  🇺🇸 🇬🇧 /luːz/	Vocabulary	B1
+measure	đo lường, biện pháp  |  🇺🇸 /ˈmɛʒɚ/  🇬🇧 /ˈmɛʒə/	Vocabulary	B1
+meet	đáp ứng, gặp gỡ  |  🇺🇸 /mit/  🇬🇧 /miːt/	Vocabulary	B1
+mention	đề cập  |  🇺🇸 🇬🇧 /ˈmɛnʃən/	Vocabulary	B1
+miss	bỏ lỡ, thiếu  |  🇺🇸 🇬🇧 /mɪs/	Vocabulary	B1
+move	di chuyển, thay đổi  |  🇺🇸 🇬🇧 /muːv/	Vocabulary	B1
+need	cần, nhu cầu  |  🇺🇸 🇬🇧 /niːd/	Vocabulary	B1
+offer	đề nghị, cung cấp  |  🇺🇸 /ˈɔfɚ/  🇬🇧 /ˈɑfɚ/	Vocabulary	B1
+open	mở, triển khai  |  🇺🇸 /ˈoʊ.pən/  🇬🇧 /ˈəʊ.pən/	Vocabulary	B1
+operate  (The service operates on port 443.)	vận hành, hoạt động  |  🇺🇸 /ˈɑpəɹeɪt/  🇬🇧 /ˈɒpəɹeɪt/	Tech	B1
+own	sở hữu, chịu trách nhiệm  |  🇺🇸 /ˈoʊn/  🇬🇧 /ˈəʊn/	Vocabulary	B1
+pass	thông qua, vượt qua  |  🇺🇸 [pʰaːs]  🇬🇧 [pʰäːs]	Vocabulary	B1
+prevent  (Use a mutex to prevent race conditions.)	ngăn chặn  |  🇺🇸 🇬🇧 /pɹəˈvɛnt/	Tech	B1
+protect  (Protect the endpoint with auth middleware.)	bảo vệ  |  🇺🇸 🇬🇧 /pɹəˈtɛkt/	Tech	B1
+prove	chứng minh  |  🇺🇸 🇬🇧 /pɹuːv/	Vocabulary	B1
+reach	đạt đến, tiếp cận  |  🇺🇸 🇬🇧 /ɹiːt͡ʃ/	Vocabulary	B1
+realize	nhận ra, thực hiện  |  🇺🇸 /ˈɹi.ə.laɪz/  🇬🇧 /ˈɹɪə.laɪz/	Vocabulary	B1
+recognize	nhận ra, công nhận  |  🇺🇸 🇬🇧 /ˈɹɛkənaɪz/	Vocabulary	B1
+rely  (We rely on this service for auth.)	dựa vào, phụ thuộc  |  🇺🇸 🇬🇧 /ɹɪˈlaɪ/	Tech	B1
+replace  (Replace the deprecated method.)	thay thế  |  🇺🇸 🇬🇧 /ɹɪˈpleɪs/	Tech	B1
+result  (The refactor resulted in 30% faster queries.)	dẫn đến, kết quả  |  🇺🇸 🇬🇧 /ɹɪˈzʌlt/	Vocabulary	B1
+reveal	tiết lộ, cho thấy  |  🇺🇸 🇬🇧 /ɹəˈviːl/	Vocabulary	B1
+seem	có vẻ như  |  🇺🇸 🇬🇧 /siːm/	Vocabulary	B1
+serve  (This function serves a single purpose.)	phục vụ  |  🇺🇸 /sɝv/  🇬🇧 /sɜːv/	Tech	B1
+set  (Set the environment variable before running.)	đặt, thiết lập  |  🇺🇸 🇬🇧 /sɛt/	Tech	B1
+share  (Share your screen during the demo.)	chia sẻ  |  🇺🇸 /ʃɛəɹ/  🇬🇧 /ʃɛə/	Meetings	B1
+show  (The dashboard shows real-time metrics.)	hiển thị, cho thấy  |  🇺🇸 /ʃoʊ/  🇬🇧 /ʃəʊ/	Tech	B1
+spend	dành, tiêu  |  🇺🇸 🇬🇧 /spɛnd/	Vocabulary	B1
+stay  (Stay on the main branch for now.)	ở lại, duy trì  |  🇺🇸 🇬🇧 /steɪ/	Tech	B1
+strengthen	củng cố, tăng cường  |  🇺🇸 🇬🇧 /ˈstɹɛŋ(k)θən/	Vocabulary	B1
+study	nghiên cứu, học  |  🇺🇸 🇬🇧 /ˈstʌdi/	Vocabulary	B1
+teach	dạy, hướng dẫn  |  🇺🇸 🇬🇧 /tiːt͡ʃ/	Vocabulary	B1
+tend  (Large payloads tend to cause timeouts.)	có xu hướng  |  🇺🇸 🇬🇧 /tɛnd/	Tech	B1
+turn	chuyển thành, quay  |  🇺🇸 /tɝn/  🇬🇧 /tɜːn/	Vocabulary	B1
+understand	hiểu  |  🇺🇸 /ˌʌndɚˈstænd/  🇬🇧 /(ˌ)ʌndəˈstænd/	Vocabulary	B1
+watch  (Watch the logs for errors.)	theo dõi, xem  |  🇺🇸 /wɑt͡ʃ/  🇬🇧 /wɒt͡ʃ/	Tech	B1
+work	hoạt động, làm việc  |  🇺🇸 /wəik/  🇬🇧 /wɜːk/	Vocabulary	B1
+worry  (Don't worry — the tests will catch it.)	lo lắng  |  🇺🇸 /ˈwɝɹi/  🇬🇧 /ˈwɒɹi/	Vocabulary	B1
+ability	khả năng  |  🇺🇸 🇬🇧 /əˈ.bɪl.ɪ.ti/	Vocabulary	B1
+action	hành động  |  🇺🇸 🇬🇧 /ˈæk.ʃən/	Vocabulary	B1
+addition	bổ sung, thêm vào  |  🇺🇸 🇬🇧 /æˈdɪʃən/	Vocabulary	B1
+advantage	lợi thế, ưu điểm  |  🇺🇸 /ədˈvæn.tɪdʒ/  🇬🇧 /ədˈvɑːn.tɪdʒ/	Vocabulary	B1
+agreement	sự đồng ý, thỏa thuận  |  🇺🇸 🇬🇧 /əˈɡɹiːmənt/	Vocabulary	B1
+amount	số lượng, mức  |  🇺🇸 🇬🇧 /əˈmaʊnt/	Vocabulary	B1
+analysis	phân tích  |  🇺🇸 🇬🇧 /əˈnælɪsɪs/	Vocabulary	B1
+article	bài viết, điều khoản  |  🇺🇸 /ˈɑɹtəkl̩/  🇬🇧 /ˈɑːtɪkəl/	Vocabulary	B1
+attention	sự chú ý  |  🇺🇸 🇬🇧 /əˈtɛn.ʃən/	Vocabulary	B1
+attitude	thái độ  |  🇺🇸 /ˈætɪtud/  🇬🇧 /ˈætɪˌtjuːd/	Vocabulary	B1
+audience	đối tượng, khán giả  |  🇺🇸 🇬🇧 /ˈɔːdi.əns/	Vocabulary	B1
+author	tác giả  |  🇺🇸 /ˈɔ.θɚ/  🇬🇧 /ˈɔː.θə/	Vocabulary	B1
+benefit	lợi ích  |  🇺🇸 /ˈbɛn.ə.fɪt/  🇬🇧 /ˈbɛn.ɪ.fɪt/	Vocabulary	B1
+challenge	thách thức  |  🇺🇸 🇬🇧 /ˈtʃæl.əndʒ/	Vocabulary	B1
+characteristic	đặc điểm, đặc trưng  |  🇺🇸 🇬🇧 /ˌkæɹəktəˈɹɪstɪk/	Vocabulary	B1
+choice	sự lựa chọn  |  🇺🇸 🇬🇧 /tʃɔɪs/	Vocabulary	B1
+community	cộng đồng  |  🇺🇸 🇬🇧 /k(ə)ˈmjunəti/	Vocabulary	B1
+comparison	so sánh  |  🇺🇸 🇬🇧 /kəmˈpæɹɪsən/	Vocabulary	B1
+competition	cạnh tranh  |  🇺🇸 /ˌkɑːmpəˈtɪʃən/  🇬🇧 /ˌkɒmpəˈtɪʃən/	Vocabulary	B1
+conclusion	kết luận  |  🇺🇸 🇬🇧 /kənˈkluːʒən/	Vocabulary	B1
+condition  (The service starts only if the condition is met.)	điều kiện  |  🇺🇸 🇬🇧 /kənˈdɪʃən/	Tech	B1
+conflict	xung đột  |  🇺🇸 🇬🇧 /kənˈflɪkt/	Tech	B1
+connection	kết nối  |  🇺🇸 🇬🇧 /kəˈnɛkʃən/	Tech	B1
+consequence	hậu quả  |  🇺🇸 /ˈkɑnsɪkwəns/  🇬🇧 /ˈkɒnsɪkwɛns/	Vocabulary	B1
+content	nội dung  |  🇺🇸 🇬🇧 /kənˈtɛnt/	Vocabulary	B1
+debate	tranh luận, thảo luận  |  🇺🇸 🇬🇧 /dɪˈbeɪt/	Vocabulary	B1
+demand	nhu cầu, yêu cầu  |  🇺🇸 /dəˈmænd/  🇬🇧 /dɪˈmɑːnd/	Business	B1
+detail  (The spec lacks implementation details.)	chi tiết  |  🇺🇸 /dɪˈteɪl/  🇬🇧 /ˈdiːteɪl/	Vocabulary	B1
+development	sự phát triển  |  🇺🇸 🇬🇧 /dɪˈvɛləpmənt/	Vocabulary	B1
+difference	sự khác biệt  |  🇺🇸 🇬🇧 /ˈdɪfəɹən(t)s/	Vocabulary	B1
+difficulty	khó khăn  |  🇺🇸 🇬🇧 /ˈdɪfɪkəlti/	Vocabulary	B1
+discussion  (Let's open a discussion thread for this.)	cuộc thảo luận  |  🇺🇸 /dɪˈskʌʃən/  🇬🇧 /dɪsˈkʊʃən/	Meetings	B1
+economy	nền kinh tế  |  🇺🇸 /iːˈkɑn.ə.mi/  🇬🇧 /iːˈkɒn.ə.mi/	Business	B1
+education	giáo dục  |  🇺🇸 🇬🇧 /ˌɛdjʊˈkeɪʃn̩/	Vocabulary	B1
+effect	hiệu ứng, tác động  |  🇺🇸 /əˈfɛkt/  🇬🇧 /ɪˈfɛkt/	Vocabulary	B1
+element	thành phần, yếu tố  |  🇺🇸 🇬🇧 /ˈɛlɪmənt/	Vocabulary	B1
+energy	năng lượng  |  🇺🇸 /ˈɛnɚd͡ʒi/  🇬🇧 /ˈɛnəd͡ʒi/	Vocabulary	B1
+evidence	bằng chứng  |  🇺🇸 🇬🇧 [ˈɛvəɾəns]	Vocabulary	B1
+example	ví dụ  |  🇺🇸 🇬🇧 /əɡˈzæmpl̩/	Vocabulary	B1
+fact	sự thật, dữ liệu  |  🇺🇸 🇬🇧 /fækt/	Vocabulary	B1
+failure	thất bại, sự cố  |  🇺🇸 🇬🇧 /ˈfeɪl.jɚ/	Tech	B1
+field	lĩnh vực, trường dữ liệu  |  🇺🇸 /fild/  🇬🇧 /fiːld/	Tech	B1
+force	buộc, lực  |  🇺🇸 /fɔɹs/  🇬🇧 /fɔːs/	Tech	B1
+foundation	nền tảng, cơ sở  |  🇺🇸 🇬🇧 /faʊnˈdeɪʃən/	Vocabulary	B1
+function  (This utility function handles retries.)	hàm, chức năng  |  🇺🇸 /ˈfʌŋkʃən/  🇬🇧 /ˈfʌŋ(k)ʃən/	Tech	B1
+growth	tăng trưởng  |  🇺🇸 /ɡɹoʊθ/  🇬🇧 /ɡɹəʊθ/	Business	B1
+harm	gây hại, tổn hại  |  🇺🇸 /hɑɹm/  🇬🇧 /hɑːm/	Vocabulary	B1
+idea	ý tưởng  |  🇺🇸 /aɪˈdi.ə/  🇬🇧 /ɑeˈdiə̯/	Vocabulary	B1
+importance	tầm quan trọng  |  🇺🇸 /ɪmˈpɔɹtəns/  🇬🇧 /ɪmˈpɔːtəns/	Vocabulary	B1
+improvement	sự cải tiến  |  🇺🇸 🇬🇧 /ɪmˈpɹuːvmənt/	Vocabulary	B1
+information	thông tin  |  🇺🇸 /ˌɪnfəɹˈmeɪʃən/  🇬🇧 /ˌɪnfəˈmeɪʃən/	Vocabulary	B1
+intention	ý định, mục đích  |  🇺🇸 🇬🇧 /ɪnˈtɛnʃən/	Vocabulary	B1
+interest	mối quan tâm, lãi  |  🇺🇸 /ˈɪntəɹst/  🇬🇧 /ˈɪntəɹɪst/	Vocabulary	B1
+job	việc làm, công việc  |  🇺🇸 /d͡ʒɑb/  🇬🇧 /d͡ʒɒb/	Vocabulary	B1
+knowledge  (Domain knowledge is key here.)	kiến thức  |  🇺🇸 /ˈnɑlɪdʒ/  🇬🇧 /ˈnɒlɪdʒ/	Vocabulary	B1
+language	ngôn ngữ  |  🇺🇸 🇬🇧 [ˈleɪŋɡwɪd͡ʒ]	Vocabulary	B1
+leader	người lãnh đạo  |  🇺🇸 🇬🇧 /ˈlidɚ/	Vocabulary	B1
+leadership	năng lực lãnh đạo  |  🇺🇸 🇬🇧 /ˈliːdəʃɪp/	Business	B1
+level  (The abstraction level is too high.)	mức độ, tầng  |  🇺🇸 🇬🇧 /ˈlɛv.əl/	Vocabulary	B1
+limit  (Set a limit on concurrent connections.)	giới hạn  |  🇺🇸 /ˈlɪmɪt/  🇬🇧 /ˈlɪmt/	Tech	B1
+loss	sự mất mát, tổn thất  |  🇺🇸 /lɔs/  🇬🇧 /lɑs/	Vocabulary	B1
+manner	cách thức, thái độ  |  🇺🇸 /ˈmænɚ/  🇬🇧 /ˈmænə/	Vocabulary	B1
+meaning	ý nghĩa  |  🇺🇸 🇬🇧 /ˈmiːnɪŋ/	Vocabulary	B1
+mind	tư duy, trí tuệ  |  🇺🇸 🇬🇧 /maɪnd/	Vocabulary	B1
+model  (Train a model on the dataset.)	mô hình  |  🇺🇸 /ˈmɑdl̩/  🇬🇧 /ˈmɒdl̩/	Tech	B1
+nature	bản chất, tự nhiên  |  🇺🇸 /ˈneɪtʃɚ/  🇬🇧 /ˈneɪtʃə/	Vocabulary	B1
+network	mạng lưới  |  🇺🇸 /nɛtwɝk/  🇬🇧 /nɛtwɜːk/	Tech	B1
+note  (Note that this is a breaking change.)	ghi chú, lưu ý  |  🇺🇸 /noʊt/  🇬🇧 /nəʊt/	Vocabulary	B1
+number	số, con số  |  🇺🇸 🇬🇧 /ˈnʌmbə/	Vocabulary	B1
+object  (Every object must implement the interface.)	đối tượng  |  🇺🇸 /ˈɑb.d͡ʒɛkt/  🇬🇧 /ˈɒb.d͡ʒɛkt/	Tech	B1
+opportunity	cơ hội  |  🇺🇸 /ˌɑpɚˈtunəti/  🇬🇧 /ˌɒp.əˈtjuː.nɪ.tɪ/	Vocabulary	B1
+option	tùy chọn, phương án  |  🇺🇸 /ˈɑpʃən/  🇬🇧 /ˈɒpʃən/	Vocabulary	B1
+order	thứ tự, lệnh  |  🇺🇸 /ˈɔɹdɚ/  🇬🇧 /ˈɔːdə/	Vocabulary	B1
+outcome	kết quả, đầu ra  |  🇺🇸 🇬🇧 /ˈaʊtkʌm/	Business	B1
+output  (Log the output of each step.)	đầu ra, kết quả xuất  |  🇺🇸 🇬🇧 /ˈaʊtpʊt/	Tech	B1
+overview	tổng quan  |  🇺🇸 🇬🇧 /ˈəʊvə(ɹ)ˌvjuː/	Vocabulary	B1
+part	phần, bộ phận  |  🇺🇸 /pɑɹt/  🇬🇧 /pɐːt/	Vocabulary	B1
+phase  (We are in the testing phase.)	giai đoạn	Meetings	B1
+point	điểm, vấn đề  |  🇺🇸 🇬🇧 /pɔɪnt/	Vocabulary	B1
+position	vị trí  |  🇺🇸 🇬🇧 /pəˈzɪʃ(ə)n/	Vocabulary	B1
+possibility	khả năng, khả năng xảy ra  |  🇺🇸 /ˌpɑsɪˈbɪliti/  🇬🇧 /ˌpɒsɪˈbɪliti/	Vocabulary	B1
+potential	tiềm năng  |  🇺🇸 /po(ʊ)ˈtɛnʃəl/  🇬🇧 /pəˈtɛnʃəl/	Vocabulary	B1
+power	quyền lực, công suất  |  🇺🇸 /ˈpaʊ.ɚ/  🇬🇧 /ˈpaʊ.ə(ɹ)/	Vocabulary	B1
+practice  (Follow best practices for security.)	thực hành, quy tắc  |  🇺🇸 🇬🇧 /ˈpɹæktɪs/	Tech	B1
+presence	sự hiện diện  |  🇺🇸 🇬🇧 /ˈpɹɛzəns/	Vocabulary	B1
+problem	vấn đề, bài toán  |  🇺🇸 /ˈpɹɑbləm/  🇬🇧 /ˈpɹɒbləm/	Vocabulary	B1
+progress	tiến độ, tiến triển  |  🇺🇸 /ˈpɹoʊɡɹɛs/  🇬🇧 /ˈpɹɒɡɹɛs/	Vocabulary	B1
+project	dự án	Business	B1
+purpose	mục đích  |  🇺🇸 /ˈpɝpəs/  🇬🇧 /ˈpɜːpəs/	Vocabulary	B1
+quality	chất lượng  |  🇺🇸 /ˈkwɑləti/  🇬🇧 /ˈkwɒlɪti/	Tech	B1
+question	câu hỏi, đặt vấn đề  |  🇺🇸 🇬🇧 /ˈkwɛstjən/	Vocabulary	B1
+range	phạm vi, dải giá trị  |  🇺🇸 🇬🇧 /ɹeɪndʒ/	Vocabulary	B1
+rate	tỷ lệ, tốc độ  |  🇺🇸 🇬🇧 /ɹeɪt/	Tech	B1
+ratio	tỷ lệ, tỷ số  |  🇺🇸 /ˈɹeɪ.ʃiˌoʊ/  🇬🇧 /ˈɹeɪ.ʃi.əʊ/	Vocabulary	B1
+reason	lý do  |  🇺🇸 🇬🇧 /ˈɹiːzən/	Vocabulary	B1
+record  (Log a record for each transaction.)	bản ghi, ghi lại  |  🇺🇸 /ˈɹɛkɚd/  🇬🇧 /ˈɹɛkɔːd/	Tech	B1
+reference  (See the reference docs for details.)	tài liệu tham khảo, tham chiếu  |  🇺🇸 🇬🇧 /ˈɹɛf.(ə)ɹəns/	Tech	B1
+region	vùng, khu vực  |  🇺🇸 🇬🇧 /ˈɹiːd͡ʒn̩/	Tech	B1
+relationship	mối quan hệ  |  🇺🇸 /ɹɪˈleɪʃənˌʃɪp/  🇬🇧 /ɹɪˈleɪʃ(ə)nʃɪp/	Vocabulary	B1
+report	báo cáo  |  🇺🇸 /ɹɪˈpɔɹt/  🇬🇧 /ɹəˈpoːt/	Business	B1
+research	nghiên cứu  |  🇺🇸 /ɹiˈsɝtʃ/  🇬🇧 /ɹɪˈsɜːtʃ/	Vocabulary	B1
+resource	tài nguyên  |  🇺🇸 /ɹɪˈsɔɹs/  🇬🇧 /ɹɪˈsɔːs/	Tech	B1
+response  (The API response was 200 OK.)	phản hồi  |  🇺🇸 🇬🇧 /ɹɪˈspɒns/	Tech	B1
+risk	rủi ro  |  🇺🇸 🇬🇧 /ɹɪsk/	Business	B1
+role	vai trò  |  🇺🇸 🇬🇧 /ɹəʊl/	Vocabulary	B1
+rule	quy tắc  |  🇺🇸 🇬🇧 /ɹuːl/	Vocabulary	B1
+section	phần, đoạn  |  🇺🇸 🇬🇧 /ˈsɛkʃən/	Vocabulary	B1
+sign	dấu hiệu, ký tên  |  🇺🇸 🇬🇧 /saɪn/	Vocabulary	B1
+situation	tình huống  |  🇺🇸 🇬🇧 /sɪtjuːˈeɪʃən/	Vocabulary	B1
+size	kích thước  |  🇺🇸 🇬🇧 /saɪz/	Tech	B1
+skill	kỹ năng  |  🇺🇸 🇬🇧 /skɪl/	Vocabulary	B1
+source  (Always cite the source of the data.)	nguồn  |  🇺🇸 /sɔɹs/  🇬🇧 /sɔːs/	Vocabulary	B1
+space	không gian, dung lượng  |  🇺🇸 🇬🇧 /speɪs/	Tech	B1
+stage  (Deploy to stage before production.)	giai đoạn, môi trường stage  |  🇺🇸 🇬🇧 /steɪd͡ʒ/	Tech	B1
+standard	tiêu chuẩn  |  🇺🇸 /ˈstændəɹd/  🇬🇧 /ˈstændəd/	Tech	B1
+statement	câu lệnh, tuyên bố  |  🇺🇸 /ˈsteɪtmənt/  🇬🇧 /ˈsteɪtm(ə)nt/	Tech	B1
+status	trạng thái  |  🇺🇸 /ˈstæt.əs/  🇬🇧 /ˈsteɪt.əs/	Tech	B1
+step	bước, giai đoạn  |  🇺🇸 🇬🇧 /stɛp/	Vocabulary	B1
+success	thành công  |  🇺🇸 🇬🇧 /səkˈsɛs/	Vocabulary	B1
+task  (Assign the task to the right person.)	nhiệm vụ, công việc  |  🇺🇸 /tæsk/  🇬🇧 /tɑːsk/	Meetings	B1
+term	thuật ngữ, điều khoản  |  🇺🇸 /tɝm/  🇬🇧 /tɜːm/	Vocabulary	B1
+text	văn bản, nội dung  |  🇺🇸 🇬🇧 /tɛkst/	Vocabulary	B1
+theory	lý thuyết  |  🇺🇸 🇬🇧 /ˈθiːəɹi/	Vocabulary	B1
+type  (What type of error is this?)	loại, kiểu  |  🇺🇸 🇬🇧 /taɪp/	Tech	B1
+understanding	sự hiểu biết  |  🇺🇸 /ˌʌndəɹˈstændɪŋ/  🇬🇧 /ʌndəˈstandɪŋ/	Vocabulary	B1
+usage  (Memory usage is too high.)	cách sử dụng, mức sử dụng  |  🇺🇸 🇬🇧 /ˈjuːsɪd͡ʒ/	Tech	B1
+variety	sự đa dạng  |  🇺🇸 🇬🇧 /vəˈɹaɪ.ɪ.ti/	Vocabulary	B1
+view  (The view layer renders the HTML.)	quan điểm, lớp hiển thị  |  🇺🇸 🇬🇧 /vjuː/	Tech	B1
+weight	trọng số, trọng lượng  |  🇺🇸 🇬🇧 /weɪt/	Tech	B1
+word	từ, từ ngữ  |  🇺🇸 /wɝd/  🇬🇧 /wɜːd/	Vocabulary	B1
+actual	thực tế, thực sự  |  🇺🇸 /ˈæk(t)ʃ(əw)əl/  🇬🇧 /ˈak(t)ʃj(ʊ)əl/	Vocabulary	B1
+additional	bổ sung, thêm  |  🇺🇸 🇬🇧 /əˈdɪʃənəl/	Vocabulary	B1
+average	trung bình  |  🇺🇸 🇬🇧 /ˈævəɹɪd͡ʒ/	Vocabulary	B1
+broad	rộng, bao quát  |  🇺🇸 /bɹɔd/  🇬🇧 /bɹɑd/	Vocabulary	B1
+capable	có khả năng  |  🇺🇸 🇬🇧 /ˈkeɪpəbl̩/	Vocabulary	B1
+certain	chắc chắn, nhất định  |  🇺🇸 🇬🇧 /ˈsɝtn̩/	Vocabulary	B1
+common	phổ biến, thường gặp  |  🇺🇸 /ˈkɑmən/  🇬🇧 /ˈkɒmən/	Vocabulary	B1
+comprehensive	toàn diện  |  🇺🇸 /ˌkɑːm.pɹəˈhɛn.sɪv/  🇬🇧 /ˌkɒm.pɹɪˈhɛn.sɪv/	Vocabulary	B1
+concerned	lo lắng, quan tâm  |  🇺🇸 /kənˈsɝnd/  🇬🇧 /kənˈsɜːnd/	Vocabulary	B1
+correct	đúng, chính xác  |  🇺🇸 🇬🇧 /kəˈɹɛkt/	Vocabulary	B1
+current	hiện tại, hiện hành  |  🇺🇸 /ˈkɝɹənt/  🇬🇧 /ˈkʌɹənt/	Vocabulary	B1
+direct	trực tiếp  |  🇺🇸 🇬🇧 /d(a)ɪˈɹɛkt/	Vocabulary	B1
+equal	bằng nhau, bình đẳng  |  🇺🇸 🇬🇧 /ˈiːkwəl/	Vocabulary	B1
+essential	thiết yếu, cơ bản  |  🇺🇸 🇬🇧 /ɪˈsɛn.ʃəl/	Vocabulary	B1
+evident	rõ ràng, hiển nhiên  |  🇺🇸 🇬🇧 /ˈɛ.vɪ.dənt/	Vocabulary	B1
+exact  (Give me the exact error message.)	chính xác, đúng  |  🇺🇸 🇬🇧 /ɪɡˈzækt/	Tech	B1
+expected  (The expected output is an empty array.)	được mong đợi, dự kiến  |  🇺🇸 🇬🇧 /ɪksˈpɛktɪd/	Tech	B1
+experienced	có kinh nghiệm  |  🇺🇸 /ɪkˈspɪɹ.i.ənst/  🇬🇧 /ɪkˈspɪə.ɹɪənst/	Vocabulary	B1
+extensive	rộng rãi, toàn diện  |  🇺🇸 🇬🇧 /ɛksˈtɛn.sɪv/	Vocabulary	B1
+formal	trang trọng, chính thức  |  🇺🇸 /ˈfɔɹməl/  🇬🇧 /ˈfɔːməl/	Vocabulary	B1
+frequent	thường xuyên  |  🇺🇸 🇬🇧 /ˈfɹiː.kwənt/	Vocabulary	B1
+general	chung, tổng quát  |  🇺🇸 /ˈd͡ʒɛnəɹəl/  🇬🇧 /ˈd͡ʒɛnɹəl/	Vocabulary	B1
+given	cho trước, đã biết  |  🇺🇸 🇬🇧 /ˈɡɪ.vən/	Vocabulary	B1
+ideal	lý tưởng  |  🇺🇸 🇬🇧 /aɪˈdiː.əl/	Vocabulary	B1
+independent	độc lập  |  🇺🇸 🇬🇧 /ɪndɪˈpɛndənt/	Vocabulary	B1
+indirect	gián tiếp  |  🇺🇸 🇬🇧 /ˌɪndaɪˈɹɛkt/	Vocabulary	B1
+individual	cá nhân, riêng lẻ  |  🇺🇸 /ˌɪndəˈ-/  🇬🇧 /ˌɘndɘˈvɘd͡ʒɘl/	Vocabulary	B1
+initial  (Set the initial state to empty.)	ban đầu, khởi tạo  |  🇺🇸 🇬🇧 /ɪˈnɪʃəl/	Tech	B1
+key	chính, quan trọng  |  🇺🇸 /ki/  🇬🇧 /kiː/	Vocabulary	B1
+limited  (The free plan has limited API calls.)	hạn chế  |  🇺🇸 🇬🇧 /ˈlɪmɪtɪd/	Tech	B1
+local	cục bộ, địa phương  |  🇺🇸 /ˈloʊkl̩/  🇬🇧 /ˈləʊkl̩/	Tech	B1
+major	lớn, quan trọng  |  🇺🇸 /ˈmeɪ.dʒɚ/  🇬🇧 /ˈmeɪ.dʒə(ɹ)/	Vocabulary	B1
+modern	hiện đại  |  🇺🇸 /ˈmɑdɚn/  🇬🇧 /ˈmɒd(ə)n/	Vocabulary	B1
+multiple	nhiều, đa  |  🇺🇸 🇬🇧 /ˈmʌltɪpl̩/	Vocabulary	B1
+normal	bình thường  |  🇺🇸 /ˈnɔɹməl/  🇬🇧 /ˈnɔːməl/	Vocabulary	B1
+numerous	nhiều, vô số  |  🇺🇸 /ˈnuməɹəs/  🇬🇧 /ˈnjuːməɹəs/	Vocabulary	B1
+obvious	rõ ràng, hiển nhiên  |  🇺🇸 /ˈɑ.vi.əs/  🇬🇧 /ˈɒ.vɪəs/	Vocabulary	B1
+overall	tổng thể, chung	Vocabulary	B1
+particular	đặc biệt, cụ thể  |  🇺🇸 /pəˈtɪkjələ/  🇬🇧 /pəˈtɪkjəlɚ/	Vocabulary	B1
+positive	tích cực  |  🇺🇸 /ˈpɑzɪ̈tɪv/  🇬🇧 /ˈpɒzɪ̈tɪv/	Vocabulary	B1
+primary	chính, cơ bản  |  🇺🇸 /ˈpɹaɪməɹi/  🇬🇧 /ˈpɹɒeməɹi/	Vocabulary	B1
+professional	chuyên nghiệp  |  🇺🇸 🇬🇧 /pɹəˈfɛʃənəl/	Vocabulary	B1
+proper	đúng đắn, phù hợp  |  🇺🇸 /ˈpɹɑ.pɚ/  🇬🇧 /ˈpɹɔp.ə/	Vocabulary	B1
+recent	gần đây, mới nhất  |  🇺🇸 🇬🇧 /ˈɹiːsənt/	Vocabulary	B1
+regular	thường xuyên, đều đặn  |  🇺🇸 /ˈɹɛɡjəlɚ/  🇬🇧 /ˈɹɛɡjʊlə/	Vocabulary	B1
+similar  (Use a similar pattern for all handlers.)	tương tự  |  🇺🇸 /ˈsɪməlɚ/  🇬🇧 /ˈsɪmələ/	Tech	B1
+slow  (The query is too slow.)	chậm  |  🇺🇸 /sloʊ/  🇬🇧 /sləʊ/	Tech	B1
+strong	mạnh, vững chắc  |  🇺🇸 /stɹɔŋ/  🇬🇧 /stɹɒŋ/	Vocabulary	B1
+traditional	truyền thống  |  🇺🇸 🇬🇧 /tɹəˈdɪʃnəl/	Vocabulary	B1
+typical  (A typical sprint is two weeks.)	điển hình, thông thường  |  🇺🇸 🇬🇧 /ˈtɪpɪkl̩/	Meetings	B1
+various	nhiều loại, đa dạng  |  🇺🇸 /ˈvæɹ.i.əs/  🇬🇧 /ˈvɛə.ɹi.əs/	Vocabulary	B1
+wide	rộng, nhiều  |  🇺🇸 🇬🇧 /waɪd/	Vocabulary	B1
+willing  (I'm willing to take on this task.)	sẵn lòng, sẵn sàng  |  🇺🇸 🇬🇧 /ˈwɪlɪŋ/	Vocabulary	B1
+set up	thiết lập, cài đặt	Phrases	B1
+look into	tìm hiểu, xem xét	Phrases	B1
+come up with	nghĩ ra, đề xuất	Phrases	B1
+go through	xem xét kỹ, trải qua	Phrases	B1
+break down  (Break down the task into subtasks.)	phân tích chi tiết, chia nhỏ	Phrases	B1
+figure out	giải quyết, hiểu ra	Phrases	B1
+point out	chỉ ra, nhấn mạnh	Phrases	B1
+run into	gặp phải, va phải	Phrases	B1
+work out	giải quyết, tính toán  |  🇺🇸 🇬🇧 /ˌwəːk ˈaʊt/	Phrases	B1
+carry out	thực hiện, triển khai	Phrases	B1
+deal with	xử lý, giải quyết	Phrases	B1
+bring up  (I'll bring up the issue in the standup.)	đề cập, nêu ra	Phrases	B1
+take on	nhận, đảm nhận	Phrases	B1
+put off	trì hoãn, hoãn lại	Phrases	B1
+give up	bỏ cuộc, từ bỏ	Phrases	B1
+take over	tiếp quản, tiếp nhận	Phrases	B1
+hand over	bàn giao, chuyển giao	Phrases	B1
+narrow down	thu hẹp, loại bớt	Phrases	B1
+scale up	mở rộng quy mô	Tech	B1
+scale down	thu nhỏ quy mô	Tech	B1
+spin off	tách ra, khởi tạo nhánh riêng	Tech	B1
+kick off  (We'll kick off the project Monday.)	khởi động, bắt đầu	Meetings	B1
+check in	báo cáo nhanh, check-in	Meetings	B1
+sign off  (The PM signed off on the design.)	phê duyệt, hoàn tất	Meetings	B1
+hand off	bàn giao công việc cho người khác	Meetings	B1
+roll out	triển khai (tính năng mới)	Tech	B1
+data structure	cấu trúc dữ liệu	Tech	B2
+linked list	danh sách liên kết	Tech	B2
+hash map	bảng băm	Tech	B2
+binary tree	cây nhị phân	Tech	B2
+recursion  (Recursion must have a base case.)	đệ quy	Tech	B2
+time complexity	độ phức tạp thời gian	Tech	B2
+space complexity	độ phức tạp không gian	Tech	B2
+Big O notation	ký hiệu Big O đánh giá thuật toán	Tech	B2
+object-oriented programming	lập trình hướng đối tượng	Tech	B2
+inheritance  (Use inheritance to share base behavior.)	kế thừa  |  🇺🇸 🇬🇧 /ɪnˈhɛɹətəns/	Tech	B2
+polymorphism	đa hình  |  🇺🇸 🇬🇧 /pɒlɪˈmɔːfɪz(ə)m/	Tech	B2
+encapsulation  (Encapsulation hides implementation details.)	đóng gói	Tech	B2
+design pattern  (Apply the right design pattern here.)	mẫu thiết kế	Tech	B2
+singleton  (The config class is a singleton.)	mẫu đơn thể	Tech	B2
+factory pattern	mẫu nhà máy tạo đối tượng	Tech	B2
+observer pattern	mẫu quan sát sự kiện	Tech	B2
+dependency injection  (Use DI to decouple the services.)	tiêm phụ thuộc	Tech	B2
+inversion of control	đảo ngược quyền kiểm soát	Tech	B2
+SOLID principles	năm nguyên tắc thiết kế hướng đối tượng	Tech	B2
+DRY principle	nguyên tắc không lặp lại code	Tech	B2
+KISS principle	nguyên tắc giữ mọi thứ đơn giản	Tech	B2
+REST API  (Expose the data via a REST API.)	giao diện lập trình kiểu REST	Tech	B2
+GraphQL  (Switch the endpoint to GraphQL.)	ngôn ngữ truy vấn API của Meta	Tech	B2
+WebSocket  (Use WebSocket for real-time updates.)	kết nối hai chiều liên tục	Tech	B2
+OAuth  (Implement OAuth for third-party login.)	giao thức ủy quyền	Tech	B2
+JWT  (Sign the JWT with a private key.)	JSON Web Token — mã xác thực	Tech	B2
+CORS  (Configure CORS headers correctly.)	chia sẻ tài nguyên đa nguồn	Tech	B2
+HTTP method  (Use the correct HTTP method for each endpoint.)	phương thức HTTP	Tech	B2
+JSON schema  (Validate the payload against the JSON schema.)	sơ đồ định nghĩa cấu trúc JSON	Tech	B2
+input sanitization	làm sạch dữ liệu đầu vào	Tech	B2
+SQL injection  (Prevent SQL injection with parameterized queries.)	tấn công tiêm SQL	Tech	B2
+XSS attack  (Sanitize output to prevent XSS attacks.)	tấn công cross-site scripting	Tech	B2
+CSRF  (Add a CSRF token to all forms.)	giả mạo yêu cầu từ phía người dùng	Tech	B2
+encryption  (Enable encryption at rest.)	mã hóa	Tech	B2
+hashing  (Store passwords using hashing, not encryption.)	băm dữ liệu	Tech	B2
+salt  (Add a random salt before hashing.)	muối ngẫu nhiên trong mã hóa  |  🇺🇸 /sɑlt/  🇬🇧 /sɒlt/	Tech	B2
+digital signature  (Verify the digital signature on the payload.)	chữ ký số	Tech	B2
+TLS  (Enforce TLS 1.3 on all endpoints.)	bảo mật lớp truyền tải	Tech	B2
+certificate  (Renew the SSL certificate before it expires.)	chứng chỉ SSL/TLS	Tech	B2
+firewall  (Update the firewall rules for the new subnet.)	tường lửa  |  🇺🇸 /ˈfaɪ(ə)ɹˌwɑl/  🇬🇧 /ˈfaɪ.əˌwɔːl/	Tech	B2
+VPN  (Connect via VPN before accessing the server.)	mạng riêng ảo	Tech	B2
+network topology	cấu trúc liên kết mạng	Tech	B2
+latency  (P99 latency is above our SLO.)	độ trễ mạng  |  🇺🇸 🇬🇧 /ˈleɪ.tən.si/	Tech	B2
+packet loss	mất gói tin mạng	Tech	B2
+DNS  (Update the DNS record to point to the new IP.)	hệ thống phân giải tên miền	Tech	B2
+horizontal scaling	mở rộng bằng cách thêm máy chủ	Tech	B2
+vertical scaling	mở rộng bằng cách nâng cấp máy chủ	Tech	B2
+auto-scaling  (Configure auto-scaling based on CPU usage.)	tự động điều chỉnh số lượng instance	Tech	B2
+Dockerfile  (Write a Dockerfile for the service.)	file cấu hình Docker image	Tech	B2
+docker-compose  (Use docker-compose for local development.)	công cụ định nghĩa multi-container	Tech	B2
+Kubernetes pod	đơn vị triển khai nhỏ nhất trong K8s	Tech	B2
+namespace  (Deploy to the production namespace.)	không gian tên trong Kubernetes  |  🇺🇸 🇬🇧 /ˈneɪmspeɪs/	Tech	B2
+ingress  (Configure ingress rules for the service.)	cổng vào lưu lượng Kubernetes	Tech	B2
+persistent volume	dung lượng lưu trữ bền vững trong K8s	Tech	B2
+stateless  (Keep the service stateless for easy scaling.)	không lưu trạng thái	Tech	B2
+stateful  (The database is stateful by nature.)	có trạng thái, lưu trạng thái	Tech	B2
+CAP theorem	định lý CAP trong hệ thống phân tán	Tech	B2
+ACID  (Postgres transactions are ACID-compliant.)	thuộc tính giao dịch cơ sở dữ liệu  |  🇺🇸 🇬🇧 /ˈæs.ɪd/	Tech	B2
+sharding  (Use sharding to distribute the database load.)	phân mảnh cơ sở dữ liệu	Tech	B2
+replication  (Enable read replication for the database.)	nhân bản dữ liệu  |  🇺🇸 🇬🇧 /ɹɛplɪˈkeɪʃən/	Tech	B2
+indexing strategy	chiến lược đánh chỉ mục cơ sở dữ liệu	Tech	B2
+query optimization  (Profile the query before optimization.)	tối ưu hóa truy vấn	Tech	B2
+database migration  (Run database migrations in CI/CD.)	di chuyển cấu trúc cơ sở dữ liệu	Tech	B2
+connection pooling  (Use connection pooling to reduce overhead.)	nhóm kết nối cơ sở dữ liệu	Tech	B2
+ORM  (The ORM generates SQL from the model class.)	ánh xạ đối tượng quan hệ	Tech	B2
+N+1 problem  (Fix the N+1 problem with eager loading.)	vấn đề truy vấn thừa trong ORM	Tech	B2
+stakeholder management	quản lý các bên liên quan	Business	B2
+conflict resolution	giải quyết xung đột	Business	B2
+constructive criticism	phê bình mang tính xây dựng	Business	B2
+active listening	lắng nghe chủ động	Business	B2
+growth mindset	tư duy phát triển, không sợ thất bại	Business	B2
+psychological safety	an toàn tâm lý trong nhóm	Business	B2
+emotional intelligence	trí tuệ cảm xúc	Business	B2
+empathy  (Show empathy when giving tough feedback.)	sự đồng cảm  |  🇺🇸 🇬🇧 /ˈɛmpəθi/	Business	B2
+rapport	mối quan hệ tin cậy, sự kết nối  |  🇺🇸 🇬🇧 /ɹæˈpoʊɹ/	Business	B2
+persuasion	sự thuyết phục  |  🇺🇸 🇬🇧 /pəˈsweɪʒ(ə)n/	Business	B2
+negotiation skills	kỹ năng đàm phán	Business	B2
+presentation skills	kỹ năng thuyết trình	Business	B2
+storytelling  (Use storytelling to make the data compelling.)	kể chuyện để thuyết phục	Business	B2
+executive summary	bản tóm tắt cho lãnh đạo	Business	B2
+elevator pitch	bài giới thiệu ngắn trong 30 giây  |  🇺🇸 🇬🇧 /ˈɛləveɪtə ˈpɪtʃ/	Business	B2
+status report	báo cáo tình trạng dự án	Business	B2
+project charter	tài liệu khởi động dự án	Business	B2
+risk register	danh sách rủi ro và kế hoạch ứng phó	Business	B2
+assumption	giả định, giả thuyết  |  🇺🇸 🇬🇧 /əˈsʌmp.ʃən/	Business	B2
+dependency mapping	lập bản đồ phụ thuộc giữa các công việc	Business	B2
+critical path	đường dẫn quyết định thời gian dự án	Business	B2
+resource constraint	giới hạn về tài nguyên	Business	B2
+scope management	quản lý phạm vi dự án	Business	B2
+change request  (Submit a change request for approval.)	yêu cầu thay đổi	Business	B2
+lessons learned	bài học kinh nghiệm sau dự án	Business	B2
+knowledge base	kho tàng tài liệu nội bộ	Business	B2
+runbook  (Update the runbook with the new procedure.)	sổ tay vận hành hệ thống	Tech	B2
+on-call rotation	lịch trực on-call	Tech	B2
+incident response	quy trình phản ứng sự cố	Tech	B2
+blameless postmortem	phân tích sự cố không đổ lỗi cá nhân	Tech	B2
+root cause analysis  (Conduct a root cause analysis after the outage.)	phân tích nguyên nhân gốc rễ	Tech	B2
+competitive analysis	phân tích đối thủ cạnh tranh	Business	B2
+market research	nghiên cứu thị trường	Business	B2
+user research	nghiên cứu người dùng	Business	B2
+user persona	chân dung người dùng mục tiêu	Business	B2
+user journey	hành trình người dùng	Business	B2
+pain point  (Identify the user's pain points first.)	điểm đau của khách hàng	Business	B2
+value proposition  (Clarify the value proposition before building.)	đề xuất giá trị	Business	B2
+product roadmap	lộ trình phát triển sản phẩm	Business	B2
+feature prioritization	ưu tiên hóa tính năng	Business	B2
+backlog grooming	xem xét và làm sạch backlog	Business	B2
+sprint planning	lập kế hoạch sprint	Meetings	B2
+velocity  (The team velocity dropped after the refactor.)	tốc độ hoàn thành công việc của team  |  🇺🇸 /vəˈlɑsəti/  🇬🇧 /vəˈlɒsəti/	Business	B2
+burndown chart	biểu đồ tiến độ sprint	Business	B2
+Gantt chart	biểu đồ Gantt quản lý dự án	Business	B2
+resource allocation  (Review the resource allocation monthly.)	phân bổ tài nguyên	Business	B2
+budget planning	lập kế hoạch ngân sách	Business	B2
+cost estimation	ước tính chi phí	Business	B2
+revenue forecast	dự báo doanh thu	Business	B2
+break-even analysis	phân tích điểm hòa vốn	Business	B2
+churn rate  (High churn rate signals a product problem.)	tỷ lệ khách rời bỏ dịch vụ	Business	B2
+customer acquisition cost	chi phí để có được một khách hàng mới	Business	B2
+lifetime value	giá trị vòng đời khách hàng	Business	B2
+net promoter score	chỉ số đo mức độ giới thiệu sản phẩm	Business	B2
+conversion rate  (Improve the signup conversion rate.)	tỷ lệ chuyển đổi	Business	B2
+funnel analysis	phân tích phễu chuyển đổi	Business	B2
+hypothesis testing  (Run hypothesis testing before committing.)	kiểm định giả thuyết	Business	B2
+albeit	mặc dù, tuy rằng  |  🇺🇸 /ɔlˈbi.ət/  🇬🇧 /ɔːlˈbiː.ɪt/	C1	C1
+notwithstanding	mặc dù, bất chấp  |  🇺🇸 /ˌnɑtwɪθˈstændɪŋ/  🇬🇧 /ˌnɒtwɪðˈstændɪŋ/	C1	C1
+nonetheless	tuy nhiên, vẫn vậy  |  🇺🇸 🇬🇧 /ˌnʌnðəˈlɛs/	C1	C1
+henceforth	từ nay trở đi  |  🇺🇸 🇬🇧 /hɛnsˈfɔɹθ/	C1	C1
+whereby	theo đó, nhờ đó  |  🇺🇸 🇬🇧 /wɛə(ɹ)ˈbaɪ/	C1	C1
+thereof	của điều đó, về điều đó  |  🇺🇸 /ðɛˈɹʌv/  🇬🇧 /ðɛəˈɹɒv/	C1	C1
+inasmuch	vì rằng, trong chừng mực	C1	C1
+insofar	trong phạm vi, ở mức độ	C1	C1
+wherein	trong đó, nơi mà  |  🇺🇸 /(h)wɛɹˈɪn/  🇬🇧 /wɛəɹˈɪn/	C1	C1
+herein	trong đây, trong tài liệu này	C1	C1
+heretofore	trước đây, cho đến nay  |  🇺🇸 /ˈhɪɹtəfoɹ/  🇬🇧 /ˌhɪətəˈfɔə/	C1	C1
+aforementioned	đã đề cập ở trên  |  🇺🇸 🇬🇧 /əˈfɔːˌmɛn.ʃənd/	C1	C1
+subsequently  (The fix was subsequently reverted.)	sau đó, tiếp theo  |  🇺🇸 🇬🇧 /ˈsʌb.sɪ.kwənt.li/	Vocabulary	C1
+accordingly  (Act accordingly once you have the data.)	do đó, theo đó  |  🇺🇸 /ə.ˈkɔɹ.dɪŋ.li/  🇬🇧 /əˈkɔː(ɹ).dɪŋ.li/	Vocabulary	C1
+furthermore	hơn nữa, ngoài ra  |  🇺🇸 🇬🇧 /ˈfɜː(ɹ).ðə(ɹ).mɔː(ɹ)/	Vocabulary	C1
+moreover	hơn nữa, thêm vào đó  |  🇺🇸 /mɔɹˈoʊvɚ/  🇬🇧 /mɔːˈɹəʊvə/	Vocabulary	C1
+nevertheless	tuy nhiên, vẫn vậy  |  🇺🇸 /ˈnɛvɚðəlɛs/  🇬🇧 /ˈnɛvəðəlɛs/	Vocabulary	C1
+conversely  (Conversely, fewer threads may help.)	ngược lại  |  🇺🇸 🇬🇧 /kənˈvɜːsli/	Vocabulary	C1
+juxtapose  (Juxtapose the two approaches to see the difference.)	đặt cạnh nhau để so sánh  |  🇺🇸 /ˈd͡ʒʌkstəpoʊz/  🇬🇧 /ˈd͡ʒʌkstəpəʊz/	Vocabulary	C1
+elucidate  (Could you elucidate the design choice?)	làm sáng tỏ, giải thích rõ  |  🇺🇸 🇬🇧 /əˈluː.sɪ.de͡ɪt/	Vocabulary	C1
+expound  (Please expound on the tradeoffs.)	trình bày chi tiết, giải thích  |  🇺🇸 🇬🇧 /ɪkˈspaʊnd/	Vocabulary	C1
+delineate  (Delineate the responsibilities of each service.)	phân ranh giới rõ ràng  |  🇺🇸 🇬🇧 /dɪˈlɪniːeɪt/	Vocabulary	C1
+encapsulate  (This pattern encapsulates the core idea well.)	gói gọn, tóm tắt cô đọng  |  🇺🇸 🇬🇧 /ɪnˈkæps(j)ʊˌleɪt/	Vocabulary	C1
+epitomize  (This PR epitomizes clean code.)	là hình mẫu tiêu biểu của  |  🇺🇸 🇬🇧 /əˈpɪt.əˌmaɪz/	Vocabulary	C1
+exemplify  (This function exemplifies the DRY principle.)	minh họa, là ví dụ điển hình  |  🇺🇸 🇬🇧 /ɛɡˈzɛmplɪfaɪ/	Vocabulary	C1
+illustrate  (Use a diagram to illustrate the flow.)	minh họa, thể hiện  |  🇺🇸 🇬🇧 /ɪ.ˈlʌs.tɹeɪt/	Vocabulary	C1
+characterize  (How would you characterize the bottleneck?)	mô tả đặc điểm, định nghĩa  |  🇺🇸 🇬🇧 /ˈkæɹəktəɹaɪz/	Vocabulary	C1
+differentiate  (Differentiate between the two approaches.)	phân biệt, tạo sự khác biệt  |  🇺🇸 /ˌdɪ.fəˈɹɛnt.ʃi.eɪt/  🇬🇧 /dɪf.əˈɹɛn.ʃi.eɪt/	Vocabulary	C1
+discriminate  (The model cannot discriminate edge cases.)	phân biệt, nhận dạng  |  🇺🇸 🇬🇧 /dɪsˈkɹɪmɪneɪt/	Vocabulary	C1
+interpolate  (Interpolate the missing data points.)	nội suy, điền vào khoảng trống  |  🇺🇸 🇬🇧 /ɪn.ˈtɜɹ.pə.ˌleɪt/	Vocabulary	C1
+generalize  (Don't generalize from a single data point.)	tổng quát hóa, khái quát	Vocabulary	C1
+specialize  (The service specializes in payment processing.)	chuyên biệt hóa  |  🇺🇸 🇬🇧 /ˈspɛʃəˌlaɪz/	Vocabulary	C1
+contextualize  (Contextualize the error before escalating.)	đặt vào ngữ cảnh cụ thể	Vocabulary	C1
+operationalize  (Operationalize the metric so we can track it.)	đưa vào vận hành, cụ thể hóa  |  🇺🇸 🇬🇧 /ɒpəˈɹeɪʃ(ə)nəlʌɪz/	Vocabulary	C1
+conceptualize  (Conceptualize the solution before writing code.)	hình thành khái niệm, xây dựng ý tưởng	Vocabulary	C1
+theorize  (Theorize about root cause before testing.)	đặt ra lý thuyết	Vocabulary	C1
+hypothesize  (Hypothesize and then validate with data.)	đặt giả thuyết	Vocabulary	C1
+invalidate  (New data invalidates the original assumption.)	bác bỏ, làm mất hiệu lực  |  🇺🇸 🇬🇧 /ˌɪnˈvæl.ɪ.deɪt/	Vocabulary	C1
+corroborate  (Can you corroborate this with logs?)	xác nhận, củng cố bằng bằng chứng  |  🇺🇸 /kəˈɹɑbəɹeɪ̯t/  🇬🇧 /kəˈɹɒbəɹeɪ̯t/	Vocabulary	C1
+refute  (The benchmark results refute the hypothesis.)	bác bỏ, phản bác  |  🇺🇸 🇬🇧 /ɹəˈfjut/	Vocabulary	C1
+reconcile  (Reconcile the two conflicting reports.)	hòa giải, đối chiếu  |  🇺🇸 🇬🇧 /ˈɹɛkənsaɪl/	Vocabulary	C1
+reconciliation  (A data reconciliation job runs nightly.)	sự đối chiếu, hòa giải dữ liệu  |  🇺🇸 🇬🇧 /ˌɹɛkənˌsɪliˈeɪʃən/	Vocabulary	C1
+paradigm shift  (Serverless is a paradigm shift in deployment.)	sự thay đổi mô hình tư duy căn bản	Business	C1
+disruptive innovation  (Cloud computing was a disruptive innovation.)	đổi mới mang tính phá vỡ thị trường	Business	C1
+exponential growth  (User growth has been exponential.)	tăng trưởng theo cấp số nhân	Business	C1
+compounding effect  (The compounding effect of technical debt is real.)	hiệu ứng tích lũy theo thời gian	Business	C1
+flywheel effect  (Build the flywheel effect through retention.)	hiệu ứng bánh đà, tự duy trì đà tăng trưởng	Business	C1
+network effect  (The product benefits from a strong network effect.)	hiệu ứng mạng lưới	Business	C1
+switching cost  (High switching costs reduce churn.)	chi phí khi chuyển sang sản phẩm khác	Business	C1
+lock-in effect  (Avoid creating a lock-in effect for users.)	hiệu ứng bẫy phụ thuộc	Business	C1
+commoditization  (Cloud storage is heading toward commoditization.)	hàng hóa hóa, mất lợi thế độc quyền	Business	C1
+differentiation strategy  (Our differentiation strategy is developer experience.)	chiến lược tạo sự khác biệt	Business	C1
+blue ocean strategy  (We're pursuing a blue ocean strategy.)	chiến lược thị trường không cạnh tranh	Business	C1
+zero-sum game  (Negotiations shouldn't be a zero-sum game.)	trò chơi tổng bằng không	Business	C1
+positive-sum game  (Good partnerships are a positive-sum game.)	trò chơi cùng thắng	Business	C1
+Nash equilibrium	cân bằng Nash trong lý thuyết trò chơi	Business	C1
+adverse selection  (Free tiers can cause adverse selection.)	lựa chọn bất lợi trong kinh tế	Business	C1
+moral hazard  (Blanket coverage creates moral hazard.)	rủi ro đạo đức	Business	C1
+principal-agent problem	vấn đề ủy quyền và người được ủy quyền	Business	C1
+information asymmetry  (Information asymmetry drives negotiation outcomes.)	bất cân xứng thông tin	Business	C1
+bounded rationality  (Bounded rationality explains poor estimates.)	lý trí có giới hạn	Business	C1
+cognitive bias  (Watch out for cognitive bias in code reviews.)	sai lệch nhận thức	Business	C1
+confirmation bias  (Confirmation bias leads to ignoring counter-evidence.)	thiên kiến xác nhận	Business	C1
+sunk cost fallacy  (Don't let sunk cost fallacy drive the decision.)	ngụy biện chi phí chìm	Business	C1
+FOMO  (FOMO drives poor tech adoption decisions.)	sợ bỏ lỡ cơ hội (Fear Of Missing Out)	Idioms	C1
+JOMO  (Practice JOMO — not every trend needs adoption.)	vui vẻ khi bỏ lỡ thứ không cần thiết	Idioms	C1
+Dunning-Kruger effect  (The Dunning-Kruger effect is common in junior devs.)	hiệu ứng tự đánh giá cao năng lực	Business	C1
+Pareto principle  (Apply the Pareto principle to bug fixing.)	nguyên tắc 80/20	Business	C1
+Parkinson's law  (Parkinson's law explains why tasks fill deadlines.)	công việc có xu hướng lấp đầy thời gian có sẵn	Business	C1
+Conway's law  (Conway's law shapes microservice boundaries.)	luật Conway — kiến trúc phản ánh tổ chức	Tech	C1
+Goodhart's law  (Goodhart's law warns against optimizing metrics blindly.)	khi chỉ số trở thành mục tiêu, nó mất giá trị	Business	C1
+Brook's law  (Brook's law: adding engineers slows a late project.)	thêm người vào dự án trễ làm chậm hơn	Tech	C1
+technical leverage  (Automation creates technical leverage.)	đòn bẩy kỹ thuật, nhân đội	Tech	C1
+force multiplier  (Good tooling is a force multiplier for the team.)	yếu tố nhân bội hiệu suất	Tech	C1
+circumspect  (Be circumspect before committing to an estimate.)	thận trọng, cẩn thận cân nhắc  |  🇺🇸 /ˈsɝ.kəm.spɛkt/  🇬🇧 /ˈsɜː.kəm.spɛkt/	Vocabulary	C1
+perspicacious  (A perspicacious reviewer spotted the edge case.)	sắc sảo, có khả năng nhìn thấu đáo  |  🇺🇸 /ˌpɜːɹ.spɪˈkeɪ.ʃəs/  🇬🇧 /ˌpɜː.spɪˈkeɪ.ʃəs/	Vocabulary	C1
+sagacious  (Her sagacious advice saved the project.)	sáng suốt, thông thái  |  🇺🇸 🇬🇧 /səˈɡeɪʃəs/	Vocabulary	C1
+prudent  (It is prudent to add a feature flag.)	khôn ngoan, thận trọng  |  🇺🇸 🇬🇧 /ˈpɹuːdənt/	Vocabulary	C1
+sanguine  (I'm sanguine about the Q4 release.)	lạc quan, tự tin  |  🇺🇸 🇬🇧 /ˈsæŋ.ɡwɪn/	Vocabulary	C1
+circumlocution  (Avoid circumlocution in technical writing.)	nói vòng vo, dùng nhiều từ không cần thiết  |  🇺🇸 /ˌsɝkəmləˈkjuʃən/  🇬🇧 /ˌsɜːkəmləˈkjuːʃən/	Vocabulary	C1
+euphemism  (Using "legacy" as a euphemism for broken code.)	cách nói giảm nói tránh  |  🇺🇸 🇬🇧 /ˈjuː.fəˌmɪ.z(ə)m/	Vocabulary	C1
+understatement  (Calling that outage a "minor issue" is an understatement.)	nói giảm, đánh giá thấp hơn thực tế	Vocabulary	C1
+hyperbole  (Saying it's the worst bug ever is hyperbole.)	cách nói phóng đại  |  🇺🇸 🇬🇧 /haɪˈpɝːbəli/	Vocabulary	C1
+irony  (The irony is that the fix caused another bug.)	sự trớ trêu, mỉa mai  |  🇺🇸 /ˈaɪ.ɚ.ni/  🇬🇧 /ˈaɪə.ɹən.i/	Vocabulary	C1
+sarcasm  (His sarcasm in the review didn't help the team.)	châm biếm, mỉa mai  |  🇺🇸 /ˈsɑːɹˌkæzəm/  🇬🇧 /ˈsɑːˌkæzəm/	Vocabulary	C1
+innuendo  (The review was full of innuendo rather than facts.)	ám chỉ, bóng gió  |  🇺🇸 🇬🇧 /ˌɪnjuˈɛndəʊ/	Vocabulary	C1
+subtext  (Read the subtext in the stakeholder's feedback.)	ẩn ý, thông điệp ngầm	Vocabulary	C1
+connotation  (The word "legacy" has a negative connotation.)	hàm ý, nghĩa bóng  |  🇺🇸 🇬🇧 /ˌkɒnəˈteɪʃən/	Vocabulary	C1
+denotation  (Understand the denotation before using the term.)	nghĩa đen, nghĩa literal  |  🇺🇸 🇬🇧 /ˌdiː.noʊˈteɪ.ʃən/	Vocabulary	C1
+semantic  (The semantic difference matters in API design.)	liên quan đến nghĩa, ngữ nghĩa  |  🇺🇸 🇬🇧 /sɪˈmæntɪk/	Vocabulary	C1
+rhetoric  (Strong rhetoric won't replace a clear design doc.)	nghệ thuật hùng biện, lập luận	Vocabulary	C1
+dialectic  (Use dialectic to stress-test the architecture.)	biện chứng pháp, đối thoại phân tích  |  🇺🇸 🇬🇧 /ˌdaɪəˈlɛktɪk/	Vocabulary	C1
+sophistry  (His argument was sophistry, not logic.)	ngụy biện, lý luận giả tạo  |  🇺🇸 /ˈsɑ.fɪ.stɹi/  🇬🇧 /ˈsɒ.fɪ.stɹi/	Vocabulary	C1
+fallacy  (That reasoning contains a logical fallacy.)	ngụy biện, lỗi lập luận  |  🇺🇸 🇬🇧 /ˈfæləsi/	Vocabulary	C1
+non sequitur  (His conclusion was a non sequitur.)	kết luận không liên quan đến tiền đề  |  🇺🇸 /ˌnɑːnˈsɛk.wɪ.tɚ/  🇬🇧 /ˌnɒnˈsɛk.wɪ.tə/	Vocabulary	C1
+ad hominem  (Ad hominem attacks derail technical discussions.)	tấn công cá nhân thay vì lập luận	Vocabulary	C1
+strawman  (Don't misrepresent my argument as a strawman.)	phương án bù nhìn, bóp méo lập luận	Vocabulary	C1
+red herring  (That performance concern is a red herring.)	thông tin đánh lạc hướng	Vocabulary	C1
+false dichotomy  (Calling it a binary choice is a false dichotomy.)	lưỡng nan giả, ép chọn hai khi có nhiều lựa chọn	Vocabulary	C1
+slippery slope  (That argument is a slippery slope fallacy.)	lập luận dốc trơn — sợ hậu quả dây chuyền	Vocabulary	C1
+appeal to authority  (Don't rely on appeal to authority in engineering decisions.)	ngụy biện dựa vào uy quyền	Vocabulary	C1
+burden of proof  (The burden of proof lies with the proposer.)	trách nhiệm chứng minh	Vocabulary	C1
+

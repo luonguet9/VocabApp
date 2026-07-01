@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vocab Practice</title>
+<style>
+/* ── RESET ──────────────────────────────────────────── */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* ── BASE (mobile first) ────────────────────────────── */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: #f0f2f5;
+  min-height: 100vh;
+  display: flex; flex-direction: column; align-items: center;
+  padding: 12px 12px 40px;
+}
+
+/* ── SETUP OVERLAY ──────────────────────────────────── */
+#settingsOverlay, #historyOverlay {
+  position: fixed; inset: 0;
+  background: rgba(15, 23, 42, 0.55);
+  display: flex; align-items: center; justify-content: center;
+  z-index: 100; padding: 16px;
+}
+.history-box {
+  background: #fff; border-radius: 20px;
+  padding: 28px 24px; width: 100%; max-width: 480px;
+  max-height: 80vh; overflow-y: auto;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.18);
+}
+.history-day { margin-bottom: 18px; }
+.history-date {
+  font-size: 0.82rem; font-weight: 700; color: #374151;
+  margin-bottom: 6px;
+}
+.history-date em {
+  font-style: normal; font-size: 0.75rem; font-weight: 400; color: #9ca3af; margin-left: 6px;
+}
+.history-words { display: flex; flex-wrap: wrap; gap: 5px; }
+.history-word {
+  font-size: 0.78rem; background: #f3f4f6; color: #374151;
+  padding: 2px 8px; border-radius: 4px;
+}
+.setup-box {
+  background: #fff; border-radius: 20px;
+  padding: 28px 24px; width: 100%; max-width: 400px;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.18);
+}
+.setup-box h2 { font-size: 1.2rem; color: #1a1a2e; margin-bottom: 6px; }
+.setup-subtitle { font-size: 0.8rem; color: #9ca3af; margin-bottom: 24px; }
+
+.setup-row { margin-bottom: 20px; }
+.setup-label {
+  display: flex; justify-content: space-between; align-items: center;
+  margin-bottom: 8px;
+}
+.setup-label span { font-size: 0.88rem; font-weight: 600; color: #374151; }
+.setup-label em {
+  font-style: normal; font-size: 0.82rem;
+  background: #ede9fe; color: #7c3aed;
+  padding: 2px 10px; border-radius: 20px; font-weight: 700;
+}
+input[type=range] {
+  width: 100%; height: 6px; appearance: none;
+  background: #e5e7eb; border-radius: 3px; outline: none; cursor: pointer;
+}
+input[type=range]::-webkit-slider-thumb {
+  appearance: none; width: 20px; height: 20px;
+  border-radius: 50%; background: #4f46e5; cursor: pointer;
+}
+input[type=range]::-moz-range-thumb {
+  width: 20px; height: 20px; border: none;
+  border-radius: 50%; background: #4f46e5; cursor: pointer;
+}
+
+.setup-total {
+  font-size: 0.82rem; color: #6b7280; text-align: center;
+  margin-bottom: 20px; padding: 10px;
+  background: #f9fafb; border-radius: 10px;
+}
+.setup-total strong { color: #4f46e5; }
+
+.btn-start {
+  width: 100%; min-height: 52px;
+  background: #4f46e5; color: #fff;
+  border: none; border-radius: 12px;
+  font-size: 1rem; font-weight: 700; cursor: pointer;
+  transition: opacity 0.15s;
+}
+.btn-start:active { opacity: 0.8; }
+
+.setup-divider {
+  border: none; border-top: 1px solid #e5e7eb;
+  margin: 20px 0;
+}
+.setup-section-title {
+  font-size: 0.75rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.07em; color: #9ca3af; margin-bottom: 14px;
+}
+.btn-reset {
+  width: 100%; min-height: 40px;
+  background: none; color: #ef4444;
+  border: 1px solid #fca5a5; border-radius: 10px;
+  font-size: 0.85rem; cursor: pointer;
+  transition: background 0.15s;
+}
+.btn-reset:hover { background: #fff1f2; }
+
+/* ── HEADER ─────────────────────────────────────────── */
+.header { width: 100%; margin-bottom: 12px; }
+#flashSection { width: 100%; display: flex; flex-direction: column; align-items: center; }
+#quizSection  { width: 100%; display: flex; flex-direction: column; align-items: center; }
+#cardArea     { width: 100%; display: flex; flex-direction: column; align-items: center; }
+.header-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
+h1 { font-size: 1.2rem; color: #1a1a2e; }
+.btn-settings {
+  min-height: 36px; padding: 0 12px;
+  border-radius: 8px; border: 1px solid #d1d5db;
+  background: #fff; cursor: pointer; font-size: 0.85rem; color: #374151;
+}
+
+.controls { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 10px; align-items: center; }
+.btn-group { display: flex; border-radius: 8px; overflow: hidden; border: 1px solid #d1d5db; }
+.btn-group button {
+  min-height: 40px; padding: 0 14px;
+  border: none; background: #fff; cursor: pointer;
+  font-size: 0.85rem; color: #6b7280; transition: background 0.15s, color 0.15s;
+}
+.btn-group button.active { background: #4f46e5; color: #fff; }
+.btn-group button:not(.active):hover { background: #f3f4f6; }
+
+.btn-shuffle {
+  min-height: 40px; padding: 0 14px;
+  border-radius: 8px; border: 1px solid #d1d5db;
+  background: #fff; cursor: pointer; font-size: 0.85rem; color: #374151;
+}
+.btn-shuffle:hover { background: #f3f4f6; }
+.btn-shuffle.active { background: #4f46e5; color: #fff; border-color: #4f46e5; }
+.known-badge { font-size: 0.68rem; font-weight: 600; background: #dcfce7; color: #15803d; padding: 2px 10px; border-radius: 20px; }
+
+.progress-bar { width: 100%; height: 5px; background: #e5e7eb; border-radius: 3px; margin-bottom: 8px; }
+.progress-fill { height: 100%; background: #4f46e5; border-radius: 3px; transition: width 0.3s; }
+.stats { font-size: 0.78rem; color: #9ca3af; }
+
+/* ── TOPIC CHIPS ─────────────────────────────────────── */
+.topic-bar { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 10px; }
+.chip {
+  padding: 4px 12px; border-radius: 20px; border: 1px solid #d1d5db;
+  background: #fff; font-size: 0.78rem; color: #6b7280;
+  cursor: pointer; transition: all 0.15s; white-space: nowrap;
+}
+.chip.active { background: #4f46e5; color: #fff; border-color: #4f46e5; }
+.chip:hover:not(.active) { background: #f3f4f6; }
+
+/* ── FLASHCARD ───────────────────────────────────────── */
+.card-row {
+  display: flex; align-items: flex-start; gap: 8px;
+  width: 100%; margin-bottom: 0;
+}
+.card-col {
+  flex: 1; min-width: 0;
+  display: flex; flex-direction: column; gap: 10px;
+  margin-bottom: 12px;
+}
+.btn-nav {
+  flex-shrink: 0; width: 44px; height: 44px; border-radius: 50%;
+  border: 1.5px solid #d1d5db; background: #fff;
+  font-size: 1.6rem; line-height: 1; cursor: pointer; color: #9ca3af;
+  display: flex; align-items: center; justify-content: center;
+  transition: all 0.15s; user-select: none;
+  margin-top: 128px; /* (300 - 44) / 2 — center against card */
+}
+.btn-nav:hover:not(:disabled) { background: #f3f4f6; color: #374151; border-color: #9ca3af; }
+.btn-nav:disabled { opacity: 0.2; cursor: default; }
+.card-wrap {
+  width: 100%; height: 300px;
+  perspective: 1000px; cursor: pointer;
+}
+.card {
+  width: 100%; height: 100%;
+  position: relative; transform-style: preserve-3d;
+  transition: transform 0.4s ease;
+}
+.card.flipped { transform: rotateX(180deg); }
+
+.card-face {
+  position: absolute; width: 100%; height: 100%;
+  backface-visibility: hidden;
+  background: #fff; border-radius: 16px;
+  padding: 16px 16px 14px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.09);
+  display: flex; flex-direction: column;
+  justify-content: center; align-items: center;
+  text-align: center; overflow-y: auto;
+}
+.card-back { transform: rotateX(180deg); }
+
+/* Favorite star on card front */
+.fav-star {
+  position: absolute; top: 12px; right: 14px;
+  font-size: 1.3rem; line-height: 1; cursor: pointer;
+  color: #f59e0b; user-select: none;
+}
+
+.card-tags { display: flex; gap: 6px; margin-bottom: 10px; align-items: center; flex-wrap: wrap; justify-content: center; }
+.deck-tag {
+  font-size: 0.68rem; font-weight: 700;
+  background: #ede9fe; color: #7c3aed;
+  padding: 2px 10px; border-radius: 20px;
+}
+.topic-tag {
+  font-size: 0.68rem; font-weight: 600;
+  background: #f0fdf4; color: #15803d;
+  padding: 2px 10px; border-radius: 20px;
+}
+.pron-block { margin-top: 8px; display: inline-flex; flex-direction: column; gap: 3px; }
+.pron-row { display: flex; align-items: center; gap: 8px; font-size: 0.82rem; color: #6b7280; }
+.pron-flag { flex-shrink: 0; min-width: 3em; font-size: 0.7rem; font-weight: 700; color: #6b7280; letter-spacing: 0.03em; }
+.pron-ipa { font-family: 'Courier New', monospace; }
+.btn-pron {
+  padding: 1px 7px; border-radius: 4px;
+  border: 1px solid #d1d5db; background: #fff;
+  font-size: 0.72rem; cursor: pointer; color: #374151;
+  transition: background 0.15s; flex-shrink: 0;
+}
+.btn-pron:hover { background: #f3f4f6; }
+.en-term    { font-size: 1.5rem; font-weight: 700; color: #111827; line-height: 1.4; }
+.en-example { font-size: 0.9rem; color: #6b7280; margin-top: 10px; font-style: italic; line-height: 1.5; }
+.flip-hint  { font-size: 0.75rem; color: #d1d5db; margin-top: 14px; }
+.vi-meaning { font-size: 1.35rem; font-weight: 700; color: #4f46e5; line-height: 1.4; }
+.vi-pron    { font-size: 0.85rem; color: #9ca3af; margin-top: 12px; line-height: 1.6; }
+
+/* Know / Unknown buttons */
+.flash-btns { display: flex; gap: 10px; width: 100%; margin-bottom: 10px; }
+.btn {
+  flex: 1; min-height: 52px;
+  border-radius: 12px; border: none;
+  font-size: 1rem; font-weight: 700;
+  cursor: pointer; transition: opacity 0.15s;
+}
+.btn:active { opacity: 0.75; }
+.btn-know    { background: #10b981; color: #fff; }
+.btn-unknown { background: #f43f5e; color: #fff; }
+
+/* Favorite button (inside flash-btns row) */
+.btn-fav {
+  flex: 0 0 52px; min-height: 52px;
+  border-radius: 12px; border: none;
+  font-size: 1.3rem; font-weight: 700; cursor: pointer;
+  transition: all 0.15s; background: #f59e0b; color: #fff;
+}
+.btn-fav.active { background: #d97706; }
+.btn-fav:active { opacity: 0.75; }
+
+/* ── QUIZ ────────────────────────────────────────────── */
+.quiz-wrap { width: 100%; }
+
+.quiz-q-box {
+  background: #fff; border-radius: 16px;
+  padding: 20px 16px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.09);
+  text-align: center; margin-bottom: 12px; position: relative;
+}
+.quiz-q-label {
+  font-size: 0.7rem; color: #9ca3af;
+  text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 8px;
+}
+.quiz-q-text { font-size: 1.05rem; font-weight: 600; color: #111827; line-height: 1.5; }
+
+.quiz-options { display: flex; flex-direction: column; gap: 10px; }
+.quiz-opt {
+  background: #fff; border: 2px solid #e5e7eb; border-radius: 12px;
+  padding: 14px 16px; text-align: left;
+  font-size: 0.9rem; color: #374151;
+  cursor: pointer; line-height: 1.45; min-height: 52px;
+  transition: border-color 0.15s;
+}
+.quiz-opt:active:not(:disabled) { background: #f5f3ff; }
+.quiz-opt.correct { border-color: #10b981; background: #ecfdf5; color: #065f46; }
+.quiz-opt.wrong   { border-color: #f43f5e; background: #fff1f2; color: #9f1239; }
+.quiz-opt:disabled { cursor: default; }
+
+.quiz-next-wrap { text-align: center; margin-top: 12px; }
+.btn-next { background: #4f46e5; color: #fff; flex: none; padding: 0 32px; min-height: 48px; border-radius: 12px; }
+
+/* ── RESULT / LOADING ────────────────────────────────── */
+.result-box {
+  width: 100%; background: #fff; border-radius: 16px;
+  padding: 36px 20px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.09); text-align: center;
+}
+.result-box h2 { font-size: 1.6rem; margin-bottom: 10px; }
+.result-box p  { color: #6b7280; margin-bottom: 20px; font-size: 0.95rem; }
+.result-stats  { display: flex; gap: 8px; justify-content: center; margin-bottom: 20px; flex-wrap: wrap; }
+.result-stat   { padding: 6px 14px; border-radius: 20px; font-size: 0.82rem; font-weight: 600; }
+.stat-know   { background: #d1fae5; color: #065f46; }
+.stat-unknown{ background: #ffe4e6; color: #9f1239; }
+.btn-restart { background: #4f46e5; color: #fff; flex: none; padding: 0 32px; min-height: 48px; border-radius: 12px; }
+
+.loading { color: #9ca3af; font-size: 0.9rem; padding: 48px 0; text-align: center; width: 100%; }
+.hidden { display: none !important; }
+
+/* ── PC / TABLET (≥ 600px) ──────────────────────────── */
+@media (min-width: 600px) {
+  body { padding: 24px 20px 48px; }
+
+  .setup-box { padding: 36px 32px; }
+  .setup-box h2 { font-size: 1.35rem; }
+
+  .header { max-width: min(720px, calc(100vw - 48px)); margin-bottom: 16px; }
+  h1 { font-size: 1.4rem; }
+
+  .card-row { max-width: min(720px, calc(100vw - 48px)); margin-bottom: 16px; }
+  .btn-nav { width: 52px; height: 52px; font-size: 1.8rem; margin-top: 184px; /* (420-52)/2 */ }
+  .card-wrap { height: 420px; }
+  .card-face { padding: 40px 60px; border-radius: 20px; }
+  .en-term    { font-size: 2.2rem; }
+  .en-example { font-size: 1rem; }
+  .vi-meaning { font-size: 1.9rem; }
+  .vi-pron    { font-size: 0.95rem; }
+  .pron-row   { font-size: 0.9rem; }
+  .flip-hint  { font-size: 0.82rem; }
+
+  .flash-btns { gap: 14px; }
+  .btn { font-size: 1rem; }
+
+  .btn-fav { font-size: 1.5rem; min-height: 52px; }
+  .btn-fav:not(.active):hover { background: #fbbf24; }
+
+  .quiz-wrap { max-width: min(720px, calc(100vw - 48px)); }
+  .quiz-q-box { padding: 28px 36px; }
+  .quiz-q-text { font-size: 1.15rem; }
+  .quiz-opt { font-size: 0.95rem; padding: 16px 20px; }
+  .quiz-opt:hover:not(:disabled) { border-color: #a5b4fc; }
+
+  .result-box { max-width: min(720px, calc(100vw - 48px)); padding: 48px 40px; }
+  .result-box h2 { font-size: 2rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- ── HISTORY OVERLAY ────────────────────────────────── -->
+<div id="historyOverlay" class="hidden">
+  <div class="history-box">
+    <h2 style="font-size:1.2rem;color:#1a1a2e;margin-bottom:20px">📅 Lịch sử học</h2>
+    <div id="historyContent"><p style="color:#9ca3af;font-size:0.85rem">Đang tải...</p></div>
+    <hr class="setup-divider">
+    <button class="btn-start" style="background:#6b7280" id="btnCloseHistory">Đóng</button>
+  </div>
+</div>
+
+<!-- ── SETTINGS OVERLAY ───────────────────────────────── -->
+<div id="settingsOverlay" class="hidden">
+  <div class="setup-box">
+    <h2>⚙️ Cài đặt</h2>
+
+    <p class="setup-section-title">Từ mới mỗi ngày</p>
+    <p class="setup-subtitle">Từ cũ tự động ôn lại, hệ thống thêm từ mới mỗi ngày.</p>
+
+    <div class="setup-row">
+      <div class="setup-label">
+        <span>Từ mới / ngày</span>
+        <em id="dailyVal">10 từ</em>
+      </div>
+      <input type="range" id="dailySlider" min="3" max="30" value="10">
+    </div>
+
+    <div class="setup-total">
+      Tối đa <strong id="previewNew">10</strong> từ mới / ngày
+    </div>
+
+    <button class="btn-start" id="btnStart">Bắt đầu →</button>
+
+    <hr class="setup-divider">
+
+    <p class="setup-section-title">Tiến độ học</p>
+    <button class="btn-reset" id="btnReset">🗑 Xóa toàn bộ tiến độ</button>
+  </div>
+</div>
+
+<!-- ── HEADER ─────────────────────────────────────────── -->
+<div class="header">
+  <div class="header-top">
+    <h1>📚 Vocab Practice</h1>
+    <div style="display:flex;gap:6px">
+      <button class="btn-settings" id="btnOpenHistory">📅 Lịch sử</button>
+      <button class="btn-settings" id="btnOpenSettings">⚙️ Cài đặt</button>
+    </div>
+  </div>
+  <div class="controls">
+    <div class="btn-group" id="deckSel">
+      <button class="active" data-deck="all">All</button>
+      <button data-deck="B1">B1</button>
+      <button data-deck="B2">B2</button>
+      <button data-deck="C1">C1</button>
+      <button data-deck="fav">★ Yêu thích</button>
+    </div>
+    <div class="btn-group" id="modeSel">
+      <button class="active" data-mode="flash">🃏 Flashcard</button>
+      <button data-mode="quiz">✏️ Trắc nghiệm</button>
+    </div>
+    <button class="btn-shuffle" id="shuffleBtn">🔀 Xáo bài</button>
+    <button class="btn-shuffle" id="btnFilterUnknown">📖 Tất cả</button>
+  </div>
+  <div class="topic-bar" id="topicBar"></div>
+  <div class="progress-bar"><div class="progress-fill" id="progFill" style="width:0%"></div></div>
+  <div class="stats" id="stats"></div>
+</div>
+
+<!-- ── FLASHCARD ──────────────────────────────────────── -->
+<div id="flashSection">
+  <div class="loading" id="loadingMsg">Đang tải dữ liệu...</div>
+</div>
+
+<!-- ── QUIZ ───────────────────────────────────────────── -->
+<div id="quizSection" class="hidden">
+  <div class="quiz-wrap" id="quizArea">
+    <div class="quiz-q-box">
+      <div class="quiz-q-label">Chọn câu tiếng Anh đúng nghĩa:</div>
+      <div class="quiz-q-text" id="quizQ"></div>
+    </div>
+    <div class="quiz-options" id="quizOpts"></div>
+    <div class="quiz-next-wrap">
+      <button class="btn btn-next hidden" id="btnNext">Câu tiếp →</button>
+    </div>
+  </div>
+  <div id="quizResult" class="result-box hidden">
+    <h2>🎯 Kết quả</h2>
+    <p id="quizResultText"></p>
+    <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
+      <button class="btn btn-restart" onclick="startSession()">🔄 Làm lại</button>
+      <button class="btn btn-restart" style="background:#10b981" onclick="loadMoreCards()">📚 Học thêm</button>
+    </div>
+  </div>
+</div>
+
+<script>
+// ── STATE ────────────────────────────────────────────────────────────────────
+let allCards = [], sessionCards = [];
+let deck = 'all', mode = 'flash', topic = 'all';
+let filterUnknown = false;
+let dailyNew = parseInt(localStorage.getItem('vocabDailyNew') || '10');
+let extraNew = 0;
+let reviewCount = 0, newServed = 0, newIntroduced = 0;
+let flashCards = [], flashIdx = 0, flipped = false, knownCount = 0, unknownCount = 0;
+let quizCards  = [], quizIdx  = 0, quizScore = 0;
+
+// ── TTS ───────────────────────────────────────────────────────────────────────
+function speak(text, accent) {
+  window.speechSynthesis.cancel();
+  const clean = text.replace(/\[.*?\]/g, '').replace(/\(.*?\)/g, '').trim();
+  const utt = new SpeechSynthesisUtterance(clean);
+  utt.lang  = accent === 'uk' ? 'en-GB' : 'en-US';
+  utt.rate  = 0.85;
+  window.speechSynthesis.speak(utt);
+}
+
+// ── KNOWN ─────────────────────────────────────────────────────────────────────
+async function setKnown(c, value) {
+  c.known = value;
+  fetch('/api/known', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ deck: c.deck, key: c.key, known: value }),
+  });
+}
+
+// ── FAVORITE ──────────────────────────────────────────────────────────────────
+async function toggleFav(c) {
+  c.fav = !c.fav;
+  await fetch('/api/fav', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ deck: c.deck, key: c.key, fav: c.fav }),
+  });
+}
+
+function showSetup() {
+  document.getElementById('dailySlider').value = dailyNew;
+  updateSetupUI();
+  document.getElementById('settingsOverlay').classList.remove('hidden');
+}
+
+function updateSetupUI() {
+  const n = +document.getElementById('dailySlider').value;
+  document.getElementById('dailyVal').textContent   = n + ' từ';
+  document.getElementById('previewNew').textContent = n;
+}
+
+document.getElementById('dailySlider').addEventListener('input', updateSetupUI);
+
+document.getElementById('btnStart').addEventListener('click', async () => {
+  dailyNew = +document.getElementById('dailySlider').value;
+  localStorage.setItem('vocabDailyNew', dailyNew);
+  document.getElementById('settingsOverlay').classList.add('hidden');
+  await loadCards();
+});
+
+document.getElementById('btnOpenSettings').addEventListener('click', showSetup);
+
+document.getElementById('btnOpenHistory').addEventListener('click', async () => {
+  document.getElementById('historyOverlay').classList.remove('hidden');
+  const res  = await fetch('/api/history');
+  const data = await res.json();
+  const el   = document.getElementById('historyContent');
+  if (!data.length) {
+    el.innerHTML = '<p style="color:#9ca3af;font-size:0.85rem">Chưa có lịch sử học.</p>';
+    return;
+  }
+  const today = new Date().toISOString().slice(0, 10);
+  el.innerHTML = data.map(day => {
+    const label = day.date === today ? 'Hôm nay' :
+      new Date(day.date + 'T00:00:00').toLocaleDateString('vi-VN', { day: '2-digit', month: '2-digit', year: 'numeric' });
+    return `<div class="history-day">
+      <div class="history-date">📆 ${label}<em>${day.words.length} từ</em></div>
+      <div class="history-words">${day.words.map(w => `<span class="history-word">${w}</span>`).join('')}</div>
+    </div>`;
+  }).join('');
+});
+
+document.getElementById('btnCloseHistory').addEventListener('click', () => {
+  document.getElementById('historyOverlay').classList.add('hidden');
+});
+document.getElementById('historyOverlay').addEventListener('click', e => {
+  if (e.target === e.currentTarget) e.currentTarget.classList.add('hidden');
+});
+document.getElementById('settingsOverlay').addEventListener('click', e => {
+  if (e.target === e.currentTarget) e.currentTarget.classList.add('hidden');
+});
+
+document.getElementById('btnReset').addEventListener('click', async () => {
+  if (!confirm('Xóa toàn bộ tiến độ (fav + known + lịch sử học)?\nHành động này không thể hoàn tác.')) return;
+  await fetch('/api/reset', { method: 'POST' });
+  localStorage.removeItem('vocabDailyNew');
+  dailyNew = 10;
+  document.getElementById('settingsOverlay').classList.add('hidden');
+  await loadCards();
+});
+
+// ── LOAD DATA ────────────────────────────────────────────────────────────────
+async function loadCards() {
+  extraNew = 0;
+  deck = 'all'; topic = 'all'; filterUnknown = false;
+  document.querySelectorAll('#deckSel button').forEach(b => b.classList.toggle('active', b.dataset.deck === 'all'));
+  document.getElementById('btnFilterUnknown').textContent = '📖 Tất cả';
+  document.getElementById('btnFilterUnknown').classList.remove('active');
+  await _fetchAndRender(dailyNew);
+}
+
+async function loadMoreCards() {
+  extraNew += dailyNew;
+  await _fetchAndRender(dailyNew + extraNew);
+}
+
+async function _fetchAndRender(n) {
+  document.getElementById('flashSection').innerHTML = '<div class="loading">Đang tải dữ liệu...</div>';
+
+  const res = await fetch('/api/start-day', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ new: n }),
+  });
+  const data  = await res.json();
+  allCards      = data.cards;
+  reviewCount   = data.review;
+  newServed     = data.today_introduced + data.new;
+  newIntroduced = data.today_introduced;
+
+  const b1n = allCards.filter(c => c.deck === 'B1').length;
+  const b2n = allCards.filter(c => c.deck === 'B2').length;
+  const c1n = allCards.filter(c => c.deck === 'C1').length;
+  document.querySelector('[data-deck="all"]').textContent = `All`;
+  document.querySelector('[data-deck="B1"]').textContent  = `B1 (${b1n})`;
+  document.querySelector('[data-deck="B2"]').textContent  = `B2 (${b2n})`;
+  document.querySelector('[data-deck="C1"]').textContent  = `C1 (${c1n})`;
+
+  document.getElementById('flashSection').innerHTML = `
+    <div id="cardArea">
+      <div class="card-row">
+        <button class="btn-nav" id="btnNavPrev">‹</button>
+        <div class="card-col">
+          <div class="card-wrap" id="cardWrap">
+            <div class="card" id="card">
+              <div class="card-face card-front">
+                <div class="fav-star hidden" id="favStar">★</div>
+                <div class="card-tags">
+                  <div class="deck-tag" id="deckTag">B1</div>
+                  <div class="topic-tag hidden" id="topicTag"></div>
+                  <div class="known-badge hidden" id="knownBadge">✅ Đã thuộc</div>
+                </div>
+                <div class="en-term" id="enTerm"></div>
+                <div class="pron-block" id="pronFront"></div>
+                <div class="en-example" id="enExample"></div>
+                <div class="flip-hint">👆 Tap để xem nghĩa</div>
+              </div>
+              <div class="card-face card-back">
+                <div class="vi-meaning" id="viMeaning"></div>
+                <div class="pron-block" id="pronBack"></div>
+                <div class="flip-hint">👆 Tap để lật lại · Nút bên dưới để tiếp tục</div>
+              </div>
+            </div>
+          </div>
+          <div class="flash-btns hidden" id="flashBtns">
+            <button class="btn btn-unknown" id="btnUnknown">✗ Cần ôn</button>
+            <button class="btn-fav" id="btnFav">☆</button>
+            <button class="btn btn-know" id="btnKnow">✓ Nhớ rồi</button>
+          </div>
+        </div>
+        <button class="btn-nav" id="btnNavNext">›</button>
+      </div>
+    </div>
+    <div id="flashResult" class="result-box hidden">
+      <h2>🎉 Xong rồi!</h2>
+      <div class="result-stats">
+        <span class="result-stat stat-know" id="resKnow"></span>
+        <span class="result-stat stat-unknown" id="resUnknown"></span>
+      </div>
+      <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
+        <button class="btn btn-restart" onclick="startSession()">🔄 Học lại</button>
+        <button class="btn btn-restart" style="background:#10b981" onclick="loadMoreCards()">📚 Học thêm ${dailyNew} từ</button>
+      </div>
+    </div>`;
+
+  bindFlashEvents();
+  startSession();
+}
+
+// ── HELPERS ──────────────────────────────────────────────────────────────────
+function getDeckCards() {
+  if (deck === 'fav') return allCards.filter(c => c.fav);
+  if (deck === 'B1')  return allCards.filter(c => c.deck === 'B1');
+  if (deck === 'B2')  return allCards.filter(c => c.deck === 'B2');
+  if (deck === 'C1')  return allCards.filter(c => c.deck === 'C1');
+  return [...allCards];
+}
+
+function getActive() {
+  let base = topic === 'all' ? sessionCards : sessionCards.filter(c => c.topic === topic);
+  if (filterUnknown) base = base.filter(c => !c.known);
+  return base;
+}
+
+function buildTopicBar() {
+  const bar = document.getElementById('topicBar');
+  const topics = [...new Set(sessionCards.map(c => c.topic).filter(Boolean))].sort();
+  if (topics.length === 0) { bar.innerHTML = ''; return; }
+
+  bar.innerHTML = '';
+  const all = document.createElement('button');
+  all.className = 'chip' + (topic === 'all' ? ' active' : '');
+  all.textContent = 'Tất cả';
+  all.onclick = () => { topic = 'all'; buildTopicBar(); startSession(); };
+  bar.appendChild(all);
+
+  topics.forEach(t => {
+    const chip = document.createElement('button');
+    chip.className = 'chip' + (topic === t ? ' active' : '');
+    chip.textContent = t;
+    chip.onclick = () => { topic = t; buildTopicBar(); startSession(); };
+    bar.appendChild(chip);
+  });
+}
+
+function shuffle(arr) {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+function startSession() {
+  sessionCards = getDeckCards();
+  buildTopicBar();
+  const active = shuffle(getActive());
+  flashCards = active;
+  quizCards  = shuffle(getActive());
+  flashIdx = 0; flipped = false; knownCount = 0; unknownCount = 0;
+  quizIdx  = 0; quizScore = 0;
+  if (mode === 'flash') renderFlash();
+  else renderQuiz();
+}
+
+function updateProgress(cur, total) {
+  document.getElementById('progFill').style.width = total > 0 ? (cur / total * 100) + '%' : '0%';
+}
+
+// ── PRONUNCIATION ─────────────────────────────────────────────────────────────
+function parsePron(pron) {
+  if (!pron) return { us: '', uk: '' };
+  // Old format without flags — skip entirely
+  if (!pron.includes('🇺🇸') && !pron.includes('🇬🇧')) return { us: '', uk: '' };
+  // Validate: IPA must start with / or [ and be long enough (not a suffix like /-ɪ/)
+  const ok = s => s && s.length > 4 && (s[0] === '/' || s[0] === '[') && s[1] !== '-';
+  // 🇺🇸 🇬🇧 /ipa/  (same for both)
+  const same = pron.match(/^🇺🇸\s+🇬🇧\s+(.+)$/);
+  if (same) { const ipa = same[1].trim(); return ok(ipa) ? { us: ipa, uk: ipa } : { us: '', uk: '' }; }
+  // 🇺🇸 /us-ipa/  🇬🇧 /uk-ipa/
+  const diff = pron.match(/^🇺🇸\s+(.+?)\s{2,}🇬🇧\s+(.+)$/);
+  if (diff) return { us: ok(diff[1].trim()) ? diff[1].trim() : '', uk: ok(diff[2].trim()) ? diff[2].trim() : '' };
+  return { us: '', uk: '' };
+}
+
+function renderPronHTML(pron) {
+  const { us, uk } = parsePron(pron);
+  if (!us && !uk) return '';
+  const row = (flag, ipa, accent) =>
+    `<div class="pron-row"><span class="pron-flag">${flag}</span><span class="pron-ipa">${ipa}</span><button class="btn-pron" data-accent="${accent}">🔊</button></div>`;
+  if (us === uk && us) return row('AmE / BrE', us, 'us');
+  return (us ? row('AmE', us, 'us') : '') + (uk ? row('BrE', uk, 'uk') : '');
+}
+
+// ── FLASHCARD ────────────────────────────────────────────────────────────────
+function renderFlash() {
+  if (flashCards.length === 0) {
+    document.getElementById('cardArea').classList.add('hidden');
+    document.getElementById('resKnow').textContent    = '';
+    document.getElementById('resUnknown').textContent = '';
+    document.getElementById('flashResult').querySelector('h2').textContent = '😕 Không có thẻ nào';
+    document.getElementById('flashResult').classList.remove('hidden');
+    updateProgress(0, 0);
+    return;
+  }
+  if (flashIdx >= flashCards.length) {
+    document.getElementById('cardArea').classList.add('hidden');
+    document.getElementById('resKnow').textContent    = `✓ Nhớ: ${knownCount}`;
+    document.getElementById('resUnknown').textContent = `✗ Cần ôn: ${unknownCount}`;
+    document.getElementById('flashResult').querySelector('h2').textContent = '🎉 Xong rồi!';
+    document.getElementById('flashResult').classList.remove('hidden');
+    updateProgress(flashCards.length, flashCards.length);
+    return;
+  }
+
+  document.getElementById('cardArea').classList.remove('hidden');
+  document.getElementById('flashResult').classList.add('hidden');
+
+  const c = flashCards[flashIdx];
+
+  // Favorite star
+  const star = document.getElementById('favStar');
+  star.textContent = c.fav ? '★' : '☆';
+  star.classList.toggle('hidden', false);
+
+  document.getElementById('deckTag').textContent      = c.deck;
+  document.getElementById('enTerm').textContent       = c.term;
+  const pronHTML = renderPronHTML(c.pron);
+  document.getElementById('pronFront').innerHTML = pronHTML;
+  document.getElementById('enExample').textContent    = c.example;
+  document.getElementById('viMeaning').textContent    = c.vi;
+  document.getElementById('pronBack').innerHTML = pronHTML;
+  const topicTag = document.getElementById('topicTag');
+  if (c.topic) { topicTag.textContent = c.topic; topicTag.classList.remove('hidden'); }
+  else          { topicTag.classList.add('hidden'); }
+  document.getElementById('knownBadge').classList.toggle('hidden', !c.known);
+  document.getElementById('btnKnow').textContent = c.known ? '✓ Nhớ rồi ✅' : '✓ Nhớ rồi';
+  document.getElementById('card').classList.remove('flipped');
+  document.getElementById('flashBtns').classList.add('hidden');
+
+  // Sync fav button
+  const btn = document.getElementById('btnFav');
+  btn.textContent = c.fav ? '★' : '☆';
+  btn.classList.toggle('active', c.fav);
+
+  flipped = false;
+  document.getElementById('btnNavPrev').disabled = (flashIdx === 0);
+  document.getElementById('btnNavNext').disabled = (flashIdx >= flashCards.length - 1);
+  updateProgress(flashIdx, flashCards.length);
+  document.getElementById('stats').textContent =
+    `Ôn lại: ${reviewCount}  ·  Mới: ${newIntroduced}/${newServed}  ·  Thẻ ${flashIdx + 1}/${flashCards.length}  ·  ✓ ${knownCount}  ·  ✗ ${unknownCount}`;
+}
+
+function introduceCard(c) {
+  if (!c || !c.is_new) return;
+  c.is_new = false;
+  newIntroduced++;
+  fetch('/api/introduce', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ key: c.key }),
+  });
+}
+
+function flipCard() {
+  if (flipped) {
+    flipped = false;
+    document.getElementById('card').classList.remove('flipped');
+    document.getElementById('flashBtns').classList.add('hidden');
+  } else {
+    introduceCard(flashCards[flashIdx]);
+    flipped = true;
+    document.getElementById('card').classList.add('flipped');
+    document.getElementById('flashBtns').classList.remove('hidden');
+  }
+}
+
+function markCard(known) {
+  setKnown(flashCards[flashIdx], known);
+  if (known) knownCount++; else unknownCount++;
+  flashIdx++;
+  renderFlash();
+}
+
+function bindFlashEvents() {
+  document.getElementById('cardWrap').addEventListener('click', e => {
+    const pronBtn = e.target.closest('.btn-pron');
+    if (pronBtn) {
+      speak(flashCards[flashIdx]?.term || '', pronBtn.dataset.accent);
+      return;
+    }
+    flipCard();
+  });
+  document.getElementById('favStar').addEventListener('click', e => {
+    e.stopPropagation();
+    const c = flashCards[flashIdx];
+    toggleFav(c);
+    document.getElementById('btnFav').textContent = c.fav ? '★' : '☆';
+    document.getElementById('btnFav').classList.toggle('active', c.fav);
+    e.currentTarget.textContent = c.fav ? '★' : '☆';
+  });
+  document.getElementById('btnKnow').addEventListener('click', () => markCard(true));
+  document.getElementById('btnUnknown').addEventListener('click', () => markCard(false));
+  document.getElementById('btnNavPrev').addEventListener('click', () => {
+    if (flashIdx > 0) { flashIdx--; flipped = false; renderFlash(); }
+  });
+  document.getElementById('btnNavNext').addEventListener('click', () => {
+    flashIdx++; flipped = false; renderFlash();
+  });
+  document.getElementById('btnFav').addEventListener('click', () => {
+    const c = flashCards[flashIdx];
+    toggleFav(c);
+    document.getElementById('btnFav').textContent = c.fav ? '★' : '☆';
+    document.getElementById('btnFav').classList.toggle('active', c.fav);
+    document.getElementById('favStar').textContent = c.fav ? '★' : '☆';
+  });
+}
+
+// ── QUIZ ─────────────────────────────────────────────────────────────────────
+function renderQuiz() {
+  if (quizCards.length === 0) {
+    document.getElementById('quizArea').classList.add('hidden');
+    document.getElementById('quizResultText').textContent = '';
+    document.getElementById('quizResult').querySelector('h2').textContent = '😕 Không có thẻ nào';
+    document.getElementById('quizResult').classList.remove('hidden');
+    updateProgress(0, 0);
+    return;
+  }
+  if (quizIdx >= quizCards.length) {
+    const pct = Math.round(quizScore / quizCards.length * 100);
+    document.getElementById('quizArea').classList.add('hidden');
+    document.getElementById('quizResultText').innerHTML =
+      `Đúng <strong>${quizScore} / ${quizCards.length}</strong> (${pct}%)`;
+    document.getElementById('quizResult').querySelector('h2').textContent = '🎯 Kết quả';
+    document.getElementById('quizResult').classList.remove('hidden');
+    updateProgress(quizCards.length, quizCards.length);
+    return;
+  }
+
+  document.getElementById('quizArea').classList.remove('hidden');
+  document.getElementById('quizResult').classList.add('hidden');
+
+  const c = quizCards[quizIdx];
+  introduceCard(c);
+  const question = c.vi.split('\u2014')[0].trim();
+  document.getElementById('quizQ').textContent = question;
+
+  const wrong = shuffle(allCards.filter(x => x !== c && !x.is_new)).slice(0, 3);
+  const opts  = shuffle([c, ...wrong]);
+  const optsEl = document.getElementById('quizOpts');
+  optsEl.innerHTML = '';
+  opts.forEach(opt => {
+    const btn = document.createElement('button');
+    btn.className   = 'quiz-opt';
+    btn.textContent = opt.term;
+    btn.addEventListener('click', () => checkAnswer(btn, opt === c, c.term));
+    optsEl.appendChild(btn);
+  });
+
+  document.getElementById('btnNext').classList.add('hidden');
+  updateProgress(quizIdx, quizCards.length);
+  document.getElementById('stats').textContent =
+    `Câu ${quizIdx + 1} / ${quizCards.length}  ·  Đúng: ${quizScore}`;
+}
+
+function checkAnswer(btn, correct, correctTerm) {
+  document.querySelectorAll('.quiz-opt').forEach(b => {
+    b.disabled = true;
+    if (b.textContent === correctTerm) b.classList.add('correct');
+  });
+  if (!correct) btn.classList.add('wrong');
+  else quizScore++;
+  document.getElementById('btnNext').classList.remove('hidden');
+}
+
+// ── EVENTS ───────────────────────────────────────────────────────────────────
+document.getElementById('shuffleBtn').addEventListener('click', startSession);
+
+document.getElementById('btnFilterUnknown').addEventListener('click', () => {
+  filterUnknown = !filterUnknown;
+  const btn = document.getElementById('btnFilterUnknown');
+  btn.textContent = filterUnknown ? '📖 Chưa thuộc' : '📖 Tất cả';
+  btn.classList.toggle('active', filterUnknown);
+  startSession();
+});
+document.getElementById('btnNext').addEventListener('click', () => { quizIdx++; renderQuiz(); });
+
+document.getElementById('deckSel').addEventListener('click', e => {
+  if (!e.target.dataset.deck) return;
+  deck = e.target.dataset.deck;
+  topic = 'all';
+  document.querySelectorAll('#deckSel button').forEach(b => b.classList.toggle('active', b === e.target));
+  startSession();
+});
+
+document.getElementById('modeSel').addEventListener('click', e => {
+  if (!e.target.dataset.mode) return;
+  mode = e.target.dataset.mode;
+  document.querySelectorAll('#modeSel button').forEach(b => b.classList.toggle('active', b === e.target));
+  document.getElementById('flashSection').classList.toggle('hidden', mode !== 'flash');
+  document.getElementById('quizSection').classList.toggle('hidden', mode !== 'quiz');
+  startSession();
+});
+
+loadCards();
+</script>
+</body>
+</html>
+
