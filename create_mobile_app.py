@@ -3,6 +3,7 @@
 
 import re
 import json
+import time
 from pathlib import Path
 
 BASE_DIR = Path(__file__).parent.resolve()
@@ -63,9 +64,6 @@ def main():
   <script src="vocab.js"></script>
 """
     html = html.replace("</head>", pwa_tags + "</head>")
-
-    # 2. Show Sync Button in Settings overlay on mobile (unified UI with main Start button)
-    html = html.replace('id="btnSyncPC" style="margin-bottom:12px;display:none"', 'id="btnSyncPC" style="margin-bottom:12px;display:block"')
 
     # 3. Add offline progress helpers & sync handler right after <script>
     helpers_js = """<script>
@@ -260,38 +258,6 @@ if ('serviceWorker' in navigator) {
   newIntroduced = today_n;"""
     html = html.replace(old_fetch, new_fetch)
 
-    # 10. Add sync button event listener at the end before </script>
-    sync_listener = """
-document.getElementById('btnSyncPC').addEventListener('click', async () => {
-  const ip = prompt("Nhập IP máy tính (PC) đang chạy run.bat (ví dụ 100.65.37.111):", localStorage.getItem('last_pc_ip') || "100.65.37.111");
-  if (!ip) return;
-  localStorage.setItem('last_pc_ip', ip.trim());
-  const url = `http://${ip.trim()}:5100/api/sync`;
-  try {
-    const prog = getProgress();
-    const res = await fetch(url, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ progress: prog })
-    });
-    const data = await res.json();
-    if (data.ok && data.progress) {
-      localStorage.setItem('vocab_progress', JSON.stringify(data.progress));
-      alert("🎉 Đồng bộ thành công với PC!");
-      loadCards();
-    } else {
-      alert("❌ Lỗi đồng bộ: " + (data.error || "Không xác định"));
-    }
-  } catch (e) {
-    alert("❌ Không thể kết nối với PC tại " + url + ". Hãy kiểm tra PC đã chạy run.bat và dùng chung Wi-Fi!");
-  }
-});
-
-loadCards();
-</script>"""
-    html = html.replace("loadCards();\n</script>", sync_listener)
-    html = html.replace("loadCards();\r\n</script>", sync_listener)
-
     with open(OUT_HTML, "w", encoding="utf-8") as f:
         f.write(html)
     print(f"[OK] (1/3) Generated offline mobile app at {OUT_HTML}")
@@ -305,8 +271,7 @@ loadCards();
 
     # Generate sw.js with Network-First offline fallback strategy
     sw_path = MOBILE_DIR / "sw.js"
-    sw_content = """const CACHE_NAME = 'vocab-offline-v2';
-const ASSETS = [
+    sw_content = "const CACHE_NAME = 'vocab-offline-" + str(int(time.time())) + "';\n" + """const ASSETS = [
   './',
   './index.html',
   './vocab.js',

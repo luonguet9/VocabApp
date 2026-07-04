@@ -445,7 +445,7 @@ h1 {
     <hr class="setup-divider">
 
     <p class="setup-section-title">Tiến độ học</p>
-    <button class="btn-start" id="btnSyncPC" style="margin-bottom:12px;display:none">🔄 Đồng bộ tiến độ với PC</button>
+    <button class="btn-start" id="btnSyncPC" style="margin-bottom:12px;display:block">🔄 Đồng bộ tiến độ với PC</button>
     <button class="btn-reset" id="btnReset">🗑 Xóa toàn bộ tiến độ</button>
   </div>
 </div>
@@ -1031,6 +1031,44 @@ document.getElementById('modeSel').addEventListener('click', e => {
   document.getElementById('quizSection').classList.toggle('hidden', mode !== 'quiz');
   updateUIStats();
 });
+
+const btnSync = document.getElementById('btnSyncPC');
+if (btnSync) {
+  btnSync.addEventListener('click', async () => {
+    let defaultIp = localStorage.getItem('last_pc_ip') || "luongblue.tail6851a5.ts.net";
+    if (defaultIp === "100.65.37.111") defaultIp = "luongblue.tail6851a5.ts.net";
+    const ip = prompt("Nhập tên miền Tailscale HTTPS PC hoặc IP:", defaultIp);
+    if (!ip) return;
+    const target = ip.trim();
+    localStorage.setItem('last_pc_ip', target);
+    let url = '';
+    if (target.startsWith('http://') || target.startsWith('https://')) {
+      url = target.replace(/\/$/, '') + '/api/sync';
+    } else if (target.includes('.ts.net')) {
+      url = `https://${target}/api/sync`;
+    } else {
+      url = `http://${target}:5100/api/sync`;
+    }
+    try {
+      const prog = typeof getProgress === 'function' ? getProgress() : (JSON.parse(localStorage.getItem('vocab_progress') || '{}'));
+      const res = await fetch(url, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ progress: prog })
+      });
+      const data = await res.json();
+      if (data.ok && data.progress) {
+        localStorage.setItem('vocab_progress', JSON.stringify(data.progress));
+        alert("🎉 Đồng bộ thành công với PC!");
+        if (typeof loadCards === 'function') loadCards();
+      } else {
+        alert("❌ Lỗi đồng bộ: " + (data.error || "Không xác định"));
+      }
+    } catch (e) {
+      alert("❌ Không thể kết nối với PC tại " + url + ". Hãy kiểm tra PC đã chạy lệnh tailscale serve hoặc run.bat!");
+    }
+  });
+}
 
 loadCards();
 </script>
