@@ -401,6 +401,13 @@ h1 {
   .result-box h2 { font-size: 2rem; }
 }
 </style>
+
+  <link rel="manifest" href="manifest.json">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Vocab App">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <script src="vocab.js"></script>
 </head>
 <body>
 
@@ -445,7 +452,7 @@ h1 {
     <hr class="setup-divider">
 
     <p class="setup-section-title">Tiến độ học</p>
-    <button class="btn-start" id="btnSyncPC" style="margin-bottom:12px;display:none">🔄 Đồng bộ tiến độ với PC</button>
+    <button class="btn-start" id="btnSyncPC" style="margin-bottom:12px;display:block">🔄 Đồng bộ tiến độ với PC</button>
     <button class="btn-reset" id="btnReset">🗑 Xóa toàn bộ tiến độ</button>
   </div>
 </div>
@@ -507,6 +514,24 @@ h1 {
 </div>
 
 <script>
+// ── OFFLINE STORAGE & SYNC ───────────────────────────────────────────────────
+function getProgress() {
+  try { return JSON.parse(localStorage.getItem('vocab_progress') || '{}'); }
+  catch(e) { return {}; }
+}
+function saveProgress(key, data) {
+  const prog = getProgress();
+  prog[key] = { ...prog[key], ...data };
+  try { localStorage.setItem('vocab_progress', JSON.stringify(prog)); }
+  catch(e) {}
+}
+
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('sw.js').catch(() => {});
+  });
+}
+
 // ── STATE ────────────────────────────────────────────────────────────────────
 let allCards = [], sessionCards = [];
 let deck = 'all', mode = 'flash', topic = 'all';
@@ -530,21 +555,13 @@ function speak(text, accent) {
 // ── KNOWN ─────────────────────────────────────────────────────────────────────
 async function setKnown(c, value) {
   c.known = value;
-  fetch('/api/known', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ deck: c.deck, key: c.key, known: value }),
-  });
+  saveProgress(c.key, { known: value });
 }
 
 // ── FAVORITE ──────────────────────────────────────────────────────────────────
 async function toggleFav(c) {
   c.fav = !c.fav;
-  await fetch('/api/fav', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ deck: c.deck, key: c.key, fav: c.fav }),
-  });
+  saveProgress(c.key, { fav: c.fav });
 }
 
 function showSetup() {
@@ -572,14 +589,21 @@ document.getElementById('btnOpenSettings').addEventListener('click', showSetup);
 
 document.getElementById('btnOpenHistory').addEventListener('click', async () => {
   document.getElementById('historyOverlay').classList.remove('hidden');
-  const res  = await fetch('/api/history');
-  const data = await res.json();
+  const prog = getProgress();
+  const dateMap = {};
+  for (const [key, val] of Object.entries(prog)) {
+    if (val && val.date) {
+      if (!dateMap[val.date]) dateMap[val.date] = [];
+      dateMap[val.date].push(key);
+    }
+  }
+  const data = Object.keys(dateMap).sort().reverse().map(d => ({ date: d, words: dateMap[d] }));
   const el   = document.getElementById('historyContent');
   if (!data.length) {
     el.innerHTML = '<p style="color:#9ca3af;font-size:0.85rem">Chưa có lịch sử học.</p>';
     return;
   }
-  const today = new Date().toLocaleDateString('en-CA'); // YYYY-MM-DD local time
+  const today = new Date().toLocaleDateString('en-CA');
   el.innerHTML = data.map(day => {
     const label = day.date === today ? 'Hôm nay' :
       new Date(day.date + 'T00:00:00').toLocaleDateString('vi-VN', { day: '2-digit', month: '2-digit', year: 'numeric' });
@@ -607,8 +631,8 @@ document.getElementById('settingsOverlay').addEventListener('click', e => {
 });
 
 document.getElementById('btnReset').addEventListener('click', async () => {
-  if (!confirm('Xóa toàn bộ tiến độ (fav + known + lịch sử học)?\nHành động này không thể hoàn tác.')) return;
-  await fetch('/api/reset', { method: 'POST' });
+  if (!confirm('Xóa toàn bộ tiến độ offline (fav + known + lịch sử học)?\nHành động này không thể hoàn tác.')) return;
+  localStorage.removeItem('vocab_progress');
   localStorage.removeItem('vocabDailyNew');
   dailyNew = 10;
   document.getElementById('settingsOverlay').classList.add('hidden');
@@ -633,16 +657,38 @@ async function loadMoreCards() {
 async function _fetchAndRender(n) {
   document.getElementById('flashSection').innerHTML = '<div class="loading">Đang tải dữ liệu...</div>';
 
-  const res = await fetch('/api/start-day', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ new: n }),
-  });
-  const data  = await res.json();
-  allCards      = data.cards;
-  reviewCount   = data.review;
-  newServed     = data.today_introduced + data.new;
-  newIntroduced = data.today_introduced;
+  const today = new Date().toLocaleDateString('en-CA');
+  const prog = getProgress();
+  let today_n = 0;
+  for (const val of Object.values(prog)) {
+    if (val && val.date === today) today_n++;
+  }
+  const remaining_new = Math.max(0, n - today_n);
+  const session = [];
+  let review_n = 0;
+  let new_n = 0;
+  for (const item of (typeof VOCAB_DATA !== 'undefined' ? VOCAB_DATA : [])) {
+    const c = { ...item };
+    const p = prog[c.key];
+    const d = p ? p.date : null;
+    if (d) {
+      c.fav = Boolean(p.fav);
+      c.known = Boolean(p.known);
+      c.is_new = false;
+      session.push(c);
+      if (d !== today) review_n++;
+    } else if (new_n < remaining_new) {
+      c.fav = p ? Boolean(p.fav) : false;
+      c.known = p ? Boolean(p.known) : false;
+      c.is_new = true;
+      session.push(c);
+      new_n++;
+    }
+  }
+  allCards = session;
+  reviewCount = review_n;
+  newServed = today_n + new_n;
+  newIntroduced = today_n;
 
   const b1n = allCards.filter(c => c.deck === 'B1').length;
   const b2n = allCards.filter(c => c.deck === 'B2').length;
@@ -879,11 +925,11 @@ function introduceCard(c) {
   if (!c || !c.is_new) return;
   c.is_new = false;
   newIntroduced++;
-  fetch('/api/introduce', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ key: c.key }),
-  });
+  const today = new Date().toLocaleDateString('en-CA');
+  const prog = getProgress();
+  if (!prog[c.key]) prog[c.key] = { fav: false, known: false, date: today };
+  else if (!prog[c.key].date) prog[c.key].date = today;
+  try { localStorage.setItem('vocab_progress', JSON.stringify(prog)); } catch(e){}
 }
 
 function flipCard() {
@@ -1030,6 +1076,32 @@ document.getElementById('modeSel').addEventListener('click', e => {
   document.getElementById('flashSection').classList.toggle('hidden', mode !== 'flash');
   document.getElementById('quizSection').classList.toggle('hidden', mode !== 'quiz');
   updateUIStats();
+});
+
+
+document.getElementById('btnSyncPC').addEventListener('click', async () => {
+  const ip = prompt("Nhập IP máy tính (PC) đang chạy run.bat (ví dụ 100.65.37.111):", localStorage.getItem('last_pc_ip') || "100.65.37.111");
+  if (!ip) return;
+  localStorage.setItem('last_pc_ip', ip.trim());
+  const url = `http://${ip.trim()}:5100/api/sync`;
+  try {
+    const prog = getProgress();
+    const res = await fetch(url, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ progress: prog })
+    });
+    const data = await res.json();
+    if (data.ok && data.progress) {
+      localStorage.setItem('vocab_progress', JSON.stringify(data.progress));
+      alert("🎉 Đồng bộ thành công với PC!");
+      loadCards();
+    } else {
+      alert("❌ Lỗi đồng bộ: " + (data.error || "Không xác định"));
+    }
+  } catch (e) {
+    alert("❌ Không thể kết nối với PC tại " + url + ". Hãy kiểm tra PC đã chạy run.bat và dùng chung Wi-Fi!");
+  }
 });
 
 loadCards();

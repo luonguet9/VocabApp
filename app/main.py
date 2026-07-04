@@ -7,7 +7,7 @@ import sqlite3
 import sys
 from datetime import date
 from pathlib import Path
-from flask import Flask, jsonify, render_template, request
+from flask import Flask, jsonify, render_template, request, send_from_directory
 
 if getattr(sys, 'frozen', False):
     BUNDLE_DIR = Path(sys._MEIPASS)
@@ -20,6 +20,14 @@ else:
 VOCAB_CSV  = BASE_DIR / "vocab.csv"
 DB_PATH    = BASE_DIR / "progress.db"
 PORT       = 5100
+
+
+@app.after_request
+def add_cors(response):
+    response.headers["Access-Control-Allow-Origin"] = "*"
+    response.headers["Access-Control-Allow-Methods"] = "GET, POST, OPTIONS"
+    response.headers["Access-Control-Allow-Headers"] = "Content-Type"
+    return response
 
 
 def init_db():
@@ -193,6 +201,43 @@ def reset_progress():
     with sqlite3.connect(DB_PATH) as conn:
         conn.execute("DELETE FROM progress")
     return jsonify({"ok": True})
+
+
+@app.route("/api/sync", methods=["POST", "OPTIONS"])
+def sync_progress():
+    if request.method == "OPTIONS":
+        return jsonify({"ok": True})
+    client_prog = request.json.get("progress", {}) if request.json else {}
+    with sqlite3.connect(DB_PATH) as conn:
+        for key, val in client_prog.items():
+            fav = 1 if val.get("fav") else 0
+            known = 1 if val.get("known") else 0
+            dt = val.get("date") if (val.get("date") and str(val.get("date")).strip()) else None
+            conn.execute(
+                "INSERT INTO progress(key,fav,known,introduced_date) VALUES(?,?,?,?) "
+                "ON CONFLICT(key) DO UPDATE SET "
+                "fav=max(fav, excluded.fav), "
+                "known=max(known, excluded.known), "
+                "introduced_date=COALESCE(introduced_date, excluded.introduced_date)",
+                (key, fav, known, dt)
+            )
+        rows = conn.execute("SELECT key, fav, known, introduced_date FROM progress").fetchall()
+        server_prog = {
+            r[0]: {"fav": bool(r[1]), "known": bool(r[2]), "date": r[3]}
+            for r in rows
+        }
+    return jsonify({"ok": True, "progress": server_prog})
+
+
+@app.route("/mobile/<path:filename>")
+def serve_mobile(filename):
+    return send_from_directory(str(BASE_DIR / "mobile"), filename)
+
+
+@app.route("/mobile/")
+@app.route("/mobile")
+def serve_mobile_index():
+    return send_from_directory(str(BASE_DIR / "mobile"), "index.html")
 
 
 def local_ip():
