@@ -510,7 +510,7 @@ document.getElementById('btnOpenHistory').addEventListener('click', async () => 
     el.innerHTML = '<p style="color:#9ca3af;font-size:0.85rem">Chưa có lịch sử học.</p>';
     return;
   }
-  const today = new Date().toISOString().slice(0, 10);
+  const today = new Date().toLocaleDateString('en-CA'); // YYYY-MM-DD local time
   el.innerHTML = data.map(day => {
     const label = day.date === today ? 'Hôm nay' :
       new Date(day.date + 'T00:00:00').toLocaleDateString('vi-VN', { day: '2-digit', month: '2-digit', year: 'numeric' });
@@ -770,7 +770,7 @@ function renderFlash() {
   document.getElementById('btnNavNext').disabled = (flashIdx >= flashCards.length - 1);
   updateProgress(flashIdx, flashCards.length);
   document.getElementById('stats').textContent =
-    `Ôn lại: ${reviewCount}  ·  Mới: ${newIntroduced}/${newServed}  ·  Thẻ ${flashIdx + 1}/${flashCards.length}  ·  ✓ ${knownCount}  ·  ✗ ${unknownCount}`;
+    `Thẻ ${flashIdx + 1}/${flashCards.length}  ·  ✓ ${knownCount}  ✗ ${unknownCount}  ·  Ôn: ${reviewCount}  ·  Đã học: ${newIntroduced}/${newServed}`;
 }
 
 function introduceCard(c) {
@@ -882,7 +882,7 @@ function renderQuiz() {
   document.getElementById('btnNext').classList.add('hidden');
   updateProgress(quizIdx, quizCards.length);
   document.getElementById('stats').textContent =
-    `Câu ${quizIdx + 1} / ${quizCards.length}  ·  Đúng: ${quizScore}`;
+    `Câu ${quizIdx + 1}/${quizCards.length}  ·  Đúng: ${quizScore}  ·  Đã học: ${newIntroduced}/${newServed}`;
 }
 
 function checkAnswer(btn, correct, correctTerm) {

@@ -4,16 +4,22 @@
 import re
 import socket
 import sqlite3
+import sys
 from datetime import date
 from pathlib import Path
 from flask import Flask, jsonify, render_template, request
 
-BASE_DIR   = Path(__file__).parent.parent
+if getattr(sys, 'frozen', False):
+    BUNDLE_DIR = Path(sys._MEIPASS)
+    BASE_DIR   = Path(sys.executable).parent.resolve()
+    app = Flask(__name__, template_folder=str(BUNDLE_DIR / "templates"), static_folder="static")
+else:
+    BASE_DIR   = Path(__file__).parent.parent.resolve()
+    app = Flask(__name__, template_folder="templates", static_folder="static")
+
 VOCAB_CSV  = BASE_DIR / "vocab.csv"
 DB_PATH    = BASE_DIR / "progress.db"
 PORT       = 5100
-
-app = Flask(__name__, template_folder="templates", static_folder="static")
 
 
 def init_db():
@@ -121,7 +127,11 @@ def start_day():
             for r in rows
         }
 
-    session, review_n, today_n, new_n = [], 0, 0, 0
+    # Đếm đã introduce hôm nay trước → tính slot còn lại
+    today_n       = sum(1 for p in prog.values() if p.get("date") == today)
+    remaining_new = max(0, n - today_n)
+
+    session, review_n, new_n = [], 0, 0
     for c in all_cards:
         p = prog.get(c["key"], {})
         d = p.get("date")
@@ -130,9 +140,9 @@ def start_day():
             c["known"]  = p["known"]
             c["is_new"] = False
             session.append(c)
-            if d == today: today_n  += 1
-            else:          review_n += 1
-        elif new_n < n:
+            if d != today:
+                review_n += 1
+        elif new_n < remaining_new:
             c["fav"]    = p.get("fav", False)
             c["known"]  = p.get("known", False)
             c["is_new"] = True

@@ -1,0 +1,59 @@
+# ==========================================
+# Python & Bytecode Cache
+# ==========================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+dist-info/
+.eggs/
+
+# ==========================================
+# Virtual Environments
+# ==========================================
+venv/
+env/
+.env/
+.venv/
+ENV/
+env.bak/
+venv.bak/
+
+# ==========================================
+# Build & PyInstaller Outputs
+# ==========================================
+build/
+dist/
+*.exe
+*.manifest
+*.spec
+
+# ==========================================
+# Database & Runtime User Progress
+# ==========================================
+*.db
+*.db-journal
+*.sqlite
+*.sqlite3
+progress.db
+
+# ==========================================
+# Logs & Temporary Files
+# ==========================================
+*.log
+*.tmp
+*.bak
+output.txt
+output_part*.txt
+
+# ==========================================
+# IDEs & OS Settings
+# ==========================================
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
