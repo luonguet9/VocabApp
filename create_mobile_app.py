@@ -13,6 +13,8 @@ MOBILE_DIR = BASE_DIR / "mobile"
 MOBILE_DIR.mkdir(exist_ok=True)
 OUT_HTML = MOBILE_DIR / "index.html"
 VOCAB_JS = MOBILE_DIR / "vocab.js"
+CLUSTERS_JSON = BASE_DIR / "clusters.json"
+CLUSTERS_JS = MOBILE_DIR / "clusters.js"
 
 def parse_csv(path: Path) -> list:
     cards = []
@@ -62,6 +64,7 @@ def main():
   <meta name="apple-mobile-web-app-title" content="Vocab App">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
   <script src="vocab.js"></script>
+  <script src="clusters.js"></script>
 """
     html = html.replace("</head>", pwa_tags + "</head>")
 
@@ -163,11 +166,13 @@ if ('serviceWorker' in navigator) {
     new_hist = """document.getElementById('btnOpenHistory').addEventListener('click', async () => {
   document.getElementById('historyOverlay').classList.remove('hidden');
   const prog = getProgress();
+  const termMap = {};
+  for (const c of (typeof VOCAB_DATA !== 'undefined' ? VOCAB_DATA : [])) termMap[c.key] = c.term;
   const dateMap = {};
   for (const [key, val] of Object.entries(prog)) {
     if (val && val.date) {
       if (!dateMap[val.date]) dateMap[val.date] = [];
-      dateMap[val.date].push(key);
+      if (termMap[key]) dateMap[val.date].push(termMap[key]);
     }
   }
   const data = Object.keys(dateMap).sort().reverse().map(d => ({ date: d, words: dateMap[d] }));
@@ -202,6 +207,7 @@ if ('serviceWorker' in navigator) {
   localStorage.removeItem('vocab_progress');
   localStorage.removeItem('vocabDailyNew');
   dailyNew = 10;
+  clusterLoaded = false;
   document.getElementById('settingsOverlay').classList.add('hidden');
   await loadCards();
 });"""
@@ -226,9 +232,10 @@ if ('serviceWorker' in navigator) {
 
   const today = new Date().toLocaleDateString('en-CA');
   const prog = getProgress();
+  const vocabKeys = new Set((typeof VOCAB_DATA !== 'undefined' ? VOCAB_DATA : []).map(c => c.key));
   let today_n = 0;
-  for (const val of Object.values(prog)) {
-    if (val && val.date === today) today_n++;
+  for (const [key, val] of Object.entries(prog)) {
+    if (val && val.date === today && vocabKeys.has(key)) today_n++;
   }
   const remaining_new = Math.max(0, n - today_n);
   const session = [];
@@ -258,16 +265,64 @@ if ('serviceWorker' in navigator) {
   newIntroduced = today_n;"""
     html = html.replace(old_fetch, new_fetch)
 
+    # 10. Replace ensureClusterData (API → offline CLUSTER_DATA + localStorage)
+    old_ensure = """async function ensureClusterData() {
+  if (clusterLoaded) return;
+  const res = await fetch('/api/clusters');
+  const data = await res.json();
+  clusterData = data.clusters;
+  clusterLoaded = true;
+}"""
+    new_ensure = """async function ensureClusterData() {
+  if (clusterLoaded) return;
+  const prog = getProgress();
+  clusterData = (typeof CLUSTER_DATA !== 'undefined' ? CLUSTER_DATA.clusters : []).map(c => {
+    const p = prog[c.id] || {};
+    return { ...c, fav: Boolean(p.fav), known: Boolean(p.known), introduced_date: p.date || null };
+  });
+  clusterLoaded = true;
+}"""
+    html = html.replace(old_ensure, new_ensure)
+
+    # 11. Replace cluster introduce (openClusterBack)
+    old_cluster_intro = """    fetch('/api/introduce', {
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ key: c.id }),
+    });"""
+    new_cluster_intro = """    saveProgress(c.id, { date: new Date().toLocaleDateString('en-CA') });"""
+    html = html.replace(old_cluster_intro, new_cluster_intro)
+
+    # 12. Replace cluster fav calls (front + back share same inline pattern → both replaced)
+    old_cluster_fav = """    fetch('/api/fav', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ key: c.id, fav: c.fav }) });"""
+    new_cluster_fav = """    saveProgress(c.id, { fav: c.fav });"""
+    html = html.replace(old_cluster_fav, new_cluster_fav)
+
+    # 13. Replace cluster known call
+    old_cluster_known = """    fetch('/api/known', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ key: c.id, known: c.known }) });"""
+    new_cluster_known = """    saveProgress(c.id, { known: c.known });"""
+    html = html.replace(old_cluster_known, new_cluster_known)
+
     with open(OUT_HTML, "w", encoding="utf-8") as f:
         f.write(html)
-    print(f"[OK] (1/3) Generated offline mobile app at {OUT_HTML}")
+    print(f"[OK] (1/4) Generated offline mobile app at {OUT_HTML}")
 
     # Generate vocab.js from vocab.csv
     cards = parse_csv(VOCAB_CSV)
     js_content = f"// Auto-generated from vocab.csv\nconst VOCAB_DATA = {json.dumps(cards, ensure_ascii=False, indent=2)};\n"
     with open(VOCAB_JS, "w", encoding="utf-8") as f:
         f.write(js_content)
-    print(f"[OK] (2/3) Generated {VOCAB_JS} with {len(cards)} cards.")
+    print(f"[OK] (2/4) Generated {VOCAB_JS} with {len(cards)} cards.")
+
+    # Generate clusters.js from clusters.json
+    if CLUSTERS_JSON.exists():
+        with open(CLUSTERS_JSON, encoding="utf-8") as f:
+            clusters_data = json.load(f)
+        js_content = f"// Auto-generated from clusters.json\nconst CLUSTER_DATA = {json.dumps(clusters_data, ensure_ascii=False, indent=2)};\n"
+        with open(CLUSTERS_JS, "w", encoding="utf-8") as f:
+            f.write(js_content)
+        print(f"[OK] (3/4) Generated {CLUSTERS_JS} with {len(clusters_data.get('clusters', []))} clusters.")
+    else:
+        print("[SKIP] clusters.json not found, skipping clusters.js.")
 
     # Generate sw.js with Network-First offline fallback strategy
     sw_path = MOBILE_DIR / "sw.js"
@@ -275,6 +330,7 @@ if ('serviceWorker' in navigator) {
   './',
   './index.html',
   './vocab.js',
+  './clusters.js',
   './manifest.json'
 ];
 
@@ -311,7 +367,7 @@ self.addEventListener('fetch', e => {
 """
     with open(sw_path, "w", encoding="utf-8") as f:
         f.write(sw_content)
-    print(f"[OK] (3/3) Generated offline service worker at {sw_path}")
+    print(f"[OK] (4/4) Generated offline service worker at {sw_path}")
 
     # Ensure .nojekyll exists for GitHub Pages compatibility
     with open(MOBILE_DIR / ".nojekyll", "w", encoding="utf-8") as f:
@@ -319,3 +375,4 @@ self.addEventListener('fetch', e => {
 
 if __name__ == "__main__":
     main()
+

@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
+import json
 import re
 import socket
 import sqlite3
@@ -135,8 +136,9 @@ def start_day():
             for r in rows
         }
 
-    # Đếm đã introduce hôm nay trước → tính slot còn lại
-    today_n       = sum(1 for p in prog.values() if p.get("date") == today)
+    # Đếm đã introduce hôm nay — chỉ tính vocab keys, không tính cluster keys
+    vocab_keys    = {c["key"] for c in all_cards}
+    today_n       = sum(1 for k, p in prog.items() if k in vocab_keys and p.get("date") == today)
     remaining_new = max(0, n - today_n)
 
     session, review_n, new_n = [], 0, 0
@@ -189,7 +191,9 @@ def history():
     card_map = {c["key"]: c["term"] for c in parse_csv(VOCAB_CSV)}
     grouped  = {}
     for key, d in rows:
-        grouped.setdefault(d, []).append(card_map.get(key, key.split("(")[0].strip()))
+        if key not in card_map:
+            continue  # skip cluster entries (syn_*, casual_*, etc.)
+        grouped.setdefault(d, []).append(card_map[key])
     return jsonify([
         {"date": d, "words": words}
         for d, words in sorted(grouped.items(), reverse=True)
@@ -203,6 +207,36 @@ def reset_progress():
     return jsonify({"ok": True})
 
 
+@app.route("/api/clusters")
+def get_clusters():
+    clusters_path = BASE_DIR / "clusters.json"
+    if not clusters_path.exists():
+        return jsonify({"clusters": []})
+    with open(clusters_path, encoding="utf-8") as f:
+        data = json.load(f)
+    clusters = data.get("clusters", [])
+
+    if not DB_PATH.exists() or not clusters:
+        return jsonify({"clusters": clusters})
+
+    cluster_ids = [c["id"] for c in clusters]
+    placeholders = ",".join("?" * len(cluster_ids))
+    with sqlite3.connect(DB_PATH) as conn:
+        rows = conn.execute(
+            f"SELECT key, fav, known, introduced_date FROM progress WHERE key IN ({placeholders})",
+            cluster_ids
+        ).fetchall()
+    prog = {r[0]: {"fav": bool(r[1]), "known": bool(r[2]), "date": r[3]} for r in rows}
+
+    for c in clusters:
+        p = prog.get(c["id"], {})
+        c["fav"] = p.get("fav", False)
+        c["known"] = p.get("known", False)
+        c["introduced_date"] = p.get("date")
+
+    return jsonify({"clusters": clusters})
+
+
 @app.route("/api/sync", methods=["POST", "OPTIONS"])
 def sync_progress():
     if request.method == "OPTIONS":
@@ -210,9 +244,9 @@ def sync_progress():
     client_prog = request.json.get("progress", {}) if request.json else {}
     with sqlite3.connect(DB_PATH) as conn:
         for key, val in client_prog.items():
-            fav = 1 if val.get("fav") else 0
+            fav   = 1 if val.get("fav") else 0
             known = 1 if val.get("known") else 0
-            dt = val.get("date") if (val.get("date") and str(val.get("date")).strip()) else None
+            dt    = val.get("date") if (val.get("date") and str(val.get("date")).strip()) else None
             conn.execute(
                 "INSERT INTO progress(key,fav,known,introduced_date) VALUES(?,?,?,?) "
                 "ON CONFLICT(key) DO UPDATE SET "
