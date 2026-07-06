@@ -1097,4 +1097,3 @@ const CLUSTER_DATA = {
     }
   ]
 };
-
