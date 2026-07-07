@@ -51,7 +51,8 @@ const CLUSTER_DATA = {
           "note": "Ngụ ý 'chưa chắc chắn', có thể reschedule",
           "situation": "Bạn và manager chưa chắc về lịch, muốn giữ một slot trước nhưng sẽ confirm sau."
         }
-      ]
+      ],
+      "vi_name": "Sắp xếp lịch họp"
     },
     {
       "id": "syn_agree",
@@ -102,7 +103,8 @@ const CLUSTER_DATA = {
           "note": "Mang tính enthusiasm cao hơn 'agree' đơn thuần",
           "situation": "Team đang thảo luận về đổi sang TypeScript, bạn muốn thể hiện sự ủng hộ nhiệt tình."
         }
-      ]
+      ],
+      "vi_name": "Thể hiện sự đồng ý"
     },
     {
       "id": "syn_disagree",
@@ -153,7 +155,8 @@ const CLUSTER_DATA = {
           "note": "Rất formal/polite, thường trong executive context",
           "situation": "Trong executive meeting, Director đưa kết luận dựa trên data sai — bạn cần phản bác lịch sự và formal."
         }
-      ]
+      ],
+      "vi_name": "Phản đối chuyên nghiệp"
     },
     {
       "id": "syn_emphasize",
@@ -204,7 +207,8 @@ const CLUSTER_DATA = {
           "note": "Mang tính urgency cao — dùng khi stakeholders chưa thực sự nắm vấn đề",
           "situation": "Stakeholders vẫn chưa hiểu mức độ nghiêm trọng của security gap — cần nói mạnh và rõ hơn."
         }
-      ]
+      ],
+      "vi_name": "Nhấn mạnh quan điểm"
     },
     {
       "id": "syn_clarify",
@@ -255,7 +259,8 @@ const CLUSTER_DATA = {
           "note": "Request step-by-step explanation — rất phổ biến trong code review/onboarding",
           "situation": "Bạn vừa join team mới và muốn hiểu quy trình deploy của team từng bước một."
         }
-      ]
+      ],
+      "vi_name": "Yêu cầu làm rõ"
     },
     {
       "id": "syn_problem",
@@ -306,7 +311,8 @@ const CLUSTER_DATA = {
           "note": "Mức độ nghiêm trọng nhất — release bị chặn hoàn toàn",
           "situation": "Phát hiện bug data loss ngay trước ngày launch — không thể ship với bug này."
         }
-      ]
+      ],
+      "vi_name": "Mô tả vấn đề"
     },
     {
       "id": "syn_complete",
@@ -357,7 +363,8 @@ const CLUSTER_DATA = {
           "note": "Formal approval — thường kèm email confirm hoặc LGTM",
           "situation": "Legal team cần review và confirm trước khi bạn có thể deploy lên production."
         }
-      ]
+      ],
+      "vi_name": "Hoàn thành công việc"
     },
     {
       "id": "syn_important",
@@ -408,7 +415,8 @@ const CLUSTER_DATA = {
           "note": "Dùng khi muốn nói rõ không có ngoại lệ",
           "situation": "Security compliance là hard requirement — không có exception dù deadline có tight đến đâu."
         }
-      ]
+      ],
+      "vi_name": "Diễn đạt tầm quan trọng"
     },
     {
       "id": "casual_buy_time",
@@ -459,7 +467,8 @@ const CLUSTER_DATA = {
           "note": "Dùng khi thực sự không biết — tốt hơn là đoán mò",
           "situation": "Trong meeting, bạn được hỏi về performance metric cụ thể mà bạn không nhớ lúc này."
         }
-      ]
+      ],
+      "vi_name": "Câu giờ để suy nghĩ"
     },
     {
       "id": "casual_agree",
@@ -510,7 +519,8 @@ const CLUSTER_DATA = {
           "note": "Thể hiện bạn hiểu và thấy logical — rất tự nhiên",
           "situation": "Đồng nghiệp giải thích lý do tại sao nên test kỹ trên staging trước khi deploy prod."
         }
-      ]
+      ],
+      "vi_name": "Đồng ý thông thường"
     },
     {
       "id": "casual_soft_disagree",
@@ -561,7 +571,8 @@ const CLUSTER_DATA = {
           "note": "Rõ ràng nhưng không aggressive — acknowledge sự khác biệt quan điểm",
           "situation": "Tech lead assess risk là low nhưng bạn thấy ngược lại — muốn express khác biệt quan điểm respectfully."
         }
-      ]
+      ],
+      "vi_name": "Phản đối nhẹ nhàng"
     },
     {
       "id": "casual_follow_up",
@@ -612,7 +623,8 @@ const CLUSTER_DATA = {
           "note": "Softer than 'following up' — nghe ít transactional hơn",
           "situation": "Bạn muốn hỏi thăm tiến độ migration một cách nhẹ nhàng, không tạo áp lực."
         }
-      ]
+      ],
+      "vi_name": "Theo dõi tiến độ"
     },
     {
       "id": "casual_wrap_up",
@@ -663,7 +675,8 @@ const CLUSTER_DATA = {
           "note": "Khi topic phức tạp cần thảo luận riêng, không chiếm thời gian cả nhóm",
           "situation": "Cuộc tranh luận kỹ thuật giữa 2 người quá chi tiết, đang chiếm thời gian của cả nhóm 10 người."
         }
-      ]
+      ],
+      "vi_name": "Kết thúc cuộc họp"
     },
     {
       "id": "theme_pr_review",
@@ -724,7 +737,8 @@ const CLUSTER_DATA = {
           "note": "Quan trọng để keep PRs focused và reviewable",
           "situation": "PR để fix bug nhưng author thêm cả refactor module khác không liên quan đến issue."
         }
-      ]
+      ],
+      "vi_name": "Từ vựng Review Code"
     },
     {
       "id": "theme_meeting_vocab",
@@ -775,7 +789,8 @@ const CLUSTER_DATA = {
           "note": "Mỗi task/story cần có owner rõ ràng — tránh 'we all own it'",
           "situation": "Action item vừa được tạo nhưng chưa ai nhận trách nhiệm — cần assign người chịu trách."
         }
-      ]
+      ],
+      "vi_name": "Kết quả cuộc họp"
     },
     {
       "id": "theme_feedback",
@@ -826,7 +841,8 @@ const CLUSTER_DATA = {
           "note": "Balance feedback — acknowledge strengths trước khi critique",
           "situation": "Bạn muốn acknowledge điểm mạnh của PR trước khi nêu vấn đề cần cải thiện."
         }
-      ]
+      ],
+      "vi_name": "Góp ý xây dựng"
     },
     {
       "id": "theme_deadline",
@@ -877,7 +893,8 @@ const CLUSTER_DATA = {
           "note": "Neutral — không negative như 'miss deadline'",
           "situation": "Release date phải dời vì phát hiện critical bug muộn — cần thông báo stakeholders."
         }
-      ]
+      ],
+      "vi_name": "Deadline & Áp lực thời gian"
     },
     {
       "id": "coll_raise",
@@ -930,7 +947,8 @@ const CLUSTER_DATA = {
           "note": "Dùng khi vấn đề chưa được team biết/chú ý đến",
           "situation": "Team chưa ai biết về API security best practices mới — bạn muốn share thông tin này."
         }
-      ]
+      ],
+      "vi_name": "Cụm từ với \"Raise\""
     },
     {
       "id": "filler_spoken",
@@ -981,7 +999,8 @@ const CLUSTER_DATA = {
           "note": "Check understanding — informal, tránh dùng với senior/executive",
           "situation": "Bạn vừa mô tả performance issue khá vague, muốn check xem người nghe có hiểu ý không."
         }
-      ]
+      ],
+      "vi_name": "Câu đệm khi nói"
     },
     {
       "id": "filler_written",
@@ -1042,7 +1061,8 @@ const CLUSTER_DATA = {
           "note": "Show cause-effect — good cho incident reports, post-mortems",
           "situation": "Trong incident report: sau khi deploy hotfix lúc nửa đêm, kết quả đạt được là gì."
         }
-      ]
+      ],
+      "vi_name": "Từ nối văn viết"
     },
     {
       "id": "filler_presentation",
@@ -1093,7 +1113,9 @@ const CLUSTER_DATA = {
           "note": "Dùng khi muốn simplify technical concept cho non-technical audience",
           "situation": "Bạn vừa giải thích distributed systems concept phức tạp, cần simplify cho non-technical PM."
         }
-      ]
+      ],
+      "vi_name": "Câu mở đầu thuyết trình"
     }
   ]
 };
+

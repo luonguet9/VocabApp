@@ -459,6 +459,7 @@ h1 { font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; ga
 
 /* ── CLUSTER CARD ────────────────────────────────────────── */
 #clusterSection, #clusterArea, #clusterQuizArea { width: 100%; display: flex; flex-direction: column; align-items: center; }
+#clusterPracticePane { width: 100%; display: flex; flex-direction: column; align-items: center; }
 
 .cluster-card {
   width: 100%; max-width: 100%; background: #fff; border-radius: 20px;
@@ -496,6 +497,8 @@ h1 { font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; ga
   background: linear-gradient(135deg, #1e293b 0%, #4f46e5 100%);
   -webkit-background-clip: text; -webkit-text-fill-color: transparent;
 }
+.cluster-vi-name { font-size: 0.78rem; color: #6b7280; margin-top: 2px; margin-bottom: 4px; }
+.cluster-back-vi { font-size: 0.72rem; color: #9ca3af; font-weight: 400; margin-left: 6px; }
 .cluster-front-words { width: 100%; display: flex; flex-direction: column; gap: 8px; margin-top: 6px; }
 .cluster-front-word {
   display: flex; align-items: center; gap: 10px;
@@ -511,6 +514,24 @@ h1 { font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; ga
   font-size: 0.68rem; font-weight: 700; background: #ede9fe; color: #7c3aed;
   padding: 2px 8px; border-radius: 12px; flex-shrink: 0;
 }
+#practiceHome { width: 100%; padding: 8px 0; }
+.practice-option-cards { display: flex; gap: 12px; width: 100%; }
+.practice-option-card { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 6px; padding: 20px 12px; background: #fff; border: 1.5px solid #e5e7eb; border-radius: 16px; cursor: pointer; transition: border-color 0.15s, box-shadow 0.15s; }
+.practice-option-card:hover { border-color: #6366f1; box-shadow: 0 2px 8px rgba(99,102,241,0.12); }
+.practice-option-card:active { transform: scale(0.97); }
+.poc-icon { font-size: 2rem; line-height: 1; }
+.poc-label { font-size: 1rem; font-weight: 700; color: #1f2937; }
+.poc-desc { font-size: 0.72rem; color: #6b7280; text-align: center; line-height: 1.4; }
+.cq-practice-section { padding: 16px 12px 20px; background: #faf5ff; border-radius: 14px; border: 1px solid #e9d5ff; }
+.cq-practice-title { font-size: 0.78rem; font-weight: 600; color: #6b7280; margin-bottom: 12px; text-align: center; }
+.cq-practice-cards { display: flex; gap: 8px; }
+.cq-card-btn { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 3px; padding: 10px 4px; background: #fff; border: 1.5px solid #e9d5ff; border-radius: 12px; cursor: pointer; transition: border-color 0.15s, background 0.15s; }
+.cq-card-btn:hover { border-color: #8b5cf6; background: #f5f0ff; }
+.cq-card-btn:active { transform: scale(0.97); }
+.cq-card-icon { font-size: 1.1rem; line-height: 1; }
+.cq-card-label { font-size: 0.7rem; font-weight: 600; color: #374151; }
+.cq-card-count { font-size: 0.68rem; font-weight: 700; color: #7c3aed; background: #ede9fe; padding: 1px 8px; border-radius: 20px; min-width: 24px; text-align: center; }
+
 .cluster-flip-hint {
   font-size: 0.78rem; font-weight: 600; color: #94a3b8; margin-top: 10px;
   display: inline-flex; align-items: center; gap: 4px;
@@ -714,9 +735,72 @@ h1 { font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; ga
     <p id="clusterResultText"></p>
     <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
       <button class="btn btn-restart" id="btnClusterRestart">🔀 Xem lại</button>
-      <button class="btn btn-restart" style="background:#8b5cf6" id="btnStartClusterQuiz">🎯 Trắc nghiệm</button>
     </div>
   </div>
+</div>
+
+<!-- ── PRACTICE ────────────────────────────────────────── -->
+<div id="quizSection" class="hidden">
+  <!-- Landing: chọn loại practice -->
+  <div id="practiceHome">
+    <div class="practice-option-cards">
+      <button class="practice-option-card" data-practice="flash">
+        <span class="poc-icon">🃏</span>
+        <span class="poc-label">Flash Card</span>
+        <span class="poc-desc">Luyện từ vựng hàng ngày</span>
+      </button>
+      <button class="practice-option-card" data-practice="clusters">
+        <span class="poc-icon">📦</span>
+        <span class="poc-label">Clusters</span>
+        <span class="poc-desc">Luyện nhóm từ theo chủ đề</span>
+      </button>
+    </div>
+  </div>
+  <!-- Vocab quiz -->
+  <div class="quiz-wrap hidden" id="quizArea">
+    <div class="quiz-q-box">
+      <div class="quiz-q-label" id="quizQLabel">Chọn câu tiếng Anh đúng nghĩa:</div>
+      <div class="quiz-q-text" id="quizQ"></div>
+    </div>
+    <div class="quiz-options" id="quizOpts"></div>
+    <div class="quiz-explain-box hidden" id="quizExplain"></div>
+    <div class="quiz-next-wrap">
+      <button class="btn btn-next hidden" id="btnNext">Câu tiếp →</button>
+    </div>
+  </div>
+  <div id="quizResult" class="result-box hidden">
+    <h2>🎯 Kết quả</h2>
+    <p id="quizResultText"></p>
+    <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
+      <button class="btn btn-restart" onclick="startSession()">🔄 Làm lại</button>
+      <button class="btn btn-restart" style="background:#10b981" onclick="loadMoreCards()">📚 Học thêm</button>
+      <button class="btn btn-restart" style="background:#6b7280" onclick="showPracticeHome()">← Quay lại</button>
+    </div>
+  </div>
+  <!-- Cluster practice: chọn phạm vi -->
+  <div id="clusterPracticePane" class="hidden" style="width:100%">
+    <div class="cq-practice-section">
+      <div class="cq-practice-title">Chọn phạm vi luyện tập</div>
+      <div class="cq-practice-cards">
+        <button class="cq-card-btn" data-cqfilter="studied">
+          <span class="cq-card-icon">📚</span>
+          <span class="cq-card-label">Đã học</span>
+          <span class="cq-card-count" id="cqCountStudied">–</span>
+        </button>
+        <button class="cq-card-btn" data-cqfilter="unknown">
+          <span class="cq-card-icon">⚡</span>
+          <span class="cq-card-label">Chưa thuộc</span>
+          <span class="cq-card-count" id="cqCountUnknown">–</span>
+        </button>
+        <button class="cq-card-btn" data-cqfilter="all">
+          <span class="cq-card-icon">🌐</span>
+          <span class="cq-card-label">Tất cả</span>
+          <span class="cq-card-count" id="cqCountAll">–</span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <!-- Cluster quiz -->
   <div id="clusterQuizArea" class="hidden" style="width:100%">
     <div class="quiz-wrap" id="cqArea">
       <div class="quiz-q-box">
@@ -737,31 +821,8 @@ h1 { font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; ga
       <p id="cqResultText"></p>
       <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
         <button class="btn btn-restart" id="btnCqRetry">🔄 Làm lại</button>
-        <button class="btn btn-restart" style="background:#6b7280" id="btnExitClusterQuiz">← Xem Clusters</button>
+        <button class="btn btn-restart" style="background:#6b7280" id="btnExitClusterQuiz">← Quay lại</button>
       </div>
-    </div>
-  </div>
-</div>
-
-<!-- ── QUIZ ───────────────────────────────────────────── -->
-<div id="quizSection" class="hidden">
-  <div class="quiz-wrap" id="quizArea">
-    <div class="quiz-q-box">
-      <div class="quiz-q-label" id="quizQLabel">Chọn câu tiếng Anh đúng nghĩa:</div>
-      <div class="quiz-q-text" id="quizQ"></div>
-    </div>
-    <div class="quiz-options" id="quizOpts"></div>
-    <div class="quiz-explain-box hidden" id="quizExplain"></div>
-    <div class="quiz-next-wrap">
-      <button class="btn btn-next hidden" id="btnNext">Câu tiếp →</button>
-    </div>
-  </div>
-  <div id="quizResult" class="result-box hidden">
-    <h2>🎯 Kết quả</h2>
-    <p id="quizResultText"></p>
-    <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
-      <button class="btn btn-restart" onclick="startSession()">🔄 Làm lại</button>
-      <button class="btn btn-restart" style="background:#10b981" onclick="loadMoreCards()">📚 Học thêm</button>
     </div>
   </div>
 </div>
@@ -770,7 +831,7 @@ h1 { font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; ga
 // ── STATE ────────────────────────────────────────────────────────────────────
 let allCards = [], sessionCards = [];
 let deck = 'all', mode = 'flash', topic = 'all';
-let filterUnknown = false;
+let cardFilter = 'all'; // 'all' | 'unknown' | 'new'
 let dailyNew = parseInt(localStorage.getItem('vocabDailyNew') || '10');
 let extraNew = 0;
 let reviewCount = 0, newServed = 0, newIntroduced = 0;
@@ -872,10 +933,11 @@ document.getElementById('btnReset').addEventListener('click', async () => {
 // ── LOAD DATA ────────────────────────────────────────────────────────────────
 async function loadCards() {
   extraNew = 0;
-  deck = 'all'; topic = 'all'; filterUnknown = false;
+  deck = 'all'; topic = 'all'; cardFilter = 'all';
   document.querySelectorAll('#deckSel button').forEach(b => b.classList.toggle('active', b.dataset.deck === 'all'));
   document.getElementById('btnFilterUnknown').textContent = '📖 Tất cả';
   document.getElementById('btnFilterUnknown').classList.remove('active');
+  document.getElementById('btnFilterUnknown').style.background = '';
   await _fetchAndRender(dailyNew);
 }
 
@@ -968,7 +1030,8 @@ function getDeckCards() {
 
 function getActive() {
   let base = topic === 'all' ? sessionCards : sessionCards.filter(c => c.topic === topic);
-  if (filterUnknown) base = base.filter(c => !c.known);
+  if (cardFilter === 'unknown') base = base.filter(c => !c.known);
+  else if (cardFilter === 'new') base = base.filter(c => c.is_new);
   return base;
 }
 
@@ -1136,7 +1199,25 @@ function markCard(known) {
 }
 
 function bindFlashEvents() {
-  document.getElementById('cardWrap').addEventListener('click', e => {
+  const wrap = document.getElementById('cardWrap');
+
+  // Swipe left/right: only after card is flipped
+  // Right → known ✅  |  Left → unknown ❌
+  let _tx = 0, _ty = 0;
+  wrap.addEventListener('touchstart', e => {
+    _tx = e.touches[0].clientX;
+    _ty = e.touches[0].clientY;
+  }, { passive: true });
+  wrap.addEventListener('touchend', e => {
+    if (!flipped) return;
+    const dx = e.changedTouches[0].clientX - _tx;
+    const dy = e.changedTouches[0].clientY - _ty;
+    if (Math.abs(dx) < 60 || Math.abs(dx) < Math.abs(dy)) return;
+    e.preventDefault(); // suppress synthesized click
+    markCard(dx > 0);
+  });
+
+  wrap.addEventListener('click', e => {
     const pronBtn = e.target.closest('.btn-pron');
     if (pronBtn) {
       speak(flashCards[flashIdx]?.term || '', pronBtn.dataset.accent);
@@ -1171,6 +1252,9 @@ function bindFlashEvents() {
 
 // ── QUIZ ─────────────────────────────────────────────────────────────────────
 function renderQuiz() {
+  // Don't render into quiz view if user is still on practice home
+  if (!document.getElementById('practiceHome').classList.contains('hidden')) return;
+
   if (quizCards.length === 0) {
     document.getElementById('quizArea').classList.add('hidden');
     document.getElementById('quizResultText').textContent = '';
@@ -1202,7 +1286,9 @@ function renderQuiz() {
   if (ex && ex.toLowerCase().includes(c.term.toLowerCase())) types.push('cloze');
   quizType = types[Math.floor(Math.random() * types.length)];
 
-  const wrong  = shuffle(allCards.filter(x => x !== c)).slice(0, 3);
+  const sameTopic = shuffle(allCards.filter(x => x !== c && x.topic === c.topic));
+  const others    = shuffle(allCards.filter(x => x !== c && x.topic !== c.topic));
+  const wrong     = [...sameTopic, ...others].slice(0, 3);
   const opts   = shuffle([c, ...wrong]);
   const optsEl = document.getElementById('quizOpts');
   const labelEl = document.getElementById('quizQLabel');
@@ -1275,9 +1361,12 @@ function checkAnswer(btn) {
 // ── CLUSTER QUIZ ─────────────────────────────────────────────────────────────
 let cqQuestions = [], cqIdx = 0, cqScore = 0;
 let cqSortSelected = [], cqSortAnswer = [];
+let cqFilter = 'studied'; // 'studied' | 'unknown' | 'all'
 
 function buildCqQuestions() {
-  const filtered = getFilteredClusters();
+  let filtered = getFilteredClusters();
+  if (cqFilter === 'studied') filtered = filtered.filter(c => c.introduced_date);
+  else if (cqFilter === 'unknown') filtered = filtered.filter(c => c.introduced_date && !c.known);
   const questions = [];
 
   // Quiz 3 — Situation Match (1 per cluster if words have situation + ≥2 words for options)
@@ -1311,15 +1400,15 @@ function buildCqQuestions() {
 function startClusterQuiz() {
   cqQuestions = buildCqQuestions();
   cqIdx = 0; cqScore = 0;
-  document.getElementById('clusterArea').classList.add('hidden');
-  document.getElementById('clusterResult').classList.add('hidden');
+  document.getElementById('clusterPracticePane').classList.add('hidden');
   document.getElementById('clusterQuizArea').classList.remove('hidden');
   renderClusterQuiz();
 }
 
 function exitClusterQuiz() {
   document.getElementById('clusterQuizArea').classList.add('hidden');
-  startClusters();
+  document.getElementById('clusterPracticePane').classList.remove('hidden');
+  updateCqCounts();
 }
 
 function renderClusterQuiz() {
@@ -1328,7 +1417,10 @@ function renderClusterQuiz() {
 
   if (!cqQuestions.length) {
     area.classList.add('hidden');
-    document.getElementById('cqResultText').textContent = 'Không đủ dữ liệu để tạo câu hỏi.';
+    document.getElementById('cqResultText').textContent =
+      cqFilter === 'studied' ? 'Chưa học cluster nào. Hãy xem qua các clusters trước!' :
+      cqFilter === 'unknown' ? '🎉 Bạn đã thuộc hết clusters rồi!' :
+      'Không đủ dữ liệu để tạo câu hỏi.';
     result.classList.remove('hidden');
     return;
   }
@@ -1502,10 +1594,17 @@ function renderOddOneOut(q) {
 // ── EVENTS ───────────────────────────────────────────────────────────────────
 document.getElementById('btnFilterUnknown').addEventListener('click', () => {
   if (mode === 'cluster') return;
-  filterUnknown = !filterUnknown;
+  cardFilter = cardFilter === 'all' ? 'unknown' : cardFilter === 'unknown' ? 'new' : 'all';
   const btn = document.getElementById('btnFilterUnknown');
-  btn.textContent = filterUnknown ? '📖 Chưa thuộc' : '📖 Tất cả';
-  btn.classList.toggle('active', filterUnknown);
+  const STATE = {
+    all:     ['📖 Tất cả',      '',        false],
+    unknown: ['⚡ Chưa thuộc',  '',        true ],
+    new:     ['🆕 Từ mới',      '#0ea5e9', true ],
+  };
+  const [label, bg, active] = STATE[cardFilter];
+  btn.textContent = label;
+  btn.style.background = bg;
+  btn.classList.toggle('active', active);
   startSession();
 });
 document.getElementById('btnNext').addEventListener('click', () => { quizIdx++; renderQuiz(); });
@@ -1528,10 +1627,42 @@ document.getElementById('modeSel').addEventListener('click', e => {
   document.getElementById('flashSection').classList.toggle('hidden', mode !== 'flash');
   document.getElementById('quizSection').classList.toggle('hidden', mode !== 'quiz');
   document.getElementById('clusterSection').classList.toggle('hidden', mode !== 'cluster');
-  document.getElementById('btnFilterUnknown').classList.toggle('hidden', mode === 'cluster');
+  document.getElementById('btnFilterUnknown').classList.toggle('hidden', mode !== 'flash');
   if (mode === 'cluster') { activateClusters(); return; }
+  if (mode === 'quiz') { showPracticeHome(); return; }
   document.getElementById('topicBar').innerHTML = '';
   startSession();
+});
+
+function showPracticeHome() {
+  document.getElementById('practiceHome').classList.remove('hidden');
+  document.getElementById('quizArea').classList.add('hidden');
+  document.getElementById('quizResult').classList.add('hidden');
+  document.getElementById('clusterPracticePane').classList.add('hidden');
+  document.getElementById('clusterQuizArea').classList.add('hidden');
+}
+
+document.getElementById('quizSection').addEventListener('click', e => {
+  // Practice landing cards
+  const optCard = e.target.closest('.practice-option-card');
+  if (optCard) {
+    document.getElementById('practiceHome').classList.add('hidden');
+    if (optCard.dataset.practice === 'flash') {
+      document.getElementById('quizArea').classList.remove('hidden');
+      renderQuiz();
+    } else {
+      document.getElementById('clusterPracticePane').classList.remove('hidden');
+      ensureClusterData().then(updateCqCounts);
+    }
+    return;
+  }
+  // Cluster scope picker
+  const cqFilterBtn = e.target.closest('.cq-card-btn');
+  if (cqFilterBtn) { cqFilter = cqFilterBtn.dataset.cqfilter; startClusterQuiz(); return; }
+  // Cluster quiz nav
+  if (e.target.id === 'cqBtnNext') { cqIdx++; renderClusterQuiz(); return; }
+  if (e.target.id === 'btnCqRetry') { cqIdx = 0; cqScore = 0; renderClusterQuiz(); return; }
+  if (e.target.id === 'btnExitClusterQuiz') { exitClusterQuiz(); return; }
 });
 
 // ── CLUSTER ──────────────────────────────────────────────────────────────────
@@ -1563,7 +1694,6 @@ async function ensureClusterData() {
 
 async function activateClusters() {
   document.getElementById('clusterCard').innerHTML = '<div class="loading">Đang tải clusters...</div>';
-  document.getElementById('clusterQuizArea').classList.add('hidden');
   await ensureClusterData();
   buildClusterTypeBar();
   startClusters();
@@ -1595,6 +1725,15 @@ function startClusters() {
   clusterIdx = 0;
   clusterRegFilter = 'all';
   renderCluster();
+}
+
+function updateCqCounts() {
+  const filtered = getFilteredClusters();
+  const nStudied = filtered.filter(c => c.introduced_date).length;
+  const nUnknown = filtered.filter(c => c.introduced_date && !c.known).length;
+  const nAll     = filtered.length;
+  [['cqCountStudied', nStudied], ['cqCountUnknown', nUnknown], ['cqCountAll', nAll]
+  ].forEach(([id, n]) => { const el = document.getElementById(id); if (el) el.textContent = n; });
 }
 
 function renderCluster() {
@@ -1659,6 +1798,7 @@ function buildFrontHTML(c) {
       <span class="cluster-level-tag">${c.level}</span>
     </div>
     <div class="cluster-name">${c.name}</div>
+    ${c.vi_name ? `<div class="cluster-vi-name">${c.vi_name}</div>` : ''}
     <div class="cluster-front-words${c.words.length >= 4 ? ' two-col' : ''}">${wordRows}</div>
     <div class="cluster-flip-hint">👆 Tap để xem chi tiết</div>
   </div>`;
@@ -1711,8 +1851,7 @@ function buildBackHTML(c) {
       const noteHtml = w.note ? `<div class="cwt-note">📌 ${w.note}</div>` : '';
       const warnHtml = (w.wrong_usage || w.contrast)
         ? `<div class="cwt-warn">⚠️ ${w.wrong_usage || 'Contrast: ' + w.contrast}</div>` : '';
-      const ttsBtn = pronHtml
-        ? `<button class="btn-pron" data-term="${w.term}" data-accent="us">🔊</button>` : '';
+      const ttsBtn = `<button class="btn-pron" data-term="${w.term}" data-accent="us">🔊</button>`;
       wordsHtml += `<div class="cluster-word-entry">
         <div class="cwt-header">
           <span class="cwt-term">${w.term}</span>
@@ -1732,7 +1871,7 @@ function buildBackHTML(c) {
 
   return `
     <div class="cluster-back-header">
-      <span class="cluster-back-title">${c.name}</span>
+      <span class="cluster-back-title">${c.name}${c.vi_name ? ` <span class="cluster-back-vi">${c.vi_name}</span>` : ''}</span>
       <span class="cluster-word-count">${c.words.length} từ</span>
       <button class="cluster-close-btn" id="clusterCloseBtn">← Về</button>
     </div>
@@ -1746,15 +1885,8 @@ function buildBackHTML(c) {
     </div>`;
 }
 
-// Event delegation for entire cluster section
+// Event delegation for cluster browse section
 document.getElementById('clusterSection').addEventListener('click', e => {
-  // ── Cluster quiz nav (handled before anything else) ──
-  if (e.target.id === 'cqBtnNext') { cqIdx++; renderClusterQuiz(); return; }
-  if (e.target.id === 'btnCqRetry') { cqIdx = 0; cqScore = 0; renderClusterQuiz(); return; }
-  if (e.target.id === 'btnExitClusterQuiz') { exitClusterQuiz(); return; }
-  // Ignore all other clicks inside cluster quiz area (have own handlers)
-  if (e.target.closest('#clusterQuizArea')) return;
-
   const c = clusterCards[clusterIdx];
 
   // Prev / Next nav
@@ -1765,7 +1897,6 @@ document.getElementById('clusterSection').addEventListener('click', e => {
     clusterIdx++; renderCluster(); return;
   }
   if (e.target.id === 'btnClusterRestart') { startClusters(); return; }
-  if (e.target.id === 'btnStartClusterQuiz') { startClusterQuiz(); return; }
 
   if (!c) return;
 
