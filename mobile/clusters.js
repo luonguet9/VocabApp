@@ -1118,4 +1118,3 @@ const CLUSTER_DATA = {
     }
   ]
 };
-

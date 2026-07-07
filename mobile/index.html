@@ -9,25 +9,25 @@
 <title>Vocab Practice</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 /* ── RESET ──────────────────────────────────────────── */
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
 /* ── BASE (mobile first) ────────────────────────────── */
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: 'Be Vietnam Pro', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
   background: #f0f2f5;
   min-height: 100vh;
   display: flex; flex-direction: column; align-items: center;
   padding: calc(12px + env(safe-area-inset-top, 0px)) calc(12px + env(safe-area-inset-right, 0px)) calc(40px + env(safe-area-inset-bottom, 0px)) calc(12px + env(safe-area-inset-left, 0px));
 }
-h1, h2, h3, .cluster-name, .mode-tab, .title-gradient {
-  font-family: 'Outfit', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+h1, h2, h3, h4, button, input, select, textarea, .cluster-name, .mode-tab, .title-gradient, .practice-title, .poc-label, .cq-practice-title {
+  font-family: 'Be Vietnam Pro', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
 }
 
 /* ── SETUP OVERLAY ──────────────────────────────────── */
-#settingsOverlay, #historyOverlay {
+#settingsOverlay, #historyOverlay, #topicPopupOverlay {
   position: fixed; inset: 0;
   background: rgba(15, 23, 42, 0.55);
   display: flex; align-items: center; justify-content: center;
@@ -142,52 +142,60 @@ h1 { font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; ga
 
 /* Primary Navigation Mode Bar */
 .mode-bar {
-  display: flex; gap: 6px; width: 100%;
-  background: #f1f5f9; padding: 6px; border-radius: 16px;
-  border: 1px solid #e2e8f0; margin-bottom: 14px;
+  display: flex; gap: 8px; width: 100%;
+  background: #f8fafc; padding: 8px; border-radius: 20px;
+  border: 1px solid #e2e8f0; margin-bottom: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.02);
 }
 .mode-tab {
-  flex: 1; min-height: 44px; border-radius: 12px; border: none;
-  background: transparent; font-size: 0.92rem; font-weight: 700; color: #64748b;
-  cursor: pointer; transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-  display: flex; align-items: center; justify-content: center; gap: 6px;
+  flex: 1; min-height: 46px; border-radius: 14px; border: none;
+  background: transparent; font-size: 0.95rem; font-weight: 700; color: #64748b;
+  cursor: pointer; transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex; align-items: center; justify-content: center; gap: 8px;
 }
-.mode-tab:hover:not(.active) { color: #334155; background: rgba(255,255,255,0.5); }
+.mode-tab:hover:not(.active) { color: #1e293b; background: rgba(255,255,255,0.6); transform: translateY(-1px); }
 .mode-tab.active {
   background: #ffffff; color: #4f46e5; font-weight: 800;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08); transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.06); transform: translateY(-2px);
+  border: 1px solid #e2e8f0;
 }
-#modeSel [data-mode="quiz"].active    { color: #059669; }
-#modeSel [data-mode="cluster"].active { color: #7c3aed; }
+.btn-settings {
+  min-height: 38px; padding: 0 14px;
+  border-radius: 12px; border: 1px solid #e2e8f0;
+  background: #ffffff; cursor: pointer; font-size: 0.85rem; font-weight: 600; color: #334155;
+  transition: all 0.2s cubic-bezier(0.16,1,0.3,1); box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+  display: inline-flex; align-items: center; justify-content: center; gap: 6px; white-space: nowrap;
+}
+.btn-settings:hover { background: #f8fafc; border-color: #cbd5e1; transform: translateY(-1px); }
 
 /* Secondary Controls / Filter Bar */
 .controls-bar {
   display: flex; align-items: center; justify-content: space-between;
-  gap: 10px; flex-wrap: wrap; margin-bottom: 12px;
+  gap: 10px; flex-wrap: wrap; margin-bottom: 14px;
 }
 .filter-group {
-  display: flex; border-radius: 12px; overflow: hidden;
-  border: 1px solid #cbd5e1; background: #ffffff; flex-wrap: wrap;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+  display: flex; border-radius: 14px; overflow: hidden;
+  border: 1px solid #e2e8f0; background: #ffffff; flex-wrap: wrap;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.02); padding: 3px; gap: 3px;
 }
 .filter-group button {
-  min-height: 38px; padding: 0 14px;
+  min-height: 36px; padding: 0 14px; border-radius: 10px;
   border: none; background: transparent; cursor: pointer;
-  font-size: 0.84rem; font-weight: 600; color: #64748b;
-  transition: all 0.15s;
+  font-size: 0.85rem; font-weight: 600; color: #64748b;
+  transition: all 0.2s cubic-bezier(0.16,1,0.3,1);
 }
-.filter-group button.active { background: #4f46e5; color: #fff; font-weight: 700; }
-.filter-group button:not(.active):hover { background: #f8fafc; color: #334155; }
+.filter-group button.active { background: #4f46e5; color: #fff; font-weight: 700; box-shadow: 0 2px 8px rgba(79,70,229,0.25); }
+.filter-group button:not(.active):hover { background: #f1f5f9; color: #1e293b; }
 
 .btn-filter-state {
-  min-height: 38px; padding: 0 16px;
-  border-radius: 12px; border: 1px solid #cbd5e1;
-  background: #ffffff; cursor: pointer; font-size: 0.84rem; font-weight: 600; color: #475569;
-  transition: all 0.15s; display: inline-flex; align-items: center; gap: 6px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+  min-height: 42px; padding: 0 16px;
+  border-radius: 14px; border: 1px solid #e2e8f0;
+  background: #ffffff; cursor: pointer; font-size: 0.85rem; font-weight: 600; color: #475569;
+  transition: all 0.2s cubic-bezier(0.16,1,0.3,1); display: inline-flex; align-items: center; gap: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.02);
 }
-.btn-filter-state:hover { background: #f8fafc; border-color: #94a3b8; color: #1e293b; }
-.btn-filter-state.active { background: #e0f2fe; color: #0369a1; border-color: #38bdf8; font-weight: 700; }
+.btn-filter-state:hover { background: #f8fafc; border-color: #cbd5e1; color: #0f172a; transform: translateY(-1px); }
+.btn-filter-state.active { background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); color: #0284c7; border-color: #7dd3fc; font-weight: 700; box-shadow: 0 4px 12px rgba(14,165,233,0.15); }
 
 .known-badge { font-size: 0.68rem; font-weight: 600; background: #dcfce7; color: #15803d; padding: 2px 10px; border-radius: 20px; }
 
@@ -201,16 +209,37 @@ h1 { font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; ga
 .badge-know { color: #10b981; font-weight: 700; }
 .badge-unk  { color: #f43f5e; font-weight: 700; }
 
-/* ── TOPIC CHIPS ─────────────────────────────────────── */
-.topic-bar { display: flex; gap: 8px; flex-wrap: wrap; width: 100%; justify-content: center; margin-bottom: 12px; }
-.chip {
-  padding: 5px 14px; border-radius: 20px; border: 1px solid #cbd5e1;
-  background: #ffffff; font-size: 0.8rem; font-weight: 600; color: #64748b;
-  cursor: pointer; transition: all 0.15s; white-space: nowrap;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.02);
+/* ── TOPIC CHIPS & POPUP ─────────────────────────────── */
+.topic-bar { display: flex; gap: 8px; flex-wrap: wrap; width: 100%; justify-content: center; margin-bottom: 14px; }
+.btn-topic-trigger {
+  min-height: 42px; padding: 0 18px; border-radius: 20px; border: 1.5px solid #e2e8f0;
+  background: #ffffff; font-size: 0.9rem; font-weight: 600; color: #1e293b;
+  cursor: pointer; transition: all 0.2s cubic-bezier(0.16,1,0.3,1); display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.03);
 }
-.chip.active { background: #7c3aed; color: #fff; border-color: #7c3aed; box-shadow: 0 3px 10px rgba(124,58,237,0.2); }
-.chip:hover:not(.active) { background: #f8fafc; border-color: #94a3b8; color: #334155; }
+.btn-topic-trigger:hover { background: #f8fafc; border-color: #8b5cf6; transform: translateY(-1px); box-shadow: 0 6px 16px rgba(139,92,246,0.12); }
+.btn-topic-trigger:active { transform: scale(0.98); }
+
+.topic-popup-item {
+  display: flex; align-items: center; justify-content: space-between;
+  width: 100%; padding: 14px 18px; border-radius: 14px; border: 1px solid #e2e8f0;
+  background: #ffffff; font-size: 0.95rem; font-weight: 600; color: #334155;
+  cursor: pointer; transition: all 0.2s cubic-bezier(0.16,1,0.3,1); text-align: left;
+}
+.topic-popup-item:hover { background: #f8fafc; border-color: #cbd5e1; transform: translateX(3px); }
+.topic-popup-item.active {
+  background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%); color: #15803d; border-color: #86efac; font-weight: 700;
+  box-shadow: 0 4px 12px rgba(22,197,94,0.12);
+}
+.tpi-check { font-size: 1.1rem; font-weight: 800; color: #16a34a; }
+.chip {
+  padding: 6px 16px; border-radius: 20px; border: 1px solid #e2e8f0;
+  background: #ffffff; font-size: 0.82rem; font-weight: 600; color: #64748b;
+  cursor: pointer; transition: all 0.2s cubic-bezier(0.16,1,0.3,1); white-space: nowrap;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+.chip.active { background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%); color: #fff; border-color: #7c3aed; box-shadow: 0 4px 12px rgba(124,58,237,0.25); font-weight: 700; transform: translateY(-1px); }
+.chip:hover:not(.active) { background: #f8fafc; border-color: #cbd5e1; color: #0f172a; transform: translateY(-1px); }
 
 /* ── FLASHCARD ───────────────────────────────────────── */
 .card-row {
@@ -246,9 +275,10 @@ h1 { font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; ga
 .card-face {
   position: absolute; width: 100%; height: 100%;
   backface-visibility: hidden;
-  background: #fff; border-radius: 16px;
-  padding: 16px 16px 14px;
-  box-shadow: 0 2px 16px rgba(0,0,0,0.09);
+  background: #ffffff; border-radius: 24px;
+  border: 1px solid #e2e8f0;
+  padding: 20px 20px 18px;
+  box-shadow: 0 12px 32px rgba(0,0,0,0.05);
   display: flex; flex-direction: column;
   justify-content: center; align-items: center;
   text-align: center; overflow-y: auto;
@@ -257,10 +287,11 @@ h1 { font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; ga
 
 /* Favorite star on card front */
 .fav-star {
-  position: absolute; top: 12px; right: 14px;
-  font-size: 1.3rem; line-height: 1; cursor: pointer;
-  color: #f59e0b; user-select: none;
+  position: absolute; top: 16px; right: 18px;
+  font-size: 1.4rem; line-height: 1; cursor: pointer;
+  color: #f59e0b; user-select: none; transition: transform 0.2s;
 }
+.fav-star:hover { transform: scale(1.2) rotate(15deg); }
 
 .card-tags { display: flex; gap: 6px; margin-bottom: 10px; align-items: center; flex-wrap: wrap; justify-content: center; }
 .deck-tag {
@@ -297,81 +328,93 @@ h1 { font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; ga
 .flash-btns { display: flex; gap: 10px; width: 100%; margin-bottom: 10px; }
 .btn {
   flex: 1; min-height: 52px;
-  border-radius: 12px; border: none;
+  border-radius: 16px; border: none;
   font-size: 1rem; font-weight: 700;
-  cursor: pointer; transition: opacity 0.15s;
+  cursor: pointer; transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
 }
-.btn:active { opacity: 0.75; }
-.btn-know    { background: #10b981; color: #fff; }
-.btn-unknown { background: #f43f5e; color: #fff; }
+.btn:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,0.1); }
+.btn:active { transform: scale(0.98); opacity: 0.85; }
+.btn-know    { background: linear-gradient(135deg, #10b981 0%, #059669 100%); color: #fff; }
+.btn-unknown { background: linear-gradient(135deg, #f43f5e 0%, #e11d48 100%); color: #fff; }
 
 /* Favorite button (inside flash-btns row) */
 .btn-fav {
   flex: 0 0 52px; min-height: 52px;
-  border-radius: 12px; border: none;
+  border-radius: 16px; border: none;
   font-size: 1.3rem; font-weight: 700; cursor: pointer;
-  transition: all 0.15s; background: #f59e0b; color: #fff;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  background: #f1f5f9; color: #cbd5e1; border: 1px solid #e2e8f0;
 }
-.btn-fav.active { background: #d97706; }
-.btn-fav:active { opacity: 0.75; }
+.btn-fav.active { background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); color: #fff; border-color: #f59e0b; box-shadow: 0 4px 12px rgba(245,158,11,0.25); }
+.btn-fav:hover { transform: translateY(-2px); }
+.btn-fav:active { transform: scale(0.95); }
 
 /* ── QUIZ ────────────────────────────────────────────── */
 .quiz-wrap { width: 100%; }
 
 .quiz-q-box {
-  background: #fff; border-radius: 16px;
-  padding: 20px 16px;
-  box-shadow: 0 2px 16px rgba(0,0,0,0.09);
-  text-align: center; margin-bottom: 12px; position: relative;
+  background: #ffffff; border-radius: 24px;
+  border: 1px solid #e2e8f0;
+  padding: 24px 28px;
+  box-shadow: 0 12px 32px rgba(0,0,0,0.05);
+  text-align: center; margin-bottom: 16px; position: relative;
 }
 .quiz-q-label {
-  font-size: 0.7rem; color: #9ca3af;
-  text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 8px;
+  font-size: 0.75rem; color: #64748b; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px;
 }
-.quiz-q-text { font-size: 1.05rem; font-weight: 600; color: #111827; line-height: 1.5; }
+.quiz-q-text { font-size: 1.15rem; font-weight: 700; color: #0f172a; line-height: 1.5; }
 
-.quiz-options { display: flex; flex-direction: column; gap: 10px; }
+.quiz-options { display: flex; flex-direction: column; gap: 12px; }
 .quiz-opt {
-  background: #fff; border: 2px solid #e5e7eb; border-radius: 12px;
-  padding: 14px 16px; text-align: left;
-  font-size: 0.9rem; color: #374151;
-  cursor: pointer; line-height: 1.45; min-height: 52px;
-  transition: border-color 0.15s;
+  background: #ffffff; border: 1.5px solid #f1f5f9; border-radius: 18px;
+  padding: 16px 18px; text-align: left;
+  font-size: 0.95rem; font-weight: 600; color: #1e293b;
+  cursor: pointer; line-height: 1.45; min-height: 54px;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.02);
 }
-.quiz-opt:active:not(:disabled) { background: #f5f3ff; }
-.quiz-opt.correct { border-color: #10b981; background: #ecfdf5; color: #065f46; }
-.quiz-opt.wrong   { border-color: #f43f5e; background: #fff1f2; color: #9f1239; }
-.quiz-opt:disabled { cursor: default; opacity: 0.75; }
-.quiz-opt.correct { opacity: 1; }
-.quiz-opt.wrong   { opacity: 1; }
+.quiz-opt:hover:not(:disabled) {
+  transform: translateY(-2px); box-shadow: 0 10px 24px rgba(0,0,0,0.06);
+  border-color: #8b5cf6; background: linear-gradient(90deg, #ffffff 0%, #faf5ff 100%);
+}
+.quiz-opt:active:not(:disabled) { transform: scale(0.98); }
+.quiz-opt.correct { border-color: #10b981; background: linear-gradient(90deg, #ffffff 0%, #ecfdf5 100%); color: #065f46; font-weight: 700; box-shadow: 0 6px 16px rgba(16,185,129,0.12); opacity: 1; }
+.quiz-opt.wrong   { border-color: #f43f5e; background: linear-gradient(90deg, #ffffff 0%, #fff1f2 100%); color: #9f1239; font-weight: 700; opacity: 1; }
+.quiz-opt:disabled { cursor: default; opacity: 0.85; }
 
-.quiz-next-wrap { text-align: center; margin-top: 12px; }
-.btn-next { background: #4f46e5; color: #fff; flex: none; padding: 0 32px; min-height: 48px; border-radius: 12px; }
+.quiz-next-wrap { text-align: center; margin-top: 16px; }
+.btn-next { background: linear-gradient(135deg, #4f46e5 0%, #6366f1 100%); color: #fff; flex: none; padding: 0 32px; min-height: 48px; border-radius: 16px; font-weight: 700; box-shadow: 0 4px 12px rgba(79,70,229,0.25); transition: all 0.2s; }
+.btn-next:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(79,70,229,0.35); }
 
 .quiz-term-en { font-weight: 700; font-size: 1.3rem; color: #1e293b; }
 .quiz-example-hint { font-size: 0.82rem; color: #64748b; margin-top: 6px; font-style: italic; }
 .quiz-cloze-text { font-size: 0.97rem; color: #1e293b; line-height: 1.6; }
-.quiz-explain-box { background: #f0fdf4; border: 1px solid #86efac; border-radius: 8px; padding: 10px 14px; font-size: 0.82rem; color: #166534; margin: 8px 0; text-align: left; line-height: 1.6; }
+.quiz-explain-box { background: #f0fdf4; border: 1px solid #86efac; border-radius: 16px; padding: 14px 18px; font-size: 0.88rem; color: #166534; margin: 12px 0; text-align: left; line-height: 1.6; box-shadow: 0 4px 12px rgba(22,101,52,0.05); }
 .cq-timeline-words { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-top: 10px; }
-.timeline-word { padding: 9px 18px; border-radius: 10px; border: 2px solid #e2e8f0; background: #fff; cursor: pointer; font-size: 0.9rem; font-weight: 500; transition: all 0.15s; position: relative; }
-.timeline-word.selected { border-color: #8b5cf6; background: #ede9fe; }
-.timeline-word.correct-order { border-color: #10b981; background: #d1fae5; }
-.timeline-word.wrong-order { border-color: #ef4444; background: #fee2e2; }
-.timeline-order-num { position: absolute; top: -9px; right: -9px; width: 18px; height: 18px; border-radius: 50%; background: #8b5cf6; color: #fff; font-size: 0.68rem; display: flex; align-items: center; justify-content: center; font-weight: 700; }
+.timeline-word { padding: 9px 18px; border-radius: 12px; border: 1.5px solid #e2e8f0; background: #fff; cursor: pointer; font-size: 0.9rem; font-weight: 600; transition: all 0.2s cubic-bezier(0.16,1,0.3,1); position: relative; box-shadow: 0 2px 4px rgba(0,0,0,0.02); }
+.timeline-word:hover { transform: translateY(-2px); border-color: #8b5cf6; }
+.timeline-word.selected { border-color: #8b5cf6; background: #ede9fe; color: #5b21b6; }
+.timeline-word.correct-order { border-color: #10b981; background: #d1fae5; color: #065f46; }
+.timeline-word.wrong-order { border-color: #ef4444; background: #fee2e2; color: #991b1b; }
+.timeline-order-num { position: absolute; top: -9px; right: -9px; width: 18px; height: 18px; border-radius: 50%; background: #8b5cf6; color: #fff; font-size: 0.68rem; display: flex; align-items: center; justify-content: center; font-weight: 700; box-shadow: 0 2px 6px rgba(139,92,246,0.3); }
 
 /* ── RESULT / LOADING ────────────────────────────────── */
 .result-box {
-  width: 100%; background: #fff; border-radius: 16px;
-  padding: 36px 20px;
-  box-shadow: 0 2px 16px rgba(0,0,0,0.09); text-align: center;
+  width: 100%; background: #ffffff; border-radius: 24px;
+  border: 1px solid #e2e8f0;
+  padding: 40px 24px;
+  box-shadow: 0 12px 32px rgba(0,0,0,0.05); text-align: center;
 }
-.result-box h2 { font-size: 1.6rem; margin-bottom: 10px; }
-.result-box p  { color: #6b7280; margin-bottom: 20px; font-size: 0.95rem; }
-.result-stats  { display: flex; gap: 8px; justify-content: center; margin-bottom: 20px; flex-wrap: wrap; }
-.result-stat   { padding: 6px 14px; border-radius: 20px; font-size: 0.82rem; font-weight: 600; }
-.stat-know   { background: #d1fae5; color: #065f46; }
-.stat-unknown{ background: #ffe4e6; color: #9f1239; }
-.btn-restart { background: #4f46e5; color: #fff; flex: none; padding: 0 32px; min-height: 48px; border-radius: 12px; }
+.result-box h2 { font-size: 1.8rem; margin-bottom: 12px; font-weight: 700; color: #0f172a; }
+.result-box p  { color: #64748b; margin-bottom: 24px; font-size: 1rem; line-height: 1.5; }
+.result-stats  { display: flex; gap: 10px; justify-content: center; margin-bottom: 24px; flex-wrap: wrap; }
+.result-stat   { padding: 8px 16px; border-radius: 20px; font-size: 0.85rem; font-weight: 700; }
+.stat-know   { background: #ecfdf5; color: #047857; border: 1px solid #a7f3d0; }
+.stat-unknown{ background: #fff1f2; color: #be123c; border: 1px solid #fecdd3; }
+.btn-restart { background: linear-gradient(135deg, #4f46e5 0%, #6366f1 100%); color: #fff; flex: none; padding: 0 32px; min-height: 48px; border-radius: 16px; font-weight: 700; box-shadow: 0 4px 12px rgba(79,70,229,0.25); transition: all 0.2s; }
+.btn-restart:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(79,70,229,0.35); }
 
 .loading { color: #9ca3af; font-size: 0.9rem; padding: 48px 0; text-align: center; width: 100%; }
 .hidden { display: none !important; }
@@ -411,6 +454,14 @@ h1 { font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; ga
 
   .result-box { max-width: min(720px, calc(100vw - 48px)); padding: 48px 40px; }
   .result-box h2 { font-size: 2rem; }
+
+  /* practice desktop */
+  #practiceHome { max-width: 580px; margin: 0 auto; }
+  .practice-option-cards { gap: 20px; }
+  .practice-option-card { max-width: 270px; padding: 24px 20px; }
+  .poc-icon { font-size: 2rem; }
+  .cq-practice-section { max-width: 500px; margin: 0 auto; }
+  #clusterQuizArea { max-width: min(720px, calc(100vw - 48px)); margin: 0 auto; }
 
   /* cluster desktop */
   .cluster-card { max-width: min(760px, calc(100vw - 48px)); border-radius: 24px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); border: 1px solid rgba(226,232,240,0.8); }
@@ -459,15 +510,16 @@ h1 { font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; ga
 
 /* ── CLUSTER CARD ────────────────────────────────────────── */
 #clusterSection, #clusterArea, #clusterQuizArea { width: 100%; display: flex; flex-direction: column; align-items: center; }
+#clusterPracticePane { width: 100%; display: flex; flex-direction: column; align-items: center; }
 
 .cluster-card {
-  width: 100%; max-width: 100%; background: #fff; border-radius: 20px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.07); overflow: hidden;
-  border: 1px solid #f1f5f9; margin-bottom: 16px;
-  transition: box-shadow 0.25s ease, transform 0.25s ease;
+  width: 100%; max-width: 100%; background: #ffffff; border-radius: 24px;
+  box-shadow: 0 12px 32px rgba(0,0,0,0.05); overflow: hidden;
+  border: 1px solid #e2e8f0; margin-bottom: 16px;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .cluster-card:hover {
-  box-shadow: 0 8px 30px rgba(79,70,229,0.1);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.08);
 }
 .cluster-card-front {
   padding: 28px 20px 24px; cursor: pointer; position: relative;
@@ -513,9 +565,75 @@ h1 { font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; ga
   font-size: 0.68rem; font-weight: 700; background: #ede9fe; color: #7c3aed;
   padding: 2px 8px; border-radius: 12px; flex-shrink: 0;
 }
-.cq-filter-bar { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; margin-top: 10px; }
-.cq-filter-btn { background: #8b5cf6; color: #fff; font-size: 0.8rem; padding: 0 16px; min-height: 38px; border-radius: 10px; border: none; cursor: pointer; font-weight: 600; }
-.cq-filter-btn:hover { background: #7c3aed; }
+#practiceHome { width: 100%; max-width: 580px; margin: 0 auto; padding: 4px 0 16px; }
+.practice-header-box { text-align: center; margin-bottom: 16px; }
+.practice-title { font-size: 1.15rem; font-weight: 700; color: #1e293b; margin-bottom: 4px; }
+.practice-subtitle { font-size: 0.82rem; color: #64748b; line-height: 1.4; max-width: 320px; margin: 0 auto; }
+.practice-option-cards { display: flex; gap: 14px; width: 100%; justify-content: center; }
+@media (max-width: 480px) { .practice-option-cards { flex-direction: column; } }
+.practice-option-card {
+  flex: 1; max-width: 280px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 8px;
+  padding: 20px 16px; background: #ffffff; border: 1.5px solid #e2e8f0; border-radius: 18px;
+  cursor: pointer; transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1); box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+  position: relative; overflow: hidden;
+}
+.practice-option-card:hover { transform: translateY(-3px); box-shadow: 0 12px 24px rgba(0,0,0,0.08); }
+.practice-option-card.card-flash:hover { border-color: #3b82f6; background: linear-gradient(180deg, #ffffff 0%, #eff6ff 100%); }
+.practice-option-card.card-cluster:hover { border-color: #8b5cf6; background: linear-gradient(180deg, #ffffff 0%, #faf5ff 100%); }
+.practice-option-card:active { transform: scale(0.98); }
+.poc-badge { font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; padding: 3px 10px; border-radius: 20px; margin-bottom: 2px; }
+.badge-flash { background: #dbeafe; color: #1d4ed8; }
+.badge-cluster { background: #f3e8ff; color: #6b21a8; }
+.poc-icon { font-size: 2.2rem; line-height: 1; filter: drop-shadow(0 4px 6px rgba(0,0,0,0.08)); }
+.poc-label { font-size: 1.05rem; font-weight: 700; color: #0f172a; }
+.poc-desc { font-size: 0.78rem; color: #64748b; line-height: 1.45; }
+.btn-back-clean {
+  display: inline-flex; align-items: center; gap: 6px; font-size: 0.85rem; font-weight: 600;
+  color: #64748b; background: #f8fafc; border: 1px solid #e2e8f0; padding: 6px 14px;
+  border-radius: 12px; cursor: pointer; transition: all 0.2s cubic-bezier(0.16,1,0.3,1);
+  margin-bottom: 16px;
+}
+.btn-back-clean span { font-size: 1.15rem; line-height: 1; margin-top: -1px; }
+.btn-back-clean:hover { background: #f1f5f9; color: #0f172a; border-color: #cbd5e1; transform: translateX(-2px); }
+
+.cq-practice-section { max-width: 540px; margin: 0 auto; padding: 24px 28px 32px; background: #ffffff; border-radius: 24px; border: 1px solid #e2e8f0; box-shadow: 0 12px 32px rgba(0,0,0,0.05); }
+.cq-top-bar { display: flex; justify-content: flex-start; }
+.cq-header { text-align: center; margin-bottom: 24px; }
+.cq-icon-glow { font-size: 2.6rem; margin-bottom: 8px; display: inline-block; filter: drop-shadow(0 6px 12px rgba(139,92,246,0.15)); }
+.cq-practice-title { font-size: 1.25rem; font-weight: 700; color: #0f172a; margin-bottom: 6px; text-align: center; }
+.cq-practice-sub { font-size: 0.82rem; color: #64748b; line-height: 1.45; max-width: 380px; margin: 0 auto; }
+
+.cq-practice-cards { display: flex; flex-direction: column; gap: 12px; width: 100%; }
+.cq-card-btn {
+  display: flex; align-items: center; gap: 14px; width: 100%; padding: 16px 18px;
+  background: #ffffff; border: 1.5px solid #f1f5f9; border-radius: 18px; cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1); box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+  text-align: left;
+}
+.cq-card-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(0,0,0,0.06); }
+.cq-studied:hover { border-color: #10b981; background: linear-gradient(90deg, #ffffff 0%, #ecfdf5 100%); }
+.cq-unknown:hover { border-color: #f59e0b; background: linear-gradient(90deg, #ffffff 0%, #fffbeb 100%); }
+.cq-all:hover     { border-color: #8b5cf6; background: linear-gradient(90deg, #ffffff 0%, #faf5ff 100%); }
+.cq-card-btn:active { transform: scale(0.98); }
+
+.cq-icon-box {
+  width: 46px; height: 46px; border-radius: 14px;
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+  font-size: 1.4rem; transition: all 0.2s;
+}
+.cq-studied .cq-icon-box { background: #d1fae5; }
+.cq-unknown .cq-icon-box { background: #fef3c7; }
+.cq-all .cq-icon-box     { background: #f3e8ff; }
+.cq-card-btn:hover .cq-icon-box { transform: scale(1.08); }
+
+.cq-text-box { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+.cq-card-label { font-size: 1rem; font-weight: 700; color: #0f172a; }
+.cq-card-desc { font-size: 0.78rem; color: #64748b; line-height: 1.35; }
+
+.cq-card-count { font-size: 0.8rem; font-weight: 700; padding: 4px 12px; border-radius: 20px; flex-shrink: 0; min-width: 32px; text-align: center; }
+.badge-emerald { background: #ecfdf5; color: #047857; border: 1px solid #a7f3d0; }
+.badge-amber   { background: #fffbeb; color: #b45309; border: 1px solid #fde68a; }
+.badge-purple  { background: #faf5ff; color: #6b21a8; border: 1px solid #e9d5ff; }
 
 .cluster-flip-hint {
   font-size: 0.78rem; font-weight: 600; color: #94a3b8; margin-top: 10px;
@@ -588,32 +706,33 @@ h1 { font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; ga
   font-size: 0.82rem; color: #166534; border-left: 4px solid #22c55e; line-height: 1.5; font-weight: 500;
 }
 .cluster-action-btns {
-  display: flex; gap: 10px; padding: 14px 18px;
+  display: flex; gap: 12px; padding: 16px 20px;
   border-top: 1px solid #f1f5f9; background: #ffffff;
 }
 .btn-cluster-learning {
-  flex: 1; min-height: 50px; border-radius: 14px; border: none;
-  background: #fef3c7; color: #92400e; font-size: 0.92rem; font-weight: 700;
-  cursor: pointer; transition: all 0.15s;
+  flex: 1; min-height: 52px; border-radius: 16px; border: none;
+  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); color: #92400e; font-size: 0.95rem; font-weight: 700;
+  cursor: pointer; transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 12px rgba(245,158,11,0.15);
 }
-.btn-cluster-learning:hover { background: #fde68a; }
-.btn-cluster-learning:active { opacity: 0.8; transform: scale(0.98); }
+.btn-cluster-learning:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(245,158,11,0.25); }
+.btn-cluster-learning:active { opacity: 0.85; transform: scale(0.98); }
 .btn-cluster-known {
-  flex: 1; min-height: 50px; border-radius: 14px; border: none;
-  background: #10b981; color: #fff; font-size: 0.92rem; font-weight: 700;
-  cursor: pointer; transition: all 0.15s; box-shadow: 0 4px 12px rgba(16,185,129,0.25);
+  flex: 1; min-height: 52px; border-radius: 16px; border: none;
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%); color: #fff; font-size: 0.95rem; font-weight: 700;
+  cursor: pointer; transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1); box-shadow: 0 4px 12px rgba(16,185,129,0.25);
 }
-.btn-cluster-known:hover { background: #059669; }
+.btn-cluster-known:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(16,185,129,0.35); }
 .btn-cluster-known.known { background: #065f46; box-shadow: none; }
-.btn-cluster-known:active { opacity: 0.8; transform: scale(0.98); }
+.btn-cluster-known:active { opacity: 0.85; transform: scale(0.98); }
 .btn-cluster-fav-back {
-  flex: 0 0 54px; min-height: 50px; border-radius: 14px; border: none;
-  font-size: 1.4rem; cursor: pointer; transition: all 0.15s;
-  background: #f59e0b; color: #fff; box-shadow: 0 4px 12px rgba(245,158,11,0.25);
+  flex: 0 0 52px; min-height: 52px; border-radius: 16px; border: none;
+  font-size: 1.4rem; cursor: pointer; transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  background: #f1f5f9; color: #cbd5e1; border: 1px solid #e2e8f0;
 }
-.btn-cluster-fav-back:hover { background: #d97706; }
-.btn-cluster-fav-back.active { background: #b45309; }
-.btn-cluster-fav-back:active { opacity: 0.8; transform: scale(0.98); }
+.btn-cluster-fav-back.active { background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); color: #fff; border-color: #f59e0b; box-shadow: 0 4px 12px rgba(245,158,11,0.25); }
+.btn-cluster-fav-back:hover { transform: translateY(-2px); }
+.btn-cluster-fav-back:active { transform: scale(0.95); }
 
 /* Cluster nav */
 .cluster-nav {
@@ -622,6 +741,21 @@ h1 { font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; ga
 }
 .cluster-nav .btn-nav { margin-top: 0; }
 .cluster-nav-info { font-size: 0.82rem; color: #9ca3af; }
+
+/* Mobile Ultra-Compact & Sticky Next Button */
+@media (max-width: 600px) {
+  .controls-bar { gap: 6px !important; margin-bottom: 8px !important; }
+  .controls-bar > div { gap: 6px !important; }
+  .btn-topic-trigger { min-height: 36px !important; padding: 0 10px !important; font-size: 0.82rem !important; gap: 4px !important; }
+  .btn-back-clean { padding: 6px 10px !important; font-size: 0.82rem !important; }
+  .quiz-q-box { padding: 14px 16px !important; margin-bottom: 10px !important; border-radius: 18px !important; }
+  .quiz-q-text { font-size: 1.05rem !important; line-height: 1.4 !important; }
+  .quiz-options { gap: 8px !important; }
+  .quiz-opt { padding: 12px 14px !important; min-height: 44px !important; font-size: 0.9rem !important; border-radius: 14px !important; }
+  .quiz-next-wrap { margin-top: 8px !important; margin-bottom: 8px !important; position: sticky !important; bottom: 10px !important; z-index: 100 !important; }
+  .btn-next { width: 100% !important; min-height: 46px !important; font-size: 1rem !important; box-shadow: 0 6px 20px rgba(79,70,229,0.4) !important; }
+  .quiz-explain-box { padding: 12px 14px !important; font-size: 0.84rem !important; margin: 8px 0 !important; }
+}
 </style>
 
   <link rel="manifest" href="manifest.json">
@@ -664,9 +798,19 @@ h1 { font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; ga
 
     <hr class="setup-divider">
 
-    <p class="setup-section-title">Tiến độ học</p>
+    <p class="setup-section-title">Tiến độ & Lịch sử</p>
+    <button class="btn-start" id="btnOpenHistory" style="margin-bottom:12px;display:block;background:linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);">📅 Xem lịch sử học tập</button>
     <button class="btn-start" id="btnSyncPC" style="margin-bottom:12px;display:block">🔄 Đồng bộ tiến độ với PC</button>
     <button class="btn-reset" id="btnReset">🗑 Xóa toàn bộ tiến độ</button>
+  </div>
+</div>
+
+<!-- ── TOPIC POPUP OVERLAY ────────────────────────────── -->
+<div id="topicPopupOverlay" class="hidden">
+  <div class="setup-box" style="max-width:380px;">
+    <h2 style="font-size:1.2rem;margin-bottom:16px;">📁 Chọn chủ đề từ vựng</h2>
+    <div id="topicPopupList" style="display:flex;flex-direction:column;gap:8px;max-height:60vh;overflow-y:auto;margin-bottom:16px;"></div>
+    <button class="btn-start" style="background:#64748b;min-height:44px;" id="btnCloseTopicPopup">Đóng</button>
   </div>
 </div>
 
@@ -675,7 +819,6 @@ h1 { font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; ga
   <div class="header-top">
     <h1><span>📚</span> <span class="title-gradient">Vocab Practice</span></h1>
     <div style="display:flex;gap:8px">
-      <button class="btn-settings" id="btnOpenHistory">📅 Lịch sử</button>
       <button class="btn-settings" id="btnOpenSettings">⚙️ Cài đặt</button>
     </div>
   </div>
@@ -687,20 +830,19 @@ h1 { font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; ga
     <button class="mode-tab" data-mode="quiz">✏️ Practice</button>
   </div>
 
-  <!-- Secondary Controls / Filter Bar -->
-  <div class="controls-bar" id="controlsBar">
-    <div class="filter-group" id="deckSel">
-      <button class="active" data-deck="all">All</button>
-      <button data-deck="B1">B1</button>
-      <button data-deck="B2">B2</button>
-      <button data-deck="C1">C1</button>
-      <button data-deck="fav">★ Yêu thích</button>
+  <!-- Unified Controls / Filter / Back Navigation Bar -->
+  <div class="controls-bar" id="controlsBar" style="display:flex; align-items:center; justify-content:center; gap:10px; flex-wrap:wrap; margin-bottom:14px; width:100%;">
+    <button id="btnPracticeBack" class="btn-back-clean hidden" onclick="showPracticeHome()" style="margin:0; background:#ffffff; padding:7px 14px; border-radius:12px; border:1px solid #cbd5e1; font-weight:700; color:#334155; box-shadow:0 2px 4px rgba(0,0,0,0.03); display:flex; align-items:center; gap:4px; font-size:0.9rem; white-space:nowrap;">
+      <span style="font-size:1.1rem; line-height:1;">‹</span> Về chọn môn
+    </button>
+    <div style="display:flex; gap:10px; flex-wrap:wrap; align-items:center; justify-content:center;">
+      <div id="deckBar"></div>
+      <div id="topicBar"></div>
     </div>
     <button class="btn-filter-state" id="btnFilterUnknown">📖 Tất cả</button>
   </div>
 
-  <div class="topic-bar" id="topicBar"></div>
-  <div class="progress-bar"><div class="progress-fill" id="progFill" style="width:0%"></div></div>
+  <div class="progress-bar" id="progBarWrap"><div class="progress-fill" id="progFill" style="width:0%"></div></div>
   <div class="stats" id="stats"></div>
 </div>
 
@@ -718,11 +860,6 @@ h1 { font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; ga
       <span class="cluster-nav-info" id="clusterNavInfo"></span>
       <button class="btn-nav" id="btnClusterNext">›</button>
     </div>
-    <div class="cq-filter-bar">
-      <button class="cq-filter-btn" data-cqfilter="studied">📚 Đã học</button>
-      <button class="cq-filter-btn" data-cqfilter="unknown">⚡ Chưa thuộc</button>
-      <button class="cq-filter-btn" data-cqfilter="all">🌐 Tất cả</button>
-    </div>
   </div>
   <div id="clusterResult" class="result-box hidden">
     <h2>🎉 Xem xong!</h2>
@@ -730,12 +867,97 @@ h1 { font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; ga
     <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
       <button class="btn btn-restart" id="btnClusterRestart">🔀 Xem lại</button>
     </div>
-    <div class="cq-filter-bar" style="margin-top:12px">
-      <button class="cq-filter-btn" data-cqfilter="studied">📚 Đã học</button>
-      <button class="cq-filter-btn" data-cqfilter="unknown">⚡ Chưa thuộc</button>
-      <button class="cq-filter-btn" data-cqfilter="all">🌐 Tất cả</button>
+  </div>
+</div>
+
+<!-- ── PRACTICE ────────────────────────────────────────── -->
+<div id="quizSection" class="hidden">
+  <!-- Landing: chọn loại practice -->
+  <div id="practiceHome" style="width:100%">
+    <div class="cq-practice-section">
+      <div class="cq-header" style="margin-top: 8px;">
+        <div class="cq-icon-glow">✨</div>
+        <div class="cq-practice-title">Chế độ Trắc nghiệm</div>
+        <div class="cq-practice-sub">Chọn môn luyện tập để kiểm tra và củng cố phản xạ từ vựng của bạn</div>
+      </div>
+      <div class="cq-practice-cards">
+        <button class="cq-card-btn cq-all" data-practice="flash" style="background:linear-gradient(90deg, #ffffff 0%, #eff6ff 100%); border-color:#dbeafe;">
+          <div class="cq-icon-box" style="background:#dbeafe;"><span class="cq-card-icon">🃏</span></div>
+          <div class="cq-text-box">
+            <span class="cq-card-label">Trắc nghiệm Từ vựng</span>
+            <span class="cq-card-desc">Ôn tập từ đơn B1, B2, C1, chuyên ngành qua các câu hỏi nhanh</span>
+          </div>
+          <span class="cq-card-count" style="background:#eff6ff; color:#1d4ed8; border:1px solid #bfdbfe;">Từ đơn</span>
+        </button>
+        <button class="cq-card-btn cq-all" data-practice="clusters" style="background:linear-gradient(90deg, #ffffff 0%, #faf5ff 100%); border-color:#e9d5ff;">
+          <div class="cq-icon-box" style="background:#f3e8ff;"><span class="cq-card-icon">📦</span></div>
+          <div class="cq-text-box">
+            <span class="cq-card-label">Trắc nghiệm Cụm từ</span>
+            <span class="cq-card-desc">Kiểm tra khả năng vận dụng cấu trúc và từ lóng trong giao tiếp</span>
+          </div>
+          <span class="cq-card-count badge-purple">Cụm từ</span>
+        </button>
+      </div>
     </div>
   </div>
+  <!-- Vocab quiz -->
+  <div class="quiz-wrap hidden" id="quizArea">
+    <div class="quiz-q-box">
+      <div class="quiz-q-label" id="quizQLabel">Chọn câu tiếng Anh đúng nghĩa:</div>
+      <div class="quiz-q-text" id="quizQ"></div>
+    </div>
+    <div class="quiz-options" id="quizOpts"></div>
+    <div class="quiz-next-wrap">
+      <button class="btn btn-next hidden" id="btnNext">Câu tiếp →</button>
+    </div>
+    <div class="quiz-explain-box hidden" id="quizExplain"></div>
+  </div>
+  <div id="quizResult" class="result-box hidden">
+    <h2>🎯 Kết quả</h2>
+    <p id="quizResultText"></p>
+    <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
+      <button class="btn btn-restart" onclick="startSession()">🔄 Làm lại</button>
+      <button class="btn btn-restart" style="background:#10b981" onclick="loadMoreCards()">📚 Học thêm</button>
+      <button class="btn btn-restart" style="background:#6b7280" onclick="showPracticeHome()">← Về chọn môn</button>
+    </div>
+  </div>
+  <!-- Cluster practice: chọn phạm vi -->
+  <div id="clusterPracticePane" class="hidden" style="width:100%">
+    <div class="cq-practice-section">
+      <div class="cq-header">
+        <div class="cq-icon-glow">📦</div>
+        <div class="cq-practice-title">Luyện tập Cụm từ (Clusters)</div>
+        <div class="cq-practice-sub">Chọn phạm vi câu hỏi trắc nghiệm để rèn luyện phản xạ và củng cố cách vận dụng từ trong giao tiếp</div>
+      </div>
+      <div class="cq-practice-cards">
+        <button class="cq-card-btn cq-studied" data-cqfilter="studied">
+          <div class="cq-icon-box"><span class="cq-card-icon">📚</span></div>
+          <div class="cq-text-box">
+            <span class="cq-card-label">Đã học</span>
+            <span class="cq-card-desc">Củng cố phản xạ các cấu trúc đã ghi nhớ</span>
+          </div>
+          <span class="cq-card-count badge-emerald" id="cqCountStudied">–</span>
+        </button>
+        <button class="cq-card-btn cq-unknown" data-cqfilter="unknown">
+          <div class="cq-icon-box"><span class="cq-card-icon">⚡</span></div>
+          <div class="cq-text-box">
+            <span class="cq-card-label">Chưa thuộc</span>
+            <span class="cq-card-desc">Tập trung cải thiện những cụm từ còn yếu</span>
+          </div>
+          <span class="cq-card-count badge-amber" id="cqCountUnknown">–</span>
+        </button>
+        <button class="cq-card-btn cq-all" data-cqfilter="all">
+          <div class="cq-icon-box"><span class="cq-card-icon">🌐</span></div>
+          <div class="cq-text-box">
+            <span class="cq-card-label">Tất cả</span>
+            <span class="cq-card-desc">Thử sức với toàn bộ từ điển cụm từ</span>
+          </div>
+          <span class="cq-card-count badge-purple" id="cqCountAll">–</span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <!-- Cluster quiz -->
   <div id="clusterQuizArea" class="hidden" style="width:100%">
     <div class="quiz-wrap" id="cqArea">
       <div class="quiz-q-box">
@@ -746,41 +968,18 @@ h1 { font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; ga
       <div class="cq-timeline hidden" id="cqTimeline">
         <div class="cq-timeline-words" id="cqTimelineWords"></div>
       </div>
-      <div class="quiz-explain-box hidden" id="cqExplain"></div>
       <div class="quiz-next-wrap">
         <button class="btn btn-next hidden" id="cqBtnNext">Câu tiếp →</button>
       </div>
+      <div class="quiz-explain-box hidden" id="cqExplain"></div>
     </div>
     <div id="cqResult" class="result-box hidden">
       <h2>🎯 Kết quả</h2>
       <p id="cqResultText"></p>
       <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
         <button class="btn btn-restart" id="btnCqRetry">🔄 Làm lại</button>
-        <button class="btn btn-restart" style="background:#6b7280" id="btnExitClusterQuiz">← Xem Clusters</button>
+        <button class="btn btn-restart" style="background:#6b7280" id="btnExitClusterQuiz">← Quay lại</button>
       </div>
-    </div>
-  </div>
-</div>
-
-<!-- ── QUIZ ───────────────────────────────────────────── -->
-<div id="quizSection" class="hidden">
-  <div class="quiz-wrap" id="quizArea">
-    <div class="quiz-q-box">
-      <div class="quiz-q-label" id="quizQLabel">Chọn câu tiếng Anh đúng nghĩa:</div>
-      <div class="quiz-q-text" id="quizQ"></div>
-    </div>
-    <div class="quiz-options" id="quizOpts"></div>
-    <div class="quiz-explain-box hidden" id="quizExplain"></div>
-    <div class="quiz-next-wrap">
-      <button class="btn btn-next hidden" id="btnNext">Câu tiếp →</button>
-    </div>
-  </div>
-  <div id="quizResult" class="result-box hidden">
-    <h2>🎯 Kết quả</h2>
-    <p id="quizResultText"></p>
-    <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
-      <button class="btn btn-restart" onclick="startSession()">🔄 Làm lại</button>
-      <button class="btn btn-restart" style="background:#10b981" onclick="loadMoreCards()">📚 Học thêm</button>
     </div>
   </div>
 </div>
@@ -806,7 +1005,7 @@ if ('serviceWorker' in navigator) {
 
 // ── STATE ────────────────────────────────────────────────────────────────────
 let allCards = [], sessionCards = [];
-let deck = 'all', mode = 'flash', topic = 'all';
+let deck = 'all', mode = 'flash', topic = 'all', practiceSubMode = 'home';
 let cardFilter = 'all'; // 'all' | 'unknown' | 'new'
 let dailyNew = parseInt(localStorage.getItem('vocabDailyNew') || '10');
 let extraNew = 0;
@@ -860,24 +1059,16 @@ document.getElementById('btnStart').addEventListener('click', async () => {
 document.getElementById('btnOpenSettings').addEventListener('click', showSetup);
 
 document.getElementById('btnOpenHistory').addEventListener('click', async () => {
+  document.getElementById('settingsOverlay').classList.add('hidden');
   document.getElementById('historyOverlay').classList.remove('hidden');
-  const prog = getProgress();
-  const termMap = {};
-  for (const c of (typeof VOCAB_DATA !== 'undefined' ? VOCAB_DATA : [])) termMap[c.key] = c.term;
-  const dateMap = {};
-  for (const [key, val] of Object.entries(prog)) {
-    if (val && val.date) {
-      if (!dateMap[val.date]) dateMap[val.date] = [];
-      if (termMap[key]) dateMap[val.date].push(termMap[key]);
-    }
-  }
-  const data = Object.keys(dateMap).sort().reverse().map(d => ({ date: d, words: dateMap[d] }));
+  const res  = await fetch('/api/history');
+  const data = await res.json();
   const el   = document.getElementById('historyContent');
   if (!data.length) {
     el.innerHTML = '<p style="color:#9ca3af;font-size:0.85rem">Chưa có lịch sử học.</p>';
     return;
   }
-  const today = new Date().toLocaleDateString('en-CA');
+  const today = new Date().toLocaleDateString('en-CA'); // YYYY-MM-DD local time
   el.innerHTML = data.map(day => {
     const label = day.date === today ? 'Hôm nay' :
       new Date(day.date + 'T00:00:00').toLocaleDateString('vi-VN', { day: '2-digit', month: '2-digit', year: 'numeric' });
@@ -897,6 +1088,12 @@ document.getElementById('historyOverlay').addEventListener('click', e => {
 document.getElementById('settingsOverlay').addEventListener('click', e => {
   if (e.target === e.currentTarget) e.currentTarget.classList.add('hidden');
 });
+document.getElementById('btnCloseTopicPopup').addEventListener('click', () => {
+  document.getElementById('topicPopupOverlay').classList.add('hidden');
+});
+document.getElementById('topicPopupOverlay').addEventListener('click', e => {
+  if (e.target === e.currentTarget) e.currentTarget.classList.add('hidden');
+});
 
 document.getElementById('btnReset').addEventListener('click', async () => {
   if (!confirm('Xóa toàn bộ tiến độ offline (fav + known + lịch sử học)?\nHành động này không thể hoàn tác.')) return;
@@ -912,7 +1109,7 @@ document.getElementById('btnReset').addEventListener('click', async () => {
 async function loadCards() {
   extraNew = 0;
   deck = 'all'; topic = 'all'; cardFilter = 'all';
-  document.querySelectorAll('#deckSel button').forEach(b => b.classList.toggle('active', b.dataset.deck === 'all'));
+  buildDeckBar();
   document.getElementById('btnFilterUnknown').textContent = '📖 Tất cả';
   document.getElementById('btnFilterUnknown').classList.remove('active');
   document.getElementById('btnFilterUnknown').style.background = '';
@@ -961,13 +1158,7 @@ async function _fetchAndRender(n) {
   newServed = today_n + new_n;
   newIntroduced = today_n;
 
-  const b1n = allCards.filter(c => c.deck === 'B1').length;
-  const b2n = allCards.filter(c => c.deck === 'B2').length;
-  const c1n = allCards.filter(c => c.deck === 'C1').length;
-  document.querySelector('[data-deck="all"]').textContent = `All`;
-  document.querySelector('[data-deck="B1"]').textContent  = `B1 (${b1n})`;
-  document.querySelector('[data-deck="B2"]').textContent  = `B2 (${b2n})`;
-  document.querySelector('[data-deck="C1"]').textContent  = `C1 (${c1n})`;
+  buildDeckBar();
 
   document.getElementById('flashSection').innerHTML = `
     <div id="cardArea">
@@ -1036,24 +1227,95 @@ function getActive() {
   return base;
 }
 
+function buildDeckBar() {
+  const bar = document.getElementById('deckBar');
+  if (!bar) return;
+  bar.innerHTML = '';
+  const b1n = allCards ? allCards.filter(c => c.deck === 'B1').length : 0;
+  const b2n = allCards ? allCards.filter(c => c.deck === 'B2').length : 0;
+  const c1n = allCards ? allCards.filter(c => c.deck === 'C1').length : 0;
+  
+  const items = [
+    ['all', '🌐 Tất cả cấp độ', 'All'],
+    ['B1', `📗 Từ vựng B1 (${b1n})`, `B1 (${b1n})`],
+    ['B2', `📘 Từ vựng B2 (${b2n})`, `B2 (${b2n})`],
+    ['C1', `📙 Từ vựng C1 (${c1n})`, `C1 (${c1n})`],
+    ['fav', '★ Yêu thích', '★ Yêu thích']
+  ];
+  const activeItem = items.find(([val]) => val === deck) || items[0];
+
+  const trigger = document.createElement('button');
+  trigger.className = 'btn-topic-trigger';
+  trigger.innerHTML = `<span>🏷️ Cấp độ: <strong style="color:#059669">${activeItem[2]}</strong></span> <span style="font-size:0.75rem;opacity:0.6;margin-left:4px">▼</span>`;
+  trigger.onclick = () => {
+    document.querySelector('#topicPopupOverlay h2').textContent = '🏷️ Chọn Cấp độ / Bộ từ vựng';
+    buildDeckPopupList(items);
+    document.getElementById('topicPopupOverlay').classList.remove('hidden');
+  };
+  bar.appendChild(trigger);
+}
+
+function buildDeckPopupList(items) {
+  const list = document.getElementById('topicPopupList');
+  list.innerHTML = '';
+  items.forEach(([val, label]) => {
+    const btn = document.createElement('button');
+    btn.className = 'topic-popup-item' + (deck === val ? ' active' : '');
+    btn.innerHTML = `<span>${label}</span> <span class="tpi-check">${deck === val ? '✓' : ''}</span>`;
+    btn.onclick = () => {
+      if (deck !== val) {
+        deck = val;
+        if (mode !== 'cluster') topic = 'all';
+        buildDeckBar();
+        if (mode === 'cluster') { startClusters(); }
+        else { startSession(); }
+      }
+      document.getElementById('topicPopupOverlay').classList.add('hidden');
+    };
+    list.appendChild(btn);
+  });
+}
+
 function buildTopicBar() {
   const bar = document.getElementById('topicBar');
   const topics = [...new Set(sessionCards.map(c => c.topic).filter(Boolean))].sort();
   if (topics.length === 0) { bar.innerHTML = ''; return; }
 
   bar.innerHTML = '';
-  const all = document.createElement('button');
-  all.className = 'chip' + (topic === 'all' ? ' active' : '');
-  all.textContent = 'Tất cả';
-  all.onclick = () => { if (topic === 'all') return; topic = 'all'; buildTopicBar(); startSession(); };
-  bar.appendChild(all);
+  const trigger = document.createElement('button');
+  trigger.className = 'btn-topic-trigger';
+  const currentLabel = topic === 'all' ? 'Tất cả' : topic;
+  trigger.innerHTML = `<span>📁 Chủ đề: <strong style="color:#4f46e5">${currentLabel}</strong></span> <span style="font-size:0.75rem;opacity:0.6;margin-left:4px">▼</span>`;
+  trigger.onclick = () => {
+    document.querySelector('#topicPopupOverlay h2').textContent = '📁 Chọn chủ đề từ vựng';
+    buildTopicPopupList(topics);
+    document.getElementById('topicPopupOverlay').classList.remove('hidden');
+  };
+  bar.appendChild(trigger);
+}
+
+function buildTopicPopupList(topics) {
+  const list = document.getElementById('topicPopupList');
+  list.innerHTML = '';
+  
+  const allBtn = document.createElement('button');
+  allBtn.className = 'topic-popup-item' + (topic === 'all' ? ' active' : '');
+  allBtn.innerHTML = `<span>🌐 Tất cả chủ đề</span> <span class="tpi-check">${topic === 'all' ? '✓' : ''}</span>`;
+  allBtn.onclick = () => {
+    if (topic !== 'all') { topic = 'all'; buildTopicBar(); startSession(); }
+    document.getElementById('topicPopupOverlay').classList.add('hidden');
+  };
+  list.appendChild(allBtn);
 
   topics.forEach(t => {
-    const chip = document.createElement('button');
-    chip.className = 'chip' + (topic === t ? ' active' : '');
-    chip.textContent = t;
-    chip.onclick = () => { if (topic === t) return; topic = t; buildTopicBar(); startSession(); };
-    bar.appendChild(chip);
+    const btn = document.createElement('button');
+    btn.className = 'topic-popup-item' + (topic === t ? ' active' : '');
+    btn.innerHTML = `<span>📂 ${t}</span> <span class="tpi-check">${topic === t ? '✓' : ''}</span>`;
+    btn.onclick = () => {
+      if (topic !== t) { topic = t; buildTopicBar(); startSession(); }
+      document.getElementById('topicPopupOverlay').classList.add('hidden');
+    };
+    list.appendChild(btn);
   });
 }
 
@@ -1068,6 +1330,7 @@ function shuffle(arr) {
 
 function startSession() {
   sessionCards = getDeckCards();
+  buildDeckBar();
   buildTopicBar();
   const active = shuffle(getActive());
   flashCards = active;
@@ -1253,6 +1516,9 @@ function bindFlashEvents() {
 
 // ── QUIZ ─────────────────────────────────────────────────────────────────────
 function renderQuiz() {
+  // Don't render into quiz view if user is still on practice home
+  if (!document.getElementById('practiceHome').classList.contains('hidden')) return;
+
   if (quizCards.length === 0) {
     document.getElementById('quizArea').classList.add('hidden');
     document.getElementById('quizResultText').textContent = '';
@@ -1398,15 +1664,19 @@ function buildCqQuestions() {
 function startClusterQuiz() {
   cqQuestions = buildCqQuestions();
   cqIdx = 0; cqScore = 0;
-  document.getElementById('clusterArea').classList.add('hidden');
-  document.getElementById('clusterResult').classList.add('hidden');
+  document.getElementById('clusterPracticePane').classList.add('hidden');
   document.getElementById('clusterQuizArea').classList.remove('hidden');
   renderClusterQuiz();
 }
 
 function exitClusterQuiz() {
+  practiceSubMode = 'cluster_pane';
+  updatePracticeBackBar();
   document.getElementById('clusterQuizArea').classList.add('hidden');
-  startClusters();
+  document.getElementById('clusterPracticePane').classList.remove('hidden');
+  document.getElementById('progBarWrap').style.display = 'none';
+  document.getElementById('stats').style.display = 'none';
+  updateCqCounts();
 }
 
 function renderClusterQuiz() {
@@ -1607,15 +1877,44 @@ document.getElementById('btnFilterUnknown').addEventListener('click', () => {
 });
 document.getElementById('btnNext').addEventListener('click', () => { quizIdx++; renderQuiz(); });
 
-document.getElementById('deckSel').addEventListener('click', e => {
-  if (!e.target.dataset.deck) return;
-  if (deck === e.target.dataset.deck) return;
-  deck = e.target.dataset.deck;
-  topic = 'all';
-  document.querySelectorAll('#deckSel button').forEach(b => b.classList.toggle('active', b === e.target));
-  if (mode === 'cluster') { startClusters(); return; }
-  startSession();
-});
+function updatePracticeBackBar() {
+  const backBtn = document.getElementById('btnPracticeBack');
+  const controlsBar = document.getElementById('controlsBar');
+  const deckBar = document.getElementById('deckBar');
+  const topicBar = document.getElementById('topicBar');
+  const unknownBtn = document.getElementById('btnFilterUnknown');
+  if (!backBtn || !controlsBar) return;
+
+  if (mode !== 'quiz' || !practiceSubMode || practiceSubMode === 'home') {
+    backBtn.classList.add('hidden');
+    if (mode === 'flash') {
+      controlsBar.style.display = 'flex';
+      if (deckBar) deckBar.style.display = '';
+      if (topicBar) topicBar.style.display = '';
+      if (unknownBtn) unknownBtn.classList.remove('hidden');
+    } else if (mode === 'cluster') {
+      controlsBar.style.display = 'flex';
+      if (deckBar) deckBar.style.display = '';
+      if (topicBar) topicBar.style.display = '';
+      if (unknownBtn) unknownBtn.classList.add('hidden');
+    } else {
+      controlsBar.style.display = 'none';
+    }
+  } else if (practiceSubMode === 'flash') {
+    controlsBar.style.display = 'flex';
+    backBtn.classList.remove('hidden');
+    if (deckBar) deckBar.style.display = '';
+    if (topicBar) topicBar.style.display = '';
+    if (unknownBtn) unknownBtn.classList.add('hidden');
+  } else {
+    // cluster_pane or cluster_quiz
+    controlsBar.style.display = 'flex';
+    backBtn.classList.remove('hidden');
+    if (deckBar) deckBar.style.display = '';
+    if (topicBar) topicBar.style.display = '';
+    if (unknownBtn) unknownBtn.classList.add('hidden');
+  }
+}
 
 document.getElementById('modeSel').addEventListener('click', e => {
   if (!e.target.dataset.mode) return;
@@ -1625,10 +1924,99 @@ document.getElementById('modeSel').addEventListener('click', e => {
   document.getElementById('flashSection').classList.toggle('hidden', mode !== 'flash');
   document.getElementById('quizSection').classList.toggle('hidden', mode !== 'quiz');
   document.getElementById('clusterSection').classList.toggle('hidden', mode !== 'cluster');
-  document.getElementById('btnFilterUnknown').classList.toggle('hidden', mode === 'cluster');
-  if (mode === 'cluster') { activateClusters(); return; }
+  updatePracticeBackBar();
+  if (mode === 'cluster') {
+    document.getElementById('progBarWrap').style.display = '';
+    document.getElementById('stats').style.display = '';
+    activateClusters();
+    return;
+  }
+  if (mode === 'quiz') {
+    if (!practiceSubMode || practiceSubMode === 'home') {
+      showPracticeHome();
+    } else if (practiceSubMode === 'flash') {
+      document.getElementById('progBarWrap').style.display = '';
+      document.getElementById('stats').style.display = '';
+      buildDeckBar();
+      buildTopicBar();
+    } else if (practiceSubMode === 'cluster_pane') {
+      document.getElementById('progBarWrap').style.display = 'none';
+      document.getElementById('stats').style.display = 'none';
+      buildDeckBar();
+      buildClusterTypeBar();
+    } else {
+      document.getElementById('progBarWrap').style.display = '';
+      document.getElementById('stats').style.display = '';
+      buildDeckBar();
+      buildClusterTypeBar();
+    }
+    return;
+  }
+  // mode === 'flash'
+  document.getElementById('progBarWrap').style.display = '';
+  document.getElementById('stats').style.display = '';
   document.getElementById('topicBar').innerHTML = '';
   startSession();
+});
+
+function showPracticeHome() {
+  practiceSubMode = 'home';
+  updatePracticeBackBar();
+  document.getElementById('practiceHome').classList.remove('hidden');
+  document.getElementById('quizArea').classList.add('hidden');
+  document.getElementById('quizResult').classList.add('hidden');
+  document.getElementById('clusterPracticePane').classList.add('hidden');
+  document.getElementById('clusterQuizArea').classList.add('hidden');
+  document.getElementById('controlsBar').style.display = 'none';
+  document.getElementById('progBarWrap').style.display = 'none';
+  document.getElementById('stats').style.display = 'none';
+}
+
+document.getElementById('quizSection').addEventListener('click', e => {
+  // Practice landing cards
+  const optCard = e.target.closest('[data-practice]');
+  if (optCard) {
+    document.getElementById('practiceHome').classList.add('hidden');
+    if (optCard.dataset.practice === 'flash') {
+      practiceSubMode = 'flash';
+      updatePracticeBackBar();
+      document.getElementById('progBarWrap').style.display = '';
+      document.getElementById('stats').style.display = '';
+      buildDeckBar();
+      buildTopicBar();
+      document.getElementById('quizArea').classList.remove('hidden');
+      renderQuiz();
+    } else {
+      practiceSubMode = 'cluster_pane';
+      updatePracticeBackBar();
+      document.getElementById('progBarWrap').style.display = 'none';
+      document.getElementById('stats').style.display = 'none';
+      document.getElementById('clusterPracticePane').classList.remove('hidden');
+      ensureClusterData().then(() => {
+        buildDeckBar();
+        buildClusterTypeBar();
+        updateCqCounts();
+      });
+    }
+    return;
+  }
+  // Cluster scope picker
+  const cqFilterBtn = e.target.closest('[data-cqfilter]');
+  if (cqFilterBtn) {
+    practiceSubMode = 'cluster_quiz';
+    updatePracticeBackBar();
+    cqFilter = cqFilterBtn.dataset.cqfilter;
+    document.getElementById('progBarWrap').style.display = '';
+    document.getElementById('stats').style.display = '';
+    buildDeckBar();
+    buildClusterTypeBar();
+    startClusterQuiz();
+    return;
+  }
+  // Cluster quiz nav
+  if (e.target.id === 'cqBtnNext') { cqIdx++; renderClusterQuiz(); return; }
+  if (e.target.id === 'btnCqRetry') { cqIdx = 0; cqScore = 0; renderClusterQuiz(); return; }
+  if (e.target.id === 'btnExitClusterQuiz') { exitClusterQuiz(); return; }
 });
 
 // ── CLUSTER ──────────────────────────────────────────────────────────────────
@@ -1662,8 +2050,8 @@ async function ensureClusterData() {
 
 async function activateClusters() {
   document.getElementById('clusterCard').innerHTML = '<div class="loading">Đang tải clusters...</div>';
-  document.getElementById('clusterQuizArea').classList.add('hidden');
   await ensureClusterData();
+  buildDeckBar();
   buildClusterTypeBar();
   startClusters();
 }
@@ -1672,12 +2060,32 @@ function buildClusterTypeBar() {
   const bar = document.getElementById('topicBar');
   bar.innerHTML = '';
   const types = [...new Set(clusterData.map(c => c.type))];
-  [['all', 'Tất cả'], ...types.map(t => [t, TYPE_LABELS[t] || t])].forEach(([val, label]) => {
-    const chip = document.createElement('button');
-    chip.className = 'chip' + (clusterTypeFilter === val ? ' active' : '');
-    chip.textContent = label;
-    chip.onclick = () => { if (clusterTypeFilter === val) return; clusterTypeFilter = val; buildClusterTypeBar(); startClusters(); };
-    bar.appendChild(chip);
+  const items = [['all', 'Tất cả'], ...types.map(t => [t, TYPE_LABELS[t] || t])];
+  const activeItem = items.find(([val]) => val === clusterTypeFilter) || ['all', 'Tất cả'];
+
+  const trigger = document.createElement('button');
+  trigger.className = 'btn-topic-trigger';
+  trigger.innerHTML = `<span>📁 Loại cụm từ: <strong style="color:#7c3aed">${activeItem[1]}</strong></span> <span style="font-size:0.75rem;opacity:0.6;margin-left:4px">▼</span>`;
+  trigger.onclick = () => {
+    document.querySelector('#topicPopupOverlay h2').textContent = '📁 Chọn loại cụm từ';
+    buildClusterPopupList(items);
+    document.getElementById('topicPopupOverlay').classList.remove('hidden');
+  };
+  bar.appendChild(trigger);
+}
+
+function buildClusterPopupList(items) {
+  const list = document.getElementById('topicPopupList');
+  list.innerHTML = '';
+  items.forEach(([val, label]) => {
+    const btn = document.createElement('button');
+    btn.className = 'topic-popup-item' + (clusterTypeFilter === val ? ' active' : '');
+    btn.innerHTML = `<span>📂 ${label}</span> <span class="tpi-check">${clusterTypeFilter === val ? '✓' : ''}</span>`;
+    btn.onclick = () => {
+      if (clusterTypeFilter !== val) { clusterTypeFilter = val; buildClusterTypeBar(); startClusters(); }
+      document.getElementById('topicPopupOverlay').classList.add('hidden');
+    };
+    list.appendChild(btn);
   });
 }
 
@@ -1694,6 +2102,15 @@ function startClusters() {
   clusterIdx = 0;
   clusterRegFilter = 'all';
   renderCluster();
+}
+
+function updateCqCounts() {
+  const filtered = getFilteredClusters();
+  const nStudied = filtered.filter(c => c.introduced_date).length;
+  const nUnknown = filtered.filter(c => c.introduced_date && !c.known).length;
+  const nAll     = filtered.length;
+  [['cqCountStudied', nStudied], ['cqCountUnknown', nUnknown], ['cqCountAll', nAll]
+  ].forEach(([id, n]) => { const el = document.getElementById(id); if (el) el.textContent = n; });
 }
 
 function renderCluster() {
@@ -1842,15 +2259,8 @@ function buildBackHTML(c) {
     </div>`;
 }
 
-// Event delegation for entire cluster section
+// Event delegation for cluster browse section
 document.getElementById('clusterSection').addEventListener('click', e => {
-  // ── Cluster quiz nav (handled before anything else) ──
-  if (e.target.id === 'cqBtnNext') { cqIdx++; renderClusterQuiz(); return; }
-  if (e.target.id === 'btnCqRetry') { cqIdx = 0; cqScore = 0; renderClusterQuiz(); return; }
-  if (e.target.id === 'btnExitClusterQuiz') { exitClusterQuiz(); return; }
-  // Ignore all other clicks inside cluster quiz area (have own handlers)
-  if (e.target.closest('#clusterQuizArea')) return;
-
   const c = clusterCards[clusterIdx];
 
   // Prev / Next nav
@@ -1861,8 +2271,6 @@ document.getElementById('clusterSection').addEventListener('click', e => {
     clusterIdx++; renderCluster(); return;
   }
   if (e.target.id === 'btnClusterRestart') { startClusters(); return; }
-  const cqFilterBtn = e.target.closest('.cq-filter-btn');
-  if (cqFilterBtn) { cqFilter = cqFilterBtn.dataset.cqfilter; startClusterQuiz(); return; }
 
   if (!c) return;
 

@@ -1,4 +1,4 @@
-const CACHE_NAME = 'vocab-offline-1783411044';
+const CACHE_NAME = 'vocab-offline-1783442269';
 const ASSETS = [
   './',
   './index.html',
@@ -37,4 +37,3 @@ self.addEventListener('fetch', e => {
       .catch(() => caches.match(e.request))
   );
 });
-
