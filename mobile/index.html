@@ -307,6 +307,34 @@ h1 { font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; ga
   background: #f0fdf4; color: #15803d;
   padding: 2px 10px; border-radius: 20px;
 }
+.term-row {
+  display: inline-flex; align-items: baseline; justify-content: center;
+  gap: 8px; flex-wrap: wrap; margin: 4px 0 2px;
+}
+.pos-badge {
+  font-size: 0.95rem; font-weight: 500; font-style: italic;
+  color: #64748b; background: transparent;
+  border: none; padding: 0;
+  font-family: inherit;
+}
+.card-extra {
+  margin-top: 10px; display: flex; flex-direction: column; gap: 6px;
+  max-width: 90%; font-size: 0.8rem; text-align: left;
+}
+.extra-sec {
+  display: flex; align-items: baseline; gap: 6px; flex-wrap: wrap;
+}
+.extra-label {
+  font-weight: 700; color: #475569; font-size: 0.75rem;
+}
+.extra-tags {
+  display: inline-flex; gap: 4px; flex-wrap: wrap;
+}
+.extra-pill {
+  background: #f1f5f9; color: #334155; padding: 2px 8px; border-radius: 12px; font-size: 0.73rem; font-weight: 600; border: 1px solid #e2e8f0;
+}
+.syn-pill { background: #ecfdf5; color: #065f46; border-color: #a7f3d0; }
+.ant-pill { background: #fef2f2; color: #991b1b; border-color: #fecaca; }
 .pron-block { margin-top: 8px; display: inline-flex; flex-direction: column; gap: 3px; }
 .pron-row { display: flex; align-items: center; gap: 8px; font-size: 0.82rem; color: #6b7280; }
 .pron-flag { flex-shrink: 0; min-width: 3em; font-size: 0.7rem; font-weight: 700; color: #6b7280; letter-spacing: 0.03em; }
@@ -434,6 +462,7 @@ h1 { font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; ga
   .card-wrap { height: 420px; }
   .card-face { padding: 40px 60px; border-radius: 20px; }
   .en-term    { font-size: 2.2rem; }
+  .pos-badge  { font-size: 1.3rem; }
   .en-example { font-size: 1rem; }
   .vi-meaning { font-size: 1.9rem; }
   .vi-pron    { font-size: 0.95rem; }
@@ -464,22 +493,22 @@ h1 { font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; ga
   #clusterQuizArea { max-width: min(720px, calc(100vw - 48px)); margin: 0 auto; }
 
   /* cluster desktop */
-  .cluster-card { max-width: min(760px, calc(100vw - 48px)); border-radius: 24px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); border: 1px solid rgba(226,232,240,0.8); }
-  .cluster-nav  { max-width: min(760px, calc(100vw - 48px)); }
+  .cluster-card { max-width: min(600px, calc(100vw - 48px)); border-radius: 20px; box-shadow: 0 8px 24px rgba(0,0,0,0.07); border: 1px solid rgba(226,232,240,0.8); }
+  .cluster-nav  { max-width: min(600px, calc(100vw - 48px)); }
 
-  .cluster-card-front { padding: 48px 60px 36px; gap: 16px; min-height: 440px; height: auto; }
+  .cluster-card-front { padding: 32px 36px 24px; gap: 12px; min-height: 280px; height: auto; }
   .cluster-badges .cluster-type-tag,
-  .cluster-badges .cluster-level-tag { font-size: 0.82rem; padding: 4px 16px; border-radius: 30px; }
-  .cluster-name { font-size: 2.2rem; margin: 8px 0; letter-spacing: -0.02em; }
-  .cluster-front-words { gap: 10px; margin-top: 8px; }
+  .cluster-badges .cluster-level-tag { font-size: 0.78rem; padding: 3px 12px; border-radius: 20px; }
+  .cluster-name { font-size: 1.65rem; margin: 4px 0; letter-spacing: -0.02em; }
+  .cluster-front-words { gap: 8px; margin-top: 6px; }
   .cluster-front-words.two-col { display: grid; grid-template-columns: 1fr 1fr; }
-  .cluster-front-word { padding: 14px 20px; border-radius: 14px; background: #f8fafc; border: 1px solid #e2e8f0; transition: all 0.2s; }
+  .cluster-front-word { padding: 10px 14px; border-radius: 12px; background: #f8fafc; border: 1px solid #e2e8f0; transition: all 0.2s; }
   .cluster-front-word:hover { background: #f1f5f9; border-color: #cbd5e1; transform: translateY(-1px); }
-  .cfw-icon { font-size: 1.15rem; width: 1.8em; }
-  .cfw-term { font-size: 1.05rem; }
-  .cfw-vi-front { font-size: 0.85rem; }
-  .cfw-level { font-size: 0.72rem; padding: 3px 10px; border-radius: 12px; }
-  .cluster-flip-hint { font-size: 0.9rem; margin-top: 12px; }
+  .cfw-icon { font-size: 1.05rem; width: 1.6em; }
+  .cfw-term { font-size: 0.98rem; }
+  .cfw-vi-front { font-size: 0.82rem; }
+  .cfw-level { font-size: 0.7rem; padding: 2px 8px; border-radius: 10px; }
+  .cluster-flip-hint { font-size: 0.84rem; margin-top: 8px; }
   .cluster-state-icon { font-size: 1.25rem; }
   .cluster-fav-star { font-size: 1.6rem; }
 
@@ -838,8 +867,8 @@ h1 { font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; ga
     <div style="display:flex; gap:10px; flex-wrap:wrap; align-items:center; justify-content:center;">
       <div id="deckBar"></div>
       <div id="topicBar"></div>
+      <div id="stateBar"></div>
     </div>
-    <button class="btn-filter-state" id="btnFilterUnknown">📖 Tất cả</button>
   </div>
 
   <div class="progress-bar" id="progBarWrap"><div class="progress-fill" id="progFill" style="width:0%"></div></div>
@@ -930,21 +959,21 @@ h1 { font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; ga
         <div class="cq-practice-sub">Chọn phạm vi câu hỏi trắc nghiệm để rèn luyện phản xạ và củng cố cách vận dụng từ trong giao tiếp</div>
       </div>
       <div class="cq-practice-cards">
-        <button class="cq-card-btn cq-studied" data-cqfilter="studied">
-          <div class="cq-icon-box"><span class="cq-card-icon">📚</span></div>
-          <div class="cq-text-box">
-            <span class="cq-card-label">Đã học</span>
-            <span class="cq-card-desc">Củng cố phản xạ các cấu trúc đã ghi nhớ</span>
-          </div>
-          <span class="cq-card-count badge-emerald" id="cqCountStudied">–</span>
-        </button>
         <button class="cq-card-btn cq-unknown" data-cqfilter="unknown">
           <div class="cq-icon-box"><span class="cq-card-icon">⚡</span></div>
           <div class="cq-text-box">
-            <span class="cq-card-label">Chưa thuộc</span>
-            <span class="cq-card-desc">Tập trung cải thiện những cụm từ còn yếu</span>
+            <span class="cq-card-label">Cần ôn luyện</span>
+            <span class="cq-card-desc">Tập trung củng cố những cụm từ đang học nhưng chưa thuộc</span>
           </div>
           <span class="cq-card-count badge-amber" id="cqCountUnknown">–</span>
+        </button>
+        <button class="cq-card-btn cq-studied" data-cqfilter="known">
+          <div class="cq-icon-box"><span class="cq-card-icon">🎯</span></div>
+          <div class="cq-text-box">
+            <span class="cq-card-label">Đã thuộc</span>
+            <span class="cq-card-desc">Kiểm tra lại các cấu trúc đã ghi nhớ để chống quên</span>
+          </div>
+          <span class="cq-card-count badge-emerald" id="cqCountKnown">–</span>
         </button>
         <button class="cq-card-btn cq-all" data-cqfilter="all">
           <div class="cq-icon-box"><span class="cq-card-icon">🌐</span></div>
@@ -1011,7 +1040,7 @@ let dailyNew = parseInt(localStorage.getItem('vocabDailyNew') || '10');
 let extraNew = 0;
 let reviewCount = 0, newServed = 0, newIntroduced = 0;
 let flashCards = [], flashIdx = 0, flipped = false, knownCount = 0, unknownCount = 0;
-let quizCards  = [], quizIdx  = 0, quizScore = 0, quizType = 'vi_to_en';
+let quizCards  = [], quizIdx  = 0, quizScore = 0, quizWrong = 0, quizType = 'vi_to_en';
 
 // ── TTS ───────────────────────────────────────────────────────────────────────
 function speak(text, accent) {
@@ -1110,9 +1139,6 @@ async function loadCards() {
   extraNew = 0;
   deck = 'all'; topic = 'all'; cardFilter = 'all';
   buildDeckBar();
-  document.getElementById('btnFilterUnknown').textContent = '📖 Tất cả';
-  document.getElementById('btnFilterUnknown').classList.remove('active');
-  document.getElementById('btnFilterUnknown').style.background = '';
   await _fetchAndRender(dailyNew);
 }
 
@@ -1174,7 +1200,10 @@ async function _fetchAndRender(n) {
                   <div class="topic-tag hidden" id="topicTag"></div>
                   <div class="known-badge hidden" id="knownBadge">✅ Đã thuộc</div>
                 </div>
-                <div class="en-term" id="enTerm"></div>
+                <div class="term-row">
+                  <span class="en-term" id="enTerm"></span>
+                  <span class="pos-badge hidden" id="posBadge"></span>
+                </div>
                 <div class="pron-block" id="pronFront"></div>
                 <div class="en-example" id="enExample"></div>
                 <div class="flip-hint">👆 Tap để xem nghĩa</div>
@@ -1182,6 +1211,7 @@ async function _fetchAndRender(n) {
               <div class="card-face card-back">
                 <div class="vi-meaning" id="viMeaning"></div>
                 <div class="pron-block" id="pronBack"></div>
+                <div class="card-extra hidden" id="cardExtra"></div>
                 <div class="flip-hint">👆 Tap để lật lại · Nút bên dưới để tiếp tục</div>
               </div>
             </div>
@@ -1224,6 +1254,7 @@ function getActive() {
   let base = topic === 'all' ? sessionCards : sessionCards.filter(c => c.topic === topic);
   if (cardFilter === 'unknown') base = base.filter(c => !c.known);
   else if (cardFilter === 'new') base = base.filter(c => c.is_new);
+  else if (cardFilter === 'known') base = base.filter(c => c.known);
   return base;
 }
 
@@ -1231,28 +1262,46 @@ function buildDeckBar() {
   const bar = document.getElementById('deckBar');
   if (!bar) return;
   bar.innerHTML = '';
-  const b1n = allCards ? allCards.filter(c => c.deck === 'B1').length : 0;
-  const b2n = allCards ? allCards.filter(c => c.deck === 'B2').length : 0;
-  const c1n = allCards ? allCards.filter(c => c.deck === 'C1').length : 0;
+  const isClusterCtx = (mode === 'cluster') || (mode === 'quiz' && practiceSubMode && practiceSubMode.startsWith('cluster'));
 
-  const items = [
-    ['all', '🌐 Tất cả cấp độ', 'All'],
-    ['B1', `📗 Từ vựng B1 (${b1n})`, `B1 (${b1n})`],
-    ['B2', `📘 Từ vựng B2 (${b2n})`, `B2 (${b2n})`],
-    ['C1', `📙 Từ vựng C1 (${c1n})`, `C1 (${c1n})`],
-    ['fav', '★ Yêu thích', '★ Yêu thích']
-  ];
+  let items;
+  if (isClusterCtx) {
+    const cb1 = clusterData ? clusterData.filter(c => c.level === 'B1' || c.words.some(w => w.level === 'B1')).length : 0;
+    const cb2 = clusterData ? clusterData.filter(c => c.level === 'B2' || c.words.some(w => w.level === 'B2')).length : 0;
+    const cc1 = clusterData ? clusterData.filter(c => c.level === 'C1' || c.words.some(w => w.level === 'C1')).length : 0;
+    const cfav = clusterData ? clusterData.filter(c => c.fav).length : 0;
+    const call = clusterData ? clusterData.length : 0;
+    items = [
+      ['all', `🌐 All Levels (${call})`, 'All'],
+      ['B1', `📗 B1 Clusters (${cb1})`, `B1 (${cb1})`],
+      ['B2', `📘 B2 Clusters (${cb2})`, `B2 (${cb2})`],
+      ['C1', `📙 C1 Clusters (${cc1})`, `C1 (${cc1})`],
+      ['fav', `★ Favorites (${cfav})`, `★ (${cfav})`]
+    ];
+  } else {
+    const b1n = allCards ? allCards.filter(c => c.deck === 'B1').length : 0;
+    const b2n = allCards ? allCards.filter(c => c.deck === 'B2').length : 0;
+    const c1n = allCards ? allCards.filter(c => c.deck === 'C1').length : 0;
+    items = [
+      ['all', '🌐 All Levels', 'All'],
+      ['B1', `📗 B1 Vocab (${b1n})`, `B1 (${b1n})`],
+      ['B2', `📘 B2 Vocab (${b2n})`, `B2 (${b2n})`],
+      ['C1', `📙 C1 Vocab (${c1n})`, `C1 (${c1n})`],
+      ['fav', '★ Favorites', '★ Fav']
+    ];
+  }
   const activeItem = items.find(([val]) => val === deck) || items[0];
 
   const trigger = document.createElement('button');
   trigger.className = 'btn-topic-trigger';
-  trigger.innerHTML = `<span>🏷️ Cấp độ: <strong style="color:#059669">${activeItem[2]}</strong></span> <span style="font-size:0.75rem;opacity:0.6;margin-left:4px">▼</span>`;
+  trigger.innerHTML = `<span>🏷️ Level: <strong style="color:#059669">${activeItem[2]}</strong></span> <span style="font-size:0.75rem;opacity:0.6;margin-left:4px">▼</span>`;
   trigger.onclick = () => {
-    document.querySelector('#topicPopupOverlay h2').textContent = '🏷️ Chọn Cấp độ / Bộ từ vựng';
+    document.querySelector('#topicPopupOverlay h2').textContent = isClusterCtx ? '🏷️ Select Cluster Level' : '🏷️ Select Level / Deck';
     buildDeckPopupList(items);
     document.getElementById('topicPopupOverlay').classList.remove('hidden');
   };
   bar.appendChild(trigger);
+  buildStateBar();
 }
 
 function buildDeckPopupList(items) {
@@ -1267,8 +1316,17 @@ function buildDeckPopupList(items) {
         deck = val;
         if (mode !== 'cluster') topic = 'all';
         buildDeckBar();
-        if (mode === 'cluster') { startClusters(); }
-        else { startSession(); }
+        if (mode === 'cluster') {
+          startClusters();
+        } else if (mode === 'quiz' && practiceSubMode === 'cluster_pane') {
+          updateCqCounts();
+        } else if (mode === 'quiz' && practiceSubMode === 'cluster_quiz') {
+          cqIdx = 0; cqScore = 0; cqWrong = 0;
+          buildCqQuestions();
+          renderClusterQuiz();
+        } else {
+          startSession();
+        }
       }
       document.getElementById('topicPopupOverlay').classList.add('hidden');
     };
@@ -1284,10 +1342,10 @@ function buildTopicBar() {
   bar.innerHTML = '';
   const trigger = document.createElement('button');
   trigger.className = 'btn-topic-trigger';
-  const currentLabel = topic === 'all' ? 'Tất cả' : topic;
-  trigger.innerHTML = `<span>📁 Chủ đề: <strong style="color:#4f46e5">${currentLabel}</strong></span> <span style="font-size:0.75rem;opacity:0.6;margin-left:4px">▼</span>`;
+  const currentLabel = topic === 'all' ? 'All' : topic;
+  trigger.innerHTML = `<span>📁 Topic: <strong style="color:#4f46e5">${currentLabel}</strong></span> <span style="font-size:0.75rem;opacity:0.6;margin-left:4px">▼</span>`;
   trigger.onclick = () => {
-    document.querySelector('#topicPopupOverlay h2').textContent = '📁 Chọn chủ đề từ vựng';
+    document.querySelector('#topicPopupOverlay h2').textContent = '📁 Select Topic';
     buildTopicPopupList(topics);
     document.getElementById('topicPopupOverlay').classList.remove('hidden');
   };
@@ -1300,7 +1358,7 @@ function buildTopicPopupList(topics) {
 
   const allBtn = document.createElement('button');
   allBtn.className = 'topic-popup-item' + (topic === 'all' ? ' active' : '');
-  allBtn.innerHTML = `<span>🌐 Tất cả chủ đề</span> <span class="tpi-check">${topic === 'all' ? '✓' : ''}</span>`;
+  allBtn.innerHTML = `<span>🌐 All Topics</span> <span class="tpi-check">${topic === 'all' ? '✓' : ''}</span>`;
   allBtn.onclick = () => {
     if (topic !== 'all') { topic = 'all'; buildTopicBar(); startSession(); }
     document.getElementById('topicPopupOverlay').classList.add('hidden');
@@ -1313,6 +1371,50 @@ function buildTopicPopupList(topics) {
     btn.innerHTML = `<span>📂 ${t}</span> <span class="tpi-check">${topic === t ? '✓' : ''}</span>`;
     btn.onclick = () => {
       if (topic !== t) { topic = t; buildTopicBar(); startSession(); }
+      document.getElementById('topicPopupOverlay').classList.add('hidden');
+    };
+    list.appendChild(btn);
+  });
+}
+
+function buildStateBar() {
+  const bar = document.getElementById('stateBar');
+  if (!bar) return;
+  bar.innerHTML = '';
+  if (mode === 'cluster' || practiceSubMode === 'cluster_pane' || practiceSubMode === 'cluster_quiz' || (mode === 'quiz' && practiceSubMode === 'home')) return;
+
+  const items = [
+    ['all', '📖 All Statuses', 'All'],
+    ['unknown', '⚡ Review Needed', 'Review'],
+    ['new', '🆕 New Cards', 'New'],
+    ['known', '✅ Mastered', 'Mastered']
+  ];
+  const activeItem = items.find(([val]) => val === cardFilter) || items[0];
+
+  const trigger = document.createElement('button');
+  trigger.className = 'btn-topic-trigger';
+  trigger.innerHTML = `<span>⚡ Status: <strong style="color:#0284c7">${activeItem[2]}</strong></span> <span style="font-size:0.75rem;opacity:0.6;margin-left:4px">▼</span>`;
+  trigger.onclick = () => {
+    document.querySelector('#topicPopupOverlay h2').textContent = '⚡ Select Card Status';
+    buildStatePopupList(items);
+    document.getElementById('topicPopupOverlay').classList.remove('hidden');
+  };
+  bar.appendChild(trigger);
+}
+
+function buildStatePopupList(items) {
+  const list = document.getElementById('topicPopupList');
+  list.innerHTML = '';
+  items.forEach(([val, label]) => {
+    const btn = document.createElement('button');
+    btn.className = 'topic-popup-item' + (cardFilter === val ? ' active' : '');
+    btn.innerHTML = `<span>${label}</span> <span class="tpi-check">${cardFilter === val ? '✓' : ''}</span>`;
+    btn.onclick = () => {
+      if (cardFilter !== val) {
+        cardFilter = val;
+        buildStateBar();
+        startSession();
+      }
       document.getElementById('topicPopupOverlay').classList.add('hidden');
     };
     list.appendChild(btn);
@@ -1336,7 +1438,7 @@ function startSession() {
   flashCards = active;
   quizCards  = shuffle(getActive());
   flashIdx = 0; flipped = false; knownCount = 0; unknownCount = 0;
-  quizIdx  = 0; quizScore = 0;
+  quizIdx  = 0; quizScore = 0; quizWrong = 0;
   if (mode === 'flash') renderFlash();
   else renderQuiz();
 }
@@ -1410,6 +1512,32 @@ function renderFlash() {
   document.getElementById('enExample').textContent    = c.example;
   document.getElementById('viMeaning').textContent    = c.vi;
   document.getElementById('pronBack').innerHTML = pronHTML;
+  const posEl = document.getElementById('posBadge');
+  if (c.pos && c.pos !== 'phrase' && c.pos !== 'phr.') {
+    posEl.textContent = c.pos.startsWith('(') ? c.pos : `(${c.pos})`;
+    posEl.classList.remove('hidden');
+  } else {
+    posEl.classList.add('hidden');
+  }
+
+  const extraEl = document.getElementById('cardExtra');
+  let extraHtml = '';
+  if (c.collocations && c.collocations.length) {
+    extraHtml += `<div class="extra-sec"><span class="extra-label">💡 Collocations:</span> <span class="extra-tags">${c.collocations.map(col => `<span class="extra-pill">${col}</span>`).join('')}</span></div>`;
+  }
+  if (c.synonyms && c.synonyms.length) {
+    extraHtml += `<div class="extra-sec"><span class="extra-label">🔗 Đồng nghĩa:</span> <span class="extra-tags">${c.synonyms.map(s => `<span class="extra-pill syn-pill">${s}</span>`).join('')}</span></div>`;
+  }
+  if (c.antonyms && c.antonyms.length) {
+    extraHtml += `<div class="extra-sec"><span class="extra-label">↔ Trái nghĩa:</span> <span class="extra-tags">${c.antonyms.map(a => `<span class="extra-pill ant-pill">${a}</span>`).join('')}</span></div>`;
+  }
+  if (extraHtml) {
+    extraEl.innerHTML = extraHtml;
+    extraEl.classList.remove('hidden');
+  } else {
+    extraEl.classList.add('hidden');
+  }
+
   const topicTag = document.getElementById('topicTag');
   if (c.topic) { topicTag.textContent = c.topic; topicTag.classList.remove('hidden'); }
   else          { topicTag.classList.add('hidden'); }
@@ -1428,7 +1556,7 @@ function renderFlash() {
   document.getElementById('btnNavNext').disabled = (flashIdx >= flashCards.length - 1);
   updateProgress(flashIdx, flashCards.length);
   document.getElementById('stats').innerHTML =
-    `Thẻ ${flashIdx + 1}/${flashCards.length} &nbsp;·&nbsp; <span class="badge-know">✓ ${knownCount}</span> <span class="badge-unk">✗ ${unknownCount}</span> &nbsp;·&nbsp; Ôn: ${reviewCount} · Học mới: ${newIntroduced}/${newServed}`;
+    `Thẻ ${flashIdx + 1}/${flashCards.length} &nbsp;·&nbsp; <span class="badge-know">Nhớ: ${knownCount}</span> &nbsp;·&nbsp; <span class="badge-unk">Cần ôn: ${unknownCount}</span> &nbsp;·&nbsp; Ôn: ${reviewCount} · Học mới: ${newIntroduced}/${newServed}`;
 }
 
 function introduceCard(c) {
@@ -1601,7 +1729,7 @@ function renderQuiz() {
   document.getElementById('btnNext').classList.add('hidden');
   updateProgress(quizIdx, quizCards.length);
   document.getElementById('stats').innerHTML =
-    `Câu ${quizIdx + 1}/${quizCards.length} &nbsp;·&nbsp; <span class="badge-know">Đúng: ${quizScore}</span> &nbsp;·&nbsp; Học mới: ${newIntroduced}/${newServed}`;
+    `Câu ${quizIdx + 1}/${quizCards.length} &nbsp;·&nbsp; <span class="badge-know">Đúng: ${quizScore}</span> &nbsp;·&nbsp; <span class="badge-unk">Sai: ${quizWrong}</span>`;
 }
 
 function checkAnswer(btn) {
@@ -1610,35 +1738,50 @@ function checkAnswer(btn) {
     b.disabled = true;
     if (b.dataset.correct === '1') b.classList.add('correct');
   });
-  if (!correct) btn.classList.add('wrong');
-  else quizScore++;
+  if (!correct) {
+    btn.classList.add('wrong');
+    quizWrong++;
+  } else {
+    quizScore++;
+  }
+  document.getElementById('stats').innerHTML =
+    `Câu ${quizIdx + 1}/${quizCards.length} &nbsp;·&nbsp; <span class="badge-know">Đúng: ${quizScore}</span> &nbsp;·&nbsp; <span class="badge-unk">Sai: ${quizWrong}</span>`;
   // Show explanation: correct term + vi meaning + example
   const c = quizCards[quizIdx];
   const explainEl = document.getElementById('quizExplain');
-  explainEl.innerHTML =
-    `<strong>${c.term}</strong>: ${c.vi}` +
+  const posDisplay = (c.pos && c.pos !== 'phrase' && c.pos !== 'phr.') ? ` <em>(${c.pos})</em>` : '';
+  let exHtml = `<strong>${c.term}</strong>${posDisplay}: ${c.vi}` +
     (c.example ? `<br><em>"${c.example}"</em>` : '');
+  if (c.collocations && c.collocations.length) {
+    exHtml += `<div style="margin-top:6px;"><span class="extra-label">💡 Collocations:</span> ${c.collocations.map(col => `<span class="extra-pill">${col}</span>`).join(' ')}</div>`;
+  }
+  if (c.synonyms && c.synonyms.length) {
+    exHtml += `<div style="margin-top:4px;"><span class="extra-label">🔗 Đồng nghĩa:</span> ${c.synonyms.map(s => `<span class="extra-pill syn-pill">${s}</span>`).join(' ')}</div>`;
+  }
+  explainEl.innerHTML = exHtml;
   explainEl.classList.remove('hidden');
   document.getElementById('btnNext').classList.remove('hidden');
 }
 
 // ── CLUSTER QUIZ ─────────────────────────────────────────────────────────────
-let cqQuestions = [], cqIdx = 0, cqScore = 0;
+let cqQuestions = [], cqIdx = 0, cqScore = 0, cqWrong = 0;
 let cqSortSelected = [], cqSortAnswer = [];
-let cqFilter = 'studied'; // 'studied' | 'unknown' | 'all'
+let cqFilter = 'unknown'; // 'unknown' | 'known' | 'all'
 
 function buildCqQuestions() {
   let filtered = getFilteredClusters();
-  if (cqFilter === 'studied') filtered = filtered.filter(c => c.introduced_date);
-  else if (cqFilter === 'unknown') filtered = filtered.filter(c => c.introduced_date && !c.known);
+  if (cqFilter === 'unknown') filtered = filtered.filter(c => c.introduced_date && !c.known);
+  else if (cqFilter === 'known') filtered = filtered.filter(c => c.known);
+  if (!filtered.length) filtered = getFilteredClusters();
   const questions = [];
 
   // Quiz 3 — Situation Match (1 per cluster if words have situation + ≥2 words for options)
   filtered.forEach(c => {
-    const sitWords = c.words.filter(w => w.situation);
+    const sitWords = c.words.filter(w => w.situation || w.vi);
     if (!sitWords.length || c.words.length < 2) return;
     const w = sitWords[Math.floor(Math.random() * sitWords.length)];
-    questions.push({ type: 'situation', cluster: c, word: w });
+    const sitText = w.situation || `Nghĩa tiếng Việt: ${w.vi}`;
+    questions.push({ type: 'situation', cluster: c, word: { ...w, situation: sitText } });
   });
 
   // Quiz 4b — Timeline Sort (only clusters where every word has a unique register → single valid order)
@@ -1650,7 +1793,7 @@ function buildCqQuestions() {
   });
 
   // Quiz 5 — Odd One Out (cluster A with ≥3 words + any other cluster for 1 odd word)
-  const withEnough = filtered.filter(c => c.words.length >= 3);
+  const withEnough = filtered.filter(c => c.words.length >= 2);
   withEnough.forEach(cA => {
     const others = filtered.filter(c => c !== cA && c.words.length >= 1);
     if (!others.length) return;
@@ -1663,7 +1806,7 @@ function buildCqQuestions() {
 
 function startClusterQuiz() {
   cqQuestions = buildCqQuestions();
-  cqIdx = 0; cqScore = 0;
+  cqIdx = 0; cqScore = 0; cqWrong = 0;
   document.getElementById('clusterPracticePane').classList.add('hidden');
   document.getElementById('clusterQuizArea').classList.remove('hidden');
   renderClusterQuiz();
@@ -1684,8 +1827,8 @@ function renderClusterQuiz() {
   if (!cqQuestions.length) {
     area.classList.add('hidden');
     document.getElementById('cqResultText').textContent =
-      cqFilter === 'studied' ? 'Chưa học cluster nào. Hãy xem qua các clusters trước!' :
-      cqFilter === 'unknown' ? '🎉 Bạn đã thuộc hết clusters rồi!' :
+      cqFilter === 'unknown' ? '🎉 Bạn đã thuộc hết clusters rồi hoặc chưa học cluster nào!' :
+      cqFilter === 'known' ? 'Bạn chưa đánh dấu thuộc cluster nào. Hãy xem qua các clusters trước!' :
       'Không đủ dữ liệu để tạo câu hỏi.';
     result.classList.remove('hidden');
     return;
@@ -1709,7 +1852,7 @@ function renderClusterQuiz() {
   document.getElementById('cqTimeline').classList.add('hidden');
   updateProgress(cqIdx, cqQuestions.length);
   document.getElementById('stats').innerHTML =
-    `Cluster Quiz ${cqIdx + 1}/${cqQuestions.length} &nbsp;·&nbsp; <span class="badge-know">Đúng: ${cqScore}</span>`;
+    `Cluster Quiz ${cqIdx + 1}/${cqQuestions.length} &nbsp;·&nbsp; <span class="badge-know">Đúng: ${cqScore}</span> &nbsp;·&nbsp; <span class="badge-unk">Sai: ${cqWrong}</span>`;
 
   const q = cqQuestions[cqIdx];
   if (q.type === 'situation')   renderSituationQuiz(q);
@@ -1752,8 +1895,14 @@ function renderSituationQuiz(q) {
         b.disabled = true;
         if (b.dataset.correct === '1') b.classList.add('correct');
       });
-      if (!correct) btn.classList.add('wrong');
-      else cqScore++;
+      if (!correct) {
+        btn.classList.add('wrong');
+        cqWrong++;
+      } else {
+        cqScore++;
+      }
+      document.getElementById('stats').innerHTML =
+        `Cluster Quiz ${cqIdx + 1}/${cqQuestions.length} &nbsp;·&nbsp; <span class="badge-know">Đúng: ${cqScore}</span> &nbsp;·&nbsp; <span class="badge-unk">Sai: ${cqWrong}</span>`;
       // Only show notes for words from this cluster (not padding from other clusters)
       const parts = pool.filter(ow => clusterWordSet.has(ow) && ow.note)
         .map(ow => `<strong>${ow.term}</strong>: ${ow.note}`);
@@ -1803,6 +1952,9 @@ function renderTimelineSort(q) {
           else b.classList.add('correct-order');
         });
         if (allOk) cqScore++;
+        else cqWrong++;
+        document.getElementById('stats').innerHTML =
+          `Cluster Quiz ${cqIdx + 1}/${cqQuestions.length} &nbsp;·&nbsp; <span class="badge-know">Đúng: ${cqScore}</span> &nbsp;·&nbsp; <span class="badge-unk">Sai: ${cqWrong}</span>`;
         const lines = cqSortAnswer.map((t, i) => {
           const w2  = c.words.find(x => x.term === t);
           const cfg = REG_CONFIG[w2?.register] || {};
@@ -1846,8 +1998,14 @@ function renderOddOneOut(q) {
         b.disabled = true;
         if (b.dataset.correct === '1') b.classList.add('correct');
       });
-      if (!correct) btn.classList.add('wrong');
-      else cqScore++;
+      if (!correct) {
+        btn.classList.add('wrong');
+        cqWrong++;
+      } else {
+        cqScore++;
+      }
+      document.getElementById('stats').innerHTML =
+        `Cluster Quiz ${cqIdx + 1}/${cqQuestions.length} &nbsp;·&nbsp; <span class="badge-know">Đúng: ${cqScore}</span> &nbsp;·&nbsp; <span class="badge-unk">Sai: ${cqWrong}</span>`;
       const explainEl = document.getElementById('cqExplain');
       explainEl.innerHTML = `<strong>${wordB.term}</strong> thuộc nhóm "<em>${cB.name}</em>", không phải "${cA.name}"`;
       explainEl.classList.remove('hidden');
@@ -1858,21 +2016,6 @@ function renderOddOneOut(q) {
 }
 
 // ── EVENTS ───────────────────────────────────────────────────────────────────
-document.getElementById('btnFilterUnknown').addEventListener('click', () => {
-  if (mode === 'cluster') return;
-  cardFilter = cardFilter === 'all' ? 'unknown' : cardFilter === 'unknown' ? 'new' : 'all';
-  const btn = document.getElementById('btnFilterUnknown');
-  const STATE = {
-    all:     ['📖 Tất cả',      '',        false],
-    unknown: ['⚡ Chưa thuộc',  '',        true ],
-    new:     ['🆕 Từ mới',      '#0ea5e9', true ],
-  };
-  const [label, bg, active] = STATE[cardFilter];
-  btn.textContent = label;
-  btn.style.background = bg;
-  btn.classList.toggle('active', active);
-  startSession();
-});
 document.getElementById('btnNext').addEventListener('click', () => { quizIdx++; renderQuiz(); });
 
 function updatePracticeBackBar() {
@@ -1880,7 +2023,7 @@ function updatePracticeBackBar() {
   const controlsBar = document.getElementById('controlsBar');
   const deckBar = document.getElementById('deckBar');
   const topicBar = document.getElementById('topicBar');
-  const unknownBtn = document.getElementById('btnFilterUnknown');
+  const stateBar = document.getElementById('stateBar');
   const progBar = document.getElementById('progBarWrap');
   const stats = document.getElementById('stats');
   if (!backBtn || !controlsBar) return;
@@ -1894,13 +2037,13 @@ function updatePracticeBackBar() {
       controlsBar.style.display = 'flex';
       if (deckBar) deckBar.style.display = '';
       if (topicBar) topicBar.style.display = '';
-      if (unknownBtn) unknownBtn.classList.remove('hidden');
+      if (stateBar) stateBar.style.display = '';
       showProg();
     } else if (mode === 'cluster') {
       controlsBar.style.display = 'flex';
       if (deckBar) deckBar.style.display = '';
       if (topicBar) topicBar.style.display = '';
-      if (unknownBtn) unknownBtn.classList.add('hidden');
+      if (stateBar) stateBar.style.display = 'none';
       showProg();
     } else {
       // quiz/home
@@ -1912,14 +2055,14 @@ function updatePracticeBackBar() {
     backBtn.classList.remove('hidden');
     if (deckBar) deckBar.style.display = '';
     if (topicBar) topicBar.style.display = '';
-    if (unknownBtn) unknownBtn.classList.add('hidden');
+    if (stateBar) stateBar.style.display = '';
     showProg();
   } else if (practiceSubMode === 'cluster_pane') {
     controlsBar.style.display = 'flex';
     backBtn.classList.remove('hidden');
     if (deckBar) deckBar.style.display = '';
     if (topicBar) topicBar.style.display = '';
-    if (unknownBtn) unknownBtn.classList.add('hidden');
+    if (stateBar) stateBar.style.display = 'none';
     hideProg();
   } else {
     // cluster_quiz
@@ -1927,7 +2070,7 @@ function updatePracticeBackBar() {
     backBtn.classList.remove('hidden');
     if (deckBar) deckBar.style.display = '';
     if (topicBar) topicBar.style.display = '';
-    if (unknownBtn) unknownBtn.classList.add('hidden');
+    if (stateBar) stateBar.style.display = 'none';
     showProg();
   }
 }
@@ -1946,18 +2089,7 @@ document.getElementById('modeSel').addEventListener('click', e => {
     return;
   }
   if (mode === 'quiz') {
-    if (!practiceSubMode || practiceSubMode === 'home') {
-      showPracticeHome();
-    } else if (practiceSubMode === 'flash') {
-      buildDeckBar();
-      buildTopicBar();
-    } else if (practiceSubMode === 'cluster_pane') {
-      buildDeckBar();
-      buildClusterTypeBar();
-    } else {
-      buildDeckBar();
-      buildClusterTypeBar();
-    }
+    showPracticeHome();
     return;
   }
   // mode === 'flash'
@@ -1967,6 +2099,7 @@ document.getElementById('modeSel').addEventListener('click', e => {
 
 function showPracticeHome() {
   practiceSubMode = 'home';
+  buildDeckBar();
   updatePracticeBackBar();
   document.getElementById('practiceHome').classList.remove('hidden');
   document.getElementById('quizArea').classList.add('hidden');
@@ -1982,15 +2115,13 @@ document.getElementById('quizSection').addEventListener('click', e => {
     document.getElementById('practiceHome').classList.add('hidden');
     if (optCard.dataset.practice === 'flash') {
       practiceSubMode = 'flash';
-      updatePracticeBackBar();
-      buildDeckBar();
-      buildTopicBar();
       document.getElementById('quizArea').classList.remove('hidden');
-      renderQuiz();
+      updatePracticeBackBar();
+      startSession();
     } else {
       practiceSubMode = 'cluster_pane';
-      updatePracticeBackBar();
       document.getElementById('clusterPracticePane').classList.remove('hidden');
+      updatePracticeBackBar();
       ensureClusterData().then(() => {
         buildDeckBar();
         buildClusterTypeBar();
@@ -2005,9 +2136,11 @@ document.getElementById('quizSection').addEventListener('click', e => {
     practiceSubMode = 'cluster_quiz';
     updatePracticeBackBar();
     cqFilter = cqFilterBtn.dataset.cqfilter;
-    buildDeckBar();
-    buildClusterTypeBar();
-    startClusterQuiz();
+    ensureClusterData().then(() => {
+      buildDeckBar();
+      buildClusterTypeBar();
+      startClusterQuiz();
+    });
     return;
   }
   // Cluster quiz nav
@@ -2057,14 +2190,14 @@ function buildClusterTypeBar() {
   const bar = document.getElementById('topicBar');
   bar.innerHTML = '';
   const types = [...new Set(clusterData.map(c => c.type))];
-  const items = [['all', 'Tất cả'], ...types.map(t => [t, TYPE_LABELS[t] || t])];
-  const activeItem = items.find(([val]) => val === clusterTypeFilter) || ['all', 'Tất cả'];
+  const items = [['all', 'All'], ...types.map(t => [t, TYPE_LABELS[t] || t])];
+  const activeItem = items.find(([val]) => val === clusterTypeFilter) || ['all', 'All'];
 
   const trigger = document.createElement('button');
   trigger.className = 'btn-topic-trigger';
-  trigger.innerHTML = `<span>📁 Loại cụm từ: <strong style="color:#7c3aed">${activeItem[1]}</strong></span> <span style="font-size:0.75rem;opacity:0.6;margin-left:4px">▼</span>`;
+  trigger.innerHTML = `<span>📁 Type: <strong style="color:#7c3aed">${activeItem[1]}</strong></span> <span style="font-size:0.75rem;opacity:0.6;margin-left:4px">▼</span>`;
   trigger.onclick = () => {
-    document.querySelector('#topicPopupOverlay h2').textContent = '📁 Chọn loại cụm từ';
+    document.querySelector('#topicPopupOverlay h2').textContent = '📁 Select Cluster Type';
     buildClusterPopupList(items);
     document.getElementById('topicPopupOverlay').classList.remove('hidden');
   };
@@ -2095,7 +2228,13 @@ function getFilteredClusters() {
 }
 
 function startClusters() {
-  clusterCards = shuffle(getFilteredClusters());
+  const lvWeight = { 'B1': 1, 'B2': 2, 'C1': 3 };
+  clusterCards = getFilteredClusters().slice().sort((a, b) => {
+    const wa = lvWeight[a.level] || 9;
+    const wb = lvWeight[b.level] || 9;
+    if (wa !== wb) return wa - wb;
+    return (a.name || '').localeCompare(b.name || '');
+  });
   clusterIdx = 0;
   clusterRegFilter = 'all';
   renderCluster();
@@ -2103,10 +2242,10 @@ function startClusters() {
 
 function updateCqCounts() {
   const filtered = getFilteredClusters();
-  const nStudied = filtered.filter(c => c.introduced_date).length;
   const nUnknown = filtered.filter(c => c.introduced_date && !c.known).length;
+  const nKnown   = filtered.filter(c => c.known).length;
   const nAll     = filtered.length;
-  [['cqCountStudied', nStudied], ['cqCountUnknown', nUnknown], ['cqCountAll', nAll]
+  [['cqCountUnknown', nUnknown], ['cqCountKnown', nKnown], ['cqCountAll', nAll]
   ].forEach(([id, n]) => { const el = document.getElementById(id); if (el) el.textContent = n; });
 }
 

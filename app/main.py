@@ -18,7 +18,7 @@ else:
     BASE_DIR   = Path(__file__).parent.parent.resolve()
     app = Flask(__name__, template_folder="templates", static_folder="static")
 
-VOCAB_CSV  = BASE_DIR / "vocab.csv"
+VOCAB_JSON = BASE_DIR / "vocab.json"
 DB_PATH    = BASE_DIR / "progress.db"
 PORT       = 5100
 
@@ -48,39 +48,15 @@ def init_db():
 
 
 
-def parse_csv(path: Path) -> list[dict]:
-    # Columns: front | back | topic | level
-    cards = []
+def load_vocab(path: Path) -> list[dict]:
+    if not path.exists():
+        return []
     with open(path, encoding="utf-8") as f:
-        for line in f:
-            line = line.rstrip("\n")
-            if "\t" not in line:
-                continue
-            parts = line.split("\t")
-            front = parts[0].strip()
-            back  = parts[1].strip() if len(parts) > 1 else ""
-            topic = parts[2].strip() if len(parts) > 2 else ""
-            level = parts[3].strip() if len(parts) > 3 else ""
-
-            pipe_idx = back.find("|")
-            vi   = (back[:pipe_idx] if pipe_idx > -1 else back).strip()
-            pron = back[pipe_idx + 1:].strip() if pipe_idx > -1 else ""
-
-            m       = re.match(r"^(.*?)\s+(\(.*\))\s*$", front)
-            term    = m.group(1).strip() if m else front
-            example = m.group(2).strip() if m else ""
-
-            cards.append({
-                "key":     front,
-                "term":    term,
-                "example": example,
-                "vi":      vi,
-                "pron":    pron,
-                "topic":   topic,
-                "deck":    level,
-                "fav":     False,
-                "known":   False,
-            })
+        data = json.load(f)
+    cards = data.get("cards", [])
+    for c in cards:
+        c.setdefault("fav", False)
+        c.setdefault("known", False)
     return cards
 
 
@@ -123,7 +99,7 @@ def known_card():
 @app.route("/api/start-day", methods=["POST"])
 def start_day():
     n         = int(request.json.get("new", 10))
-    all_cards = parse_csv(VOCAB_CSV)
+    all_cards = load_vocab(VOCAB_JSON)
 
     today = date.today().isoformat()
 
@@ -188,7 +164,7 @@ def history():
             "SELECT key, introduced_date FROM progress "
             "WHERE introduced_date IS NOT NULL ORDER BY introduced_date DESC"
         ).fetchall()
-    card_map = {c["key"]: c["term"] for c in parse_csv(VOCAB_CSV)}
+    card_map = {c["key"]: c["term"] for c in load_vocab(VOCAB_JSON)}
     grouped  = {}
     for key, d in rows:
         if key not in card_map:

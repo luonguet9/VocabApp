@@ -8,7 +8,7 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).parent.resolve()
 SRC_HTML = BASE_DIR / "app" / "templates" / "index.html"
-VOCAB_CSV = BASE_DIR / "vocab.csv"
+VOCAB_JSON = BASE_DIR / "vocab.json"
 MOBILE_DIR = BASE_DIR / "mobile"
 MOBILE_DIR.mkdir(exist_ok=True)
 OUT_HTML = MOBILE_DIR / "index.html"
@@ -16,40 +16,15 @@ VOCAB_JS = MOBILE_DIR / "vocab.js"
 CLUSTERS_JSON = BASE_DIR / "clusters.json"
 CLUSTERS_JS = MOBILE_DIR / "clusters.js"
 
-def parse_csv(path: Path) -> list:
-    cards = []
+def load_vocab(path: Path) -> list:
     if not path.exists():
-        return cards
+        return []
     with open(path, encoding="utf-8") as f:
-        for line in f:
-            line = line.rstrip("\n")
-            if "\t" not in line:
-                continue
-            parts = line.split("\t")
-            front = parts[0].strip()
-            back  = parts[1].strip() if len(parts) > 1 else ""
-            topic = parts[2].strip() if len(parts) > 2 else ""
-            level = parts[3].strip() if len(parts) > 3 else ""
-
-            pipe_idx = back.find("|")
-            vi   = (back[:pipe_idx] if pipe_idx > -1 else back).strip()
-            pron = back[pipe_idx + 1:].strip() if pipe_idx > -1 else ""
-
-            m       = re.match(r"^(.*?)\s+(\(.*\))\s*$", front)
-            term    = m.group(1).strip() if m else front
-            example = m.group(2).strip() if m else ""
-
-            cards.append({
-                "key":     front,
-                "term":    term,
-                "example": example,
-                "vi":      vi,
-                "pron":    pron,
-                "topic":   topic,
-                "deck":    level,
-                "fav":     False,
-                "known":   False,
-            })
+        data = json.load(f)
+    cards = data.get("cards", [])
+    for c in cards:
+        c.setdefault("fav", False)
+        c.setdefault("known", False)
     return cards
 
 def main():
@@ -302,9 +277,9 @@ if ('serviceWorker' in navigator) {
         f.write(html)
     print(f"[OK] (1/4) Generated offline mobile app at {OUT_HTML}")
 
-    # Generate vocab.js from vocab.csv
-    cards = parse_csv(VOCAB_CSV)
-    js_content = f"// Auto-generated from vocab.csv\nconst VOCAB_DATA = {json.dumps(cards, ensure_ascii=False, indent=2)};\n"
+    # Generate vocab.js from vocab.json
+    cards = load_vocab(VOCAB_JSON)
+    js_content = f"// Auto-generated from vocab.json\nconst VOCAB_DATA = {json.dumps(cards, ensure_ascii=False, indent=2)};\n"
     with open(VOCAB_JS, "w", encoding="utf-8") as f:
         f.write(js_content)
     print(f"[OK] (2/4) Generated {VOCAB_JS} with {len(cards)} cards.")
