@@ -907,10 +907,10 @@ h1 { font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; ga
       <div class="quiz-q-text" id="quizQ"></div>
     </div>
     <div class="quiz-options" id="quizOpts"></div>
+    <div class="quiz-explain-box hidden" id="quizExplain"></div>
     <div class="quiz-next-wrap">
       <button class="btn btn-next hidden" id="btnNext">Câu tiếp →</button>
     </div>
-    <div class="quiz-explain-box hidden" id="quizExplain"></div>
   </div>
   <div id="quizResult" class="result-box hidden">
     <h2>🎯 Kết quả</h2>
@@ -968,10 +968,10 @@ h1 { font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; ga
       <div class="cq-timeline hidden" id="cqTimeline">
         <div class="cq-timeline-words" id="cqTimelineWords"></div>
       </div>
+      <div class="quiz-explain-box hidden" id="cqExplain"></div>
       <div class="quiz-next-wrap">
         <button class="btn btn-next hidden" id="cqBtnNext">Câu tiếp →</button>
       </div>
-      <div class="quiz-explain-box hidden" id="cqExplain"></div>
     </div>
     <div id="cqResult" class="result-box hidden">
       <h2>🎯 Kết quả</h2>
@@ -1234,7 +1234,7 @@ function buildDeckBar() {
   const b1n = allCards ? allCards.filter(c => c.deck === 'B1').length : 0;
   const b2n = allCards ? allCards.filter(c => c.deck === 'B2').length : 0;
   const c1n = allCards ? allCards.filter(c => c.deck === 'C1').length : 0;
-  
+
   const items = [
     ['all', '🌐 Tất cả cấp độ', 'All'],
     ['B1', `📗 Từ vựng B1 (${b1n})`, `B1 (${b1n})`],
@@ -1297,7 +1297,7 @@ function buildTopicBar() {
 function buildTopicPopupList(topics) {
   const list = document.getElementById('topicPopupList');
   list.innerHTML = '';
-  
+
   const allBtn = document.createElement('button');
   allBtn.className = 'topic-popup-item' + (topic === 'all' ? ' active' : '');
   allBtn.innerHTML = `<span>🌐 Tất cả chủ đề</span> <span class="tpi-check">${topic === 'all' ? '✓' : ''}</span>`;
@@ -1674,8 +1674,6 @@ function exitClusterQuiz() {
   updatePracticeBackBar();
   document.getElementById('clusterQuizArea').classList.add('hidden');
   document.getElementById('clusterPracticePane').classList.remove('hidden');
-  document.getElementById('progBarWrap').style.display = 'none';
-  document.getElementById('stats').style.display = 'none';
   updateCqCounts();
 }
 
@@ -1883,7 +1881,12 @@ function updatePracticeBackBar() {
   const deckBar = document.getElementById('deckBar');
   const topicBar = document.getElementById('topicBar');
   const unknownBtn = document.getElementById('btnFilterUnknown');
+  const progBar = document.getElementById('progBarWrap');
+  const stats = document.getElementById('stats');
   if (!backBtn || !controlsBar) return;
+
+  const showProg = () => { if (progBar) progBar.style.display = ''; if (stats) stats.style.display = ''; };
+  const hideProg = () => { if (progBar) progBar.style.display = 'none'; if (stats) stats.style.display = 'none'; };
 
   if (mode !== 'quiz' || !practiceSubMode || practiceSubMode === 'home') {
     backBtn.classList.add('hidden');
@@ -1892,13 +1895,17 @@ function updatePracticeBackBar() {
       if (deckBar) deckBar.style.display = '';
       if (topicBar) topicBar.style.display = '';
       if (unknownBtn) unknownBtn.classList.remove('hidden');
+      showProg();
     } else if (mode === 'cluster') {
       controlsBar.style.display = 'flex';
       if (deckBar) deckBar.style.display = '';
       if (topicBar) topicBar.style.display = '';
       if (unknownBtn) unknownBtn.classList.add('hidden');
+      showProg();
     } else {
+      // quiz/home
       controlsBar.style.display = 'none';
+      hideProg();
     }
   } else if (practiceSubMode === 'flash') {
     controlsBar.style.display = 'flex';
@@ -1906,13 +1913,22 @@ function updatePracticeBackBar() {
     if (deckBar) deckBar.style.display = '';
     if (topicBar) topicBar.style.display = '';
     if (unknownBtn) unknownBtn.classList.add('hidden');
-  } else {
-    // cluster_pane or cluster_quiz
+    showProg();
+  } else if (practiceSubMode === 'cluster_pane') {
     controlsBar.style.display = 'flex';
     backBtn.classList.remove('hidden');
     if (deckBar) deckBar.style.display = '';
     if (topicBar) topicBar.style.display = '';
     if (unknownBtn) unknownBtn.classList.add('hidden');
+    hideProg();
+  } else {
+    // cluster_quiz
+    controlsBar.style.display = 'flex';
+    backBtn.classList.remove('hidden');
+    if (deckBar) deckBar.style.display = '';
+    if (topicBar) topicBar.style.display = '';
+    if (unknownBtn) unknownBtn.classList.add('hidden');
+    showProg();
   }
 }
 
@@ -1926,8 +1942,6 @@ document.getElementById('modeSel').addEventListener('click', e => {
   document.getElementById('clusterSection').classList.toggle('hidden', mode !== 'cluster');
   updatePracticeBackBar();
   if (mode === 'cluster') {
-    document.getElementById('progBarWrap').style.display = '';
-    document.getElementById('stats').style.display = '';
     activateClusters();
     return;
   }
@@ -1935,26 +1949,18 @@ document.getElementById('modeSel').addEventListener('click', e => {
     if (!practiceSubMode || practiceSubMode === 'home') {
       showPracticeHome();
     } else if (practiceSubMode === 'flash') {
-      document.getElementById('progBarWrap').style.display = '';
-      document.getElementById('stats').style.display = '';
       buildDeckBar();
       buildTopicBar();
     } else if (practiceSubMode === 'cluster_pane') {
-      document.getElementById('progBarWrap').style.display = 'none';
-      document.getElementById('stats').style.display = 'none';
       buildDeckBar();
       buildClusterTypeBar();
     } else {
-      document.getElementById('progBarWrap').style.display = '';
-      document.getElementById('stats').style.display = '';
       buildDeckBar();
       buildClusterTypeBar();
     }
     return;
   }
   // mode === 'flash'
-  document.getElementById('progBarWrap').style.display = '';
-  document.getElementById('stats').style.display = '';
   document.getElementById('topicBar').innerHTML = '';
   startSession();
 });
@@ -1967,9 +1973,6 @@ function showPracticeHome() {
   document.getElementById('quizResult').classList.add('hidden');
   document.getElementById('clusterPracticePane').classList.add('hidden');
   document.getElementById('clusterQuizArea').classList.add('hidden');
-  document.getElementById('controlsBar').style.display = 'none';
-  document.getElementById('progBarWrap').style.display = 'none';
-  document.getElementById('stats').style.display = 'none';
 }
 
 document.getElementById('quizSection').addEventListener('click', e => {
@@ -1980,8 +1983,6 @@ document.getElementById('quizSection').addEventListener('click', e => {
     if (optCard.dataset.practice === 'flash') {
       practiceSubMode = 'flash';
       updatePracticeBackBar();
-      document.getElementById('progBarWrap').style.display = '';
-      document.getElementById('stats').style.display = '';
       buildDeckBar();
       buildTopicBar();
       document.getElementById('quizArea').classList.remove('hidden');
@@ -1989,8 +1990,6 @@ document.getElementById('quizSection').addEventListener('click', e => {
     } else {
       practiceSubMode = 'cluster_pane';
       updatePracticeBackBar();
-      document.getElementById('progBarWrap').style.display = 'none';
-      document.getElementById('stats').style.display = 'none';
       document.getElementById('clusterPracticePane').classList.remove('hidden');
       ensureClusterData().then(() => {
         buildDeckBar();
@@ -2006,8 +2005,6 @@ document.getElementById('quizSection').addEventListener('click', e => {
     practiceSubMode = 'cluster_quiz';
     updatePracticeBackBar();
     cqFilter = cqFilterBtn.dataset.cqfilter;
-    document.getElementById('progBarWrap').style.display = '';
-    document.getElementById('stats').style.display = '';
     buildDeckBar();
     buildClusterTypeBar();
     startClusterQuiz();
