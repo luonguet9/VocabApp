@@ -36,16 +36,18 @@ ENG/
 {
   "key": "term (example)",
   "term": "term",
+  "example": "(Example sentence)",
   "vi": "Vietnamese meaning",
-  "ipa_us": "/us-ipa/",
-  "ipa_uk": "/uk-ipa/",
-  "type": "n. / v. / adj.",
+  "pron": "🇺🇸 /us-ipa/ 🇬🇧 /uk-ipa/",
+  "pos": "n. / v. / adj.",
   "deck": "B1 | B2 | C1",
-  "topic": "IT & Software | Business | ...",
-  "ex_en": "Example sentence",
-  "ex_vi": "Dịch ví dụ"
+  "topic": "Tech | Business | ...",
+  "en_def": "English dictionary definition (for Hardcore error_detection quiz)"
 }
 ```
+
+### 1.5. Tools Directory
+- `tools/` contains Python helper scripts used to clean, validate, or fetch dictionary data for `vocab.json` (e.g., `fetch_real_defs.py`, `validate_html_js.py`).
 
 ### 2. `clusters.json` Schema
 Mỗi cụm chứa `id`, `name`, `type`, `level`, `desc`, và mảng `words` chứa các từ/cụm từ con trong chuyên đề.

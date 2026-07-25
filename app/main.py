@@ -135,7 +135,7 @@ def start_day():
             session.append(c)
             new_n += 1
 
-    return jsonify({"cards": session, "review": review_n,
+    return jsonify({"cards": session, "all_cards": all_cards, "review": review_n,
                     "today_introduced": today_n, "new": new_n})
 
 

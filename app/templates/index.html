@@ -419,6 +419,19 @@ h1 { font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; ga
 .quiz-term-en { font-weight: 700; font-size: 1.3rem; color: #1e293b; }
 .quiz-example-hint { font-size: 0.82rem; color: #64748b; margin-top: 6px; font-style: italic; }
 .quiz-cloze-text { font-size: 0.97rem; color: #1e293b; line-height: 1.6; }
+.quiz-en-def-text { font-size: 0.95rem; color: #334155; line-height: 1.6; font-style: italic; background: #f8fafc; padding: 12px 16px; border-left: 4px solid #6366f1; border-radius: 8px; margin-top: 6px; }
+.badge-tier { display: inline-block; padding: 2px 10px; border-radius: 12px; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; margin-right: 8px; letter-spacing: 0.03em; }
+.badge-auto { background: #e0e7ff; color: #4338ca; border: 1px solid #c7d2fe; }
+.badge-easy { background: #dcfce7; color: #15803d; border: 1px solid #86efac; }
+.badge-medium { background: #fef9c3; color: #a16207; border: 1px solid #fde047; }
+.badge-hard { background: #fee2e2; color: #b91c1c; border: 1px solid #fca5a5; }
+.badge-hardcore { background: linear-gradient(135deg, #7f1d1d 0%, #991b1b 100%); color: #ffffff; border: 1px solid #ef4444; box-shadow: 0 2px 8px rgba(185,28,28,0.3); }
+.difficulty-bar { display: flex; gap: 6px; flex-wrap: wrap; align-items: center; justify-content: center; margin: 0 auto 16px auto; padding: 6px 12px; background: #f8fafc; border: 1.5px solid #e2e8f0; border-radius: 20px; width: fit-content; max-width: 100%; }
+.diff-label { font-size: 0.8rem; font-weight: 700; color: #64748b; margin-right: 4px; }
+.diff-btn { padding: 4px 12px; border-radius: 14px; border: 1px solid transparent; background: transparent; font-size: 0.8rem; font-weight: 600; color: #475569; cursor: pointer; transition: all 0.2s cubic-bezier(0.16,1,0.3,1); }
+.diff-btn:hover { background: #e2e8f0; color: #1e293b; }
+.diff-btn.active { background: #ffffff; color: #4f46e5; border-color: #c7d2fe; font-weight: 700; box-shadow: 0 2px 6px rgba(79,70,229,0.12); }
+.diff-btn.diff-hardcore.active { background: linear-gradient(135deg, #7f1d1d 0%, #991b1b 100%); color: #ffffff; border-color: #ef4444; box-shadow: 0 2px 8px rgba(185,28,28,0.3); }
 .quiz-explain-box { background: #f0fdf4; border: 1px solid #86efac; border-radius: 16px; padding: 14px 18px; font-size: 0.88rem; color: #166534; margin: 12px 0; text-align: left; line-height: 1.6; box-shadow: 0 4px 12px rgba(22,101,52,0.05); }
 .cq-timeline-words { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-top: 10px; }
 .timeline-word { padding: 9px 18px; border-radius: 12px; border: 1.5px solid #e2e8f0; background: #fff; cursor: pointer; font-size: 0.9rem; font-weight: 600; transition: all 0.2s cubic-bezier(0.16,1,0.3,1); position: relative; box-shadow: 0 2px 4px rgba(0,0,0,0.02); }
@@ -864,6 +877,7 @@ h1 { font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; ga
       <div id="deckBar"></div>
       <div id="topicBar"></div>
       <div id="stateBar"></div>
+      <div id="diffPopupBar"></div>
     </div>
   </div>
 
@@ -1011,7 +1025,7 @@ h1 { font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; ga
 
 <script>
 // ── STATE ────────────────────────────────────────────────────────────────────
-let allCards = [], sessionCards = [];
+let allCards = [], sessionCards = [], dictionaryCards = [];
 let deck = 'all', mode = 'flash', topic = 'all', practiceSubMode = 'home';
 let cardFilter = 'all'; // 'all' | 'unknown' | 'new'
 let dailyNew = parseInt(localStorage.getItem('vocabDailyNew') || '10');
@@ -1142,6 +1156,7 @@ async function _fetchAndRender(n) {
   });
   const data  = await res.json();
   allCards      = data.cards;
+  dictionaryCards = data.all_cards || data.cards;
   reviewCount   = data.review;
   newServed     = data.today_introduced + data.new;
   newIntroduced = data.today_introduced;
@@ -1383,6 +1398,49 @@ function buildStatePopupList(items) {
   });
 }
 
+function buildDifficultyBar() {
+  const bar = document.getElementById('diffPopupBar');
+  if (!bar) return;
+  bar.innerHTML = '';
+  if (mode !== 'quiz' || !practiceSubMode || practiceSubMode === 'home' || practiceSubMode === 'cluster_pane') return;
+
+  const items = [
+    ['auto', '🎲 Auto', '#6366f1'],
+    ['easy', '🟢 Easy', '#16a34a'],
+    ['medium', '🟡 Medium', '#ca8a04'],
+    ['hard', '🔴 Hard', '#e11d48'],
+    ['hardcore', '🔥 Hardcore', '#9333ea']
+  ];
+  const activeItem = items.find(([val]) => val === currentDifficulty) || items[0];
+
+  const trigger = document.createElement('button');
+  trigger.className = 'btn-topic-trigger';
+  trigger.innerHTML = `<span>🎯 Difficulty: <strong style="color:${activeItem[2]}">${activeItem[1]}</strong></span> <span style="font-size:0.75rem;opacity:0.6;margin-left:4px">▼</span>`;
+  trigger.onclick = () => {
+    document.querySelector('#topicPopupOverlay h2').textContent = '🎯 Select Difficulty';
+    buildDifficultyPopupList(items);
+    document.getElementById('topicPopupOverlay').classList.remove('hidden');
+  };
+  bar.appendChild(trigger);
+}
+
+function buildDifficultyPopupList(items) {
+  const list = document.getElementById('topicPopupList');
+  list.innerHTML = '';
+  items.forEach(([val, label, color]) => {
+    const btn = document.createElement('button');
+    btn.className = 'topic-popup-item' + (currentDifficulty === val ? ' active' : '');
+    btn.innerHTML = `<span style="color:${color};font-weight:700">${label}</span> <span class="tpi-check" style="color:${color}">${currentDifficulty === val ? '✓' : ''}</span>`;
+    btn.onclick = () => {
+      if (currentDifficulty !== val) {
+        setDifficulty(val);
+      }
+      document.getElementById('topicPopupOverlay').classList.add('hidden');
+    };
+    list.appendChild(btn);
+  });
+}
+
 function shuffle(arr) {
   const a = [...arr];
   for (let i = a.length - 1; i > 0; i--) {
@@ -1604,9 +1662,122 @@ function bindFlashEvents() {
   });
 }
 
+// ── QUIZ DISTRACTOR & ADAPTIVE HELPER FUNCTIONS ──────────────────────────────
+let currentDifficulty = 'auto';
+
+function setDifficulty(mode) {
+  currentDifficulty = mode;
+  buildDifficultyBar();
+  if (typeof practiceSubMode !== 'undefined' && practiceSubMode === 'cluster_quiz') {
+    renderClusterQuiz();
+  } else {
+    renderQuiz();
+  }
+}
+
+function getSimilarity(s1, s2) {
+  if (!s1 || !s2) return 0;
+  s1 = s1.toLowerCase().trim(); s2 = s2.toLowerCase().trim();
+  if (s1 === s2) return 1;
+  const len1 = s1.length, len2 = s2.length;
+  const maxLen = Math.max(len1, len2);
+  if (maxLen === 0) return 1;
+  let matches = 0;
+  for (let i = 0; i < Math.min(len1, len2); i++) {
+    if (s1[i] === s2[i]) matches++;
+  }
+  return matches / maxLen;
+}
+
+function getCardTier(c) {
+  if (currentDifficulty !== 'auto') {
+    return currentDifficulty.toUpperCase();
+  }
+  if (c.known || c.deck === 'C1' || c.deck === 'B2') {
+    return Math.random() < 0.65 ? 'HARDCORE' : 'HARD';
+  }
+  const rand = Math.random();
+  if (rand < 0.15) return 'EASY';
+  if (rand < 0.65) return 'MEDIUM';
+  return 'HARD';
+}
+
+function getPoolCards() {
+  if (typeof dictionaryCards !== 'undefined' && dictionaryCards.length > 0) return dictionaryCards;
+  if (typeof VOCAB_DATA !== 'undefined' && VOCAB_DATA.length > 0) return VOCAB_DATA;
+  return allCards;
+}
+
+function getSmartDistractors(c, count, tier, type, targetString) {
+  const pool = getPoolCards();
+  const cPos = (c.pos || '').toLowerCase();
+  const isVerb = cPos.includes('v.');
+  const isNoun = cPos.includes('n.');
+  const isAdj  = cPos.includes('adj.');
+  const targetLower = targetString.toLowerCase().trim();
+
+  if (type === 'preposition') {
+    const preps = ['in', 'on', 'at', 'with', 'for', 'about', 'into', 'through', 'back', 'up', 'down', 'out', 'over', 'off', 'to', 'by', 'from'];
+    return shuffle(preps.filter(p => p !== targetLower)).slice(0, count).map(p => ({ term: p, vi: 'Giới từ: ' + p }));
+  }
+
+  let orthoTraps = [];
+  if (tier === 'HARD' || tier === 'HARDCORE') {
+    orthoTraps = pool.filter(x => {
+      if (x.key === c.key || x.term.toLowerCase() === targetLower) return false;
+      const xTerm = x.term.toLowerCase();
+      const sim = getSimilarity(xTerm, targetLower);
+      const prefixMatch = targetLower.length >= 4 && xTerm.startsWith(targetLower.slice(0, 3));
+      const suffixMatch = targetLower.length >= 5 && xTerm.endsWith(targetLower.slice(-4));
+      return sim >= 0.40 || prefixMatch || suffixMatch;
+    });
+    orthoTraps = shuffle(orthoTraps);
+
+    if (tier === 'HARDCORE' && orthoTraps.length < count && (type === 'cloze' || type === 'en_def')) {
+      const synVariants = [];
+      if (isVerb || !cPos) {
+        if (!targetLower.endsWith('ing')) synVariants.push({ term: targetLower + (targetLower.endsWith('e') ? 'd' : 'ed'), vi: 'Biến thể ngữ pháp của ' + c.term });
+        if (!targetLower.endsWith('tion')) synVariants.push({ term: targetLower + (targetLower.endsWith('e') ? 'ment' : 'ing'), vi: 'Biến thể danh từ/phân từ' });
+        if (targetLower.length > 4) synVariants.push({ term: 're' + targetLower, vi: 'Biến thể tiền tố re-' });
+      } else if (isNoun) {
+        synVariants.push({ term: targetLower + (targetLower.endsWith('s') ? 'es' : 's'), vi: 'Dạng số nhiều/phái sinh' });
+        if (targetLower.length > 5) synVariants.push({ term: targetLower.slice(0, -2) + 'ic', vi: 'Biến thể tính từ' });
+      }
+      synVariants.forEach(v => {
+        if (v.term !== targetLower && !orthoTraps.some(o => o.term.toLowerCase() === v.term)) {
+          orthoTraps.push(v);
+        }
+      });
+    }
+  }
+
+  const posAndLevelMatches = shuffle(pool.filter(x => {
+    if (x.key === c.key || x.term.toLowerCase() === targetLower) return false;
+    const xPos = (x.pos || '').toLowerCase();
+    const posMatch = (isVerb && xPos.includes('v.')) || (isNoun && xPos.includes('n.')) || (isAdj && xPos.includes('adj.')) || (!isVerb && !isNoun && !isAdj);
+    const levelMatch = (tier === 'HARD' || tier === 'HARDCORE') ? (x.deck === 'C1' || x.deck === 'B2') : true;
+    return posMatch && levelMatch && x.topic === c.topic;
+  }));
+
+  const topicMatches = shuffle(pool.filter(x => x.key !== c.key && x.term.toLowerCase() !== targetLower && x.topic === c.topic));
+  const generalMatches = shuffle(pool.filter(x => x.key !== c.key && x.term.toLowerCase() !== targetLower));
+
+  const combined = [];
+  const seen = new Set([targetLower, c.term.toLowerCase()]);
+  
+  [...orthoTraps, ...posAndLevelMatches, ...topicMatches, ...generalMatches].forEach(item => {
+    const itemTermLower = item.term.toLowerCase();
+    if (!seen.has(itemTermLower) && combined.length < count) {
+      seen.add(itemTermLower);
+      combined.push(item);
+    }
+  });
+
+  return combined;
+}
+
 // ── QUIZ ─────────────────────────────────────────────────────────────────────
 function renderQuiz() {
-  // Don't render into quiz view if user is still on practice home
   if (!document.getElementById('practiceHome').classList.contains('hidden')) return;
 
   if (quizCards.length === 0) {
@@ -1634,25 +1805,71 @@ function renderQuiz() {
   const c = quizCards[quizIdx];
   introduceCard(c);
 
-  // Randomly pick quiz type for this question
+  const tier = getCardTier(c);
   const ex = c.example || '';
-  const types = ['vi_to_en', 'en_to_vi'];
-  if (ex && ex.toLowerCase().includes(c.term.toLowerCase())) types.push('cloze');
-  quizType = types[Math.floor(Math.random() * types.length)];
+  const exHasTerm = ex && ex.toLowerCase().includes(c.term.toLowerCase());
 
-  const sameTopic = shuffle(allCards.filter(x => x !== c && x.topic === c.topic));
-  const others    = shuffle(allCards.filter(x => x !== c && x.topic !== c.topic));
-  const wrong     = [...sameTopic, ...others].slice(0, 3);
-  const opts   = shuffle([c, ...wrong]);
-  const optsEl = document.getElementById('quizOpts');
+  const prepsList = ['in', 'on', 'at', 'with', 'for', 'about', 'into', 'through', 'back', 'up', 'down', 'out', 'over', 'off', 'to', 'by', 'from'];
+  let foundPrep = null;
+  if (exHasTerm) {
+    const words = ex.replace(/[.,!?()]/g, '').split(/\s+/);
+    const termIdx = words.findIndex(w => w.toLowerCase() === c.term.toLowerCase());
+    if (termIdx !== -1 && termIdx + 1 < words.length && prepsList.includes(words[termIdx + 1].toLowerCase())) {
+      foundPrep = words[termIdx + 1].toLowerCase();
+    }
+  }
+
+  const hasSyns = c.synonyms && c.synonyms.length > 0;
+
+  let candidateTypes = ['vi_to_en', 'en_to_vi'];
+  if (tier === 'EASY') {
+    candidateTypes = ['vi_to_en', 'en_to_vi'];
+  } else if (tier === 'MEDIUM') {
+    candidateTypes = [];
+    if (exHasTerm) candidateTypes.push('cloze');
+    if (foundPrep) candidateTypes.push('preposition');
+    candidateTypes.push('vi_to_en');
+    if (candidateTypes.length === 0) candidateTypes = ['vi_to_en', 'en_to_vi'];
+  } else if (tier === 'HARD') {
+    candidateTypes = [];
+    if (c.en_def) candidateTypes.push('en_def');
+    if (exHasTerm) candidateTypes.push('cloze');
+    if (hasSyns && exHasTerm) candidateTypes.push('synonym_match');
+    if (candidateTypes.length === 0) candidateTypes = ['vi_to_en', 'en_to_vi'];
+  } else { // HARDCORE - Academic / Hardcore Mastery!
+    candidateTypes = [];
+    if (c.en_def) {
+      candidateTypes.push('en_def');
+      candidateTypes.push('error_detection');
+    }
+    if (exHasTerm) candidateTypes.push('cloze');
+    if (hasSyns && exHasTerm) candidateTypes.push('synonym_match');
+    if (candidateTypes.length === 0) candidateTypes = ['vi_to_en', 'en_to_vi'];
+  }
+
+  quizType = candidateTypes[Math.floor(Math.random() * candidateTypes.length)];
+
+  const optsEl  = document.getElementById('quizOpts');
   const labelEl = document.getElementById('quizQLabel');
   const qEl     = document.getElementById('quizQ');
   optsEl.innerHTML = '';
   document.getElementById('quizExplain').classList.add('hidden');
 
+  const tierBadgeMap = {
+    'EASY': '<span class="badge-tier badge-easy" style="margin-left:4px">🟢 Easy</span>',
+    'MEDIUM': '<span class="badge-tier badge-medium" style="margin-left:4px">🟡 Medium</span>',
+    'HARD': '<span class="badge-tier badge-hard" style="margin-left:4px">🔴 Hard</span>',
+    'HARDCORE': '<span class="badge-tier badge-hardcore" style="margin-left:4px">🔥 Hardcore</span>'
+  };
+  const diffBadgeHtml = tierBadgeMap[tier] || tierBadgeMap['MEDIUM'];
+
+  let opts = [];
+
   if (quizType === 'vi_to_en') {
-    labelEl.textContent = 'Chọn từ tiếng Anh đúng nghĩa:';
-    qEl.textContent = c.vi.split('\u2014')[0].trim();
+    labelEl.innerHTML = 'Chọn từ tiếng Anh đúng nghĩa:';
+    qEl.textContent = c.vi.split('—')[0].trim();
+    const wrong = getSmartDistractors(c, 3, tier, quizType, c.term);
+    opts = shuffle([c, ...wrong]);
     opts.forEach(opt => {
       const btn = document.createElement('button');
       btn.className = 'quiz-opt';
@@ -1662,22 +1879,112 @@ function renderQuiz() {
       optsEl.appendChild(btn);
     });
   } else if (quizType === 'en_to_vi') {
-    labelEl.textContent = 'Chọn nghĩa tiếng Việt đúng:';
+    labelEl.innerHTML = 'Chọn nghĩa tiếng Việt đúng:';
     qEl.innerHTML = `<span class="quiz-term-en">${c.term}</span>` +
       (ex ? `<div class="quiz-example-hint">"${ex}"</div>` : '');
+    const wrong = getSmartDistractors(c, 3, tier, quizType, c.term);
+    opts = shuffle([c, ...wrong]);
     opts.forEach(opt => {
       const btn = document.createElement('button');
       btn.className = 'quiz-opt';
-      btn.textContent = opt.vi.split('|')[0].split('\u2014')[0].trim();
+      btn.textContent = opt.vi.split('|')[0].split('—')[0].trim();
       if (opt === c) btn.dataset.correct = '1';
       btn.addEventListener('click', () => checkAnswer(btn));
       optsEl.appendChild(btn);
     });
-  } else { // cloze
-    labelEl.textContent = 'Điền từ thích hợp vào chỗ trống:';
+  } else if (quizType === 'cloze') {
+    labelEl.innerHTML = 'Điền từ đúng vào chỗ trống trong câu ví dụ:';
     const regex = new RegExp(c.term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi');
     const blanked = ex.replace(regex, '___');
     qEl.innerHTML = `<em class="quiz-cloze-text">"${blanked}"</em>`;
+    const wrong = getSmartDistractors(c, 3, tier, quizType, c.term);
+    opts = shuffle([c, ...wrong]);
+    opts.forEach(opt => {
+      const btn = document.createElement('button');
+      btn.className = 'quiz-opt';
+      btn.textContent = opt.term;
+      if (opt === c) btn.dataset.correct = '1';
+      btn.addEventListener('click', () => checkAnswer(btn));
+      optsEl.appendChild(btn);
+    });
+  } else if (quizType === 'preposition' && foundPrep) {
+    labelEl.innerHTML = 'Collocation — Điền giới từ đi kèm chính xác:';
+    const regex = new RegExp('\\b' + c.term + '\\s+' + foundPrep + '\\b', 'gi');
+    const blanked = ex.replace(regex, `${c.term} ___`);
+    qEl.innerHTML = `<em class="quiz-cloze-text">"${blanked}"</em>`;
+    const wrongPreps = getSmartDistractors(c, 3, tier, 'preposition', foundPrep);
+    const correctPrepObj = { term: foundPrep, vi: 'Giới từ: ' + foundPrep };
+    opts = shuffle([correctPrepObj, ...wrongPreps]);
+    opts.forEach(opt => {
+      const btn = document.createElement('button');
+      btn.className = 'quiz-opt';
+      btn.textContent = opt.term;
+      if (opt.term.toLowerCase() === foundPrep.toLowerCase()) btn.dataset.correct = '1';
+      btn.addEventListener('click', () => checkAnswer(btn));
+      optsEl.appendChild(btn);
+    });
+  } else if (quizType === 'en_def') {
+    labelEl.innerHTML = 'Định nghĩa Anh-Anh — Chọn từ chính xác:';
+    qEl.innerHTML = `<div class="quiz-en-def-text">📖 "${c.en_def}"</div>`;
+    const wrong = getSmartDistractors(c, 3, tier, quizType, c.term);
+    opts = shuffle([c, ...wrong]);
+    opts.forEach(opt => {
+      const btn = document.createElement('button');
+      btn.className = 'quiz-opt';
+      btn.textContent = opt.term;
+      if (opt === c) btn.dataset.correct = '1';
+      btn.addEventListener('click', () => checkAnswer(btn));
+      optsEl.appendChild(btn);
+    });
+  } else if (quizType === 'synonym_match' && hasSyns) {
+    labelEl.innerHTML = 'Tìm từ ĐỒNG NGHĨA / thay thế cho từ được gạch chân:';
+    const regex = new RegExp(c.term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi');
+    const highlighted = ex.replace(regex, `<u><b>${c.term}</b></u>`);
+    qEl.innerHTML = `<em class="quiz-cloze-text">"${highlighted}"</em>`;
+    const targetSyn = c.synonyms[Math.floor(Math.random() * c.synonyms.length)];
+    const correctSynObj = { term: targetSyn, vi: 'Đồng nghĩa của ' + c.term };
+    const wrong = getSmartDistractors(c, 3, tier, 'synonym_match', targetSyn);
+    opts = shuffle([correctSynObj, ...wrong]);
+    opts.forEach(opt => {
+      const btn = document.createElement('button');
+      btn.className = 'quiz-opt';
+      btn.textContent = opt.term;
+      if (opt === correctSynObj) btn.dataset.correct = '1';
+      btn.addEventListener('click', () => checkAnswer(btn));
+      optsEl.appendChild(btn);
+    });
+  } else if (quizType === 'error_detection') {
+    labelEl.innerHTML = `Phát hiện định nghĩa chuyên ngành chính xác cho từ <strong style="color:#6366f1">${c.term}</strong> (${c.pos || 'general'}):`;
+    qEl.innerHTML = `<div style="font-size:0.95rem;color:#334155;margin-top:4px;">Phân biệt sắc thái ngữ nghĩa thuộc chủ đề <b>${c.topic}</b>. Chọn định nghĩa Anh-Anh chuẩn xác nhất:</div>`;
+    const pool = getPoolCards();
+    let sameTopicOrPos = shuffle(pool.filter(x => x.key !== c.key && x.en_def && (x.topic === c.topic || x.pos === c.pos)));
+    if (sameTopicOrPos.length < 3) {
+      const extra = shuffle(pool.filter(x => x.key !== c.key && x.en_def && !sameTopicOrPos.includes(x)));
+      sameTopicOrPos = [...sameTopicOrPos, ...extra];
+    }
+    if (sameTopicOrPos.length < 3) {
+      const extraAny = shuffle(pool.filter(x => x.key !== c.key && !sameTopicOrPos.includes(x)));
+      sameTopicOrPos = [...sameTopicOrPos, ...extraAny];
+    }
+    const wrong = sameTopicOrPos.slice(0, 3).map(x => ({ term: x.en_def || x.vi, isDef: true, orig: x }));
+    const correctObj = { term: c.en_def || c.vi, isDef: true, orig: c };
+    opts = shuffle([correctObj, ...wrong]);
+    opts.forEach(opt => {
+      const btn = document.createElement('button');
+      btn.className = 'quiz-opt';
+      btn.style.textAlign = 'left';
+      btn.style.fontSize = '0.86rem';
+      btn.style.padding = '12px 14px';
+      btn.textContent = opt.term;
+      if (opt === correctObj) btn.dataset.correct = '1';
+      btn.addEventListener('click', () => checkAnswer(btn));
+      optsEl.appendChild(btn);
+    });
+  } else {
+    labelEl.innerHTML = 'Chọn từ tiếng Anh đúng nghĩa:';
+    qEl.textContent = c.vi.split('—')[0].trim();
+    const wrong = getSmartDistractors(c, 3, tier, 'vi_to_en', c.term);
+    opts = shuffle([c, ...wrong]);
     opts.forEach(opt => {
       const btn = document.createElement('button');
       btn.className = 'quiz-opt';
@@ -1691,7 +1998,7 @@ function renderQuiz() {
   document.getElementById('btnNext').classList.add('hidden');
   updateProgress(quizIdx, quizCards.length);
   document.getElementById('stats').innerHTML =
-    `Câu ${quizIdx + 1}/${quizCards.length} &nbsp;·&nbsp; <span class="badge-know">Đúng: ${quizScore}</span> &nbsp;·&nbsp; <span class="badge-unk">Sai: ${quizWrong}</span>`;
+    `Câu ${quizIdx + 1}/${quizCards.length} &nbsp;·&nbsp; <span class="badge-know">Đúng: ${quizScore}</span> &nbsp;·&nbsp; <span class="badge-unk">Sai: ${quizWrong}</span> &nbsp;·&nbsp; ${diffBadgeHtml}`;
 }
 
 function checkAnswer(btn) {
@@ -1708,11 +2015,11 @@ function checkAnswer(btn) {
   }
   document.getElementById('stats').innerHTML =
     `Câu ${quizIdx + 1}/${quizCards.length} &nbsp;·&nbsp; <span class="badge-know">Đúng: ${quizScore}</span> &nbsp;·&nbsp; <span class="badge-unk">Sai: ${quizWrong}</span>`;
-  // Show explanation: correct term + vi meaning + example
   const c = quizCards[quizIdx];
   const explainEl = document.getElementById('quizExplain');
   const posDisplay = (c.pos && c.pos !== 'phrase' && c.pos !== 'phr.') ? ` <em>(${c.pos})</em>` : '';
   let exHtml = `<strong>${c.term}</strong>${posDisplay}: ${c.vi}` +
+    (c.en_def ? `<br><span style="color:#475569;font-size:0.84rem;">📖 ${c.en_def}</span>` : '') +
     (c.example ? `<br><em>"${c.example}"</em>` : '');
   if (c.collocations && c.collocations.length) {
     exHtml += `<div style="margin-top:6px;"><span class="extra-label">💡 Collocations:</span> ${c.collocations.map(col => `<span class="extra-pill">${col}</span>`).join(' ')}</div>`;
@@ -1813,8 +2120,16 @@ function renderClusterQuiz() {
   document.getElementById('cqOpts').innerHTML = '';
   document.getElementById('cqTimeline').classList.add('hidden');
   updateProgress(cqIdx, cqQuestions.length);
+  const diffMap = {
+    'auto': '<span class="badge-tier badge-auto" style="margin-left:4px">🎲 Auto</span>',
+    'easy': '<span class="badge-tier badge-easy" style="margin-left:4px">🟢 Easy</span>',
+    'medium': '<span class="badge-tier badge-medium" style="margin-left:4px">🟡 Medium</span>',
+    'hard': '<span class="badge-tier badge-hard" style="margin-left:4px">🔴 Hard</span>',
+    'hardcore': '<span class="badge-tier badge-hardcore" style="margin-left:4px">🔥 Hardcore</span>'
+  };
+  const diffBadgeHtml = diffMap[currentDifficulty] || diffMap['auto'];
   document.getElementById('stats').innerHTML =
-    `Cluster Quiz ${cqIdx + 1}/${cqQuestions.length} &nbsp;·&nbsp; <span class="badge-know">Đúng: ${cqScore}</span> &nbsp;·&nbsp; <span class="badge-unk">Sai: ${cqWrong}</span>`;
+    `Cluster Quiz ${cqIdx + 1}/${cqQuestions.length} &nbsp;·&nbsp; <span class="badge-know">Đúng: ${cqScore}</span> &nbsp;·&nbsp; <span class="badge-unk">Sai: ${cqWrong}</span> &nbsp;·&nbsp; ${diffBadgeHtml}`;
 
   const q = cqQuestions[cqIdx];
   if (q.type === 'situation')   renderSituationQuiz(q);
@@ -1986,6 +2301,7 @@ function updatePracticeBackBar() {
   const deckBar = document.getElementById('deckBar');
   const topicBar = document.getElementById('topicBar');
   const stateBar = document.getElementById('stateBar');
+  const diffPopupBar = document.getElementById('diffPopupBar');
   const progBar = document.getElementById('progBarWrap');
   const stats = document.getElementById('stats');
   if (!backBtn || !controlsBar) return;
@@ -2000,16 +2316,19 @@ function updatePracticeBackBar() {
       if (deckBar) deckBar.style.display = '';
       if (topicBar) topicBar.style.display = '';
       if (stateBar) stateBar.style.display = '';
+      if (diffPopupBar) diffPopupBar.style.display = 'none';
       showProg();
     } else if (mode === 'cluster') {
       controlsBar.style.display = 'flex';
       if (deckBar) deckBar.style.display = '';
       if (topicBar) topicBar.style.display = '';
       if (stateBar) stateBar.style.display = 'none';
+      if (diffPopupBar) diffPopupBar.style.display = 'none';
       showProg();
     } else {
       // quiz/home
       controlsBar.style.display = 'none';
+      if (diffPopupBar) diffPopupBar.style.display = 'none';
       hideProg();
     }
   } else if (practiceSubMode === 'flash') {
@@ -2018,6 +2337,10 @@ function updatePracticeBackBar() {
     if (deckBar) deckBar.style.display = '';
     if (topicBar) topicBar.style.display = '';
     if (stateBar) stateBar.style.display = '';
+    if (diffPopupBar) {
+      diffPopupBar.style.display = '';
+      buildDifficultyBar();
+    }
     showProg();
   } else if (practiceSubMode === 'cluster_pane') {
     controlsBar.style.display = 'flex';
@@ -2025,6 +2348,7 @@ function updatePracticeBackBar() {
     if (deckBar) deckBar.style.display = '';
     if (topicBar) topicBar.style.display = '';
     if (stateBar) stateBar.style.display = 'none';
+    if (diffPopupBar) diffPopupBar.style.display = 'none';
     hideProg();
   } else {
     // cluster_quiz
@@ -2033,6 +2357,10 @@ function updatePracticeBackBar() {
     if (deckBar) deckBar.style.display = '';
     if (topicBar) topicBar.style.display = '';
     if (stateBar) stateBar.style.display = 'none';
+    if (diffPopupBar) {
+      diffPopupBar.style.display = '';
+      buildDifficultyBar();
+    }
     showProg();
   }
 }

@@ -12,6 +12,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "To plan or arrange an event or task for a specific time; a structured timetable of planned activities.",
     "fav": false,
     "known": false
   },
@@ -27,6 +28,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "A co-worker or professional associate within the same organization or team.",
     "fav": false,
     "known": false
   },
@@ -42,6 +44,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "A problem, software bug, or technical concern encountered during development or operations.",
     "fav": false,
     "known": false
   },
@@ -57,6 +60,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "A distinctive characteristic, software capability, or functional addition to a product.",
     "fav": false,
     "known": false
   },
@@ -72,6 +76,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "In fact or really; used to emphasize what is true or what happened as opposed to what was expected.",
     "fav": false,
     "known": false
   },
@@ -87,6 +92,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "To concentrate attention, effort, or resources on a particular task, project, or objective.",
     "fav": false,
     "known": false
   },
@@ -102,6 +108,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "A series of systematic, structured steps or workflows taken in order to achieve a particular end.",
     "fav": false,
     "known": false
   },
@@ -117,6 +124,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "A task, goal, or requirement that is regarded as more urgent or important than others.",
     "fav": false,
     "known": false
   },
@@ -132,6 +140,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "Clearly defined, detailed, or exact; relating uniquely to a particular subject or item.",
     "fav": false,
     "known": false
   },
@@ -147,6 +156,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "The configuration of hardware, software, and network settings where an application runs (e.g., development, staging, production).",
     "fav": false,
     "known": false
   },
@@ -162,6 +172,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "To write, engineer, build, or advance software code, applications, or technical solutions.",
     "fav": false,
     "known": false
   },
@@ -177,6 +188,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "To put a decision, plan, technical specification, or code architecture into concrete effect.",
     "fav": false,
     "known": false
   },
@@ -192,6 +204,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "A documented functional or non-functional specification that a software system must fulfill.",
     "fav": false,
     "known": false
   },
@@ -207,6 +220,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "A postulated sequence of events or user flow used for system design, analysis, or testing.",
     "fav": false,
     "known": false
   },
@@ -222,6 +236,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "Ready for immediate use, deployment, or access; not currently occupied or offline.",
     "fav": false,
     "known": false
   },
@@ -237,6 +252,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -252,6 +268,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "A matter of interest, worry, or risk regarding system reliability, security, or project scope.",
     "fav": false,
     "known": false
   },
@@ -267,6 +284,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "In the most fundamental respects; used to summarize or simplify a complex technical concept.",
     "fav": false,
     "known": false
   },
@@ -282,6 +300,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "In a way that is easily seen, recognized, or understood by everyone involved.",
     "fav": false,
     "known": false
   },
@@ -297,6 +316,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "The structural design and organization of software components, databases, and system interfaces.",
     "fav": false,
     "known": false
   },
@@ -312,6 +332,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "The underlying physical or virtual server hardware, cloud services, and networking required to operate software systems.",
     "fav": false,
     "known": false
   },
@@ -327,6 +348,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "The speed, responsiveness, throughput, and efficiency with which a software system executes tasks.",
     "fav": false,
     "known": false
   },
@@ -342,6 +364,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "A central storage location (such as Git) where source code, commits, and project files are managed and versioned.",
     "fav": false,
     "known": false
   },
@@ -357,6 +380,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "To combine distinct software modules, APIs, or systems so that they work together seamlessly.",
     "fav": false,
     "known": false
   },
@@ -379,6 +403,7 @@ const VOCAB_DATA = [
       "approximation"
     ],
     "antonyms": [],
+    "en_def": "To calculate or predict the approximate time, cost, or effort required to complete a software task.",
     "fav": false,
     "known": false
   },
@@ -394,6 +419,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "Existing or occurring before in time or order (e.g., the prior software release or version).",
     "fav": false,
     "known": false
   },
@@ -409,6 +435,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "Feeling confident, relaxed, and proficient when using a specific technology or handling a task.",
     "fav": false,
     "known": false
   },
@@ -424,6 +451,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "Without doubt; certainly and unquestionably accurate or agreed upon.",
     "fav": false,
     "known": false
   },
@@ -439,6 +467,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "Arousing curiosity, technical engagement, or analytical interest.",
     "fav": false,
     "known": false
   },
@@ -454,6 +483,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -469,6 +499,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -484,6 +515,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -499,6 +531,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -514,6 +547,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -529,6 +563,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -544,6 +579,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -559,6 +595,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -574,6 +611,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -589,6 +627,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -604,6 +643,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -619,6 +659,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -634,6 +675,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -649,6 +691,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -664,6 +707,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -679,6 +723,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -694,6 +739,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -709,6 +755,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -724,6 +771,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -739,6 +787,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -754,6 +803,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -769,6 +819,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -784,6 +835,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -799,6 +851,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -814,6 +867,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -829,6 +883,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -844,6 +899,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -859,6 +915,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -874,6 +931,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -889,6 +947,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -904,6 +963,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -919,6 +979,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -934,6 +995,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -949,6 +1011,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -964,6 +1027,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -979,6 +1043,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -994,6 +1059,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -1009,6 +1075,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -1024,6 +1091,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -1039,6 +1107,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -1054,6 +1123,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -1069,6 +1139,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -1084,6 +1155,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -1099,6 +1171,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -1114,6 +1187,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "A high-speed temporary data storage layer used to serve future requests for the same data much faster.",
     "fav": false,
     "known": false
   },
@@ -1129,6 +1203,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -1154,6 +1229,7 @@ const VOCAB_DATA = [
     "antonyms": [
       "rollback"
     ],
+    "en_def": "To release, install, and configure software build artifacts onto a target environment such as staging or production.",
     "fav": false,
     "known": false
   },
@@ -1169,6 +1245,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "The execution process of moving software updates from development pipelines to live server environments.",
     "fav": false,
     "known": false
   },
@@ -1184,6 +1261,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "To identify, analyze, and remove bugs, logic errors, or defects from source code or system configurations.",
     "fav": false,
     "known": false
   },
@@ -1206,6 +1284,7 @@ const VOCAB_DATA = [
       "clean up"
     ],
     "antonyms": [],
+    "en_def": "To restructure existing source code to improve readability and internal quality without changing its external behavior.",
     "fav": false,
     "known": false
   },
@@ -1221,6 +1300,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "A variable or input value passed into a function, method, or API request to control its execution behaviour.",
     "fav": false,
     "known": false
   },
@@ -1236,6 +1316,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "An unexpected runtime event or condition that disrupts the normal execution flow of a software program.",
     "fav": false,
     "known": false
   },
@@ -1251,6 +1332,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -1266,6 +1348,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -1281,6 +1364,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "The formal blueprint or structural definition organizing tables, columns, and relationships within a database.",
     "fav": false,
     "known": false
   },
@@ -1296,6 +1380,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "The exact structural grammar, punctuation rules, and keyword definitions required by a programming language.",
     "fav": false,
     "known": false
   },
@@ -1311,6 +1396,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "A curated collection of reusable pre-written code routines and helper functions imported into an application.",
     "fav": false,
     "known": false
   },
@@ -1326,6 +1412,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "A comprehensive software platform or architectural foundation providing pre-built structure and tools for development.",
     "fav": false,
     "known": false
   },
@@ -1341,6 +1428,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "A finite, step-by-step sequence of logical computational instructions designed to solve a problem.",
     "fav": false,
     "known": false
   },
@@ -1365,6 +1453,7 @@ const VOCAB_DATA = [
       "synchronous",
       "blocking"
     ],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -1380,6 +1469,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "The verification process of verifying that a user or system is accurately who they claim to be.",
     "fav": false,
     "known": false
   },
@@ -1395,6 +1485,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "The external settings, environment variables, and parameters controlling how a software application behaves in different environments.",
     "fav": false,
     "known": false
   },
@@ -1410,6 +1501,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -1425,6 +1517,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "A third-party library, package, or service that a software project relies on to compile or execute properly.",
     "fav": false,
     "known": false
   },
@@ -1440,6 +1533,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "The systematic transfer of data, database schemas, or software applications from one environment or platform to another.",
     "fav": false,
     "known": false
   },
@@ -1465,6 +1559,7 @@ const VOCAB_DATA = [
       "supported",
       "active"
     ],
+    "en_def": "Marked as obsolete and discouraged from use in new development, though still temporarily maintained for backward compatibility.",
     "fav": false,
     "known": false
   },
@@ -1480,6 +1575,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -1495,6 +1591,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -1518,6 +1615,7 @@ const VOCAB_DATA = [
     "antonyms": [
       "unscalable"
     ],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -1533,6 +1631,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "The actual data body transmitted within an API request or network packet, excluding headers and metadata.",
     "fav": false,
     "known": false
   },
@@ -1548,6 +1647,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "An event where a network request or execution process is canceled after exceeding its maximum allowed waiting time.",
     "fav": false,
     "known": false
   },
@@ -1563,6 +1663,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "A named symbolic storage location in memory used to hold dynamic data values during code execution.",
     "fav": false,
     "known": false
   },
@@ -1578,6 +1679,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -1593,6 +1695,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -1608,6 +1711,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -1623,6 +1727,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -1638,6 +1743,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -1653,6 +1759,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -1668,6 +1775,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -1683,6 +1791,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -1698,6 +1807,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -1713,6 +1823,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -1728,6 +1839,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -1743,6 +1855,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -1758,6 +1871,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -1773,6 +1887,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -1788,6 +1903,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -1803,6 +1919,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -1818,6 +1935,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -1833,6 +1951,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -1848,6 +1967,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -1863,6 +1983,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -1878,6 +1999,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -1893,6 +2015,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -1908,6 +2031,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -1923,6 +2047,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -1938,6 +2063,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -1953,6 +2079,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -1968,6 +2095,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -1983,6 +2111,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -1998,6 +2127,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -2013,6 +2143,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -2028,6 +2159,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -2043,6 +2175,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -2058,6 +2191,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -2073,6 +2207,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -2088,6 +2223,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -2103,6 +2239,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -2118,6 +2255,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -2133,6 +2271,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -2148,6 +2287,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -2163,6 +2303,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -2178,6 +2319,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -2193,6 +2335,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -2208,6 +2351,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -2223,6 +2367,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -2238,6 +2383,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -2253,6 +2399,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -2268,6 +2415,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -2283,6 +2431,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -2306,6 +2455,7 @@ const VOCAB_DATA = [
       "target date"
     ],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -2321,6 +2471,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -2336,6 +2487,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "An automated sequence of CI/CD build, testing, and deployment stages through which code changes flow from commit to production.",
     "fav": false,
     "known": false
   },
@@ -2359,6 +2511,7 @@ const VOCAB_DATA = [
       "constraint"
     ],
     "antonyms": [],
+    "en_def": "A specific component, database query, or resource constraint that limits the overall throughput of the entire system.",
     "fav": false,
     "known": false
   },
@@ -2374,6 +2527,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -2389,6 +2543,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -2404,6 +2559,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -2419,6 +2575,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -2434,6 +2591,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -2449,6 +2607,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -2464,6 +2623,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -2479,6 +2639,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "To make suitable; to make to correspond; to fit or suit",
     "fav": false,
     "known": false
   },
@@ -2494,6 +2655,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "To subject to analysis.",
     "fav": false,
     "known": false
   },
@@ -2509,6 +2671,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "To lay or place; to put (one thing to another)",
     "fav": false,
     "known": false
   },
@@ -2524,6 +2687,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "To strengthen; to make firm or resolute.",
     "fav": false,
     "known": false
   },
@@ -2539,6 +2703,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -2554,6 +2719,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "To establish the identity of someone or something.",
     "fav": false,
     "known": false
   },
@@ -2569,6 +2735,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "To point out; to discover; to direct to a knowledge of; to show; to make known.",
     "fav": false,
     "known": false
   },
@@ -2584,6 +2751,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "To roll or fold up; to wind round; to entwine.",
     "fav": false,
     "known": false
   },
@@ -2599,6 +2767,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "To support (someone), to back up or assist (someone) in an action.",
     "fav": false,
     "known": false
   },
@@ -2614,6 +2783,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "To change part of.",
     "fav": false,
     "known": false
   },
@@ -2629,6 +2799,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "To continuously track software metrics, server logs, and system health to detect anomalies and performance issues.",
     "fav": false,
     "known": false
   },
@@ -2644,6 +2815,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "(originally intransitive) To act optimistically or as an optimist.",
     "fav": false,
     "known": false
   },
@@ -2659,6 +2831,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -2674,6 +2847,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -2689,6 +2863,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -2704,6 +2879,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -2719,6 +2895,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -2734,6 +2911,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -2749,6 +2927,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -2764,6 +2943,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -2779,6 +2959,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -2794,6 +2975,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -2809,6 +2991,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -2824,6 +3007,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -2839,6 +3023,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -2854,6 +3039,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -2869,6 +3055,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -2884,6 +3071,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -2899,6 +3087,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -2914,6 +3103,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -2929,6 +3119,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -2944,6 +3135,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -2959,6 +3151,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -2974,6 +3167,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -2989,6 +3183,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -3004,6 +3199,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -3019,6 +3215,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -3034,6 +3231,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -3049,6 +3247,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -3064,6 +3263,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -3079,6 +3279,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "A unique identifier or number assigned to a specific state or release of software code (e.g., Semantic Versioning).",
     "fav": false,
     "known": false
   },
@@ -3094,6 +3295,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -3109,6 +3311,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -3124,6 +3327,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -3139,6 +3343,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "To translate human-readable source code into machine code or bytecode executed by a processor or virtual machine.",
     "fav": false,
     "known": false
   },
@@ -3154,6 +3359,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -3169,6 +3375,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -3184,6 +3391,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -3199,6 +3407,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -3214,6 +3423,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "To combine changes from one branch of version control directly into another target branch.",
     "fav": false,
     "known": false
   },
@@ -3229,6 +3439,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -3244,6 +3455,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "A precise request for data retrieval or manipulation sent to a database or information system.",
     "fav": false,
     "known": false
   },
@@ -3259,6 +3471,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -3274,6 +3487,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -3289,6 +3503,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -3304,6 +3519,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -3319,6 +3535,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -3334,6 +3551,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -3349,6 +3567,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -3364,6 +3583,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "An immutable chronological record of system events, application execution steps, warnings, and errors stored for analysis.",
     "fav": false,
     "known": false
   },
@@ -3379,6 +3599,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -3394,6 +3615,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -3409,6 +3631,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "The smallest unit of execution managed independently by an operating system scheduler within a process.",
     "fav": false,
     "known": false
   },
@@ -3424,6 +3647,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "A cryptographic piece of data (such as a JWT) used to authenticate identity or authorize access rights.",
     "fav": false,
     "known": false
   },
@@ -3439,6 +3663,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -3454,6 +3679,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -3469,6 +3695,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -3484,6 +3711,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -3499,6 +3727,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -3514,6 +3743,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -3529,6 +3759,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "A significant scheduled checkpoint or completion date marking the end of a major project phase or release target.",
     "fav": false,
     "known": false
   },
@@ -3544,6 +3775,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -3559,6 +3791,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -3574,6 +3807,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "A tangible software build, feature, design document, or technical output promised to clients or management upon completion.",
     "fav": false,
     "known": false
   },
@@ -3589,6 +3823,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -3604,6 +3839,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -3619,6 +3855,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -3634,6 +3871,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -3649,6 +3887,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -3664,6 +3903,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -3679,6 +3919,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -3694,6 +3935,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -3709,6 +3951,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -3724,6 +3967,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -3739,6 +3983,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -3754,6 +3999,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -3769,6 +4015,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -3784,6 +4031,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -3799,6 +4047,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -3814,6 +4063,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -3829,6 +4079,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -3844,6 +4095,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -3859,6 +4111,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -3874,6 +4127,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -3889,6 +4143,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "To confer with others in order to come to terms or reach an agreement.",
     "fav": false,
     "known": false
   },
@@ -3904,6 +4159,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "An agreement between two or more parties, to perform a specific job or work order, often temporary or of fixed duration and usually governed by a written agreement.",
     "fav": false,
     "known": false
   },
@@ -3919,6 +4175,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "The amount of money or resources earmarked for a particular institution, activity or time-frame.",
     "fav": false,
     "known": false
   },
@@ -3934,6 +4191,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "The income returned by an investment.",
     "fav": false,
     "known": false
   },
@@ -3949,6 +4207,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "Total income or cash flow minus expenditures. The money or other benefit a non-governmental organization or individual receives in exchange for products and services sold at an advertised price.",
     "fav": false,
     "known": false
   },
@@ -3964,6 +4223,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "A bill; a commercial document issued by a seller to a buyer indicating the products, quantities and agreed prices for products or services that the seller has already provided the buyer with. An invoice indicates that, unless paid in advance, payment is due by the buyer to the seller, according to the agreed terms.",
     "fav": false,
     "known": false
   },
@@ -3979,6 +4239,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "A person or a company that vends or sells.",
     "fav": false,
     "known": false
   },
@@ -3994,6 +4255,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "A periodical publication that appears four times per year.",
     "fav": false,
     "known": false
   },
@@ -4009,6 +4271,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "A public official in certain countries having control of public revenue.",
     "fav": false,
     "known": false
   },
@@ -4024,6 +4287,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "A judicial examination.",
     "fav": false,
     "known": false
   },
@@ -4039,6 +4303,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "An act of complying.",
     "fav": false,
     "known": false
   },
@@ -4054,6 +4319,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "One that merges.",
     "fav": false,
     "known": false
   },
@@ -4069,6 +4335,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "The act or process of acquiring.",
     "fav": false,
     "known": false
   },
@@ -4084,6 +4351,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -4099,6 +4367,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -4114,6 +4383,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -4129,6 +4399,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -4144,6 +4415,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -4159,6 +4431,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -4174,6 +4447,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -4189,6 +4463,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -4204,6 +4479,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -4219,6 +4495,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -4234,6 +4511,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -4249,6 +4527,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -4264,6 +4543,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -4279,6 +4559,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -4294,6 +4575,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -4309,6 +4591,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -4324,6 +4607,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -4339,6 +4623,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -4354,6 +4639,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -4369,6 +4655,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -4384,6 +4671,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -4399,6 +4687,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -4414,6 +4703,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -4429,6 +4719,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -4444,6 +4735,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -4459,6 +4751,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -4474,6 +4767,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -4489,6 +4783,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -4504,6 +4799,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -4519,6 +4815,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -4534,6 +4831,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -4549,6 +4847,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -4564,6 +4863,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -4579,6 +4879,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -4594,6 +4895,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -4609,6 +4911,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -4624,6 +4927,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -4639,6 +4943,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -4654,6 +4959,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -4669,6 +4975,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -4684,6 +4991,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -4699,6 +5007,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -4714,6 +5023,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -4729,6 +5039,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -4744,6 +5055,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -4759,6 +5071,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -4774,6 +5087,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -4789,6 +5103,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -4804,6 +5119,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -4819,6 +5135,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -4834,6 +5151,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -4849,6 +5167,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -4864,6 +5183,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -4879,6 +5199,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -4894,6 +5215,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -4909,6 +5231,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -4924,6 +5247,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "In mutual agreement and having a shared, identical understanding of goals, plans, or situations.",
     "fav": false,
     "known": false
   },
@@ -4939,6 +5263,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "Tasks, improvements, or goals that can be accomplished very easily and quickly with minimal effort.",
     "fav": false,
     "known": false
   },
@@ -4954,6 +5279,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -4969,6 +5295,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "A thorough, detailed examination and exploration of a specific technical topic, system architecture, or problem.",
     "fav": false,
     "known": false
   },
@@ -4984,6 +5311,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "To make a noticeable, significant impact on a project, metric, or business objective.",
     "fav": false,
     "known": false
   },
@@ -4999,6 +5327,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -5014,6 +5343,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -5029,6 +5359,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -5044,6 +5375,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -5059,6 +5391,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -5074,6 +5407,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -5089,6 +5423,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -5104,6 +5439,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -5119,6 +5455,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -5134,6 +5471,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -5149,6 +5487,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -5164,6 +5503,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -5179,6 +5519,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -5194,6 +5535,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -5209,6 +5551,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -5224,6 +5567,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -5239,6 +5583,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -5254,6 +5599,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -5269,6 +5615,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -5284,6 +5631,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -5299,6 +5647,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -5314,6 +5663,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -5329,6 +5679,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -5344,6 +5695,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -5359,6 +5711,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -5374,6 +5727,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -5389,6 +5743,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -5404,6 +5759,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -5419,6 +5775,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -5434,6 +5791,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -5449,6 +5807,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "To attempt an overly ambitious, overly complex, or practically impossible task all at once.",
     "fav": false,
     "known": false
   },
@@ -5464,6 +5823,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -5479,6 +5839,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -5494,6 +5855,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -5509,6 +5871,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -5524,6 +5887,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -5539,6 +5903,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -5554,6 +5919,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -5569,6 +5935,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -5584,6 +5951,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -5599,6 +5967,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -5614,6 +5983,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -5629,6 +5999,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -5644,6 +6015,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -5659,6 +6031,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -5674,6 +6047,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -5689,6 +6063,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -5704,6 +6079,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -5719,6 +6095,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -5734,6 +6111,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "A snapshot of staged changes saved to the version control repository history along with a descriptive message.",
     "fav": false,
     "known": false
   },
@@ -5749,6 +6127,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "An independent parallel line of development in version control isolating changes from the main codebase.",
     "fav": false,
     "known": false
   },
@@ -5764,6 +6143,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "To revert a database or software deployment back to its previous stable state after encountering an error.",
     "fav": false,
     "known": false
   },
@@ -5779,6 +6159,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "A fully tested version of a software product formally distributed to end-users or deployed to live servers.",
     "fav": false,
     "known": false
   },
@@ -5794,6 +6175,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "A formal submission in Git platforms asking team members to review and approve branch changes before merging.",
     "fav": false,
     "known": false
   },
@@ -5809,6 +6191,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "The systematic examination of source code by peer developers to find defects, ensure standards, and share knowledge.",
     "fav": false,
     "known": false
   },
@@ -5824,6 +6207,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -5839,6 +6223,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -5854,6 +6239,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -5869,6 +6255,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -5884,6 +6271,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -5899,6 +6287,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "A software update released specifically to fix bugs, close security flaws, or correct system behavior.",
     "fav": false,
     "known": false
   },
@@ -5923,6 +6312,7 @@ const VOCAB_DATA = [
       "issue"
     ],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -5938,6 +6328,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -5953,6 +6344,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -5968,6 +6360,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "A detailed diagnostic list of active function calls and line numbers produced when an unhandled exception crashes a program.",
     "fav": false,
     "known": false
   },
@@ -5983,6 +6376,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "A designated pausing spot in source code where a debugger stops execution so developers can inspect memory state.",
     "fav": false,
     "known": false
   },
@@ -5998,6 +6392,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -6013,6 +6408,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -6028,6 +6424,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "An automated testing procedure verifying that a single, isolated function or component behaves exactly as expected.",
     "fav": false,
     "known": false
   },
@@ -6043,6 +6440,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "A simulated object or API response used during automated testing to mimic real system behavior.",
     "fav": false,
     "known": false
   },
@@ -6058,6 +6456,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -6073,6 +6472,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -6088,6 +6488,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -6103,6 +6504,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "A specific network URL or URI where an API service listens for and responds to client requests.",
     "fav": false,
     "known": false
   },
@@ -6118,6 +6520,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -6133,6 +6536,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -6148,6 +6552,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -6163,6 +6568,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -6178,6 +6584,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -6193,6 +6600,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "A specialized database data structure created to drastically speed up query search and retrieval operations.",
     "fav": false,
     "known": false
   },
@@ -6208,6 +6616,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -6223,6 +6632,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -6238,6 +6648,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -6253,6 +6664,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -6268,6 +6680,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -6283,6 +6696,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -6298,6 +6712,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -6313,6 +6728,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -6328,6 +6744,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "To bring a meeting, project phase, or discussion to a successful conclusion and finish remaining details.",
     "fav": false,
     "known": false
   },
@@ -6343,6 +6760,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -6358,6 +6776,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "To meet briefly or align with team members to share progress, updates, and coordinate next steps.",
     "fav": false,
     "known": false
   },
@@ -6373,6 +6792,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "To check on the status of a previous request, task, or conversation to ensure progress is being made.",
     "fav": false,
     "known": false
   },
@@ -6388,6 +6808,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "A specific, discrete task assigned to an individual during a meeting that must be completed by a deadline.",
     "fav": false,
     "known": false
   },
@@ -6403,6 +6824,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -6418,6 +6840,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -6433,6 +6856,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -6448,6 +6872,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -6463,6 +6888,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -6478,6 +6904,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -6493,6 +6920,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -6508,6 +6936,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -6523,6 +6952,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -6545,6 +6975,7 @@ const VOCAB_DATA = [
       "obstacle"
     ],
     "antonyms": [],
+    "en_def": "An obstacle, bug, or dependency that prevents a developer or team from continuing work on a task.",
     "fav": false,
     "known": false
   },
@@ -6560,6 +6991,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "A set time-boxed period (typically 2 weeks) during which Agile engineering teams commit to delivering specific work items.",
     "fav": false,
     "known": false
   },
@@ -6575,6 +7007,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "A prioritized master list of user stories, feature requests, technical debt, and bug fixes awaiting future development.",
     "fav": false,
     "known": false
   },
@@ -6590,6 +7023,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -6605,6 +7039,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -6620,6 +7055,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -6635,6 +7071,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -6650,6 +7087,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -6665,6 +7103,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -6680,6 +7119,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -6695,6 +7135,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -6710,6 +7151,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -6725,6 +7167,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -6740,6 +7183,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -6755,6 +7199,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -6770,6 +7215,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "An amount by which a quantity is increased.",
     "fav": false,
     "known": false
   },
@@ -6785,6 +7231,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -6800,6 +7247,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -6815,6 +7263,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "An option allowing a gamer to resume play after game over, when all lives have been lost.",
     "fav": false,
     "known": false
   },
@@ -6830,6 +7279,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -6845,6 +7295,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "An automated mechanism to re-attempt a failed network request or operation after a temporary error occurs.",
     "fav": false,
     "known": false
   },
@@ -6860,6 +7311,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "To transport (cargo) in large, standard containers.",
     "fav": false,
     "known": false
   },
@@ -6875,6 +7327,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "An item of goods or supplies, especially food, obtained for future use.",
     "fav": false,
     "known": false
   },
@@ -6890,6 +7343,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "To arrange or score music for performance by an orchestra.",
     "fav": false,
     "known": false
   },
@@ -6905,6 +7359,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "An architectural approach where a single application is built as a suite of small, loosely coupled, independently deployable services.",
     "fav": false,
     "known": false
   },
@@ -6920,6 +7375,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "A traditional software architecture where all functional components of an application are tightly coupled into a single unified codebase.",
     "fav": false,
     "known": false
   },
@@ -6935,6 +7391,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "A cloud execution model where the cloud provider automatically manages server provisioning, scaling, and execution on demand.",
     "fav": false,
     "known": false
   },
@@ -6950,6 +7407,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -6965,6 +7423,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -6980,6 +7439,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -6995,6 +7455,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "An idempotent element.",
     "fav": false,
     "known": false
   },
@@ -7010,6 +7471,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -7025,6 +7487,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -7040,6 +7503,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -7055,6 +7519,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -7070,6 +7535,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -7085,6 +7551,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "An unexpected event, system outage, or critical defect that disrupts normal software availability or performance.",
     "fav": false,
     "known": false
   },
@@ -7100,6 +7567,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "A collaborative review meeting held after a critical incident or outage to analyze what happened and prevent recurrences.",
     "fav": false,
     "known": false
   },
@@ -7115,6 +7583,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -7130,6 +7599,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -7145,6 +7615,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -7160,6 +7631,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -7175,6 +7647,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -7190,6 +7663,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -7205,6 +7679,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -7220,6 +7695,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -7235,6 +7711,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -7250,6 +7727,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -7265,6 +7743,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -7280,6 +7759,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -7295,6 +7775,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -7310,6 +7791,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -7325,6 +7807,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -7340,6 +7823,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -7355,6 +7839,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -7370,6 +7855,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -7385,6 +7871,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -7400,6 +7887,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -7415,6 +7903,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -7430,6 +7919,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -7445,6 +7935,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -7460,6 +7951,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -7475,6 +7967,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "The maximum volume of data that can be transmitted over a network connection in a given amount of time.",
     "fav": false,
     "known": false
   },
@@ -7490,6 +7983,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -7505,6 +7999,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -7520,6 +8015,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -7535,6 +8031,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -7550,6 +8047,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -7565,6 +8063,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -7580,6 +8079,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -7595,6 +8095,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -7610,6 +8111,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -7625,6 +8127,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -7640,6 +8143,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -7655,6 +8159,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -7670,6 +8175,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -7685,6 +8191,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -7700,6 +8207,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -7715,6 +8223,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -7730,6 +8239,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -7745,6 +8255,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -7760,6 +8271,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -7775,6 +8287,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -7790,6 +8303,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -7805,6 +8319,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -7820,6 +8335,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -7835,6 +8351,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -7850,6 +8367,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -7865,6 +8383,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -7880,6 +8399,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -7895,6 +8415,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -7910,6 +8431,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -7925,6 +8447,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -7940,6 +8463,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -7955,6 +8479,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -7970,6 +8495,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -7985,6 +8511,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -8000,6 +8527,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -8015,6 +8543,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "To repeat a computational process or software enhancement cycle multiple times to refine results incrementally.",
     "fav": false,
     "known": false
   },
@@ -8030,6 +8559,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -8045,6 +8575,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -8060,6 +8591,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -8075,6 +8607,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "To detect with the senses, especially with the eyes.",
     "fav": false,
     "known": false
   },
@@ -8090,6 +8623,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "Brief and to the point",
     "fav": false,
     "known": false
   },
@@ -8105,6 +8639,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "Abounding in words, containing more words than necessary; long-winded.",
     "fav": false,
     "known": false
   },
@@ -8120,6 +8655,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "Fluently persuasive and articulate",
     "fav": false,
     "known": false
   },
@@ -8135,6 +8671,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "A lucid dream.",
     "fav": false,
     "known": false
   },
@@ -8150,6 +8687,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "Reasonable and convincing; based on evidence.",
     "fav": false,
     "known": false
   },
@@ -8165,6 +8703,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -8180,6 +8719,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -8195,6 +8735,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -8210,6 +8751,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -8225,6 +8767,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -8240,6 +8783,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -8255,6 +8799,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -8270,6 +8815,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -8285,6 +8831,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -8300,6 +8847,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -8315,6 +8863,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -8330,6 +8879,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -8345,6 +8895,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -8360,6 +8911,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -8375,6 +8927,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -8390,6 +8943,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -8405,6 +8959,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -8420,6 +8975,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -8435,6 +8991,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -8450,6 +9007,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -8465,6 +9023,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -8480,6 +9039,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -8495,6 +9055,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -8510,6 +9071,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -8525,6 +9087,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -8540,6 +9103,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -8555,6 +9119,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -8570,6 +9135,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -8585,6 +9151,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -8600,6 +9167,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -8615,6 +9183,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -8630,6 +9199,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -8645,6 +9215,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -8660,6 +9231,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -8675,6 +9247,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -8690,6 +9263,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -8705,6 +9279,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -8720,6 +9295,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -8735,6 +9311,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -8750,6 +9327,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -8765,6 +9343,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -8780,6 +9359,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -8795,6 +9375,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -8810,6 +9391,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -8825,6 +9407,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -8840,6 +9423,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -8855,6 +9439,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -8870,6 +9455,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -8885,6 +9471,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -8900,6 +9487,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -8915,6 +9503,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -8930,6 +9519,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -8945,6 +9535,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -8960,6 +9551,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -8975,6 +9567,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -8990,6 +9583,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -9005,6 +9599,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -9020,6 +9615,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -9035,6 +9631,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -9050,6 +9647,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -9065,6 +9663,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -9080,6 +9679,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -9095,6 +9695,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -9110,6 +9711,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -9125,6 +9727,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -9140,6 +9743,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -9155,6 +9759,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -9170,6 +9775,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -9185,6 +9791,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -9200,6 +9807,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -9215,6 +9823,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -9230,6 +9839,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "Not closed",
     "fav": false,
     "known": false
   },
@@ -9245,6 +9855,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "To perform a work or labour; to exert power or strength, physical or mechanical; to act.",
     "fav": false,
     "known": false
   },
@@ -9260,6 +9871,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "Belonging to; possessed; proper to. Often marks a possessive determiner as reflexive, referring back to the subject of the clause or sentence.",
     "fav": false,
     "known": false
   },
@@ -9275,6 +9887,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "To change place.",
     "fav": false,
     "known": false
   },
@@ -9290,6 +9903,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -9305,6 +9919,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -9320,6 +9935,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -9335,6 +9951,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -9350,6 +9967,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -9365,6 +9983,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -9380,6 +9999,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -9395,6 +10015,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -9410,6 +10031,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "That which results; the conclusion or end to which any course or condition of things leads, or which is obtained by any process or operation; consequence or effect.",
     "fav": false,
     "known": false
   },
@@ -9425,6 +10047,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -9440,6 +10063,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -9455,6 +10079,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -9470,6 +10095,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -9485,6 +10111,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "A portion of something, especially a portion given or allotted to someone.",
     "fav": false,
     "known": false
   },
@@ -9500,6 +10127,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -9515,6 +10143,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -9530,6 +10159,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "Continuance or a period of time spent in a place; abode for an indefinite time; sojourn.",
     "fav": false,
     "known": false
   },
@@ -9545,6 +10175,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -9560,6 +10191,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -9575,6 +10207,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "To show (someone) the way; to guide, conduct; to point, indicate.",
     "fav": false,
     "known": false
   },
@@ -9590,6 +10223,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "(Old English law) To make a tender of; to offer or tender.",
     "fav": false,
     "known": false
   },
@@ -9605,6 +10239,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -9620,6 +10255,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -9635,6 +10271,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -9650,6 +10287,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -9665,6 +10303,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -9680,6 +10319,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -9695,6 +10335,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -9710,6 +10351,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -9725,6 +10367,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -9740,6 +10383,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -9755,6 +10399,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -9770,6 +10415,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -9785,6 +10431,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -9800,6 +10447,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -9815,6 +10463,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -9830,6 +10479,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -9845,6 +10495,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -9860,6 +10511,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -9875,6 +10527,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -9890,6 +10543,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -9905,6 +10559,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -9920,6 +10575,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -9935,6 +10591,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -9950,6 +10607,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -9965,6 +10623,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -9980,6 +10639,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -9995,6 +10655,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "A state where Git cannot automatically resolve overlapping changes made to the exact same lines of code.",
     "fav": false,
     "known": false
   },
@@ -10010,6 +10671,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -10025,6 +10687,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -10040,6 +10703,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -10055,6 +10719,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -10070,6 +10735,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -10085,6 +10751,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -10100,6 +10767,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -10115,6 +10783,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -10130,6 +10799,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -10145,6 +10815,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -10160,6 +10831,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -10175,6 +10847,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -10190,6 +10863,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -10205,6 +10879,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -10220,6 +10895,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -10235,6 +10911,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -10250,6 +10927,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -10265,6 +10943,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -10280,6 +10959,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -10295,6 +10975,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -10310,6 +10991,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -10325,6 +11007,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -10340,6 +11023,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "A self-contained block of reusable code designed to perform a specific computational task when invoked.",
     "fav": false,
     "known": false
   },
@@ -10355,6 +11039,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "An increase in size, number, value, or strength.",
     "fav": false,
     "known": false
   },
@@ -10370,6 +11055,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "Physical injury; hurt; damage",
     "fav": false,
     "known": false
   },
@@ -10385,6 +11071,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "An abstract archetype of a given thing, compared to which real-life examples are seen as imperfect approximations; pure essence, as opposed to actual examples.",
     "fav": false,
     "known": false
   },
@@ -10400,6 +11087,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -10415,6 +11103,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "The act of improving; advancement or growth; a bettering",
     "fav": false,
     "known": false
   },
@@ -10430,6 +11119,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "That which resolves uncertainty; anything that answers the question of \"what a given entity is\".",
     "fav": false,
     "known": false
   },
@@ -10445,6 +11135,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "The goal or purpose behind a specific action or set of actions.",
     "fav": false,
     "known": false
   },
@@ -10460,6 +11151,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "The price paid for obtaining, or price received for providing, money or goods in a credit transaction, calculated as a fraction of the amount or value of what was borrowed.",
     "fav": false,
     "known": false
   },
@@ -10475,6 +11167,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "A task.",
     "fav": false,
     "known": false
   },
@@ -10490,6 +11183,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "The fact of knowing about something; general understanding or familiarity with a subject, place, situation etc.",
     "fav": false,
     "known": false
   },
@@ -10505,6 +11199,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -10520,6 +11215,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -10535,6 +11231,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -10550,6 +11247,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -10565,6 +11263,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -10580,6 +11279,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -10595,6 +11295,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -10610,6 +11311,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -10625,6 +11327,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -10640,6 +11343,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -10655,6 +11359,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -10670,6 +11375,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -10685,6 +11391,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -10700,6 +11407,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -10715,6 +11423,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -10730,6 +11439,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -10745,6 +11455,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -10760,6 +11471,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -10775,6 +11487,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -10790,6 +11503,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -10805,6 +11519,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -10820,6 +11535,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -10835,6 +11551,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -10850,6 +11567,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -10865,6 +11583,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -10880,6 +11599,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -10895,6 +11615,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -10910,6 +11631,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "Ability to do or undergo something.",
     "fav": false,
     "known": false
   },
@@ -10925,6 +11647,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -10940,6 +11663,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -10955,6 +11679,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -10970,6 +11695,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -10985,6 +11711,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -11000,6 +11727,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -11015,6 +11743,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -11030,6 +11759,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -11045,6 +11775,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -11060,6 +11791,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -11075,6 +11807,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -11090,6 +11823,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -11105,6 +11839,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "A disk, usually made of a polymer, used to record sound for playback on a phonograph.",
     "fav": false,
     "known": false
   },
@@ -11120,6 +11855,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -11135,6 +11871,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "Any considerable and connected part of a space or surface; specifically, a tract of land or sea of considerable but indefinite extent; a country; a district; in a broad sense, a place without special reference to location or extent but viewed as an entity for geographical, social or cultural reasons.",
     "fav": false,
     "known": false
   },
@@ -11150,6 +11887,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -11165,6 +11903,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -11180,6 +11919,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "Diligent inquiry or examination to seek or revise facts, principles, theories, applications, etc.; laborious or continued search after truth.",
     "fav": false,
     "known": false
   },
@@ -11195,6 +11935,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -11210,6 +11951,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -11225,6 +11967,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -11240,6 +11983,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -11255,6 +11999,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -11270,6 +12015,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "A cutting; a part cut out from the rest of something.",
     "fav": false,
     "known": false
   },
@@ -11285,6 +12031,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "(sometimes also used uncountably) A visible indication.",
     "fav": false,
     "known": false
   },
@@ -11300,6 +12047,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -11315,6 +12063,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -11330,6 +12079,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -11345,6 +12095,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -11360,6 +12111,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -11375,6 +12127,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -11390,6 +12143,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -11405,6 +12159,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -11420,6 +12175,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -11435,6 +12191,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -11450,6 +12207,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -11465,6 +12223,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -11480,6 +12239,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -11495,6 +12255,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -11510,6 +12271,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -11525,6 +12287,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -11540,6 +12303,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -11555,6 +12319,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -11570,6 +12335,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -11585,6 +12351,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "(physical) Visual perception.",
     "fav": false,
     "known": false
   },
@@ -11600,6 +12367,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "(physical) Matter, material.",
     "fav": false,
     "known": false
   },
@@ -11615,6 +12383,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "The smallest unit of language that has a particular meaning and can be expressed by itself; the smallest discrete, meaningful unit of language. (contrast morpheme.)",
     "fav": false,
     "known": false
   },
@@ -11630,6 +12399,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "An actual, real one; notably:",
     "fav": false,
     "known": false
   },
@@ -11645,6 +12415,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "Something added.",
     "fav": false,
     "known": false
   },
@@ -11660,6 +12431,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -11675,6 +12447,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -11690,6 +12463,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "Able and efficient; having the ability needed for a specific task; having the disposition to do something; permitting or being susceptible to something.",
     "fav": false,
     "known": false
   },
@@ -11705,6 +12479,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "(with \"the\") Something certain.",
     "fav": false,
     "known": false
   },
@@ -11720,6 +12495,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -11735,6 +12511,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -11750,6 +12527,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -11765,6 +12543,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -11780,6 +12559,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -11795,6 +12575,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -11810,6 +12591,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -11825,6 +12607,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -11840,6 +12623,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -11855,6 +12639,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -11870,6 +12655,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -11885,6 +12671,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -11900,6 +12687,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -11915,6 +12703,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -11930,6 +12719,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -11945,6 +12735,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -11960,6 +12751,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -11975,6 +12767,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -11990,6 +12783,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -12005,6 +12799,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -12020,6 +12815,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -12035,6 +12831,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -12050,6 +12847,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -12065,6 +12863,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -12080,6 +12879,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -12095,6 +12895,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -12110,6 +12911,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -12125,6 +12927,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -12140,6 +12943,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -12155,6 +12959,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -12170,6 +12975,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -12185,6 +12991,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -12200,6 +13007,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -12215,6 +13023,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -12230,6 +13039,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -12245,6 +13055,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -12260,6 +13071,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -12275,6 +13087,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -12290,6 +13103,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -12305,6 +13119,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -12320,6 +13135,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -12335,6 +13151,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -12350,6 +13167,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "A person with traditional beliefs.",
     "fav": false,
     "known": false
   },
@@ -12365,6 +13183,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -12380,6 +13199,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "Having a broad range (of different elements).",
     "fav": false,
     "known": false
   },
@@ -12395,6 +13215,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "A ball that passes so far from the batsman that the umpire deems it unplayable; the arm signal used by an umpire to signal a wide; the extra run added to the batting side's score",
     "fav": false,
     "known": false
   },
@@ -12410,6 +13231,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "To wish, desire.",
     "fav": false,
     "known": false
   },
@@ -12425,6 +13247,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -12440,6 +13263,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -12455,6 +13279,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -12470,6 +13295,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -12485,6 +13311,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -12500,6 +13327,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -12515,6 +13343,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -12530,6 +13359,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -12545,6 +13375,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "(with object after out) To calculate.",
     "fav": false,
     "known": false
   },
@@ -12560,6 +13391,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -12575,6 +13407,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -12590,6 +13423,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "To mention.",
     "fav": false,
     "known": false
   },
@@ -12605,6 +13439,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -12620,6 +13455,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -12635,6 +13471,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -12650,6 +13487,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "To assume control of something, especially by force; to usurp.",
     "fav": false,
     "known": false
   },
@@ -12665,6 +13503,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -12680,6 +13519,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -12695,6 +13535,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -12710,6 +13551,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -12725,6 +13567,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -12740,6 +13583,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -12755,6 +13599,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -12770,6 +13615,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -12785,6 +13631,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -12800,6 +13647,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "To deploy or release (a new film or software, etc.); to launch (a product or service).",
     "fav": false,
     "known": false
   },
@@ -12815,6 +13663,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -12830,6 +13679,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "A simple linear data structure, each of whose nodes includes a pointer to the next (and sometimes previous) node in the list, enabling traversal of the structure in at least one direction from any starting point.",
     "fav": false,
     "known": false
   },
@@ -12845,6 +13695,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -12860,6 +13711,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "A data structure in which each node has at most two children, each node but the root has one parent, and there are no cycles.",
     "fav": false,
     "known": false
   },
@@ -12875,6 +13727,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "The act of recurring.",
     "fav": false,
     "known": false
   },
@@ -12890,6 +13743,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -12905,6 +13759,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -12920,6 +13775,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -12935,6 +13791,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -12950,6 +13807,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -12965,6 +13823,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -12980,6 +13839,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -12995,6 +13855,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -13010,6 +13871,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -13025,6 +13887,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -13040,6 +13903,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -13055,6 +13919,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -13070,6 +13935,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -13085,6 +13951,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -13100,6 +13967,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -13115,6 +13983,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -13130,6 +13999,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -13145,6 +14015,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -13160,6 +14031,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -13175,6 +14047,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -13190,6 +14063,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -13205,6 +14079,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -13220,6 +14095,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -13235,6 +14111,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -13250,6 +14127,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -13265,6 +14143,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -13280,6 +14159,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -13295,6 +14175,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -13310,6 +14191,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "The process of converting plain text data into unreadable ciphertext to prevent unauthorized intercept and access.",
     "fav": false,
     "known": false
   },
@@ -13325,6 +14207,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -13340,6 +14223,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -13355,6 +14239,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -13370,6 +14255,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -13385,6 +14271,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -13400,6 +14287,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -13415,6 +14303,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -13430,6 +14319,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -13454,6 +14344,7 @@ const VOCAB_DATA = [
     "antonyms": [
       "throughput"
     ],
+    "en_def": "The time delay experienced between initiating a data request over a network and receiving the initial response.",
     "fav": false,
     "known": false
   },
@@ -13469,6 +14360,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -13484,6 +14376,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -13499,6 +14392,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -13514,6 +14408,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -13529,6 +14424,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -13544,6 +14440,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -13559,6 +14456,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -13574,6 +14472,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -13589,6 +14488,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -13604,6 +14504,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -13619,6 +14520,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -13634,6 +14536,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -13649,6 +14552,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -13664,6 +14568,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -13679,6 +14584,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -13694,6 +14600,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -13709,6 +14616,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -13724,6 +14632,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -13739,6 +14648,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -13754,6 +14664,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -13769,6 +14680,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -13784,6 +14696,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -13799,6 +14712,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -13814,6 +14728,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -13829,6 +14744,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -13844,6 +14760,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -13859,6 +14776,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -13874,6 +14792,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -13889,6 +14808,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -13904,6 +14824,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -13919,6 +14840,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -13934,6 +14856,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -13949,6 +14872,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -13964,6 +14888,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -13979,6 +14904,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -13994,6 +14920,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -14009,6 +14936,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "A short document that summarizes all the reports of a company, or the contents of a longer report to which it is attached.",
     "fav": false,
     "known": false
   },
@@ -14024,6 +14952,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "A brief and simple sales pitch; a short summary of a business plan, process, or product, and its selling point and value proposition.",
     "fav": false,
     "known": false
   },
@@ -14039,6 +14968,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -14054,6 +14984,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -14069,6 +15000,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -14084,6 +15016,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "The act of assuming, or taking to or upon oneself; the act of taking up or adopting.",
     "fav": false,
     "known": false
   },
@@ -14099,6 +15032,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -14114,6 +15048,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "(operations) The sequence of dependent steps that determine the minimum time needed to carry out an operation.",
     "fav": false,
     "known": false
   },
@@ -14129,6 +15064,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -14144,6 +15080,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -14159,6 +15096,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -14174,6 +15112,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -14189,6 +15128,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "A database designed to meet the complex storage and retrieval requirements of computerized knowledge management, especially in support of artificial intelligence or expert systems.",
     "fav": false,
     "known": false
   },
@@ -14204,6 +15144,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -14219,6 +15160,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -14234,6 +15176,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -14249,6 +15192,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -14264,6 +15208,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -14279,6 +15224,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -14294,6 +15240,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "The systematic collection and evaluation of data regarding customers' preferences for actual and potential products and services.",
     "fav": false,
     "known": false
   },
@@ -14309,6 +15256,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -14324,6 +15272,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -14339,6 +15288,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -14354,6 +15304,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -14369,6 +15320,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "The benefit (such as profit or convenience) offered by an organisation's product or service.",
     "fav": false,
     "known": false
   },
@@ -14384,6 +15336,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -14399,6 +15352,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -14414,6 +15368,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -14429,6 +15384,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -14444,6 +15400,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "A vector quantity that denotes the rate of change of position with respect to time, or a speed with the directional component.",
     "fav": false,
     "known": false
   },
@@ -14459,6 +15416,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -14474,6 +15432,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -14489,6 +15448,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -14504,6 +15464,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -14519,6 +15480,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -14534,6 +15496,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -14549,6 +15512,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -14564,6 +15528,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "The annual percentage rate at which customers stop using a service, or employees leave a job (staff turnover).",
     "fav": false,
     "known": false
   },
@@ -14579,6 +15544,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -14594,6 +15560,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -14609,6 +15576,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -14624,6 +15592,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "The proportion of visitors to a website who take an action desired by the marketers, such as buying a product or subscribing to a newsletter.",
     "fav": false,
     "known": false
   },
@@ -14639,6 +15608,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -14654,6 +15624,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -14669,6 +15640,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "Although, despite (it) being.",
     "fav": false,
     "known": false
   },
@@ -14684,6 +15656,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "An instance of the word \"notwithstanding\", often characteristic of legalese.",
     "fav": false,
     "known": false
   },
@@ -14699,6 +15672,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "Nevertheless.",
     "fav": false,
     "known": false
   },
@@ -14714,6 +15688,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "From now on; from this time on.",
     "fav": false,
     "known": false
   },
@@ -14729,6 +15704,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "(interrogative) By what, in which direction; how.",
     "fav": false,
     "known": false
   },
@@ -14744,6 +15720,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "Of this, that or it.",
     "fav": false,
     "known": false
   },
@@ -14759,6 +15736,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -14774,6 +15752,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -14789,6 +15768,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "How, or in what way.",
     "fav": false,
     "known": false
   },
@@ -14804,6 +15784,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "Within this content, context, or thing.",
     "fav": false,
     "known": false
   },
@@ -14819,6 +15800,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "Prior to now, until now, up to the present time; from the beginning to this point.",
     "fav": false,
     "known": false
   },
@@ -14834,6 +15816,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "The one or ones mentioned previously.",
     "fav": false,
     "known": false
   },
@@ -14849,6 +15832,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "Following, afterwards in either time or place.",
     "fav": false,
     "known": false
   },
@@ -14864,6 +15848,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "(manner) Agreeably; correspondingly; suitably",
     "fav": false,
     "known": false
   },
@@ -14879,6 +15864,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "In addition; besides; what's more; used to denote additional information.",
     "fav": false,
     "known": false
   },
@@ -14894,6 +15880,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "In addition to what has been said; furthermore; additionally.",
     "fav": false,
     "known": false
   },
@@ -14909,6 +15896,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "In spite of what preceded; yet.",
     "fav": false,
     "known": false
   },
@@ -14924,6 +15912,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -14939,6 +15928,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -14954,6 +15944,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -14969,6 +15960,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -14984,6 +15976,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -14999,6 +15992,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -15014,6 +16008,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -15029,6 +16024,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -15044,6 +16040,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -15059,6 +16056,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -15074,6 +16072,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -15089,6 +16088,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -15104,6 +16104,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -15119,6 +16120,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -15134,6 +16136,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -15149,6 +16152,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -15164,6 +16168,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -15179,6 +16184,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -15194,6 +16200,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -15209,6 +16216,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -15224,6 +16232,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -15239,6 +16248,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -15254,6 +16264,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -15269,6 +16280,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -15284,6 +16296,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -15299,6 +16312,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -15314,6 +16328,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -15329,6 +16344,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -15344,6 +16360,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -15359,6 +16376,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -15374,6 +16392,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -15389,6 +16408,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -15404,6 +16424,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -15419,6 +16440,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -15434,6 +16456,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -15449,6 +16472,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -15464,6 +16488,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -15479,6 +16504,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -15494,6 +16520,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -15509,6 +16536,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -15524,6 +16552,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -15539,6 +16568,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -15554,6 +16584,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -15569,6 +16600,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -15584,6 +16616,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -15599,6 +16632,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -15614,6 +16648,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -15629,6 +16664,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -15644,6 +16680,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -15659,6 +16696,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -15674,6 +16712,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -15689,6 +16728,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -15704,6 +16744,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -15719,6 +16760,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -15734,6 +16776,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -15749,6 +16792,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -15764,6 +16808,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -15779,6 +16824,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -15794,6 +16840,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -15809,6 +16856,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -15824,6 +16872,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -15839,6 +16888,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -15854,6 +16904,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -15869,6 +16920,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -15884,6 +16936,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -15899,6 +16952,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -15914,6 +16968,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -15929,6 +16984,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "Use of acerbic language to mock or convey contempt, often using irony and (in speech) often marked by overemphasis and a sneering tone of voice.",
     "fav": false,
     "known": false
   },
@@ -15944,6 +17000,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -15959,6 +17016,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -15974,6 +17032,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -15989,6 +17048,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -16004,6 +17064,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "In such writing systems as the Chinese writing system, the portion of a phono-semantic character that provides an indication of its meaning; contrasted with phonetic.",
     "fav": false,
     "known": false
   },
@@ -16019,6 +17080,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "The art of using language, especially public speaking, as a means to persuade.",
     "fav": false,
     "known": false
   },
@@ -16034,6 +17096,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "Any formal system of reasoning that arrives at a truth by the exchange of logical arguments.",
     "fav": false,
     "known": false
   },
@@ -16049,6 +17112,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -16064,6 +17128,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "Deceptive or false appearance; that which misleads the eye or the mind.",
     "fav": false,
     "known": false
   },
@@ -16079,6 +17144,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "Any abrupt and inexplicable transition or occurrence.",
     "fav": false,
     "known": false
   },
@@ -16094,6 +17160,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "A fallacious objection to an argument or factual claim by appealing to a characteristic or belief of the person making the argument or claim, rather than by addressing the substance of the argument or producing evidence against the claim; an attempt to argue against an opponent's idea by discrediting the opponent himself or herself.",
     "fav": false,
     "known": false
   },
@@ -16109,6 +17176,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "The third party who makes a straw purchase for another person.",
     "fav": false,
     "known": false
   },
@@ -16124,6 +17192,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "A herring that is cured in smoke and brine strong enough to turn the flesh red; a type of kipper.",
     "fav": false,
     "known": false
   },
@@ -16139,6 +17208,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -16154,6 +17224,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "A chain of events that, once initiated, cannot be halted; especially one in which the final outcome is undesirable or precarious.",
     "fav": false,
     "known": false
   },
@@ -16169,6 +17240,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -16184,6 +17256,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "The duty of a party in a legal proceeding to prove an assertion of fact; it includes both the burden of production and the burden of persuasion; the onus probandi",
     "fav": false,
     "known": false
   },
@@ -16199,6 +17272,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "Full extent; distance between extreme limits; especially; the distance between the nearest surfaces of two bodies, or the space between walls.",
     "fav": false,
     "known": false
   },
@@ -16214,6 +17288,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "A writ summoning one to answer to any action.",
     "fav": false,
     "known": false
   },
@@ -16229,6 +17304,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "A shift (scheduled work period) that takes place late in the day or at night.",
     "fav": false,
     "known": false
   },
@@ -16244,6 +17320,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "A shift (scheduled work period) that takes place early in the day.",
     "fav": false,
     "known": false
   },
@@ -16259,6 +17336,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "Ready money; cash",
     "fav": false,
     "known": false
   },
@@ -16274,6 +17352,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "Physically secure and certain, non-failing, reliable.",
     "fav": false,
     "known": false
   },
@@ -16289,6 +17368,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "To make glad",
     "fav": false,
     "known": false
   },
@@ -16304,6 +17384,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "The act of saying sorry; an apology.",
     "fav": false,
     "known": false
   },
@@ -16319,6 +17400,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "Taking care; attentive to potential danger, error or harm; cautious.",
     "fav": false,
     "known": false
   },
@@ -16334,6 +17416,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "Short for mainline.",
     "fav": false,
     "known": false
   },
@@ -16349,6 +17432,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "A herbal preparation made from one plant, as opposed to something made from more than one plant.",
     "fav": false,
     "known": false
   },
@@ -16364,6 +17448,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "A final examination; a test or examination given at the end of a term or class; the test that concludes a class.",
     "fav": false,
     "known": false
   },
@@ -16379,6 +17464,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "A necessary commodity, a staple requirement.",
     "fav": false,
     "known": false
   },
@@ -16394,6 +17480,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "Something additional, such as an item above and beyond the ordinary school curriculum, or added to the usual charge on a bill.",
     "fav": false,
     "known": false
   },
@@ -16409,6 +17496,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "A police officer.",
     "fav": false,
     "known": false
   },
@@ -16424,6 +17512,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "To be in the habit of choosing something rather than something else; to favor; to like better.",
     "fav": false,
     "known": false
   },
@@ -16439,6 +17528,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "To try not to meet or communicate with (a person); to shun",
     "fav": false,
     "known": false
   },
@@ -16454,6 +17544,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "The act of managing or controlling something.",
     "fav": false,
     "known": false
   },
@@ -16469,6 +17560,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -16484,6 +17576,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -16499,6 +17592,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -16514,6 +17608,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -16529,6 +17624,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -16544,6 +17640,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -16559,6 +17656,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -16574,6 +17672,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -16589,6 +17688,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -16604,6 +17704,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -16619,6 +17720,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -16634,6 +17736,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -16649,6 +17752,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -16664,6 +17768,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -16679,6 +17784,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -16694,6 +17800,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -16709,6 +17816,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -16724,6 +17832,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -16739,6 +17848,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -16754,6 +17864,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -16769,6 +17880,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -16784,6 +17896,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -16799,6 +17912,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -16814,6 +17928,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -16829,6 +17944,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -16844,6 +17960,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -16859,6 +17976,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -16874,6 +17992,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -16889,6 +18008,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -16904,6 +18024,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -16919,6 +18040,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -16934,6 +18056,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -16949,6 +18072,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -16964,6 +18088,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -16979,6 +18104,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -16994,6 +18120,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -17009,6 +18136,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -17024,6 +18152,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "The server-side logic, database interaction, API endpoints, and infrastructure behind a software application.",
     "fav": false,
     "known": false
   },
@@ -17039,6 +18168,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "The user-facing visual interface, client-side scripts, and layout components of a web or mobile application.",
     "fav": false,
     "known": false
   },
@@ -17054,6 +18184,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -17069,6 +18200,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "A lightweight, standalone, executable software package bundling code, runtime, system tools, and libraries (e.g., Docker).",
     "fav": false,
     "known": false
   },
@@ -17084,6 +18216,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "The access control process of determining whether an authenticated user has permission to perform a specific action.",
     "fav": false,
     "known": false
   },
@@ -17099,6 +18232,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "The capability of a software application to handle increased workload, traffic, and data volume gracefully.",
     "fav": false,
     "known": false
   },
@@ -17123,6 +18257,7 @@ const VOCAB_DATA = [
     "antonyms": [
       "latency"
     ],
+    "en_def": "The rate at which data or tasks are successfully processed through a system or network connection.",
     "fav": false,
     "known": false
   },
@@ -17138,6 +18273,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "The active execution phase when a compiled or interpreted software application is actively running in memory.",
     "fav": false,
     "known": false
   },
@@ -17153,6 +18289,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -17168,6 +18305,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -17183,6 +18321,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -17198,6 +18337,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -17213,6 +18353,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -17228,6 +18369,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -17243,6 +18385,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -17258,6 +18401,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -17273,6 +18417,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -17288,6 +18433,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "The systematic process of locating, diagnosing, and resolving software defects and malfunctions.",
     "fav": false,
     "known": false
   },
@@ -17303,6 +18449,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "The process of cleaning, optimizing, and restructuring internal source code without modifying runtime behavior.",
     "fav": false,
     "known": false
   },
@@ -17318,6 +18465,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -17333,6 +18481,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -17348,6 +18497,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "An individual, client, or department with a vested business interest in the outcome and features of a software project.",
     "fav": false,
     "known": false
   },
@@ -17363,6 +18513,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -17378,6 +18529,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -17393,6 +18545,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "An iterative, flexible software development philosophy emphasizing quick feedback cycles, cross-functional teams, and continuous delivery.",
     "fav": false,
     "known": false
   },
@@ -17408,6 +18561,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -17423,6 +18577,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -17438,6 +18593,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -17453,6 +18609,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "To coordinate data or processes so they occur simultaneously or reflect exact identical states across systems.",
     "fav": false,
     "known": false
   },
@@ -17468,6 +18625,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -17483,6 +18641,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -17498,6 +18657,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -17513,6 +18673,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -17528,6 +18689,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -17543,6 +18705,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -17558,6 +18721,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -17584,6 +18748,7 @@ const VOCAB_DATA = [
       "exaggerate",
       "worsen"
     ],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -17599,6 +18764,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -17614,6 +18780,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -17629,6 +18796,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -17644,6 +18812,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -17659,6 +18828,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -17674,6 +18844,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -17689,6 +18860,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -17704,6 +18876,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -17719,6 +18892,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "(of objects or substances) Returning quickly to original shape after force is applied; elastic.",
     "fav": false,
     "known": false
   },
@@ -17734,6 +18908,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "A substance that provides cohesion",
     "fav": false,
     "known": false
   },
@@ -17749,6 +18924,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "Anything having substance; an essential part.",
     "fav": false,
     "known": false
   },
@@ -17764,6 +18940,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "An organism that is able to live and develop.",
     "fav": false,
     "known": false
   },
@@ -17779,6 +18956,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -17794,6 +18972,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "(NNES or European Union documents) To make or render precise; to specify.",
     "fav": false,
     "known": false
   },
@@ -17809,6 +18988,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "Superfluous; exceeding what is necessary.",
     "fav": false,
     "known": false
   },
@@ -17824,6 +19004,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "(of words, equipment, etc.) No longer in use; gone into disuse; disused or neglected (often by preference for something newer, which replaces the subject).",
     "fav": false,
     "known": false
   },
@@ -17839,6 +19020,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "For a particular purpose.",
     "fav": false,
     "known": false
   },
@@ -17854,6 +19036,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "That reacts or responds to a stimulus",
     "fav": false,
     "known": false
   },
@@ -17869,6 +19052,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -17884,6 +19068,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "To return to a topic, issue, or discussion at a later time or date after gathering more information.",
     "fav": false,
     "known": false
   },
@@ -17899,6 +19084,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "To make brief contact with someone to update them or check in on project progress without a long meeting.",
     "fav": false,
     "known": false
   },
@@ -17914,6 +19100,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "(of marching bands) an internal competition used to practice marching commands, in which the last person caught improperly executing a command wins",
     "fav": false,
     "known": false
   },
@@ -17929,6 +19116,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -17944,6 +19132,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "A visionary, innovative person who changes the way people think of a situation.",
     "fav": false,
     "known": false
   },
@@ -17959,6 +19148,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -17974,6 +19164,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -17989,6 +19180,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "Consistent, or in accordance, with; according to",
     "fav": false,
     "known": false
   },
@@ -18004,6 +19196,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -18019,6 +19212,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -18034,6 +19228,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -18049,6 +19244,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -18064,6 +19260,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -18079,6 +19276,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "Vigilant or on one's guard against danger or difficulty.",
     "fav": false,
     "known": false
   },
@@ -18094,6 +19292,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "A network of interconnected systems.",
     "fav": false,
     "known": false
   },
@@ -18109,6 +19308,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "A person in whom one can confide or share one's secrets: a friend.",
     "fav": false,
     "known": false
   },
@@ -18124,6 +19324,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "To make difficult; to impede; to perplex.",
     "fav": false,
     "known": false
   },
@@ -18139,6 +19340,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "Having excelled, having surpassed.",
     "fav": false,
     "known": false
   },
@@ -18154,6 +19356,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "Furnishing help; giving aid; useful.",
     "fav": false,
     "known": false
   },
@@ -18169,6 +19372,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "To adorn or grace; to honour; to make becoming, appropriate, or honourable.",
     "fav": false,
     "known": false
   },
@@ -18184,6 +19388,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -18199,6 +19404,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -18214,6 +19420,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -18229,6 +19436,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -18244,6 +19452,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -18259,6 +19468,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -18274,6 +19484,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -18289,6 +19500,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -18304,6 +19516,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -18319,6 +19532,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -18334,6 +19548,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -18349,6 +19564,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -18364,6 +19580,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -18379,6 +19596,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -18394,6 +19612,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -18409,6 +19628,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -18424,6 +19644,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -18439,6 +19660,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -18454,6 +19676,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -18469,6 +19692,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -18484,6 +19708,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -18499,6 +19724,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -18514,6 +19740,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -18529,6 +19756,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -18544,6 +19772,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -18559,6 +19788,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -18574,6 +19804,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -18589,6 +19820,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -18604,6 +19836,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -18619,6 +19852,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -18634,6 +19868,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -18649,6 +19884,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -18664,6 +19900,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -18679,6 +19916,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -18694,6 +19932,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -18709,6 +19948,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -18724,6 +19964,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -18739,6 +19980,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -18754,6 +19996,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -18769,6 +20012,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -18784,6 +20028,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -18799,6 +20044,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -18814,6 +20060,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -18829,6 +20076,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -18844,6 +20092,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -18859,6 +20108,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -18874,6 +20124,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -18889,6 +20140,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -18904,6 +20156,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -18919,6 +20172,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -18934,6 +20188,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -18949,6 +20204,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -18964,6 +20220,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -18979,6 +20236,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -18994,6 +20252,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -19009,6 +20268,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -19024,6 +20284,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -19039,6 +20300,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -19054,6 +20316,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -19069,6 +20332,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -19084,6 +20348,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -19099,6 +20364,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -19114,6 +20380,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -19129,6 +20396,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -19144,6 +20412,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -19159,6 +20428,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -19174,6 +20444,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -19189,6 +20460,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -19204,6 +20476,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -19219,6 +20492,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -19234,6 +20508,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -19249,6 +20524,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "A mass, assemblage, or sum of particulars; something consisting of elements but considered as a whole.",
     "fav": false,
     "known": false
   },
@@ -19264,6 +20540,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "To join (two things) together, or (one thing) to (another).",
     "fav": false,
     "known": false
   },
@@ -19279,6 +20556,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "State of cohering, or of working together.",
     "fav": false,
     "known": false
   },
@@ -19294,6 +20572,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -19309,6 +20588,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -19324,6 +20604,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -19339,6 +20620,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -19354,6 +20636,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "A security weakness, flaw, or misconfiguration in software that could be exploited by an unauthorized attacker.",
     "fav": false,
     "known": false
   },
@@ -19369,6 +20652,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "A heroic or extraordinary deed.",
     "fav": false,
     "known": false
   },
@@ -19384,6 +20668,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -19399,6 +20684,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -19414,6 +20700,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -19429,6 +20716,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -19444,6 +20732,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -19459,6 +20748,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -19474,6 +20764,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "Food, especially meat and potatoes, chopped and mixed together.",
     "fav": false,
     "known": false
   },
@@ -19489,6 +20780,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -19504,6 +20796,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -19519,6 +20812,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -19534,6 +20828,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "A collection of data, from a variety of sources, organized to provide useful guidance to an organization's decision-makers.",
     "fav": false,
     "known": false
   },
@@ -19549,6 +20844,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -19564,6 +20860,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "(operations management) the processing of materials in batches rather than in continuous flow or in an assembly line",
     "fav": false,
     "known": false
   },
@@ -19579,6 +20876,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -19594,6 +20892,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "To divide something into parts, sections or shares",
     "fav": false,
     "known": false
   },
@@ -19609,6 +20908,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -19624,6 +20924,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "The act of abstracting, separating, withdrawing, or taking away; withdrawal; the state of being taken away.",
     "fav": false,
     "known": false
   },
@@ -19639,6 +20940,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "An automatic switch to a secondary system on failure of the primary system, such as a means for ensuring high availability of some critical resource (such as a computer system), involving a parallel backup system which is kept running at all times so that, upon detected failure of the primary system, processing can be automatically shifted over to the backup.",
     "fav": false,
     "known": false
   },
@@ -19654,6 +20956,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -19669,6 +20972,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -19684,6 +20988,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -19699,6 +21004,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -19714,6 +21020,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -19729,6 +21036,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "To disclaim and expel from the family, as a father his child; to disown; to disinherit.",
     "fav": false,
     "known": false
   },
@@ -19744,6 +21052,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "(with in (or sometimes with, to)) To rest satisfied, or apparently satisfied, or to rest without opposition and discontent (usually implying previous opposition or discontent); to accept or consent by silence or by omitting to object.",
     "fav": false,
     "known": false
   },
@@ -19759,6 +21068,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "To stick fast or cleave, as a glutinous substance does; to become joined or united.",
     "fav": false,
     "known": false
   },
@@ -19774,6 +21084,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "To settle a legal case or other dispute.",
     "fav": false,
     "known": false
   },
@@ -19789,6 +21100,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "To make a judgment (on a dispute) as an arbitrator or arbiter",
     "fav": false,
     "known": false
   },
@@ -19804,6 +21116,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "Something that is or has been assimilated.",
     "fav": false,
     "known": false
   },
@@ -19819,6 +21132,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "A standard by which something is evaluated or measured.",
     "fav": false,
     "known": false
   },
@@ -19834,6 +21148,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "To check or adjust by comparison with a standard.",
     "fav": false,
     "known": false
   },
@@ -19849,6 +21164,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "To avoid or get around something; to bypass",
     "fav": false,
     "known": false
   },
@@ -19864,6 +21180,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "To reduce to a code, to arrange into a code.",
     "fav": false,
     "known": false
   },
@@ -19879,6 +21196,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "To make something form into crystals",
     "fav": false,
     "known": false
   },
@@ -19894,6 +21212,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "To mark the limits or boundaries of something; to delimit.",
     "fav": false,
     "known": false
   },
@@ -19909,6 +21228,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -19924,6 +21244,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -19939,6 +21260,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -19954,6 +21276,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -19969,6 +21292,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -19984,6 +21308,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -19999,6 +21324,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -20014,6 +21340,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -20029,6 +21356,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -20044,6 +21372,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -20059,6 +21388,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -20074,6 +21404,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -20089,6 +21420,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -20104,6 +21436,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -20119,6 +21452,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -20134,6 +21468,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -20149,6 +21484,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -20164,6 +21500,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -20179,6 +21516,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -20194,6 +21532,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -20209,6 +21548,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -20224,6 +21564,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -20239,6 +21580,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -20254,6 +21596,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -20269,6 +21612,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -20284,6 +21628,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -20299,6 +21644,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -20314,6 +21660,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -20329,6 +21676,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -20344,6 +21692,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -20359,6 +21708,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -20374,6 +21724,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -20389,6 +21740,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -20404,6 +21756,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -20419,6 +21772,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -20434,6 +21788,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -20449,6 +21804,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -20464,6 +21820,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -20479,6 +21836,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -20494,6 +21852,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -20509,6 +21868,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -20524,6 +21884,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -20539,6 +21900,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -20554,6 +21916,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -20569,6 +21932,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -20584,6 +21948,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -20599,6 +21964,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -20614,6 +21980,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -20629,6 +21996,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -20644,6 +22012,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -20659,6 +22028,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -20674,6 +22044,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -20689,6 +22060,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -20704,6 +22076,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -20719,6 +22092,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -20734,6 +22108,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -20749,6 +22124,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -20764,6 +22140,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -20779,6 +22156,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -20794,6 +22172,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -20809,6 +22188,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -20824,6 +22204,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -20839,6 +22220,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -20854,6 +22236,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -20869,6 +22252,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -20884,6 +22268,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -20899,6 +22284,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -20914,6 +22300,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -20929,6 +22316,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -20944,6 +22332,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -20959,6 +22348,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -20974,6 +22364,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -20989,6 +22380,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -21004,6 +22396,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -21019,6 +22412,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -21034,6 +22428,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "An additional goal to be pursued after all original goals are met.",
     "fav": false,
     "known": false
   },
@@ -21049,6 +22444,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -21064,6 +22460,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -21079,6 +22476,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "A specific topic raised in a conversation or argument which is intended as a basis for further discussion, especially one which represents a point of view.",
     "fav": false,
     "known": false
   },
@@ -21094,6 +22492,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "A specialized group tasked with testing the effectiveness of an organization's ability to protect assets by attempting to circumvent, defeat or otherwise thwart that organization's internal and external security.",
     "fav": false,
     "known": false
   },
@@ -21109,6 +22508,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -21124,6 +22524,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   },
@@ -21139,6 +22540,7 @@ const VOCAB_DATA = [
     "collocations": [],
     "synonyms": [],
     "antonyms": [],
+    "en_def": "",
     "fav": false,
     "known": false
   }

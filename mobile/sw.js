@@ -1,4 +1,4 @@
-const CACHE_NAME = 'vocab-offline-1783525319';
+const CACHE_NAME = 'vocab-offline-1784969238';
 const ASSETS = [
   './',
   './index.html',

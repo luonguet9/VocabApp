@@ -195,6 +195,7 @@ if ('serviceWorker' in navigator) {
   });
   const data  = await res.json();
   allCards      = data.cards;
+  dictionaryCards = data.all_cards || data.cards;
   reviewCount   = data.review;
   newServed     = data.today_introduced + data.new;
   newIntroduced = data.today_introduced;"""
@@ -231,6 +232,7 @@ if ('serviceWorker' in navigator) {
     }
   }
   allCards = session;
+  dictionaryCards = typeof VOCAB_DATA !== 'undefined' ? VOCAB_DATA : session;
   reviewCount = review_n;
   newServed = today_n + new_n;
   newIntroduced = today_n;"""
