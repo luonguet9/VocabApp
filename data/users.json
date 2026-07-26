@@ -1,0 +1,16 @@
+{
+  "users": [
+    {
+      "id": "luong",
+      "name": "Lương",
+      "avatar": "👨‍💻",
+      "pin": "1234"
+    },
+    {
+      "id": "khanh",
+      "name": "Khánh",
+      "avatar": "🎓",
+      "pin": "0000"
+    }
+  ]
+}

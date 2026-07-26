@@ -1,9 +1,8 @@
-const CACHE_NAME = 'vocab-offline-1784969238';
+const CACHE_NAME = 'vocab-offline-1785083885';
 const ASSETS = [
   './',
   './index.html',
   './vocab.js',
-  './clusters.js',
   './manifest.json'
 ];
 
@@ -25,7 +24,6 @@ self.addEventListener('activate', e => {
   self.clients.claim();
 });
 
-// Network First, fallback to Cache (Luôn lấy code mới nhất khi có mạng, dùng offline khi mất mạng)
 self.addEventListener('fetch', e => {
   e.respondWith(
     fetch(e.request)

@@ -7,6 +7,8 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Vocab App">
 <title>Vocab Practice</title>
+<meta name="theme-color" content="#f8fafc" id="metaThemeColor">
+<meta name="color-scheme" content="light dark">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -15,9 +17,11 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
 /* ── BASE (mobile first) ────────────────────────────── */
+:root { color-scheme: light dark; }
+html { background-color: #f8fafc; }
 body {
   font-family: 'Be Vietnam Pro', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
-  background: #f0f2f5;
+  background: #f8fafc;
   min-height: 100vh;
   display: flex; flex-direction: column; align-items: center;
   padding: calc(12px + env(safe-area-inset-top, 0px)) calc(12px + env(safe-area-inset-right, 0px)) calc(40px + env(safe-area-inset-bottom, 0px)) calc(12px + env(safe-area-inset-left, 0px));
@@ -27,6 +31,24 @@ h1, h2, h3, h4, button, input, select, textarea, .cluster-name, .mode-tab, .titl
 }
 
 /* ── SETUP OVERLAY ──────────────────────────────────── */
+#loginOverlay {
+  position: fixed; inset: 0;
+  background: #f0f2f5;
+  display: flex; align-items: center; justify-content: center;
+  z-index: 9999;
+  padding: calc(16px + env(safe-area-inset-top, 0px)) calc(16px + env(safe-area-inset-right, 0px)) calc(16px + env(safe-area-inset-bottom, 0px)) calc(16px + env(safe-area-inset-left, 0px));
+}
+[data-theme="dark"] #loginOverlay {
+  background: #0f172a;
+}
+#loginOverlay.is-switching {
+  background: rgba(15, 23, 42, 0.55);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+[data-theme="dark"] #loginOverlay.is-switching {
+  background: rgba(15, 23, 42, 0.75);
+}
 #settingsOverlay, #historyOverlay, #topicPopupOverlay {
   position: fixed; inset: 0;
   background: rgba(15, 23, 42, 0.55);
@@ -199,10 +221,9 @@ h1 { font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; ga
 
 .known-badge { font-size: 0.68rem; font-weight: 600; background: #dcfce7; color: #15803d; padding: 2px 10px; border-radius: 20px; }
 
-.progress-bar { width: 100%; height: 6px; background: #e2e8f0; border-radius: 4px; margin-bottom: 8px; overflow: hidden; }
-.progress-fill { height: 100%; background: linear-gradient(90deg, #4f46e5, #8b5cf6); border-radius: 4px; transition: width 0.3s; }
+
 .stats {
-  font-size: 0.84rem; font-weight: 600; color: #64748b;
+  font-size: 0.84rem; font-weight: 600; color: #334155;
   text-align: center; width: 100%; margin-top: 6px;
   letter-spacing: 0.01em;
 }
@@ -427,8 +448,8 @@ h1 { font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; ga
 .badge-hard { background: #fee2e2; color: #b91c1c; border: 1px solid #fca5a5; }
 .badge-hardcore { background: linear-gradient(135deg, #7f1d1d 0%, #991b1b 100%); color: #ffffff; border: 1px solid #ef4444; box-shadow: 0 2px 8px rgba(185,28,28,0.3); }
 .difficulty-bar { display: flex; gap: 6px; flex-wrap: wrap; align-items: center; justify-content: center; margin: 0 auto 16px auto; padding: 6px 12px; background: #f8fafc; border: 1.5px solid #e2e8f0; border-radius: 20px; width: fit-content; max-width: 100%; }
-.diff-label { font-size: 0.8rem; font-weight: 700; color: #64748b; margin-right: 4px; }
-.diff-btn { padding: 4px 12px; border-radius: 14px; border: 1px solid transparent; background: transparent; font-size: 0.8rem; font-weight: 600; color: #475569; cursor: pointer; transition: all 0.2s cubic-bezier(0.16,1,0.3,1); }
+.diff-label { font-size: 0.8rem; font-weight: 700; color: #334155; margin-right: 4px; }
+.diff-btn { padding: 4px 12px; border-radius: 14px; border: 1px solid transparent; background: transparent; font-size: 0.8rem; font-weight: 600; color: #334155; cursor: pointer; transition: all 0.2s cubic-bezier(0.16,1,0.3,1); }
 .diff-btn:hover { background: #e2e8f0; color: #1e293b; }
 .diff-btn.active { background: #ffffff; color: #4f46e5; border-color: #c7d2fe; font-weight: 700; box-shadow: 0 2px 6px rgba(79,70,229,0.12); }
 .diff-btn.diff-hardcore.active { background: linear-gradient(135deg, #7f1d1d 0%, #991b1b 100%); color: #ffffff; border-color: #ef4444; box-shadow: 0 2px 8px rgba(185,28,28,0.3); }
@@ -467,7 +488,7 @@ h1 { font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; ga
   .setup-box { padding: 36px 32px; }
   .setup-box h2 { font-size: 1.35rem; }
 
-  .header { max-width: min(720px, calc(100vw - 48px)); margin-bottom: 16px; }
+  .header, .mode-bar, .controls-bar { max-width: min(720px, calc(100vw - 48px)); margin-bottom: 16px; }
   h1 { font-size: 1.4rem; }
 
   .card-row { max-width: min(720px, calc(100vw - 48px)); margin-bottom: 16px; }
@@ -551,7 +572,7 @@ h1 { font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; ga
 }
 
 /* ── CLUSTER CARD ────────────────────────────────────────── */
-#clusterSection, #clusterArea, #clusterQuizArea { width: 100%; display: flex; flex-direction: column; align-items: center; }
+#clusterSection, #clusterArea, #clusterQuizArea { width: 100%; max-width: min(720px, calc(100vw - 48px)); display: flex; flex-direction: column; align-items: center; }
 #clusterPracticePane { width: 100%; display: flex; flex-direction: column; align-items: center; }
 
 .cluster-card {
@@ -798,48 +819,247 @@ h1 { font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; ga
   .btn-next { width: 100% !important; min-height: 46px !important; font-size: 1rem !important; box-shadow: 0 6px 20px rgba(79,70,229,0.4) !important; }
   .quiz-explain-box { padding: 12px 14px !important; font-size: 0.84rem !important; margin: 8px 0 !important; }
 }
+/* ── DARK THEME OVERRIDES ──────────────────────────────── */
+[data-theme="dark"] html { background-color: #0f172a; }
+[data-theme="dark"] body { background: #0f172a; color: #f8fafc; }
+[data-theme="dark"] h1, [data-theme="dark"] h2, [data-theme="dark"] h3, [data-theme="dark"] .en-term, [data-theme="dark"] .cq-practice-title, [data-theme="dark"] .quiz-q-text, [data-theme="dark"] .quiz-term-en, [data-theme="dark"] .cq-card-label, [data-theme="dark"] .cwt-term, [data-theme="dark"] .cluster-back-title, [data-theme="dark"] .poc-label, [data-theme="dark"] .cfw-term, [data-theme="dark"] .quiz-cloze-text { color: #f8fafc; }
+[data-theme="dark"] .vi-meaning {
+  background: linear-gradient(90deg, #38bdf8 0%, #818cf8 50%, #c084fc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 2px 8px rgba(129, 140, 248, 0.25));
+}
+[data-theme="dark"] .setup-box, [data-theme="dark"] .history-box, [data-theme="dark"] .topic-popup-item { background: #1e293b; border-color: #334155; color: #f8fafc; }
+[data-theme="dark"] .setup-label span, [data-theme="dark"] .setup-box h2, [data-theme="dark"] .history-date { color: #f8fafc; }
+[data-theme="dark"] .setup-total, [data-theme="dark"] .history-word { background: #334155; color: #cbd5e1; }
+[data-theme="dark"] .setup-subtitle, [data-theme="dark"] .setup-section-title { color: #94a3b8; }
+[data-theme="dark"] .setup-divider { border-color: #334155; }
+[data-theme="dark"] select { background: #1e293b !important; color: #f8fafc !important; border: 1px solid #334155 !important; }
+[data-theme="dark"] .mode-bar { background: #1e293b; border-color: #334155; }
+[data-theme="dark"] .mode-tab { color: #94a3b8; }
+[data-theme="dark"] .mode-tab:hover:not(.active) { color: #f8fafc; background: rgba(255,255,255,0.1); }
+[data-theme="dark"] .mode-tab.active { background: #334155; color: #818cf8; border-color: #475569; }
+[data-theme="dark"] .btn-settings, [data-theme="dark"] .btn-filter-state, [data-theme="dark"] .btn-topic-trigger, [data-theme="dark"] .filter-group { background: #1e293b; border-color: #334155; color: #cbd5e1; }
+[data-theme="dark"] .btn-settings:hover, [data-theme="dark"] .btn-filter-state:hover, [data-theme="dark"] .btn-topic-trigger:hover { background: #334155; color: #f8fafc; border-color: #475569; }
+[data-theme="dark"] .filter-group button { color: #94a3b8; }
+[data-theme="dark"] .filter-group button:not(.active):hover { background: #334155; color: #f8fafc; }
+[data-theme="dark"] .filter-group button.active { background: #4f46e5; color: #fff; }
+[data-theme="dark"] .card-face, [data-theme="dark"] .quiz-q-box, [data-theme="dark"] .result-box, [data-theme="dark"] .cq-practice-section { background: #1e293b; border-color: #334155; color: #f8fafc; box-shadow: 0 12px 32px rgba(0,0,0,0.25); }
+[data-theme="dark"] .btn-nav { background: #334155; border-color: #475569; color: #cbd5e1; }
+[data-theme="dark"] .btn-nav:hover:not(:disabled) { background: #475569; color: #f8fafc; }
+[data-theme="dark"] .en-example, [data-theme="dark"] .vi-pron, [data-theme="dark"] .pron-row, [data-theme="dark"] .flip-hint, [data-theme="dark"] .extra-label, [data-theme="dark"] .quiz-example-hint, [data-theme="dark"] .diff-label, [data-theme="dark"] .poc-desc, [data-theme="dark"] .cq-card-desc, [data-theme="dark"] .cfw-vi-front { color: #94a3b8; }
+[data-theme="dark"] .btn-pron { background: #334155; border-color: #475569; color: #cbd5e1; }
+[data-theme="dark"] .btn-pron:hover { background: #475569; }
+[data-theme="dark"] .btn-fav { background: #334155; border-color: #475569; color: #64748b; }
+[data-theme="dark"] .extra-pill, [data-theme="dark"] .cluster-front-word { background: #334155; border-color: #475569; color: #cbd5e1; }
+[data-theme="dark"] .syn-pill { background: #064e3b; border-color: #059669; color: #34d399; }
+[data-theme="dark"] .ant-pill { background: #881337; border-color: #be123c; color: #fca5a5; }
+[data-theme="dark"] .quiz-opt { background: #1e293b; border-color: #334155; color: #f8fafc; }
+[data-theme="dark"] .quiz-opt:hover:not(:disabled) { background: #334155; border-color: #8b5cf6; }
+[data-theme="dark"] .quiz-opt.correct { background: #064e3b; border-color: #10b981; color: #6ee7b7; }
+[data-theme="dark"] .quiz-opt.wrong { background: #881337; border-color: #f43f5e; color: #fca5a5; }
+[data-theme="dark"] .quiz-en-def-text, [data-theme="dark"] .cwt-example { background: #334155; color: #cbd5e1; border-left-color: #6366f1; }
+[data-theme="dark"] .diff-btn { color: #94a3b8; }
+[data-theme="dark"] .diff-btn:hover { background: #334155; color: #f8fafc; }
+[data-theme="dark"] .diff-btn.active { background: #334155; color: #818cf8; border-color: #475569; }
+[data-theme="dark"] .timeline-word { background: #1e293b; border-color: #334155; color: #cbd5e1; }
+[data-theme="dark"] .timeline-word:hover { border-color: #8b5cf6; }
+[data-theme="dark"] .timeline-word.selected { background: #3b0764; border-color: #8b5cf6; color: #d8b4fe; }
+[data-theme="dark"] .timeline-word.correct-order { background: #064e3b; border-color: #10b981; color: #6ee7b7; }
+[data-theme="dark"] .timeline-word.wrong-order { background: #881337; border-color: #f43f5e; color: #fca5a5; }
+[data-theme="dark"] .quiz-explain-box, [data-theme="dark"] .cluster-tip-box { background: #064e3b; border-color: #059669; color: #6ee7b7; }
+
+[data-theme="dark"] .practice-option-card { background: #1e293b; border-color: #334155; }
+[data-theme="dark"] .practice-option-card.card-flash:hover { border-color: #3b82f6; background: #1e3a8a; }
+[data-theme="dark"] .practice-option-card.card-cluster:hover { border-color: #8b5cf6; background: #4c1d95; }
+[data-theme="dark"] .btn-back-clean { background: #1e293b; border-color: #334155; color: #cbd5e1; }
+[data-theme="dark"] .btn-back-clean:hover { background: #334155; color: #f8fafc; }
+[data-theme="dark"] .cq-card-btn { background: #1e293b !important; border-color: #334155 !important; }
+[data-theme="dark"] .cq-card-btn:hover { background: #334155 !important; }
+[data-theme="dark"] .cq-studied:hover { background: #064e3b !important; border-color: #10b981 !important; }
+[data-theme="dark"] .cq-unknown:hover { background: #78350f !important; border-color: #f59e0b !important; }
+[data-theme="dark"] .cq-all:hover { background: #4c1d95 !important; border-color: #8b5cf6 !important; }
+[data-theme="dark"] .cq-card-btn .cq-icon-box { background: #334155 !important; }
+[data-theme="dark"] .cq-card-btn .cq-card-count { background: #334155 !important; border-color: #475569 !important; color: #cbd5e1 !important; }
+[data-theme="dark"] .cluster-card, [data-theme="dark"] .cluster-word-entry { background: #1e293b; border-color: #334155; }
+[data-theme="dark"] .cluster-name { background: none; -webkit-text-fill-color: #f8fafc; color: #f8fafc; }
+[data-theme="dark"] .cluster-flip-hint { background: #334155; color: #cbd5e1; }
+[data-theme="dark"] .cluster-card-back, [data-theme="dark"] .cluster-back-header, [data-theme="dark"] .cluster-reg-pills, [data-theme="dark"] .cluster-action-btns { background: #1e293b; border-color: #334155; }
+[data-theme="dark"] .cluster-close-btn { background: #334155; color: #cbd5e1; }
+[data-theme="dark"] .cluster-close-btn:hover { background: #475569; color: #f8fafc; }
+[data-theme="dark"] .reg-pill { background: #334155; border-color: #475569; color: #cbd5e1; }
+[data-theme="dark"] .reg-pill:hover { background: #475569; color: #f8fafc; }
+[data-theme="dark"] .reg-pill.active { background: #4f46e5; color: #fff; border-color: #4f46e5; }
+[data-theme="dark"] .cluster-word-entry { border-color: #334155; }
+[data-theme="dark"] .cluster-word-entry:hover { border-color: #475569; }
+[data-theme="dark"] .cwt-note { background: #334155; color: #cbd5e1; }
+[data-theme="dark"] .cwt-warn { background: #7f1d1d; color: #fca5a5; border-color: #991b1b; }
+[data-theme="dark"] .btn-cluster-fav-back { background: #334155; border-color: #475569; color: #64748b; }
+[data-theme="dark"] .result-box h2, [data-theme="dark"] .result-box p { color: #f8fafc; }
+[data-theme="dark"] .history-box h2 { color: #f8fafc !important; }
+[data-theme="dark"] .btn-back-clean { background: #1e293b !important; border-color: #334155 !important; color: #cbd5e1 !important; }
+[data-theme="dark"] .btn-back-clean:hover { background: #334155 !important; color: #f8fafc !important; }
+[data-theme="dark"] .quiz-q-text div { color: #cbd5e1 !important; }
+[data-theme="dark"] .quiz-q-text span { color: #94a3b8 !important; }
+[data-theme="dark"] .btn-filter-state strong, [data-theme="dark"] .btn-topic-trigger strong { filter: brightness(1.4); }
+[data-theme="dark"] .avatar-circle { background:#334155 !important; }
+[data-theme="dark"] .avatar-circle:hover { background:#475569 !important; }
+[data-theme="dark"] .avatar-name { color:#cbd5e1 !important; }
+[data-theme="dark"] #pinPrompt { color:#cbd5e1 !important; }
+[data-theme="dark"] #pinInput { background:#1e293b; color:#f8fafc; border-color:#334155; }
+/* PIN FORM STYLES */
+.pin-form-wrap { display: flex; flex-direction: column; align-items: center; animation: fadeIn 0.2s ease-out; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+.pin-input { width: 160px; text-align: center; padding: 14px 16px; border-radius: 12px; border: 2px solid #e2e8f0; background: #f8fafc; outline: none; font-size: 1.8rem; font-weight: 700; letter-spacing: 6px; color: #1e293b; transition: all 0.2s ease; margin-bottom: 24px; }
+.pin-input:focus { border-color: #4f46e5; box-shadow: 0 0 0 4px rgba(79,70,229,0.15); background: #ffffff; }
+.pin-btn-group { display: flex; gap: 12px; width: 100%; justify-content: center; }
+.pin-btn-cancel { padding: 12px 20px; border-radius: 12px; background: #f1f5f9; color: #475569; border: none; font-weight: 600; font-size: 1rem; cursor: pointer; transition: background 0.2s; flex: 1; }
+.pin-btn-cancel:hover { background: #e2e8f0; }
+.pin-btn-submit { padding: 12px 20px; border-radius: 12px; background: #4f46e5; color: #fff; border: none; font-weight: 600; font-size: 1rem; cursor: pointer; transition: background 0.2s, transform 0.1s; flex: 1.5; box-shadow: 0 4px 12px rgba(79,70,229,0.25); }
+.pin-btn-submit:hover { background: #4338ca; }
+.pin-btn-submit:active { transform: scale(0.96); }
+[data-theme="dark"] .pin-input { background: #1e293b; color: #f8fafc; border-color: #334155; }
+[data-theme="dark"] .pin-input:focus { border-color: #6366f1; background: #0f172a; }
+[data-theme="dark"] .pin-btn-cancel { background: #334155; color: #cbd5e1; }
+[data-theme="dark"] .pin-btn-cancel:hover { background: #475569; }
+[data-theme="dark"] .btn-settings { background: #1e293b !important; color: #cbd5e1 !important; border-color: #334155 !important; }
+[data-theme="dark"] #btnReset { background: #450a0a !important; color: #fca5a5 !important; border-color: #7f1d1d !important; }
+[data-theme="dark"] select#themeSelector { background: #1e293b !important; color: #f8fafc !important; border-color: #334155 !important; }
+[data-theme="dark"] #settingsUserInfoBlock { background: #1e293b !important; border-color: #334155 !important; }
+[data-theme="dark"] #settingsUserName { color: #f8fafc !important; }
+[data-theme="dark"] #settingsUserAvatar { background: #334155 !important; }
 </style>
+<script>
+  (function() {
+    function applyTheme(theme) {
+      let isDark = theme === 'dark';
+      if (theme === 'auto') {
+        isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      }
+      const meta = document.getElementById('metaThemeColor');
+      if (isDark) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        if (meta) meta.setAttribute('content', '#0f172a');
+      } else {
+        document.documentElement.removeAttribute('data-theme');
+        if (meta) meta.setAttribute('content', '#f8fafc');
+      }
+    }
+    const savedTheme = localStorage.getItem('vocabTheme') || 'auto';
+    applyTheme(savedTheme);
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+      if ((localStorage.getItem('vocabTheme') || 'auto') === 'auto') {
+        applyTheme('auto');
+      }
+    });
+    document.addEventListener('DOMContentLoaded', () => {
+      const themeSelector = document.getElementById('themeSelector');
+      if (themeSelector) {
+        themeSelector.value = savedTheme;
+        themeSelector.addEventListener('change', (e) => {
+          const val = e.target.value;
+          localStorage.setItem('vocabTheme', val);
+          applyTheme(val);
+        });
+      }
+    });
+  })();
+</script>
 </head>
 <body>
 
+<!-- ── LOGIN OVERLAY ──────────────────────────────────────── -->
+<div id="loginOverlay" class="hidden" onclick="if(this.classList.contains('is-switching') && event.target === this) { this.classList.add('hidden'); }">
+  <div class="setup-box" style="max-width: 400px; text-align: center; position:relative;">
+    <button id="btnCloseLogin" onclick="document.getElementById('loginOverlay').classList.add('hidden')" style="display:none; position:absolute; top:12px; right:16px; background:transparent; border:none; font-size:1.5rem; cursor:pointer; color:#64748b; line-height:1;">&times;</button>
+    <h2 style="font-size:1.3rem; margin-bottom:20px;">Ai đang học vậy?</h2>
+    <div id="userList" style="display:flex; justify-content:center; gap:20px; flex-wrap:wrap; margin-bottom: 20px;">
+       <!-- Avatars injected here -->
+    </div>
+    <div id="pinForm" class="hidden pin-form-wrap">
+      <div style="display:flex; justify-content:center; margin-bottom:16px;">
+         <div id="pinAvatar" class="avatar-circle" style="width:72px;height:72px;font-size:2.5rem;margin:0;border-radius:50%;background:#f1f5f9;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(0,0,0,0.05);"></div>
+      </div>
+      <p id="pinPrompt" style="margin-bottom: 20px; font-weight: 600; color: #64748b; font-size: 1.1rem;"></p>
+      <input type="password" id="pinInput" class="pin-input" placeholder="••••">
+      <div class="pin-btn-group">
+         <button onclick="cancelLogin()" class="pin-btn-cancel">Quay lại</button>
+         <button onclick="submitLogin()" class="pin-btn-submit">Đăng nhập</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- ── HISTORY OVERLAY ────────────────────────────────── -->
 <div id="historyOverlay" class="hidden">
-  <div class="history-box">
-    <h2 style="font-size:1.2rem;color:#1a1a2e;margin-bottom:20px">📅 Lịch sử học</h2>
-    <div id="historyContent"><p style="color:#9ca3af;font-size:0.85rem">Đang tải...</p></div>
-    <hr class="setup-divider">
-    <button class="btn-start" style="background:#6b7280" id="btnCloseHistory">Đóng</button>
+  <div class="history-box" style="padding:0; overflow:hidden; display:flex; flex-direction:column;">
+    <div style="display:flex; justify-content:space-between; align-items:center; padding: 24px 24px 12px 24px;">
+      <h2 style="font-size:1.3rem; margin:0;">📅 Lịch sử học</h2>
+      <button onclick="document.getElementById('historyOverlay').classList.add('hidden')" style="background:transparent; border:none; font-size:1.5rem; cursor:pointer; color:#64748b; line-height:1;">&times;</button>
+    </div>
+    <div id="historyContent" style="padding: 0 24px 24px 24px; overflow-y: auto; max-height: calc(80vh - 70px);"><p style="color:#9ca3af;font-size:0.85rem">Đang tải...</p></div>
   </div>
 </div>
 
 <!-- ── SETTINGS OVERLAY ───────────────────────────────── -->
 <div id="settingsOverlay" class="hidden">
-  <div class="setup-box">
-    <h2>⚙️ Cài đặt</h2>
+  <div class="setup-box" style="padding: 24px; max-width: 480px;">
+    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 24px;">
+      <h2 style="margin:0; font-size:1.4rem;">⚙️ Cài đặt</h2>
+      <button onclick="document.getElementById('settingsOverlay').classList.add('hidden')" style="background:transparent; border:none; font-size:1.5rem; cursor:pointer; color:#64748b; line-height:1;">&times;</button>
+    </div>
 
-    <p class="setup-section-title">Từ mới mỗi ngày</p>
-    <p class="setup-subtitle">Từ cũ tự động ôn lại, hệ thống thêm từ mới mỗi ngày.</p>
+    <!-- Current User Info -->
+    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 24px; padding: 16px; background: #f8fafc; border-radius: 12px; border: 1px solid #e2e8f0;" id="settingsUserInfoBlock">
+       <div style="display:flex; align-items:center; gap: 16px;">
+         <div id="settingsUserAvatar" class="avatar-circle" style="width:48px;height:48px;font-size:1.8rem;margin:0;border-radius:50%;background:#e2e8f0;display:flex;align-items:center;justify-content:center;">👤</div>
+         <div style="text-align: left;">
+           <div style="font-size:0.85rem; color:#64748b; font-weight:600;">Đang đăng nhập dưới tên</div>
+           <div id="settingsUserName" style="font-size:1.2rem; font-weight:700; color:#1e293b;">...</div>
+         </div>
+       </div>
+       <button class="btn-settings" onclick="showLoginOverlay(true);" style="background:#fff; color:#4f46e5; border:2px solid #4f46e5; font-weight:600; padding:8px 16px; border-radius:8px; cursor:pointer; transition:all 0.2s; white-space:nowrap;">Đổi</button>
+    </div>
 
-    <div class="setup-row">
-      <div class="setup-label">
-        <span>Từ mới / ngày</span>
-        <em id="dailyVal">10 từ</em>
+    <div class="settings-group">
+      <p class="setup-section-title" style="margin-bottom:12px; font-size:0.85rem;">HỌC TẬP</p>
+      <div class="setup-row" style="margin-bottom:8px;">
+        <div class="setup-label">
+          <span>Từ mới / ngày</span>
+          <em id="dailyVal">10 từ</em>
+        </div>
+        <input type="range" id="dailySlider" min="3" max="30" value="10">
       </div>
-      <input type="range" id="dailySlider" min="3" max="30" value="10">
+      <p class="setup-subtitle" style="margin-bottom:16px;">Tối đa <strong id="previewNew">10</strong> từ mới / ngày. Từ cũ tự động ôn lại.</p>
     </div>
 
-    <div class="setup-total">
-      Tối đa <strong id="previewNew">10</strong> từ mới / ngày
+    <hr class="setup-divider" style="margin: 20px 0;">
+
+    <div class="settings-group">
+      <p class="setup-section-title" style="margin-bottom:12px; font-size:0.85rem;">GIAO DIỆN (THEME)</p>
+      <div class="setup-row" style="margin-bottom: 16px;">
+        <select id="themeSelector" style="width: 100%; padding: 12px; border-radius: 12px; border: 1px solid #cbd5e1; font-size: 0.95rem; font-family: inherit; font-weight: 500; cursor: pointer; outline: none; background: #f8fafc; color: #1e293b;">
+          <option value="auto">Tự động (Theo hệ thống)</option>
+          <option value="light">Sáng (Light)</option>
+          <option value="dark">Tối (Dark)</option>
+        </select>
+      </div>
     </div>
 
-    <button class="btn-start" id="btnStart">Bắt đầu →</button>
+    <hr class="setup-divider" style="margin: 20px 0;">
 
-    <hr class="setup-divider">
+    <div class="settings-group">
+      <p class="setup-section-title" style="margin-bottom:12px; font-size:0.85rem;">TÀI KHOẢN & DỮ LIỆU</p>
+      <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px;">
+        <button class="btn-settings" id="btnOpenHistory" style="background:#f1f5f9; color:#334155; border:1px solid #e2e8f0; font-weight:600; padding:12px; border-radius:12px; cursor:pointer;">📅 Lịch sử</button>
+        <button class="btn-settings" id="btnSyncPC" style="background:#f1f5f9; color:#334155; border:1px solid #e2e8f0; font-weight:600; padding:12px; border-radius:12px; cursor:pointer;">🔄 Đồng bộ</button>
+      </div>
+      <button id="btnReset" style="width:100%; background:#fef2f2; color:#ef4444; border:2px solid #fecaca; font-weight:600; padding:12px; border-radius:12px; cursor:pointer; transition:all 0.2s;">⚠️ Xóa toàn bộ tiến độ</button>
+    </div>
 
-    <p class="setup-section-title">Tiến độ & Lịch sử</p>
-    <button class="btn-start" id="btnOpenHistory" style="margin-bottom:12px;display:block;background:linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);">📅 Xem lịch sử học tập</button>
-    <button class="btn-start" id="btnSyncPC" style="margin-bottom:12px;display:block">🔄 Đồng bộ tiến độ với PC</button>
-    <button class="btn-reset" id="btnReset">🗑 Xóa toàn bộ tiến độ</button>
+    <div style="margin-top: 32px;">
+      <button class="btn-start" id="btnStart" style="width: 100%; margin:0; padding:14px; border-radius:12px; font-size:1.1rem; box-shadow:0 4px 12px rgba(79,70,229,0.25);">Lưu cài đặt</button>
+    </div>
   </div>
 </div>
 
@@ -856,7 +1076,8 @@ h1 { font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; ga
 <div class="header">
   <div class="header-top">
     <h1><span>📚</span> <span class="title-gradient">Vocab Practice</span></h1>
-    <div style="display:flex;gap:8px">
+    <div style="display:flex;gap:8px;align-items:center;">
+      <div id="currentUserAvatar" class="avatar-circle" style="width:32px;height:32px;font-size:1.2rem;margin:0;border-radius:50%;background:#f1f5f9;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 4px rgba(0,0,0,0.05);cursor:pointer;" title="Đổi người dùng" onclick="showLoginOverlay(true);">👤</div>
       <button class="btn-settings" id="btnOpenSettings">⚙️ Cài đặt</button>
     </div>
   </div>
@@ -881,7 +1102,6 @@ h1 { font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; ga
     </div>
   </div>
 
-  <div class="progress-bar" id="progBarWrap"><div class="progress-fill" id="progFill" style="width:0%"></div></div>
   <div class="stats" id="stats"></div>
 </div>
 
@@ -1024,6 +1244,105 @@ h1 { font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; ga
 </div>
 
 <script>
+// ── AUTH INTERCEPTOR ────────────────────────────────────────────────────────
+const originalFetch = window.fetch;
+window.fetch = async function(resource, config) {
+    if (typeof resource === 'string' && (resource.startsWith('/api/') || resource.includes('/api/'))) {
+        config = config || {};
+        config.headers = config.headers || {};
+        config.headers['X-User-Id'] = localStorage.getItem('vocabUserId') || '';
+        config.headers['X-User-Pin'] = localStorage.getItem('vocabUserPin') || '';
+    }
+    const response = await originalFetch(resource, config);
+    if (response.status === 401 && resource !== '/api/login') {
+        showLoginOverlay();
+    }
+    return response;
+};
+
+let currentLoginUserId = null;
+
+async function showLoginOverlay(isSwitching = false) {
+    const overlay = document.getElementById('loginOverlay');
+    overlay.classList.remove('hidden');
+    overlay.classList.toggle('is-switching', isSwitching);
+    document.getElementById('pinForm').classList.add('hidden');
+    document.getElementById('userList').classList.remove('hidden');
+    
+    const closeBtn = document.getElementById('btnCloseLogin');
+    if (closeBtn) {
+        closeBtn.style.display = isSwitching ? 'block' : 'none';
+    }
+
+    try {
+        const res = await fetch('/api/users');
+        const data = await res.json();
+        const container = document.getElementById('userList');
+        container.innerHTML = '';
+        const currentId = localStorage.getItem('vocabUserId');
+        data.users.forEach(u => {
+            const isCurrent = (u.id == currentId);
+            const div = document.createElement('div');
+            div.style.cssText = 'cursor:pointer; display:flex; flex-direction:column; align-items:center; gap:8px; position:relative;';
+            const avatarBg = isCurrent ? 'background:#dcfce7; border:3px solid #16a34a;' : 'background:#f1f5f9; border:3px solid transparent;';
+            const nameColor = isCurrent ? 'color:#16a34a; font-weight:700;' : 'color:#475569; font-weight:600;';
+            const checkIcon = isCurrent ? '<div style="position:absolute; top:-5px; right:-5px; background:#16a34a; color:#fff; border-radius:50%; width:24px; height:24px; display:flex; align-items:center; justify-content:center; font-size:14px; box-shadow:0 2px 4px rgba(0,0,0,0.2);">✓</div>' : '';
+            div.innerHTML = `<div class="avatar-circle" style="font-size:3rem; width:80px; height:80px; display:flex; align-items:center; justify-content:center; border-radius:50%; transition:all 0.2s; ${avatarBg}">${u.avatar}</div>${checkIcon}<span class="avatar-name" style="${nameColor}">${u.name}</span>`;
+            if (isCurrent) {
+                div.onclick = () => {
+                    document.getElementById('loginOverlay').classList.add('hidden');
+                };
+            } else {
+                div.onclick = () => showPinForm(u.id, u.name, u.avatar);
+            }
+            container.appendChild(div);
+        });
+    } catch (e) {
+        console.error(e);
+    }
+}
+
+function showPinForm(userId, userName, userAvatar) {
+    currentLoginUserId = userId;
+    document.getElementById('userList').classList.add('hidden');
+    document.getElementById('pinForm').classList.remove('hidden');
+    document.getElementById('pinAvatar').innerHTML = userAvatar;
+    document.getElementById('pinPrompt').textContent = `Nhập mã PIN của ${userName}`;
+    const input = document.getElementById('pinInput');
+    input.value = '';
+    input.focus();
+}
+
+function cancelLogin() {
+    document.getElementById('pinForm').classList.add('hidden');
+    document.getElementById('userList').classList.remove('hidden');
+}
+
+async function submitLogin() {
+    const pin = document.getElementById('pinInput').value;
+    const res = await originalFetch('/api/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ id: currentLoginUserId, pin: pin })
+    });
+    if (res.ok) {
+        localStorage.setItem('vocabUserId', currentLoginUserId);
+        localStorage.setItem('vocabUserPin', pin);
+        document.getElementById('loginOverlay').classList.add('hidden');
+        document.getElementById('settingsOverlay').classList.add('hidden');
+        loadCards(); 
+    } else {
+        alert('Mã PIN không đúng!');
+        document.getElementById('pinInput').value = '';
+    }
+}
+
+document.getElementById('pinInput').addEventListener('keypress', function (e) {
+    if (e.key === 'Enter') submitLogin();
+});
+
+// Remove immediate auth check, show on start instead
+
 // ── STATE ────────────────────────────────────────────────────────────────────
 let allCards = [], sessionCards = [], dictionaryCards = [];
 let deck = 'all', mode = 'flash', topic = 'all', practiceSubMode = 'home';
@@ -1079,10 +1398,16 @@ function updateSetupUI() {
 document.getElementById('dailySlider').addEventListener('input', updateSetupUI);
 
 document.getElementById('btnStart').addEventListener('click', async () => {
-  dailyNew = +document.getElementById('dailySlider').value;
+  const newDaily = +document.getElementById('dailySlider').value;
+  const oldDaily = localStorage.getItem('vocabDailyNew') !== null ? +localStorage.getItem('vocabDailyNew') : 10;
+  
+  dailyNew = newDaily;
   localStorage.setItem('vocabDailyNew', dailyNew);
   document.getElementById('settingsOverlay').classList.add('hidden');
-  await loadCards();
+  
+  if (newDaily !== oldDaily) {
+    await loadCards();
+  }
 });
 
 document.getElementById('btnOpenSettings').addEventListener('click', showSetup);
@@ -1108,9 +1433,7 @@ document.getElementById('btnOpenHistory').addEventListener('click', async () => 
   }).join('');
 });
 
-document.getElementById('btnCloseHistory').addEventListener('click', () => {
-  document.getElementById('historyOverlay').classList.add('hidden');
-});
+// Removed btnCloseHistory listener
 document.getElementById('historyOverlay').addEventListener('click', e => {
   if (e.target === e.currentTarget) e.currentTarget.classList.add('hidden');
 });
@@ -1125,7 +1448,8 @@ document.getElementById('topicPopupOverlay').addEventListener('click', e => {
 });
 
 document.getElementById('btnReset').addEventListener('click', async () => {
-  if (!confirm('Xóa toàn bộ tiến độ (fav + known + lịch sử học)?\nHành động này không thể hoàn tác.')) return;
+  const userName = document.getElementById('settingsUserName').textContent || 'bạn';
+  if (!confirm(`Xóa toàn bộ tiến độ của ${userName} (fav + known + lịch sử học)?\nHành động này không thể hoàn tác.`)) return;
   await fetch('/api/reset', { method: 'POST' });
   localStorage.removeItem('vocabDailyNew');
   dailyNew = 10;
@@ -1134,10 +1458,33 @@ document.getElementById('btnReset').addEventListener('click', async () => {
 });
 
 // ── LOAD DATA ────────────────────────────────────────────────────────────────
+async function updateCurrentUserUI() {
+    try {
+        const uid = localStorage.getItem('vocabUserId');
+        if (!uid) return;
+        const res = await fetch('/api/users');
+        const data = await res.json();
+        const user = data.users.find(u => u.id === uid);
+        if (user) {
+            const avatarEl = document.getElementById('currentUserAvatar');
+            if(avatarEl) avatarEl.innerHTML = user.avatar;
+            const setAvatarEl = document.getElementById('settingsUserAvatar');
+            if(setAvatarEl) setAvatarEl.innerHTML = user.avatar;
+            const setNameEl = document.getElementById('settingsUserName');
+            if(setNameEl) setNameEl.textContent = user.name;
+            const btnReset = document.getElementById('btnReset');
+            if(btnReset) btnReset.innerHTML = `⚠️ Xóa tiến độ của ${user.name}`;
+            const btnSyncPC = document.getElementById('btnSyncPC');
+            if(btnSyncPC) btnSyncPC.innerHTML = `🔄 Đồng bộ (${user.name})`;
+        }
+    } catch(e){}
+}
+
 async function loadCards() {
   extraNew = 0;
   deck = 'all'; topic = 'all'; cardFilter = 'all';
   buildDeckBar();
+  updateCurrentUserUI();
   await _fetchAndRender(dailyNew);
 }
 
@@ -1464,7 +1811,7 @@ function startSession() {
 }
 
 function updateProgress(cur, total) {
-  document.getElementById('progFill').style.width = total > 0 ? (cur / total * 100) + '%' : '0%';
+  // Removed progress bar UI, kept function to avoid breaking existing calls
 }
 
 // ── PRONUNCIATION ─────────────────────────────────────────────────────────────
@@ -1478,7 +1825,7 @@ function parsePron(pron) {
   const same = pron.match(/^🇺🇸\s+🇬🇧\s+(.+)$/);
   if (same) { const ipa = same[1].trim(); return ok(ipa) ? { us: ipa, uk: ipa } : { us: '', uk: '' }; }
   // 🇺🇸 /us-ipa/  🇬🇧 /uk-ipa/
-  const diff = pron.match(/^🇺🇸\s+(.+?)\s{2,}🇬🇧\s+(.+)$/);
+  const diff = pron.match(/^🇺🇸\s+(.+?)\s+🇬🇧\s+(.+)$/);
   if (diff) return { us: ok(diff[1].trim()) ? diff[1].trim() : '', uk: ok(diff[2].trim()) ? diff[2].trim() : '' };
   return { us: '', uk: '' };
 }
@@ -2396,6 +2743,7 @@ function showPracticeHome() {
   document.getElementById('quizResult').classList.add('hidden');
   document.getElementById('clusterPracticePane').classList.add('hidden');
   document.getElementById('clusterQuizArea').classList.add('hidden');
+  updateProgress(0, 0);
 }
 
 document.getElementById('quizSection').addEventListener('click', e => {
@@ -2802,7 +3150,11 @@ if (btnSync) {
   });
 }
 
-loadCards();
+if (localStorage.getItem('vocabUserId') && localStorage.getItem('vocabUserPin')) {
+    loadCards();
+} else {
+    showLoginOverlay();
+}
 </script>
 </body>
 </html>

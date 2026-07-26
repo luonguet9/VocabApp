@@ -18,16 +18,16 @@ else:
     BASE_DIR   = Path(__file__).parent.parent.resolve()
     app = Flask(__name__, template_folder="templates", static_folder="static")
 
-VOCAB_JSON = BASE_DIR / "vocab.json"
 DB_PATH    = BASE_DIR / "progress.db"
 PORT       = 5100
+
 
 
 @app.after_request
 def add_cors(response):
     response.headers["Access-Control-Allow-Origin"] = "*"
     response.headers["Access-Control-Allow-Methods"] = "GET, POST, OPTIONS"
-    response.headers["Access-Control-Allow-Headers"] = "Content-Type"
+    response.headers["Access-Control-Allow-Headers"] = "Content-Type, X-User-Id, X-User-Pin"
     return response
 
 
@@ -35,20 +35,36 @@ def init_db():
     with sqlite3.connect(DB_PATH) as conn:
         conn.execute("""
             CREATE TABLE IF NOT EXISTS progress (
-                key             TEXT PRIMARY KEY,
+                user_id         TEXT,
+                key             TEXT,
                 fav             INTEGER DEFAULT 0,
                 known           INTEGER DEFAULT 0,
-                introduced_date TEXT
+                introduced_date TEXT,
+                PRIMARY KEY (user_id, key)
             )
         """)
-        try:
-            conn.execute("ALTER TABLE progress ADD COLUMN introduced_date TEXT")
-        except sqlite3.OperationalError:
-            pass  # column already exists
 
+def get_users():
+    path = BASE_DIR / "data" / "users.json"
+    if not path.exists():
+        return {"users": []}
+    with open(path, encoding="utf-8") as f:
+        return json.load(f)
 
+def get_auth_user():
+    user_id = request.headers.get("X-User-Id")
+    pin = request.headers.get("X-User-Pin")
+    if not user_id:
+        from flask import abort
+        abort(401)
+    for u in get_users().get("users", []):
+        if u["id"] == user_id and u["pin"] == pin:
+            return user_id
+    from flask import abort
+    abort(401)
 
-def load_vocab(path: Path) -> list[dict]:
+def load_vocab(user_id) -> list[dict]:
+    path = BASE_DIR / "data" / user_id / "vocab.json"
     if not path.exists():
         return []
     with open(path, encoding="utf-8") as f:
@@ -64,48 +80,65 @@ def load_vocab(path: Path) -> list[dict]:
 def index():
     return render_template("index.html")
 
+@app.route("/api/users", methods=["GET"])
+def api_get_users():
+    users = get_users().get("users", [])
+    safe_users = [{"id": u["id"], "name": u["name"], "avatar": u["avatar"]} for u in users]
+    return jsonify({"users": safe_users})
+
+@app.route("/api/login", methods=["POST"])
+def api_login():
+    data = request.json or {}
+    uid = data.get("id")
+    pin = data.get("pin")
+    for u in get_users().get("users", []):
+        if u["id"] == uid and u["pin"] == pin:
+            return jsonify({"ok": True})
+    return jsonify({"ok": False}), 401
 
 
 @app.route("/api/fav", methods=["POST"])
 def fav_card():
+    user_id = get_auth_user()
     data = request.json
     key  = data.get("key", "")
     if not key:
         return jsonify({"ok": False, "error": "missing key"}), 400
     with sqlite3.connect(DB_PATH) as conn:
         conn.execute(
-            "INSERT INTO progress(key,fav,known) VALUES(?,?,0) "
-            "ON CONFLICT(key) DO UPDATE SET fav=excluded.fav",
-            (key, 1 if data.get("fav") else 0)
+            "INSERT INTO progress(user_id,key,fav,known) VALUES(?,?,?,0) "
+            "ON CONFLICT(user_id,key) DO UPDATE SET fav=excluded.fav",
+            (user_id, key, 1 if data.get("fav") else 0)
         )
     return jsonify({"ok": True})
 
-
 @app.route("/api/known", methods=["POST"])
 def known_card():
+    user_id = get_auth_user()
     data = request.json
     key  = data.get("key", "")
     if not key:
         return jsonify({"ok": False, "error": "missing key"}), 400
     with sqlite3.connect(DB_PATH) as conn:
         conn.execute(
-            "INSERT INTO progress(key,fav,known) VALUES(?,0,?) "
-            "ON CONFLICT(key) DO UPDATE SET known=excluded.known",
-            (key, 1 if data.get("known") else 0)
+            "INSERT INTO progress(user_id,key,fav,known) VALUES(?,?,0,?) "
+            "ON CONFLICT(user_id,key) DO UPDATE SET known=excluded.known",
+            (user_id, key, 1 if data.get("known") else 0)
         )
     return jsonify({"ok": True})
 
 
 @app.route("/api/start-day", methods=["POST"])
 def start_day():
+    user_id = get_auth_user()
     n         = int(request.json.get("new", 10))
-    all_cards = load_vocab(VOCAB_JSON)
+    all_cards = load_vocab(user_id)
 
     today = date.today().isoformat()
 
     with sqlite3.connect(DB_PATH) as conn:
         rows = conn.execute(
-            "SELECT key, fav, known, introduced_date FROM progress"
+            "SELECT key, fav, known, introduced_date FROM progress WHERE user_id = ?", (user_id,)
         ).fetchall()
         prog = {
             r[0]: {"fav": bool(r[1]), "known": bool(r[2]), "date": r[3]}
@@ -141,30 +174,33 @@ def start_day():
 
 @app.route("/api/introduce", methods=["POST"])
 def introduce():
+    user_id = get_auth_user()
     key   = request.json.get("key", "")
     today = date.today().isoformat()
     if not key:
         return jsonify({"ok": False}), 400
     with sqlite3.connect(DB_PATH) as conn:
         conn.execute(
-            "INSERT INTO progress(key,fav,known,introduced_date) VALUES(?,0,0,?) "
-            "ON CONFLICT(key) DO UPDATE SET "
+            "INSERT INTO progress(user_id,key,fav,known,introduced_date) VALUES(?,?,0,0,?) "
+            "ON CONFLICT(user_id,key) DO UPDATE SET "
             "introduced_date=COALESCE(introduced_date, excluded.introduced_date)",
-            (key, today)
+            (user_id, key, today)
         )
     return jsonify({"ok": True})
 
 
 @app.route("/api/history")
 def history():
+    user_id = get_auth_user()
     if not DB_PATH.exists():
         return jsonify([])
     with sqlite3.connect(DB_PATH) as conn:
         rows = conn.execute(
             "SELECT key, introduced_date FROM progress "
-            "WHERE introduced_date IS NOT NULL ORDER BY introduced_date DESC"
+            "WHERE user_id = ? AND introduced_date IS NOT NULL ORDER BY introduced_date DESC",
+            (user_id,)
         ).fetchall()
-    card_map = {c["key"]: c["term"] for c in load_vocab(VOCAB_JSON)}
+    card_map = {c["key"]: c["term"] for c in load_vocab(user_id)}
     grouped  = {}
     for key, d in rows:
         if key not in card_map:
@@ -178,13 +214,15 @@ def history():
 
 @app.route("/api/reset", methods=["POST"])
 def reset_progress():
+    user_id = get_auth_user()
     with sqlite3.connect(DB_PATH) as conn:
-        conn.execute("DELETE FROM progress")
+        conn.execute("DELETE FROM progress WHERE user_id = ?", (user_id,))
     return jsonify({"ok": True})
 
 
 @app.route("/api/clusters")
 def get_clusters():
+    user_id = get_auth_user()
     clusters_path = BASE_DIR / "clusters.json"
     if not clusters_path.exists():
         return jsonify({"clusters": []})
@@ -198,9 +236,10 @@ def get_clusters():
     cluster_ids = [c["id"] for c in clusters]
     placeholders = ",".join("?" * len(cluster_ids))
     with sqlite3.connect(DB_PATH) as conn:
+        params = [user_id] + cluster_ids
         rows = conn.execute(
-            f"SELECT key, fav, known, introduced_date FROM progress WHERE key IN ({placeholders})",
-            cluster_ids
+            f"SELECT key, fav, known, introduced_date FROM progress WHERE user_id = ? AND key IN ({placeholders})",
+            params
         ).fetchall()
     prog = {r[0]: {"fav": bool(r[1]), "known": bool(r[2]), "date": r[3]} for r in rows}
 
@@ -217,6 +256,7 @@ def get_clusters():
 def sync_progress():
     if request.method == "OPTIONS":
         return jsonify({"ok": True})
+    user_id = get_auth_user()
     client_prog = request.json.get("progress", {}) if request.json else {}
     with sqlite3.connect(DB_PATH) as conn:
         for key, val in client_prog.items():
@@ -224,14 +264,14 @@ def sync_progress():
             known = 1 if val.get("known") else 0
             dt    = val.get("date") if (val.get("date") and str(val.get("date")).strip()) else None
             conn.execute(
-                "INSERT INTO progress(key,fav,known,introduced_date) VALUES(?,?,?,?) "
-                "ON CONFLICT(key) DO UPDATE SET "
+                "INSERT INTO progress(user_id,key,fav,known,introduced_date) VALUES(?,?,?,?,?) "
+                "ON CONFLICT(user_id,key) DO UPDATE SET "
                 "fav=max(fav, excluded.fav), "
                 "known=max(known, excluded.known), "
                 "introduced_date=COALESCE(introduced_date, excluded.introduced_date)",
-                (key, fav, known, dt)
+                (user_id, key, fav, known, dt)
             )
-        rows = conn.execute("SELECT key, fav, known, introduced_date FROM progress").fetchall()
+        rows = conn.execute("SELECT key, fav, known, introduced_date FROM progress WHERE user_id = ?", (user_id,)).fetchall()
         server_prog = {
             r[0]: {"fav": bool(r[1]), "known": bool(r[2]), "date": r[3]}
             for r in rows

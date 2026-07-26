@@ -4,16 +4,15 @@
 import re
 import json
 import time
+import argparse
 from pathlib import Path
 
 BASE_DIR = Path(__file__).parent.resolve()
 SRC_HTML = BASE_DIR / "app" / "templates" / "index.html"
-VOCAB_JSON = BASE_DIR / "vocab.json"
 MOBILE_DIR = BASE_DIR / "mobile"
 MOBILE_DIR.mkdir(exist_ok=True)
 OUT_HTML = MOBILE_DIR / "index.html"
 VOCAB_JS = MOBILE_DIR / "vocab.js"
-CLUSTERS_JSON = BASE_DIR / "clusters.json"
 CLUSTERS_JS = MOBILE_DIR / "clusters.js"
 
 def load_vocab(path: Path) -> list:
@@ -27,7 +26,41 @@ def load_vocab(path: Path) -> list:
         c.setdefault("known", False)
     return cards
 
+def load_clusters(path: Path) -> list:
+    if not path.exists():
+        return []
+    with open(path, encoding="utf-8") as f:
+        data = json.load(f)
+    return data.get("clusters", [])
+
 def main():
+    print("[BUILD] Generating multi-user offline PWA...")
+    
+    USERS_JSON = BASE_DIR / "data" / "users.json"
+    with open(USERS_JSON, "r", encoding="utf-8") as f:
+        users_data = json.load(f)
+        
+    vocab_data_map = {}
+    clusters_data_map = {}
+    
+    for u in users_data.get("users", []):
+        uid = u["id"]
+        vocab_path = BASE_DIR / "data" / uid / "vocab.json"
+        clusters_path = BASE_DIR / "clusters.json"
+        
+        vocab_data_map[uid] = load_vocab(vocab_path)
+        clusters_data_map[uid] = load_clusters(clusters_path)
+
+    # Generate vocab.js with ALL data
+    js_content = f"""// Auto-generated offline data bundle
+const USERS_DATA = {json.dumps(users_data.get("users", []), ensure_ascii=False, indent=2)};
+const VOCAB_DATA_MAP = {json.dumps(vocab_data_map, ensure_ascii=False, indent=2)};
+const CLUSTERS_DATA_MAP = {json.dumps(clusters_data_map, ensure_ascii=False, indent=2)};
+"""
+    with open(VOCAB_JS, "w", encoding="utf-8") as f:
+        f.write(js_content)
+    print(f"[OK] Generated {VOCAB_JS} with data for {len(users_data.get('users', []))} users.")
+
     with open(SRC_HTML, "r", encoding="utf-8") as f:
         html = f.read()
 
@@ -35,267 +68,186 @@ def main():
     pwa_tags = """
   <link rel="manifest" href="manifest.json">
   <script src="vocab.js"></script>
-  <script src="clusters.js"></script>
 """
     html = html.replace("</head>", pwa_tags + "</head>")
 
-    # 3. Add offline progress helpers & sync handler right after <script>
-    helpers_js = """<script>
-// ── OFFLINE STORAGE & SYNC ───────────────────────────────────────────────────
-function getProgress() {
-  try { return JSON.parse(localStorage.getItem('vocab_progress') || '{}'); }
-  catch(e) { return {}; }
-}
-function saveProgress(key, data) {
-  const prog = getProgress();
-  prog[key] = { ...prog[key], ...data };
-  try { localStorage.setItem('vocab_progress', JSON.stringify(prog)); }
-  catch(e) {}
-}
+    # 2. Inject the Offline Mock API Interceptor
+    mock_interceptor = """
+<script>
+// ── OFFLINE MOCK API INTERCEPTOR ─────────────────────────────────────────────
+(function() {
+    function getUid() { return localStorage.getItem('vocabUserId'); }
+    window.getProgress = function() {
+        const uid = getUid();
+        if (!uid) return {};
+        try { return JSON.parse(localStorage.getItem('vocab_progress_' + uid) || '{}'); } catch(e) { return {}; }
+    };
+    window.saveProgressData = function(data) {
+        const uid = getUid();
+        if (!uid) return;
+        try { localStorage.setItem('vocab_progress_' + uid, JSON.stringify(data)); } catch(e) {}
+    };
+    window.updateProgress = function(key, data) {
+        const p = window.getProgress();
+        p[key] = { ...p[key], ...data };
+        window.saveProgressData(p);
+    };
 
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    navigator.serviceWorker.register('sw.js').catch(() => {});
-  });
-}
+    const offlineFetch = window.fetch;
+    window.fetch = async function(resource, config) {
+        if (typeof resource === 'string' && resource.startsWith('/api/')) {
+            const uid = getUid();
+            let body = {};
+            if (config && config.body) {
+                try { body = JSON.parse(config.body); } catch(e){}
+            }
+            
+            const jsonResponse = (data) => new Response(JSON.stringify(data), { status: 200, headers: {'Content-Type': 'application/json'} });
+            const errorResponse = (msg, status=400) => new Response(JSON.stringify({error: msg}), { status: status, headers: {'Content-Type': 'application/json'} });
+
+            if (resource === '/api/users') {
+                return jsonResponse({ users: USERS_DATA });
+            }
+            
+            if (resource === '/api/login') {
+                const user = USERS_DATA.find(u => u.id === body.id && u.pin === body.pin);
+                if (user) {
+                    return jsonResponse({ ok: true, user_id: user.id });
+                }
+                return errorResponse("Sai mã PIN", 401);
+            }
+
+            if (!uid) {
+                if (typeof showLoginOverlay === 'function') showLoginOverlay();
+                return errorResponse("Unauthorized", 401);
+            }
+            
+            if (resource === '/api/start-day') {
+                const p = window.getProgress();
+                const today = new Date().toLocaleDateString('en-CA');
+                const vocab = VOCAB_DATA_MAP[uid] || [];
+                
+                let today_n = 0;
+                let review_n = 0;
+                const session = [];
+                const remaining_new = Math.max(0, (body.new || 10) - today_n);
+                let new_n = 0;
+                
+                for (const key of Object.keys(p)) {
+                    if (p[key] && p[key].date === today) today_n++;
+                }
+                
+                for (const item of vocab) {
+                    const c = { ...item };
+                    const st = p[c.key];
+                    if (st && st.date) {
+                        c.fav = Boolean(st.fav);
+                        c.known = Boolean(st.known);
+                        c.is_new = false;
+                        session.push(c);
+                        if (st.date !== today) review_n++;
+                    } else if (new_n < remaining_new) {
+                        c.fav = st ? Boolean(st.fav) : false;
+                        c.known = st ? Boolean(st.known) : false;
+                        c.is_new = true;
+                        session.push(c);
+                        new_n++;
+                    }
+                }
+                return jsonResponse({
+                    cards: session,
+                    all_cards: vocab,
+                    review: review_n,
+                    today_introduced: today_n,
+                    new: new_n
+                });
+            }
+            
+            if (resource === '/api/clusters') {
+                const p = window.getProgress();
+                const clusters = (CLUSTERS_DATA_MAP[uid] || []).map(c => {
+                    const st = p[c.id] || {};
+                    return { ...c, fav: Boolean(st.fav), known: Boolean(st.known), introduced_date: st.date || null };
+                });
+                return jsonResponse({ clusters });
+            }
+            
+            if (resource === '/api/history') {
+                const p = window.getProgress();
+                const vocab = VOCAB_DATA_MAP[uid] || [];
+                const termMap = {};
+                for (const c of vocab) termMap[c.key] = c.term;
+                
+                const dateMap = {};
+                for (const [key, val] of Object.entries(p)) {
+                    if (val && val.date) {
+                        if (!dateMap[val.date]) dateMap[val.date] = [];
+                        if (termMap[key]) dateMap[val.date].push(termMap[key]);
+                    }
+                }
+                const data = Object.keys(dateMap).sort().reverse().map(d => ({ date: d, words: dateMap[d] }));
+                return jsonResponse(data);
+            }
+            
+            if (resource === '/api/introduce') {
+                const p = window.getProgress();
+                const today = new Date().toLocaleDateString('en-CA');
+                if (!p[body.key]) p[body.key] = { fav: false, known: false, date: today };
+                else if (!p[body.key].date) p[body.key].date = today;
+                window.saveProgressData(p);
+                return jsonResponse({ ok: true });
+            }
+            
+            if (resource === '/api/fav') {
+                const p = window.getProgress();
+                if (!p[body.key]) p[body.key] = { fav: body.fav, known: false, date: null };
+                else p[body.key].fav = body.fav;
+                window.saveProgressData(p);
+                return jsonResponse({ ok: true });
+            }
+            
+            if (resource === '/api/known') {
+                const p = window.getProgress();
+                if (!p[body.key]) p[body.key] = { fav: false, known: body.known, date: null };
+                else p[body.key].known = body.known;
+                window.saveProgressData(p);
+                return jsonResponse({ ok: true });
+            }
+            
+            if (resource === '/api/reset') {
+                localStorage.removeItem('vocab_progress_' + uid);
+                return jsonResponse({ ok: true });
+            }
+            
+            // Allow other APIs to fall through
+        }
+        
+        return offlineFetch(resource, config);
+    };
+
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('sw.js').catch(() => {});
+      });
+    }
+})();
+</script>
 """
-    html = html.replace("<script>", helpers_js, 1)
+    html = html.replace("</head>", mock_interceptor + "</head>")
 
-    # 4. Replace setKnown
-    old_known = """async function setKnown(c, value) {
-  c.known = value;
-  fetch('/api/known', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ deck: c.deck, key: c.key, known: value }),
-  });
-}"""
-    new_known = """async function setKnown(c, value) {
-  c.known = value;
-  saveProgress(c.key, { known: value });
-}"""
-    html = html.replace(old_known, new_known)
-
-    # 5. Replace toggleFav
-    old_fav = """async function toggleFav(c) {
-  c.fav = !c.fav;
-  await fetch('/api/fav', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ deck: c.deck, key: c.key, fav: c.fav }),
-  });
-}"""
-    new_fav = """async function toggleFav(c) {
-  c.fav = !c.fav;
-  saveProgress(c.key, { fav: c.fav });
-}"""
-    html = html.replace(old_fav, new_fav)
-
-    # 6. Replace introduceCard
-    old_intro = """function introduceCard(c) {
-  if (!c || !c.is_new) return;
-  c.is_new = false;
-  newIntroduced++;
-  fetch('/api/introduce', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ key: c.key }),
-  });
-}"""
-    new_intro = """function introduceCard(c) {
-  if (!c || !c.is_new) return;
-  c.is_new = false;
-  newIntroduced++;
-  const today = new Date().toLocaleDateString('en-CA');
-  const prog = getProgress();
-  if (!prog[c.key]) prog[c.key] = { fav: false, known: false, date: today };
-  else if (!prog[c.key].date) prog[c.key].date = today;
-  try { localStorage.setItem('vocab_progress', JSON.stringify(prog)); } catch(e){}
-}"""
-    html = html.replace(old_intro, new_intro)
-
-    # 7. Replace history modal click
-    old_hist = """document.getElementById('btnOpenHistory').addEventListener('click', async () => {
-  document.getElementById('historyOverlay').classList.remove('hidden');
-  const res  = await fetch('/api/history');
-  const data = await res.json();
-  const el   = document.getElementById('historyContent');
-  if (!data.length) {
-    el.innerHTML = '<p style="color:#9ca3af;font-size:0.85rem">Chưa có lịch sử học.</p>';
-    return;
-  }
-  const today = new Date().toLocaleDateString('en-CA'); // YYYY-MM-DD local time
-  el.innerHTML = data.map(day => {
-    const label = day.date === today ? 'Hôm nay' :
-      new Date(day.date + 'T00:00:00').toLocaleDateString('vi-VN', { day: '2-digit', month: '2-digit', year: 'numeric' });
-    return `<div class="history-day">
-      <div class="history-date">📆 ${label}<em>${day.words.length} từ</em></div>
-      <div class="history-words">${day.words.map(w => `<span class="history-word">${w}</span>`).join('')}</div>
-    </div>`;
-  }).join('');
-});"""
-    new_hist = """document.getElementById('btnOpenHistory').addEventListener('click', async () => {
-  document.getElementById('historyOverlay').classList.remove('hidden');
-  const prog = getProgress();
-  const termMap = {};
-  for (const c of (typeof VOCAB_DATA !== 'undefined' ? VOCAB_DATA : [])) termMap[c.key] = c.term;
-  const dateMap = {};
-  for (const [key, val] of Object.entries(prog)) {
-    if (val && val.date) {
-      if (!dateMap[val.date]) dateMap[val.date] = [];
-      if (termMap[key]) dateMap[val.date].push(termMap[key]);
-    }
-  }
-  const data = Object.keys(dateMap).sort().reverse().map(d => ({ date: d, words: dateMap[d] }));
-  const el   = document.getElementById('historyContent');
-  if (!data.length) {
-    el.innerHTML = '<p style="color:#9ca3af;font-size:0.85rem">Chưa có lịch sử học.</p>';
-    return;
-  }
-  const today = new Date().toLocaleDateString('en-CA');
-  el.innerHTML = data.map(day => {
-    const label = day.date === today ? 'Hôm nay' :
-      new Date(day.date + 'T00:00:00').toLocaleDateString('vi-VN', { day: '2-digit', month: '2-digit', year: 'numeric' });
-    return `<div class="history-day">
-      <div class="history-date">📆 ${label}<em>${day.words.length} từ</em></div>
-      <div class="history-words">${day.words.map(w => `<span class="history-word">${w}</span>`).join('')}</div>
-    </div>`;
-  }).join('');
-});"""
-    html = html.replace(old_hist, new_hist)
-
-    # 8. Replace reset button
-    old_reset = """document.getElementById('btnReset').addEventListener('click', async () => {
-  if (!confirm('Xóa toàn bộ tiến độ (fav + known + lịch sử học)?\\nHành động này không thể hoàn tác.')) return;
-  await fetch('/api/reset', { method: 'POST' });
-  localStorage.removeItem('vocabDailyNew');
-  dailyNew = 10;
-  document.getElementById('settingsOverlay').classList.add('hidden');
-  await loadCards();
-});"""
-    new_reset = """document.getElementById('btnReset').addEventListener('click', async () => {
-  if (!confirm('Xóa toàn bộ tiến độ offline (fav + known + lịch sử học)?\\nHành động này không thể hoàn tác.')) return;
-  localStorage.removeItem('vocab_progress');
-  localStorage.removeItem('vocabDailyNew');
-  dailyNew = 10;
-  clusterLoaded = false;
-  document.getElementById('settingsOverlay').classList.add('hidden');
-  await loadCards();
-});"""
-    html = html.replace(old_reset, new_reset)
-
-    # 9. Replace _fetchAndRender
-    old_fetch = """async function _fetchAndRender(n) {
-  document.getElementById('flashSection').innerHTML = '<div class="loading">Đang tải dữ liệu...</div>';
-
-  const res = await fetch('/api/start-day', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ new: n }),
-  });
-  const data  = await res.json();
-  allCards      = data.cards;
-  dictionaryCards = data.all_cards || data.cards;
-  reviewCount   = data.review;
-  newServed     = data.today_introduced + data.new;
-  newIntroduced = data.today_introduced;"""
-    new_fetch = """async function _fetchAndRender(n) {
-  document.getElementById('flashSection').innerHTML = '<div class="loading">Đang tải dữ liệu...</div>';
-
-  const today = new Date().toLocaleDateString('en-CA');
-  const prog = getProgress();
-  const vocabKeys = new Set((typeof VOCAB_DATA !== 'undefined' ? VOCAB_DATA : []).map(c => c.key));
-  let today_n = 0;
-  for (const [key, val] of Object.entries(prog)) {
-    if (val && val.date === today && vocabKeys.has(key)) today_n++;
-  }
-  const remaining_new = Math.max(0, n - today_n);
-  const session = [];
-  let review_n = 0;
-  let new_n = 0;
-  for (const item of (typeof VOCAB_DATA !== 'undefined' ? VOCAB_DATA : [])) {
-    const c = { ...item };
-    const p = prog[c.key];
-    const d = p ? p.date : null;
-    if (d) {
-      c.fav = Boolean(p.fav);
-      c.known = Boolean(p.known);
-      c.is_new = false;
-      session.push(c);
-      if (d !== today) review_n++;
-    } else if (new_n < remaining_new) {
-      c.fav = p ? Boolean(p.fav) : false;
-      c.known = p ? Boolean(p.known) : false;
-      c.is_new = true;
-      session.push(c);
-      new_n++;
-    }
-  }
-  allCards = session;
-  dictionaryCards = typeof VOCAB_DATA !== 'undefined' ? VOCAB_DATA : session;
-  reviewCount = review_n;
-  newServed = today_n + new_n;
-  newIntroduced = today_n;"""
-    html = html.replace(old_fetch, new_fetch)
-
-    # 10. Replace ensureClusterData (API → offline CLUSTER_DATA + localStorage)
-    old_ensure = """async function ensureClusterData() {
-  if (clusterLoaded) return;
-  const res = await fetch('/api/clusters');
-  const data = await res.json();
-  clusterData = data.clusters;
-  clusterLoaded = true;
-}"""
-    new_ensure = """async function ensureClusterData() {
-  if (clusterLoaded) return;
-  const prog = getProgress();
-  clusterData = (typeof CLUSTER_DATA !== 'undefined' ? CLUSTER_DATA.clusters : []).map(c => {
-    const p = prog[c.id] || {};
-    return { ...c, fav: Boolean(p.fav), known: Boolean(p.known), introduced_date: p.date || null };
-  });
-  clusterLoaded = true;
-}"""
-    html = html.replace(old_ensure, new_ensure)
-
-    # 11. Replace cluster introduce (openClusterBack)
-    old_cluster_intro = """    fetch('/api/introduce', {
-      method: 'POST', headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ key: c.id }),
-    });"""
-    new_cluster_intro = """    saveProgress(c.id, { date: new Date().toLocaleDateString('en-CA') });"""
-    html = html.replace(old_cluster_intro, new_cluster_intro)
-
-    # 12. Replace cluster fav calls (front + back share same inline pattern → both replaced)
-    old_cluster_fav = """    fetch('/api/fav', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ key: c.id, fav: c.fav }) });"""
-    new_cluster_fav = """    saveProgress(c.id, { fav: c.fav });"""
-    html = html.replace(old_cluster_fav, new_cluster_fav)
-
-    # 13. Replace cluster known call
-    old_cluster_known = """    fetch('/api/known', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ key: c.id, known: c.known }) });"""
-    new_cluster_known = """    saveProgress(c.id, { known: c.known });"""
-    html = html.replace(old_cluster_known, new_cluster_known)
+    # 3. Patch the Sync button to use saveProgressData
+    html = html.replace(
+        "localStorage.setItem('vocab_progress', JSON.stringify(data.progress));",
+        "if (typeof window.saveProgressData === 'function') { window.saveProgressData(data.progress); } else { localStorage.setItem('vocab_progress', JSON.stringify(data.progress)); }"
+    )
+    html = html.replace(
+        "(JSON.parse(localStorage.getItem('vocab_progress') || '{}'))",
+        "(typeof window.getProgress === 'function' ? window.getProgress() : JSON.parse(localStorage.getItem('vocab_progress') || '{}'))"
+    )
 
     with open(OUT_HTML, "w", encoding="utf-8") as f:
         f.write(html)
-    print(f"[OK] (1/4) Generated offline mobile app at {OUT_HTML}")
-
-    # Generate vocab.js from vocab.json
-    cards = load_vocab(VOCAB_JSON)
-    js_content = f"// Auto-generated from vocab.json\nconst VOCAB_DATA = {json.dumps(cards, ensure_ascii=False, indent=2)};\n"
-    with open(VOCAB_JS, "w", encoding="utf-8") as f:
-        f.write(js_content)
-    print(f"[OK] (2/4) Generated {VOCAB_JS} with {len(cards)} cards.")
-
-    # Generate clusters.js from clusters.json
-    if CLUSTERS_JSON.exists():
-        with open(CLUSTERS_JSON, encoding="utf-8") as f:
-            clusters_data = json.load(f)
-        js_content = f"// Auto-generated from clusters.json\nconst CLUSTER_DATA = {json.dumps(clusters_data, ensure_ascii=False, indent=2)};\n"
-        with open(CLUSTERS_JS, "w", encoding="utf-8") as f:
-            f.write(js_content)
-        print(f"[OK] (3/4) Generated {CLUSTERS_JS} with {len(clusters_data.get('clusters', []))} clusters.")
-    else:
-        print("[SKIP] clusters.json not found, skipping clusters.js.")
+    print(f"[OK] Generated offline mobile app at {OUT_HTML}")
 
     # Generate sw.js with Network-First offline fallback strategy
     sw_path = MOBILE_DIR / "sw.js"
@@ -303,7 +255,6 @@ if ('serviceWorker' in navigator) {
   './',
   './index.html',
   './vocab.js',
-  './clusters.js',
   './manifest.json'
 ];
 
@@ -325,7 +276,6 @@ self.addEventListener('activate', e => {
   self.clients.claim();
 });
 
-// Network First, fallback to Cache (Luôn lấy code mới nhất khi có mạng, dùng offline khi mất mạng)
 self.addEventListener('fetch', e => {
   e.respondWith(
     fetch(e.request)
@@ -340,12 +290,10 @@ self.addEventListener('fetch', e => {
 """
     with open(sw_path, "w", encoding="utf-8") as f:
         f.write(sw_content)
-    print(f"[OK] (4/4) Generated offline service worker at {sw_path}")
+    print(f"[OK] Generated offline service worker at {sw_path}")
 
-    # Ensure .nojekyll exists for GitHub Pages compatibility
     with open(MOBILE_DIR / ".nojekyll", "w", encoding="utf-8") as f:
         f.write("# Disable Jekyll\n")
 
 if __name__ == "__main__":
     main()
-
