@@ -154,14 +154,6 @@ h1 { font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; ga
   filter: drop-shadow(0 2px 6px rgba(124, 58, 237, 0.25));
   letter-spacing: -0.03em;
 }
-.btn-settings {
-  min-height: 38px; padding: 0 14px;
-  border-radius: 10px; border: 1px solid #cbd5e1;
-  background: #ffffff; cursor: pointer; font-size: 0.85rem; font-weight: 600; color: #334155;
-  transition: all 0.15s; box-shadow: 0 1px 2px rgba(0,0,0,0.03);
-}
-.btn-settings:hover { background: #f8fafc; border-color: #94a3b8; }
-
 /* Primary Navigation Mode Bar */
 .mode-bar {
   display: flex; gap: 8px; width: 100%;
@@ -897,6 +889,7 @@ h1 { font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; ga
 [data-theme="dark"] .btn-cluster-fav-back { background: #334155; border-color: #475569; color: #64748b; }
 [data-theme="dark"] .result-box h2, [data-theme="dark"] .result-box p { color: #f8fafc; }
 [data-theme="dark"] .history-box h2 { color: #f8fafc !important; }
+[data-theme="dark"] .setup-ip-input { background: #0f172a; border-color: #334155; color: #f8fafc; }
 [data-theme="dark"] .btn-back-clean { background: #1e293b !important; border-color: #334155 !important; color: #cbd5e1 !important; }
 [data-theme="dark"] .btn-back-clean:hover { background: #334155 !important; color: #f8fafc !important; }
 [data-theme="dark"] .quiz-q-text div { color: #cbd5e1 !important; }
@@ -991,11 +984,27 @@ h1 { font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; ga
 </div>
 
 <!-- ── HISTORY OVERLAY ────────────────────────────────── -->
+<!-- ── SYNC DIALOG ─────────────────────────────────────── -->
+<div id="syncDialog" class="hidden" style="position:fixed;inset:0;background:rgba(0,0,0,0.4);z-index:1000;display:flex;align-items:center;justify-content:center;padding:24px;">
+  <div class="setup-box" style="max-width:380px;">
+    <h2 style="margin:0 0 6px;">🔄 Đồng bộ với PC</h2>
+    <p class="setup-subtitle" style="margin-bottom:16px;">Nhập địa chỉ PC đang chạy server</p>
+    <input type="text" id="syncIpInput" class="setup-ip-input" style="width:100%;box-sizing:border-box;padding:12px 14px;border-radius:12px;border:1.5px solid #cbd5e1;font-size:0.95rem;font-family:inherit;outline:none;margin-bottom:16px;">
+    <div style="display:flex;gap:10px;">
+      <button id="btnSyncCancel" class="btn-settings" style="flex:1;padding:12px;border-radius:12px;">Huỷ</button>
+      <button id="btnSyncConfirm" class="btn-start" style="flex:2;padding:12px;margin:0;border-radius:12px;">Đồng bộ</button>
+    </div>
+  </div>
+</div>
+
 <div id="historyOverlay" class="hidden">
   <div class="history-box" style="padding:0; overflow:hidden; display:flex; flex-direction:column;">
     <div style="display:flex; justify-content:space-between; align-items:center; padding: 24px 24px 12px 24px;">
       <h2 style="font-size:1.3rem; margin:0;">📅 Lịch sử học</h2>
-      <button onclick="document.getElementById('historyOverlay').classList.add('hidden')" style="background:transparent; border:none; font-size:1.5rem; cursor:pointer; color:#64748b; line-height:1;">&times;</button>
+      <div style="display:flex; align-items:center; gap:10px;">
+        <button id="btnHistoryFilterUnknown" style="font-size:0.78rem; font-weight:600; padding:5px 10px; border-radius:8px; border:1.5px solid #e2e8f0; background:#f8fafc; color:#64748b; cursor:pointer;">Chưa thuộc</button>
+        <button onclick="document.getElementById('historyOverlay').classList.add('hidden')" style="background:transparent; border:none; font-size:1.5rem; cursor:pointer; color:#64748b; line-height:1;">&times;</button>
+      </div>
     </div>
     <div id="historyContent" style="padding: 0 24px 24px 24px; overflow-y: auto; max-height: calc(80vh - 70px);"><p style="color:#9ca3af;font-size:0.85rem">Đang tải...</p></div>
   </div>
@@ -1050,9 +1059,12 @@ h1 { font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; ga
 
     <div class="settings-group">
       <p class="setup-section-title" style="margin-bottom:12px; font-size:0.85rem;">TÀI KHOẢN & DỮ LIỆU</p>
-      <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px;">
-        <button class="btn-settings" id="btnOpenHistory" style="background:#f1f5f9; color:#334155; border:1px solid #e2e8f0; font-weight:600; padding:12px; border-radius:12px; cursor:pointer;">📅 Lịch sử</button>
-        <button class="btn-settings" id="btnSyncPC" style="background:#f1f5f9; color:#334155; border:1px solid #e2e8f0; font-weight:600; padding:12px; border-radius:12px; cursor:pointer;">🔄 Đồng bộ</button>
+      <div style="margin-bottom:12px;">
+        <button class="btn-settings" id="btnSyncPC" style="width:100%; background:#f1f5f9; color:#334155; border:1px solid #e2e8f0; font-weight:600; padding:12px; border-radius:12px; cursor:pointer;">🔄 Đồng bộ với PC</button>
+        <p id="syncStatusText" style="font-size:0.78rem; color:#94a3b8; margin:6px 0 0 2px;"></p>
+      </div>
+      <div style="margin-bottom: 12px;">
+        <button class="btn-settings" id="btnOpenHistory" style="width:100%; background:#f1f5f9; color:#334155; border:1px solid #e2e8f0; font-weight:600; padding:12px; border-radius:12px; cursor:pointer;">📅 Lịch sử</button>
       </div>
       <button id="btnReset" style="width:100%; background:#fef2f2; color:#ef4444; border:2px solid #fecaca; font-weight:600; padding:12px; border-radius:12px; cursor:pointer; transition:all 0.2s;">⚠️ Xóa toàn bộ tiến độ</button>
     </div>
@@ -1103,6 +1115,8 @@ h1 { font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; ga
   </div>
 
   <div class="stats" id="stats"></div>
+  <!-- S6: quick stats strip — only visible on flash tab (tab-only-flash) -->
+  <div id="quickStatsBar" class="tab-only-flash" style="display:none; justify-content:center; gap:16px; flex-wrap:wrap; margin:6px 0 10px; font-size:0.82rem; font-weight:600; color:#64748b;"></div>
 </div>
 
 <!-- ── FLASHCARD ──────────────────────────────────────── -->
@@ -1268,7 +1282,7 @@ async function showLoginOverlay(isSwitching = false) {
     overlay.classList.toggle('is-switching', isSwitching);
     document.getElementById('pinForm').classList.add('hidden');
     document.getElementById('userList').classList.remove('hidden');
-    
+
     const closeBtn = document.getElementById('btnCloseLogin');
     if (closeBtn) {
         closeBtn.style.display = isSwitching ? 'block' : 'none';
@@ -1330,7 +1344,7 @@ async function submitLogin() {
         localStorage.setItem('vocabUserPin', pin);
         document.getElementById('loginOverlay').classList.add('hidden');
         document.getElementById('settingsOverlay').classList.add('hidden');
-        loadCards(); 
+        loadCards();
     } else {
         alert('Mã PIN không đúng!');
         document.getElementById('pinInput').value = '';
@@ -1338,7 +1352,7 @@ async function submitLogin() {
 }
 
 document.getElementById('pinInput').addEventListener('keypress', function (e) {
-    if (e.key === 'Enter') submitLogin();
+    if (e.key === 'Enter' && !document.getElementById('pinForm').classList.contains('hidden')) submitLogin();
 });
 
 // Remove immediate auth check, show on start instead
@@ -1350,7 +1364,10 @@ let cardFilter = 'all'; // 'all' | 'unknown' | 'new'
 let dailyNew = parseInt(localStorage.getItem('vocabDailyNew') || '10');
 let extraNew = 0;
 let reviewCount = 0, newServed = 0, newIntroduced = 0;
-let flashCards = [], flashIdx = 0, flipped = false, knownCount = 0, unknownCount = 0;
+let flashCards = [], flashIdx = 0, flipped = false;
+let sessionMarks = new Map(); // key → true/false, tracks last mark per card this session
+function knownCount()   { return [...sessionMarks.values()].filter(v => v).length; }
+function unknownCount() { return [...sessionMarks.values()].filter(v => !v).length; }
 let quizCards  = [], quizIdx  = 0, quizScore = 0, quizWrong = 0, quizType = 'vi_to_en';
 
 // ── TTS ───────────────────────────────────────────────────────────────────────
@@ -1364,7 +1381,7 @@ function speak(text, accent) {
 }
 
 // ── KNOWN ─────────────────────────────────────────────────────────────────────
-async function setKnown(c, value) {
+function setKnown(c, value) {
   c.known = value;
   fetch('/api/known', {
     method: 'POST',
@@ -1400,11 +1417,11 @@ document.getElementById('dailySlider').addEventListener('input', updateSetupUI);
 document.getElementById('btnStart').addEventListener('click', async () => {
   const newDaily = +document.getElementById('dailySlider').value;
   const oldDaily = localStorage.getItem('vocabDailyNew') !== null ? +localStorage.getItem('vocabDailyNew') : 10;
-  
+
   dailyNew = newDaily;
   localStorage.setItem('vocabDailyNew', dailyNew);
   document.getElementById('settingsOverlay').classList.add('hidden');
-  
+
   if (newDaily !== oldDaily) {
     await loadCards();
   }
@@ -1412,25 +1429,48 @@ document.getElementById('btnStart').addEventListener('click', async () => {
 
 document.getElementById('btnOpenSettings').addEventListener('click', showSetup);
 
-document.getElementById('btnOpenHistory').addEventListener('click', async () => {
-  document.getElementById('settingsOverlay').classList.add('hidden');
-  document.getElementById('historyOverlay').classList.remove('hidden');
-  const res  = await fetch('/api/history');
-  const data = await res.json();
-  const el   = document.getElementById('historyContent');
-  if (!data.length) {
-    el.innerHTML = '<p style="color:#9ca3af;font-size:0.85rem">Chưa có lịch sử học.</p>';
-    return;
-  }
-  const today = new Date().toLocaleDateString('en-CA'); // YYYY-MM-DD local time
-  el.innerHTML = data.map(day => {
+let _historyData = [];
+let _historyFilterUnknown = false;
+
+function renderHistoryContent() {
+  const el = document.getElementById('historyContent');
+  const knownSet = new Set((allCards || []).filter(c => c.known).map(c => c.term));
+  const today = new Date().toLocaleDateString('en-CA');
+  const days = _historyData.map(day => {
+    const words = _historyFilterUnknown ? day.words.filter(w => !knownSet.has(w)) : day.words;
+    if (!words.length) return '';
     const label = day.date === today ? 'Hôm nay' :
       new Date(day.date + 'T00:00:00').toLocaleDateString('vi-VN', { day: '2-digit', month: '2-digit', year: 'numeric' });
     return `<div class="history-day">
-      <div class="history-date">📆 ${label}<em>${day.words.length} từ</em></div>
-      <div class="history-words">${day.words.map(w => `<span class="history-word">${w}</span>`).join('')}</div>
+      <div class="history-date">📆 ${label}<em>${words.length} từ</em></div>
+      <div class="history-words">${words.map(w => `<span class="history-word">${w}</span>`).join('')}</div>
     </div>`;
-  }).join('');
+  }).filter(Boolean).join('');
+  el.innerHTML = days || '<p style="color:#9ca3af;font-size:0.85rem">Không có từ nào phù hợp.</p>';
+}
+
+document.getElementById('btnOpenHistory').addEventListener('click', async () => {
+  document.getElementById('settingsOverlay').classList.add('hidden');
+  document.getElementById('historyOverlay').classList.remove('hidden');
+  const el = document.getElementById('historyContent');
+  el.innerHTML = '<p style="color:#9ca3af;font-size:0.85rem">Đang tải...</p>';
+  try {
+    const res = await fetch('/api/history');
+    _historyData = await res.json();
+  } catch(e) { _historyData = []; }
+  if (!_historyData.length) {
+    el.innerHTML = '<p style="color:#9ca3af;font-size:0.85rem">Chưa có lịch sử học.</p>';
+    return;
+  }
+  renderHistoryContent();
+});
+
+document.getElementById('btnHistoryFilterUnknown').addEventListener('click', function() {
+  _historyFilterUnknown = !_historyFilterUnknown;
+  this.style.background = _historyFilterUnknown ? '#4f46e5' : '#f8fafc';
+  this.style.color = _historyFilterUnknown ? '#fff' : '#64748b';
+  this.style.borderColor = _historyFilterUnknown ? '#4f46e5' : '#e2e8f0';
+  if (_historyData.length) renderHistoryContent();
 });
 
 // Removed btnCloseHistory listener
@@ -1483,9 +1523,16 @@ async function updateCurrentUserUI() {
 async function loadCards() {
   extraNew = 0;
   deck = 'all'; topic = 'all'; cardFilter = 'all';
+  _clusterPromise = null;  // reset cluster cache on user switch
   buildDeckBar();
   updateCurrentUserUI();
   await _fetchAndRender(dailyNew);
+  // S2: silent auto-sync using saved IP or default Tailscale hostname
+  const savedIp = localStorage.getItem('last_pc_ip') || DEFAULT_PC_IP;
+  if (savedIp) {
+    const url = getSyncUrl(savedIp);
+    if (url) doSync(url, true).catch(() => {});
+  }
 }
 
 async function loadMoreCards() {
@@ -1493,15 +1540,66 @@ async function loadMoreCards() {
   await _fetchAndRender(dailyNew + extraNew);
 }
 
+// S6: Render quick stats strip (known count + streak)
+async function renderQuickStats() {
+  const bar = document.getElementById('quickStatsBar');
+  if (!bar || !allCards) return;
+
+  // known count from allCards (server already merges progress into cards)
+  const knownN = allCards.filter(c => c.known).length;
+  const totalN = dictionaryCards ? dictionaryCards.length : allCards.length;
+
+  // streak: fetch history, count consecutive days ending today/yesterday
+  let streak = 0;
+  try {
+    const res = await fetch('/api/history');
+    if (res.ok) {
+      const hist = await res.json(); // [{date, words}] sorted desc
+      const dates = new Set(hist.map(d => d.date));
+      const today = new Date();
+      for (let i = 0; i < 365; i++) {
+        const d = new Date(today);
+        d.setDate(today.getDate() - i);
+        const ds = d.toLocaleDateString('en-CA');
+        if (dates.has(ds)) streak++;
+        else if (i > 0) break; // gap found — stop (allow miss today)
+      }
+    }
+  } catch(e) {}
+
+  // display is controlled by tab switch handler via tab-only-flash class
+  // Only set if currently on flash tab (avoid showing on other tabs after switch)
+  if (mode === 'flash') bar.style.display = 'flex';
+  bar.innerHTML =
+    `<span id="statKnown">📚 Đã thuộc: <strong style="color:#10b981">${knownN}</strong> / ${totalN}</span>` +
+    (streak > 0 ? `<span>🔥 Streak: <strong style="color:#f59e0b">${streak} ngày</strong></span>` : '');
+}
+
+function updateKnownCount() {
+  const el = document.getElementById('statKnown');
+  if (!el || !allCards) return;
+  const knownN = allCards.filter(c => c.known).length;
+  const totalN = dictionaryCards ? dictionaryCards.length : allCards.length;
+  el.innerHTML = `📚 Đã thuộc: <strong style="color:#10b981">${knownN}</strong> / ${totalN}`;
+}
+
 async function _fetchAndRender(n) {
   document.getElementById('flashSection').innerHTML = '<div class="loading">Đang tải dữ liệu...</div>';
 
-  const res = await fetch('/api/start-day', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ new: n }),
-  });
-  const data  = await res.json();
+  let data;
+  try {
+    const res = await fetch('/api/start-day', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ new: n }),
+    });
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    data = await res.json();
+  } catch (e) {
+    document.getElementById('flashSection').innerHTML =
+      '<div class="loading" style="color:#ef4444;">❌ Không tải được dữ liệu. Hãy kiểm tra kết nối và thử lại.</div>';
+    return;
+  }
   allCards      = data.cards;
   dictionaryCards = data.all_cards || data.cards;
   reviewCount   = data.review;
@@ -1509,6 +1607,7 @@ async function _fetchAndRender(n) {
   newIntroduced = data.today_introduced;
 
   buildDeckBar();
+  renderQuickStats();
 
   document.getElementById('flashSection').innerHTML = `
     <div id="cardArea">
@@ -1530,13 +1629,11 @@ async function _fetchAndRender(n) {
                 </div>
                 <div class="pron-block" id="pronFront"></div>
                 <div class="en-example" id="enExample"></div>
-                <div class="flip-hint">👆 Tap để xem nghĩa</div>
               </div>
               <div class="card-face card-back">
                 <div class="vi-meaning" id="viMeaning"></div>
                 <div class="pron-block" id="pronBack"></div>
                 <div class="card-extra hidden" id="cardExtra"></div>
-                <div class="flip-hint">👆 Tap để lật lại · Nút bên dưới để tiếp tục</div>
               </div>
             </div>
           </div>
@@ -1570,7 +1667,7 @@ function getDeckCards() {
   if (deck === 'fav') return allCards.filter(c => c.fav);
   if (deck === 'B1')  return allCards.filter(c => c.deck === 'B1');
   if (deck === 'B2')  return allCards.filter(c => c.deck === 'B2');
-  if (deck === 'C1')  return allCards.filter(c => c.deck === 'C1');
+  if (deck === 'C1')  return allCards.filter(c => c.deck === 'C1' || c.deck === 'C1/C2');
   return [...allCards];
 }
 
@@ -1605,7 +1702,7 @@ function buildDeckBar() {
   } else {
     const b1n = allCards ? allCards.filter(c => c.deck === 'B1').length : 0;
     const b2n = allCards ? allCards.filter(c => c.deck === 'B2').length : 0;
-    const c1n = allCards ? allCards.filter(c => c.deck === 'C1').length : 0;
+    const c1n = allCards ? allCards.filter(c => c.deck === 'C1' || c.deck === 'C1/C2').length : 0;
     items = [
       ['all', '🌐 All Levels', 'All'],
       ['B1', `📗 B1 Vocab (${b1n})`, `B1 (${b1n})`],
@@ -1804,14 +1901,10 @@ function startSession() {
   const active = shuffle(getActive());
   flashCards = active;
   quizCards  = shuffle(getActive());
-  flashIdx = 0; flipped = false; knownCount = 0; unknownCount = 0;
+  flashIdx = 0; flipped = false; sessionMarks = new Map();
   quizIdx  = 0; quizScore = 0; quizWrong = 0;
   if (mode === 'flash') renderFlash();
   else renderQuiz();
-}
-
-function updateProgress(cur, total) {
-  // Removed progress bar UI, kept function to avoid breaking existing calls
 }
 
 // ── PRONUNCIATION ─────────────────────────────────────────────────────────────
@@ -1847,16 +1940,14 @@ function renderFlash() {
     document.getElementById('resUnknown').textContent = '';
     document.getElementById('flashResult').querySelector('h2').textContent = '😕 Không có thẻ nào';
     document.getElementById('flashResult').classList.remove('hidden');
-    updateProgress(0, 0);
     return;
   }
   if (flashIdx >= flashCards.length) {
     document.getElementById('cardArea').classList.add('hidden');
-    document.getElementById('resKnow').textContent    = `✓ Nhớ: ${knownCount}`;
-    document.getElementById('resUnknown').textContent = `✗ Cần ôn: ${unknownCount}`;
+    document.getElementById('resKnow').textContent    = `✓ Nhớ: ${knownCount()}`;
+    document.getElementById('resUnknown').textContent = `✗ Cần ôn: ${unknownCount()}`;
     document.getElementById('flashResult').querySelector('h2').textContent = '🎉 Xong rồi!';
     document.getElementById('flashResult').classList.remove('hidden');
-    updateProgress(flashCards.length, flashCards.length);
     return;
   }
 
@@ -1921,9 +2012,12 @@ function renderFlash() {
   flipped = false;
   document.getElementById('btnNavPrev').disabled = (flashIdx === 0);
   document.getElementById('btnNavNext').disabled = (flashIdx >= flashCards.length - 1);
-  updateProgress(flashIdx, flashCards.length);
+  updateFlashStats();
+}
+
+function updateFlashStats() {
   document.getElementById('stats').innerHTML =
-    `Thẻ ${flashIdx + 1}/${flashCards.length} &nbsp;·&nbsp; <span class="badge-know">Nhớ: ${knownCount}</span> &nbsp;·&nbsp; <span class="badge-unk">Cần ôn: ${unknownCount}</span> &nbsp;·&nbsp; Ôn: ${reviewCount} · Học mới: ${newIntroduced}/${newServed}`;
+    `Thẻ ${flashIdx + 1}/${flashCards.length} &nbsp;·&nbsp; <span class="badge-unk">✗ ${unknownCount()}</span> &nbsp;<span class="badge-know">✓ ${knownCount()}</span> &nbsp;·&nbsp; Học mới: ${newIntroduced}/${newServed}`;
 }
 
 function introduceCard(c) {
@@ -1944,6 +2038,7 @@ function flipCard() {
     document.getElementById('flashBtns').classList.add('hidden');
   } else {
     introduceCard(flashCards[flashIdx]);
+    updateFlashStats();
     flipped = true;
     document.getElementById('card').classList.add('flipped');
     document.getElementById('flashBtns').classList.remove('hidden');
@@ -1951,10 +2046,12 @@ function flipCard() {
 }
 
 function markCard(known) {
-  setKnown(flashCards[flashIdx], known);
-  if (known) knownCount++; else unknownCount++;
+  const c = flashCards[flashIdx];
+  setKnown(c, known);
+  sessionMarks.set(c.key, known);
   flashIdx++;
   renderFlash();
+  updateKnownCount();
 }
 
 function bindFlashEvents() {
@@ -2012,8 +2109,8 @@ function bindFlashEvents() {
 // ── QUIZ DISTRACTOR & ADAPTIVE HELPER FUNCTIONS ──────────────────────────────
 let currentDifficulty = 'auto';
 
-function setDifficulty(mode) {
-  currentDifficulty = mode;
+function setDifficulty(diffVal) {
+  currentDifficulty = diffVal;
   buildDifficultyBar();
   if (typeof practiceSubMode !== 'undefined' && practiceSubMode === 'cluster_quiz') {
     renderClusterQuiz();
@@ -2040,7 +2137,7 @@ function getCardTier(c) {
   if (currentDifficulty !== 'auto') {
     return currentDifficulty.toUpperCase();
   }
-  if (c.known || c.deck === 'C1' || c.deck === 'B2') {
+  if (c.known || c.deck === 'C1' || c.deck === 'C1/C2' || c.deck === 'B2') {
     return Math.random() < 0.65 ? 'HARDCORE' : 'HARD';
   }
   const rand = Math.random();
@@ -2102,7 +2199,7 @@ function getSmartDistractors(c, count, tier, type, targetString) {
     if (x.key === c.key || x.term.toLowerCase() === targetLower) return false;
     const xPos = (x.pos || '').toLowerCase();
     const posMatch = (isVerb && xPos.includes('v.')) || (isNoun && xPos.includes('n.')) || (isAdj && xPos.includes('adj.')) || (!isVerb && !isNoun && !isAdj);
-    const levelMatch = (tier === 'HARD' || tier === 'HARDCORE') ? (x.deck === 'C1' || x.deck === 'B2') : true;
+    const levelMatch = (tier === 'HARD' || tier === 'HARDCORE') ? (x.deck === 'C1' || x.deck === 'C1/C2' || x.deck === 'B2') : true;
     return posMatch && levelMatch && x.topic === c.topic;
   }));
 
@@ -2111,7 +2208,7 @@ function getSmartDistractors(c, count, tier, type, targetString) {
 
   const combined = [];
   const seen = new Set([targetLower, c.term.toLowerCase()]);
-  
+
   [...orthoTraps, ...posAndLevelMatches, ...topicMatches, ...generalMatches].forEach(item => {
     const itemTermLower = item.term.toLowerCase();
     if (!seen.has(itemTermLower) && combined.length < count) {
@@ -2132,7 +2229,6 @@ function renderQuiz() {
     document.getElementById('quizResultText').textContent = '';
     document.getElementById('quizResult').querySelector('h2').textContent = '😕 Không có thẻ nào';
     document.getElementById('quizResult').classList.remove('hidden');
-    updateProgress(0, 0);
     return;
   }
   if (quizIdx >= quizCards.length) {
@@ -2142,7 +2238,6 @@ function renderQuiz() {
       `Đúng <strong>${quizScore} / ${quizCards.length}</strong> (${pct}%)`;
     document.getElementById('quizResult').querySelector('h2').textContent = '🎯 Kết quả';
     document.getElementById('quizResult').classList.remove('hidden');
-    updateProgress(quizCards.length, quizCards.length);
     return;
   }
 
@@ -2343,7 +2438,6 @@ function renderQuiz() {
   }
 
   document.getElementById('btnNext').classList.add('hidden');
-  updateProgress(quizIdx, quizCards.length);
   document.getElementById('stats').innerHTML =
     `Câu ${quizIdx + 1}/${quizCards.length} &nbsp;·&nbsp; <span class="badge-know">Đúng: ${quizScore}</span> &nbsp;·&nbsp; <span class="badge-unk">Sai: ${quizWrong}</span> &nbsp;·&nbsp; ${diffBadgeHtml}`;
 }
@@ -2455,7 +2549,6 @@ function renderClusterQuiz() {
     document.getElementById('cqResultText').innerHTML =
       `Đúng <strong>${cqScore} / ${cqQuestions.length}</strong> (${pct}%)`;
     result.classList.remove('hidden');
-    updateProgress(cqQuestions.length, cqQuestions.length);
     return;
   }
 
@@ -2466,7 +2559,6 @@ function renderClusterQuiz() {
   document.getElementById('cqBtnNext').classList.add('hidden');
   document.getElementById('cqOpts').innerHTML = '';
   document.getElementById('cqTimeline').classList.add('hidden');
-  updateProgress(cqIdx, cqQuestions.length);
   const diffMap = {
     'auto': '<span class="badge-tier badge-auto" style="margin-left:4px">🎲 Auto</span>',
     'easy': '<span class="badge-tier badge-easy" style="margin-left:4px">🟢 Easy</span>',
@@ -2720,6 +2812,12 @@ document.getElementById('modeSel').addEventListener('click', e => {
   document.getElementById('flashSection').classList.toggle('hidden', mode !== 'flash');
   document.getElementById('quizSection').classList.toggle('hidden', mode !== 'quiz');
   document.getElementById('clusterSection').classList.toggle('hidden', mode !== 'cluster');
+  // Tab-specific elements: add class "tab-only-flash/quiz/cluster" to show only on that tab
+  ['flash', 'quiz', 'cluster'].forEach(m => {
+    document.querySelectorAll(`.tab-only-${m}`).forEach(el => {
+      el.style.display = mode === m ? (el.dataset.tabDisplay || 'flex') : 'none';
+    });
+  });
   updatePracticeBackBar();
   if (mode === 'cluster') {
     activateClusters();
@@ -2743,7 +2841,6 @@ function showPracticeHome() {
   document.getElementById('quizResult').classList.add('hidden');
   document.getElementById('clusterPracticePane').classList.add('hidden');
   document.getElementById('clusterQuizArea').classList.add('hidden');
-  updateProgress(0, 0);
 }
 
 document.getElementById('quizSection').addEventListener('click', e => {
@@ -2783,7 +2880,7 @@ document.getElementById('quizSection').addEventListener('click', e => {
   }
   // Cluster quiz nav
   if (e.target.id === 'cqBtnNext') { cqIdx++; renderClusterQuiz(); return; }
-  if (e.target.id === 'btnCqRetry') { cqIdx = 0; cqScore = 0; renderClusterQuiz(); return; }
+  if (e.target.id === 'btnCqRetry') { cqIdx = 0; cqScore = 0; cqWrong = 0; renderClusterQuiz(); return; }
   if (e.target.id === 'btnExitClusterQuiz') { exitClusterQuiz(); return; }
 });
 
@@ -2797,7 +2894,8 @@ const REG_CONFIG = {
 const TYPE_LABELS = { synonym:'Synonym', casual:'Casual', thematic:'Thematic', collocation:'Collocation', filler:'Filler' };
 
 let clusterData = [], clusterCards = [], clusterIdx = 0;
-let clusterTypeFilter = 'all', clusterRegFilter = 'all', clusterLoaded = false;
+let clusterTypeFilter = 'all', clusterRegFilter = 'all';
+let _clusterPromise = null;
 
 function clusterState(c) {
   if (c.known) return 'known';
@@ -2807,11 +2905,13 @@ function clusterState(c) {
 const STATE_ICON = { new:'👁️', learning:'🌱', known:'✅' };
 
 async function ensureClusterData() {
-  if (clusterLoaded) return;
-  const res = await fetch('/api/clusters');
-  const data = await res.json();
-  clusterData = data.clusters;
-  clusterLoaded = true;
+  if (!_clusterPromise) {
+    _clusterPromise = fetch('/api/clusters')
+      .then(r => { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+      .then(data => { clusterData = data.clusters || []; })
+      .catch(e => { _clusterPromise = null; throw e; });
+  }
+  return _clusterPromise;
 }
 
 async function activateClusters() {
@@ -2917,7 +3017,6 @@ function renderCluster() {
   document.getElementById('clusterNavInfo').textContent = `${clusterIdx + 1} / ${clusterCards.length}`;
   document.getElementById('btnClusterPrev').disabled = clusterIdx === 0;
   document.getElementById('btnClusterNext').disabled = false;
-  updateProgress(clusterIdx, clusterCards.length);
   document.getElementById('stats').innerHTML =
     `Cluster ${clusterIdx + 1}/${clusterCards.length} &nbsp;·&nbsp; <span class="badge-know">✅ Thuộc: ${clusterCards.filter(c => c.known).length}</span>`;
 }
@@ -3112,43 +3211,106 @@ document.getElementById('clusterSection').addEventListener('click', e => {
   }
 });
 
-const btnSync = document.getElementById('btnSyncPC');
-if (btnSync) {
-  btnSync.addEventListener('click', async () => {
-    let defaultIp = localStorage.getItem('last_pc_ip') || "luongblue.tail6851a5.ts.net";
-    if (defaultIp === "100.65.37.111") defaultIp = "luongblue.tail6851a5.ts.net";
-    const ip = prompt("Nhập tên miền Tailscale HTTPS PC hoặc IP:", defaultIp);
-    if (!ip) return;
-    const target = ip.trim();
-    localStorage.setItem('last_pc_ip', target);
-    let url = '';
-    if (target.startsWith('http://') || target.startsWith('https://')) {
-      url = target.replace(/\/$/, '') + '/api/sync';
-    } else if (target.includes('.ts.net')) {
-      url = `https://${target}/api/sync`;
-    } else {
-      url = `http://${target}:5100/api/sync`;
-    }
-    try {
-      const prog = typeof getProgress === 'function' ? getProgress() : (JSON.parse(localStorage.getItem('vocab_progress') || '{}'));
-      const res = await fetch(url, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ progress: prog })
-      });
-      const data = await res.json();
-      if (data.ok && data.progress) {
-        localStorage.setItem('vocab_progress', JSON.stringify(data.progress));
-        alert("🎉 Đồng bộ thành công với PC!");
-        if (typeof loadCards === 'function') loadCards();
-      } else {
-        alert("❌ Lỗi đồng bộ: " + (data.error || "Không xác định"));
-      }
-    } catch (e) {
-      alert("❌ Không thể kết nối với PC tại " + url + ". Hãy kiểm tra PC đã chạy lệnh tailscale serve hoặc run.bat!");
-    }
-  });
+// ── TOAST ────────────────────────────────────────────────────────────────────
+function showToast(msg, type = 'ok') {
+  let el = document.getElementById('toastMsg');
+  if (!el) {
+    el = document.createElement('div');
+    el.id = 'toastMsg';
+    el.style.cssText = 'position:fixed;bottom:24px;left:50%;transform:translateX(-50%);padding:10px 20px;border-radius:12px;font-size:0.9rem;font-weight:600;z-index:9999;pointer-events:none;transition:opacity 0.3s;max-width:90vw;text-align:center;box-shadow:0 4px 16px rgba(0,0,0,0.15);';
+    document.body.appendChild(el);
+  }
+  el.style.background = type === 'ok' ? '#22c55e' : '#ef4444';
+  el.style.color = '#fff';
+  el.style.opacity = '1';
+  el.textContent = msg;
+  clearTimeout(el._t);
+  el._t = setTimeout(() => { el.style.opacity = '0'; }, 3000);
 }
+
+// ── SYNC HELPERS ─────────────────────────────────────────────────────────────
+function getSyncUrl(target) {
+  if (!target) return null;
+  if (target.startsWith('http://') || target.startsWith('https://')) return target.replace(/\/$/, '') + '/api/sync';
+  if (target.includes('.ts.net')) return `https://${target}/api/sync`;
+  return `http://${target}:5100/api/sync`;
+}
+
+let _syncInFlight = false;
+async function doSync(url, silent = false) {
+  if (_syncInFlight) return;
+  _syncInFlight = true;
+  try {
+    const prog = typeof getProgress === 'function' ? getProgress() : JSON.parse(localStorage.getItem('vocab_progress') || '{}');
+    const res = await fetch(url, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ progress: prog })
+    });
+    const data = await res.json();
+    if (data.ok && data.progress) {
+      typeof window.saveProgressData === 'function'
+        ? window.saveProgressData(data.progress)
+        : localStorage.setItem('vocab_progress', JSON.stringify(data.progress));
+      const now = new Date().toLocaleTimeString('vi-VN', { hour: '2-digit', minute: '2-digit' });
+      localStorage.setItem('last_sync_time', now);
+      const statusEl = document.getElementById('syncStatusText');
+      if (statusEl) statusEl.textContent = `Lần cuối: ${now}`;
+      if (!silent) {
+        showToast('Đồng bộ thành công!');
+        if (typeof loadCards === 'function') loadCards();
+      }
+    } else if (!silent) {
+      showToast('Lỗi đồng bộ: ' + (data.error || 'Không xác định'), 'err');
+    }
+  } finally {
+    _syncInFlight = false;
+  }
+}
+
+const DEFAULT_PC_IP = 'luongblue.tail6851a5.ts.net';
+
+// Restore last sync time display on load
+(function() {
+  const statusEl = document.getElementById('syncStatusText');
+  const lastSync = localStorage.getItem('last_sync_time');
+  if (statusEl && lastSync) statusEl.textContent = `Lần cuối: ${lastSync}`;
+})();
+
+// Sync button → open dialog with saved hostname pre-filled
+document.getElementById('btnSyncPC').addEventListener('click', () => {
+  const saved = localStorage.getItem('last_pc_ip') || DEFAULT_PC_IP;
+  document.getElementById('syncIpInput').value = saved;
+  document.getElementById('syncDialog').classList.remove('hidden');
+  setTimeout(() => document.getElementById('syncIpInput').focus(), 50);
+});
+
+document.getElementById('btnSyncCancel').addEventListener('click', () => {
+  document.getElementById('syncDialog').classList.add('hidden');
+});
+
+document.getElementById('syncDialog').addEventListener('click', e => {
+  if (e.target === e.currentTarget) e.currentTarget.classList.add('hidden');
+});
+
+async function runSyncFromDialog() {
+  const target = document.getElementById('syncIpInput').value.trim();
+  if (!target) { showToast('Vui lòng nhập địa chỉ PC', 'err'); return; }
+  localStorage.setItem('last_pc_ip', target);
+  document.getElementById('syncDialog').classList.add('hidden');
+  const url = getSyncUrl(target);
+  try {
+    await doSync(url);
+  } catch(e) {
+    showToast('Không kết nối được PC tại ' + target, 'err');
+  }
+}
+
+document.getElementById('btnSyncConfirm').addEventListener('click', runSyncFromDialog);
+document.getElementById('syncIpInput').addEventListener('keypress', e => {
+  if (e.key === 'Enter') runSyncFromDialog();
+});
+
 
 if (localStorage.getItem('vocabUserId') && localStorage.getItem('vocabUserPin')) {
     loadCards();

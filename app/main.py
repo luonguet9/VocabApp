@@ -40,9 +40,15 @@ def init_db():
                 fav             INTEGER DEFAULT 0,
                 known           INTEGER DEFAULT 0,
                 introduced_date TEXT,
+                updated_at      TEXT,
                 PRIMARY KEY (user_id, key)
             )
         """)
+        # Migration: add updated_at for existing DBs
+        try:
+            conn.execute("ALTER TABLE progress ADD COLUMN updated_at TEXT")
+        except Exception:
+            pass  # column already exists
 
 def get_users():
     path = BASE_DIR / "data" / "users.json"
@@ -106,8 +112,8 @@ def fav_card():
         return jsonify({"ok": False, "error": "missing key"}), 400
     with sqlite3.connect(DB_PATH) as conn:
         conn.execute(
-            "INSERT INTO progress(user_id,key,fav,known) VALUES(?,?,?,0) "
-            "ON CONFLICT(user_id,key) DO UPDATE SET fav=excluded.fav",
+            "INSERT INTO progress(user_id,key,fav,known,updated_at) VALUES(?,?,?,0,datetime('now')) "
+            "ON CONFLICT(user_id,key) DO UPDATE SET fav=excluded.fav, updated_at=excluded.updated_at",
             (user_id, key, 1 if data.get("fav") else 0)
         )
     return jsonify({"ok": True})
@@ -121,8 +127,8 @@ def known_card():
         return jsonify({"ok": False, "error": "missing key"}), 400
     with sqlite3.connect(DB_PATH) as conn:
         conn.execute(
-            "INSERT INTO progress(user_id,key,fav,known) VALUES(?,?,0,?) "
-            "ON CONFLICT(user_id,key) DO UPDATE SET known=excluded.known",
+            "INSERT INTO progress(user_id,key,fav,known,updated_at) VALUES(?,?,0,?,datetime('now')) "
+            "ON CONFLICT(user_id,key) DO UPDATE SET known=excluded.known, updated_at=excluded.updated_at",
             (user_id, key, 1 if data.get("known") else 0)
         )
     return jsonify({"ok": True})
@@ -168,7 +174,9 @@ def start_day():
             session.append(c)
             new_n += 1
 
-    return jsonify({"cards": session, "all_cards": all_cards, "review": review_n,
+    _POOL_FIELDS = {"key", "term", "vi", "pos", "deck", "topic", "en_def"}
+    pool = [{k: c[k] for k in _POOL_FIELDS if k in c} for c in all_cards]
+    return jsonify({"cards": session, "all_cards": pool, "review": review_n,
                     "today_introduced": today_n, "new": new_n})
 
 
@@ -263,17 +271,21 @@ def sync_progress():
             fav   = 1 if val.get("fav") else 0
             known = 1 if val.get("known") else 0
             dt    = val.get("date") if (val.get("date") and str(val.get("date")).strip()) else None
+            cat   = val.get("updated_at")  # client updated_at (ISO string)
             conn.execute(
-                "INSERT INTO progress(user_id,key,fav,known,introduced_date) VALUES(?,?,?,?,?) "
+                "INSERT INTO progress(user_id,key,fav,known,introduced_date,updated_at) VALUES(?,?,?,?,?,?) "
                 "ON CONFLICT(user_id,key) DO UPDATE SET "
-                "fav=max(fav, excluded.fav), "
-                "known=max(known, excluded.known), "
-                "introduced_date=COALESCE(introduced_date, excluded.introduced_date)",
-                (user_id, key, fav, known, dt)
+                "fav = CASE WHEN COALESCE(excluded.updated_at,'') > COALESCE(updated_at,'') THEN excluded.fav ELSE fav END, "
+                "known = CASE WHEN COALESCE(excluded.updated_at,'') > COALESCE(updated_at,'') THEN excluded.known ELSE known END, "
+                "updated_at = MAX(COALESCE(updated_at,''), COALESCE(excluded.updated_at,'')), "
+                "introduced_date = COALESCE(introduced_date, excluded.introduced_date)",
+                (user_id, key, fav, known, dt, cat)
             )
-        rows = conn.execute("SELECT key, fav, known, introduced_date FROM progress WHERE user_id = ?", (user_id,)).fetchall()
+        rows = conn.execute(
+            "SELECT key, fav, known, introduced_date, updated_at FROM progress WHERE user_id = ?", (user_id,)
+        ).fetchall()
         server_prog = {
-            r[0]: {"fav": bool(r[1]), "known": bool(r[2]), "date": r[3]}
+            r[0]: {"fav": bool(r[1]), "known": bool(r[2]), "date": r[3], "updated_at": r[4]}
             for r in rows
         }
     return jsonify({"ok": True, "progress": server_prog})

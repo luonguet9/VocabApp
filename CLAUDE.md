@@ -9,35 +9,35 @@ Hỗ trợ cả chế độ Web PC (Flask Backend đa người dùng) và ứng 
 - **Frontend**: Single-page app, vanilla JS, HTML5, modern design
 - **Storage**:
   - `data/users.json`: Danh sách người dùng và PIN để xác thực.
-  - `data/<user_id>/vocab.json`: Bộ từ vựng được gen riêng biệt cho từng người dùng (Ví dụ: `luong` có 1500 từ vựng chia thành 150 ngày học).
-  - `clusters.json` (root): 21 cụm từ (Collocation, Grammar, Idiom) gốc dùng chung cho mọi user.
-  - `progress.db`: SQLite lưu trạng thái học tập của người dùng. Khóa chính là `(user_id, key)`.
-- **Run**: `run.bat` — tự động kiểm tra dependencies, chạy server và mở browser ở chế độ PC.
+  - `data/<user_id>/vocab.json`: Bộ từ vựng riêng biệt cho từng user (luong: 1500 thẻ / 150 ngày).
+  - `clusters.json` (root): 21 cụm từ (Collocation, Grammar, Idiom) dùng chung cho mọi user.
+  - `progress.db`: SQLite lưu trạng thái học tập. Khóa chính là `(user_id, key)`.
+- **Run**: `run.bat` — kiểm tra dependencies, chạy server, mở browser.
 
 ## Project Structure
 ```
 ENG/
 ├── run.bat                  # Chạy server (double-click)
 ├── clusters.json            # 21 cụm từ chuyên đề gốc dùng chung (Grammar, Collocations)
-├── progress.db              # SQLite: user_id, key, fav, known, introduced_date
-├── create_mobile_app.py     # Script Python build offline app sang thư mục mobile/
-├── build_mobile.bat         # Chạy tool build mobile nhanh gọn cho từng user (vd: luong, khanh)
-├── mobile/                  # Gói ứng dụng HTML/JS offline (PWA) chạy không cần server (Dùng cho Github Pages)
-├── data/                    # Nơi chứa thông tin User và Database từ vựng cá nhân hoá
-│   ├── users.json           # File cấu hình user đăng nhập (id, pin, name, avatar)
-│   ├── luong/               # Dữ liệu từ vựng riêng của user luong
-│   │   └── vocab.json       # 1500 thẻ từ vựng đầy đủ IPA, nghĩa, ví dụ, synonyms, collocations
-│   └── khanh/               # Dữ liệu từ vựng riêng của user khanh (1200 thẻ)
+├── progress.db              # SQLite: user_id, key, fav, known, introduced_date, updated_at
+├── create_mobile_app.py     # Script build offline PWA cho TẤT CẢ users trong users.json
+├── build_mobile.bat         # Wrapper chạy create_mobile_app.py (tham số --user bị ignore)
+├── mobile/                  # PWA offline (generated) — dùng cho Github Pages
+├── data/
+│   ├── users.json           # Cấu hình user: id, pin, name, avatar
+│   ├── luong/
+│   │   └── vocab.json       # 1500 thẻ: IPA, nghĩa, ví dụ, synonyms, collocations
+│   └── khanh/
+│       └── vocab.json       # vocab riêng của khanh
 ├── app/
-│   ├── main.py              # Flask server, tất cả API endpoints (Đã hỗ trợ Multi-User)
+│   ├── main.py              # Flask server, tất cả API endpoints (Multi-User)
 │   └── templates/
-│       └── index.html       # Toàn bộ frontend (HTML + CSS + JS)
+│       └── index.html       # Toàn bộ frontend (HTML + CSS + JS, ~3200 lines)
 ```
 
 ## JSON Formats
 
 ### 1. `data/<user_id>/vocab.json` Item Schema
-Dữ liệu được tổ chức thành 2 mảng chính: `clusters` (các nhóm/ngày học) và `cards` (các từ vựng cụ thể).
 ```json
 {
   "key": "cluster_1_0",
@@ -57,10 +57,9 @@ Dữ liệu được tổ chức thành 2 mảng chính: `clusters` (các nhóm/
 ```
 
 ### 2. `clusters.json` Schema (Root)
-Mỗi cụm chứa `id`, `name`, `type`, `level`, `desc`, và mảng `words` chứa các từ/cụm từ con trong chuyên đề để học riêng biệt tại tab Clusters.
+Mỗi cụm chứa `id`, `name`, `type`, `level`, `desc`, và mảng `words`.
 
 ## progress.db Schema
-Đã nâng cấp để hỗ trợ nhiều người dùng (Multi-user) trên cùng 1 CSDL.
 ```sql
 CREATE TABLE progress (
     user_id         TEXT,
@@ -68,18 +67,34 @@ CREATE TABLE progress (
     fav             INTEGER DEFAULT 0,
     known           INTEGER DEFAULT 0,
     introduced_date TEXT,
+    updated_at      TEXT,        -- ISO timestamp, dùng để conflict resolution khi sync
     PRIMARY KEY (user_id, key)
 )
 ```
+Migration tự động khi server khởi động (ALTER TABLE nếu chưa có `updated_at`).
+
+## Sync Mobile ↔ PC
+- **API**: `POST /api/sync` — client gửi toàn bộ progress, server trả về progress đã merge.
+- **Conflict resolution**: `updated_at` timestamp — phía nào mới hơn thắng cho `fav`/`known`; `introduced_date` dùng COALESCE (giữ giá trị cũ nhất).
+- **Mobile dialog**: Button "Đồng bộ với PC" mở dialog nhập hostname/IP. Default: `luongblue.tail6851a5.ts.net` (Tailscale).
+- **Auto-sync**: Khi mở app mobile, tự động sync silent với IP đã lưu trong localStorage.
+- **URL logic** (`getSyncUrl`): nếu có `.ts.net` → dùng HTTPS; nếu IP → thêm `:5100`; nếu có prefix http/https → dùng nguyên.
+
+## Frontend Key Patterns (index.html)
+- **Tab-specific elements**: dùng class `tab-only-flash`, `tab-only-quiz`, `tab-only-cluster` — tab switch handler tự discover qua `querySelectorAll`.
+- **Flash stats**: `sessionMarks = new Map()` lưu mark cuối cùng mỗi thẻ → `knownCount()`/`unknownCount()` là functions (tránh double-count khi mark lại).
+- **Toast**: `showToast(msg, type)` — hiện bottom toast, tự ẩn sau 3s.
+- **quickStatsBar**: hiện "Đã thuộc X/total + Streak N ngày" chỉ ở tab Flash Card.
+- **cardFilter**: `'all'` | `'unknown'` (chưa thuộc) | `'new'` | `'known'` — reset về `'all'` mỗi lần `loadCards()`.
 
 ## Offline Mobile Build (PWA cho Github Pages)
-Để tạo hoặc cập nhật bản Offline chạy trên di động hoặc trình duyệt tĩnh (Github Pages):
 ```bash
-# Sử dụng Batch script (Khuyên dùng)
-build_mobile.bat
+# Build (tạo lại mobile/ từ data hiện tại)
+python create_mobile_app.py
 
-# Hoặc dùng lệnh thủ công:
-python create_mobile_app.py --user luong
+# Hoặc dùng batch wrapper
+build_mobile.bat
 ```
-Script sẽ bóc tách cả 2 file `data/<user_id>/vocab.json` và `clusters.json` (dùng chung) đóng gói chung thành file `mobile/vocab.js`.
-File `mobile/index.html` và service worker (`mobile/sw.js`) sau đó có thể được commit lên Github Pages để chạy hoàn toàn Offline bằng Network-First strategy.
+Output: `mobile/vocab.js` (data tất cả users), `mobile/index.html`, `mobile/sw.js` (Network-First cache).
+Sau đó commit `mobile/` lên Github Pages để chạy hoàn toàn offline.
+

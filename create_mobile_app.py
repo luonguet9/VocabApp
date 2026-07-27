@@ -3,8 +3,7 @@
 
 import re
 import json
-import time
-import argparse
+import hashlib
 from pathlib import Path
 
 BASE_DIR = Path(__file__).parent.resolve()
@@ -14,6 +13,10 @@ MOBILE_DIR.mkdir(exist_ok=True)
 OUT_HTML = MOBILE_DIR / "index.html"
 VOCAB_JS = MOBILE_DIR / "vocab.js"
 CLUSTERS_JS = MOBILE_DIR / "clusters.js"
+
+def _hash_pin(pin) -> str:
+    """SHA-256 hash of PIN, first 16 hex chars — stored in vocab.js instead of plain PIN."""
+    return hashlib.sha256(str(pin).encode('utf-8')).hexdigest()[:16]
 
 def load_vocab(path: Path) -> list:
     if not path.exists():
@@ -35,25 +38,32 @@ def load_clusters(path: Path) -> list:
 
 def main():
     print("[BUILD] Generating multi-user offline PWA...")
-    
+
     USERS_JSON = BASE_DIR / "data" / "users.json"
     with open(USERS_JSON, "r", encoding="utf-8") as f:
         users_data = json.load(f)
-        
+
     vocab_data_map = {}
     clusters_data_map = {}
-    
+
     for u in users_data.get("users", []):
         uid = u["id"]
         vocab_path = BASE_DIR / "data" / uid / "vocab.json"
         clusters_path = BASE_DIR / "clusters.json"
-        
+
         vocab_data_map[uid] = load_vocab(vocab_path)
         clusters_data_map[uid] = load_clusters(clusters_path)
 
+    # Build safe user list: strip PIN, embed SHA-256 hash for offline auth
+    safe_users = []
+    for u in users_data.get("users", []):
+        safe_u = {k: v for k, v in u.items() if k != 'pin'}
+        safe_u['pin_hash'] = _hash_pin(u.get('pin', ''))
+        safe_users.append(safe_u)
+
     # Generate vocab.js with ALL data
     js_content = f"""// Auto-generated offline data bundle
-const USERS_DATA = {json.dumps(users_data.get("users", []), ensure_ascii=False, indent=2)};
+const USERS_DATA = {json.dumps(safe_users, ensure_ascii=False, indent=2)};
 const VOCAB_DATA_MAP = {json.dumps(vocab_data_map, ensure_ascii=False, indent=2)};
 const CLUSTERS_DATA_MAP = {json.dumps(clusters_data_map, ensure_ascii=False, indent=2)};
 """
@@ -87,12 +97,6 @@ const CLUSTERS_DATA_MAP = {json.dumps(clusters_data_map, ensure_ascii=False, ind
         if (!uid) return;
         try { localStorage.setItem('vocab_progress_' + uid, JSON.stringify(data)); } catch(e) {}
     };
-    window.updateProgress = function(key, data) {
-        const p = window.getProgress();
-        p[key] = { ...p[key], ...data };
-        window.saveProgressData(p);
-    };
-
     const offlineFetch = window.fetch;
     window.fetch = async function(resource, config) {
         if (typeof resource === 'string' && resource.startsWith('/api/')) {
@@ -101,16 +105,21 @@ const CLUSTERS_DATA_MAP = {json.dumps(clusters_data_map, ensure_ascii=False, ind
             if (config && config.body) {
                 try { body = JSON.parse(config.body); } catch(e){}
             }
-            
+
             const jsonResponse = (data) => new Response(JSON.stringify(data), { status: 200, headers: {'Content-Type': 'application/json'} });
             const errorResponse = (msg, status=400) => new Response(JSON.stringify({error: msg}), { status: status, headers: {'Content-Type': 'application/json'} });
 
             if (resource === '/api/users') {
-                return jsonResponse({ users: USERS_DATA });
+                const safeUsers = USERS_DATA.map(({ pin_hash, ...u }) => u);
+                return jsonResponse({ users: safeUsers });
             }
-            
+
             if (resource === '/api/login') {
-                const user = USERS_DATA.find(u => u.id === body.id && u.pin === body.pin);
+                const pinStr = String(body.pin || '');
+                const pinEnc = new TextEncoder().encode(pinStr);
+                const hashBuf = await crypto.subtle.digest('SHA-256', pinEnc);
+                const pinHash = Array.from(new Uint8Array(hashBuf)).map(b => b.toString(16).padStart(2, '0')).join('').slice(0, 16);
+                const user = USERS_DATA.find(u => u.id === body.id && u.pin_hash === pinHash);
                 if (user) {
                     return jsonResponse({ ok: true, user_id: user.id });
                 }
@@ -121,22 +130,21 @@ const CLUSTERS_DATA_MAP = {json.dumps(clusters_data_map, ensure_ascii=False, ind
                 if (typeof showLoginOverlay === 'function') showLoginOverlay();
                 return errorResponse("Unauthorized", 401);
             }
-            
+
             if (resource === '/api/start-day') {
                 const p = window.getProgress();
                 const today = new Date().toLocaleDateString('en-CA');
                 const vocab = VOCAB_DATA_MAP[uid] || [];
-                
+
                 let today_n = 0;
+                for (const key of Object.keys(p)) {
+                    if (p[key] && p[key].date === today) today_n++;
+                }
                 let review_n = 0;
                 const session = [];
                 const remaining_new = Math.max(0, (body.new || 10) - today_n);
                 let new_n = 0;
-                
-                for (const key of Object.keys(p)) {
-                    if (p[key] && p[key].date === today) today_n++;
-                }
-                
+
                 for (const item of vocab) {
                     const c = { ...item };
                     const st = p[c.key];
@@ -162,7 +170,7 @@ const CLUSTERS_DATA_MAP = {json.dumps(clusters_data_map, ensure_ascii=False, ind
                     new: new_n
                 });
             }
-            
+
             if (resource === '/api/clusters') {
                 const p = window.getProgress();
                 const clusters = (CLUSTERS_DATA_MAP[uid] || []).map(c => {
@@ -171,13 +179,13 @@ const CLUSTERS_DATA_MAP = {json.dumps(clusters_data_map, ensure_ascii=False, ind
                 });
                 return jsonResponse({ clusters });
             }
-            
+
             if (resource === '/api/history') {
                 const p = window.getProgress();
                 const vocab = VOCAB_DATA_MAP[uid] || [];
                 const termMap = {};
                 for (const c of vocab) termMap[c.key] = c.term;
-                
+
                 const dateMap = {};
                 for (const [key, val] of Object.entries(p)) {
                     if (val && val.date) {
@@ -188,7 +196,7 @@ const CLUSTERS_DATA_MAP = {json.dumps(clusters_data_map, ensure_ascii=False, ind
                 const data = Object.keys(dateMap).sort().reverse().map(d => ({ date: d, words: dateMap[d] }));
                 return jsonResponse(data);
             }
-            
+
             if (resource === '/api/introduce') {
                 const p = window.getProgress();
                 const today = new Date().toLocaleDateString('en-CA');
@@ -197,31 +205,33 @@ const CLUSTERS_DATA_MAP = {json.dumps(clusters_data_map, ensure_ascii=False, ind
                 window.saveProgressData(p);
                 return jsonResponse({ ok: true });
             }
-            
+
             if (resource === '/api/fav') {
                 const p = window.getProgress();
-                if (!p[body.key]) p[body.key] = { fav: body.fav, known: false, date: null };
-                else p[body.key].fav = body.fav;
+                const ts = new Date().toISOString();
+                if (!p[body.key]) p[body.key] = { fav: body.fav, known: false, date: null, updated_at: ts };
+                else { p[body.key].fav = body.fav; p[body.key].updated_at = ts; }
                 window.saveProgressData(p);
                 return jsonResponse({ ok: true });
             }
-            
+
             if (resource === '/api/known') {
                 const p = window.getProgress();
-                if (!p[body.key]) p[body.key] = { fav: false, known: body.known, date: null };
-                else p[body.key].known = body.known;
+                const ts = new Date().toISOString();
+                if (!p[body.key]) p[body.key] = { fav: false, known: body.known, date: null, updated_at: ts };
+                else { p[body.key].known = body.known; p[body.key].updated_at = ts; }
                 window.saveProgressData(p);
                 return jsonResponse({ ok: true });
             }
-            
+
             if (resource === '/api/reset') {
                 localStorage.removeItem('vocab_progress_' + uid);
                 return jsonResponse({ ok: true });
             }
-            
+
             // Allow other APIs to fall through
         }
-        
+
         return offlineFetch(resource, config);
     };
 
@@ -235,23 +245,14 @@ const CLUSTERS_DATA_MAP = {json.dumps(clusters_data_map, ensure_ascii=False, ind
 """
     html = html.replace("</head>", mock_interceptor + "</head>")
 
-    # 3. Patch the Sync button to use saveProgressData
-    html = html.replace(
-        "localStorage.setItem('vocab_progress', JSON.stringify(data.progress));",
-        "if (typeof window.saveProgressData === 'function') { window.saveProgressData(data.progress); } else { localStorage.setItem('vocab_progress', JSON.stringify(data.progress)); }"
-    )
-    html = html.replace(
-        "(JSON.parse(localStorage.getItem('vocab_progress') || '{}'))",
-        "(typeof window.getProgress === 'function' ? window.getProgress() : JSON.parse(localStorage.getItem('vocab_progress') || '{}'))"
-    )
-
     with open(OUT_HTML, "w", encoding="utf-8") as f:
         f.write(html)
     print(f"[OK] Generated offline mobile app at {OUT_HTML}")
 
     # Generate sw.js with Network-First offline fallback strategy
     sw_path = MOBILE_DIR / "sw.js"
-    sw_content = "const CACHE_NAME = 'vocab-offline-" + str(int(time.time())) + "';\n" + """const ASSETS = [
+    vocab_hash = hashlib.md5(js_content.encode('utf-8')).hexdigest()[:8]
+    sw_content = f"const CACHE_NAME = 'vocab-offline-{vocab_hash}';\n" + """const ASSETS = [
   './',
   './index.html',
   './vocab.js',
@@ -297,3 +298,4 @@ self.addEventListener('fetch', e => {
 
 if __name__ == "__main__":
     main()
+
