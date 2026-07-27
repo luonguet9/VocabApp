@@ -4,13 +4,13 @@ const USERS_DATA = [
     "id": "luong",
     "name": "Lương",
     "avatar": "👨‍💻",
-    "pin": "1234"
+    "pin_hash": "03ac674216f3e15c"
   },
   {
     "id": "khanh",
     "name": "Khánh",
     "avatar": "🎓",
-    "pin": "0000"
+    "pin_hash": "9af15b336e6a9619"
   }
 ];
 const VOCAB_DATA_MAP = {
@@ -34,6 +34,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_001_0",
       "cluster": "luong_day_001",
       "day": 1,
+      "phonetic_distractors": [
+        "board",
+        "sort",
+        "score",
+        "store",
+        "support"
+      ],
       "fav": false,
       "known": false
     },
@@ -58,6 +65,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_001_1",
       "cluster": "luong_day_001",
       "day": 1,
+      "phonetic_distractors": [
+        "god",
+        "wide",
+        "died",
+        "hide",
+        "guy"
+      ],
       "fav": false,
       "known": false
     },
@@ -82,6 +96,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_001_2",
       "cluster": "luong_day_001",
       "day": 1,
+      "phonetic_distractors": [
+        "gate",
+        "date",
+        "wage",
+        "waiter",
+        "what"
+      ],
       "fav": false,
       "known": false
     },
@@ -132,6 +153,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_001_4",
       "cluster": "luong_day_001",
       "day": 1,
+      "phonetic_distractors": [
+        "diagnosis",
+        "domestic",
+        "statistic",
+        "scientific",
+        "magnetic"
+      ],
       "fav": false,
       "known": false
     },
@@ -155,6 +183,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_001_5",
       "cluster": "luong_day_001",
       "day": 1,
+      "phonetic_distractors": [
+        "oral",
+        "oregon",
+        "horrible",
+        "russell",
+        "origin"
+      ],
       "fav": false,
       "known": false
     },
@@ -179,6 +214,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_001_6",
       "cluster": "luong_day_001",
       "day": 1,
+      "phonetic_distractors": [
+        "target",
+        "market",
+        "corpus",
+        "cart",
+        "carpool"
+      ],
       "fav": false,
       "known": false
     },
@@ -229,6 +271,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_001_8",
       "cluster": "luong_day_001",
       "day": 1,
+      "phonetic_distractors": [
+        "hammer",
+        "gather",
+        "pack",
+        "hash",
+        "tax"
+      ],
       "fav": false,
       "known": false
     },
@@ -252,6 +301,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_001_9",
       "cluster": "luong_day_001",
       "day": 1,
+      "phonetic_distractors": [
+        "score",
+        "story",
+        "storm",
+        "star",
+        "pour"
+      ],
       "fav": false,
       "known": false
     },
@@ -277,6 +333,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_002_0",
       "cluster": "luong_day_002",
       "day": 2,
+      "phonetic_distractors": [
+        "toner",
+        "inner",
+        "donor",
+        "over",
+        "owned"
+      ],
       "fav": false,
       "known": false
     },
@@ -302,6 +365,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_002_1",
       "cluster": "luong_day_002",
       "day": 2,
+      "phonetic_distractors": [
+        "disk",
+        "daily",
+        "pill",
+        "deal",
+        "build"
+      ],
       "fav": false,
       "known": false
     },
@@ -326,6 +396,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_002_2",
       "cluster": "luong_day_002",
       "day": 2,
+      "phonetic_distractors": [
+        "timeline",
+        "streaming",
+        "streams",
+        "seamless",
+        "serial"
+      ],
       "fav": false,
       "known": false
     },
@@ -352,6 +429,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_002_3",
       "cluster": "luong_day_002",
       "day": 2,
+      "phonetic_distractors": [
+        "tip",
+        "trick",
+        "grip",
+        "trim",
+        "trap"
+      ],
       "fav": false,
       "known": false
     },
@@ -376,6 +460,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_002_4",
       "cluster": "luong_day_002",
       "day": 2,
+      "phonetic_distractors": [
+        "real",
+        "rule",
+        "goal",
+        "row",
+        "toll"
+      ],
       "fav": false,
       "known": false
     },
@@ -400,6 +491,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_002_5",
       "cluster": "luong_day_002",
       "day": 2,
+      "phonetic_distractors": [
+        "stanford",
+        "stands",
+        "standing",
+        "attended",
+        "sandy"
+      ],
       "fav": false,
       "known": false
     },
@@ -424,6 +522,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_002_6",
       "cluster": "luong_day_002",
       "day": 2,
+      "phonetic_distractors": [
+        "priorities",
+        "priority",
+        "authorities",
+        "portrait",
+        "prototype"
+      ],
       "fav": false,
       "known": false
     },
@@ -474,6 +579,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_002_8",
       "cluster": "luong_day_002",
       "day": 2,
+      "phonetic_distractors": [
+        "stan",
+        "stack",
+        "stat",
+        "staff",
+        "stir"
+      ],
       "fav": false,
       "known": false
     },
@@ -498,6 +610,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_002_9",
       "cluster": "luong_day_002",
       "day": 2,
+      "phonetic_distractors": [
+        "optimal",
+        "optimum",
+        "optical",
+        "optics",
+        "compromise"
+      ],
       "fav": false,
       "known": false
     },
@@ -522,6 +641,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_003_0",
       "cluster": "luong_day_003",
       "day": 3,
+      "phonetic_distractors": [
+        "villas",
+        "image",
+        "voltage",
+        "philip",
+        "knowledge"
+      ],
       "fav": false,
       "known": false
     },
@@ -570,6 +696,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_003_2",
       "cluster": "luong_day_003",
       "day": 3,
+      "phonetic_distractors": [
+        "type",
+        "team",
+        "tie",
+        "tight",
+        "pty"
+      ],
       "fav": false,
       "known": false
     },
@@ -594,6 +727,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_003_3",
       "cluster": "luong_day_003",
       "day": 3,
+      "phonetic_distractors": [
+        "accountability",
+        "disability",
+        "vulnerability",
+        "sustainability",
+        "possibility"
+      ],
       "fav": false,
       "known": false
     },
@@ -620,6 +760,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_003_4",
       "cluster": "luong_day_003",
       "day": 3,
+      "phonetic_distractors": [
+        "endurance",
+        "reference",
+        "difference",
+        "instance",
+        "conference"
+      ],
       "fav": false,
       "known": false
     },
@@ -716,6 +863,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_003_8",
       "cluster": "luong_day_003",
       "day": 3,
+      "phonetic_distractors": [
+        "prostate",
+        "extract",
+        "portrait",
+        "forecast",
+        "christina"
+      ],
       "fav": false,
       "known": false
     },
@@ -740,6 +894,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_003_9",
       "cluster": "luong_day_003",
       "day": 3,
+      "phonetic_distractors": [
+        "disk",
+        "disc",
+        "risk",
+        "walk",
+        "desk"
+      ],
       "fav": false,
       "known": false
     },
@@ -764,6 +925,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_004_0",
       "cluster": "luong_day_004",
       "day": 4,
+      "phonetic_distractors": [
+        "investor",
+        "incest",
+        "manchester",
+        "accessed",
+        "invest"
+      ],
       "fav": false,
       "known": false
     },
@@ -788,6 +956,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_004_1",
       "cluster": "luong_day_004",
       "day": 4,
+      "phonetic_distractors": [
+        "localization",
+        "civilization",
+        "organization",
+        "discrimination",
+        "certification"
+      ],
       "fav": false,
       "known": false
     },
@@ -860,6 +1035,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_004_4",
       "cluster": "luong_day_004",
       "day": 4,
+      "phonetic_distractors": [
+        "adults",
+        "isolate",
+        "collaborate",
+        "decorate",
+        "delegate"
+      ],
       "fav": false,
       "known": false
     },
@@ -884,6 +1066,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_004_5",
       "cluster": "luong_day_004",
       "day": 4,
+      "phonetic_distractors": [
+        "coming",
+        "commute",
+        "cut",
+        "budget",
+        "summit"
+      ],
       "fav": false,
       "known": false
     },
@@ -908,6 +1097,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_004_6",
       "cluster": "luong_day_004",
       "day": 4,
+      "phonetic_distractors": [
+        "walt",
+        "wallace",
+        "walnut",
+        "walls",
+        "toilet"
+      ],
       "fav": false,
       "known": false
     },
@@ -931,6 +1127,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_004_7",
       "cluster": "luong_day_004",
       "day": 4,
+      "phonetic_distractors": [
+        "qualification",
+        "certification",
+        "modification",
+        "notification",
+        "specifications"
+      ],
       "fav": false,
       "known": false
     },
@@ -955,6 +1158,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_004_8",
       "cluster": "luong_day_004",
       "day": 4,
+      "phonetic_distractors": [
+        "mega",
+        "mud",
+        "medal",
+        "metal",
+        "headed"
+      ],
       "fav": false,
       "known": false
     },
@@ -1003,6 +1213,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_005_0",
       "cluster": "luong_day_005",
       "day": 5,
+      "phonetic_distractors": [
+        "fetch",
+        "wear",
+        "share",
+        "chair",
+        "bare"
+      ],
       "fav": false,
       "known": false
     },
@@ -1027,6 +1244,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_005_1",
       "cluster": "luong_day_005",
       "day": 5,
+      "phonetic_distractors": [
+        "realty",
+        "quality",
+        "realtor",
+        "ballot",
+        "gravity"
+      ],
       "fav": false,
       "known": false
     },
@@ -1051,6 +1275,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_005_2",
       "cluster": "luong_day_005",
       "day": 5,
+      "phonetic_distractors": [
+        "nozzle",
+        "comedy",
+        "unable",
+        "unlikely",
+        "family"
+      ],
       "fav": false,
       "known": false
     },
@@ -1099,6 +1330,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_005_4",
       "cluster": "luong_day_005",
       "day": 5,
+      "phonetic_distractors": [
+        "persons",
+        "percent",
+        "percentage",
+        "perceived",
+        "arena"
+      ],
       "fav": false,
       "known": false
     },
@@ -1147,6 +1385,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_005_6",
       "cluster": "luong_day_005",
       "day": 5,
+      "phonetic_distractors": [
+        "sort",
+        "sauce",
+        "sorts",
+        "course",
+        "sword"
+      ],
       "fav": false,
       "known": false
     },
@@ -1171,6 +1416,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_005_7",
       "cluster": "luong_day_005",
       "day": 5,
+      "phonetic_distractors": [
+        "chronic",
+        "traffic",
+        "orgasm",
+        "panic",
+        "organize"
+      ],
       "fav": false,
       "known": false
     },
@@ -1195,6 +1447,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_005_8",
       "cluster": "luong_day_005",
       "day": 5,
+      "phonetic_distractors": [
+        "petition",
+        "permission",
+        "particle",
+        "martin",
+        "prison"
+      ],
       "fav": false,
       "known": false
     },
@@ -1219,6 +1478,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_005_9",
       "cluster": "luong_day_005",
       "day": 5,
+      "phonetic_distractors": [
+        "analytics",
+        "monitoring",
+        "modeling",
+        "bottleneck",
+        "conflict"
+      ],
       "fav": false,
       "known": false
     },
@@ -1242,6 +1508,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_006_0",
       "cluster": "luong_day_006",
       "day": 6,
+      "phonetic_distractors": [
+        "fee",
+        "be",
+        "keith",
+        "keep",
+        "lee"
+      ],
       "fav": false,
       "known": false
     },
@@ -1266,6 +1539,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_006_1",
       "cluster": "luong_day_006",
       "day": 6,
+      "phonetic_distractors": [
+        "accurate",
+        "accurately",
+        "currency",
+        "literacy",
+        "actually"
+      ],
       "fav": false,
       "known": false
     },
@@ -1290,6 +1570,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_006_2",
       "cluster": "luong_day_006",
       "day": 6,
+      "phonetic_distractors": [
+        "inflation",
+        "information",
+        "infection",
+        "integration",
+        "evaluation"
+      ],
       "fav": false,
       "known": false
     },
@@ -1339,6 +1626,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_006_4",
       "cluster": "luong_day_006",
       "day": 6,
+      "phonetic_distractors": [
+        "original",
+        "versatile",
+        "decouple",
+        "visual",
+        "visible"
+      ],
       "fav": false,
       "known": false
     },
@@ -1363,6 +1657,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_006_5",
       "cluster": "luong_day_006",
       "day": 6,
+      "phonetic_distractors": [
+        "deprecate",
+        "replication",
+        "allocate",
+        "renovate",
+        "delegate"
+      ],
       "fav": false,
       "known": false
     },
@@ -1387,6 +1688,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_006_6",
       "cluster": "luong_day_006",
       "day": 6,
+      "phonetic_distractors": [
+        "doug",
+        "buzz",
+        "bus",
+        "butt",
+        "rug"
+      ],
       "fav": false,
       "known": false
     },
@@ -1436,6 +1744,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_006_8",
       "cluster": "luong_day_006",
       "day": 6,
+      "phonetic_distractors": [
+        "simple",
+        "system",
+        "simpson",
+        "systems",
+        "hampton"
+      ],
       "fav": false,
       "known": false
     },
@@ -1462,6 +1777,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_006_9",
       "cluster": "luong_day_006",
       "day": 6,
+      "phonetic_distractors": [
+        "travis",
+        "travel",
+        "reverse",
+        "trance",
+        "tracks"
+      ],
       "fav": false,
       "known": false
     },
@@ -1485,6 +1807,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_007_0",
       "cluster": "luong_day_007",
       "day": 7,
+      "phonetic_distractors": [
+        "normalization",
+        "consultation",
+        "calculation",
+        "civilization",
+        "localization"
+      ],
       "fav": false,
       "known": false
     },
@@ -1509,6 +1838,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_007_1",
       "cluster": "luong_day_007",
       "day": 7,
+      "phonetic_distractors": [
+        "scheduling",
+        "traveling",
+        "travelling",
+        "cycling",
+        "sampling"
+      ],
       "fav": false,
       "known": false
     },
@@ -1535,6 +1871,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_007_2",
       "cluster": "luong_day_007",
       "day": 7,
+      "phonetic_distractors": [
+        "apartment",
+        "appointment",
+        "assignment",
+        "assistant",
+        "apartments"
+      ],
       "fav": false,
       "known": false
     },
@@ -1558,6 +1901,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_007_3",
       "cluster": "luong_day_007",
       "day": 7,
+      "phonetic_distractors": [
+        "microwave",
+        "milestone",
+        "migration",
+        "mexico",
+        "nitrogen"
+      ],
       "fav": false,
       "known": false
     },
@@ -1582,6 +1932,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_007_4",
       "cluster": "luong_day_007",
       "day": 7,
+      "phonetic_distractors": [
+        "carpet",
+        "bargain",
+        "jargon",
+        "market",
+        "charlotte"
+      ],
       "fav": false,
       "known": false
     },
@@ -1608,6 +1965,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_007_5",
       "cluster": "luong_day_007",
       "day": 7,
+      "phonetic_distractors": [
+        "notification",
+        "modification",
+        "verification",
+        "notifications",
+        "satisfaction"
+      ],
       "fav": false,
       "known": false
     },
@@ -1632,6 +1996,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_007_6",
       "cluster": "luong_day_007",
       "day": 7,
+      "phonetic_distractors": [
+        "late",
+        "layer",
+        "gate",
+        "date",
+        "lane"
+      ],
       "fav": false,
       "known": false
     },
@@ -1656,6 +2027,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_007_7",
       "cluster": "luong_day_007",
       "day": 7,
+      "phonetic_distractors": [
+        "income",
+        "item",
+        "atom",
+        "autumn",
+        "become"
+      ],
       "fav": false,
       "known": false
     },
@@ -1681,6 +2059,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_007_8",
       "cluster": "luong_day_007",
       "day": 7,
+      "phonetic_distractors": [
+        "invest",
+        "interject",
+        "integrate",
+        "incest",
+        "internet"
+      ],
       "fav": false,
       "known": false
     },
@@ -1705,6 +2090,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_007_9",
       "cluster": "luong_day_007",
       "day": 7,
+      "phonetic_distractors": [
+        "compliant",
+        "opponent",
+        "complaint",
+        "companion",
+        "compliance"
+      ],
       "fav": false,
       "known": false
     },
@@ -1729,6 +2121,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_008_0",
       "cluster": "luong_day_008",
       "day": 8,
+      "phonetic_distractors": [
+        "jets",
+        "necklace",
+        "else",
+        "wellness",
+        "generous"
+      ],
       "fav": false,
       "known": false
     },
@@ -1754,6 +2153,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_008_1",
       "cluster": "luong_day_008",
       "day": 8,
+      "phonetic_distractors": [
+        "spatial",
+        "space",
+        "station",
+        "special",
+        "spaces"
+      ],
       "fav": false,
       "known": false
     },
@@ -1801,6 +2207,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_008_3",
       "cluster": "luong_day_008",
       "day": 8,
+      "phonetic_distractors": [
+        "host",
+        "holy",
+        "holds",
+        "holders",
+        "holder"
+      ],
       "fav": false,
       "known": false
     },
@@ -1848,6 +2261,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_008_5",
       "cluster": "luong_day_008",
       "day": 8,
+      "phonetic_distractors": [
+        "miller",
+        "mere",
+        "error",
+        "mark",
+        "bitter"
+      ],
       "fav": false,
       "known": false
     },
@@ -1872,6 +2292,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_008_6",
       "cluster": "luong_day_008",
       "day": 8,
+      "phonetic_distractors": [
+        "musical",
+        "chemical",
+        "classical",
+        "chronicle",
+        "critical"
+      ],
       "fav": false,
       "known": false
     },
@@ -1921,6 +2348,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_008_8",
       "cluster": "luong_day_008",
       "day": 8,
+      "phonetic_distractors": [
+        "pull",
+        "pitch",
+        "bill",
+        "peer",
+        "ping"
+      ],
       "fav": false,
       "known": false
     },
@@ -1942,6 +2376,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_008_9",
       "cluster": "luong_day_008",
       "day": 8,
+      "phonetic_distractors": [
+        "flood",
+        "blade",
+        "board",
+        "club",
+        "blame"
+      ],
       "fav": false,
       "known": false
     },
@@ -1966,6 +2407,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_009_0",
       "cluster": "luong_day_009",
       "day": 9,
+      "phonetic_distractors": [
+        "epics",
+        "jessica",
+        "wrestling",
+        "public",
+        "deadlock"
+      ],
       "fav": false,
       "known": false
     },
@@ -1989,6 +2437,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_009_1",
       "cluster": "luong_day_009",
       "day": 9,
+      "phonetic_distractors": [
+        "sense",
+        "centre",
+        "sender",
+        "center",
+        "spencer"
+      ],
       "fav": false,
       "known": false
     },
@@ -2039,6 +2494,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_009_3",
       "cluster": "luong_day_009",
       "day": 9,
+      "phonetic_distractors": [
+        "destination",
+        "demonstration",
+        "celebration",
+        "elimination",
+        "presentation"
+      ],
       "fav": false,
       "known": false
     },
@@ -2063,6 +2525,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_009_4",
       "cluster": "luong_day_009",
       "day": 9,
+      "phonetic_distractors": [
+        "novel",
+        "model",
+        "neural",
+        "bottle",
+        "fossil"
+      ],
       "fav": false,
       "known": false
     },
@@ -2086,6 +2555,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_009_5",
       "cluster": "luong_day_009",
       "day": 9,
+      "phonetic_distractors": [
+        "root",
+        "writer",
+        "routes",
+        "roots",
+        "stir"
+      ],
       "fav": false,
       "known": false
     },
@@ -2110,6 +2586,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_009_6",
       "cluster": "luong_day_009",
       "day": 9,
+      "phonetic_distractors": [
+        "chair",
+        "chuck",
+        "chess",
+        "chen",
+        "neck"
+      ],
       "fav": false,
       "known": false
     },
@@ -2134,6 +2617,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_009_7",
       "cluster": "luong_day_009",
       "day": 9,
+      "phonetic_distractors": [
+        "vacancy",
+        "agency",
+        "latest",
+        "license",
+        "currency"
+      ],
       "fav": false,
       "known": false
     },
@@ -2160,6 +2650,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_009_8",
       "cluster": "luong_day_009",
       "day": 9,
+      "phonetic_distractors": [
+        "layer",
+        "flavor",
+        "laser",
+        "rover",
+        "favour"
+      ],
       "fav": false,
       "known": false
     },
@@ -2184,6 +2681,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_009_9",
       "cluster": "luong_day_009",
       "day": 9,
+      "phonetic_distractors": [
+        "authenticate",
+        "renovation",
+        "authorization",
+        "destination",
+        "indication"
+      ],
       "fav": false,
       "known": false
     },
@@ -2232,6 +2736,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_010_1",
       "cluster": "luong_day_010",
       "day": 10,
+      "phonetic_distractors": [
+        "qualified",
+        "quality",
+        "clarify",
+        "column",
+        "equality"
+      ],
       "fav": false,
       "known": false
     },
@@ -2255,6 +2766,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_010_2",
       "cluster": "luong_day_010",
       "day": 10,
+      "phonetic_distractors": [
+        "photographer",
+        "photographers",
+        "geography",
+        "biography",
+        "philosophy"
+      ],
       "fav": false,
       "known": false
     },
@@ -2279,6 +2797,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_010_3",
       "cluster": "luong_day_010",
       "day": 10,
+      "phonetic_distractors": [
+        "persian",
+        "vernon",
+        "vision",
+        "curtain",
+        "immersion"
+      ],
       "fav": false,
       "known": false
     },
@@ -2303,6 +2828,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_010_4",
       "cluster": "luong_day_010",
       "day": 10,
+      "phonetic_distractors": [
+        "latest",
+        "database",
+        "dayton",
+        "greatest",
+        "deficit"
+      ],
       "fav": false,
       "known": false
     },
@@ -2329,6 +2861,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_010_5",
       "cluster": "luong_day_010",
       "day": 10,
+      "phonetic_distractors": [
+        "overdraw",
+        "overhead",
+        "oversee",
+        "overhang",
+        "overnight"
+      ],
       "fav": false,
       "known": false
     },
@@ -2355,6 +2894,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_010_6",
       "cluster": "luong_day_010",
       "day": 10,
+      "phonetic_distractors": [
+        "industrial",
+        "palestinian",
+        "industries",
+        "bulgarian",
+        "industry"
+      ],
       "fav": false,
       "known": false
     },
@@ -2379,6 +2925,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_010_7",
       "cluster": "luong_day_010",
       "day": 10,
+      "phonetic_distractors": [
+        "marinate",
+        "navigate",
+        "integrate",
+        "automate",
+        "delegate"
+      ],
       "fav": false,
       "known": false
     },
@@ -2403,6 +2956,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_010_8",
       "cluster": "luong_day_010",
       "day": 10,
+      "phonetic_distractors": [
+        "rather",
+        "hacker",
+        "grammar",
+        "matter",
+        "manner"
+      ],
       "fav": false,
       "known": false
     },
@@ -2426,6 +2986,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_010_9",
       "cluster": "luong_day_010",
       "day": 10,
+      "phonetic_distractors": [
+        "unix",
+        "uniform",
+        "munich",
+        "union",
+        "ukraine"
+      ],
       "fav": false,
       "known": false
     },
@@ -2450,6 +3017,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_011_0",
       "cluster": "luong_day_011",
       "day": 11,
+      "phonetic_distractors": [
+        "burton",
+        "curtain",
+        "satin",
+        "subtle",
+        "bottle"
+      ],
       "fav": false,
       "known": false
     },
@@ -2475,6 +3049,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_011_1",
       "cluster": "luong_day_011",
       "day": 11,
+      "phonetic_distractors": [
+        "predicted",
+        "productive",
+        "proactive",
+        "protective",
+        "practice"
+      ],
       "fav": false,
       "known": false
     },
@@ -2500,6 +3081,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_011_2",
       "cluster": "luong_day_011",
       "day": 11,
+      "phonetic_distractors": [
+        "shopping",
+        "locking",
+        "joining",
+        "watching",
+        "washing"
+      ],
       "fav": false,
       "known": false
     },
@@ -2548,6 +3136,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_011_4",
       "cluster": "luong_day_011",
       "day": 11,
+      "phonetic_distractors": [
+        "sale",
+        "shell",
+        "sole",
+        "hell",
+        "smell"
+      ],
       "fav": false,
       "known": false
     },
@@ -2572,6 +3167,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_011_5",
       "cluster": "luong_day_011",
       "day": 11,
+      "phonetic_distractors": [
+        "help",
+        "wealth",
+        "holy",
+        "belly",
+        "highly"
+      ],
       "fav": false,
       "known": false
     },
@@ -2596,6 +3198,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_011_6",
       "cluster": "luong_day_011",
       "day": 11,
+      "phonetic_distractors": [
+        "utilization",
+        "notification",
+        "civilization",
+        "organization",
+        "certification"
+      ],
       "fav": false,
       "known": false
     },
@@ -2619,6 +3228,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_011_7",
       "cluster": "luong_day_011",
       "day": 11,
+      "phonetic_distractors": [
+        "eating",
+        "meeting",
+        "ceiling",
+        "rising",
+        "being"
+      ],
       "fav": false,
       "known": false
     },
@@ -2643,6 +3259,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_011_8",
       "cluster": "luong_day_011",
       "day": 11,
+      "phonetic_distractors": [
+        "conservative",
+        "proactive",
+        "predictive",
+        "presenting",
+        "presented"
+      ],
       "fav": false,
       "known": false
     },
@@ -2667,6 +3290,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_011_9",
       "cluster": "luong_day_011",
       "day": 11,
+      "phonetic_distractors": [
+        "train",
+        "trail",
+        "tray",
+        "trade",
+        "tracy"
+      ],
       "fav": false,
       "known": false
     },
@@ -2713,6 +3343,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_012_1",
       "cluster": "luong_day_012",
       "day": 12,
+      "phonetic_distractors": [
+        "pine",
+        "pain",
+        "men",
+        "len",
+        "chen"
+      ],
       "fav": false,
       "known": false
     },
@@ -2738,6 +3375,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_012_2",
       "cluster": "luong_day_012",
       "day": 12,
+      "phonetic_distractors": [
+        "terminate",
+        "tunnel",
+        "versatile",
+        "stamina",
+        "muscle"
+      ],
       "fav": false,
       "known": false
     },
@@ -2762,6 +3406,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_012_3",
       "cluster": "luong_day_012",
       "day": 12,
+      "phonetic_distractors": [
+        "club",
+        "colleague",
+        "cottage",
+        "casa",
+        "calm"
+      ],
       "fav": false,
       "known": false
     },
@@ -2786,6 +3437,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_012_4",
       "cluster": "luong_day_012",
       "day": 12,
+      "phonetic_distractors": [
+        "trained",
+        "trains",
+        "trainer",
+        "tracy",
+        "trend"
+      ],
       "fav": false,
       "known": false
     },
@@ -2809,6 +3467,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_012_5",
       "cluster": "luong_day_012",
       "day": 12,
+      "phonetic_distractors": [
+        "hash",
+        "catch",
+        "crash",
+        "ash",
+        "cam"
+      ],
       "fav": false,
       "known": false
     },
@@ -2833,6 +3498,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_012_6",
       "cluster": "luong_day_012",
       "day": 12,
+      "phonetic_distractors": [
+        "assign",
+        "run",
+        "refers",
+        "refer",
+        "define"
+      ],
       "fav": false,
       "known": false
     },
@@ -2881,6 +3553,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_012_8",
       "cluster": "luong_day_012",
       "day": 12,
+      "phonetic_distractors": [
+        "projector",
+        "projectors",
+        "project",
+        "protect",
+        "directory"
+      ],
       "fav": false,
       "known": false
     },
@@ -2905,6 +3584,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_012_9",
       "cluster": "luong_day_012",
       "day": 12,
+      "phonetic_distractors": [
+        "offline",
+        "outline",
+        "nine",
+        "airline",
+        "klein"
+      ],
       "fav": false,
       "known": false
     },
@@ -2929,6 +3615,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_013_0",
       "cluster": "luong_day_013",
       "day": 13,
+      "phonetic_distractors": [
+        "product",
+        "print",
+        "project",
+        "protect",
+        "prevent"
+      ],
       "fav": false,
       "known": false
     },
@@ -2953,6 +3646,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_013_1",
       "cluster": "luong_day_013",
       "day": 13,
+      "phonetic_distractors": [
+        "allocation",
+        "aggregation",
+        "annotation",
+        "implications",
+        "elevation"
+      ],
       "fav": false,
       "known": false
     },
@@ -3002,6 +3702,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_013_3",
       "cluster": "luong_day_013",
       "day": 13,
+      "phonetic_distractors": [
+        "disk",
+        "dec",
+        "disc",
+        "deck",
+        "debt"
+      ],
       "fav": false,
       "known": false
     },
@@ -3026,6 +3733,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_013_4",
       "cluster": "luong_day_013",
       "day": 13,
+      "phonetic_distractors": [
+        "shoe",
+        "view",
+        "ears",
+        "abu",
+        "too"
+      ],
       "fav": false,
       "known": false
     },
@@ -3049,6 +3763,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_013_5",
       "cluster": "luong_day_013",
       "day": 13,
+      "phonetic_distractors": [
+        "disappointed",
+        "implementing",
+        "fragrances",
+        "integrating",
+        "representing"
+      ],
       "fav": false,
       "known": false
     },
@@ -3147,6 +3868,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_013_9",
       "cluster": "luong_day_013",
       "day": 13,
+      "phonetic_distractors": [
+        "reliable",
+        "vulnerable",
+        "elizabeth",
+        "delivering",
+        "desirable"
+      ],
       "fav": false,
       "known": false
     },
@@ -3194,6 +3922,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_014_1",
       "cluster": "luong_day_014",
       "day": 14,
+      "phonetic_distractors": [
+        "aisle",
+        "isle",
+        "died",
+        "aye",
+        "ice"
+      ],
       "fav": false,
       "known": false
     },
@@ -3220,6 +3955,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_014_2",
       "cluster": "luong_day_014",
       "day": 14,
+      "phonetic_distractors": [
+        "gradient",
+        "increment",
+        "incident",
+        "agreement",
+        "insolvent"
+      ],
       "fav": false,
       "known": false
     },
@@ -3244,6 +3986,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_014_3",
       "cluster": "luong_day_014",
       "day": 14,
+      "phonetic_distractors": [
+        "heating",
+        "mating",
+        "meaning",
+        "eating",
+        "seating"
+      ],
       "fav": false,
       "known": false
     },
@@ -3268,6 +4017,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_014_4",
       "cluster": "luong_day_014",
       "day": 14,
+      "phonetic_distractors": [
+        "payment",
+        "patent",
+        "passionate",
+        "paint",
+        "nations"
+      ],
       "fav": false,
       "known": false
     },
@@ -3292,6 +4048,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_014_5",
       "cluster": "luong_day_014",
       "day": 14,
+      "phonetic_distractors": [
+        "delay",
+        "reply",
+        "display",
+        "deeply",
+        "dip"
+      ],
       "fav": false,
       "known": false
     },
@@ -3341,6 +4104,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_014_7",
       "cluster": "luong_day_014",
       "day": 14,
+      "phonetic_distractors": [
+        "epoch",
+        "eric",
+        "pick",
+        "erik",
+        "pack"
+      ],
       "fav": false,
       "known": false
     },
@@ -3387,6 +4157,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_014_9",
       "cluster": "luong_day_014",
       "day": 14,
+      "phonetic_distractors": [
+        "inter",
+        "entire",
+        "manager",
+        "engage",
+        "income"
+      ],
       "fav": false,
       "known": false
     },
@@ -3411,6 +4188,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_015_0",
       "cluster": "luong_day_015",
       "day": 15,
+      "phonetic_distractors": [
+        "fat",
+        "cheat",
+        "chan",
+        "nat",
+        "cat"
+      ],
       "fav": false,
       "known": false
     },
@@ -3435,6 +4219,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_015_1",
       "cluster": "luong_day_015",
       "day": 15,
+      "phonetic_distractors": [
+        "date",
+        "dana",
+        "dates",
+        "theta",
+        "dayton"
+      ],
       "fav": false,
       "known": false
     },
@@ -3458,6 +4249,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_015_2",
       "cluster": "luong_day_015",
       "day": 15,
+      "phonetic_distractors": [
+        "owen",
+        "ocean",
+        "weapon",
+        "token",
+        "option"
+      ],
       "fav": false,
       "known": false
     },
@@ -3482,6 +4280,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_015_3",
       "cluster": "luong_day_015",
       "day": 15,
+      "phonetic_distractors": [
+        "fraction",
+        "friction",
+        "affection",
+        "distraction",
+        "abstraction"
+      ],
       "fav": false,
       "known": false
     },
@@ -3531,6 +4336,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_015_5",
       "cluster": "luong_day_015",
       "day": 15,
+      "phonetic_distractors": [
+        "written",
+        "retain",
+        "bitter",
+        "router",
+        "routine"
+      ],
       "fav": false,
       "known": false
     },
@@ -3555,6 +4367,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_015_6",
       "cluster": "luong_day_015",
       "day": 15,
+      "phonetic_distractors": [
+        "dependence",
+        "dependent",
+        "redundancy",
+        "independence",
+        "defendant"
+      ],
       "fav": false,
       "known": false
     },
@@ -3603,6 +4422,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_015_8",
       "cluster": "luong_day_015",
       "day": 15,
+      "phonetic_distractors": [
+        "real",
+        "releasing",
+        "police",
+        "replace",
+        "relief"
+      ],
       "fav": false,
       "known": false
     },
@@ -3627,6 +4453,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_015_9",
       "cluster": "luong_day_015",
       "day": 15,
+      "phonetic_distractors": [
+        "persistent",
+        "assistance",
+        "assistant",
+        "existence",
+        "distance"
+      ],
       "fav": false,
       "known": false
     },
@@ -3650,6 +4483,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_016_0",
       "cluster": "luong_day_016",
       "day": 16,
+      "phonetic_distractors": [
+        "classic",
+        "lasting",
+        "practice",
+        "blast",
+        "static"
+      ],
       "fav": false,
       "known": false
     },
@@ -3675,6 +4515,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_016_1",
       "cluster": "luong_day_016",
       "day": 16,
+      "phonetic_distractors": [
+        "imagination",
+        "annotation",
+        "allocation",
+        "navigation",
+        "termination"
+      ],
       "fav": false,
       "known": false
     },
@@ -3698,6 +4545,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_016_2",
       "cluster": "luong_day_016",
       "day": 16,
+      "phonetic_distractors": [
+        "prince",
+        "rent",
+        "prevent",
+        "pretty",
+        "mint"
+      ],
       "fav": false,
       "known": false
     },
@@ -3724,6 +4578,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_016_3",
       "cluster": "luong_day_016",
       "day": 16,
+      "phonetic_distractors": [
+        "contract",
+        "confidant",
+        "contrast",
+        "conflict",
+        "contractor"
+      ],
       "fav": false,
       "known": false
     },
@@ -3750,6 +4611,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_016_4",
       "cluster": "luong_day_016",
       "day": 16,
+      "phonetic_distractors": [
+        "suits",
+        "space",
+        "stress",
+        "scale",
+        "state"
+      ],
       "fav": false,
       "known": false
     },
@@ -3774,6 +4642,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_016_5",
       "cluster": "luong_day_016",
       "day": 16,
+      "phonetic_distractors": [
+        "electricity",
+        "liquidity",
+        "utility",
+        "dexterity",
+        "creativity"
+      ],
       "fav": false,
       "known": false
     },
@@ -3797,6 +4672,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_016_6",
       "cluster": "luong_day_016",
       "day": 16,
+      "phonetic_distractors": [
+        "mystery",
+        "sister",
+        "sisters",
+        "pottery",
+        "bitter"
+      ],
       "fav": false,
       "known": false
     },
@@ -3822,6 +4704,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_016_7",
       "cluster": "luong_day_016",
       "day": 16,
+      "phonetic_distractors": [
+        "minneapolis",
+        "filament",
+        "pharmacist",
+        "interest",
+        "analysts"
+      ],
       "fav": false,
       "known": false
     },
@@ -3846,6 +4735,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_016_8",
       "cluster": "luong_day_016",
       "day": 16,
+      "phonetic_distractors": [
+        "cheap",
+        "above",
+        "alive",
+        "cheat",
+        "leave"
+      ],
       "fav": false,
       "known": false
     },
@@ -3893,6 +4789,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_017_0",
       "cluster": "luong_day_017",
       "day": 17,
+      "phonetic_distractors": [
+        "type",
+        "trip",
+        "ship",
+        "tape",
+        "tin"
+      ],
       "fav": false,
       "known": false
     },
@@ -3917,6 +4820,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_017_1",
       "cluster": "luong_day_017",
       "day": 17,
+      "phonetic_distractors": [
+        "node",
+        "noted",
+        "gnome",
+        "named",
+        "match"
+      ],
       "fav": false,
       "known": false
     },
@@ -3941,6 +4851,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_017_2",
       "cluster": "luong_day_017",
       "day": 17,
+      "phonetic_distractors": [
+        "description",
+        "friction",
+        "nutrition",
+        "prescription",
+        "recreation"
+      ],
       "fav": false,
       "known": false
     },
@@ -3967,6 +4884,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_017_3",
       "cluster": "luong_day_017",
       "day": 17,
+      "phonetic_distractors": [
+        "rollback",
+        "feeds",
+        "kodak",
+        "feeding",
+        "playback"
+      ],
       "fav": false,
       "known": false
     },
@@ -3991,6 +4915,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_017_4",
       "cluster": "luong_day_017",
       "day": 17,
+      "phonetic_distractors": [
+        "comparable",
+        "optimize",
+        "minimize",
+        "temperatures",
+        "complement"
+      ],
       "fav": false,
       "known": false
     },
@@ -4014,6 +4945,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_017_5",
       "cluster": "luong_day_017",
       "day": 17,
+      "phonetic_distractors": [
+        "jun",
+        "gun",
+        "fun",
+        "none",
+        "owen"
+      ],
       "fav": false,
       "known": false
     },
@@ -4060,6 +4998,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_017_7",
       "cluster": "luong_day_017",
       "day": 17,
+      "phonetic_distractors": [
+        "handbook",
+        "index",
+        "xanax",
+        "syntax",
+        "antiques"
+      ],
       "fav": false,
       "known": false
     },
@@ -4086,6 +5031,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_017_8",
       "cluster": "luong_day_017",
       "day": 17,
+      "phonetic_distractors": [
+        "outcome",
+        "interim",
+        "become",
+        "incoming",
+        "inches"
+      ],
       "fav": false,
       "known": false
     },
@@ -4112,6 +5064,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_017_9",
       "cluster": "luong_day_017",
       "day": 17,
+      "phonetic_distractors": [
+        "keys",
+        "vienna",
+        "seas",
+        "meta",
+        "arena"
+      ],
       "fav": false,
       "known": false
     },
@@ -4137,6 +5096,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_018_0",
       "cluster": "luong_day_018",
       "day": 18,
+      "phonetic_distractors": [
+        "involvement",
+        "installment",
+        "incident",
+        "instant",
+        "insulin"
+      ],
       "fav": false,
       "known": false
     },
@@ -4163,6 +5129,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_018_1",
       "cluster": "luong_day_018",
       "day": 18,
+      "phonetic_distractors": [
+        "overhang",
+        "overdraw",
+        "oversee",
+        "overtake",
+        "overnight"
+      ],
       "fav": false,
       "known": false
     },
@@ -4187,6 +5160,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_018_2",
       "cluster": "luong_day_018",
       "day": 18,
+      "phonetic_distractors": [
+        "intelligence",
+        "inherited",
+        "increment",
+        "insurance",
+        "intelligent"
+      ],
       "fav": false,
       "known": false
     },
@@ -4213,6 +5193,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_018_3",
       "cluster": "luong_day_018",
       "day": 18,
+      "phonetic_distractors": [
+        "upload",
+        "pulled",
+        "halo",
+        "paid",
+        "pillow"
+      ],
       "fav": false,
       "known": false
     },
@@ -4259,6 +5246,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_018_5",
       "cluster": "luong_day_018",
       "day": 18,
+      "phonetic_distractors": [
+        "picking",
+        "panic",
+        "public",
+        "mnemonic",
+        "click"
+      ],
       "fav": false,
       "known": false
     },
@@ -4308,6 +5302,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_018_7",
       "cluster": "luong_day_018",
       "day": 18,
+      "phonetic_distractors": [
+        "crossword",
+        "crossing",
+        "corners",
+        "crawford",
+        "awards"
+      ],
       "fav": false,
       "known": false
     },
@@ -4333,6 +5334,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_018_8",
       "cluster": "luong_day_018",
       "day": 18,
+      "phonetic_distractors": [
+        "clear",
+        "courage",
+        "click",
+        "cashier",
+        "peer"
+      ],
       "fav": false,
       "known": false
     },
@@ -4357,6 +5365,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_018_9",
       "cluster": "luong_day_018",
       "day": 18,
+      "phonetic_distractors": [
+        "render",
+        "venture",
+        "tender",
+        "sender",
+        "gender"
+      ],
       "fav": false,
       "known": false
     },
@@ -4381,6 +5396,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_019_0",
       "cluster": "luong_day_019",
       "day": 19,
+      "phonetic_distractors": [
+        "fame",
+        "game",
+        "nail",
+        "same",
+        "shame"
+      ],
       "fav": false,
       "known": false
     },
@@ -4405,6 +5427,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_019_1",
       "cluster": "luong_day_019",
       "day": 19,
+      "phonetic_distractors": [
+        "payment",
+        "basin",
+        "placement",
+        "patient",
+        "element"
+      ],
       "fav": false,
       "known": false
     },
@@ -4431,6 +5460,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_019_2",
       "cluster": "luong_day_019",
       "day": 19,
+      "phonetic_distractors": [
+        "resistant",
+        "brazilian",
+        "resident",
+        "brilliant",
+        "resistance"
+      ],
       "fav": false,
       "known": false
     },
@@ -4455,6 +5491,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_019_3",
       "cluster": "luong_day_019",
       "day": 19,
+      "phonetic_distractors": [
+        "statistic",
+        "plastic",
+        "semantic",
+        "romantic",
+        "fantastic"
+      ],
       "fav": false,
       "known": false
     },
@@ -4479,6 +5522,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_019_4",
       "cluster": "luong_day_019",
       "day": 19,
+      "phonetic_distractors": [
+        "mute",
+        "moon",
+        "issue",
+        "commute",
+        "improve"
+      ],
       "fav": false,
       "known": false
     },
@@ -4503,6 +5553,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_019_5",
       "cluster": "luong_day_019",
       "day": 19,
+      "phonetic_distractors": [
+        "real",
+        "doll",
+        "wheel",
+        "dell",
+        "neil"
+      ],
       "fav": false,
       "known": false
     },
@@ -4553,6 +5610,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_019_7",
       "cluster": "luong_day_019",
       "day": 19,
+      "phonetic_distractors": [
+        "accessibility",
+        "vulnerability",
+        "sustainability",
+        "availability",
+        "compatibility"
+      ],
       "fav": false,
       "known": false
     },
@@ -4577,6 +5641,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_019_8",
       "cluster": "luong_day_019",
       "day": 19,
+      "phonetic_distractors": [
+        "test",
+        "next",
+        "trust",
+        "tax",
+        "ticket"
+      ],
       "fav": false,
       "known": false
     },
@@ -4625,6 +5696,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_020_0",
       "cluster": "luong_day_020",
       "day": 20,
+      "phonetic_distractors": [
+        "return",
+        "router",
+        "duty",
+        "route",
+        "booty"
+      ],
       "fav": false,
       "known": false
     },
@@ -4650,6 +5728,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_020_1",
       "cluster": "luong_day_020",
       "day": 20,
+      "phonetic_distractors": [
+        "validate",
+        "candle",
+        "mandate",
+        "candles",
+        "indicate"
+      ],
       "fav": false,
       "known": false
     },
@@ -4676,6 +5761,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_020_2",
       "cluster": "luong_day_020",
       "day": 20,
+      "phonetic_distractors": [
+        "date",
+        "dare",
+        "dead",
+        "des",
+        "dot"
+      ],
       "fav": false,
       "known": false
     },
@@ -4699,6 +5791,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_020_3",
       "cluster": "luong_day_020",
       "day": 20,
+      "phonetic_distractors": [
+        "workflow",
+        "world",
+        "download",
+        "cloud",
+        "payload"
+      ],
       "fav": false,
       "known": false
     },
@@ -4725,6 +5824,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_020_4",
       "cluster": "luong_day_020",
       "day": 20,
+      "phonetic_distractors": [
+        "diversity",
+        "celebrity",
+        "charity",
+        "security",
+        "scenarios"
+      ],
       "fav": false,
       "known": false
     },
@@ -4749,6 +5855,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_020_5",
       "cluster": "luong_day_020",
       "day": 20,
+      "phonetic_distractors": [
+        "stroke",
+        "scroll",
+        "stream",
+        "stretch",
+        "role"
+      ],
       "fav": false,
       "known": false
     },
@@ -4773,6 +5886,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_020_6",
       "cluster": "luong_day_020",
       "day": 20,
+      "phonetic_distractors": [
+        "astronomy",
+        "ergonomics",
+        "electronic",
+        "astrology",
+        "strategic"
+      ],
       "fav": false,
       "known": false
     },
@@ -4798,6 +5918,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_020_7",
       "cluster": "luong_day_020",
       "day": 20,
+      "phonetic_distractors": [
+        "convergence",
+        "coverage",
+        "collision",
+        "canadian",
+        "connection"
+      ],
       "fav": false,
       "known": false
     },
@@ -4824,6 +5951,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_020_8",
       "cluster": "luong_day_020",
       "day": 20,
+      "phonetic_distractors": [
+        "pack",
+        "patch",
+        "pass",
+        "pam",
+        "perth"
+      ],
       "fav": false,
       "known": false
     },
@@ -4847,6 +5981,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_020_9",
       "cluster": "luong_day_020",
       "day": 20,
+      "phonetic_distractors": [
+        "virus",
+        "ira",
+        "price",
+        "bias",
+        "trust"
+      ],
       "fav": false,
       "known": false
     },
@@ -4873,6 +6014,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_021_0",
       "cluster": "luong_day_021",
       "day": 21,
+      "phonetic_distractors": [
+        "cashier",
+        "phishing",
+        "cache",
+        "cooling",
+        "cash"
+      ],
       "fav": false,
       "known": false
     },
@@ -4899,6 +6047,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_021_1",
       "cluster": "luong_day_021",
       "day": 21,
+      "phonetic_distractors": [
+        "fetch",
+        "wear",
+        "share",
+        "chair",
+        "bare"
+      ],
       "fav": false,
       "known": false
     },
@@ -4923,6 +6078,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_021_2",
       "cluster": "luong_day_021",
       "day": 21,
+      "phonetic_distractors": [
+        "emission",
+        "version",
+        "persian",
+        "imagine",
+        "excursion"
+      ],
       "fav": false,
       "known": false
     },
@@ -4947,6 +6109,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_021_3",
       "cluster": "luong_day_021",
       "day": 21,
+      "phonetic_distractors": [
+        "cron",
+        "clinic",
+        "comic",
+        "sonic",
+        "erotic"
+      ],
       "fav": false,
       "known": false
     },
@@ -4971,6 +6140,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_021_4",
       "cluster": "luong_day_021",
       "day": 21,
+      "phonetic_distractors": [
+        "obfuscate",
+        "obligation",
+        "modification",
+        "allocation",
+        "application"
+      ],
       "fav": false,
       "known": false
     },
@@ -4995,6 +6171,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_021_5",
       "cluster": "luong_day_021",
       "day": 21,
+      "phonetic_distractors": [
+        "assignment",
+        "assignments",
+        "appointment",
+        "client",
+        "element"
+      ],
       "fav": false,
       "known": false
     },
@@ -5019,6 +6202,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_021_6",
       "cluster": "luong_day_021",
       "day": 21,
+      "phonetic_distractors": [
+        "commonly",
+        "kennedy",
+        "common",
+        "commons",
+        "colony"
+      ],
       "fav": false,
       "known": false
     },
@@ -5043,6 +6233,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_021_7",
       "cluster": "luong_day_021",
       "day": 21,
+      "phonetic_distractors": [
+        "tract",
+        "trash",
+        "trick",
+        "truck",
+        "trek"
+      ],
       "fav": false,
       "known": false
     },
@@ -5067,6 +6264,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_021_8",
       "cluster": "luong_day_021",
       "day": 21,
+      "phonetic_distractors": [
+        "simulate",
+        "particular",
+        "calculate",
+        "jerusalem",
+        "nicholas"
+      ],
       "fav": false,
       "known": false
     },
@@ -5091,6 +6295,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_021_9",
       "cluster": "luong_day_021",
       "day": 21,
+      "phonetic_distractors": [
+        "provisions",
+        "positioning",
+        "revisions",
+        "precision",
+        "providing"
+      ],
       "fav": false,
       "known": false
     },
@@ -5115,6 +6326,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_022_0",
       "cluster": "luong_day_022",
       "day": 22,
+      "phonetic_distractors": [
+        "silo",
+        "save",
+        "slow",
+        "sell",
+        "sale"
+      ],
       "fav": false,
       "known": false
     },
@@ -5163,6 +6381,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_022_2",
       "cluster": "luong_day_022",
       "day": 22,
+      "phonetic_distractors": [
+        "collect",
+        "connect",
+        "suggest",
+        "suspect",
+        "celebs"
+      ],
       "fav": false,
       "known": false
     },
@@ -5211,6 +6436,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_022_4",
       "cluster": "luong_day_022",
       "day": 22,
+      "phonetic_distractors": [
+        "competitive",
+        "computer",
+        "composite",
+        "compatible",
+        "compliant"
+      ],
       "fav": false,
       "known": false
     },
@@ -5235,6 +6467,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_022_5",
       "cluster": "luong_day_022",
       "day": 22,
+      "phonetic_distractors": [
+        "ugly",
+        "degree",
+        "tree",
+        "carry",
+        "grow"
+      ],
       "fav": false,
       "known": false
     },
@@ -5261,6 +6500,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_022_6",
       "cluster": "luong_day_022",
       "day": 22,
+      "phonetic_distractors": [
+        "layer",
+        "main",
+        "lake",
+        "loan",
+        "line"
+      ],
       "fav": false,
       "known": false
     },
@@ -5287,6 +6533,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_022_7",
       "cluster": "luong_day_022",
       "day": 22,
+      "phonetic_distractors": [
+        "enlargement",
+        "enrollment",
+        "sentiment",
+        "increment",
+        "basement"
+      ],
       "fav": false,
       "known": false
     },
@@ -5337,6 +6590,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_022_9",
       "cluster": "luong_day_022",
       "day": 22,
+      "phonetic_distractors": [
+        "threatening",
+        "traveling",
+        "travelling",
+        "modeling",
+        "promising"
+      ],
       "fav": false,
       "known": false
     },
@@ -5385,6 +6645,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_023_1",
       "cluster": "luong_day_023",
       "day": 23,
+      "phonetic_distractors": [
+        "investigate",
+        "involvement",
+        "impediment",
+        "installment",
+        "environment"
+      ],
       "fav": false,
       "known": false
     },
@@ -5409,6 +6676,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_023_2",
       "cluster": "luong_day_023",
       "day": 23,
+      "phonetic_distractors": [
+        "code",
+        "catch",
+        "cope",
+        "cove",
+        "coal"
+      ],
       "fav": false,
       "known": false
     },
@@ -5432,6 +6706,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_023_3",
       "cluster": "luong_day_023",
       "day": 23,
+      "phonetic_distractors": [
+        "class",
+        "clone",
+        "coach",
+        "club",
+        "click"
+      ],
       "fav": false,
       "known": false
     },
@@ -5458,6 +6739,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_023_4",
       "cluster": "luong_day_023",
       "day": 23,
+      "phonetic_distractors": [
+        "encapsulate",
+        "extraction",
+        "expatriate",
+        "strategies",
+        "translator"
+      ],
       "fav": false,
       "known": false
     },
@@ -5482,6 +6770,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_023_5",
       "cluster": "luong_day_023",
       "day": 23,
+      "phonetic_distractors": [
+        "feature",
+        "favour",
+        "beaver",
+        "favor",
+        "leader"
+      ],
       "fav": false,
       "known": false
     },
@@ -5506,6 +6801,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_023_6",
       "cluster": "luong_day_023",
       "day": 23,
+      "phonetic_distractors": [
+        "weight",
+        "gage",
+        "way",
+        "gauge",
+        "wait"
+      ],
       "fav": false,
       "known": false
     },
@@ -5532,6 +6834,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_023_7",
       "cluster": "luong_day_023",
       "day": 23,
+      "phonetic_distractors": [
+        "alerting",
+        "assertion",
+        "native",
+        "iterative",
+        "alert"
+      ],
       "fav": false,
       "known": false
     },
@@ -5556,6 +6865,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_023_8",
       "cluster": "luong_day_023",
       "day": 23,
+      "phonetic_distractors": [
+        "pharmaceutical",
+        "pharmaceuticals",
+        "particularly",
+        "computational",
+        "individuals"
+      ],
       "fav": false,
       "known": false
     },
@@ -5579,6 +6895,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_023_9",
       "cluster": "luong_day_023",
       "day": 23,
+      "phonetic_distractors": [
+        "scheduled",
+        "schedules",
+        "scheduling",
+        "scholar",
+        "modular"
+      ],
       "fav": false,
       "known": false
     },
@@ -5602,6 +6925,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_024_0",
       "cluster": "luong_day_024",
       "day": 24,
+      "phonetic_distractors": [
+        "fix",
+        "phoenix",
+        "lyrics",
+        "phillips",
+        "visits"
+      ],
       "fav": false,
       "known": false
     },
@@ -5627,6 +6957,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_024_1",
       "cluster": "luong_day_024",
       "day": 24,
+      "phonetic_distractors": [
+        "sucks",
+        "sexy",
+        "success",
+        "exceed",
+        "screen"
+      ],
       "fav": false,
       "known": false
     },
@@ -5651,6 +6988,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_024_2",
       "cluster": "luong_day_024",
       "day": 24,
+      "phonetic_distractors": [
+        "filled",
+        "filed",
+        "feed",
+        "yield",
+        "sealed"
+      ],
       "fav": false,
       "known": false
     },
@@ -5675,6 +7019,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_024_3",
       "cluster": "luong_day_024",
       "day": 24,
+      "phonetic_distractors": [
+        "sponsorship",
+        "colorado",
+        "scottish",
+        "leadership",
+        "solving"
+      ],
       "fav": false,
       "known": false
     },
@@ -5749,6 +7100,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_024_6",
       "cluster": "luong_day_024",
       "day": 24,
+      "phonetic_distractors": [
+        "finished",
+        "furniture",
+        "finnish",
+        "finish",
+        "font"
+      ],
       "fav": false,
       "known": false
     },
@@ -5773,6 +7131,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_024_7",
       "cluster": "luong_day_024",
       "day": 24,
+      "phonetic_distractors": [
+        "formidable",
+        "statistical",
+        "mathematical",
+        "alphabetical",
+        "analytical"
+      ],
       "fav": false,
       "known": false
     },
@@ -5822,6 +7187,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_024_9",
       "cluster": "luong_day_024",
       "day": 24,
+      "phonetic_distractors": [
+        "toward",
+        "reward",
+        "reform",
+        "regard",
+        "award"
+      ],
       "fav": false,
       "known": false
     },
@@ -5870,6 +7242,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_025_1",
       "cluster": "luong_day_025",
       "day": 25,
+      "phonetic_distractors": [
+        "be",
+        "why",
+        "tie",
+        "psi",
+        "pie"
+      ],
       "fav": false,
       "known": false
     },
@@ -5964,6 +7343,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_025_5",
       "cluster": "luong_day_025",
       "day": 25,
+      "phonetic_distractors": [
+        "alignment",
+        "assessment",
+        "appointment",
+        "assortment",
+        "opponent"
+      ],
       "fav": false,
       "known": false
     },
@@ -6014,6 +7400,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_025_7",
       "cluster": "luong_day_025",
       "day": 25,
+      "phonetic_distractors": [
+        "vegetable",
+        "terrible",
+        "perishable",
+        "variant",
+        "variance"
+      ],
       "fav": false,
       "known": false
     },
@@ -6040,6 +7433,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_025_8",
       "cluster": "luong_day_025",
       "day": 25,
+      "phonetic_distractors": [
+        "sunny",
+        "monday",
+        "honey",
+        "month",
+        "bunny"
+      ],
       "fav": false,
       "known": false
     },
@@ -6064,6 +7464,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_025_9",
       "cluster": "luong_day_025",
       "day": 25,
+      "phonetic_distractors": [
+        "featured",
+        "edward",
+        "quad",
+        "colored",
+        "covered"
+      ],
       "fav": false,
       "known": false
     },
@@ -6088,6 +7495,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_026_0",
       "cluster": "luong_day_026",
       "day": 26,
+      "phonetic_distractors": [
+        "desk",
+        "whisk",
+        "dick",
+        "discs",
+        "dicke"
+      ],
       "fav": false,
       "known": false
     },
@@ -6111,6 +7525,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_026_1",
       "cluster": "luong_day_026",
       "day": 26,
+      "phonetic_distractors": [
+        "enclosure",
+        "disclosure",
+        "forecast",
+        "yorkshire",
+        "forecasts"
+      ],
       "fav": false,
       "known": false
     },
@@ -6135,6 +7556,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_026_2",
       "cluster": "luong_day_026",
       "day": 26,
+      "phonetic_distractors": [
+        "weight",
+        "weights",
+        "water",
+        "later",
+        "waiver"
+      ],
       "fav": false,
       "known": false
     },
@@ -6182,6 +7610,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_026_4",
       "cluster": "luong_day_026",
       "day": 26,
+      "phonetic_distractors": [
+        "model",
+        "module",
+        "monitor",
+        "modules",
+        "models"
+      ],
       "fav": false,
       "known": false
     },
@@ -6229,6 +7664,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_026_6",
       "cluster": "luong_day_026",
       "day": 26,
+      "phonetic_distractors": [
+        "project",
+        "protest",
+        "architect",
+        "connect",
+        "collect"
+      ],
       "fav": false,
       "known": false
     },
@@ -6253,6 +7695,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_026_7",
       "cluster": "luong_day_026",
       "day": 26,
+      "phonetic_distractors": [
+        "equation",
+        "equations",
+        "accordance",
+        "quantity",
+        "attendance"
+      ],
       "fav": false,
       "known": false
     },
@@ -6303,6 +7752,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_026_9",
       "cluster": "luong_day_026",
       "day": 26,
+      "phonetic_distractors": [
+        "documented",
+        "parliamentary",
+        "documents",
+        "documentation",
+        "complimentary"
+      ],
       "fav": false,
       "known": false
     },
@@ -6327,6 +7783,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_027_0",
       "cluster": "luong_day_027",
       "day": 27,
+      "phonetic_distractors": [
+        "affordable",
+        "charitable",
+        "portable",
+        "formula",
+        "variable"
+      ],
       "fav": false,
       "known": false
     },
@@ -6351,6 +7814,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_027_1",
       "cluster": "luong_day_027",
       "day": 27,
+      "phonetic_distractors": [
+        "internal",
+        "eternal",
+        "muscle",
+        "funnel",
+        "kernel"
+      ],
       "fav": false,
       "known": false
     },
@@ -6401,6 +7871,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_027_3",
       "cluster": "luong_day_027",
       "day": 27,
+      "phonetic_distractors": [
+        "glossary",
+        "gross",
+        "gregory",
+        "rotary",
+        "growth"
+      ],
       "fav": false,
       "known": false
     },
@@ -6426,6 +7903,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_027_4",
       "cluster": "luong_day_027",
       "day": 27,
+      "phonetic_distractors": [
+        "fiction",
+        "fraction",
+        "eviction",
+        "function",
+        "ericsson"
+      ],
       "fav": false,
       "known": false
     },
@@ -6450,6 +7934,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_027_5",
       "cluster": "luong_day_027",
       "day": 27,
+      "phonetic_distractors": [
+        "escalate",
+        "allocate",
+        "split",
+        "polite",
+        "state"
+      ],
       "fav": false,
       "known": false
     },
@@ -6474,6 +7965,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_027_6",
       "cluster": "luong_day_027",
       "day": 27,
+      "phonetic_distractors": [
+        "convert",
+        "cost",
+        "insert",
+        "concept",
+        "concern"
+      ],
       "fav": false,
       "known": false
     },
@@ -6523,6 +8021,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_027_8",
       "cluster": "luong_day_027",
       "day": 27,
+      "phonetic_distractors": [
+        "logical",
+        "jessica",
+        "magical",
+        "chemical",
+        "bible"
+      ],
       "fav": false,
       "known": false
     },
@@ -6547,6 +8052,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_027_9",
       "cluster": "luong_day_027",
       "day": 27,
+      "phonetic_distractors": [
+        "abstract",
+        "contract",
+        "abstracts",
+        "extras",
+        "restrict"
+      ],
       "fav": false,
       "known": false
     },
@@ -6571,6 +8083,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_028_0",
       "cluster": "luong_day_028",
       "day": 28,
+      "phonetic_distractors": [
+        "assertive",
+        "alerts",
+        "lighting",
+        "learning",
+        "floating"
+      ],
       "fav": false,
       "known": false
     },
@@ -6644,6 +8163,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_028_3",
       "cluster": "luong_day_028",
       "day": 28,
+      "phonetic_distractors": [
+        "load",
+        "code",
+        "known",
+        "road",
+        "need"
+      ],
       "fav": false,
       "known": false
     },
@@ -6718,6 +8244,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_028_6",
       "cluster": "luong_day_028",
       "day": 28,
+      "phonetic_distractors": [
+        "messenger",
+        "passage",
+        "manager",
+        "patent",
+        "passionate"
+      ],
       "fav": false,
       "known": false
     },
@@ -6767,6 +8300,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_028_8",
       "cluster": "luong_day_028",
       "day": 28,
+      "phonetic_distractors": [
+        "occasion",
+        "invasion",
+        "excursion",
+        "immersion",
+        "cayman"
+      ],
       "fav": false,
       "known": false
     },
@@ -6791,6 +8331,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_028_9",
       "cluster": "luong_day_028",
       "day": 28,
+      "phonetic_distractors": [
+        "capable",
+        "available",
+        "stable",
+        "syllabus",
+        "occasional"
+      ],
       "fav": false,
       "known": false
     },
@@ -6815,6 +8362,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_029_0",
       "cluster": "luong_day_029",
       "day": 29,
+      "phonetic_distractors": [
+        "connect",
+        "select",
+        "elect",
+        "cult",
+        "reflect"
+      ],
       "fav": false,
       "known": false
     },
@@ -6839,6 +8393,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_029_1",
       "cluster": "luong_day_029",
       "day": 29,
+      "phonetic_distractors": [
+        "replicate",
+        "marinate",
+        "delegate",
+        "duplicate",
+        "allocate"
+      ],
       "fav": false,
       "known": false
     },
@@ -6862,6 +8423,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_029_2",
       "cluster": "luong_day_029",
       "day": 29,
+      "phonetic_distractors": [
+        "pastor",
+        "packard",
+        "past",
+        "keyword",
+        "pattern"
+      ],
       "fav": false,
       "known": false
     },
@@ -6886,6 +8454,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_029_3",
       "cluster": "luong_day_029",
       "day": 29,
+      "phonetic_distractors": [
+        "spectrum",
+        "specialty",
+        "decorate",
+        "aspects",
+        "operator"
+      ],
       "fav": false,
       "known": false
     },
@@ -6912,6 +8487,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_029_4",
       "cluster": "luong_day_029",
       "day": 29,
+      "phonetic_distractors": [
+        "transparent",
+        "transmission",
+        "conspiracy",
+        "consistency",
+        "transaction"
+      ],
       "fav": false,
       "known": false
     },
@@ -6936,6 +8518,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_029_5",
       "cluster": "luong_day_029",
       "day": 29,
+      "phonetic_distractors": [
+        "patient",
+        "patent",
+        "basement",
+        "cayman",
+        "raymond"
+      ],
       "fav": false,
       "known": false
     },
@@ -6984,6 +8573,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_029_7",
       "cluster": "luong_day_029",
       "day": 29,
+      "phonetic_distractors": [
+        "check",
+        "fair",
+        "wear",
+        "share",
+        "fare"
+      ],
       "fav": false,
       "known": false
     },
@@ -7008,6 +8604,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_029_8",
       "cluster": "luong_day_029",
       "day": 29,
+      "phonetic_distractors": [
+        "performed",
+        "performer",
+        "performs",
+        "performing",
+        "persistence"
+      ],
       "fav": false,
       "known": false
     },
@@ -7058,6 +8661,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_030_0",
       "cluster": "luong_day_030",
       "day": 30,
+      "phonetic_distractors": [
+        "venue",
+        "matthew",
+        "meant",
+        "kenya",
+        "many"
+      ],
       "fav": false,
       "known": false
     },
@@ -7082,6 +8692,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_030_1",
       "cluster": "luong_day_030",
       "day": 30,
+      "phonetic_distractors": [
+        "iris",
+        "virus",
+        "viral",
+        "habit",
+        "blood"
+      ],
       "fav": false,
       "known": false
     },
@@ -7108,6 +8725,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_030_2",
       "cluster": "luong_day_030",
       "day": 30,
+      "phonetic_distractors": [
+        "relax",
+        "feedback",
+        "robot",
+        "roland",
+        "notebook"
+      ],
       "fav": false,
       "known": false
     },
@@ -7134,6 +8758,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_030_3",
       "cluster": "luong_day_030",
       "day": 30,
+      "phonetic_distractors": [
+        "description",
+        "transcription",
+        "subscription",
+        "encryption",
+        "proportion"
+      ],
       "fav": false,
       "known": false
     },
@@ -7182,6 +8813,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_030_5",
       "cluster": "luong_day_030",
       "day": 30,
+      "phonetic_distractors": [
+        "automation",
+        "renovation",
+        "motivation",
+        "iteration",
+        "correlation"
+      ],
       "fav": false,
       "known": false
     },
@@ -7205,6 +8843,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_030_6",
       "cluster": "luong_day_030",
       "day": 30,
+      "phonetic_distractors": [
+        "bill",
+        "boot",
+        "knit",
+        "fit",
+        "beat"
+      ],
       "fav": false,
       "known": false
     },
@@ -7255,6 +8900,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_030_8",
       "cluster": "luong_day_030",
       "day": 30,
+      "phonetic_distractors": [
+        "aggregation",
+        "annotation",
+        "navigate",
+        "allocation",
+        "pagination"
+      ],
       "fav": false,
       "known": false
     },
@@ -7279,6 +8931,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_030_9",
       "cluster": "luong_day_030",
       "day": 30,
+      "phonetic_distractors": [
+        "variation",
+        "renovation",
+        "restoration",
+        "reservation",
+        "radiation"
+      ],
       "fav": false,
       "known": false
     },
@@ -7303,6 +8962,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_031_0",
       "cluster": "luong_day_031",
       "day": 31,
+      "phonetic_distractors": [
+        "producer",
+        "introduce",
+        "reprints",
+        "produced",
+        "rapids"
+      ],
       "fav": false,
       "known": false
     },
@@ -7327,6 +8993,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_031_1",
       "cluster": "luong_day_031",
       "day": 31,
+      "phonetic_distractors": [
+        "activation",
+        "motivated",
+        "renovation",
+        "mitigation",
+        "iteration"
+      ],
       "fav": false,
       "known": false
     },
@@ -7373,6 +9046,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_031_3",
       "cluster": "luong_day_031",
       "day": 31,
+      "phonetic_distractors": [
+        "marked",
+        "marcus",
+        "carpet",
+        "target",
+        "marker"
+      ],
       "fav": false,
       "known": false
     },
@@ -7398,6 +9078,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_031_4",
       "cluster": "luong_day_031",
       "day": 31,
+      "phonetic_distractors": [
+        "aside",
+        "align",
+        "refine",
+        "line",
+        "pine"
+      ],
       "fav": false,
       "known": false
     },
@@ -7424,6 +9111,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_031_5",
       "cluster": "luong_day_031",
       "day": 31,
+      "phonetic_distractors": [
+        "monitor",
+        "tickets",
+        "mint",
+        "mounts",
+        "units"
+      ],
       "fav": false,
       "known": false
     },
@@ -7448,6 +9142,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_031_6",
       "cluster": "luong_day_031",
       "day": 31,
+      "phonetic_distractors": [
+        "respond",
+        "responsive",
+        "expense",
+        "spots",
+        "responded"
+      ],
       "fav": false,
       "known": false
     },
@@ -7472,6 +9173,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_031_7",
       "cluster": "luong_day_031",
       "day": 31,
+      "phonetic_distractors": [
+        "difference",
+        "inference",
+        "revenue",
+        "endurance",
+        "refund"
+      ],
       "fav": false,
       "known": false
     },
@@ -7523,6 +9231,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_031_9",
       "cluster": "luong_day_031",
       "day": 31,
+      "phonetic_distractors": [
+        "dramatic",
+        "diplomatic",
+        "systematic",
+        "automatic",
+        "domestic"
+      ],
       "fav": false,
       "known": false
     },
@@ -7547,6 +9262,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_032_0",
       "cluster": "luong_day_032",
       "day": 32,
+      "phonetic_distractors": [
+        "instrument",
+        "environment",
+        "implement",
+        "incident",
+        "instruments"
+      ],
       "fav": false,
       "known": false
     },
@@ -7571,6 +9293,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_032_1",
       "cluster": "luong_day_032",
       "day": 32,
+      "phonetic_distractors": [
+        "suggest",
+        "suggests",
+        "cement",
+        "ancestor",
+        "investor"
+      ],
       "fav": false,
       "known": false
     },
@@ -7595,6 +9324,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_032_2",
       "cluster": "luong_day_032",
       "day": 32,
+      "phonetic_distractors": [
+        "color",
+        "colour",
+        "cooler",
+        "collar",
+        "capture"
+      ],
       "fav": false,
       "known": false
     },
@@ -7619,6 +9355,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_032_3",
       "cluster": "luong_day_032",
       "day": 32,
+      "phonetic_distractors": [
+        "ever",
+        "era",
+        "air",
+        "buyer",
+        "effort"
+      ],
       "fav": false,
       "known": false
     },
@@ -7643,6 +9386,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_032_4",
       "cluster": "luong_day_032",
       "day": 32,
+      "phonetic_distractors": [
+        "gateway",
+        "today",
+        "paraguay",
+        "metals",
+        "gets"
+      ],
       "fav": false,
       "known": false
     },
@@ -7668,6 +9418,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_032_5",
       "cluster": "luong_day_032",
       "day": 32,
+      "phonetic_distractors": [
+        "idiomatic",
+        "stochastic",
+        "interactive",
+        "fantastic",
+        "interested"
+      ],
       "fav": false,
       "known": false
     },
@@ -7693,6 +9450,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_032_6",
       "cluster": "luong_day_032",
       "day": 32,
+      "phonetic_distractors": [
+        "christian",
+        "weapon",
+        "kingston",
+        "preston",
+        "correction"
+      ],
       "fav": false,
       "known": false
     },
@@ -7719,6 +9483,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_032_7",
       "cluster": "luong_day_032",
       "day": 32,
+      "phonetic_distractors": [
+        "include",
+        "concerned",
+        "canal",
+        "conclusion",
+        "concrete"
+      ],
       "fav": false,
       "known": false
     },
@@ -7743,6 +9514,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_032_8",
       "cluster": "luong_day_032",
       "day": 32,
+      "phonetic_distractors": [
+        "resulting",
+        "relating",
+        "limiting",
+        "rating",
+        "relative"
+      ],
       "fav": false,
       "known": false
     },
@@ -7793,6 +9571,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_033_0",
       "cluster": "luong_day_033",
       "day": 33,
+      "phonetic_distractors": [
+        "interject",
+        "internet",
+        "indirect",
+        "incorrect",
+        "interview"
+      ],
       "fav": false,
       "known": false
     },
@@ -7817,6 +9602,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_033_1",
       "cluster": "luong_day_033",
       "day": 33,
+      "phonetic_distractors": [
+        "robot",
+        "focused",
+        "rabbit",
+        "lowest",
+        "reboot"
+      ],
       "fav": false,
       "known": false
     },
@@ -7864,6 +9656,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_033_3",
       "cluster": "luong_day_033",
       "day": 33,
+      "phonetic_distractors": [
+        "cindy",
+        "energy",
+        "surgery",
+        "simmer",
+        "diverge"
+      ],
       "fav": false,
       "known": false
     },
@@ -7888,6 +9687,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_033_4",
       "cluster": "luong_day_033",
       "day": 33,
+      "phonetic_distractors": [
+        "hearts",
+        "harvest",
+        "harbor",
+        "harvey",
+        "harley"
+      ],
       "fav": false,
       "known": false
     },
@@ -7937,6 +9743,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_033_6",
       "cluster": "luong_day_033",
       "day": 33,
+      "phonetic_distractors": [
+        "open",
+        "epoch",
+        "heaven",
+        "wooden",
+        "woman"
+      ],
       "fav": false,
       "known": false
     },
@@ -7961,6 +9774,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_033_7",
       "cluster": "luong_day_033",
       "day": 33,
+      "phonetic_distractors": [
+        "fund",
+        "massage",
+        "aside",
+        "decide",
+        "field"
+      ],
       "fav": false,
       "known": false
     },
@@ -7983,6 +9803,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_033_8",
       "cluster": "luong_day_033",
       "day": 33,
+      "phonetic_distractors": [
+        "stable",
+        "simple",
+        "station",
+        "table",
+        "spatial"
+      ],
       "fav": false,
       "known": false
     },
@@ -8009,6 +9836,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_033_9",
       "cluster": "luong_day_033",
       "day": 33,
+      "phonetic_distractors": [
+        "depart",
+        "composite",
+        "opposite",
+        "apart",
+        "update"
+      ],
       "fav": false,
       "known": false
     },
@@ -8033,6 +9867,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_034_0",
       "cluster": "luong_day_034",
       "day": 34,
+      "phonetic_distractors": [
+        "visible",
+        "casual",
+        "usual",
+        "versatile",
+        "digital"
+      ],
       "fav": false,
       "known": false
     },
@@ -8079,6 +9920,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_034_2",
       "cluster": "luong_day_034",
       "day": 34,
+      "phonetic_distractors": [
+        "frequent",
+        "tournament",
+        "treated",
+        "recent",
+        "retirement"
+      ],
       "fav": false,
       "known": false
     },
@@ -8127,6 +9975,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_034_4",
       "cluster": "luong_day_034",
       "day": 34,
+      "phonetic_distractors": [
+        "loan",
+        "code",
+        "node",
+        "loud",
+        "lows"
+      ],
       "fav": false,
       "known": false
     },
@@ -8151,6 +10006,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_034_5",
       "cluster": "luong_day_034",
       "day": 34,
+      "phonetic_distractors": [
+        "vocal",
+        "locate",
+        "locally",
+        "focal",
+        "scan"
+      ],
       "fav": false,
       "known": false
     },
@@ -8222,6 +10084,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_034_8",
       "cluster": "luong_day_034",
       "day": 34,
+      "phonetic_distractors": [
+        "taken",
+        "open",
+        "focus",
+        "ticket",
+        "roman"
+      ],
       "fav": false,
       "known": false
     },
@@ -8271,6 +10140,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_035_0",
       "cluster": "luong_day_035",
       "day": 35,
+      "phonetic_distractors": [
+        "mark",
+        "cock",
+        "mic",
+        "make",
+        "mas"
+      ],
       "fav": false,
       "known": false
     },
@@ -8295,6 +10171,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_035_1",
       "cluster": "luong_day_035",
       "day": 35,
+      "phonetic_distractors": [
+        "form",
+        "forge",
+        "fourth",
+        "four",
+        "york"
+      ],
       "fav": false,
       "known": false
     },
@@ -8319,6 +10202,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_035_2",
       "cluster": "luong_day_035",
       "day": 35,
+      "phonetic_distractors": [
+        "banner",
+        "bitter",
+        "battery",
+        "answer",
+        "pointer"
+      ],
       "fav": false,
       "known": false
     },
@@ -8343,6 +10233,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_035_3",
       "cluster": "luong_day_035",
       "day": 35,
+      "phonetic_distractors": [
+        "cache",
+        "cash",
+        "had",
+        "hack",
+        "dash"
+      ],
       "fav": false,
       "known": false
     },
@@ -8393,6 +10290,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_035_5",
       "cluster": "luong_day_035",
       "day": 35,
+      "phonetic_distractors": [
+        "competent",
+        "competition",
+        "competitions",
+        "compensate",
+        "compliance"
+      ],
       "fav": false,
       "known": false
     },
@@ -8418,6 +10322,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_035_6",
       "cluster": "luong_day_035",
       "day": 35,
+      "phonetic_distractors": [
+        "fair",
+        "share",
+        "chair",
+        "fare",
+        "bare"
+      ],
       "fav": false,
       "known": false
     },
@@ -8469,6 +10380,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_035_8",
       "cluster": "luong_day_035",
       "day": 35,
+      "phonetic_distractors": [
+        "governments",
+        "government",
+        "convergence",
+        "governing",
+        "occurrence"
+      ],
       "fav": false,
       "known": false
     },
@@ -8495,6 +10413,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_035_9",
       "cluster": "luong_day_035",
       "day": 35,
+      "phonetic_distractors": [
+        "format",
+        "podcast",
+        "forest",
+        "forced",
+        "broadcast"
+      ],
       "fav": false,
       "known": false
     },
@@ -8519,6 +10444,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_036_0",
       "cluster": "luong_day_036",
       "day": 36,
+      "phonetic_distractors": [
+        "monster",
+        "modular",
+        "manager",
+        "minutes",
+        "minute"
+      ],
       "fav": false,
       "known": false
     },
@@ -8542,6 +10474,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_036_1",
       "cluster": "luong_day_036",
       "day": 36,
+      "phonetic_distractors": [
+        "violation",
+        "insulation",
+        "isolated",
+        "solution",
+        "citation"
+      ],
       "fav": false,
       "known": false
     },
@@ -8590,6 +10529,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_036_3",
       "cluster": "luong_day_036",
       "day": 36,
+      "phonetic_distractors": [
+        "bailey",
+        "delhi",
+        "daisy",
+        "dale",
+        "data"
+      ],
       "fav": false,
       "known": false
     },
@@ -8614,6 +10560,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_036_4",
       "cluster": "luong_day_036",
       "day": 36,
+      "phonetic_distractors": [
+        "debug",
+        "damage",
+        "salmon",
+        "roman",
+        "deemed"
+      ],
       "fav": false,
       "known": false
     },
@@ -8663,6 +10616,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_036_6",
       "cluster": "luong_day_036",
       "day": 36,
+      "phonetic_distractors": [
+        "dating",
+        "waiting",
+        "raising",
+        "writing",
+        "mating"
+      ],
       "fav": false,
       "known": false
     },
@@ -8710,6 +10670,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_036_8",
       "cluster": "luong_day_036",
       "day": 36,
+      "phonetic_distractors": [
+        "taxation",
+        "playstation",
+        "citation",
+        "annotation",
+        "extension"
+      ],
       "fav": false,
       "known": false
     },
@@ -8758,6 +10725,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_037_0",
       "cluster": "luong_day_037",
       "day": 37,
+      "phonetic_distractors": [
+        "lawn",
+        "lunch",
+        "blanch",
+        "lane",
+        "loan"
+      ],
       "fav": false,
       "known": false
     },
@@ -8782,6 +10756,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_037_1",
       "cluster": "luong_day_037",
       "day": 37,
+      "phonetic_distractors": [
+        "spend",
+        "lend",
+        "signed",
+        "sense",
+        "bend"
+      ],
       "fav": false,
       "known": false
     },
@@ -8854,6 +10835,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_037_4",
       "cluster": "luong_day_037",
       "day": 37,
+      "phonetic_distractors": [
+        "delegate",
+        "celebration",
+        "allocate",
+        "validate",
+        "syllabus"
+      ],
       "fav": false,
       "known": false
     },
@@ -8878,6 +10866,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_037_5",
       "cluster": "luong_day_037",
       "day": 37,
+      "phonetic_distractors": [
+        "possibility",
+        "visibility",
+        "capability",
+        "reliability",
+        "availability"
+      ],
       "fav": false,
       "known": false
     },
@@ -8902,6 +10897,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_037_6",
       "cluster": "luong_day_037",
       "day": 37,
+      "phonetic_distractors": [
+        "middle",
+        "medal",
+        "modular",
+        "module",
+        "nozzle"
+      ],
       "fav": false,
       "known": false
     },
@@ -8926,6 +10928,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_037_7",
       "cluster": "luong_day_037",
       "day": 37,
+      "phonetic_distractors": [
+        "trip",
+        "treasure",
+        "tiger",
+        "river",
+        "trader"
+      ],
       "fav": false,
       "known": false
     },
@@ -8950,6 +10959,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_037_8",
       "cluster": "luong_day_037",
       "day": 37,
+      "phonetic_distractors": [
+        "journal",
+        "couple",
+        "cancel",
+        "curtain",
+        "panel"
+      ],
       "fav": false,
       "known": false
     },
@@ -8973,6 +10989,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_037_9",
       "cluster": "luong_day_037",
       "day": 37,
+      "phonetic_distractors": [
+        "clusters",
+        "catering",
+        "covering",
+        "lasting",
+        "casting"
+      ],
       "fav": false,
       "known": false
     },
@@ -8999,6 +11022,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_038_0",
       "cluster": "luong_day_038",
       "day": 38,
+      "phonetic_distractors": [
+        "runway",
+        "suburb",
+        "away",
+        "sunday",
+        "survey"
+      ],
       "fav": false,
       "known": false
     },
@@ -9023,6 +11053,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_038_1",
       "cluster": "luong_day_038",
       "day": 38,
+      "phonetic_distractors": [
+        "overseas",
+        "mercy",
+        "every",
+        "ivory",
+        "overall"
+      ],
       "fav": false,
       "known": false
     },
@@ -9071,6 +11108,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_038_3",
       "cluster": "luong_day_038",
       "day": 38,
+      "phonetic_distractors": [
+        "sprite",
+        "copies",
+        "copying",
+        "copied",
+        "carpet"
+      ],
       "fav": false,
       "known": false
     },
@@ -9095,6 +11139,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_038_4",
       "cluster": "luong_day_038",
       "day": 38,
+      "phonetic_distractors": [
+        "sport",
+        "report",
+        "sort",
+        "import",
+        "sports"
+      ],
       "fav": false,
       "known": false
     },
@@ -9119,6 +11170,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_038_5",
       "cluster": "luong_day_038",
       "day": 38,
+      "phonetic_distractors": [
+        "fat",
+        "fight",
+        "flat",
+        "font",
+        "chat"
+      ],
       "fav": false,
       "known": false
     },
@@ -9143,6 +11201,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_038_6",
       "cluster": "luong_day_038",
       "day": 38,
+      "phonetic_distractors": [
+        "participate",
+        "participation",
+        "participated",
+        "participating",
+        "argument"
+      ],
       "fav": false,
       "known": false
     },
@@ -9167,6 +11232,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_038_7",
       "cluster": "luong_day_038",
       "day": 38,
+      "phonetic_distractors": [
+        "dutch",
+        "much",
+        "ton",
+        "teach",
+        "tough"
+      ],
       "fav": false,
       "known": false
     },
@@ -9191,6 +11263,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_038_8",
       "cluster": "luong_day_038",
       "day": 38,
+      "phonetic_distractors": [
+        "emission",
+        "petition",
+        "position",
+        "permitted",
+        "admission"
+      ],
       "fav": false,
       "known": false
     },
@@ -9216,6 +11295,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_038_9",
       "cluster": "luong_day_038",
       "day": 38,
+      "phonetic_distractors": [
+        "august",
+        "trust",
+        "aug",
+        "soonest",
+        "newest"
+      ],
       "fav": false,
       "known": false
     },
@@ -9240,6 +11326,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_039_0",
       "cluster": "luong_day_039",
       "day": 39,
+      "phonetic_distractors": [
+        "epic",
+        "weapon",
+        "pack",
+        "open",
+        "epics"
+      ],
       "fav": false,
       "known": false
     },
@@ -9263,6 +11356,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_039_1",
       "cluster": "luong_day_039",
       "day": 39,
+      "phonetic_distractors": [
+        "amplifier",
+        "attitude",
+        "monitored",
+        "simplified",
+        "magnitude"
+      ],
       "fav": false,
       "known": false
     },
@@ -9287,6 +11387,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_039_2",
       "cluster": "luong_day_039",
       "day": 39,
+      "phonetic_distractors": [
+        "arrange",
+        "chains",
+        "chain",
+        "range",
+        "churn"
+      ],
       "fav": false,
       "known": false
     },
@@ -9311,6 +11418,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_039_3",
       "cluster": "luong_day_039",
       "day": 39,
+      "phonetic_distractors": [
+        "mock",
+        "mars",
+        "dark",
+        "shark",
+        "marco"
+      ],
       "fav": false,
       "known": false
     },
@@ -9337,6 +11451,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_039_4",
       "cluster": "luong_day_039",
       "day": 39,
+      "phonetic_distractors": [
+        "documented",
+        "documentary",
+        "implementation",
+        "instrumentation",
+        "representation"
+      ],
       "fav": false,
       "known": false
     },
@@ -9361,6 +11482,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_039_5",
       "cluster": "luong_day_039",
       "day": 39,
+      "phonetic_distractors": [
+        "eternal",
+        "trial",
+        "bottle",
+        "serial",
+        "battle"
+      ],
       "fav": false,
       "known": false
     },
@@ -9385,6 +11513,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_039_6",
       "cluster": "luong_day_039",
       "day": 39,
+      "phonetic_distractors": [
+        "sour",
+        "stay",
+        "outer",
+        "sir",
+        "easter"
+      ],
       "fav": false,
       "known": false
     },
@@ -9409,6 +11544,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_039_7",
       "cluster": "luong_day_039",
       "day": 39,
+      "phonetic_distractors": [
+        "axis",
+        "excess",
+        "asset",
+        "address",
+        "excel"
+      ],
       "fav": false,
       "known": false
     },
@@ -9433,6 +11575,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_039_8",
       "cluster": "luong_day_039",
       "day": 39,
+      "phonetic_distractors": [
+        "rural",
+        "viral",
+        "nozzle",
+        "oral",
+        "carroll"
+      ],
       "fav": false,
       "known": false
     },
@@ -9457,6 +11606,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_039_9",
       "cluster": "luong_day_039",
       "day": 39,
+      "phonetic_distractors": [
+        "reserve",
+        "room",
+        "redeem",
+        "reduce",
+        "renew"
+      ],
       "fav": false,
       "known": false
     },
@@ -9483,6 +11639,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_040_0",
       "cluster": "luong_day_040",
       "day": 40,
+      "phonetic_distractors": [
+        "inner",
+        "inter",
+        "info",
+        "owner",
+        "answer"
+      ],
       "fav": false,
       "known": false
     },
@@ -9507,6 +11670,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_040_1",
       "cluster": "luong_day_040",
       "day": 40,
+      "phonetic_distractors": [
+        "remote",
+        "route",
+        "rooms",
+        "rebate",
+        "kuwait"
+      ],
       "fav": false,
       "known": false
     },
@@ -9531,6 +11701,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_040_2",
       "cluster": "luong_day_040",
       "day": 40,
+      "phonetic_distractors": [
+        "cost",
+        "card",
+        "chart",
+        "court",
+        "karl"
+      ],
       "fav": false,
       "known": false
     },
@@ -9557,6 +11734,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_040_3",
       "cluster": "luong_day_040",
       "day": 40,
+      "phonetic_distractors": [
+        "endurance",
+        "pendant",
+        "powerpoint",
+        "endorsed",
+        "export"
+      ],
       "fav": false,
       "known": false
     },
@@ -9580,6 +11764,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_040_4",
       "cluster": "luong_day_040",
       "day": 40,
+      "phonetic_distractors": [
+        "reserve",
+        "deserve",
+        "weird",
+        "desired",
+        "reserved"
+      ],
       "fav": false,
       "known": false
     },
@@ -9630,6 +11821,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_040_6",
       "cluster": "luong_day_040",
       "day": 40,
+      "phonetic_distractors": [
+        "transparency",
+        "transport",
+        "transmission",
+        "transcript",
+        "transaction"
+      ],
       "fav": false,
       "known": false
     },
@@ -9680,6 +11878,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_040_8",
       "cluster": "luong_day_040",
       "day": 40,
+      "phonetic_distractors": [
+        "graphic",
+        "tracking",
+        "track",
+        "trick",
+        "graphics"
+      ],
       "fav": false,
       "known": false
     },
@@ -9754,6 +11959,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_041_1",
       "cluster": "luong_day_041",
       "day": 41,
+      "phonetic_distractors": [
+        "priorities",
+        "prioritize",
+        "private",
+        "privacy",
+        "majority"
+      ],
       "fav": false,
       "known": false
     },
@@ -9803,6 +12015,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_041_3",
       "cluster": "luong_day_041",
       "day": 41,
+      "phonetic_distractors": [
+        "syllabus",
+        "visible",
+        "reliance",
+        "renewable",
+        "desirable"
+      ],
       "fav": false,
       "known": false
     },
@@ -9827,6 +12046,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_041_4",
       "cluster": "luong_day_041",
       "day": 41,
+      "phonetic_distractors": [
+        "recipe",
+        "jeremy",
+        "checkup",
+        "verify",
+        "guarantee"
+      ],
       "fav": false,
       "known": false
     },
@@ -9853,6 +12079,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_041_5",
       "cluster": "luong_day_041",
       "day": 41,
+      "phonetic_distractors": [
+        "proactive",
+        "protocol",
+        "promoting",
+        "proteins",
+        "promotes"
+      ],
       "fav": false,
       "known": false
     },
@@ -9876,6 +12109,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_041_6",
       "cluster": "luong_day_041",
       "day": 41,
+      "phonetic_distractors": [
+        "bit",
+        "commit",
+        "buses",
+        "butt",
+        "judges"
+      ],
       "fav": false,
       "known": false
     },
@@ -9900,6 +12140,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_041_7",
       "cluster": "luong_day_041",
       "day": 41,
+      "phonetic_distractors": [
+        "backend",
+        "boyfriend",
+        "underground",
+        "grounds",
+        "baghdad"
+      ],
       "fav": false,
       "known": false
     },
@@ -9924,6 +12171,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_041_8",
       "cluster": "luong_day_041",
       "day": 41,
+      "phonetic_distractors": [
+        "broad",
+        "fred",
+        "fresh",
+        "frame",
+        "fry"
+      ],
       "fav": false,
       "known": false
     },
@@ -9948,6 +12202,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_041_9",
       "cluster": "luong_day_041",
       "day": 41,
+      "phonetic_distractors": [
+        "craft",
+        "wrapped",
+        "tract",
+        "crafts",
+        "rat"
+      ],
       "fav": false,
       "known": false
     },
@@ -9974,6 +12235,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_042_0",
       "cluster": "luong_day_042",
       "day": 42,
+      "phonetic_distractors": [
+        "interested",
+        "unexpected",
+        "interesting",
+        "intersection",
+        "deterministic"
+      ],
       "fav": false,
       "known": false
     },
@@ -9998,6 +12266,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_042_1",
       "cluster": "luong_day_042",
       "day": 42,
+      "phonetic_distractors": [
+        "editorial",
+        "material",
+        "neutral",
+        "memorial",
+        "betrayal"
+      ],
       "fav": false,
       "known": false
     },
@@ -10022,6 +12297,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_042_2",
       "cluster": "luong_day_042",
       "day": 42,
+      "phonetic_distractors": [
+        "surf",
+        "church",
+        "serve",
+        "sir",
+        "surrey"
+      ],
       "fav": false,
       "known": false
     },
@@ -10045,6 +12327,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_042_3",
       "cluster": "luong_day_042",
       "day": 42,
+      "phonetic_distractors": [
+        "synthesis",
+        "minimize",
+        "minister",
+        "socialize",
+        "equalizer"
+      ],
       "fav": false,
       "known": false
     },
@@ -10071,6 +12360,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_042_4",
       "cluster": "luong_day_042",
       "day": 42,
+      "phonetic_distractors": [
+        "send",
+        "spent",
+        "trend",
+        "speed",
+        "lend"
+      ],
       "fav": false,
       "known": false
     },
@@ -10095,6 +12391,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_042_5",
       "cluster": "luong_day_042",
       "day": 42,
+      "phonetic_distractors": [
+        "rule",
+        "role",
+        "deal",
+        "wheel",
+        "reed"
+      ],
       "fav": false,
       "known": false
     },
@@ -10119,6 +12422,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_042_6",
       "cluster": "luong_day_042",
       "day": 42,
+      "phonetic_distractors": [
+        "meaning",
+        "dining",
+        "signing",
+        "meeting",
+        "burning"
+      ],
       "fav": false,
       "known": false
     },
@@ -10145,6 +12455,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_042_7",
       "cluster": "luong_day_042",
       "day": 42,
+      "phonetic_distractors": [
+        "commute",
+        "execution",
+        "excellent",
+        "excuse",
+        "export"
+      ],
       "fav": false,
       "known": false
     },
@@ -10169,6 +12486,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_042_8",
       "cluster": "luong_day_042",
       "day": 42,
+      "phonetic_distractors": [
+        "advocate",
+        "aggregation",
+        "target",
+        "acrobat",
+        "oregon"
+      ],
       "fav": false,
       "known": false
     },
@@ -10195,6 +12519,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_042_9",
       "cluster": "luong_day_042",
       "day": 42,
+      "phonetic_distractors": [
+        "interact",
+        "interject",
+        "inherit",
+        "integrate",
+        "integrity"
+      ],
       "fav": false,
       "known": false
     },
@@ -10220,6 +12551,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_043_0",
       "cluster": "luong_day_043",
       "day": 43,
+      "phonetic_distractors": [
+        "fuel",
+        "crucial",
+        "brutal",
+        "google",
+        "single"
+      ],
       "fav": false,
       "known": false
     },
@@ -10246,6 +12584,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_043_1",
       "cluster": "luong_day_043",
       "day": 43,
+      "phonetic_distractors": [
+        "nudist",
+        "newest",
+        "cost",
+        "concert",
+        "font"
+      ],
       "fav": false,
       "known": false
     },
@@ -10269,6 +12614,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_043_2",
       "cluster": "luong_day_043",
       "day": 43,
+      "phonetic_distractors": [
+        "viral",
+        "forward",
+        "taiwan",
+        "formal",
+        "frog"
+      ],
       "fav": false,
       "known": false
     },
@@ -10293,6 +12645,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_043_3",
       "cluster": "luong_day_043",
       "day": 43,
+      "phonetic_distractors": [
+        "nature",
+        "labour",
+        "labor",
+        "layer",
+        "paper"
+      ],
       "fav": false,
       "known": false
     },
@@ -10317,6 +12676,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_043_4",
       "cluster": "luong_day_043",
       "day": 43,
+      "phonetic_distractors": [
+        "egress",
+        "stress",
+        "access",
+        "adverse",
+        "advice"
+      ],
       "fav": false,
       "known": false
     },
@@ -10341,6 +12707,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_043_5",
       "cluster": "luong_day_043",
       "day": 43,
+      "phonetic_distractors": [
+        "transport",
+        "brainstorm",
+        "transfer",
+        "transfers",
+        "transferred"
+      ],
       "fav": false,
       "known": false
     },
@@ -10365,6 +12738,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_043_6",
       "cluster": "luong_day_043",
       "day": 43,
+      "phonetic_distractors": [
+        "insertion",
+        "certain",
+        "surgeon",
+        "edition",
+        "session"
+      ],
       "fav": false,
       "known": false
     },
@@ -10391,6 +12771,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_043_7",
       "cluster": "luong_day_043",
       "day": 43,
+      "phonetic_distractors": [
+        "private",
+        "promise",
+        "product",
+        "rocket",
+        "pocket"
+      ],
       "fav": false,
       "known": false
     },
@@ -10415,6 +12802,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_043_8",
       "cluster": "luong_day_043",
       "day": 43,
+      "phonetic_distractors": [
+        "securities",
+        "securely",
+        "secured",
+        "simulate",
+        "severity"
+      ],
       "fav": false,
       "known": false
     },
@@ -10439,6 +12833,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_043_9",
       "cluster": "luong_day_043",
       "day": 43,
+      "phonetic_distractors": [
+        "simple",
+        "symbols",
+        "simulation",
+        "symbol",
+        "similar"
+      ],
       "fav": false,
       "known": false
     },
@@ -10463,6 +12864,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_044_0",
       "cluster": "luong_day_044",
       "day": 44,
+      "phonetic_distractors": [
+        "god",
+        "girls",
+        "got",
+        "girl",
+        "guam"
+      ],
       "fav": false,
       "known": false
     },
@@ -10563,6 +12971,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_044_4",
       "cluster": "luong_day_044",
       "day": 44,
+      "phonetic_distractors": [
+        "processed",
+        "processes",
+        "processing",
+        "professor",
+        "producer"
+      ],
       "fav": false,
       "known": false
     },
@@ -10586,6 +13001,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_044_5",
       "cluster": "luong_day_044",
       "day": 44,
+      "phonetic_distractors": [
+        "keyboard",
+        "dashboard",
+        "ignored",
+        "restored",
+        "reward"
+      ],
       "fav": false,
       "known": false
     },
@@ -10610,6 +13032,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_044_6",
       "cluster": "luong_day_044",
       "day": 44,
+      "phonetic_distractors": [
+        "headline",
+        "pipeline",
+        "timeline",
+        "deadline",
+        "online"
+      ],
       "fav": false,
       "known": false
     },
@@ -10659,6 +13088,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_044_8",
       "cluster": "luong_day_044",
       "day": 44,
+      "phonetic_distractors": [
+        "forecast",
+        "forming",
+        "formed",
+        "formal",
+        "forest"
+      ],
       "fav": false,
       "known": false
     },
@@ -10682,6 +13118,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_044_9",
       "cluster": "luong_day_044",
       "day": 44,
+      "phonetic_distractors": [
+        "bloom",
+        "claim",
+        "flame",
+        "blade",
+        "blake"
+      ],
       "fav": false,
       "known": false
     },
@@ -10708,6 +13151,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_045_0",
       "cluster": "luong_day_045",
       "day": 45,
+      "phonetic_distractors": [
+        "solution",
+        "petition",
+        "position",
+        "evolution",
+        "possession"
+      ],
       "fav": false,
       "known": false
     },
@@ -10758,6 +13208,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_045_2",
       "cluster": "luong_day_045",
       "day": 45,
+      "phonetic_distractors": [
+        "scale",
+        "skin",
+        "still",
+        "skip",
+        "school"
+      ],
       "fav": false,
       "known": false
     },
@@ -10784,6 +13241,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_045_3",
       "cluster": "luong_day_045",
       "day": 45,
+      "phonetic_distractors": [
+        "stats",
+        "static",
+        "gratis",
+        "satin",
+        "stamps"
+      ],
       "fav": false,
       "known": false
     },
@@ -10809,6 +13273,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_045_4",
       "cluster": "luong_day_045",
       "day": 45,
+      "phonetic_distractors": [
+        "infection",
+        "insulation",
+        "innovation",
+        "iteration",
+        "infatuation"
+      ],
       "fav": false,
       "known": false
     },
@@ -10834,6 +13305,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_045_5",
       "cluster": "luong_day_045",
       "day": 45,
+      "phonetic_distractors": [
+        "vacancies",
+        "latency",
+        "agency",
+        "currency",
+        "agencies"
+      ],
       "fav": false,
       "known": false
     },
@@ -10884,6 +13362,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_045_7",
       "cluster": "luong_day_045",
       "day": 45,
+      "phonetic_distractors": [
+        "stress",
+        "stream",
+        "stroll",
+        "step",
+        "spread"
+      ],
       "fav": false,
       "known": false
     },
@@ -10908,6 +13393,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_045_8",
       "cluster": "luong_day_045",
       "day": 45,
+      "phonetic_distractors": [
+        "apartment",
+        "alignment",
+        "assortment",
+        "assignment",
+        "opponent"
+      ],
       "fav": false,
       "known": false
     },
@@ -10932,6 +13424,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_045_9",
       "cluster": "luong_day_045",
       "day": 45,
+      "phonetic_distractors": [
+        "alot",
+        "color",
+        "effort",
+        "polite",
+        "hurt"
+      ],
       "fav": false,
       "known": false
     },
@@ -10956,6 +13455,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_046_0",
       "cluster": "luong_day_046",
       "day": 46,
+      "phonetic_distractors": [
+        "referral",
+        "pixel",
+        "liberal",
+        "peaceful",
+        "mineral"
+      ],
       "fav": false,
       "known": false
     },
@@ -10980,6 +13486,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_046_1",
       "cluster": "luong_day_046",
       "day": 46,
+      "phonetic_distractors": [
+        "recover",
+        "decorate",
+        "explain",
+        "request",
+        "expect"
+      ],
       "fav": false,
       "known": false
     },
@@ -11004,6 +13517,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_046_2",
       "cluster": "luong_day_046",
       "day": 46,
+      "phonetic_distractors": [
+        "poultry",
+        "posters",
+        "history",
+        "grocery",
+        "postage"
+      ],
       "fav": false,
       "known": false
     },
@@ -11028,6 +13548,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_046_3",
       "cluster": "luong_day_046",
       "day": 46,
+      "phonetic_distractors": [
+        "fail",
+        "face",
+        "fame",
+        "rays",
+        "fails"
+      ],
       "fav": false,
       "known": false
     },
@@ -11077,6 +13604,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_046_5",
       "cluster": "luong_day_046",
       "day": 46,
+      "phonetic_distractors": [
+        "pleasant",
+        "presence",
+        "prison",
+        "president",
+        "prisoner"
+      ],
       "fav": false,
       "known": false
     },
@@ -11101,6 +13635,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_046_6",
       "cluster": "luong_day_046",
       "day": 46,
+      "phonetic_distractors": [
+        "isolate",
+        "estimate",
+        "estate",
+        "escort",
+        "allocate"
+      ],
       "fav": false,
       "known": false
     },
@@ -11149,6 +13690,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_046_8",
       "cluster": "luong_day_046",
       "day": 46,
+      "phonetic_distractors": [
+        "penthouse",
+        "whereas",
+        "awareness",
+        "paris",
+        "wherever"
+      ],
       "fav": false,
       "known": false
     },
@@ -11173,6 +13721,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_046_9",
       "cluster": "luong_day_046",
       "day": 46,
+      "phonetic_distractors": [
+        "tennessee",
+        "pendant",
+        "tent",
+        "talent",
+        "bennett"
+      ],
       "fav": false,
       "known": false
     },
@@ -11247,6 +13802,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_047_2",
       "cluster": "luong_day_047",
       "day": 47,
+      "phonetic_distractors": [
+        "private",
+        "ticket",
+        "limit",
+        "pilot",
+        "spirit"
+      ],
       "fav": false,
       "known": false
     },
@@ -11296,6 +13858,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_047_4",
       "cluster": "luong_day_047",
       "day": 47,
+      "phonetic_distractors": [
+        "heaven",
+        "devon",
+        "seven",
+        "evans",
+        "avenue"
+      ],
       "fav": false,
       "known": false
     },
@@ -11320,6 +13889,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_047_5",
       "cluster": "luong_day_047",
       "day": 47,
+      "phonetic_distractors": [
+        "candle",
+        "handed",
+        "cancel",
+        "panel",
+        "channel"
+      ],
       "fav": false,
       "known": false
     },
@@ -11370,6 +13946,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_047_7",
       "cluster": "luong_day_047",
       "day": 47,
+      "phonetic_distractors": [
+        "comfortable",
+        "collectible",
+        "convertible",
+        "comparable",
+        "competitor"
+      ],
       "fav": false,
       "known": false
     },
@@ -11418,6 +14001,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_047_9",
       "cluster": "luong_day_047",
       "day": 47,
+      "phonetic_distractors": [
+        "reserve",
+        "above",
+        "deserve",
+        "buyer",
+        "suburb"
+      ],
       "fav": false,
       "known": false
     },
@@ -11443,6 +14033,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_048_0",
       "cluster": "luong_day_048",
       "day": 48,
+      "phonetic_distractors": [
+        "describe",
+        "sunrise",
+        "sublime",
+        "substance",
+        "described"
+      ],
       "fav": false,
       "known": false
     },
@@ -11467,6 +14064,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_048_1",
       "cluster": "luong_day_048",
       "day": 48,
+      "phonetic_distractors": [
+        "interval",
+        "interact",
+        "internet",
+        "interface",
+        "internal"
+      ],
       "fav": false,
       "known": false
     },
@@ -11491,6 +14095,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_048_2",
       "cluster": "luong_day_048",
       "day": 48,
+      "phonetic_distractors": [
+        "bill",
+        "filled",
+        "billy",
+        "bills",
+        "below"
+      ],
       "fav": false,
       "known": false
     },
@@ -11515,6 +14126,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_048_3",
       "cluster": "luong_day_048",
       "day": 48,
+      "phonetic_distractors": [
+        "competitor",
+        "compliant",
+        "compliance",
+        "comparisons",
+        "competitive"
+      ],
       "fav": false,
       "known": false
     },
@@ -11541,6 +14159,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_048_4",
       "cluster": "luong_day_048",
       "day": 48,
+      "phonetic_distractors": [
+        "prospective",
+        "reproductive",
+        "detrimental",
+        "representative",
+        "represents"
+      ],
       "fav": false,
       "known": false
     },
@@ -11589,6 +14214,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_048_6",
       "cluster": "luong_day_048",
       "day": 48,
+      "phonetic_distractors": [
+        "divide",
+        "denied",
+        "beside",
+        "disk",
+        "device"
+      ],
       "fav": false,
       "known": false
     },
@@ -11636,6 +14268,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_048_8",
       "cluster": "luong_day_048",
       "day": 48,
+      "phonetic_distractors": [
+        "speech",
+        "seed",
+        "speak",
+        "space",
+        "send"
+      ],
       "fav": false,
       "known": false
     },
@@ -11683,6 +14322,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_049_0",
       "cluster": "luong_day_049",
       "day": 49,
+      "phonetic_distractors": [
+        "submitted",
+        "maternal",
+        "substitute",
+        "staple",
+        "stable"
+      ],
       "fav": false,
       "known": false
     },
@@ -11706,6 +14352,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_049_1",
       "cluster": "luong_day_049",
       "day": 49,
+      "phonetic_distractors": [
+        "mess",
+        "miss",
+        "maui",
+        "moss",
+        "mice"
+      ],
       "fav": false,
       "known": false
     },
@@ -11730,6 +14383,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_049_2",
       "cluster": "luong_day_049",
       "day": 49,
+      "phonetic_distractors": [
+        "prayer",
+        "pressing",
+        "stemming",
+        "prepare",
+        "promise"
+      ],
       "fav": false,
       "known": false
     },
@@ -11754,6 +14414,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_049_3",
       "cluster": "luong_day_049",
       "day": 49,
+      "phonetic_distractors": [
+        "ceramic",
+        "dining",
+        "italic",
+        "examine",
+        "classic"
+      ],
       "fav": false,
       "known": false
     },
@@ -11778,6 +14445,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_049_4",
       "cluster": "luong_day_049",
       "day": 49,
+      "phonetic_distractors": [
+        "spain",
+        "spice",
+        "spouse",
+        "ups",
+        "spacious"
+      ],
       "fav": false,
       "known": false
     },
@@ -11802,6 +14476,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_049_5",
       "cluster": "luong_day_049",
       "day": 49,
+      "phonetic_distractors": [
+        "batch",
+        "patch",
+        "catch",
+        "map",
+        "much"
+      ],
       "fav": false,
       "known": false
     },
@@ -11876,6 +14557,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_049_8",
       "cluster": "luong_day_049",
       "day": 49,
+      "phonetic_distractors": [
+        "connect",
+        "content",
+        "concept",
+        "concerned",
+        "sunset"
+      ],
       "fav": false,
       "known": false
     },
@@ -11900,6 +14588,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_049_9",
       "cluster": "luong_day_049",
       "day": 49,
+      "phonetic_distractors": [
+        "divide",
+        "divine",
+        "decide",
+        "design",
+        "diverge"
+      ],
       "fav": false,
       "known": false
     },
@@ -11924,6 +14619,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_050_0",
       "cluster": "luong_day_050",
       "day": 50,
+      "phonetic_distractors": [
+        "interact",
+        "internet",
+        "indirect",
+        "incorrect",
+        "interest"
+      ],
       "fav": false,
       "known": false
     },
@@ -11948,6 +14650,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_050_1",
       "cluster": "luong_day_050",
       "day": 50,
+      "phonetic_distractors": [
+        "component",
+        "opinion",
+        "compression",
+        "completion",
+        "compatible"
+      ],
       "fav": false,
       "known": false
     },
@@ -11972,6 +14681,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_050_2",
       "cluster": "luong_day_050",
       "day": 50,
+      "phonetic_distractors": [
+        "repair",
+        "pierre",
+        "preparing",
+        "prepaid",
+        "prayer"
+      ],
       "fav": false,
       "known": false
     },
@@ -11995,6 +14711,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_050_3",
       "cluster": "luong_day_050",
       "day": 50,
+      "phonetic_distractors": [
+        "polymorphic",
+        "plagiarism",
+        "polyphonic",
+        "platforms",
+        "politicians"
+      ],
       "fav": false,
       "known": false
     },
@@ -12044,6 +14767,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_050_5",
       "cluster": "luong_day_050",
       "day": 50,
+      "phonetic_distractors": [
+        "clan",
+        "plain",
+        "pan",
+        "scan",
+        "blanch"
+      ],
       "fav": false,
       "known": false
     },
@@ -12070,6 +14800,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_050_6",
       "cluster": "luong_day_050",
       "day": 50,
+      "phonetic_distractors": [
+        "stable",
+        "citation",
+        "staple",
+        "terminal",
+        "unable"
+      ],
       "fav": false,
       "known": false
     },
@@ -12094,6 +14831,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_050_7",
       "cluster": "luong_day_050",
       "day": 50,
+      "phonetic_distractors": [
+        "injuries",
+        "injured",
+        "surgery",
+        "infer",
+        "insert"
+      ],
       "fav": false,
       "known": false
     },
@@ -12118,6 +14862,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_050_8",
       "cluster": "luong_day_050",
       "day": 50,
+      "phonetic_distractors": [
+        "backend",
+        "trend",
+        "girlfriend",
+        "brand",
+        "friends"
+      ],
       "fav": false,
       "known": false
     },
@@ -12192,6 +14943,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_051_1",
       "cluster": "luong_day_051",
       "day": 51,
+      "phonetic_distractors": [
+        "notify",
+        "justify",
+        "verify",
+        "rental",
+        "rentals"
+      ],
       "fav": false,
       "known": false
     },
@@ -12241,6 +14999,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_051_3",
       "cluster": "luong_day_051",
       "day": 51,
+      "phonetic_distractors": [
+        "test",
+        "chest",
+        "arrest",
+        "nest",
+        "rest"
+      ],
       "fav": false,
       "known": false
     },
@@ -12265,6 +15030,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_051_4",
       "cluster": "luong_day_051",
       "day": 51,
+      "phonetic_distractors": [
+        "exams",
+        "examining",
+        "exhibit",
+        "exact",
+        "exempt"
+      ],
       "fav": false,
       "known": false
     },
@@ -12288,6 +15060,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_051_5",
       "cluster": "luong_day_051",
       "day": 51,
+      "phonetic_distractors": [
+        "bored",
+        "cord",
+        "report",
+        "clipboard",
+        "cyborg"
+      ],
       "fav": false,
       "known": false
     },
@@ -12311,6 +15090,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_051_6",
       "cluster": "luong_day_051",
       "day": 51,
+      "phonetic_distractors": [
+        "ingredient",
+        "guardian",
+        "greatest",
+        "radius",
+        "stadium"
+      ],
       "fav": false,
       "known": false
     },
@@ -12335,6 +15121,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_051_7",
       "cluster": "luong_day_051",
       "day": 51,
+      "phonetic_distractors": [
+        "ancestor",
+        "incest",
+        "investing",
+        "vector",
+        "event"
+      ],
       "fav": false,
       "known": false
     },
@@ -12384,6 +15177,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_051_9",
       "cluster": "luong_day_051",
       "day": 51,
+      "phonetic_distractors": [
+        "variance",
+        "marion",
+        "parent",
+        "marriott",
+        "various"
+      ],
       "fav": false,
       "known": false
     },
@@ -12408,6 +15208,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_052_0",
       "cluster": "luong_day_052",
       "day": 52,
+      "phonetic_distractors": [
+        "compile",
+        "somewhere",
+        "comparing",
+        "compete",
+        "comply"
+      ],
       "fav": false,
       "known": false
     },
@@ -12432,6 +15239,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_052_1",
       "cluster": "luong_day_052",
       "day": 52,
+      "phonetic_distractors": [
+        "throughout",
+        "roommate",
+        "output",
+        "input",
+        "wrapped"
+      ],
       "fav": false,
       "known": false
     },
@@ -12456,6 +15270,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_052_2",
       "cluster": "luong_day_052",
       "day": 52,
+      "phonetic_distractors": [
+        "face",
+        "case",
+        "bus",
+        "bass",
+        "lace"
+      ],
       "fav": false,
       "known": false
     },
@@ -12479,6 +15300,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_052_3",
       "cluster": "luong_day_052",
       "day": 52,
+      "phonetic_distractors": [
+        "jump",
+        "dumb",
+        "pump",
+        "demo",
+        "bumper"
+      ],
       "fav": false,
       "known": false
     },
@@ -12551,6 +15379,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_052_6",
       "cluster": "luong_day_052",
       "day": 52,
+      "phonetic_distractors": [
+        "iris",
+        "viral",
+        "bias",
+        "vinyl",
+        "vice"
+      ],
       "fav": false,
       "known": false
     },
@@ -12575,6 +15410,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_052_7",
       "cluster": "luong_day_052",
       "day": 52,
+      "phonetic_distractors": [
+        "consent",
+        "convention",
+        "consists",
+        "conscientious",
+        "concepts"
+      ],
       "fav": false,
       "known": false
     },
@@ -12601,6 +15443,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_052_8",
       "cluster": "luong_day_052",
       "day": 52,
+      "phonetic_distractors": [
+        "preceding",
+        "proceeding",
+        "profiling",
+        "programming",
+        "proceedings"
+      ],
       "fav": false,
       "known": false
     },
@@ -12625,6 +15474,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_052_9",
       "cluster": "luong_day_052",
       "day": 52,
+      "phonetic_distractors": [
+        "nipple",
+        "spirit",
+        "carpet",
+        "staple",
+        "simple"
+      ],
       "fav": false,
       "known": false
     },
@@ -12650,6 +15506,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_053_0",
       "cluster": "luong_day_053",
       "day": 53,
+      "phonetic_distractors": [
+        "boil",
+        "tool",
+        "toll",
+        "tale",
+        "til"
+      ],
       "fav": false,
       "known": false
     },
@@ -12674,6 +15537,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_053_1",
       "cluster": "luong_day_053",
       "day": 53,
+      "phonetic_distractors": [
+        "sync",
+        "pink",
+        "inc",
+        "sink",
+        "zinc"
+      ],
       "fav": false,
       "known": false
     },
@@ -12698,6 +15568,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_053_2",
       "cluster": "luong_day_053",
       "day": 53,
+      "phonetic_distractors": [
+        "distant",
+        "discussed",
+        "discrete",
+        "account",
+        "discuss"
+      ],
       "fav": false,
       "known": false
     },
@@ -12744,6 +15621,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_053_4",
       "cluster": "luong_day_053",
       "day": 53,
+      "phonetic_distractors": [
+        "instructors",
+        "industrial",
+        "restructuring",
+        "entrepreneur",
+        "introductory"
+      ],
       "fav": false,
       "known": false
     },
@@ -12768,6 +15652,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_053_5",
       "cluster": "luong_day_053",
       "day": 53,
+      "phonetic_distractors": [
+        "upset",
+        "updating",
+        "operate",
+        "plate",
+        "apart"
+      ],
       "fav": false,
       "known": false
     },
@@ -12792,6 +15683,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_053_6",
       "cluster": "luong_day_053",
       "day": 53,
+      "phonetic_distractors": [
+        "exclusion",
+        "equation",
+        "immersion",
+        "insertion",
+        "exception"
+      ],
       "fav": false,
       "known": false
     },
@@ -12818,6 +15716,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_053_7",
       "cluster": "luong_day_053",
       "day": 53,
+      "phonetic_distractors": [
+        "cattle",
+        "analog",
+        "dialog",
+        "carroll",
+        "battle"
+      ],
       "fav": false,
       "known": false
     },
@@ -12869,6 +15774,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_053_9",
       "cluster": "luong_day_053",
       "day": 53,
+      "phonetic_distractors": [
+        "emissions",
+        "emission",
+        "efficiency",
+        "editions",
+        "sufficient"
+      ],
       "fav": false,
       "known": false
     },
@@ -12893,6 +15805,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_054_0",
       "cluster": "luong_day_054",
       "day": 54,
+      "phonetic_distractors": [
+        "and",
+        "found",
+        "find",
+        "funny",
+        "font"
+      ],
       "fav": false,
       "known": false
     },
@@ -12918,6 +15837,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_054_1",
       "cluster": "luong_day_054",
       "day": 54,
+      "phonetic_distractors": [
+        "economics",
+        "economic",
+        "dynamics",
+        "academics",
+        "genetics"
+      ],
       "fav": false,
       "known": false
     },
@@ -12942,6 +15868,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_054_2",
       "cluster": "luong_day_054",
       "day": 54,
+      "phonetic_distractors": [
+        "squad",
+        "square",
+        "quad",
+        "swap",
+        "squirt"
+      ],
       "fav": false,
       "known": false
     },
@@ -12968,6 +15901,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_054_3",
       "cluster": "luong_day_054",
       "day": 54,
+      "phonetic_distractors": [
+        "synthesis",
+        "autonomous",
+        "diagnosis",
+        "purchases",
+        "hypothetical"
+      ],
       "fav": false,
       "known": false
     },
@@ -12992,6 +15932,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_054_4",
       "cluster": "luong_day_054",
       "day": 54,
+      "phonetic_distractors": [
+        "coalition",
+        "commission",
+        "cohesion",
+        "pollution",
+        "conversion"
+      ],
       "fav": false,
       "known": false
     },
@@ -13042,6 +15989,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_054_6",
       "cluster": "luong_day_054",
       "day": 54,
+      "phonetic_distractors": [
+        "delete",
+        "elite",
+        "fleet",
+        "ashley",
+        "asset"
+      ],
       "fav": false,
       "known": false
     },
@@ -13066,6 +16020,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_054_7",
       "cluster": "luong_day_054",
       "day": 54,
+      "phonetic_distractors": [
+        "epics",
+        "ethics",
+        "fixed",
+        "essex",
+        "factory"
+      ],
       "fav": false,
       "known": false
     },
@@ -13092,6 +16053,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_054_8",
       "cluster": "luong_day_054",
       "day": 54,
+      "phonetic_distractors": [
+        "particle",
+        "article",
+        "prototype",
+        "protect",
+        "oracle"
+      ],
       "fav": false,
       "known": false
     },
@@ -13161,6 +16129,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_055_1",
       "cluster": "luong_day_055",
       "day": 55,
+      "phonetic_distractors": [
+        "want",
+        "cost",
+        "rent",
+        "fiat",
+        "fund"
+      ],
       "fav": false,
       "known": false
     },
@@ -13185,6 +16160,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_055_2",
       "cluster": "luong_day_055",
       "day": 55,
+      "phonetic_distractors": [
+        "panel",
+        "channel",
+        "damage",
+        "manner",
+        "minute"
+      ],
       "fav": false,
       "known": false
     },
@@ -13235,6 +16217,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_055_4",
       "cluster": "luong_day_055",
       "day": 55,
+      "phonetic_distractors": [
+        "seeing",
+        "selling",
+        "feeling",
+        "dealing",
+        "sailing"
+      ],
       "fav": false,
       "known": false
     },
@@ -13259,6 +16248,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_055_5",
       "cluster": "luong_day_055",
       "day": 55,
+      "phonetic_distractors": [
+        "impeccable",
+        "beautiful",
+        "suitable",
+        "removable",
+        "impossible"
+      ],
       "fav": false,
       "known": false
     },
@@ -13285,6 +16281,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_055_6",
       "cluster": "luong_day_055",
       "day": 55,
+      "phonetic_distractors": [
+        "justice",
+        "justin",
+        "notify",
+        "rectify",
+        "joseph"
+      ],
       "fav": false,
       "known": false
     },
@@ -13309,6 +16312,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_055_7",
       "cluster": "luong_day_055",
       "day": 55,
+      "phonetic_distractors": [
+        "debt",
+        "data",
+        "gate",
+        "weight",
+        "wait"
+      ],
       "fav": false,
       "known": false
     },
@@ -13357,6 +16367,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_055_9",
       "cluster": "luong_day_055",
       "day": 55,
+      "phonetic_distractors": [
+        "what",
+        "kurt",
+        "caught",
+        "cat",
+        "cult"
+      ],
       "fav": false,
       "known": false
     },
@@ -13404,6 +16421,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_056_1",
       "cluster": "luong_day_056",
       "day": 56,
+      "phonetic_distractors": [
+        "click",
+        "clear",
+        "flip",
+        "cliff",
+        "slip"
+      ],
       "fav": false,
       "known": false
     },
@@ -13428,6 +16452,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_056_2",
       "cluster": "luong_day_056",
       "day": 56,
+      "phonetic_distractors": [
+        "sort",
+        "price",
+        "split",
+        "sprint",
+        "spread"
+      ],
       "fav": false,
       "known": false
     },
@@ -13453,6 +16484,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_056_3",
       "cluster": "luong_day_056",
       "day": 56,
+      "phonetic_distractors": [
+        "booty",
+        "dirty",
+        "duties",
+        "debt",
+        "data"
+      ],
       "fav": false,
       "known": false
     },
@@ -13479,6 +16517,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_056_4",
       "cluster": "luong_day_056",
       "day": 56,
+      "phonetic_distractors": [
+        "meditation",
+        "renovation",
+        "accommodation",
+        "presentation",
+        "medication"
+      ],
       "fav": false,
       "known": false
     },
@@ -13503,6 +16548,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_056_5",
       "cluster": "luong_day_056",
       "day": 56,
+      "phonetic_distractors": [
+        "consideration",
+        "demonstration",
+        "consultation",
+        "reconstruction",
+        "consolidation"
+      ],
       "fav": false,
       "known": false
     },
@@ -13527,6 +16579,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_056_6",
       "cluster": "luong_day_056",
       "day": 56,
+      "phonetic_distractors": [
+        "policies",
+        "polymer",
+        "plus",
+        "palace",
+        "poly"
+      ],
       "fav": false,
       "known": false
     },
@@ -13576,6 +16635,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_056_8",
       "cluster": "luong_day_056",
       "day": 56,
+      "phonetic_distractors": [
+        "variant",
+        "various",
+        "marion",
+        "variable",
+        "virus"
+      ],
       "fav": false,
       "known": false
     },
@@ -13601,6 +16667,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_056_9",
       "cluster": "luong_day_056",
       "day": 56,
+      "phonetic_distractors": [
+        "subway",
+        "summer",
+        "southern",
+        "cyber",
+        "summary"
+      ],
       "fav": false,
       "known": false
     },
@@ -13625,6 +16698,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_057_0",
       "cluster": "luong_day_057",
       "day": 57,
+      "phonetic_distractors": [
+        "downtown",
+        "download",
+        "fountain",
+        "dental",
+        "counting"
+      ],
       "fav": false,
       "known": false
     },
@@ -13649,6 +16729,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_057_1",
       "cluster": "luong_day_057",
       "day": 57,
+      "phonetic_distractors": [
+        "utilities",
+        "unity",
+        "mobility",
+        "humidity",
+        "ability"
+      ],
       "fav": false,
       "known": false
     },
@@ -13696,6 +16783,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_057_3",
       "cluster": "luong_day_057",
       "day": 57,
+      "phonetic_distractors": [
+        "cubicle",
+        "unicorn",
+        "liquidity",
+        "utility",
+        "requests"
+      ],
       "fav": false,
       "known": false
     },
@@ -13719,6 +16813,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_057_4",
       "cluster": "luong_day_057",
       "day": 57,
+      "phonetic_distractors": [
+        "keyboard",
+        "snowboard",
+        "clipboard",
+        "cyborg",
+        "landlord"
+      ],
       "fav": false,
       "known": false
     },
@@ -13766,6 +16867,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_057_6",
       "cluster": "luong_day_057",
       "day": 57,
+      "phonetic_distractors": [
+        "label",
+        "globe",
+        "mobile",
+        "noble",
+        "local"
+      ],
       "fav": false,
       "known": false
     },
@@ -13790,6 +16898,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_057_7",
       "cluster": "luong_day_057",
       "day": 57,
+      "phonetic_distractors": [
+        "port",
+        "peer",
+        "pause",
+        "whore",
+        "core"
+      ],
       "fav": false,
       "known": false
     },
@@ -13816,6 +16931,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_057_8",
       "cluster": "luong_day_057",
       "day": 57,
+      "phonetic_distractors": [
+        "disinformation",
+        "confirmation",
+        "syndication",
+        "transformation",
+        "masturbation"
+      ],
       "fav": false,
       "known": false
     },
@@ -13840,6 +16962,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_057_9",
       "cluster": "luong_day_057",
       "day": 57,
+      "phonetic_distractors": [
+        "cheap",
+        "char",
+        "chip",
+        "pop",
+        "top"
+      ],
       "fav": false,
       "known": false
     },
@@ -13890,6 +17019,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_058_1",
       "cluster": "luong_day_058",
       "day": 58,
+      "phonetic_distractors": [
+        "stream",
+        "scan",
+        "cron",
+        "sorry",
+        "syria"
+      ],
       "fav": false,
       "known": false
     },
@@ -13936,6 +17072,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_058_3",
       "cluster": "luong_day_058",
       "day": 58,
+      "phonetic_distractors": [
+        "row",
+        "ah",
+        "so",
+        "go",
+        "aye"
+      ],
       "fav": false,
       "known": false
     },
@@ -13985,6 +17128,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_058_5",
       "cluster": "luong_day_058",
       "day": 58,
+      "phonetic_distractors": [
+        "wrist",
+        "repeat",
+        "remote",
+        "delete",
+        "seat"
+      ],
       "fav": false,
       "known": false
     },
@@ -14010,6 +17160,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_058_6",
       "cluster": "luong_day_058",
       "day": 58,
+      "phonetic_distractors": [
+        "decorative",
+        "narrative",
+        "intuitive",
+        "relative",
+        "positive"
+      ],
       "fav": false,
       "known": false
     },
@@ -14059,6 +17216,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_058_8",
       "cluster": "luong_day_058",
       "day": 58,
+      "phonetic_distractors": [
+        "lane",
+        "pain",
+        "men",
+        "male",
+        "may"
+      ],
       "fav": false,
       "known": false
     },
@@ -14083,6 +17247,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_058_9",
       "cluster": "luong_day_058",
       "day": 58,
+      "phonetic_distractors": [
+        "team",
+        "beam",
+        "thumb",
+        "seem",
+        "key"
+      ],
       "fav": false,
       "known": false
     },
@@ -14107,6 +17278,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_059_0",
       "cluster": "luong_day_059",
       "day": 59,
+      "phonetic_distractors": [
+        "comedy",
+        "colorado",
+        "somebody",
+        "mercury",
+        "commonly"
+      ],
       "fav": false,
       "known": false
     },
@@ -14131,6 +17309,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_059_1",
       "cluster": "luong_day_059",
       "day": 59,
+      "phonetic_distractors": [
+        "churn",
+        "lane",
+        "loan",
+        "line",
+        "len"
+      ],
       "fav": false,
       "known": false
     },
@@ -14154,6 +17339,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_059_2",
       "cluster": "luong_day_059",
       "day": 59,
+      "phonetic_distractors": [
+        "semantic",
+        "synthetic",
+        "imported",
+        "historic",
+        "symantec"
+      ],
       "fav": false,
       "known": false
     },
@@ -14178,6 +17370,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_059_3",
       "cluster": "luong_day_059",
       "day": 59,
+      "phonetic_distractors": [
+        "profit",
+        "pivot",
+        "privacy",
+        "pilot",
+        "proven"
+      ],
       "fav": false,
       "known": false
     },
@@ -14202,6 +17401,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_059_4",
       "cluster": "luong_day_059",
       "day": 59,
+      "phonetic_distractors": [
+        "restore",
+        "resource",
+        "stop",
+        "recent",
+        "reached"
+      ],
       "fav": false,
       "known": false
     },
@@ -14226,6 +17432,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_059_5",
       "cluster": "luong_day_059",
       "day": 59,
+      "phonetic_distractors": [
+        "proved",
+        "preferred",
+        "proceed",
+        "prairie",
+        "profit"
+      ],
       "fav": false,
       "known": false
     },
@@ -14250,6 +17463,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_059_6",
       "cluster": "luong_day_059",
       "day": 59,
+      "phonetic_distractors": [
+        "managed",
+        "monitor",
+        "manner",
+        "managing",
+        "manor"
+      ],
       "fav": false,
       "known": false
     },
@@ -14276,6 +17496,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_059_7",
       "cluster": "luong_day_059",
       "day": 59,
+      "phonetic_distractors": [
+        "evaluating",
+        "validate",
+        "evaluation",
+        "values",
+        "valued"
+      ],
       "fav": false,
       "known": false
     },
@@ -14300,6 +17527,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_059_8",
       "cluster": "luong_day_059",
       "day": 59,
+      "phonetic_distractors": [
+        "drawn",
+        "thrown",
+        "drove",
+        "grown",
+        "drain"
+      ],
       "fav": false,
       "known": false
     },
@@ -14324,6 +17558,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_059_9",
       "cluster": "luong_day_059",
       "day": 59,
+      "phonetic_distractors": [
+        "bottles",
+        "buttons",
+        "beatles",
+        "boston",
+        "modular"
+      ],
       "fav": false,
       "known": false
     },
@@ -14349,6 +17590,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_060_0",
       "cluster": "luong_day_060",
       "day": 60,
+      "phonetic_distractors": [
+        "decade",
+        "decorating",
+        "separate",
+        "generate",
+        "desert"
+      ],
       "fav": false,
       "known": false
     },
@@ -14373,6 +17621,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_060_1",
       "cluster": "luong_day_060",
       "day": 60,
+      "phonetic_distractors": [
+        "analog",
+        "catalog",
+        "diet",
+        "drug",
+        "dual"
+      ],
       "fav": false,
       "known": false
     },
@@ -14397,6 +17652,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_060_2",
       "cluster": "luong_day_060",
       "day": 60,
+      "phonetic_distractors": [
+        "acceptable",
+        "impeccable",
+        "flexible",
+        "scalable",
+        "capable"
+      ],
       "fav": false,
       "known": false
     },
@@ -14421,6 +17683,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_060_3",
       "cluster": "luong_day_060",
       "day": 60,
+      "phonetic_distractors": [
+        "match",
+        "batch",
+        "pack",
+        "pitch",
+        "catch"
+      ],
       "fav": false,
       "known": false
     },
@@ -14445,6 +17714,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_060_4",
       "cluster": "luong_day_060",
       "day": 60,
+      "phonetic_distractors": [
+        "habit",
+        "toilet",
+        "ballot",
+        "talent",
+        "rabbit"
+      ],
       "fav": false,
       "known": false
     },
@@ -14469,6 +17745,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_060_5",
       "cluster": "luong_day_060",
       "day": 60,
+      "phonetic_distractors": [
+        "indication",
+        "invitation",
+        "syndicate",
+        "induction",
+        "mitigation"
+      ],
       "fav": false,
       "known": false
     },
@@ -14519,6 +17802,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_060_7",
       "cluster": "luong_day_060",
       "day": 60,
+      "phonetic_distractors": [
+        "bidder",
+        "better",
+        "butter",
+        "bigger",
+        "bits"
+      ],
       "fav": false,
       "known": false
     },
@@ -14543,6 +17833,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_060_8",
       "cluster": "luong_day_060",
       "day": 60,
+      "phonetic_distractors": [
+        "inherit",
+        "integrate",
+        "interpret",
+        "intensity",
+        "integral"
+      ],
       "fav": false,
       "known": false
     },
@@ -14567,6 +17864,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_060_9",
       "cluster": "luong_day_060",
       "day": 60,
+      "phonetic_distractors": [
+        "paraguay",
+        "readily",
+        "telephony",
+        "penalty",
+        "ceremony"
+      ],
       "fav": false,
       "known": false
     },
@@ -14592,6 +17896,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_061_0",
       "cluster": "luong_day_061",
       "day": 61,
+      "phonetic_distractors": [
+        "ethics",
+        "picks",
+        "pix",
+        "essex",
+        "fix"
+      ],
       "fav": false,
       "known": false
     },
@@ -14616,6 +17927,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_061_1",
       "cluster": "luong_day_061",
       "day": 61,
+      "phonetic_distractors": [
+        "digital",
+        "double",
+        "decimal",
+        "people",
+        "diesel"
+      ],
       "fav": false,
       "known": false
     },
@@ -14640,6 +17958,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_061_2",
       "cluster": "luong_day_061",
       "day": 61,
+      "phonetic_distractors": [
+        "real",
+        "role",
+        "tool",
+        "route",
+        "fool"
+      ],
       "fav": false,
       "known": false
     },
@@ -14665,6 +17990,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_061_3",
       "cluster": "luong_day_061",
       "day": 61,
+      "phonetic_distractors": [
+        "warranty",
+        "parents",
+        "parent",
+        "therapy",
+        "marinate"
+      ],
       "fav": false,
       "known": false
     },
@@ -14739,6 +18071,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_061_6",
       "cluster": "luong_day_061",
       "day": 61,
+      "phonetic_distractors": [
+        "sprint",
+        "encrypt",
+        "strip",
+        "strips",
+        "equipped"
+      ],
       "fav": false,
       "known": false
     },
@@ -14763,6 +18102,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_061_7",
       "cluster": "luong_day_061",
       "day": 61,
+      "phonetic_distractors": [
+        "draft",
+        "crash",
+        "crap",
+        "wrapped",
+        "tract"
+      ],
       "fav": false,
       "known": false
     },
@@ -14787,6 +18133,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_061_8",
       "cluster": "luong_day_061",
       "day": 61,
+      "phonetic_distractors": [
+        "role",
+        "owe",
+        "oh",
+        "so",
+        "go"
+      ],
       "fav": false,
       "known": false
     },
@@ -14812,6 +18165,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_061_9",
       "cluster": "luong_day_061",
       "day": 61,
+      "phonetic_distractors": [
+        "health",
+        "hell",
+        "held",
+        "healthy",
+        "sell"
+      ],
       "fav": false,
       "known": false
     },
@@ -14838,6 +18198,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_062_0",
       "cluster": "luong_day_062",
       "day": 62,
+      "phonetic_distractors": [
+        "filter",
+        "finger",
+        "bigger",
+        "failure",
+        "fisher"
+      ],
       "fav": false,
       "known": false
     },
@@ -14934,6 +18301,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_062_4",
       "cluster": "luong_day_062",
       "day": 62,
+      "phonetic_distractors": [
+        "climate",
+        "plaza",
+        "causes",
+        "carpet",
+        "profit"
+      ],
       "fav": false,
       "known": false
     },
@@ -14958,6 +18332,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_062_5",
       "cluster": "luong_day_062",
       "day": 62,
+      "phonetic_distractors": [
+        "checkup",
+        "backed",
+        "jacket",
+        "bacon",
+        "battle"
+      ],
       "fav": false,
       "known": false
     },
@@ -14982,6 +18363,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_062_6",
       "cluster": "luong_day_062",
       "day": 62,
+      "phonetic_distractors": [
+        "jenny",
+        "jersey",
+        "johnny",
+        "churn",
+        "join"
+      ],
       "fav": false,
       "known": false
     },
@@ -15007,6 +18395,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_062_7",
       "cluster": "luong_day_062",
       "day": 62,
+      "phonetic_distractors": [
+        "cotton",
+        "curtain",
+        "column",
+        "casa",
+        "college"
+      ],
       "fav": false,
       "known": false
     },
@@ -15057,6 +18452,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_062_9",
       "cluster": "luong_day_062",
       "day": 62,
+      "phonetic_distractors": [
+        "rap",
+        "recall",
+        "rehab",
+        "rico",
+        "wrap"
+      ],
       "fav": false,
       "known": false
     },
@@ -15081,6 +18483,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_063_0",
       "cluster": "luong_day_063",
       "day": 63,
+      "phonetic_distractors": [
+        "getaway",
+        "gates",
+        "railway",
+        "data",
+        "runway"
+      ],
       "fav": false,
       "known": false
     },
@@ -15105,6 +18514,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_063_1",
       "cluster": "luong_day_063",
       "day": 63,
+      "phonetic_distractors": [
+        "denmark",
+        "bookmark",
+        "lexmark",
+        "bernard",
+        "enlarge"
+      ],
       "fav": false,
       "known": false
     },
@@ -15129,6 +18545,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_063_2",
       "cluster": "luong_day_063",
       "day": 63,
+      "phonetic_distractors": [
+        "saturn",
+        "pottery",
+        "battery",
+        "return",
+        "patent"
+      ],
       "fav": false,
       "known": false
     },
@@ -15154,6 +18577,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_063_3",
       "cluster": "luong_day_063",
       "day": 63,
+      "phonetic_distractors": [
+        "stop",
+        "stuck",
+        "stack",
+        "stake",
+        "stick"
+      ],
       "fav": false,
       "known": false
     },
@@ -15178,6 +18608,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_063_4",
       "cluster": "luong_day_063",
       "day": 63,
+      "phonetic_distractors": [
+        "ferrari",
+        "harvey",
+        "harley",
+        "hybrid",
+        "marker"
+      ],
       "fav": false,
       "known": false
     },
@@ -15202,6 +18639,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_063_5",
       "cluster": "luong_day_063",
       "day": 63,
+      "phonetic_distractors": [
+        "fireplace",
+        "allocate",
+        "isolate",
+        "validate",
+        "complaint"
+      ],
       "fav": false,
       "known": false
     },
@@ -15226,6 +18670,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_063_6",
       "cluster": "luong_day_063",
       "day": 63,
+      "phonetic_distractors": [
+        "reboot",
+        "menu",
+        "real",
+        "recap",
+        "revenue"
+      ],
       "fav": false,
       "known": false
     },
@@ -15252,6 +18703,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_063_7",
       "cluster": "luong_day_063",
       "day": 63,
+      "phonetic_distractors": [
+        "expertise",
+        "extract",
+        "expressed",
+        "expedia",
+        "exports"
+      ],
       "fav": false,
       "known": false
     },
@@ -15276,6 +18734,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_063_8",
       "cluster": "luong_day_063",
       "day": 63,
+      "phonetic_distractors": [
+        "transform",
+        "mainstream",
+        "bookstore",
+        "restored",
+        "transport"
+      ],
       "fav": false,
       "known": false
     },
@@ -15300,6 +18765,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_063_9",
       "cluster": "luong_day_063",
       "day": 63,
+      "phonetic_distractors": [
+        "sweet",
+        "set",
+        "suite",
+        "wet",
+        "debt"
+      ],
       "fav": false,
       "known": false
     },
@@ -15326,6 +18798,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_064_0",
       "cluster": "luong_day_064",
       "day": 64,
+      "phonetic_distractors": [
+        "communist",
+        "competent",
+        "compensation",
+        "competence",
+        "terminate"
+      ],
       "fav": false,
       "known": false
     },
@@ -15352,6 +18831,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_064_1",
       "cluster": "luong_day_064",
       "day": 64,
+      "phonetic_distractors": [
+        "worship",
+        "workout",
+        "workload",
+        "workers",
+        "worked"
+      ],
       "fav": false,
       "known": false
     },
@@ -15376,6 +18862,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_064_2",
       "cluster": "luong_day_064",
       "day": 64,
+      "phonetic_distractors": [
+        "join",
+        "con",
+        "can",
+        "ken",
+        "keen"
+      ],
       "fav": false,
       "known": false
     },
@@ -15400,6 +18893,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_064_3",
       "cluster": "luong_day_064",
       "day": 64,
+      "phonetic_distractors": [
+        "ambient",
+        "absence",
+        "champion",
+        "audience",
+        "variance"
+      ],
       "fav": false,
       "known": false
     },
@@ -15423,6 +18923,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_064_4",
       "cluster": "luong_day_064",
       "day": 64,
+      "phonetic_distractors": [
+        "minimal",
+        "minimum",
+        "analyze",
+        "minutes",
+        "maximize"
+      ],
       "fav": false,
       "known": false
     },
@@ -15521,6 +19028,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_064_8",
       "cluster": "luong_day_064",
       "day": 64,
+      "phonetic_distractors": [
+        "future",
+        "funnel",
+        "frugal",
+        "funeral",
+        "dual"
+      ],
       "fav": false,
       "known": false
     },
@@ -15545,6 +19059,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_064_9",
       "cluster": "luong_day_064",
       "day": 64,
+      "phonetic_distractors": [
+        "wellness",
+        "william",
+        "belgium",
+        "checkup",
+        "weapon"
+      ],
       "fav": false,
       "known": false
     },
@@ -15569,6 +19090,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_065_0",
       "cluster": "luong_day_065",
       "day": 65,
+      "phonetic_distractors": [
+        "geometry",
+        "respiratory",
+        "statutory",
+        "proprietary",
+        "regulatory"
+      ],
       "fav": false,
       "known": false
     },
@@ -15618,6 +19146,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_065_2",
       "cluster": "luong_day_065",
       "day": 65,
+      "phonetic_distractors": [
+        "functional",
+        "asynchronous",
+        "frequent",
+        "frequency",
+        "curriculum"
+      ],
       "fav": false,
       "known": false
     },
@@ -15642,6 +19177,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_065_3",
       "cluster": "luong_day_065",
       "day": 65,
+      "phonetic_distractors": [
+        "pendant",
+        "patient",
+        "patent",
+        "payment",
+        "consent"
+      ],
       "fav": false,
       "known": false
     },
@@ -15668,6 +19210,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_065_4",
       "cluster": "luong_day_065",
       "day": 65,
+      "phonetic_distractors": [
+        "accuracy",
+        "action",
+        "acute",
+        "actors",
+        "jacket"
+      ],
       "fav": false,
       "known": false
     },
@@ -15693,6 +19242,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_065_5",
       "cluster": "luong_day_065",
       "day": 65,
+      "phonetic_distractors": [
+        "compliant",
+        "complete",
+        "component",
+        "campaign",
+        "implant"
+      ],
       "fav": false,
       "known": false
     },
@@ -15717,6 +19273,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_065_6",
       "cluster": "luong_day_065",
       "day": 65,
+      "phonetic_distractors": [
+        "receipt",
+        "roommate",
+        "limit",
+        "wrist",
+        "wrote"
+      ],
       "fav": false,
       "known": false
     },
@@ -15741,6 +19304,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_065_7",
       "cluster": "luong_day_065",
       "day": 65,
+      "phonetic_distractors": [
+        "downtime",
+        "payload",
+        "workload",
+        "upload",
+        "wound"
+      ],
       "fav": false,
       "known": false
     },
@@ -15765,6 +19335,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_065_8",
       "cluster": "luong_day_065",
       "day": 65,
+      "phonetic_distractors": [
+        "junction",
+        "friction",
+        "physician",
+        "duncan",
+        "fiction"
+      ],
       "fav": false,
       "known": false
     },
@@ -15789,6 +19366,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_065_9",
       "cluster": "luong_day_065",
       "day": 65,
+      "phonetic_distractors": [
+        "dry",
+        "fly",
+        "free",
+        "cry",
+        "phi"
+      ],
       "fav": false,
       "known": false
     },
@@ -15813,6 +19397,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_066_0",
       "cluster": "luong_day_066",
       "day": 66,
+      "phonetic_distractors": [
+        "friends",
+        "trend",
+        "friendship",
+        "render",
+        "wendy"
+      ],
       "fav": false,
       "known": false
     },
@@ -15862,6 +19453,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_066_2",
       "cluster": "luong_day_066",
       "day": 66,
+      "phonetic_distractors": [
+        "validation",
+        "allocation",
+        "salvation",
+        "evaluated",
+        "annotation"
+      ],
       "fav": false,
       "known": false
     },
@@ -15888,6 +19486,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_066_3",
       "cluster": "luong_day_066",
       "day": 66,
+      "phonetic_distractors": [
+        "atom",
+        "autumn",
+        "iris",
+        "team",
+        "time"
+      ],
       "fav": false,
       "known": false
     },
@@ -15936,6 +19541,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_066_5",
       "cluster": "luong_day_066",
       "day": 66,
+      "phonetic_distractors": [
+        "instrumental",
+        "tremendous",
+        "supplemental",
+        "represented",
+        "fundamental"
+      ],
       "fav": false,
       "known": false
     },
@@ -15986,6 +19598,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_066_7",
       "cluster": "luong_day_066",
       "day": 66,
+      "phonetic_distractors": [
+        "separation",
+        "generated",
+        "federation",
+        "renovation",
+        "restoration"
+      ],
       "fav": false,
       "known": false
     },
@@ -16035,6 +19654,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_066_9",
       "cluster": "luong_day_066",
       "day": 66,
+      "phonetic_distractors": [
+        "lane",
+        "lake",
+        "laid",
+        "late",
+        "laser"
+      ],
       "fav": false,
       "known": false
     },
@@ -16083,6 +19709,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_067_1",
       "cluster": "luong_day_067",
       "day": 67,
+      "phonetic_distractors": [
+        "spread",
+        "spears",
+        "period",
+        "spirit",
+        "appeared"
+      ],
       "fav": false,
       "known": false
     },
@@ -16107,6 +19740,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_067_2",
       "cluster": "luong_day_067",
       "day": 67,
+      "phonetic_distractors": [
+        "identify",
+        "density",
+        "dental",
+        "identifier",
+        "quantity"
+      ],
       "fav": false,
       "known": false
     },
@@ -16131,6 +19771,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_067_3",
       "cluster": "luong_day_067",
       "day": 67,
+      "phonetic_distractors": [
+        "nitrogen",
+        "petition",
+        "patricia",
+        "neutral",
+        "citation"
+      ],
       "fav": false,
       "known": false
     },
@@ -16155,6 +19802,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_067_4",
       "cluster": "luong_day_067",
       "day": 67,
+      "phonetic_distractors": [
+        "unsigned",
+        "acquired",
+        "assigned",
+        "assign",
+        "attend"
+      ],
       "fav": false,
       "known": false
     },
@@ -16179,6 +19833,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_067_5",
       "cluster": "luong_day_067",
       "day": 67,
+      "phonetic_distractors": [
+        "negative",
+        "riveting",
+        "positive",
+        "editing",
+        "decorative"
+      ],
       "fav": false,
       "known": false
     },
@@ -16204,6 +19865,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_067_6",
       "cluster": "luong_day_067",
       "day": 67,
+      "phonetic_distractors": [
+        "approve",
+        "improving",
+        "immune",
+        "import",
+        "proved"
+      ],
       "fav": false,
       "known": false
     },
@@ -16230,6 +19898,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_067_7",
       "cluster": "luong_day_067",
       "day": 67,
+      "phonetic_distractors": [
+        "station",
+        "rotation",
+        "stations",
+        "staple",
+        "spacious"
+      ],
       "fav": false,
       "known": false
     },
@@ -16256,6 +19931,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_067_8",
       "cluster": "luong_day_067",
       "day": 67,
+      "phonetic_distractors": [
+        "currencies",
+        "agency",
+        "courtesy",
+        "occurrence",
+        "current"
+      ],
       "fav": false,
       "known": false
     },
@@ -16280,6 +19962,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_067_9",
       "cluster": "luong_day_067",
       "day": 67,
+      "phonetic_distractors": [
+        "disks",
+        "discs",
+        "disk",
+        "distance",
+        "fiscal"
+      ],
       "fav": false,
       "known": false
     },
@@ -16305,6 +19994,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_068_0",
       "cluster": "luong_day_068",
       "day": 68,
+      "phonetic_distractors": [
+        "efficiency",
+        "accompanied",
+        "achievement",
+        "achievements",
+        "sufficient"
+      ],
       "fav": false,
       "known": false
     },
@@ -16329,6 +20025,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_068_1",
       "cluster": "luong_day_068",
       "day": 68,
+      "phonetic_distractors": [
+        "damage",
+        "postage",
+        "joseph",
+        "diesel",
+        "passage"
+      ],
       "fav": false,
       "known": false
     },
@@ -16355,6 +20058,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_068_2",
       "cluster": "luong_day_068",
       "day": 68,
+      "phonetic_distractors": [
+        "employment",
+        "filament",
+        "implement",
+        "replacement",
+        "shipment"
+      ],
       "fav": false,
       "known": false
     },
@@ -16379,6 +20089,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_068_3",
       "cluster": "luong_day_068",
       "day": 68,
+      "phonetic_distractors": [
+        "shopping",
+        "phishing",
+        "licking",
+        "sitting",
+        "sharing"
+      ],
       "fav": false,
       "known": false
     },
@@ -16403,6 +20120,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_068_4",
       "cluster": "luong_day_068",
       "day": 68,
+      "phonetic_distractors": [
+        "pill",
+        "push",
+        "pool",
+        "pearl",
+        "pole"
+      ],
       "fav": false,
       "known": false
     },
@@ -16427,6 +20151,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_068_5",
       "cluster": "luong_day_068",
       "day": 68,
+      "phonetic_distractors": [
+        "concern",
+        "comfort",
+        "color",
+        "connect",
+        "concert"
+      ],
       "fav": false,
       "known": false
     },
@@ -16451,6 +20182,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_068_6",
       "cluster": "luong_day_068",
       "day": 68,
+      "phonetic_distractors": [
+        "semantic",
+        "atlantic",
+        "romance",
+        "symantec",
+        "dramatic"
+      ],
       "fav": false,
       "known": false
     },
@@ -16551,6 +20289,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_069_0",
       "cluster": "luong_day_069",
       "day": 69,
+      "phonetic_distractors": [
+        "legal",
+        "logan",
+        "village",
+        "manage",
+        "couple"
+      ],
       "fav": false,
       "known": false
     },
@@ -16577,6 +20322,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_069_1",
       "cluster": "luong_day_069",
       "day": 69,
+      "phonetic_distractors": [
+        "tex",
+        "packs",
+        "racks",
+        "fax",
+        "tracks"
+      ],
       "fav": false,
       "known": false
     },
@@ -16626,6 +20378,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_069_3",
       "cluster": "luong_day_069",
       "day": 69,
+      "phonetic_distractors": [
+        "staple",
+        "label",
+        "station",
+        "stapler",
+        "cable"
+      ],
       "fav": false,
       "known": false
     },
@@ -16650,6 +20409,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_069_4",
       "cluster": "luong_day_069",
       "day": 69,
+      "phonetic_distractors": [
+        "report",
+        "support",
+        "impaired",
+        "airport",
+        "newport"
+      ],
       "fav": false,
       "known": false
     },
@@ -16697,6 +20463,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_069_6",
       "cluster": "luong_day_069",
       "day": 69,
+      "phonetic_distractors": [
+        "friction",
+        "emission",
+        "egyptian",
+        "addiction",
+        "fiction"
+      ],
       "fav": false,
       "known": false
     },
@@ -16721,6 +20494,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_069_7",
       "cluster": "luong_day_069",
       "day": 69,
+      "phonetic_distractors": [
+        "observed",
+        "reserve",
+        "above",
+        "deserve",
+        "burner"
+      ],
       "fav": false,
       "known": false
     },
@@ -16771,6 +20551,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_069_9",
       "cluster": "luong_day_069",
       "day": 69,
+      "phonetic_distractors": [
+        "initiative",
+        "interactive",
+        "iterative",
+        "intensive",
+        "initiatives"
+      ],
       "fav": false,
       "known": false
     },
@@ -16795,6 +20582,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_070_0",
       "cluster": "luong_day_070",
       "day": 70,
+      "phonetic_distractors": [
+        "spice",
+        "space",
+        "spider",
+        "spies",
+        "spine"
+      ],
       "fav": false,
       "known": false
     },
@@ -16842,6 +20636,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_070_2",
       "cluster": "luong_day_070",
       "day": 70,
+      "phonetic_distractors": [
+        "pour",
+        "pitch",
+        "pill",
+        "dear",
+        "appear"
+      ],
       "fav": false,
       "known": false
     },
@@ -16866,6 +20667,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_070_3",
       "cluster": "luong_day_070",
       "day": 70,
+      "phonetic_distractors": [
+        "experts",
+        "expedia",
+        "properties",
+        "exercise",
+        "expatriate"
+      ],
       "fav": false,
       "known": false
     },
@@ -16890,6 +20698,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_070_4",
       "cluster": "luong_day_070",
       "day": 70,
+      "phonetic_distractors": [
+        "impact",
+        "complaint",
+        "implement",
+        "import",
+        "impacts"
+      ],
       "fav": false,
       "known": false
     },
@@ -16913,6 +20728,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_070_5",
       "cluster": "luong_day_070",
       "day": 70,
+      "phonetic_distractors": [
+        "designation",
+        "technician",
+        "definition",
+        "renovation",
+        "regression"
+      ],
       "fav": false,
       "known": false
     },
@@ -16937,6 +20759,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_070_6",
       "cluster": "luong_day_070",
       "day": 70,
+      "phonetic_distractors": [
+        "artwork",
+        "metric",
+        "teamwork",
+        "notebook",
+        "edward"
+      ],
       "fav": false,
       "known": false
     },
@@ -16987,6 +20816,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_070_8",
       "cluster": "luong_day_070",
       "day": 70,
+      "phonetic_distractors": [
+        "worked",
+        "burnout",
+        "checkout",
+        "workers",
+        "works"
+      ],
       "fav": false,
       "known": false
     },
@@ -17011,6 +20847,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_070_9",
       "cluster": "luong_day_070",
       "day": 70,
+      "phonetic_distractors": [
+        "tier",
+        "time",
+        "theme",
+        "beam",
+        "teen"
+      ],
       "fav": false,
       "known": false
     },
@@ -17034,6 +20877,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_071_0",
       "cluster": "luong_day_071",
       "day": 71,
+      "phonetic_distractors": [
+        "blah",
+        "clock",
+        "black",
+        "blake",
+        "bank"
+      ],
       "fav": false,
       "known": false
     },
@@ -17060,6 +20910,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_071_1",
       "cluster": "luong_day_071",
       "day": 71,
+      "phonetic_distractors": [
+        "incest",
+        "event",
+        "invoice",
+        "invite",
+        "nest"
+      ],
       "fav": false,
       "known": false
     },
@@ -17084,6 +20941,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_071_2",
       "cluster": "luong_day_071",
       "day": 71,
+      "phonetic_distractors": [
+        "device",
+        "river",
+        "reverse",
+        "deserve",
+        "divide"
+      ],
       "fav": false,
       "known": false
     },
@@ -17132,6 +20996,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_071_4",
       "cluster": "luong_day_071",
       "day": 71,
+      "phonetic_distractors": [
+        "still",
+        "steel",
+        "tile",
+        "steal",
+        "smile"
+      ],
       "fav": false,
       "known": false
     },
@@ -17156,6 +21027,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_071_5",
       "cluster": "luong_day_071",
       "day": 71,
+      "phonetic_distractors": [
+        "banned",
+        "weekend",
+        "bend",
+        "band",
+        "blend"
+      ],
       "fav": false,
       "known": false
     },
@@ -17180,6 +21058,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_071_6",
       "cluster": "luong_day_071",
       "day": 71,
+      "phonetic_distractors": [
+        "equally",
+        "entity",
+        "empathy",
+        "query",
+        "quality"
+      ],
       "fav": false,
       "known": false
     },
@@ -17228,6 +21113,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_071_8",
       "cluster": "luong_day_071",
       "day": 71,
+      "phonetic_distractors": [
+        "royalty",
+        "realty",
+        "multi",
+        "likely",
+        "realtor"
+      ],
       "fav": false,
       "known": false
     },
@@ -17276,6 +21168,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_072_0",
       "cluster": "luong_day_072",
       "day": 72,
+      "phonetic_distractors": [
+        "consciousness",
+        "consensus",
+        "confidential",
+        "convention",
+        "contents"
+      ],
       "fav": false,
       "known": false
     },
@@ -17301,6 +21200,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_072_1",
       "cluster": "luong_day_072",
       "day": 72,
+      "phonetic_distractors": [
+        "amount",
+        "acute",
+        "scout",
+        "cant",
+        "counter"
+      ],
       "fav": false,
       "known": false
     },
@@ -17324,6 +21230,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_072_2",
       "cluster": "luong_day_072",
       "day": 72,
+      "phonetic_distractors": [
+        "encounter",
+        "integrate",
+        "integrity",
+        "invigorate",
+        "indonesia"
+      ],
       "fav": false,
       "known": false
     },
@@ -17348,6 +21261,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_072_3",
       "cluster": "luong_day_072",
       "day": 72,
+      "phonetic_distractors": [
+        "explore",
+        "exchange",
+        "expense",
+        "display",
+        "displayed"
+      ],
       "fav": false,
       "known": false
     },
@@ -17395,6 +21315,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_072_5",
       "cluster": "luong_day_072",
       "day": 72,
+      "phonetic_distractors": [
+        "migration",
+        "impression",
+        "depression",
+        "profession",
+        "possession"
+      ],
       "fav": false,
       "known": false
     },
@@ -17443,6 +21370,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_072_7",
       "cluster": "luong_day_072",
       "day": 72,
+      "phonetic_distractors": [
+        "final",
+        "tunnel",
+        "fuel",
+        "couple",
+        "fund"
+      ],
       "fav": false,
       "known": false
     },
@@ -17467,6 +21401,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_072_8",
       "cluster": "luong_day_072",
       "day": 72,
+      "phonetic_distractors": [
+        "update",
+        "asset",
+        "sunset",
+        "assessed",
+        "assess"
+      ],
       "fav": false,
       "known": false
     },
@@ -17491,6 +21432,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_072_9",
       "cluster": "luong_day_072",
       "day": 72,
+      "phonetic_distractors": [
+        "copper",
+        "copies",
+        "coffee",
+        "copied",
+        "key"
+      ],
       "fav": false,
       "known": false
     },
@@ -17515,6 +21463,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_073_0",
       "cluster": "luong_day_073",
       "day": 73,
+      "phonetic_distractors": [
+        "debt",
+        "bit",
+        "date",
+        "knit",
+        "dig"
+      ],
       "fav": false,
       "known": false
     },
@@ -17588,6 +21543,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_073_3",
       "cluster": "luong_day_073",
       "day": 73,
+      "phonetic_distractors": [
+        "brain",
+        "brick",
+        "brakes",
+        "brave",
+        "blake"
+      ],
       "fav": false,
       "known": false
     },
@@ -17613,6 +21575,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_073_4",
       "cluster": "luong_day_073",
       "day": 73,
+      "phonetic_distractors": [
+        "pride",
+        "prior",
+        "press",
+        "prize",
+        "prime"
+      ],
       "fav": false,
       "known": false
     },
@@ -17637,6 +21606,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_073_5",
       "cluster": "luong_day_073",
       "day": 73,
+      "phonetic_distractors": [
+        "favour",
+        "favor",
+        "layer",
+        "layover",
+        "fever"
+      ],
       "fav": false,
       "known": false
     },
@@ -17688,6 +21664,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_073_7",
       "cluster": "luong_day_073",
       "day": 73,
+      "phonetic_distractors": [
+        "jog",
+        "rob",
+        "jar",
+        "john",
+        "jon"
+      ],
       "fav": false,
       "known": false
     },
@@ -17786,6 +21769,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_074_1",
       "cluster": "luong_day_074",
       "day": 74,
+      "phonetic_distractors": [
+        "log",
+        "lay",
+        "lol",
+        "lee",
+        "shaw"
+      ],
       "fav": false,
       "known": false
     },
@@ -17810,6 +21800,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_074_2",
       "cluster": "luong_day_074",
       "day": 74,
+      "phonetic_distractors": [
+        "strategies",
+        "status",
+        "tragedy",
+        "astrology",
+        "startup"
+      ],
       "fav": false,
       "known": false
     },
@@ -17834,6 +21831,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_074_3",
       "cluster": "luong_day_074",
       "day": 74,
+      "phonetic_distractors": [
+        "click",
+        "classic",
+        "chronic",
+        "clearing",
+        "clicking"
+      ],
       "fav": false,
       "known": false
     },
@@ -17858,6 +21862,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_074_4",
       "cluster": "luong_day_074",
       "day": 74,
+      "phonetic_distractors": [
+        "bryant",
+        "lions",
+        "lion",
+        "climate",
+        "klein"
+      ],
       "fav": false,
       "known": false
     },
@@ -17882,6 +21893,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_074_5",
       "cluster": "luong_day_074",
       "day": 74,
+      "phonetic_distractors": [
+        "alleviate",
+        "associate",
+        "affiliate",
+        "negotiation",
+        "appreciate"
+      ],
       "fav": false,
       "known": false
     },
@@ -17954,6 +21972,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_074_8",
       "cluster": "luong_day_074",
       "day": 74,
+      "phonetic_distractors": [
+        "virus",
+        "vinyl",
+        "vital",
+        "iris",
+        "neural"
+      ],
       "fav": false,
       "known": false
     },
@@ -17978,6 +22003,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_074_9",
       "cluster": "luong_day_074",
       "day": 74,
+      "phonetic_distractors": [
+        "pure",
+        "career",
+        "assure",
+        "clear",
+        "core"
+      ],
       "fav": false,
       "known": false
     },
@@ -18002,6 +22034,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_075_0",
       "cluster": "luong_day_075",
       "day": 75,
+      "phonetic_distractors": [
+        "verify",
+        "clarity",
+        "qualify",
+        "sheriff",
+        "classified"
+      ],
       "fav": false,
       "known": false
     },
@@ -18027,6 +22066,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_075_1",
       "cluster": "luong_day_075",
       "day": 75,
+      "phonetic_distractors": [
+        "advocacy",
+        "adequate",
+        "allocate",
+        "aggregate",
+        "accurate"
+      ],
       "fav": false,
       "known": false
     },
@@ -18051,6 +22097,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_075_2",
       "cluster": "luong_day_075",
       "day": 75,
+      "phonetic_distractors": [
+        "six",
+        "folks",
+        "fits",
+        "fax",
+        "picks"
+      ],
       "fav": false,
       "known": false
     },
@@ -18077,6 +22130,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_075_3",
       "cluster": "luong_day_075",
       "day": 75,
+      "phonetic_distractors": [
+        "incidence",
+        "innocent",
+        "instant",
+        "insulin",
+        "accident"
+      ],
       "fav": false,
       "known": false
     },
@@ -18101,6 +22161,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_075_4",
       "cluster": "luong_day_075",
       "day": 75,
+      "phonetic_distractors": [
+        "procrastinate",
+        "contamination",
+        "discrimination",
+        "reconciliation",
+        "classification"
+      ],
       "fav": false,
       "known": false
     },
@@ -18125,6 +22192,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_075_5",
       "cluster": "luong_day_075",
       "day": 75,
+      "phonetic_distractors": [
+        "safe",
+        "sale",
+        "gave",
+        "same",
+        "sail"
+      ],
       "fav": false,
       "known": false
     },
@@ -18172,6 +22246,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_075_7",
       "cluster": "luong_day_075",
       "day": 75,
+      "phonetic_distractors": [
+        "pharmacies",
+        "harmony",
+        "pharmacist",
+        "comedy",
+        "policy"
+      ],
       "fav": false,
       "known": false
     },
@@ -18197,6 +22278,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_075_8",
       "cluster": "luong_day_075",
       "day": 75,
+      "phonetic_distractors": [
+        "patch",
+        "pass",
+        "path",
+        "rack",
+        "hack"
+      ],
       "fav": false,
       "known": false
     },
@@ -18267,6 +22355,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_076_1",
       "cluster": "luong_day_076",
       "day": 76,
+      "phonetic_distractors": [
+        "suffering",
+        "covering",
+        "referring",
+        "offering",
+        "occurring"
+      ],
       "fav": false,
       "known": false
     },
@@ -18290,6 +22385,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_076_2",
       "cluster": "luong_day_076",
       "day": 76,
+      "phonetic_distractors": [
+        "landlord",
+        "candidate",
+        "mandate",
+        "indicate",
+        "handmade"
+      ],
       "fav": false,
       "known": false
     },
@@ -18337,6 +22439,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_076_4",
       "cluster": "luong_day_076",
       "day": 76,
+      "phonetic_distractors": [
+        "news",
+        "knows",
+        "boys",
+        "nose",
+        "toys"
+      ],
       "fav": false,
       "known": false
     },
@@ -18385,6 +22494,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_076_6",
       "cluster": "luong_day_076",
       "day": 76,
+      "phonetic_distractors": [
+        "russell",
+        "missile",
+        "model",
+        "couple",
+        "funnel"
+      ],
       "fav": false,
       "known": false
     },
@@ -18409,6 +22525,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_076_7",
       "cluster": "luong_day_076",
       "day": 76,
+      "phonetic_distractors": [
+        "lecture",
+        "texture",
+        "venture",
+        "jesse",
+        "lesser"
+      ],
       "fav": false,
       "known": false
     },
@@ -18434,6 +22557,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_076_8",
       "cluster": "luong_day_076",
       "day": 76,
+      "phonetic_distractors": [
+        "carpet",
+        "karl",
+        "cartoon",
+        "carl",
+        "copy"
+      ],
       "fav": false,
       "known": false
     },
@@ -18458,6 +22588,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_076_9",
       "cluster": "luong_day_076",
       "day": 76,
+      "phonetic_distractors": [
+        "balance",
+        "backend",
+        "backup",
+        "boolean",
+        "baskets"
+      ],
       "fav": false,
       "known": false
     },
@@ -18481,6 +22618,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_077_0",
       "cluster": "luong_day_077",
       "day": 77,
+      "phonetic_distractors": [
+        "brother",
+        "browsing",
+        "brown",
+        "broker",
+        "fraser"
+      ],
       "fav": false,
       "known": false
     },
@@ -18530,6 +22674,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_077_2",
       "cluster": "luong_day_077",
       "day": 77,
+      "phonetic_distractors": [
+        "audio",
+        "redeem",
+        "radio",
+        "verde",
+        "village"
+      ],
       "fav": false,
       "known": false
     },
@@ -18554,6 +22705,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_077_3",
       "cluster": "luong_day_077",
       "day": 77,
+      "phonetic_distractors": [
+        "store",
+        "story",
+        "struck",
+        "storm",
+        "stores"
+      ],
       "fav": false,
       "known": false
     },
@@ -18604,6 +22762,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_077_5",
       "cluster": "luong_day_077",
       "day": 77,
+      "phonetic_distractors": [
+        "leisure",
+        "lesser",
+        "leather",
+        "letter",
+        "error"
+      ],
       "fav": false,
       "known": false
     },
@@ -18627,6 +22792,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_077_6",
       "cluster": "luong_day_077",
       "day": 77,
+      "phonetic_distractors": [
+        "limitation",
+        "mitigation",
+        "specification",
+        "elimination",
+        "arbitration"
+      ],
       "fav": false,
       "known": false
     },
@@ -18651,6 +22823,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_077_7",
       "cluster": "luong_day_077",
       "day": 77,
+      "phonetic_distractors": [
+        "resort",
+        "resist",
+        "resume",
+        "remote",
+        "receipt"
+      ],
       "fav": false,
       "known": false
     },
@@ -18677,6 +22856,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_077_8",
       "cluster": "luong_day_077",
       "day": 77,
+      "phonetic_distractors": [
+        "silicon",
+        "delicious",
+        "scalable",
+        "reliable",
+        "visible"
+      ],
       "fav": false,
       "known": false
     },
@@ -18701,6 +22887,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_077_9",
       "cluster": "luong_day_077",
       "day": 77,
+      "phonetic_distractors": [
+        "consideration",
+        "configuring",
+        "considerations",
+        "confirmation",
+        "consolidation"
+      ],
       "fav": false,
       "known": false
     },
@@ -18725,6 +22918,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_078_0",
       "cluster": "luong_day_078",
       "day": 78,
+      "phonetic_distractors": [
+        "break",
+        "train",
+        "brown",
+        "brave",
+        "bahrain"
+      ],
       "fav": false,
       "known": false
     },
@@ -18749,6 +22949,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_078_1",
       "cluster": "luong_day_078",
       "day": 78,
+      "phonetic_distractors": [
+        "consist",
+        "concern",
+        "connect",
+        "concert",
+        "canvas"
+      ],
       "fav": false,
       "known": false
     },
@@ -18773,6 +22980,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_078_2",
       "cluster": "luong_day_078",
       "day": 78,
+      "phonetic_distractors": [
+        "litigation",
+        "motivation",
+        "iteration",
+        "michigan",
+        "irrigation"
+      ],
       "fav": false,
       "known": false
     },
@@ -18797,6 +23011,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_078_3",
       "cluster": "luong_day_078",
       "day": 78,
+      "phonetic_distractors": [
+        "reboot",
+        "robust",
+        "robert",
+        "wrote",
+        "rebate"
+      ],
       "fav": false,
       "known": false
     },
@@ -18823,6 +23044,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_078_4",
       "cluster": "luong_day_078",
       "day": 78,
+      "phonetic_distractors": [
+        "match",
+        "batch",
+        "cache",
+        "coach",
+        "cash"
+      ],
       "fav": false,
       "known": false
     },
@@ -18847,6 +23075,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_078_5",
       "cluster": "luong_day_078",
       "day": 78,
+      "phonetic_distractors": [
+        "sally",
+        "salaries",
+        "gallery",
+        "battery",
+        "surgery"
+      ],
       "fav": false,
       "known": false
     },
@@ -18871,6 +23106,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_078_6",
       "cluster": "luong_day_078",
       "day": 78,
+      "phonetic_distractors": [
+        "collision",
+        "colon",
+        "coleman",
+        "korean",
+        "question"
+      ],
       "fav": false,
       "known": false
     },
@@ -18917,6 +23159,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_078_8",
       "cluster": "luong_day_078",
       "day": 78,
+      "phonetic_distractors": [
+        "wrist",
+        "receipt",
+        "score",
+        "detour",
+        "restock"
+      ],
       "fav": false,
       "known": false
     },
@@ -18963,6 +23212,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_079_0",
       "cluster": "luong_day_079",
       "day": 79,
+      "phonetic_distractors": [
+        "analytical",
+        "analysts",
+        "analysis",
+        "athletics",
+        "logistics"
+      ],
       "fav": false,
       "known": false
     },
@@ -18988,6 +23244,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_079_1",
       "cluster": "luong_day_079",
       "day": 79,
+      "phonetic_distractors": [
+        "communicate",
+        "qualification",
+        "classification",
+        "consolidation",
+        "complications"
+      ],
       "fav": false,
       "known": false
     },
@@ -19012,6 +23275,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_079_2",
       "cluster": "luong_day_079",
       "day": 79,
+      "phonetic_distractors": [
+        "slow",
+        "glow",
+        "follow",
+        "fellow",
+        "fly"
+      ],
       "fav": false,
       "known": false
     },
@@ -19059,6 +23329,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_079_4",
       "cluster": "luong_day_079",
       "day": 79,
+      "phonetic_distractors": [
+        "excel",
+        "pencil",
+        "parcel",
+        "picks",
+        "nickel"
+      ],
       "fav": false,
       "known": false
     },
@@ -19083,6 +23360,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_079_5",
       "cluster": "luong_day_079",
       "day": 79,
+      "phonetic_distractors": [
+        "contains",
+        "contained",
+        "containing",
+        "control",
+        "consumer"
+      ],
       "fav": false,
       "known": false
     },
@@ -19107,6 +23391,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_079_6",
       "cluster": "luong_day_079",
       "day": 79,
+      "phonetic_distractors": [
+        "magical",
+        "surgical",
+        "bicycle",
+        "chemical",
+        "monica"
+      ],
       "fav": false,
       "known": false
     },
@@ -19155,6 +23446,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_079_8",
       "cluster": "luong_day_079",
       "day": 79,
+      "phonetic_distractors": [
+        "blanch",
+        "brand",
+        "banned",
+        "blonde",
+        "blond"
+      ],
       "fav": false,
       "known": false
     },
@@ -19179,6 +23477,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_079_9",
       "cluster": "luong_day_079",
       "day": 79,
+      "phonetic_distractors": [
+        "popularity",
+        "severity",
+        "celebrate",
+        "security",
+        "dexterity"
+      ],
       "fav": false,
       "known": false
     },
@@ -19202,6 +23507,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_080_0",
       "cluster": "luong_day_080",
       "day": 80,
+      "phonetic_distractors": [
+        "pour",
+        "pose",
+        "peas",
+        "pas",
+        "laws"
+      ],
       "fav": false,
       "known": false
     },
@@ -19226,6 +23538,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_080_1",
       "cluster": "luong_day_080",
       "day": 80,
+      "phonetic_distractors": [
+        "reconciliation",
+        "considerable",
+        "recreational",
+        "reconstruction",
+        "responsible"
+      ],
       "fav": false,
       "known": false
     },
@@ -19252,6 +23571,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_080_2",
       "cluster": "luong_day_080",
       "day": 80,
+      "phonetic_distractors": [
+        "frequency",
+        "projection",
+        "professional",
+        "predictions",
+        "presented"
+      ],
       "fav": false,
       "known": false
     },
@@ -19276,6 +23602,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_080_3",
       "cluster": "luong_day_080",
       "day": 80,
+      "phonetic_distractors": [
+        "invest",
+        "interpret",
+        "integrity",
+        "incest",
+        "infinite"
+      ],
       "fav": false,
       "known": false
     },
@@ -19300,6 +23633,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_080_4",
       "cluster": "luong_day_080",
       "day": 80,
+      "phonetic_distractors": [
+        "macromedia",
+        "colombia",
+        "columbia",
+        "wikipedia",
+        "slovenia"
+      ],
       "fav": false,
       "known": false
     },
@@ -19325,6 +23665,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_080_5",
       "cluster": "luong_day_080",
       "day": 80,
+      "phonetic_distractors": [
+        "charter",
+        "parser",
+        "parts",
+        "porter",
+        "carter"
+      ],
       "fav": false,
       "known": false
     },
@@ -19348,6 +23695,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_080_6",
       "cluster": "luong_day_080",
       "day": 80,
+      "phonetic_distractors": [
+        "singles",
+        "simulate",
+        "silicon",
+        "kingston",
+        "england"
+      ],
       "fav": false,
       "known": false
     },
@@ -19374,6 +23728,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_080_7",
       "cluster": "luong_day_080",
       "day": 80,
+      "phonetic_distractors": [
+        "dear",
+        "detail",
+        "decor",
+        "deer",
+        "guitar"
+      ],
       "fav": false,
       "known": false
     },
@@ -19398,6 +23759,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_080_8",
       "cluster": "luong_day_080",
       "day": 80,
+      "phonetic_distractors": [
+        "cute",
+        "immune",
+        "route",
+        "boot",
+        "view"
+      ],
       "fav": false,
       "known": false
     },
@@ -19421,6 +23789,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_080_9",
       "cluster": "luong_day_080",
       "day": 80,
+      "phonetic_distractors": [
+        "modeling",
+        "modular",
+        "model",
+        "monitor",
+        "monitoring"
+      ],
       "fav": false,
       "known": false
     },
@@ -19446,6 +23821,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_081_0",
       "cluster": "luong_day_081",
       "day": 81,
+      "phonetic_distractors": [
+        "balcony",
+        "alex",
+        "ballot",
+        "talent",
+        "allen"
+      ],
       "fav": false,
       "known": false
     },
@@ -19470,6 +23852,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_081_1",
       "cluster": "luong_day_081",
       "day": 81,
+      "phonetic_distractors": [
+        "spacious",
+        "special",
+        "staple",
+        "stable",
+        "station"
+      ],
       "fav": false,
       "known": false
     },
@@ -19519,6 +23908,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_081_3",
       "cluster": "luong_day_081",
       "day": 81,
+      "phonetic_distractors": [
+        "server",
+        "serve",
+        "served",
+        "serves",
+        "service"
+      ],
       "fav": false,
       "known": false
     },
@@ -19543,6 +23939,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_081_4",
       "cluster": "luong_day_081",
       "day": 81,
+      "phonetic_distractors": [
+        "agree",
+        "dig",
+        "dear",
+        "disney",
+        "decrease"
+      ],
       "fav": false,
       "known": false
     },
@@ -19567,6 +23970,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_081_5",
       "cluster": "luong_day_081",
       "day": 81,
+      "phonetic_distractors": [
+        "distraction",
+        "extraction",
+        "attraction",
+        "abstracts",
+        "destruction"
+      ],
       "fav": false,
       "known": false
     },
@@ -19590,6 +24000,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_081_6",
       "cluster": "luong_day_081",
       "day": 81,
+      "phonetic_distractors": [
+        "warehouse",
+        "cents",
+        "pants",
+        "pentium",
+        "sentence"
+      ],
       "fav": false,
       "known": false
     },
@@ -19614,6 +24031,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_081_7",
       "cluster": "luong_day_081",
       "day": 81,
+      "phonetic_distractors": [
+        "attend",
+        "attended",
+        "amend",
+        "gender",
+        "amanda"
+      ],
       "fav": false,
       "known": false
     },
@@ -19663,6 +24087,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_081_9",
       "cluster": "luong_day_081",
       "day": 81,
+      "phonetic_distractors": [
+        "operated",
+        "separation",
+        "generated",
+        "supported",
+        "separately"
+      ],
       "fav": false,
       "known": false
     },
@@ -19686,6 +24117,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_082_0",
       "cluster": "luong_day_082",
       "day": 82,
+      "phonetic_distractors": [
+        "velocity",
+        "kilometers",
+        "geometry",
+        "clarity",
+        "ultimately"
+      ],
       "fav": false,
       "known": false
     },
@@ -19710,6 +24148,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_082_1",
       "cluster": "luong_day_082",
       "day": 82,
+      "phonetic_distractors": [
+        "memories",
+        "summarize",
+        "memory",
+        "members",
+        "measures"
+      ],
       "fav": false,
       "known": false
     },
@@ -19735,6 +24180,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_082_2",
       "cluster": "luong_day_082",
       "day": 82,
+      "phonetic_distractors": [
+        "bit",
+        "pill",
+        "boil",
+        "build",
+        "bowl"
+      ],
       "fav": false,
       "known": false
     },
@@ -19759,6 +24211,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_082_3",
       "cluster": "luong_day_082",
       "day": 82,
+      "phonetic_distractors": [
+        "score",
+        "detour",
+        "six",
+        "square",
+        "declare"
+      ],
       "fav": false,
       "known": false
     },
@@ -19783,6 +24242,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_082_4",
       "cluster": "luong_day_082",
       "day": 82,
+      "phonetic_distractors": [
+        "salmon",
+        "status",
+        "station",
+        "terminal",
+        "satin"
+      ],
       "fav": false,
       "known": false
     },
@@ -19807,6 +24273,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_082_5",
       "cluster": "luong_day_082",
       "day": 82,
+      "phonetic_distractors": [
+        "gardens",
+        "guardian",
+        "gordon",
+        "modeling",
+        "marketing"
+      ],
       "fav": false,
       "known": false
     },
@@ -19831,6 +24304,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_082_6",
       "cluster": "luong_day_082",
       "day": 82,
+      "phonetic_distractors": [
+        "promise",
+        "precise",
+        "princess",
+        "press",
+        "progress"
+      ],
       "fav": false,
       "known": false
     },
@@ -19857,6 +24337,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_082_7",
       "cluster": "luong_day_082",
       "day": 82,
+      "phonetic_distractors": [
+        "networks",
+        "tracking",
+        "staking",
+        "catering",
+        "entering"
+      ],
       "fav": false,
       "known": false
     },
@@ -19881,6 +24368,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_082_8",
       "cluster": "luong_day_082",
       "day": 82,
+      "phonetic_distractors": [
+        "dispatched",
+        "detect",
+        "detroit",
+        "attached",
+        "detour"
+      ],
       "fav": false,
       "known": false
     },
@@ -19905,6 +24399,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_082_9",
       "cluster": "luong_day_082",
       "day": 82,
+      "phonetic_distractors": [
+        "analyze",
+        "totals",
+        "sessions",
+        "circles",
+        "cycles"
+      ],
       "fav": false,
       "known": false
     },
@@ -19953,6 +24454,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_083_1",
       "cluster": "luong_day_083",
       "day": 83,
+      "phonetic_distractors": [
+        "conversation",
+        "conservation",
+        "conversations",
+        "misinformation",
+        "disinformation"
+      ],
       "fav": false,
       "known": false
     },
@@ -19978,6 +24486,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_083_2",
       "cluster": "luong_day_083",
       "day": 83,
+      "phonetic_distractors": [
+        "meant",
+        "mental",
+        "menu",
+        "store",
+        "rent"
+      ],
       "fav": false,
       "known": false
     },
@@ -20002,6 +24517,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_083_3",
       "cluster": "luong_day_083",
       "day": 83,
+      "phonetic_distractors": [
+        "terminal",
+        "marinate",
+        "payment",
+        "tenant",
+        "germany"
+      ],
       "fav": false,
       "known": false
     },
@@ -20050,6 +24572,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_083_5",
       "cluster": "luong_day_083",
       "day": 83,
+      "phonetic_distractors": [
+        "team",
+        "ear",
+        "teen",
+        "tee",
+        "teeth"
+      ],
       "fav": false,
       "known": false
     },
@@ -20074,6 +24603,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_083_6",
       "cluster": "luong_day_083",
       "day": 83,
+      "phonetic_distractors": [
+        "close",
+        "glass",
+        "cas",
+        "clan",
+        "cache"
+      ],
       "fav": false,
       "known": false
     },
@@ -20098,6 +24634,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_083_7",
       "cluster": "luong_day_083",
       "day": 83,
+      "phonetic_distractors": [
+        "cart",
+        "heart",
+        "part",
+        "charge",
+        "mart"
+      ],
       "fav": false,
       "known": false
     },
@@ -20122,6 +24665,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_083_8",
       "cluster": "luong_day_083",
       "day": 83,
+      "phonetic_distractors": [
+        "label",
+        "cable",
+        "staple",
+        "dabble",
+        "unable"
+      ],
       "fav": false,
       "known": false
     },
@@ -20147,6 +24697,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_083_9",
       "cluster": "luong_day_083",
       "day": 83,
+      "phonetic_distractors": [
+        "client",
+        "efficient",
+        "absent",
+        "influenced",
+        "ambient"
+      ],
       "fav": false,
       "known": false
     },
@@ -20196,6 +24753,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_084_1",
       "cluster": "luong_day_084",
       "day": 84,
+      "phonetic_distractors": [
+        "paying",
+        "rating",
+        "painting",
+        "pulling",
+        "passing"
+      ],
       "fav": false,
       "known": false
     },
@@ -20220,6 +24784,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_084_2",
       "cluster": "luong_day_084",
       "day": 84,
+      "phonetic_distractors": [
+        "symptom",
+        "sister",
+        "custom",
+        "listed",
+        "vista"
+      ],
       "fav": false,
       "known": false
     },
@@ -20243,6 +24814,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_084_3",
       "cluster": "luong_day_084",
       "day": 84,
+      "phonetic_distractors": [
+        "stan",
+        "span",
+        "skin",
+        "san",
+        "screen"
+      ],
       "fav": false,
       "known": false
     },
@@ -20269,6 +24847,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_084_4",
       "cluster": "luong_day_084",
       "day": 84,
+      "phonetic_distractors": [
+        "pathology",
+        "apologize",
+        "policy",
+        "majority",
+        "psychology"
+      ],
       "fav": false,
       "known": false
     },
@@ -20293,6 +24878,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_084_5",
       "cluster": "luong_day_084",
       "day": 84,
+      "phonetic_distractors": [
+        "infectious",
+        "injection",
+        "affection",
+        "inflation",
+        "invention"
+      ],
       "fav": false,
       "known": false
     },
@@ -20317,6 +24909,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_084_6",
       "cluster": "luong_day_084",
       "day": 84,
+      "phonetic_distractors": [
+        "spelling",
+        "spring",
+        "surfing",
+        "speaking",
+        "staffing"
+      ],
       "fav": false,
       "known": false
     },
@@ -20366,6 +24965,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_084_8",
       "cluster": "luong_day_084",
       "day": 84,
+      "phonetic_distractors": [
+        "key",
+        "be",
+        "lee",
+        "tee",
+        "sea"
+      ],
       "fav": false,
       "known": false
     },
@@ -20414,6 +25020,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_085_0",
       "cluster": "luong_day_085",
       "day": 85,
+      "phonetic_distractors": [
+        "coach",
+        "load",
+        "node",
+        "road",
+        "mode"
+      ],
       "fav": false,
       "known": false
     },
@@ -20440,6 +25053,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_085_1",
       "cluster": "luong_day_085",
       "day": 85,
+      "phonetic_distractors": [
+        "unsubscribe",
+        "described",
+        "describe",
+        "describes",
+        "prescribed"
+      ],
       "fav": false,
       "known": false
     },
@@ -20466,6 +25086,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_085_2",
       "cluster": "luong_day_085",
       "day": 85,
+      "phonetic_distractors": [
+        "great",
+        "migration",
+        "greater",
+        "upgrade",
+        "vibrator"
+      ],
       "fav": false,
       "known": false
     },
@@ -20491,6 +25118,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_085_3",
       "cluster": "luong_day_085",
       "day": 85,
+      "phonetic_distractors": [
+        "interact",
+        "interview",
+        "interject",
+        "introduce",
+        "interest"
+      ],
       "fav": false,
       "known": false
     },
@@ -20541,6 +25175,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_085_5",
       "cluster": "luong_day_085",
       "day": 85,
+      "phonetic_distractors": [
+        "urge",
+        "marie",
+        "murray",
+        "surge",
+        "match"
+      ],
       "fav": false,
       "known": false
     },
@@ -20565,6 +25206,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_085_6",
       "cluster": "luong_day_085",
       "day": 85,
+      "phonetic_distractors": [
+        "compliance",
+        "complaint",
+        "component",
+        "commitment",
+        "company"
+      ],
       "fav": false,
       "known": false
     },
@@ -20589,6 +25237,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_085_7",
       "cluster": "luong_day_085",
       "day": 85,
+      "phonetic_distractors": [
+        "attack",
+        "match",
+        "tab",
+        "batch",
+        "tag"
+      ],
       "fav": false,
       "known": false
     },
@@ -20612,6 +25267,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_085_8",
       "cluster": "luong_day_085",
       "day": 85,
+      "phonetic_distractors": [
+        "three",
+        "sri",
+        "true",
+        "tray",
+        "tee"
+      ],
       "fav": false,
       "known": false
     },
@@ -20635,6 +25297,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_085_9",
       "cluster": "luong_day_085",
       "day": 85,
+      "phonetic_distractors": [
+        "us",
+        "upper",
+        "apps",
+        "oops",
+        "space"
+      ],
       "fav": false,
       "known": false
     },
@@ -20659,6 +25328,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_086_0",
       "cluster": "luong_day_086",
       "day": 86,
+      "phonetic_distractors": [
+        "candle",
+        "castle",
+        "council",
+        "counsel",
+        "canvas"
+      ],
       "fav": false,
       "known": false
     },
@@ -20683,6 +25359,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_086_1",
       "cluster": "luong_day_086",
       "day": 86,
+      "phonetic_distractors": [
+        "insight",
+        "invest",
+        "invoice",
+        "input",
+        "insert"
+      ],
       "fav": false,
       "known": false
     },
@@ -20707,6 +25390,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_086_2",
       "cluster": "luong_day_086",
       "day": 86,
+      "phonetic_distractors": [
+        "boundaries",
+        "founder",
+        "battery",
+        "vendor",
+        "banter"
+      ],
       "fav": false,
       "known": false
     },
@@ -20755,6 +25445,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_086_4",
       "cluster": "luong_day_086",
       "day": 86,
+      "phonetic_distractors": [
+        "rapport",
+        "prepare",
+        "reply",
+        "rear",
+        "rare"
+      ],
       "fav": false,
       "known": false
     },
@@ -20804,6 +25501,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_086_6",
       "cluster": "luong_day_086",
       "day": 86,
+      "phonetic_distractors": [
+        "charts",
+        "charger",
+        "carter",
+        "parser",
+        "marker"
+      ],
       "fav": false,
       "known": false
     },
@@ -20830,6 +25534,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_086_7",
       "cluster": "luong_day_086",
       "day": 86,
+      "phonetic_distractors": [
+        "blocks",
+        "blocking",
+        "blocked",
+        "brokers",
+        "bloggers"
+      ],
       "fav": false,
       "known": false
     },
@@ -20854,6 +25565,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_086_8",
       "cluster": "luong_day_086",
       "day": 86,
+      "phonetic_distractors": [
+        "couple",
+        "compare",
+        "compete",
+        "comply",
+        "commute"
+      ],
       "fav": false,
       "known": false
     },
@@ -20878,6 +25596,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_086_9",
       "cluster": "luong_day_086",
       "day": 86,
+      "phonetic_distractors": [
+        "closer",
+        "color",
+        "cost",
+        "culture",
+        "club"
+      ],
       "fav": false,
       "known": false
     },
@@ -20901,6 +25626,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_087_0",
       "cluster": "luong_day_087",
       "day": 87,
+      "phonetic_distractors": [
+        "gesture",
+        "lecture",
+        "texts",
+        "mixture",
+        "texas"
+      ],
       "fav": false,
       "known": false
     },
@@ -20949,6 +25681,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_087_2",
       "cluster": "luong_day_087",
       "day": 87,
+      "phonetic_distractors": [
+        "instant",
+        "inference",
+        "distance",
+        "winston",
+        "intense"
+      ],
       "fav": false,
       "known": false
     },
@@ -20973,6 +25712,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_087_3",
       "cluster": "luong_day_087",
       "day": 87,
+      "phonetic_distractors": [
+        "sour",
+        "our",
+        "shower",
+        "hour",
+        "powder"
+      ],
       "fav": false,
       "known": false
     },
@@ -20997,6 +25743,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_087_4",
       "cluster": "luong_day_087",
       "day": 87,
+      "phonetic_distractors": [
+        "practice",
+        "predictive",
+        "attractive",
+        "productive",
+        "protective"
+      ],
       "fav": false,
       "known": false
     },
@@ -21023,6 +25776,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_087_5",
       "cluster": "luong_day_087",
       "day": 87,
+      "phonetic_distractors": [
+        "equality",
+        "quality",
+        "security",
+        "humidity",
+        "elasticity"
+      ],
       "fav": false,
       "known": false
     },
@@ -21047,6 +25807,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_087_6",
       "cluster": "luong_day_087",
       "day": 87,
+      "phonetic_distractors": [
+        "file",
+        "ide",
+        "aye",
+        "earl",
+        "eyed"
+      ],
       "fav": false,
       "known": false
     },
@@ -21146,6 +25913,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_088_0",
       "cluster": "luong_day_088",
       "day": 88,
+      "phonetic_distractors": [
+        "culture",
+        "cooler",
+        "cult",
+        "collar",
+        "killer"
+      ],
       "fav": false,
       "known": false
     },
@@ -21197,6 +25971,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_088_2",
       "cluster": "luong_day_088",
       "day": 88,
+      "phonetic_distractors": [
+        "subway",
+        "running",
+        "away",
+        "sunday",
+        "runs"
+      ],
       "fav": false,
       "known": false
     },
@@ -21223,6 +26004,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_088_3",
       "cluster": "luong_day_088",
       "day": 88,
+      "phonetic_distractors": [
+        "channels",
+        "panels",
+        "analog",
+        "anaheim",
+        "realize"
+      ],
       "fav": false,
       "known": false
     },
@@ -21247,6 +26035,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_088_4",
       "cluster": "luong_day_088",
       "day": 88,
+      "phonetic_distractors": [
+        "symbol",
+        "sample",
+        "symptom",
+        "staple",
+        "single"
+      ],
       "fav": false,
       "known": false
     },
@@ -21270,6 +26065,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_088_5",
       "cluster": "luong_day_088",
       "day": 88,
+      "phonetic_distractors": [
+        "marked",
+        "marc",
+        "marco",
+        "parker",
+        "marks"
+      ],
       "fav": false,
       "known": false
     },
@@ -21364,6 +26166,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_088_9",
       "cluster": "luong_day_088",
       "day": 88,
+      "phonetic_distractors": [
+        "proactive",
+        "tracking",
+        "plastic",
+        "tract",
+        "gratis"
+      ],
       "fav": false,
       "known": false
     },
@@ -21387,6 +26196,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_089_0",
       "cluster": "luong_day_089",
       "day": 89,
+      "phonetic_distractors": [
+        "seeker",
+        "speaks",
+        "speed",
+        "speech",
+        "spoke"
+      ],
       "fav": false,
       "known": false
     },
@@ -21411,6 +26227,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_089_1",
       "cluster": "luong_day_089",
       "day": 89,
+      "phonetic_distractors": [
+        "extended",
+        "exception",
+        "expansion",
+        "retention",
+        "expression"
+      ],
       "fav": false,
       "known": false
     },
@@ -21436,6 +26259,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_089_2",
       "cluster": "luong_day_089",
       "day": 89,
+      "phonetic_distractors": [
+        "impossible",
+        "immutable",
+        "remarkable",
+        "compatible",
+        "impediment"
+      ],
       "fav": false,
       "known": false
     },
@@ -21482,6 +26312,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_089_4",
       "cluster": "luong_day_089",
       "day": 89,
+      "phonetic_distractors": [
+        "sprite",
+        "sprint",
+        "ceiling",
+        "spelling",
+        "spin"
+      ],
       "fav": false,
       "known": false
     },
@@ -21506,6 +26343,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_089_5",
       "cluster": "luong_day_089",
       "day": 89,
+      "phonetic_distractors": [
+        "destruction",
+        "abstraction",
+        "distinction",
+        "extraction",
+        "attraction"
+      ],
       "fav": false,
       "known": false
     },
@@ -21532,6 +26376,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_089_6",
       "cluster": "luong_day_089",
       "day": 89,
+      "phonetic_distractors": [
+        "accessibility",
+        "accountability",
+        "vulnerability",
+        "availability",
+        "compatibility"
+      ],
       "fav": false,
       "known": false
     },
@@ -21583,6 +26434,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_089_8",
       "cluster": "luong_day_089",
       "day": 89,
+      "phonetic_distractors": [
+        "verified",
+        "clarify",
+        "sheriff",
+        "tariff",
+        "notify"
+      ],
       "fav": false,
       "known": false
     },
@@ -21609,6 +26467,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_089_9",
       "cluster": "luong_day_089",
       "day": 89,
+      "phonetic_distractors": [
+        "carry",
+        "queens",
+        "queen",
+        "carey",
+        "kerry"
+      ],
       "fav": false,
       "known": false
     },
@@ -21633,6 +26498,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_090_0",
       "cluster": "luong_day_090",
       "day": 90,
+      "phonetic_distractors": [
+        "trained",
+        "friend",
+        "tend",
+        "rent",
+        "send"
+      ],
       "fav": false,
       "known": false
     },
@@ -21657,6 +26529,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_090_1",
       "cluster": "luong_day_090",
       "day": 90,
+      "phonetic_distractors": [
+        "outline",
+        "outlined",
+        "outlet",
+        "outer",
+        "tire"
+      ],
       "fav": false,
       "known": false
     },
@@ -21682,6 +26561,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_090_2",
       "cluster": "luong_day_090",
       "day": 90,
+      "phonetic_distractors": [
+        "scheduling",
+        "scale",
+        "skill",
+        "scroll",
+        "smell"
+      ],
       "fav": false,
       "known": false
     },
@@ -21708,6 +26594,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_090_3",
       "cluster": "luong_day_090",
       "day": 90,
+      "phonetic_distractors": [
+        "andorra",
+        "landscape",
+        "dashboard",
+        "ignored",
+        "handheld"
+      ],
       "fav": false,
       "known": false
     },
@@ -21759,6 +26652,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_090_5",
       "cluster": "luong_day_090",
       "day": 90,
+      "phonetic_distractors": [
+        "salmon",
+        "sessions",
+        "seconds",
+        "second",
+        "lemon"
+      ],
       "fav": false,
       "known": false
     },
@@ -21785,6 +26685,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_090_6",
       "cluster": "luong_day_090",
       "day": 90,
+      "phonetic_distractors": [
+        "combination",
+        "nomination",
+        "compilation",
+        "accommodate",
+        "correlation"
+      ],
       "fav": false,
       "known": false
     },
@@ -21836,6 +26743,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_090_8",
       "cluster": "luong_day_090",
       "day": 90,
+      "phonetic_distractors": [
+        "report",
+        "pour",
+        "repair",
+        "wrapped",
+        "wrapping"
+      ],
       "fav": false,
       "known": false
     },
@@ -21862,6 +26776,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_090_9",
       "cluster": "luong_day_090",
       "day": 90,
+      "phonetic_distractors": [
+        "idiomatic",
+        "systematic",
+        "dramatic",
+        "automatic",
+        "empathetic"
+      ],
       "fav": false,
       "known": false
     },
@@ -21887,6 +26808,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_091_0",
       "cluster": "luong_day_091",
       "day": 91,
+      "phonetic_distractors": [
+        "homework",
+        "network",
+        "framework",
+        "keyword",
+        "teachers"
+      ],
       "fav": false,
       "known": false
     },
@@ -21938,6 +26866,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_091_2",
       "cluster": "luong_day_091",
       "day": 91,
+      "phonetic_distractors": [
+        "stop",
+        "stem",
+        "sep",
+        "stir",
+        "stretch"
+      ],
       "fav": false,
       "known": false
     },
@@ -21962,6 +26897,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_091_3",
       "cluster": "luong_day_091",
       "day": 91,
+      "phonetic_distractors": [
+        "diagnosis",
+        "science",
+        "douglas",
+        "diagram",
+        "giants"
+      ],
       "fav": false,
       "known": false
     },
@@ -21988,6 +26930,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_091_4",
       "cluster": "luong_day_091",
       "day": 91,
+      "phonetic_distractors": [
+        "table",
+        "cable",
+        "able",
+        "stable",
+        "dabble"
+      ],
       "fav": false,
       "known": false
     },
@@ -22012,6 +26961,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_091_5",
       "cluster": "luong_day_091",
       "day": 91,
+      "phonetic_distractors": [
+        "notified",
+        "noted",
+        "notice",
+        "justify",
+        "verify"
+      ],
       "fav": false,
       "known": false
     },
@@ -22060,6 +27016,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_091_7",
       "cluster": "luong_day_091",
       "day": 91,
+      "phonetic_distractors": [
+        "buyer",
+        "hire",
+        "wide",
+        "wider",
+        "why"
+      ],
       "fav": false,
       "known": false
     },
@@ -22107,6 +27070,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_091_9",
       "cluster": "luong_day_091",
       "day": 91,
+      "phonetic_distractors": [
+        "consistent",
+        "consistently",
+        "consultancy",
+        "persistence",
+        "consultant"
+      ],
       "fav": false,
       "known": false
     },
@@ -22156,6 +27126,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_092_1",
       "cluster": "luong_day_092",
       "day": 92,
+      "phonetic_distractors": [
+        "compile",
+        "muscle",
+        "cable",
+        "funnel",
+        "kernel"
+      ],
       "fav": false,
       "known": false
     },
@@ -22205,6 +27182,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_092_3",
       "cluster": "luong_day_092",
       "day": 92,
+      "phonetic_distractors": [
+        "whilst",
+        "milton",
+        "microphone",
+        "maintain",
+        "mason"
+      ],
       "fav": false,
       "known": false
     },
@@ -22231,6 +27215,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_092_4",
       "cluster": "luong_day_092",
       "day": 92,
+      "phonetic_distractors": [
+        "stochastic",
+        "realistic",
+        "artistic",
+        "logistics",
+        "heuristic"
+      ],
       "fav": false,
       "known": false
     },
@@ -22255,6 +27246,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_092_5",
       "cluster": "luong_day_092",
       "day": 92,
+      "phonetic_distractors": [
+        "bargain",
+        "target",
+        "martin",
+        "johnson",
+        "carmen"
+      ],
       "fav": false,
       "known": false
     },
@@ -22279,6 +27277,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_092_6",
       "cluster": "luong_day_092",
       "day": 92,
+      "phonetic_distractors": [
+        "stage",
+        "stay",
+        "straight",
+        "stayed",
+        "stake"
+      ],
       "fav": false,
       "known": false
     },
@@ -22303,6 +27308,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_092_7",
       "cluster": "luong_day_092",
       "day": 92,
+      "phonetic_distractors": [
+        "continent",
+        "sentiment",
+        "maintained",
+        "entrance",
+        "maintains"
+      ],
       "fav": false,
       "known": false
     },
@@ -22327,6 +27339,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_092_8",
       "cluster": "luong_day_092",
       "day": 92,
+      "phonetic_distractors": [
+        "stir",
+        "power",
+        "sao",
+        "south",
+        "sir"
+      ],
       "fav": false,
       "known": false
     },
@@ -22351,6 +27370,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_092_9",
       "cluster": "luong_day_092",
       "day": 92,
+      "phonetic_distractors": [
+        "cache",
+        "cash",
+        "crap",
+        "trash",
+        "crack"
+      ],
       "fav": false,
       "known": false
     },
@@ -22375,6 +27401,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_093_0",
       "cluster": "luong_day_093",
       "day": 93,
+      "phonetic_distractors": [
+        "intel",
+        "instead",
+        "store",
+        "style",
+        "restore"
+      ],
       "fav": false,
       "known": false
     },
@@ -22399,6 +27432,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_093_1",
       "cluster": "luong_day_093",
       "day": 93,
+      "phonetic_distractors": [
+        "positive",
+        "cottages",
+        "committed",
+        "creative",
+        "counting"
+      ],
       "fav": false,
       "known": false
     },
@@ -22472,6 +27512,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_093_4",
       "cluster": "luong_day_093",
       "day": 93,
+      "phonetic_distractors": [
+        "overhead",
+        "oversee",
+        "overtake",
+        "overdraft",
+        "overhang"
+      ],
       "fav": false,
       "known": false
     },
@@ -22496,6 +27543,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_093_5",
       "cluster": "luong_day_093",
       "day": 93,
+      "phonetic_distractors": [
+        "inform",
+        "reform",
+        "perfume",
+        "port",
+        "platform"
+      ],
       "fav": false,
       "known": false
     },
@@ -22520,6 +27574,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_093_6",
       "cluster": "luong_day_093",
       "day": 93,
+      "phonetic_distractors": [
+        "contrast",
+        "contact",
+        "contacts",
+        "interact",
+        "extract"
+      ],
       "fav": false,
       "known": false
     },
@@ -22546,6 +27607,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_093_7",
       "cluster": "luong_day_093",
       "day": 93,
+      "phonetic_distractors": [
+        "direct",
+        "effect",
+        "perfect",
+        "detect",
+        "affect"
+      ],
       "fav": false,
       "known": false
     },
@@ -22570,6 +27638,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_093_8",
       "cluster": "luong_day_093",
       "day": 93,
+      "phonetic_distractors": [
+        "integration",
+        "innovation",
+        "litigation",
+        "irrigation",
+        "immigration"
+      ],
       "fav": false,
       "known": false
     },
@@ -22593,6 +27668,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_093_9",
       "cluster": "luong_day_093",
       "day": 93,
+      "phonetic_distractors": [
+        "red",
+        "bread",
+        "fred",
+        "threat",
+        "fresh"
+      ],
       "fav": false,
       "known": false
     },
@@ -22617,6 +27699,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_094_0",
       "cluster": "luong_day_094",
       "day": 94,
+      "phonetic_distractors": [
+        "iteration",
+        "integrated",
+        "immigration",
+        "integrate",
+        "indication"
+      ],
       "fav": false,
       "known": false
     },
@@ -22641,6 +27730,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_094_1",
       "cluster": "luong_day_094",
       "day": 94,
+      "phonetic_distractors": [
+        "frictionless",
+        "assistance",
+        "functional",
+        "sacrifice",
+        "synthesis"
+      ],
       "fav": false,
       "known": false
     },
@@ -22665,6 +27761,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_094_2",
       "cluster": "luong_day_094",
       "day": 94,
+      "phonetic_distractors": [
+        "qualities",
+        "qualify",
+        "quantity",
+        "colony",
+        "equity"
+      ],
       "fav": false,
       "known": false
     },
@@ -22689,6 +27792,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_094_3",
       "cluster": "luong_day_094",
       "day": 94,
+      "phonetic_distractors": [
+        "epic",
+        "logic",
+        "comic",
+        "shopping",
+        "atomic"
+      ],
       "fav": false,
       "known": false
     },
@@ -22715,6 +27825,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_094_4",
       "cluster": "luong_day_094",
       "day": 94,
+      "phonetic_distractors": [
+        "backup",
+        "checkout",
+        "checking",
+        "lookup",
+        "checked"
+      ],
       "fav": false,
       "known": false
     },
@@ -22741,6 +27858,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_094_5",
       "cluster": "luong_day_094",
       "day": 94,
+      "phonetic_distractors": [
+        "rapport",
+        "support",
+        "resource",
+        "import",
+        "resort"
+      ],
       "fav": false,
       "known": false
     },
@@ -22765,6 +27889,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_094_6",
       "cluster": "luong_day_094",
       "day": 94,
+      "phonetic_distractors": [
+        "learn",
+        "chan",
+        "church",
+        "chen",
+        "iron"
+      ],
       "fav": false,
       "known": false
     },
@@ -22837,6 +27968,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_094_9",
       "cluster": "luong_day_094",
       "day": 94,
+      "phonetic_distractors": [
+        "impediment",
+        "complement",
+        "employment",
+        "supplement",
+        "filament"
+      ],
       "fav": false,
       "known": false
     },
@@ -22861,6 +27999,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_095_0",
       "cluster": "luong_day_095",
       "day": 95,
+      "phonetic_distractors": [
+        "warming",
+        "morning",
+        "worn",
+        "boring",
+        "forming"
+      ],
       "fav": false,
       "known": false
     },
@@ -22886,6 +28031,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_095_1",
       "cluster": "luong_day_095",
       "day": 95,
+      "phonetic_distractors": [
+        "morgan",
+        "organ",
+        "moral",
+        "morris",
+        "manage"
+      ],
       "fav": false,
       "known": false
     },
@@ -22910,6 +28062,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_095_2",
       "cluster": "luong_day_095",
       "day": 95,
+      "phonetic_distractors": [
+        "intelligent",
+        "inheritance",
+        "intention",
+        "relevance",
+        "influence"
+      ],
       "fav": false,
       "known": false
     },
@@ -22934,6 +28093,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_095_3",
       "cluster": "luong_day_095",
       "day": 95,
+      "phonetic_distractors": [
+        "label",
+        "table",
+        "stable",
+        "couple",
+        "dabble"
+      ],
       "fav": false,
       "known": false
     },
@@ -23007,6 +28173,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_095_6",
       "cluster": "luong_day_095",
       "day": 95,
+      "phonetic_distractors": [
+        "leisure",
+        "error",
+        "mesh",
+        "memory",
+        "member"
+      ],
       "fav": false,
       "known": false
     },
@@ -23031,6 +28204,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_095_7",
       "cluster": "luong_day_095",
       "day": 95,
+      "phonetic_distractors": [
+        "headline",
+        "deadlock",
+        "guideline",
+        "decline",
+        "deadly"
+      ],
       "fav": false,
       "known": false
     },
@@ -23054,6 +28234,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_095_8",
       "cluster": "luong_day_095",
       "day": 95,
+      "phonetic_distractors": [
+        "aesthetic",
+        "processing",
+        "plastic",
+        "empathetic",
+        "processor"
+      ],
       "fav": false,
       "known": false
     },
@@ -23080,6 +28267,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_095_9",
       "cluster": "luong_day_095",
       "day": 95,
+      "phonetic_distractors": [
+        "validate",
+        "alex",
+        "isolate",
+        "advocate",
+        "navigate"
+      ],
       "fav": false,
       "known": false
     },
@@ -23105,6 +28299,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_096_0",
       "cluster": "luong_day_096",
       "day": 96,
+      "phonetic_distractors": [
+        "reader",
+        "cedar",
+        "leads",
+        "leeds",
+        "ladder"
+      ],
       "fav": false,
       "known": false
     },
@@ -23152,6 +28353,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_096_2",
       "cluster": "luong_day_096",
       "day": 96,
+      "phonetic_distractors": [
+        "portrait",
+        "profiling",
+        "proofread",
+        "portraits",
+        "portable"
+      ],
       "fav": false,
       "known": false
     },
@@ -23176,6 +28384,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_096_3",
       "cluster": "luong_day_096",
       "day": 96,
+      "phonetic_distractors": [
+        "input",
+        "outlet",
+        "outlook",
+        "start",
+        "pull"
+      ],
       "fav": false,
       "known": false
     },
@@ -23201,6 +28416,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_096_4",
       "cluster": "luong_day_096",
       "day": 96,
+      "phonetic_distractors": [
+        "religions",
+        "residence",
+        "revision",
+        "revisions",
+        "resistance"
+      ],
       "fav": false,
       "known": false
     },
@@ -23225,6 +28447,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_096_5",
       "cluster": "luong_day_096",
       "day": 96,
+      "phonetic_distractors": [
+        "perform",
+        "norm",
+        "reform",
+        "indoor",
+        "fork"
+      ],
       "fav": false,
       "known": false
     },
@@ -23250,6 +28479,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_096_6",
       "cluster": "luong_day_096",
       "day": 96,
+      "phonetic_distractors": [
+        "save",
+        "fail",
+        "scale",
+        "safe",
+        "sell"
+      ],
       "fav": false,
       "known": false
     },
@@ -23273,6 +28509,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_096_7",
       "cluster": "luong_day_096",
       "day": 96,
+      "phonetic_distractors": [
+        "execution",
+        "dexterity",
+        "consultant",
+        "metropolitan",
+        "cancellation"
+      ],
       "fav": false,
       "known": false
     },
@@ -23322,6 +28565,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_096_9",
       "cluster": "luong_day_096",
       "day": 96,
+      "phonetic_distractors": [
+        "workout",
+        "burning",
+        "burns",
+        "bent",
+        "burst"
+      ],
       "fav": false,
       "known": false
     },
@@ -23346,6 +28596,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_097_0",
       "cluster": "luong_day_097",
       "day": 97,
+      "phonetic_distractors": [
+        "policies",
+        "topology",
+        "qualify",
+        "policy",
+        "packages"
+      ],
       "fav": false,
       "known": false
     },
@@ -23370,6 +28627,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_097_1",
       "cluster": "luong_day_097",
       "day": 97,
+      "phonetic_distractors": [
+        "irrigation",
+        "correlation",
+        "annotation",
+        "aggregate",
+        "allocation"
+      ],
       "fav": false,
       "known": false
     },
@@ -23419,6 +28683,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_097_3",
       "cluster": "luong_day_097",
       "day": 97,
+      "phonetic_distractors": [
+        "memo",
+        "debt",
+        "desk",
+        "dump",
+        "dom"
+      ],
       "fav": false,
       "known": false
     },
@@ -23490,6 +28761,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_097_6",
       "cluster": "luong_day_097",
       "day": 97,
+      "phonetic_distractors": [
+        "doug",
+        "drum",
+        "drag",
+        "iris",
+        "bug"
+      ],
       "fav": false,
       "known": false
     },
@@ -23516,6 +28794,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_097_7",
       "cluster": "luong_day_097",
       "day": 97,
+      "phonetic_distractors": [
+        "court",
+        "report",
+        "sort",
+        "port",
+        "export"
+      ],
       "fav": false,
       "known": false
     },
@@ -23565,6 +28850,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_097_9",
       "cluster": "luong_day_097",
       "day": 97,
+      "phonetic_distractors": [
+        "jargon",
+        "target",
+        "martin",
+        "carmen",
+        "begun"
+      ],
       "fav": false,
       "known": false
     },
@@ -23589,6 +28881,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_098_0",
       "cluster": "luong_day_098",
       "day": 98,
+      "phonetic_distractors": [
+        "prep",
+        "drop",
+        "prague",
+        "crop",
+        "pop"
+      ],
       "fav": false,
       "known": false
     },
@@ -23640,6 +28939,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_098_2",
       "cluster": "luong_day_098",
       "day": 98,
+      "phonetic_distractors": [
+        "work",
+        "weak",
+        "talk",
+        "week",
+        "wall"
+      ],
       "fav": false,
       "known": false
     },
@@ -23666,6 +28972,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_098_3",
       "cluster": "luong_day_098",
       "day": 98,
+      "phonetic_distractors": [
+        "replacement",
+        "retirement",
+        "implement",
+        "resistant",
+        "requirement"
+      ],
       "fav": false,
       "known": false
     },
@@ -23691,6 +29004,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_098_4",
       "cluster": "luong_day_098",
       "day": 98,
+      "phonetic_distractors": [
+        "cancer",
+        "owner",
+        "banter",
+        "sensor",
+        "infer"
+      ],
       "fav": false,
       "known": false
     },
@@ -23742,6 +29062,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_098_6",
       "cluster": "luong_day_098",
       "day": 98,
+      "phonetic_distractors": [
+        "certification",
+        "syndication",
+        "optimization",
+        "gentrification",
+        "classification"
+      ],
       "fav": false,
       "known": false
     },
@@ -23766,6 +29093,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_098_7",
       "cluster": "luong_day_098",
       "day": 98,
+      "phonetic_distractors": [
+        "hire",
+        "hack",
+        "hide",
+        "pike",
+        "bike"
+      ],
       "fav": false,
       "known": false
     },
@@ -23790,6 +29124,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_098_8",
       "cluster": "luong_day_098",
       "day": 98,
+      "phonetic_distractors": [
+        "quantitative",
+        "qualities",
+        "cooperative",
+        "qualifying",
+        "cognitive"
+      ],
       "fav": false,
       "known": false
     },
@@ -23863,6 +29204,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_099_1",
       "cluster": "luong_day_099",
       "day": 99,
+      "phonetic_distractors": [
+        "publish",
+        "published",
+        "dublin",
+        "publisher",
+        "click"
+      ],
       "fav": false,
       "known": false
     },
@@ -23887,6 +29235,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_099_2",
       "cluster": "luong_day_099",
       "day": 99,
+      "phonetic_distractors": [
+        "likelihood",
+        "neighborhood",
+        "children",
+        "challenged",
+        "wildlife"
+      ],
       "fav": false,
       "known": false
     },
@@ -23910,6 +29265,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_099_3",
       "cluster": "luong_day_099",
       "day": 99,
+      "phonetic_distractors": [
+        "prop",
+        "crop",
+        "dropped",
+        "drops",
+        "cron"
+      ],
       "fav": false,
       "known": false
     },
@@ -23934,6 +29296,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_099_4",
       "cluster": "luong_day_099",
       "day": 99,
+      "phonetic_distractors": [
+        "specially",
+        "specialties",
+        "penalty",
+        "specials",
+        "spatial"
+      ],
       "fav": false,
       "known": false
     },
@@ -23958,6 +29327,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_099_5",
       "cluster": "luong_day_099",
       "day": 99,
+      "phonetic_distractors": [
+        "pour",
+        "sort",
+        "court",
+        "part",
+        "porn"
+      ],
       "fav": false,
       "known": false
     },
@@ -23983,6 +29359,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_099_6",
       "cluster": "luong_day_099",
       "day": 99,
+      "phonetic_distractors": [
+        "audio",
+        "license",
+        "endurance",
+        "balance",
+        "daemon"
+      ],
       "fav": false,
       "known": false
     },
@@ -24006,6 +29389,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_099_7",
       "cluster": "luong_day_099",
       "day": 99,
+      "phonetic_distractors": [
+        "iran",
+        "crown",
+        "con",
+        "crop",
+        "screen"
+      ],
       "fav": false,
       "known": false
     },
@@ -24030,6 +29420,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_099_8",
       "cluster": "luong_day_099",
       "day": 99,
+      "phonetic_distractors": [
+        "plagiarism",
+        "alberta",
+        "aluminium",
+        "accurate",
+        "aggregate"
+      ],
       "fav": false,
       "known": false
     },
@@ -24054,6 +29451,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_099_9",
       "cluster": "luong_day_099",
       "day": 99,
+      "phonetic_distractors": [
+        "elasticity",
+        "identity",
+        "extract",
+        "solidarity",
+        "security"
+      ],
       "fav": false,
       "known": false
     },
@@ -24078,6 +29482,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_100_0",
       "cluster": "luong_day_100",
       "day": 100,
+      "phonetic_distractors": [
+        "provincial",
+        "connections",
+        "confidential",
+        "essentials",
+        "collections"
+      ],
       "fav": false,
       "known": false
     },
@@ -24101,6 +29512,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_100_1",
       "cluster": "luong_day_100",
       "day": 100,
+      "phonetic_distractors": [
+        "instrumental",
+        "implementation",
+        "documentation",
+        "representation",
+        "environmental"
+      ],
       "fav": false,
       "known": false
     },
@@ -24125,6 +29543,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_100_2",
       "cluster": "luong_day_100",
       "day": 100,
+      "phonetic_distractors": [
+        "view",
+        "volume",
+        "venue",
+        "matthew",
+        "valley"
+      ],
       "fav": false,
       "known": false
     },
@@ -24174,6 +29599,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_100_4",
       "cluster": "luong_day_100",
       "day": 100,
+      "phonetic_distractors": [
+        "epidemic",
+        "aesthetic",
+        "prosthetic",
+        "synthetic",
+        "authentic"
+      ],
       "fav": false,
       "known": false
     },
@@ -24198,6 +29630,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_100_5",
       "cluster": "luong_day_100",
       "day": 100,
+      "phonetic_distractors": [
+        "philosophy",
+        "validity",
+        "necessity",
+        "capacity",
+        "commodity"
+      ],
       "fav": false,
       "known": false
     },
@@ -24221,6 +29660,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_100_6",
       "cluster": "luong_day_100",
       "day": 100,
+      "phonetic_distractors": [
+        "calm",
+        "cock",
+        "con",
+        "caught",
+        "comm"
+      ],
       "fav": false,
       "known": false
     },
@@ -24245,6 +29691,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_100_7",
       "cluster": "luong_day_100",
       "day": 100,
+      "phonetic_distractors": [
+        "coalition",
+        "expiration",
+        "acquisition",
+        "execution",
+        "submission"
+      ],
       "fav": false,
       "known": false
     },
@@ -24269,6 +29722,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_100_8",
       "cluster": "luong_day_100",
       "day": 100,
+      "phonetic_distractors": [
+        "beverage",
+        "courage",
+        "merge",
+        "coverage",
+        "career"
+      ],
       "fav": false,
       "known": false
     },
@@ -24293,6 +29753,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_100_9",
       "cluster": "luong_day_100",
       "day": 100,
+      "phonetic_distractors": [
+        "fur",
+        "author",
+        "buyer",
+        "effort",
+        "error"
+      ],
       "fav": false,
       "known": false
     },
@@ -24317,6 +29784,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_101_0",
       "cluster": "luong_day_101",
       "day": 101,
+      "phonetic_distractors": [
+        "consider",
+        "container",
+        "concise",
+        "consent",
+        "confirm"
+      ],
       "fav": false,
       "known": false
     },
@@ -24340,6 +29814,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_101_1",
       "cluster": "luong_day_101",
       "day": 101,
+      "phonetic_distractors": [
+        "interpret",
+        "filament",
+        "singleton",
+        "reprints",
+        "philippines"
+      ],
       "fav": false,
       "known": false
     },
@@ -24363,6 +29844,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_101_2",
       "cluster": "luong_day_101",
       "day": 101,
+      "phonetic_distractors": [
+        "cooked",
+        "copy",
+        "key",
+        "carry",
+        "kick"
+      ],
       "fav": false,
       "known": false
     },
@@ -24410,6 +29898,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_101_4",
       "cluster": "luong_day_101",
       "day": 101,
+      "phonetic_distractors": [
+        "settlement",
+        "testament",
+        "estimate",
+        "element",
+        "segment"
+      ],
       "fav": false,
       "known": false
     },
@@ -24434,6 +29929,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_101_5",
       "cluster": "luong_day_101",
       "day": 101,
+      "phonetic_distractors": [
+        "sentiment",
+        "filament",
+        "document",
+        "increment",
+        "implement"
+      ],
       "fav": false,
       "known": false
     },
@@ -24457,6 +29959,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_101_6",
       "cluster": "luong_day_101",
       "day": 101,
+      "phonetic_distractors": [
+        "staking",
+        "spelling",
+        "setting",
+        "string",
+        "stopping"
+      ],
       "fav": false,
       "known": false
     },
@@ -24481,6 +29990,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_101_7",
       "cluster": "luong_day_101",
       "day": 101,
+      "phonetic_distractors": [
+        "swiss",
+        "swing",
+        "which",
+        "swim",
+        "sweat"
+      ],
       "fav": false,
       "known": false
     },
@@ -24505,6 +30021,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_101_8",
       "cluster": "luong_day_101",
       "day": 101,
+      "phonetic_distractors": [
+        "nervous",
+        "circus",
+        "surface",
+        "survey",
+        "server"
+      ],
       "fav": false,
       "known": false
     },
@@ -24531,6 +30054,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_101_9",
       "cluster": "luong_day_101",
       "day": 101,
+      "phonetic_distractors": [
+        "extract",
+        "contract",
+        "restrict",
+        "district",
+        "attract"
+      ],
       "fav": false,
       "known": false
     },
@@ -24556,6 +30086,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_102_0",
       "cluster": "luong_day_102",
       "day": 102,
+      "phonetic_distractors": [
+        "asked",
+        "debt",
+        "sweat",
+        "access",
+        "past"
+      ],
       "fav": false,
       "known": false
     },
@@ -24580,6 +30117,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_102_1",
       "cluster": "luong_day_102",
       "day": 102,
+      "phonetic_distractors": [
+        "branch",
+        "bland",
+        "batch",
+        "plan",
+        "launch"
+      ],
       "fav": false,
       "known": false
     },
@@ -24604,6 +30148,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_102_2",
       "cluster": "luong_day_102",
       "day": 102,
+      "phonetic_distractors": [
+        "divine",
+        "define",
+        "desire",
+        "decide",
+        "device"
+      ],
       "fav": false,
       "known": false
     },
@@ -24628,6 +30179,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_102_3",
       "cluster": "luong_day_102",
       "day": 102,
+      "phonetic_distractors": [
+        "gesture",
+        "vector",
+        "texture",
+        "ledger",
+        "leisure"
+      ],
       "fav": false,
       "known": false
     },
@@ -24676,6 +30234,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_102_5",
       "cluster": "luong_day_102",
       "day": 102,
+      "phonetic_distractors": [
+        "finding",
+        "folding",
+        "sending",
+        "running",
+        "funded"
+      ],
       "fav": false,
       "known": false
     },
@@ -24700,6 +30265,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_102_6",
       "cluster": "luong_day_102",
       "day": 102,
+      "phonetic_distractors": [
+        "pack",
+        "hack",
+        "rank",
+        "rap",
+        "ran"
+      ],
       "fav": false,
       "known": false
     },
@@ -24724,6 +30296,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_102_7",
       "cluster": "luong_day_102",
       "day": 102,
+      "phonetic_distractors": [
+        "street",
+        "steam",
+        "screen",
+        "stretch",
+        "team"
+      ],
       "fav": false,
       "known": false
     },
@@ -24749,6 +30328,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_102_8",
       "cluster": "luong_day_102",
       "day": 102,
+      "phonetic_distractors": [
+        "university",
+        "universities",
+        "elasticity",
+        "complexity",
+        "electricity"
+      ],
       "fav": false,
       "known": false
     },
@@ -24775,6 +30361,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_102_9",
       "cluster": "luong_day_102",
       "day": 102,
+      "phonetic_distractors": [
+        "share",
+        "cure",
+        "should",
+        "appear",
+        "ensure"
+      ],
       "fav": false,
       "known": false
     },
@@ -24799,6 +30392,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_103_0",
       "cluster": "luong_day_103",
       "day": 103,
+      "phonetic_distractors": [
+        "recognised",
+        "revenues",
+        "seconds",
+        "recommends",
+        "revenue"
+      ],
       "fav": false,
       "known": false
     },
@@ -24823,6 +30423,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_103_1",
       "cluster": "luong_day_103",
       "day": 103,
+      "phonetic_distractors": [
+        "bytes",
+        "bus",
+        "bios",
+        "bikes",
+        "buyer"
+      ],
       "fav": false,
       "known": false
     },
@@ -24870,6 +30477,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_103_3",
       "cluster": "luong_day_103",
       "day": 103,
+      "phonetic_distractors": [
+        "patient",
+        "patent",
+        "rational",
+        "national",
+        "cabinet"
+      ],
       "fav": false,
       "known": false
     },
@@ -24895,6 +30509,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_103_4",
       "cluster": "luong_day_103",
       "day": 103,
+      "phonetic_distractors": [
+        "virtual",
+        "pixel",
+        "function",
+        "spiritual",
+        "junction"
+      ],
       "fav": false,
       "known": false
     },
@@ -24919,6 +30540,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_103_5",
       "cluster": "luong_day_103",
       "day": 103,
+      "phonetic_distractors": [
+        "awareness",
+        "tremendous",
+        "regardless",
+        "bulgarian",
+        "regarded"
+      ],
       "fav": false,
       "known": false
     },
@@ -24942,6 +30570,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_103_6",
       "cluster": "luong_day_103",
       "day": 103,
+      "phonetic_distractors": [
+        "survey",
+        "saver",
+        "served",
+        "serves",
+        "service"
+      ],
       "fav": false,
       "known": false
     },
@@ -24966,6 +30601,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_103_7",
       "cluster": "luong_day_103",
       "day": 103,
+      "phonetic_distractors": [
+        "ordered",
+        "formed",
+        "ford",
+        "former",
+        "board"
+      ],
       "fav": false,
       "known": false
     },
@@ -24989,6 +30631,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_103_8",
       "cluster": "luong_day_103",
       "day": 103,
+      "phonetic_distractors": [
+        "checked",
+        "text",
+        "checkup",
+        "workout",
+        "checking"
+      ],
       "fav": false,
       "known": false
     },
@@ -25013,6 +30662,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_103_9",
       "cluster": "luong_day_103",
       "day": 103,
+      "phonetic_distractors": [
+        "delay",
+        "dispatch",
+        "deploy",
+        "despite",
+        "disk"
+      ],
       "fav": false,
       "known": false
     },
@@ -25036,6 +30692,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_104_0",
       "cluster": "luong_day_104",
       "day": 104,
+      "phonetic_distractors": [
+        "frequencies",
+        "frequent",
+        "frequently",
+        "sequence",
+        "vacancy"
+      ],
       "fav": false,
       "known": false
     },
@@ -25060,6 +30723,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_104_1",
       "cluster": "luong_day_104",
       "day": 104,
+      "phonetic_distractors": [
+        "increment",
+        "instrument",
+        "investment",
+        "instruments",
+        "infringement"
+      ],
       "fav": false,
       "known": false
     },
@@ -25084,6 +30754,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_104_2",
       "cluster": "luong_day_104",
       "day": 104,
+      "phonetic_distractors": [
+        "platform",
+        "postcards",
+        "postcard",
+        "polymorphism",
+        "polymorphic"
+      ],
       "fav": false,
       "known": false
     },
@@ -25109,6 +30786,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_104_3",
       "cluster": "luong_day_104",
       "day": 104,
+      "phonetic_distractors": [
+        "bent",
+        "meant",
+        "tent",
+        "sent",
+        "cent"
+      ],
       "fav": false,
       "known": false
     },
@@ -25156,6 +30840,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_104_5",
       "cluster": "luong_day_104",
       "day": 104,
+      "phonetic_distractors": [
+        "element",
+        "silicon",
+        "implement",
+        "deployment",
+        "elegant"
+      ],
       "fav": false,
       "known": false
     },
@@ -25180,6 +30871,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_104_6",
       "cluster": "luong_day_104",
       "day": 104,
+      "phonetic_distractors": [
+        "sprite",
+        "split",
+        "script",
+        "spin",
+        "spring"
+      ],
       "fav": false,
       "known": false
     },
@@ -25204,6 +30902,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_104_7",
       "cluster": "luong_day_104",
       "day": 104,
+      "phonetic_distractors": [
+        "rule",
+        "toil",
+        "toll",
+        "tale",
+        "fool"
+      ],
       "fav": false,
       "known": false
     },
@@ -25228,6 +30933,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_104_8",
       "cluster": "luong_day_104",
       "day": 104,
+      "phonetic_distractors": [
+        "river",
+        "discover",
+        "color",
+        "result",
+        "ticket"
+      ],
       "fav": false,
       "known": false
     },
@@ -25252,6 +30964,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_104_9",
       "cluster": "luong_day_104",
       "day": 104,
+      "phonetic_distractors": [
+        "start",
+        "sort",
+        "mark",
+        "chart",
+        "cart"
+      ],
       "fav": false,
       "known": false
     },
@@ -25278,6 +30997,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_105_0",
       "cluster": "luong_day_105",
       "day": 105,
+      "phonetic_distractors": [
+        "reasoning",
+        "discussing",
+        "escalate",
+        "profiling",
+        "riveting"
+      ],
       "fav": false,
       "known": false
     },
@@ -25328,6 +31054,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_105_2",
       "cluster": "luong_day_105",
       "day": 105,
+      "phonetic_distractors": [
+        "inference",
+        "entrance",
+        "endless",
+        "reference",
+        "difference"
+      ],
       "fav": false,
       "known": false
     },
@@ -25352,6 +31085,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_105_3",
       "cluster": "luong_day_105",
       "day": 105,
+      "phonetic_distractors": [
+        "single",
+        "middle",
+        "mitchell",
+        "singles",
+        "mineral"
+      ],
       "fav": false,
       "known": false
     },
@@ -25378,6 +31118,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_105_4",
       "cluster": "luong_day_105",
       "day": 105,
+      "phonetic_distractors": [
+        "rule",
+        "boot",
+        "room",
+        "wrote",
+        "ruth"
+      ],
       "fav": false,
       "known": false
     },
@@ -25402,6 +31149,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_105_5",
       "cluster": "luong_day_105",
       "day": 105,
+      "phonetic_distractors": [
+        "deal",
+        "video",
+        "eddie",
+        "odds",
+        "neo"
+      ],
       "fav": false,
       "known": false
     },
@@ -25425,6 +31179,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_105_6",
       "cluster": "luong_day_105",
       "day": 105,
+      "phonetic_distractors": [
+        "holder",
+        "shoulder",
+        "boulder",
+        "field",
+        "folding"
+      ],
       "fav": false,
       "known": false
     },
@@ -25449,6 +31210,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_105_7",
       "cluster": "luong_day_105",
       "day": 105,
+      "phonetic_distractors": [
+        "empirical",
+        "criticism",
+        "mechanism",
+        "terrorism",
+        "plagiarism"
+      ],
       "fav": false,
       "known": false
     },
@@ -25474,6 +31242,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_105_8",
       "cluster": "luong_day_105",
       "day": 105,
+      "phonetic_distractors": [
+        "indirect",
+        "insects",
+        "annex",
+        "intense",
+        "egress"
+      ],
       "fav": false,
       "known": false
     },
@@ -25498,6 +31273,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_105_9",
       "cluster": "luong_day_105",
       "day": 105,
+      "phonetic_distractors": [
+        "activated",
+        "masturbating",
+        "quantitative",
+        "containing",
+        "continuing"
+      ],
       "fav": false,
       "known": false
     },
@@ -25522,6 +31304,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_106_0",
       "cluster": "luong_day_106",
       "day": 106,
+      "phonetic_distractors": [
+        "hampton",
+        "campaign",
+        "campus",
+        "ambiance",
+        "salmon"
+      ],
       "fav": false,
       "known": false
     },
@@ -25546,6 +31335,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_106_1",
       "cluster": "luong_day_106",
       "day": 106,
+      "phonetic_distractors": [
+        "slow",
+        "solo",
+        "solve",
+        "style",
+        "aisle"
+      ],
       "fav": false,
       "known": false
     },
@@ -25570,6 +31366,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_106_2",
       "cluster": "luong_day_106",
       "day": 106,
+      "phonetic_distractors": [
+        "intuitive",
+        "iterative",
+        "attractive",
+        "interaction",
+        "proactive"
+      ],
       "fav": false,
       "known": false
     },
@@ -25594,6 +31397,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_106_3",
       "cluster": "luong_day_106",
       "day": 106,
+      "phonetic_distractors": [
+        "automotive",
+        "automatic",
+        "animated",
+        "stated",
+        "tomato"
+      ],
       "fav": false,
       "known": false
     },
@@ -25643,6 +31453,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_106_5",
       "cluster": "luong_day_106",
       "day": 106,
+      "phonetic_distractors": [
+        "frequent",
+        "frequency",
+        "weakness",
+        "seamless",
+        "science"
+      ],
       "fav": false,
       "known": false
     },
@@ -25669,6 +31486,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_106_6",
       "cluster": "luong_day_106",
       "day": 106,
+      "phonetic_distractors": [
+        "integral",
+        "integrating",
+        "interest",
+        "integration",
+        "mitigate"
+      ],
       "fav": false,
       "known": false
     },
@@ -25693,6 +31517,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_106_7",
       "cluster": "luong_day_106",
       "day": 106,
+      "phonetic_distractors": [
+        "rabbit",
+        "tablet",
+        "dabble",
+        "jacket",
+        "ballot"
+      ],
       "fav": false,
       "known": false
     },
@@ -25718,6 +31549,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_106_8",
       "cluster": "luong_day_106",
       "day": 106,
+      "phonetic_distractors": [
+        "algorithm",
+        "logical",
+        "mechanism",
+        "plaintiff",
+        "terrorism"
+      ],
       "fav": false,
       "known": false
     },
@@ -25742,6 +31580,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_106_9",
       "cluster": "luong_day_106",
       "day": 106,
+      "phonetic_distractors": [
+        "rocky",
+        "rocks",
+        "pottery",
+        "profit",
+        "price"
+      ],
       "fav": false,
       "known": false
     },
@@ -25768,6 +31613,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_107_0",
       "cluster": "luong_day_107",
       "day": 107,
+      "phonetic_distractors": [
+        "pack",
+        "past",
+        "patch",
+        "path",
+        "pos"
+      ],
       "fav": false,
       "known": false
     },
@@ -25792,6 +31644,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_107_1",
       "cluster": "luong_day_107",
       "day": 107,
+      "phonetic_distractors": [
+        "cooling",
+        "calling",
+        "covering",
+        "killing",
+        "cutting"
+      ],
       "fav": false,
       "known": false
     },
@@ -25818,6 +31677,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_107_2",
       "cluster": "luong_day_107",
       "day": 107,
+      "phonetic_distractors": [
+        "treatment",
+        "testament",
+        "sentiment",
+        "filament",
+        "alignment"
+      ],
       "fav": false,
       "known": false
     },
@@ -25866,6 +31732,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_107_4",
       "cluster": "luong_day_107",
       "day": 107,
+      "phonetic_distractors": [
+        "dataset",
+        "debate",
+        "dayton",
+        "davis",
+        "syllabus"
+      ],
       "fav": false,
       "known": false
     },
@@ -25890,6 +31763,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_107_5",
       "cluster": "luong_day_107",
       "day": 107,
+      "phonetic_distractors": [
+        "science",
+        "lions",
+        "lion",
+        "lawrence",
+        "lessons"
+      ],
       "fav": false,
       "known": false
     },
@@ -25914,6 +31794,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_107_6",
       "cluster": "luong_day_107",
       "day": 107,
+      "phonetic_distractors": [
+        "batteries",
+        "pottery",
+        "bitter",
+        "factory",
+        "banter"
+      ],
       "fav": false,
       "known": false
     },
@@ -25961,6 +31848,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_107_8",
       "cluster": "luong_day_107",
       "day": 107,
+      "phonetic_distractors": [
+        "program",
+        "programme",
+        "programs",
+        "diagram",
+        "programmer"
+      ],
       "fav": false,
       "known": false
     },
@@ -25986,6 +31880,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_107_9",
       "cluster": "luong_day_107",
       "day": 107,
+      "phonetic_distractors": [
+        "allocate",
+        "validate",
+        "marinate",
+        "navigate",
+        "decorate"
+      ],
       "fav": false,
       "known": false
     },
@@ -26036,6 +31937,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_108_1",
       "cluster": "luong_day_108",
       "day": 108,
+      "phonetic_distractors": [
+        "boyfriend",
+        "ireland",
+        "friends",
+        "alfred",
+        "defend"
+      ],
       "fav": false,
       "known": false
     },
@@ -26060,6 +31968,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_108_2",
       "cluster": "luong_day_108",
       "day": 108,
+      "phonetic_distractors": [
+        "modular",
+        "model",
+        "mark",
+        "merge",
+        "rule"
+      ],
       "fav": false,
       "known": false
     },
@@ -26084,6 +31999,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_108_3",
       "cluster": "luong_day_108",
       "day": 108,
+      "phonetic_distractors": [
+        "effort",
+        "memory",
+        "ready",
+        "jeffrey",
+        "every"
+      ],
       "fav": false,
       "known": false
     },
@@ -26110,6 +32032,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_108_4",
       "cluster": "luong_day_108",
       "day": 108,
+      "phonetic_distractors": [
+        "display",
+        "despite",
+        "disk",
+        "detached",
+        "discuss"
+      ],
       "fav": false,
       "known": false
     },
@@ -26135,6 +32064,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_108_5",
       "cluster": "luong_day_108",
       "day": 108,
+      "phonetic_distractors": [
+        "possibility",
+        "possibilities",
+        "feasibility",
+        "availability",
+        "capability"
+      ],
       "fav": false,
       "known": false
     },
@@ -26159,6 +32095,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_108_6",
       "cluster": "luong_day_108",
       "day": 108,
+      "phonetic_distractors": [
+        "empty",
+        "mpg",
+        "employee",
+        "embassy",
+        "sympathy"
+      ],
       "fav": false,
       "known": false
     },
@@ -26183,6 +32126,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_108_7",
       "cluster": "luong_day_108",
       "day": 108,
+      "phonetic_distractors": [
+        "infringement",
+        "instrument",
+        "installment",
+        "environment",
+        "increment"
+      ],
       "fav": false,
       "known": false
     },
@@ -26207,6 +32157,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_108_8",
       "cluster": "luong_day_108",
       "day": 108,
+      "phonetic_distractors": [
+        "stable",
+        "simple",
+        "station",
+        "table",
+        "spatial"
+      ],
       "fav": false,
       "known": false
     },
@@ -26282,6 +32239,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_109_1",
       "cluster": "luong_day_109",
       "day": 109,
+      "phonetic_distractors": [
+        "board",
+        "error",
+        "leader",
+        "offer",
+        "oral"
+      ],
       "fav": false,
       "known": false
     },
@@ -26306,6 +32270,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_109_2",
       "cluster": "luong_day_109",
       "day": 109,
+      "phonetic_distractors": [
+        "pharmacy",
+        "pharmacies",
+        "harvest",
+        "largest",
+        "florist"
+      ],
       "fav": false,
       "known": false
     },
@@ -26330,6 +32301,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_109_3",
       "cluster": "luong_day_109",
       "day": 109,
+      "phonetic_distractors": [
+        "money",
+        "mission",
+        "mean",
+        "motion",
+        "milan"
+      ],
       "fav": false,
       "known": false
     },
@@ -26354,6 +32332,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_109_4",
       "cluster": "luong_day_109",
       "day": 109,
+      "phonetic_distractors": [
+        "accountability",
+        "visibility",
+        "eligibility",
+        "accessibility",
+        "sustainability"
+      ],
       "fav": false,
       "known": false
     },
@@ -26378,6 +32363,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_109_5",
       "cluster": "luong_day_109",
       "day": 109,
+      "phonetic_distractors": [
+        "semester",
+        "select",
+        "digest",
+        "assessed",
+        "subject"
+      ],
       "fav": false,
       "known": false
     },
@@ -26404,6 +32396,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_109_6",
       "cluster": "luong_day_109",
       "day": 109,
+      "phonetic_distractors": [
+        "drives",
+        "dryer",
+        "dried",
+        "dry",
+        "derived"
+      ],
       "fav": false,
       "known": false
     },
@@ -26427,6 +32426,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_109_7",
       "cluster": "luong_day_109",
       "day": 109,
+      "phonetic_distractors": [
+        "compliant",
+        "appliance",
+        "complaint",
+        "component",
+        "company"
+      ],
       "fav": false,
       "known": false
     },
@@ -26451,6 +32457,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_109_8",
       "cluster": "luong_day_109",
       "day": 109,
+      "phonetic_distractors": [
+        "attention",
+        "prevention",
+        "tension",
+        "extension",
+        "rejection"
+      ],
       "fav": false,
       "known": false
     },
@@ -26498,6 +32511,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_110_0",
       "cluster": "luong_day_110",
       "day": 110,
+      "phonetic_distractors": [
+        "patient",
+        "payment",
+        "pattern",
+        "passionate",
+        "satin"
+      ],
       "fav": false,
       "known": false
     },
@@ -26523,6 +32543,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_110_1",
       "cluster": "luong_day_110",
       "day": 110,
+      "phonetic_distractors": [
+        "stress",
+        "address",
+        "irs",
+        "gross",
+        "greece"
+      ],
       "fav": false,
       "known": false
     },
@@ -26575,6 +32602,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_110_3",
       "cluster": "luong_day_110",
       "day": 110,
+      "phonetic_distractors": [
+        "hydration",
+        "citation",
+        "regression",
+        "iteration",
+        "migrate"
+      ],
       "fav": false,
       "known": false
     },
@@ -26599,6 +32633,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_110_4",
       "cluster": "luong_day_110",
       "day": 110,
+      "phonetic_distractors": [
+        "autonomous",
+        "economy",
+        "tennessee",
+        "economies",
+        "astronomy"
+      ],
       "fav": false,
       "known": false
     },
@@ -26625,6 +32666,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_110_5",
       "cluster": "luong_day_110",
       "day": 110,
+      "phonetic_distractors": [
+        "therapy",
+        "readily",
+        "remedy",
+        "checkup",
+        "revenue"
+      ],
       "fav": false,
       "known": false
     },
@@ -26651,6 +32699,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_110_6",
       "cluster": "luong_day_110",
       "day": 110,
+      "phonetic_distractors": [
+        "deadlock",
+        "restock",
+        "relax",
+        "guideline",
+        "reply"
+      ],
       "fav": false,
       "known": false
     },
@@ -26676,6 +32731,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_110_7",
       "cluster": "luong_day_110",
       "day": 110,
+      "phonetic_distractors": [
+        "sour",
+        "power",
+        "feature",
+        "venture",
+        "our"
+      ],
       "fav": false,
       "known": false
     },
@@ -26700,6 +32762,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_110_8",
       "cluster": "luong_day_110",
       "day": 110,
+      "phonetic_distractors": [
+        "mask",
+        "tank",
+        "tab",
+        "tag",
+        "bank"
+      ],
       "fav": false,
       "known": false
     },
@@ -26724,6 +32793,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_110_9",
       "cluster": "luong_day_110",
       "day": 110,
+      "phonetic_distractors": [
+        "tourist",
+        "text",
+        "iris",
+        "test",
+        "trace"
+      ],
       "fav": false,
       "known": false
     },
@@ -26750,6 +32826,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_111_0",
       "cluster": "luong_day_111",
       "day": 111,
+      "phonetic_distractors": [
+        "estimation",
+        "restoration",
+        "designation",
+        "installation",
+        "definition"
+      ],
       "fav": false,
       "known": false
     },
@@ -26776,6 +32859,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_111_1",
       "cluster": "luong_day_111",
       "day": 111,
+      "phonetic_distractors": [
+        "lane",
+        "load",
+        "clone",
+        "line",
+        "learn"
+      ],
       "fav": false,
       "known": false
     },
@@ -26802,6 +32892,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_111_2",
       "cluster": "luong_day_111",
       "day": 111,
+      "phonetic_distractors": [
+        "begin",
+        "bridge",
+        "backing",
+        "bags",
+        "badge"
+      ],
       "fav": false,
       "known": false
     },
@@ -26826,6 +32923,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_111_3",
       "cluster": "luong_day_111",
       "day": 111,
+      "phonetic_distractors": [
+        "port",
+        "source",
+        "court",
+        "salt",
+        "sword"
+      ],
       "fav": false,
       "known": false
     },
@@ -26873,6 +32977,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_111_5",
       "cluster": "luong_day_111",
       "day": 111,
+      "phonetic_distractors": [
+        "polymorphism",
+        "polyphonic",
+        "pediatric",
+        "resources",
+        "electric"
+      ],
       "fav": false,
       "known": false
     },
@@ -26897,6 +33008,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_111_6",
       "cluster": "luong_day_111",
       "day": 111,
+      "phonetic_distractors": [
+        "appearing",
+        "upgrading",
+        "foraging",
+        "drilling",
+        "browsing"
+      ],
       "fav": false,
       "known": false
     },
@@ -26922,6 +33040,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_111_7",
       "cluster": "luong_day_111",
       "day": 111,
+      "phonetic_distractors": [
+        "expects",
+        "expect",
+        "express",
+        "extent",
+        "expensive"
+      ],
       "fav": false,
       "known": false
     },
@@ -26969,6 +33094,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_111_9",
       "cluster": "luong_day_111",
       "day": 111,
+      "phonetic_distractors": [
+        "lose",
+        "soup",
+        "luke",
+        "loose",
+        "lou"
+      ],
       "fav": false,
       "known": false
     },
@@ -26993,6 +33125,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_112_0",
       "cluster": "luong_day_112",
       "day": 112,
+      "phonetic_distractors": [
+        "dabble",
+        "daemon",
+        "drug",
+        "doug",
+        "double"
+      ],
       "fav": false,
       "known": false
     },
@@ -27017,6 +33156,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_112_1",
       "cluster": "luong_day_112",
       "day": 112,
+      "phonetic_distractors": [
+        "tiffany",
+        "roland",
+        "returned",
+        "raymond",
+        "refined"
+      ],
       "fav": false,
       "known": false
     },
@@ -27041,6 +33187,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_112_2",
       "cluster": "luong_day_112",
       "day": 112,
+      "phonetic_distractors": [
+        "folks",
+        "focal",
+        "fix",
+        "token",
+        "showcase"
+      ],
       "fav": false,
       "known": false
     },
@@ -27065,6 +33218,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_112_3",
       "cluster": "luong_day_112",
       "day": 112,
+      "phonetic_distractors": [
+        "certain",
+        "curtis",
+        "burton",
+        "cotton",
+        "button"
+      ],
       "fav": false,
       "known": false
     },
@@ -27116,6 +33276,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_112_5",
       "cluster": "luong_day_112",
       "day": 112,
+      "phonetic_distractors": [
+        "cemetery",
+        "secondary",
+        "commentary",
+        "legendary",
+        "ordinary"
+      ],
       "fav": false,
       "known": false
     },
@@ -27140,6 +33307,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_112_6",
       "cluster": "luong_day_112",
       "day": 112,
+      "phonetic_distractors": [
+        "credential",
+        "residence",
+        "residents",
+        "rejection",
+        "resolution"
+      ],
       "fav": false,
       "known": false
     },
@@ -27164,6 +33338,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_112_7",
       "cluster": "luong_day_112",
       "day": 112,
+      "phonetic_distractors": [
+        "extrapolate",
+        "candidate",
+        "enhancement",
+        "calculate",
+        "excellent"
+      ],
       "fav": false,
       "known": false
     },
@@ -27212,6 +33393,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_112_9",
       "cluster": "luong_day_112",
       "day": 112,
+      "phonetic_distractors": [
+        "champagne",
+        "campus",
+        "cameron",
+        "cameroon",
+        "camps"
+      ],
       "fav": false,
       "known": false
     },
@@ -27236,6 +33424,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_113_0",
       "cluster": "luong_day_113",
       "day": 113,
+      "phonetic_distractors": [
+        "collect",
+        "consent",
+        "select",
+        "correct",
+        "affect"
+      ],
       "fav": false,
       "known": false
     },
@@ -27308,6 +33503,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_113_3",
       "cluster": "luong_day_113",
       "day": 113,
+      "phonetic_distractors": [
+        "time",
+        "tip",
+        "tape",
+        "tie",
+        "tight"
+      ],
       "fav": false,
       "known": false
     },
@@ -27332,6 +33534,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_113_4",
       "cluster": "luong_day_113",
       "day": 113,
+      "phonetic_distractors": [
+        "law",
+        "league",
+        "lol",
+        "lawn",
+        "long"
+      ],
       "fav": false,
       "known": false
     },
@@ -27356,6 +33565,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_113_5",
       "cluster": "luong_day_113",
       "day": 113,
+      "phonetic_distractors": [
+        "que",
+        "few",
+        "hugh",
+        "queue",
+        "you"
+      ],
       "fav": false,
       "known": false
     },
@@ -27381,6 +33597,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_113_6",
       "cluster": "luong_day_113",
       "day": 113,
+      "phonetic_distractors": [
+        "complimentary",
+        "conferencing",
+        "conscientious",
+        "experiences",
+        "inexpensive"
+      ],
       "fav": false,
       "known": false
     },
@@ -27407,6 +33630,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_113_7",
       "cluster": "luong_day_113",
       "day": 113,
+      "phonetic_distractors": [
+        "collectible",
+        "variable",
+        "impeccable",
+        "accessible",
+        "mexican"
+      ],
       "fav": false,
       "known": false
     },
@@ -27433,6 +33663,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_113_8",
       "cluster": "luong_day_113",
       "day": 113,
+      "phonetic_distractors": [
+        "trading",
+        "trader",
+        "trades",
+        "train",
+        "trace"
+      ],
       "fav": false,
       "known": false
     },
@@ -27481,6 +33718,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_114_0",
       "cluster": "luong_day_114",
       "day": 114,
+      "phonetic_distractors": [
+        "role",
+        "gold",
+        "toll",
+        "sole",
+        "bowl"
+      ],
       "fav": false,
       "known": false
     },
@@ -27505,6 +33749,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_114_1",
       "cluster": "luong_day_114",
       "day": 114,
+      "phonetic_distractors": [
+        "stretch",
+        "stream",
+        "egress",
+        "stroll",
+        "address"
+      ],
       "fav": false,
       "known": false
     },
@@ -27529,6 +33780,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_114_2",
       "cluster": "luong_day_114",
       "day": 114,
+      "phonetic_distractors": [
+        "panel",
+        "chapel",
+        "manage",
+        "handle",
+        "cancel"
+      ],
       "fav": false,
       "known": false
     },
@@ -27552,6 +33810,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_114_3",
       "cluster": "luong_day_114",
       "day": 114,
+      "phonetic_distractors": [
+        "cameron",
+        "campus",
+        "catherine",
+        "cameroon",
+        "camps"
+      ],
       "fav": false,
       "known": false
     },
@@ -27600,6 +33865,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_114_5",
       "cluster": "luong_day_114",
       "day": 114,
+      "phonetic_distractors": [
+        "federal",
+        "general",
+        "electoral",
+        "several",
+        "referral"
+      ],
       "fav": false,
       "known": false
     },
@@ -27624,6 +33896,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_114_6",
       "cluster": "luong_day_114",
       "day": 114,
+      "phonetic_distractors": [
+        "gauge",
+        "intake",
+        "engaging",
+        "gate",
+        "wage"
+      ],
       "fav": false,
       "known": false
     },
@@ -27670,6 +33949,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_114_8",
       "cluster": "luong_day_114",
       "day": 114,
+      "phonetic_distractors": [
+        "accurate",
+        "creator",
+        "activated",
+        "activity",
+        "spectator"
+      ],
       "fav": false,
       "known": false
     },
@@ -27694,6 +33980,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_114_9",
       "cluster": "luong_day_114",
       "day": 114,
+      "phonetic_distractors": [
+        "covering",
+        "covered",
+        "covers",
+        "color",
+        "couple"
+      ],
       "fav": false,
       "known": false
     },
@@ -27718,6 +34011,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_115_0",
       "cluster": "luong_day_115",
       "day": 115,
+      "phonetic_distractors": [
+        "amend",
+        "trend",
+        "agenda",
+        "send",
+        "spend"
+      ],
       "fav": false,
       "known": false
     },
@@ -27766,6 +34066,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_115_2",
       "cluster": "luong_day_115",
       "day": 115,
+      "phonetic_distractors": [
+        "speed",
+        "speak",
+        "space",
+        "breach",
+        "pitch"
+      ],
       "fav": false,
       "known": false
     },
@@ -27814,6 +34121,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_115_4",
       "cluster": "luong_day_115",
       "day": 115,
+      "phonetic_distractors": [
+        "applied",
+        "applies",
+        "supply",
+        "ups",
+        "reply"
+      ],
       "fav": false,
       "known": false
     },
@@ -27838,6 +34152,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_115_5",
       "cluster": "luong_day_115",
       "day": 115,
+      "phonetic_distractors": [
+        "paradise",
+        "verify",
+        "produce",
+        "paraguay",
+        "provide"
+      ],
       "fav": false,
       "known": false
     },
@@ -27864,6 +34185,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_115_6",
       "cluster": "luong_day_115",
       "day": 115,
+      "phonetic_distractors": [
+        "much",
+        "mother",
+        "amber",
+        "color",
+        "match"
+      ],
       "fav": false,
       "known": false
     },
@@ -27888,6 +34216,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_115_7",
       "cluster": "luong_day_115",
       "day": 115,
+      "phonetic_distractors": [
+        "different",
+        "reference",
+        "inference",
+        "defence",
+        "distance"
+      ],
       "fav": false,
       "known": false
     },
@@ -27914,6 +34249,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_115_8",
       "cluster": "luong_day_115",
       "day": 115,
+      "phonetic_distractors": [
+        "eviction",
+        "permission",
+        "efficient",
+        "immersion",
+        "omissions"
+      ],
       "fav": false,
       "known": false
     },
@@ -27939,6 +34281,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_115_9",
       "cluster": "luong_day_115",
       "day": 115,
+      "phonetic_distractors": [
+        "specification",
+        "identification",
+        "verification",
+        "certification",
+        "optimization"
+      ],
       "fav": false,
       "known": false
     },
@@ -27963,6 +34312,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_116_0",
       "cluster": "luong_day_116",
       "day": 116,
+      "phonetic_distractors": [
+        "merit",
+        "parent",
+        "terminate",
+        "mitigate",
+        "renovate"
+      ],
       "fav": false,
       "known": false
     },
@@ -27989,6 +34345,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_116_1",
       "cluster": "luong_day_116",
       "day": 116,
+      "phonetic_distractors": [
+        "trust",
+        "trusts",
+        "nearest",
+        "terrace",
+        "forest"
+      ],
       "fav": false,
       "known": false
     },
@@ -28013,6 +34376,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_116_2",
       "cluster": "luong_day_116",
       "day": 116,
+      "phonetic_distractors": [
+        "backend",
+        "backup",
+        "block",
+        "backed",
+        "clock"
+      ],
       "fav": false,
       "known": false
     },
@@ -28037,6 +34407,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_116_3",
       "cluster": "luong_day_116",
       "day": 116,
+      "phonetic_distractors": [
+        "grove",
+        "gross",
+        "grown",
+        "grows",
+        "role"
+      ],
       "fav": false,
       "known": false
     },
@@ -28060,6 +34437,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_116_4",
       "cluster": "luong_day_116",
       "day": 116,
+      "phonetic_distractors": [
+        "rebate",
+        "robot",
+        "route",
+        "remove",
+        "reached"
+      ],
       "fav": false,
       "known": false
     },
@@ -28108,6 +34492,11 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_116_6",
       "cluster": "luong_day_116",
       "day": 116,
+      "phonetic_distractors": [
+        "telecommunications",
+        "confidentiality",
+        "responsibilities"
+      ],
       "fav": false,
       "known": false
     },
@@ -28132,6 +34521,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_116_7",
       "cluster": "luong_day_116",
       "day": 116,
+      "phonetic_distractors": [
+        "containers",
+        "contains",
+        "containing",
+        "continues",
+        "contained"
+      ],
       "fav": false,
       "known": false
     },
@@ -28182,6 +34578,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_116_9",
       "cluster": "luong_day_116",
       "day": 116,
+      "phonetic_distractors": [
+        "arise",
+        "live",
+        "five",
+        "dive",
+        "buyer"
+      ],
       "fav": false,
       "known": false
     },
@@ -28232,6 +34635,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_117_1",
       "cluster": "luong_day_117",
       "day": 117,
+      "phonetic_distractors": [
+        "summaries",
+        "summer",
+        "sunrise",
+        "summary",
+        "sometimes"
+      ],
       "fav": false,
       "known": false
     },
@@ -28255,6 +34665,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_117_2",
       "cluster": "luong_day_117",
       "day": 117,
+      "phonetic_distractors": [
+        "mess",
+        "men",
+        "mel",
+        "met",
+        "med"
+      ],
       "fav": false,
       "known": false
     },
@@ -28281,6 +34698,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_117_3",
       "cluster": "luong_day_117",
       "day": 117,
+      "phonetic_distractors": [
+        "account",
+        "amino",
+        "mint",
+        "amend",
+        "meant"
+      ],
       "fav": false,
       "known": false
     },
@@ -28333,6 +34757,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_117_5",
       "cluster": "luong_day_117",
       "day": 117,
+      "phonetic_distractors": [
+        "release",
+        "released",
+        "relying",
+        "releases",
+        "ceiling"
+      ],
       "fav": false,
       "known": false
     },
@@ -28357,6 +34788,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_117_6",
       "cluster": "luong_day_117",
       "day": 117,
+      "phonetic_distractors": [
+        "radio",
+        "rio",
+        "racial",
+        "radios",
+        "rainbow"
+      ],
       "fav": false,
       "known": false
     },
@@ -28382,6 +34820,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_117_7",
       "cluster": "luong_day_117",
       "day": 117,
+      "phonetic_distractors": [
+        "subtle",
+        "virtual",
+        "terminal",
+        "digital",
+        "visual"
+      ],
       "fav": false,
       "known": false
     },
@@ -28430,6 +34875,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_117_9",
       "cluster": "luong_day_117",
       "day": 117,
+      "phonetic_distractors": [
+        "help",
+        "wealth",
+        "hell",
+        "held",
+        "sell"
+      ],
       "fav": false,
       "known": false
     },
@@ -28454,6 +34906,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_118_0",
       "cluster": "luong_day_118",
       "day": 118,
+      "phonetic_distractors": [
+        "tab",
+        "mag",
+        "bag",
+        "tan",
+        "tap"
+      ],
       "fav": false,
       "known": false
     },
@@ -28501,6 +34960,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_118_2",
       "cluster": "luong_day_118",
       "day": 118,
+      "phonetic_distractors": [
+        "coin",
+        "jun",
+        "john",
+        "jon",
+        "june"
+      ],
       "fav": false,
       "known": false
     },
@@ -28525,6 +34991,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_118_3",
       "cluster": "luong_day_118",
       "day": 118,
+      "phonetic_distractors": [
+        "contribute",
+        "distributor",
+        "contributing",
+        "contributed",
+        "attributes"
+      ],
       "fav": false,
       "known": false
     },
@@ -28549,6 +35022,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_118_4",
       "cluster": "luong_day_118",
       "day": 118,
+      "phonetic_distractors": [
+        "implement",
+        "experiment",
+        "improvement",
+        "investment",
+        "impeccable"
+      ],
       "fav": false,
       "known": false
     },
@@ -28573,6 +35053,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_118_5",
       "cluster": "luong_day_118",
       "day": 118,
+      "phonetic_distractors": [
+        "text",
+        "cut",
+        "token",
+        "pivot",
+        "toilet"
+      ],
       "fav": false,
       "known": false
     },
@@ -28599,6 +35086,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_118_6",
       "cluster": "luong_day_118",
       "day": 118,
+      "phonetic_distractors": [
+        "determination",
+        "diagnostic",
+        "diplomatic",
+        "minimalist",
+        "interconnected"
+      ],
       "fav": false,
       "known": false
     },
@@ -28623,6 +35117,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_118_7",
       "cluster": "luong_day_118",
       "day": 118,
+      "phonetic_distractors": [
+        "corporation",
+        "aggregation",
+        "isolation",
+        "violation",
+        "coalition"
+      ],
       "fav": false,
       "known": false
     },
@@ -28646,6 +35147,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_118_8",
       "cluster": "luong_day_118",
       "day": 118,
+      "phonetic_distractors": [
+        "organisation",
+        "organisations",
+        "civilization",
+        "organization",
+        "cannibalization"
+      ],
       "fav": false,
       "known": false
     },
@@ -28670,6 +35178,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_118_9",
       "cluster": "luong_day_118",
       "day": 118,
+      "phonetic_distractors": [
+        "elegant",
+        "elephant",
+        "filament",
+        "evident",
+        "relevant"
+      ],
       "fav": false,
       "known": false
     },
@@ -28694,6 +35209,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_119_0",
       "cluster": "luong_day_119",
       "day": 119,
+      "phonetic_distractors": [
+        "fair",
+        "fare",
+        "fell",
+        "fed",
+        "debt"
+      ],
       "fav": false,
       "known": false
     },
@@ -28717,6 +35239,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_119_1",
       "cluster": "luong_day_119",
       "day": 119,
+      "phonetic_distractors": [
+        "memories",
+        "member",
+        "measure",
+        "referee",
+        "marie"
+      ],
       "fav": false,
       "known": false
     },
@@ -28743,6 +35272,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_119_2",
       "cluster": "luong_day_119",
       "day": 119,
+      "phonetic_distractors": [
+        "transmit",
+        "translate",
+        "tracking",
+        "traffic",
+        "tract"
+      ],
       "fav": false,
       "known": false
     },
@@ -28767,6 +35303,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_119_3",
       "cluster": "luong_day_119",
       "day": 119,
+      "phonetic_distractors": [
+        "traffic",
+        "tract",
+        "trading",
+        "breaking",
+        "taking"
+      ],
       "fav": false,
       "known": false
     },
@@ -28790,6 +35333,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_119_4",
       "cluster": "luong_day_119",
       "day": 119,
+      "phonetic_distractors": [
+        "portrait",
+        "market",
+        "oracle",
+        "corporate",
+        "shortly"
+      ],
       "fav": false,
       "known": false
     },
@@ -28816,6 +35366,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_119_5",
       "cluster": "luong_day_119",
       "day": 119,
+      "phonetic_distractors": [
+        "literary",
+        "synergy",
+        "scenario",
+        "temporary",
+        "identity"
+      ],
       "fav": false,
       "known": false
     },
@@ -28840,6 +35397,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_119_6",
       "cluster": "luong_day_119",
       "day": 119,
+      "phonetic_distractors": [
+        "awful",
+        "iris",
+        "bias",
+        "face",
+        "offer"
+      ],
       "fav": false,
       "known": false
     },
@@ -28865,6 +35429,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_119_7",
       "cluster": "luong_day_119",
       "day": 119,
+      "phonetic_distractors": [
+        "approval",
+        "spatial",
+        "unable",
+        "prison",
+        "rachel"
+      ],
       "fav": false,
       "known": false
     },
@@ -28889,6 +35460,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_119_8",
       "cluster": "luong_day_119",
       "day": 119,
+      "phonetic_distractors": [
+        "stylus",
+        "homeless",
+        "surplus",
+        "service",
+        "schema"
+      ],
       "fav": false,
       "known": false
     },
@@ -28914,6 +35492,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_119_9",
       "cluster": "luong_day_119",
       "day": 119,
+      "phonetic_distractors": [
+        "array",
+        "they",
+        "lay",
+        "pain",
+        "way"
+      ],
       "fav": false,
       "known": false
     },
@@ -28937,6 +35522,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_120_0",
       "cluster": "luong_day_120",
       "day": 120,
+      "phonetic_distractors": [
+        "relax",
+        "paradise",
+        "parents",
+        "parallel",
+        "protect"
+      ],
       "fav": false,
       "known": false
     },
@@ -28984,6 +35576,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_120_2",
       "cluster": "luong_day_120",
       "day": 120,
+      "phonetic_distractors": [
+        "parliament",
+        "increment",
+        "argument",
+        "recommend",
+        "sacramento"
+      ],
       "fav": false,
       "known": false
     },
@@ -29007,6 +35606,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_120_3",
       "cluster": "luong_day_120",
       "day": 120,
+      "phonetic_distractors": [
+        "thank",
+        "blank",
+        "tank",
+        "rank",
+        "back"
+      ],
       "fav": false,
       "known": false
     },
@@ -29031,6 +35637,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_120_4",
       "cluster": "luong_day_120",
       "day": 120,
+      "phonetic_distractors": [
+        "madison",
+        "marilyn",
+        "medical",
+        "muscle",
+        "mason"
+      ],
       "fav": false,
       "known": false
     },
@@ -29055,6 +35668,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_120_5",
       "cluster": "luong_day_120",
       "day": 120,
+      "phonetic_distractors": [
+        "analyze",
+        "amortize",
+        "advisor",
+        "analyzed",
+        "advertiser"
+      ],
       "fav": false,
       "known": false
     },
@@ -29103,6 +35723,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_120_7",
       "cluster": "luong_day_120",
       "day": 120,
+      "phonetic_distractors": [
+        "pointing",
+        "rating",
+        "paging",
+        "dating",
+        "waiting"
+      ],
       "fav": false,
       "known": false
     },
@@ -29127,6 +35754,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_120_8",
       "cluster": "luong_day_120",
       "day": 120,
+      "phonetic_distractors": [
+        "syllabus",
+        "solomon",
+        "citizen",
+        "sullivan",
+        "filament"
+      ],
       "fav": false,
       "known": false
     },
@@ -29150,6 +35784,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_120_9",
       "cluster": "luong_day_120",
       "day": 120,
+      "phonetic_distractors": [
+        "requiring",
+        "appreciated",
+        "accredited",
+        "attractive",
+        "copyrighted"
+      ],
       "fav": false,
       "known": false
     },
@@ -29197,6 +35838,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_121_1",
       "cluster": "luong_day_121",
       "day": 121,
+      "phonetic_distractors": [
+        "patrol",
+        "country",
+        "countries",
+        "container",
+        "stroll"
+      ],
       "fav": false,
       "known": false
     },
@@ -29245,6 +35893,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_121_3",
       "cluster": "luong_day_121",
       "day": 121,
+      "phonetic_distractors": [
+        "store",
+        "corps",
+        "pour",
+        "sort",
+        "scan"
+      ],
       "fav": false,
       "known": false
     },
@@ -29315,6 +35970,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_121_6",
       "cluster": "luong_day_121",
       "day": 121,
+      "phonetic_distractors": [
+        "quite",
+        "coat",
+        "quit",
+        "cost",
+        "sweat"
+      ],
       "fav": false,
       "known": false
     },
@@ -29339,6 +36001,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_121_7",
       "cluster": "luong_day_121",
       "day": 121,
+      "phonetic_distractors": [
+        "factors",
+        "battery",
+        "actors",
+        "faster",
+        "facts"
+      ],
       "fav": false,
       "known": false
     },
@@ -29363,6 +36032,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_121_8",
       "cluster": "luong_day_121",
       "day": 121,
+      "phonetic_distractors": [
+        "auction",
+        "option",
+        "section",
+        "auctions",
+        "axis"
+      ],
       "fav": false,
       "known": false
     },
@@ -29410,6 +36086,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_122_0",
       "cluster": "luong_day_122",
       "day": 122,
+      "phonetic_distractors": [
+        "devil",
+        "label",
+        "heaven",
+        "oval",
+        "arrival"
+      ],
       "fav": false,
       "known": false
     },
@@ -29436,6 +36119,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_122_1",
       "cluster": "luong_day_122",
       "day": 122,
+      "phonetic_distractors": [
+        "properties",
+        "properly",
+        "poverty",
+        "pottery",
+        "profit"
+      ],
       "fav": false,
       "known": false
     },
@@ -29460,6 +36150,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_122_2",
       "cluster": "luong_day_122",
       "day": 122,
+      "phonetic_distractors": [
+        "revision",
+        "precision",
+        "collision",
+        "provincial",
+        "prison"
+      ],
       "fav": false,
       "known": false
     },
@@ -29484,6 +36181,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_122_3",
       "cluster": "luong_day_122",
       "day": 122,
+      "phonetic_distractors": [
+        "text",
+        "headline",
+        "asset",
+        "test",
+        "host"
+      ],
       "fav": false,
       "known": false
     },
@@ -29555,6 +36259,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_122_6",
       "cluster": "luong_day_122",
       "day": 122,
+      "phonetic_distractors": [
+        "ceiling",
+        "sitting",
+        "spelling",
+        "sterling",
+        "selling"
+      ],
       "fav": false,
       "known": false
     },
@@ -29628,6 +36339,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_122_9",
       "cluster": "luong_day_122",
       "day": 122,
+      "phonetic_distractors": [
+        "hash",
+        "catch",
+        "crash",
+        "cached",
+        "cam"
+      ],
       "fav": false,
       "known": false
     },
@@ -29652,6 +36370,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_123_0",
       "cluster": "luong_day_123",
       "day": 123,
+      "phonetic_distractors": [
+        "plays",
+        "plane",
+        "plate",
+        "place",
+        "plain"
+      ],
       "fav": false,
       "known": false
     },
@@ -29676,6 +36401,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_123_1",
       "cluster": "luong_day_123",
       "day": 123,
+      "phonetic_distractors": [
+        "hardcore",
+        "hardwood",
+        "everywhere",
+        "shareware",
+        "harder"
+      ],
       "fav": false,
       "known": false
     },
@@ -29700,6 +36432,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_123_2",
       "cluster": "luong_day_123",
       "day": 123,
+      "phonetic_distractors": [
+        "job",
+        "fog",
+        "jar",
+        "john",
+        "jon"
+      ],
       "fav": false,
       "known": false
     },
@@ -29724,6 +36463,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_123_3",
       "cluster": "luong_day_123",
       "day": 123,
+      "phonetic_distractors": [
+        "mingle",
+        "simple",
+        "signal",
+        "serial",
+        "civil"
+      ],
       "fav": false,
       "known": false
     },
@@ -29775,6 +36521,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_123_5",
       "cluster": "luong_day_123",
       "day": 123,
+      "phonetic_distractors": [
+        "basket",
+        "blanket",
+        "balcony",
+        "encrypt",
+        "script"
+      ],
       "fav": false,
       "known": false
     },
@@ -29823,6 +36576,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_123_7",
       "cluster": "luong_day_123",
       "day": 123,
+      "phonetic_distractors": [
+        "reception",
+        "detection",
+        "projection",
+        "injection",
+        "reduction"
+      ],
       "fav": false,
       "known": false
     },
@@ -29849,6 +36609,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_123_8",
       "cluster": "luong_day_123",
       "day": 123,
+      "phonetic_distractors": [
+        "podcast",
+        "forecast",
+        "broadband",
+        "bracket",
+        "breakfast"
+      ],
       "fav": false,
       "known": false
     },
@@ -29872,6 +36639,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_123_9",
       "cluster": "luong_day_123",
       "day": 123,
+      "phonetic_distractors": [
+        "dictionary",
+        "stations",
+        "citation",
+        "sedentary",
+        "statutory"
+      ],
       "fav": false,
       "known": false
     },
@@ -29895,6 +36669,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_124_0",
       "cluster": "luong_day_124",
       "day": 124,
+      "phonetic_distractors": [
+        "enhancement",
+        "entertainment",
+        "installment",
+        "environment",
+        "encapsulate"
+      ],
       "fav": false,
       "known": false
     },
@@ -29920,6 +36701,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_124_1",
       "cluster": "luong_day_124",
       "day": 124,
+      "phonetic_distractors": [
+        "delivers",
+        "delivered",
+        "delivering",
+        "diverge",
+        "delicious"
+      ],
       "fav": false,
       "known": false
     },
@@ -29943,6 +36731,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_124_2",
       "cluster": "luong_day_124",
       "day": 124,
+      "phonetic_distractors": [
+        "geography",
+        "photography",
+        "bibliography",
+        "biography",
+        "biographies"
+      ],
       "fav": false,
       "known": false
     },
@@ -29967,6 +36762,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_124_3",
       "cluster": "luong_day_124",
       "day": 124,
+      "phonetic_distractors": [
+        "dimensions",
+        "identifies",
+        "dependency",
+        "differential",
+        "dimensional"
+      ],
       "fav": false,
       "known": false
     },
@@ -29991,6 +36793,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_124_4",
       "cluster": "luong_day_124",
       "day": 124,
+      "phonetic_distractors": [
+        "calling",
+        "killing",
+        "ruling",
+        "click",
+        "caching"
+      ],
       "fav": false,
       "known": false
     },
@@ -30016,6 +36825,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_124_5",
       "cluster": "luong_day_124",
       "day": 124,
+      "phonetic_distractors": [
+        "alliance",
+        "occurrence",
+        "announce",
+        "appliance",
+        "account"
+      ],
       "fav": false,
       "known": false
     },
@@ -30040,6 +36856,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_124_6",
       "cluster": "luong_day_124",
       "day": 124,
+      "phonetic_distractors": [
+        "clear",
+        "clip",
+        "kick",
+        "clerk",
+        "clock"
+      ],
       "fav": false,
       "known": false
     },
@@ -30064,6 +36887,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_124_7",
       "cluster": "luong_day_124",
       "day": 124,
+      "phonetic_distractors": [
+        "produced",
+        "produces",
+        "producing",
+        "professor",
+        "processor"
+      ],
       "fav": false,
       "known": false
     },
@@ -30112,6 +36942,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_124_9",
       "cluster": "luong_day_124",
       "day": 124,
+      "phonetic_distractors": [
+        "highly",
+        "gene",
+        "jean",
+        "eugene",
+        "screen"
+      ],
       "fav": false,
       "known": false
     },
@@ -30136,6 +36973,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_125_0",
       "cluster": "luong_day_125",
       "day": 125,
+      "phonetic_distractors": [
+        "teamwork",
+        "framed",
+        "framing",
+        "homework",
+        "artwork"
+      ],
       "fav": false,
       "known": false
     },
@@ -30162,6 +37006,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_125_1",
       "cluster": "luong_day_125",
       "day": 125,
+      "phonetic_distractors": [
+        "instrument",
+        "insolvent",
+        "instruments",
+        "investment",
+        "increment"
+      ],
       "fav": false,
       "known": false
     },
@@ -30186,6 +37037,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_125_2",
       "cluster": "luong_day_125",
       "day": 125,
+      "phonetic_distractors": [
+        "tomato",
+        "autumn",
+        "allocate",
+        "isolate",
+        "commit"
+      ],
       "fav": false,
       "known": false
     },
@@ -30258,6 +37116,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_125_5",
       "cluster": "luong_day_125",
       "day": 125,
+      "phonetic_distractors": [
+        "fair",
+        "wear",
+        "chair",
+        "fare",
+        "shell"
+      ],
       "fav": false,
       "known": false
     },
@@ -30308,6 +37173,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_125_7",
       "cluster": "luong_day_125",
       "day": 125,
+      "phonetic_distractors": [
+        "alert",
+        "alive",
+        "petite",
+        "alot",
+        "light"
+      ],
       "fav": false,
       "known": false
     },
@@ -30334,6 +37206,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_125_8",
       "cluster": "luong_day_125",
       "day": 125,
+      "phonetic_distractors": [
+        "imperial",
+        "miracle",
+        "empiricism",
+        "spiritual",
+        "magical"
+      ],
       "fav": false,
       "known": false
     },
@@ -30357,6 +37236,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_125_9",
       "cluster": "luong_day_125",
       "day": 125,
+      "phonetic_distractors": [
+        "tag",
+        "tube",
+        "lab",
+        "tan",
+        "cab"
+      ],
       "fav": false,
       "known": false
     },
@@ -30404,6 +37290,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_126_1",
       "cluster": "luong_day_126",
       "day": 126,
+      "phonetic_distractors": [
+        "rent",
+        "invest",
+        "elect",
+        "effect",
+        "bent"
+      ],
       "fav": false,
       "known": false
     },
@@ -30428,6 +37321,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_126_2",
       "cluster": "luong_day_126",
       "day": 126,
+      "phonetic_distractors": [
+        "pill",
+        "patch",
+        "peer",
+        "ping",
+        "pick"
+      ],
       "fav": false,
       "known": false
     },
@@ -30454,6 +37354,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_126_3",
       "cluster": "luong_day_126",
       "day": 126,
+      "phonetic_distractors": [
+        "animation",
+        "allocation",
+        "innovation",
+        "adaptation",
+        "citation"
+      ],
       "fav": false,
       "known": false
     },
@@ -30480,6 +37387,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_126_4",
       "cluster": "luong_day_126",
       "day": 126,
+      "phonetic_distractors": [
+        "assertive",
+        "intuitive",
+        "interactive",
+        "native",
+        "stated"
+      ],
       "fav": false,
       "known": false
     },
@@ -30505,6 +37419,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_126_5",
       "cluster": "luong_day_126",
       "day": 126,
+      "phonetic_distractors": [
+        "design",
+        "delete",
+        "deserve",
+        "busy",
+        "series"
+      ],
       "fav": false,
       "known": false
     },
@@ -30529,6 +37450,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_126_6",
       "cluster": "luong_day_126",
       "day": 126,
+      "phonetic_distractors": [
+        "fred",
+        "flesh",
+        "frame",
+        "fetch",
+        "mesh"
+      ],
       "fav": false,
       "known": false
     },
@@ -30553,6 +37481,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_126_7",
       "cluster": "luong_day_126",
       "day": 126,
+      "phonetic_distractors": [
+        "dependency",
+        "ordinance",
+        "reduction",
+        "dependence",
+        "reductions"
+      ],
       "fav": false,
       "known": false
     },
@@ -30577,6 +37512,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_126_8",
       "cluster": "luong_day_126",
       "day": 126,
+      "phonetic_distractors": [
+        "liabilities",
+        "stability",
+        "visibility",
+        "eligibility",
+        "disability"
+      ],
       "fav": false,
       "known": false
     },
@@ -30603,6 +37545,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_126_9",
       "cluster": "luong_day_126",
       "day": 126,
+      "phonetic_distractors": [
+        "career",
+        "click",
+        "clip",
+        "cliff",
+        "claire"
+      ],
       "fav": false,
       "known": false
     },
@@ -30651,6 +37600,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_127_1",
       "cluster": "luong_day_127",
       "day": 127,
+      "phonetic_distractors": [
+        "bars",
+        "barn",
+        "bar",
+        "board",
+        "mark"
+      ],
       "fav": false,
       "known": false
     },
@@ -30674,6 +37630,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_127_2",
       "cluster": "luong_day_127",
       "day": 127,
+      "phonetic_distractors": [
+        "pepper",
+        "layer",
+        "pay",
+        "waiter",
+        "neighbor"
+      ],
       "fav": false,
       "known": false
     },
@@ -30698,6 +37661,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_127_3",
       "cluster": "luong_day_127",
       "day": 127,
+      "phonetic_distractors": [
+        "matrix",
+        "eric",
+        "trick",
+        "patrick",
+        "marriage"
+      ],
       "fav": false,
       "known": false
     },
@@ -30722,6 +37692,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_127_4",
       "cluster": "luong_day_127",
       "day": 127,
+      "phonetic_distractors": [
+        "silo",
+        "flow",
+        "so",
+        "glow",
+        "blow"
+      ],
       "fav": false,
       "known": false
     },
@@ -30745,6 +37722,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_127_5",
       "cluster": "luong_day_127",
       "day": 127,
+      "phonetic_distractors": [
+        "projects",
+        "projected",
+        "protect",
+        "trajectory",
+        "processor"
+      ],
       "fav": false,
       "known": false
     },
@@ -30817,6 +37801,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_127_8",
       "cluster": "luong_day_127",
       "day": 127,
+      "phonetic_distractors": [
+        "staying",
+        "stating",
+        "stemming",
+        "stated",
+        "sucking"
+      ],
       "fav": false,
       "known": false
     },
@@ -30841,6 +37832,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_127_9",
       "cluster": "luong_day_127",
       "day": 127,
+      "phonetic_distractors": [
+        "invest",
+        "integrate",
+        "exhibit",
+        "investing",
+        "favourite"
+      ],
       "fav": false,
       "known": false
     },
@@ -30888,6 +37886,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_128_1",
       "cluster": "luong_day_128",
       "day": 128,
+      "phonetic_distractors": [
+        "parker",
+        "charter",
+        "marker",
+        "partner",
+        "parts"
+      ],
       "fav": false,
       "known": false
     },
@@ -30912,6 +37917,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_128_2",
       "cluster": "luong_day_128",
       "day": 128,
+      "phonetic_distractors": [
+        "started",
+        "starter",
+        "starts",
+        "starting",
+        "status"
+      ],
       "fav": false,
       "known": false
     },
@@ -30936,6 +37948,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_128_3",
       "cluster": "luong_day_128",
       "day": 128,
+      "phonetic_distractors": [
+        "revolution",
+        "evolution",
+        "revelation",
+        "renovation",
+        "pollution"
+      ],
       "fav": false,
       "known": false
     },
@@ -30959,6 +37978,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_128_4",
       "cluster": "luong_day_128",
       "day": 128,
+      "phonetic_distractors": [
+        "luggage",
+        "penguin",
+        "manga",
+        "lanka",
+        "angle"
+      ],
       "fav": false,
       "known": false
     },
@@ -30983,6 +38009,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_128_5",
       "cluster": "luong_day_128",
       "day": 128,
+      "phonetic_distractors": [
+        "authentication",
+        "renovate",
+        "deprecate",
+        "indicate",
+        "sentiment"
+      ],
       "fav": false,
       "known": false
     },
@@ -31007,6 +38040,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_128_6",
       "cluster": "luong_day_128",
       "day": 128,
+      "phonetic_distractors": [
+        "relates",
+        "racks",
+        "blacks",
+        "risks",
+        "physics"
+      ],
       "fav": false,
       "known": false
     },
@@ -31030,6 +38070,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_128_7",
       "cluster": "luong_day_128",
       "day": 128,
+      "phonetic_distractors": [
+        "maximum",
+        "minimize",
+        "taxes",
+        "summarize",
+        "analyze"
+      ],
       "fav": false,
       "known": false
     },
@@ -31054,6 +38101,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_128_8",
       "cluster": "luong_day_128",
       "day": 128,
+      "phonetic_distractors": [
+        "toil",
+        "bill",
+        "bowl",
+        "belle",
+        "boy"
+      ],
       "fav": false,
       "known": false
     },
@@ -31078,6 +38132,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_128_9",
       "cluster": "luong_day_128",
       "day": 128,
+      "phonetic_distractors": [
+        "statistic",
+        "realistic",
+        "artistic",
+        "stochastic",
+        "plastic"
+      ],
       "fav": false,
       "known": false
     },
@@ -31102,6 +38163,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_129_0",
       "cluster": "luong_day_129",
       "day": 129,
+      "phonetic_distractors": [
+        "certification",
+        "qualification",
+        "notification",
+        "verification",
+        "medication"
+      ],
       "fav": false,
       "known": false
     },
@@ -31125,6 +38193,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_129_1",
       "cluster": "luong_day_129",
       "day": 129,
+      "phonetic_distractors": [
+        "fame",
+        "phrase",
+        "flame",
+        "freight",
+        "from"
+      ],
       "fav": false,
       "known": false
     },
@@ -31149,6 +38224,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_129_2",
       "cluster": "luong_day_129",
       "day": 129,
+      "phonetic_distractors": [
+        "lodging",
+        "topic",
+        "comic",
+        "locking",
+        "sonic"
+      ],
       "fav": false,
       "known": false
     },
@@ -31173,6 +38255,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_129_3",
       "cluster": "luong_day_129",
       "day": 129,
+      "phonetic_distractors": [
+        "chorus",
+        "carpet",
+        "campus",
+        "corporate",
+        "korea"
+      ],
       "fav": false,
       "known": false
     },
@@ -31198,6 +38287,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_129_4",
       "cluster": "luong_day_129",
       "day": 129,
+      "phonetic_distractors": [
+        "affiliate",
+        "appreciate",
+        "allocate",
+        "update",
+        "collaborate"
+      ],
       "fav": false,
       "known": false
     },
@@ -31222,6 +38318,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_129_5",
       "cluster": "luong_day_129",
       "day": 129,
+      "phonetic_distractors": [
+        "elite",
+        "defeat",
+        "delight",
+        "athlete",
+        "receipt"
+      ],
       "fav": false,
       "known": false
     },
@@ -31248,6 +38351,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_129_6",
       "cluster": "luong_day_129",
       "day": 129,
+      "phonetic_distractors": [
+        "tutorial",
+        "material",
+        "memorial",
+        "industrial",
+        "bacterial"
+      ],
       "fav": false,
       "known": false
     },
@@ -31272,6 +38382,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_129_7",
       "cluster": "luong_day_129",
       "day": 129,
+      "phonetic_distractors": [
+        "expense",
+        "explain",
+        "explains",
+        "extent",
+        "explained"
+      ],
       "fav": false,
       "known": false
     },
@@ -31297,6 +38414,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_129_8",
       "cluster": "luong_day_129",
       "day": 129,
+      "phonetic_distractors": [
+        "financing",
+        "finance",
+        "banana",
+        "potential",
+        "maternal"
+      ],
       "fav": false,
       "known": false
     },
@@ -31321,6 +38445,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_129_9",
       "cluster": "luong_day_129",
       "day": 129,
+      "phonetic_distractors": [
+        "protect",
+        "reject",
+        "processed",
+        "product",
+        "prospect"
+      ],
       "fav": false,
       "known": false
     },
@@ -31345,6 +38476,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_130_0",
       "cluster": "luong_day_130",
       "day": 130,
+      "phonetic_distractors": [
+        "firms",
+        "teams",
+        "times",
+        "turns",
+        "team"
+      ],
       "fav": false,
       "known": false
     },
@@ -31393,6 +38531,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_130_2",
       "cluster": "luong_day_130",
       "day": 130,
+      "phonetic_distractors": [
+        "invest",
+        "invite",
+        "service",
+        "egress",
+        "index"
+      ],
       "fav": false,
       "known": false
     },
@@ -31417,6 +38562,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_130_3",
       "cluster": "luong_day_130",
       "day": 130,
+      "phonetic_distractors": [
+        "infection",
+        "section",
+        "connection",
+        "correction",
+        "attention"
+      ],
       "fav": false,
       "known": false
     },
@@ -31441,6 +38593,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_130_4",
       "cluster": "luong_day_130",
       "day": 130,
+      "phonetic_distractors": [
+        "summit",
+        "stomach",
+        "testament",
+        "ultimate",
+        "intimate"
+      ],
       "fav": false,
       "known": false
     },
@@ -31464,6 +38623,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_130_5",
       "cluster": "luong_day_130",
       "day": 130,
+      "phonetic_distractors": [
+        "transit",
+        "transmit",
+        "translator",
+        "translation",
+        "tablet"
+      ],
       "fav": false,
       "known": false
     },
@@ -31488,6 +38654,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_130_6",
       "cluster": "luong_day_130",
       "day": 130,
+      "phonetic_distractors": [
+        "diagnosis",
+        "princess",
+        "progress",
+        "promises",
+        "processes"
+      ],
       "fav": false,
       "known": false
     },
@@ -31536,6 +38709,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_130_8",
       "cluster": "luong_day_130",
       "day": 130,
+      "phonetic_distractors": [
+        "kansas",
+        "cancel",
+        "campus",
+        "candle",
+        "conscious"
+      ],
       "fav": false,
       "known": false
     },
@@ -31561,6 +38741,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_130_9",
       "cluster": "luong_day_130",
       "day": 130,
+      "phonetic_distractors": [
+        "collaborative",
+        "collaboration",
+        "collect",
+        "adulterate",
+        "celebrate"
+      ],
       "fav": false,
       "known": false
     },
@@ -31585,6 +38772,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_131_0",
       "cluster": "luong_day_131",
       "day": 131,
+      "phonetic_distractors": [
+        "prosthetic",
+        "empathetic",
+        "static",
+        "ethnic",
+        "synthetic"
+      ],
       "fav": false,
       "known": false
     },
@@ -31608,6 +38802,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_131_1",
       "cluster": "luong_day_131",
       "day": 131,
+      "phonetic_distractors": [
+        "lend",
+        "legs",
+        "lanes",
+        "benz",
+        "pens"
+      ],
       "fav": false,
       "known": false
     },
@@ -31632,6 +38833,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_131_2",
       "cluster": "luong_day_131",
       "day": 131,
+      "phonetic_distractors": [
+        "presidential",
+        "representing",
+        "unexpected",
+        "represented",
+        "contributed"
+      ],
       "fav": false,
       "known": false
     },
@@ -31656,6 +38864,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_131_3",
       "cluster": "luong_day_131",
       "day": 131,
+      "phonetic_distractors": [
+        "welding",
+        "wedding",
+        "selling",
+        "helping",
+        "varying"
+      ],
       "fav": false,
       "known": false
     },
@@ -31682,6 +38897,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_131_4",
       "cluster": "luong_day_131",
       "day": 131,
+      "phonetic_distractors": [
+        "chop",
+        "keep",
+        "cheat",
+        "sheep",
+        "cheese"
+      ],
       "fav": false,
       "known": false
     },
@@ -31706,6 +38928,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_131_5",
       "cluster": "luong_day_131",
       "day": 131,
+      "phonetic_distractors": [
+        "caching",
+        "cache",
+        "career",
+        "clear",
+        "cached"
+      ],
       "fav": false,
       "known": false
     },
@@ -31753,6 +38982,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_131_7",
       "cluster": "luong_day_131",
       "day": 131,
+      "phonetic_distractors": [
+        "device",
+        "decor",
+        "detour",
+        "discuss",
+        "resource"
+      ],
       "fav": false,
       "known": false
     },
@@ -31777,6 +39013,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_131_8",
       "cluster": "luong_day_131",
       "day": 131,
+      "phonetic_distractors": [
+        "texts",
+        "textile",
+        "textiles",
+        "extract",
+        "texture"
+      ],
       "fav": false,
       "known": false
     },
@@ -31825,6 +39068,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_132_0",
       "cluster": "luong_day_132",
       "day": 132,
+      "phonetic_distractors": [
+        "confident",
+        "confidence",
+        "continent",
+        "content",
+        "conflict"
+      ],
       "fav": false,
       "known": false
     },
@@ -31851,6 +39101,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_132_1",
       "cluster": "luong_day_132",
       "day": 132,
+      "phonetic_distractors": [
+        "interaction",
+        "intervention",
+        "infection",
+        "interactions",
+        "interventions"
+      ],
       "fav": false,
       "known": false
     },
@@ -31875,6 +39132,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_132_2",
       "cluster": "luong_day_132",
       "day": 132,
+      "phonetic_distractors": [
+        "contest",
+        "consent",
+        "comment",
+        "context",
+        "concept"
+      ],
       "fav": false,
       "known": false
     },
@@ -31898,6 +39162,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_132_3",
       "cluster": "luong_day_132",
       "day": 132,
+      "phonetic_distractors": [
+        "fewer",
+        "fuel",
+        "feature",
+        "user",
+        "humor"
+      ],
       "fav": false,
       "known": false
     },
@@ -31924,6 +39195,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_132_4",
       "cluster": "luong_day_132",
       "day": 132,
+      "phonetic_distractors": [
+        "compute",
+        "commit",
+        "acute",
+        "computer",
+        "compete"
+      ],
       "fav": false,
       "known": false
     },
@@ -31948,6 +39226,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_132_5",
       "cluster": "luong_day_132",
       "day": 132,
+      "phonetic_distractors": [
+        "satisfactory",
+        "certification",
+        "intersection",
+        "abstraction",
+        "notification"
+      ],
       "fav": false,
       "known": false
     },
@@ -31972,6 +39257,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_132_6",
       "cluster": "luong_day_132",
       "day": 132,
+      "phonetic_distractors": [
+        "requirement",
+        "argument",
+        "requirements",
+        "recruitment",
+        "document"
+      ],
       "fav": false,
       "known": false
     },
@@ -31995,6 +39287,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_132_7",
       "cluster": "luong_day_132",
       "day": 132,
+      "phonetic_distractors": [
+        "victor",
+        "sector",
+        "lecture",
+        "vendor",
+        "venture"
+      ],
       "fav": false,
       "known": false
     },
@@ -32020,6 +39319,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_132_8",
       "cluster": "luong_day_132",
       "day": 132,
+      "phonetic_distractors": [
+        "channel",
+        "manage",
+        "handle",
+        "cancel",
+        "dabble"
+      ],
       "fav": false,
       "known": false
     },
@@ -32044,6 +39350,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_132_9",
       "cluster": "luong_day_132",
       "day": 132,
+      "phonetic_distractors": [
+        "double",
+        "label",
+        "panel",
+        "habit",
+        "table"
+      ],
       "fav": false,
       "known": false
     },
@@ -32093,6 +39406,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_133_1",
       "cluster": "luong_day_133",
       "day": 133,
+      "phonetic_distractors": [
+        "contract",
+        "contact",
+        "conduct",
+        "confidant",
+        "connect"
+      ],
       "fav": false,
       "known": false
     },
@@ -32142,6 +39462,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_133_3",
       "cluster": "luong_day_133",
       "day": 133,
+      "phonetic_distractors": [
+        "loan",
+        "close",
+        "clean",
+        "alone",
+        "klein"
+      ],
       "fav": false,
       "known": false
     },
@@ -32189,6 +39516,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_133_5",
       "cluster": "luong_day_133",
       "day": 133,
+      "phonetic_distractors": [
+        "relations",
+        "operational",
+        "rational",
+        "vocational",
+        "relationship"
+      ],
       "fav": false,
       "known": false
     },
@@ -32213,6 +39547,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_133_6",
       "cluster": "luong_day_133",
       "day": 133,
+      "phonetic_distractors": [
+        "industry",
+        "sedentary",
+        "infants",
+        "industries",
+        "commentary"
+      ],
       "fav": false,
       "known": false
     },
@@ -32237,6 +39578,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_133_7",
       "cluster": "luong_day_133",
       "day": 133,
+      "phonetic_distractors": [
+        "kurt",
+        "her",
+        "heat",
+        "height",
+        "heard"
+      ],
       "fav": false,
       "known": false
     },
@@ -32260,6 +39608,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_133_8",
       "cluster": "luong_day_133",
       "day": 133,
+      "phonetic_distractors": [
+        "nikon",
+        "ion",
+        "scan",
+        "cron",
+        "cough"
+      ],
       "fav": false,
       "known": false
     },
@@ -32307,6 +39662,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_134_0",
       "cluster": "luong_day_134",
       "day": 134,
+      "phonetic_distractors": [
+        "migration",
+        "hydrogen",
+        "citation",
+        "iteration",
+        "violation"
+      ],
       "fav": false,
       "known": false
     },
@@ -32331,6 +39693,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_134_1",
       "cluster": "luong_day_134",
       "day": 134,
+      "phonetic_distractors": [
+        "perform",
+        "platinum",
+        "inform",
+        "transform",
+        "reform"
+      ],
       "fav": false,
       "known": false
     },
@@ -32355,6 +39724,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_134_2",
       "cluster": "luong_day_134",
       "day": 134,
+      "phonetic_distractors": [
+        "chronic",
+        "semantic",
+        "picnic",
+        "monica",
+        "sonic"
+      ],
       "fav": false,
       "known": false
     },
@@ -32379,6 +39755,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_134_3",
       "cluster": "luong_day_134",
       "day": 134,
+      "phonetic_distractors": [
+        "dial",
+        "debt",
+        "date",
+        "bias",
+        "fiat"
+      ],
       "fav": false,
       "known": false
     },
@@ -32405,6 +39788,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_134_4",
       "cluster": "luong_day_134",
       "day": 134,
+      "phonetic_distractors": [
+        "branch",
+        "bland",
+        "banned",
+        "brad",
+        "grande"
+      ],
       "fav": false,
       "known": false
     },
@@ -32430,6 +39820,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_134_5",
       "cluster": "luong_day_134",
       "day": 134,
+      "phonetic_distractors": [
+        "renovation",
+        "marinate",
+        "tenant",
+        "delegate",
+        "reynolds"
+      ],
       "fav": false,
       "known": false
     },
@@ -32454,6 +39851,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_134_6",
       "cluster": "luong_day_134",
       "day": 134,
+      "phonetic_distractors": [
+        "single",
+        "simple",
+        "serial",
+        "civil",
+        "signature"
+      ],
       "fav": false,
       "known": false
     },
@@ -32502,6 +39906,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_134_8",
       "cluster": "luong_day_134",
       "day": 134,
+      "phonetic_distractors": [
+        "pay",
+        "they",
+        "lay",
+        "way",
+        "urge"
+      ],
       "fav": false,
       "known": false
     },
@@ -32526,6 +39937,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_134_9",
       "cluster": "luong_day_134",
       "day": 134,
+      "phonetic_distractors": [
+        "scheme",
+        "schemes",
+        "soma",
+        "seemed",
+        "seem"
+      ],
       "fav": false,
       "known": false
     },
@@ -32550,6 +39968,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_135_0",
       "cluster": "luong_day_135",
       "day": 135,
+      "phonetic_distractors": [
+        "cart",
+        "casa",
+        "cast",
+        "caught",
+        "coast"
+      ],
       "fav": false,
       "known": false
     },
@@ -32647,6 +40072,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_135_4",
       "cluster": "luong_day_135",
       "day": 135,
+      "phonetic_distractors": [
+        "pipeline",
+        "guideline",
+        "timely",
+        "headline",
+        "streamline"
+      ],
       "fav": false,
       "known": false
     },
@@ -32671,6 +40103,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_135_5",
       "cluster": "luong_day_135",
       "day": 135,
+      "phonetic_distractors": [
+        "sleeve",
+        "slip",
+        "slope",
+        "speed",
+        "speech"
+      ],
       "fav": false,
       "known": false
     },
@@ -32695,6 +40134,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_135_6",
       "cluster": "luong_day_135",
       "day": 135,
+      "phonetic_distractors": [
+        "content",
+        "combat",
+        "meant",
+        "cement",
+        "common"
+      ],
       "fav": false,
       "known": false
     },
@@ -32719,6 +40165,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_135_7",
       "cluster": "luong_day_135",
       "day": 135,
+      "phonetic_distractors": [
+        "smart",
+        "stopped",
+        "stars",
+        "sort",
+        "store"
+      ],
       "fav": false,
       "known": false
     },
@@ -32745,6 +40198,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_135_8",
       "cluster": "luong_day_135",
       "day": 135,
+      "phonetic_distractors": [
+        "scalable",
+        "available",
+        "adjustable",
+        "substantial",
+        "compatible"
+      ],
       "fav": false,
       "known": false
     },
@@ -32794,6 +40254,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_136_0",
       "cluster": "luong_day_136",
       "day": 136,
+      "phonetic_distractors": [
+        "private",
+        "priority",
+        "proxy",
+        "policy",
+        "promise"
+      ],
       "fav": false,
       "known": false
     },
@@ -32818,6 +40285,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_136_1",
       "cluster": "luong_day_136",
       "day": 136,
+      "phonetic_distractors": [
+        "profile",
+        "profiles",
+        "pricing",
+        "providing",
+        "proactive"
+      ],
       "fav": false,
       "known": false
     },
@@ -32842,6 +40316,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_136_2",
       "cluster": "luong_day_136",
       "day": 136,
+      "phonetic_distractors": [
+        "configuring",
+        "consider",
+        "continue",
+        "container",
+        "consumer"
+      ],
       "fav": false,
       "known": false
     },
@@ -32866,6 +40347,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_136_3",
       "cluster": "luong_day_136",
       "day": 136,
+      "phonetic_distractors": [
+        "text",
+        "guest",
+        "chest",
+        "arrest",
+        "nest"
+      ],
       "fav": false,
       "known": false
     },
@@ -32890,6 +40378,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_136_4",
       "cluster": "luong_day_136",
       "day": 136,
+      "phonetic_distractors": [
+        "qualitative",
+        "captivating",
+        "contacting",
+        "contracting",
+        "contacted"
+      ],
       "fav": false,
       "known": false
     },
@@ -32914,6 +40409,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_136_5",
       "cluster": "luong_day_136",
       "day": 136,
+      "phonetic_distractors": [
+        "report",
+        "sort",
+        "restock",
+        "rapport",
+        "restore"
+      ],
       "fav": false,
       "known": false
     },
@@ -32963,6 +40465,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_136_7",
       "cluster": "luong_day_136",
       "day": 136,
+      "phonetic_distractors": [
+        "fail",
+        "phase",
+        "base",
+        "fame",
+        "case"
+      ],
       "fav": false,
       "known": false
     },
@@ -32987,6 +40496,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_136_8",
       "cluster": "luong_day_136",
       "day": 136,
+      "phonetic_distractors": [
+        "deadline",
+        "deadly",
+        "headline",
+        "gridlock",
+        "desk"
+      ],
       "fav": false,
       "known": false
     },
@@ -33011,6 +40527,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_136_9",
       "cluster": "luong_day_136",
       "day": 136,
+      "phonetic_distractors": [
+        "salary",
+        "server",
+        "injury",
+        "merger",
+        "surgeon"
+      ],
       "fav": false,
       "known": false
     },
@@ -33035,6 +40558,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_137_0",
       "cluster": "luong_day_137",
       "day": 137,
+      "phonetic_distractors": [
+        "indiana",
+        "identify",
+        "ephemeral",
+        "clarify",
+        "infection"
+      ],
       "fav": false,
       "known": false
     },
@@ -33061,6 +40591,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_137_1",
       "cluster": "luong_day_137",
       "day": 137,
+      "phonetic_distractors": [
+        "elevation",
+        "reservation",
+        "innovation",
+        "revelation",
+        "motivation"
+      ],
       "fav": false,
       "known": false
     },
@@ -33085,6 +40622,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_137_2",
       "cluster": "luong_day_137",
       "day": 137,
+      "phonetic_distractors": [
+        "buyer",
+        "wire",
+        "hike",
+        "hide",
+        "her"
+      ],
       "fav": false,
       "known": false
     },
@@ -33109,6 +40653,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_137_3",
       "cluster": "luong_day_137",
       "day": 137,
+      "phonetic_distractors": [
+        "insight",
+        "concert",
+        "input",
+        "answer",
+        "invite"
+      ],
       "fav": false,
       "known": false
     },
@@ -33133,6 +40684,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_137_4",
       "cluster": "luong_day_137",
       "day": 137,
+      "phonetic_distractors": [
+        "skill",
+        "sale",
+        "sail",
+        "school",
+        "scan"
+      ],
       "fav": false,
       "known": false
     },
@@ -33156,6 +40714,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_137_5",
       "cluster": "luong_day_137",
       "day": 137,
+      "phonetic_distractors": [
+        "winds",
+        "wound",
+        "winter",
+        "linda",
+        "wendy"
+      ],
       "fav": false,
       "known": false
     },
@@ -33203,6 +40768,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_137_7",
       "cluster": "luong_day_137",
       "day": 137,
+      "phonetic_distractors": [
+        "friendly",
+        "rendering",
+        "frederick",
+        "fellowship",
+        "funding"
+      ],
       "fav": false,
       "known": false
     },
@@ -33228,6 +40800,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_137_8",
       "cluster": "luong_day_137",
       "day": 137,
+      "phonetic_distractors": [
+        "procrastination",
+        "recruitment",
+        "procurement",
+        "prescription",
+        "consistent"
+      ],
       "fav": false,
       "known": false
     },
@@ -33251,6 +40830,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_137_9",
       "cluster": "luong_day_137",
       "day": 137,
+      "phonetic_distractors": [
+        "output",
+        "insight",
+        "invite",
+        "insert",
+        "pull"
+      ],
       "fav": false,
       "known": false
     },
@@ -33299,6 +40885,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_138_1",
       "cluster": "luong_day_138",
       "day": 138,
+      "phonetic_distractors": [
+        "script",
+        "encouraged",
+        "equipped",
+        "increased",
+        "aircraft"
+      ],
       "fav": false,
       "known": false
     },
@@ -33323,6 +40916,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_138_2",
       "cluster": "luong_day_138",
       "day": 138,
+      "phonetic_distractors": [
+        "send",
+        "lens",
+        "land",
+        "leonard",
+        "learned"
+      ],
       "fav": false,
       "known": false
     },
@@ -33347,6 +40947,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_138_3",
       "cluster": "luong_day_138",
       "day": 138,
+      "phonetic_distractors": [
+        "copy",
+        "column",
+        "college",
+        "mali",
+        "collar"
+      ],
       "fav": false,
       "known": false
     },
@@ -33372,6 +40979,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_138_4",
       "cluster": "luong_day_138",
       "day": 138,
+      "phonetic_distractors": [
+        "statistics",
+        "statistic",
+        "analytics",
+        "acoustic",
+        "suggesting"
+      ],
       "fav": false,
       "known": false
     },
@@ -33396,6 +41010,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_138_5",
       "cluster": "luong_day_138",
       "day": 138,
+      "phonetic_distractors": [
+        "most",
+        "post",
+        "coast",
+        "hoped",
+        "cost"
+      ],
       "fav": false,
       "known": false
     },
@@ -33420,6 +41041,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_138_6",
       "cluster": "luong_day_138",
       "day": 138,
+      "phonetic_distractors": [
+        "struck",
+        "structural",
+        "stretch",
+        "stroke",
+        "striking"
+      ],
       "fav": false,
       "known": false
     },
@@ -33444,6 +41072,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_138_7",
       "cluster": "luong_day_138",
       "day": 138,
+      "phonetic_distractors": [
+        "used",
+        "future",
+        "router",
+        "lose",
+        "cooler"
+      ],
       "fav": false,
       "known": false
     },
@@ -33492,6 +41127,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_138_9",
       "cluster": "luong_day_138",
       "day": 138,
+      "phonetic_distractors": [
+        "string",
+        "flooring",
+        "desperate",
+        "springs",
+        "springer"
+      ],
       "fav": false,
       "known": false
     },
@@ -33516,6 +41158,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_139_0",
       "cluster": "luong_day_139",
       "day": 139,
+      "phonetic_distractors": [
+        "lottery",
+        "battery",
+        "pattern",
+        "poverty",
+        "poly"
+      ],
       "fav": false,
       "known": false
     },
@@ -33563,6 +41212,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_139_2",
       "cluster": "luong_day_139",
       "day": 139,
+      "phonetic_distractors": [
+        "value",
+        "values",
+        "vacuum",
+        "valued",
+        "column"
+      ],
       "fav": false,
       "known": false
     },
@@ -33614,6 +41270,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_139_4",
       "cluster": "luong_day_139",
       "day": 139,
+      "phonetic_distractors": [
+        "omissions",
+        "editions",
+        "emotions",
+        "efficient",
+        "permissions"
+      ],
       "fav": false,
       "known": false
     },
@@ -33640,6 +41303,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_139_5",
       "cluster": "luong_day_139",
       "day": 139,
+      "phonetic_distractors": [
+        "league",
+        "leave",
+        "lisa",
+        "los",
+        "lee"
+      ],
       "fav": false,
       "known": false
     },
@@ -33664,6 +41334,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_139_6",
       "cluster": "luong_day_139",
       "day": 139,
+      "phonetic_distractors": [
+        "sodium",
+        "stream",
+        "staple",
+        "stable",
+        "station"
+      ],
       "fav": false,
       "known": false
     },
@@ -33688,6 +41365,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_139_7",
       "cluster": "luong_day_139",
       "day": 139,
+      "phonetic_distractors": [
+        "print",
+        "project",
+        "sprint",
+        "protect",
+        "private"
+      ],
       "fav": false,
       "known": false
     },
@@ -33740,6 +41424,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_139_9",
       "cluster": "luong_day_139",
       "day": 139,
+      "phonetic_distractors": [
+        "forming",
+        "phishing",
+        "warning",
+        "drilling",
+        "framing"
+      ],
       "fav": false,
       "known": false
     },
@@ -33766,6 +41457,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_140_0",
       "cluster": "luong_day_140",
       "day": 140,
+      "phonetic_distractors": [
+        "citation",
+        "staple",
+        "spacious",
+        "stable",
+        "spatial"
+      ],
       "fav": false,
       "known": false
     },
@@ -33790,6 +41488,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_140_1",
       "cluster": "luong_day_140",
       "day": 140,
+      "phonetic_distractors": [
+        "obfuscation",
+        "allocate",
+        "object",
+        "indicate",
+        "deficit"
+      ],
       "fav": false,
       "known": false
     },
@@ -33813,6 +41518,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_140_2",
       "cluster": "luong_day_140",
       "day": 140,
+      "phonetic_distractors": [
+        "shortcut",
+        "portal",
+        "profit",
+        "private",
+        "corporate"
+      ],
       "fav": false,
       "known": false
     },
@@ -33860,6 +41572,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_140_4",
       "cluster": "luong_day_140",
       "day": 140,
+      "phonetic_distractors": [
+        "crowd",
+        "allowed",
+        "club",
+        "class",
+        "click"
+      ],
       "fav": false,
       "known": false
     },
@@ -33909,6 +41628,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_140_6",
       "cluster": "luong_day_140",
       "day": 140,
+      "phonetic_distractors": [
+        "match",
+        "patch",
+        "catch",
+        "bass",
+        "bitch"
+      ],
       "fav": false,
       "known": false
     },
@@ -33933,6 +41659,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_140_7",
       "cluster": "luong_day_140",
       "day": 140,
+      "phonetic_distractors": [
+        "blanch",
+        "brand",
+        "batch",
+        "breach",
+        "bland"
+      ],
       "fav": false,
       "known": false
     },
@@ -33957,6 +41690,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_140_8",
       "cluster": "luong_day_140",
       "day": 140,
+      "phonetic_distractors": [
+        "auction",
+        "action",
+        "open",
+        "auctions",
+        "mission"
+      ],
       "fav": false,
       "known": false
     },
@@ -33981,6 +41721,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_140_9",
       "cluster": "luong_day_140",
       "day": 140,
+      "phonetic_distractors": [
+        "midwest",
+        "invest",
+        "incest",
+        "fixed",
+        "reject"
+      ],
       "fav": false,
       "known": false
     },
@@ -34004,6 +41751,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_141_0",
       "cluster": "luong_day_141",
       "day": 141,
+      "phonetic_distractors": [
+        "cart",
+        "karl",
+        "cord",
+        "guard",
+        "carl"
+      ],
       "fav": false,
       "known": false
     },
@@ -34029,6 +41783,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_141_1",
       "cluster": "luong_day_141",
       "day": 141,
+      "phonetic_distractors": [
+        "metric",
+        "tricks",
+        "strips",
+        "basics",
+        "mattress"
+      ],
       "fav": false,
       "known": false
     },
@@ -34053,6 +41814,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_141_2",
       "cluster": "luong_day_141",
       "day": 141,
+      "phonetic_distractors": [
+        "fever",
+        "teacher",
+        "fetch",
+        "future",
+        "leader"
+      ],
       "fav": false,
       "known": false
     },
@@ -34078,6 +41846,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_141_3",
       "cluster": "luong_day_141",
       "day": 141,
+      "phonetic_distractors": [
+        "extended",
+        "expanded",
+        "extension",
+        "extensions",
+        "expected"
+      ],
       "fav": false,
       "known": false
     },
@@ -34102,6 +41877,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_141_4",
       "cluster": "luong_day_141",
       "day": 141,
+      "phonetic_distractors": [
+        "lane",
+        "loan",
+        "learn",
+        "pine",
+        "len"
+      ],
       "fav": false,
       "known": false
     },
@@ -34126,6 +41908,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_141_5",
       "cluster": "luong_day_141",
       "day": 141,
+      "phonetic_distractors": [
+        "camps",
+        "canvas",
+        "campaign",
+        "camera",
+        "corpus"
+      ],
       "fav": false,
       "known": false
     },
@@ -34176,6 +41965,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_141_7",
       "cluster": "luong_day_141",
       "day": 141,
+      "phonetic_distractors": [
+        "capability",
+        "feasibility",
+        "probability",
+        "possibility",
+        "capabilities"
+      ],
       "fav": false,
       "known": false
     },
@@ -34200,6 +41996,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_141_8",
       "cluster": "luong_day_141",
       "day": 141,
+      "phonetic_distractors": [
+        "error",
+        "hurt",
+        "alert",
+        "offer",
+        "referee"
+      ],
       "fav": false,
       "known": false
     },
@@ -34225,6 +42028,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_141_9",
       "cluster": "luong_day_141",
       "day": 141,
+      "phonetic_distractors": [
+        "modification",
+        "classification",
+        "certification",
+        "notification",
+        "modifications"
+      ],
       "fav": false,
       "known": false
     },
@@ -34249,6 +42059,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_142_0",
       "cluster": "luong_day_142",
       "day": 142,
+      "phonetic_distractors": [
+        "roman",
+        "prison",
+        "rosa",
+        "chosen",
+        "broken"
+      ],
       "fav": false,
       "known": false
     },
@@ -34273,6 +42090,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_142_1",
       "cluster": "luong_day_142",
       "day": 142,
+      "phonetic_distractors": [
+        "brief",
+        "breed",
+        "beach",
+        "batch",
+        "real"
+      ],
       "fav": false,
       "known": false
     },
@@ -34325,6 +42149,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_142_3",
       "cluster": "luong_day_142",
       "day": 142,
+      "phonetic_distractors": [
+        "province",
+        "revenue",
+        "audience",
+        "variance",
+        "freelance"
+      ],
       "fav": false,
       "known": false
     },
@@ -34349,6 +42180,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_142_4",
       "cluster": "luong_day_142",
       "day": 142,
+      "phonetic_distractors": [
+        "border",
+        "lord",
+        "cord",
+        "born",
+        "sword"
+      ],
       "fav": false,
       "known": false
     },
@@ -34375,6 +42213,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_142_5",
       "cluster": "luong_day_142",
       "day": 142,
+      "phonetic_distractors": [
+        "monitors",
+        "monitored",
+        "monolith",
+        "monster",
+        "entering"
+      ],
       "fav": false,
       "known": false
     },
@@ -34399,6 +42244,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_142_6",
       "cluster": "luong_day_142",
       "day": 142,
+      "phonetic_distractors": [
+        "deserve",
+        "resume",
+        "observe",
+        "return",
+        "wizard"
+      ],
       "fav": false,
       "known": false
     },
@@ -34425,6 +42277,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_142_7",
       "cluster": "luong_day_142",
       "day": 142,
+      "phonetic_distractors": [
+        "trying",
+        "trip",
+        "trial",
+        "trick",
+        "tried"
+      ],
       "fav": false,
       "known": false
     },
@@ -34448,6 +42307,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_142_8",
       "cluster": "luong_day_142",
       "day": 142,
+      "phonetic_distractors": [
+        "overhead",
+        "overdraw",
+        "oversee",
+        "overtake",
+        "overnight"
+      ],
       "fav": false,
       "known": false
     },
@@ -34472,6 +42338,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_142_9",
       "cluster": "luong_day_142",
       "day": 142,
+      "phonetic_distractors": [
+        "contain",
+        "mountain",
+        "container",
+        "painting",
+        "mentor"
+      ],
       "fav": false,
       "known": false
     },
@@ -34496,6 +42369,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_143_0",
       "cluster": "luong_day_143",
       "day": 143,
+      "phonetic_distractors": [
+        "reject",
+        "subject",
+        "connect",
+        "project",
+        "collect"
+      ],
       "fav": false,
       "known": false
     },
@@ -34520,6 +42400,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_143_1",
       "cluster": "luong_day_143",
       "day": 143,
+      "phonetic_distractors": [
+        "allocate",
+        "navigate",
+        "evaluate",
+        "candidate",
+        "delegate"
+      ],
       "fav": false,
       "known": false
     },
@@ -34544,6 +42431,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_143_2",
       "cluster": "luong_day_143",
       "day": 143,
+      "phonetic_distractors": [
+        "expert",
+        "escort",
+        "airport",
+        "sport",
+        "passport"
+      ],
       "fav": false,
       "known": false
     },
@@ -34568,6 +42462,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_143_3",
       "cluster": "luong_day_143",
       "day": 143,
+      "phonetic_distractors": [
+        "grocery",
+        "glory",
+        "lottery",
+        "glasgow",
+        "lost"
+      ],
       "fav": false,
       "known": false
     },
@@ -34615,6 +42516,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_143_5",
       "cluster": "luong_day_143",
       "day": 143,
+      "phonetic_distractors": [
+        "wellness",
+        "witness",
+        "thickness",
+        "weeks",
+        "focus"
+      ],
       "fav": false,
       "known": false
     },
@@ -34665,6 +42573,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_143_7",
       "cluster": "luong_day_143",
       "day": 143,
+      "phonetic_distractors": [
+        "wire",
+        "hire",
+        "by",
+        "bike",
+        "buys"
+      ],
       "fav": false,
       "known": false
     },
@@ -34712,6 +42627,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_143_9",
       "cluster": "luong_day_143",
       "day": 143,
+      "phonetic_distractors": [
+        "sandwich",
+        "handmade",
+        "landing",
+        "bondage",
+        "binding"
+      ],
       "fav": false,
       "known": false
     },
@@ -34736,6 +42658,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_144_0",
       "cluster": "luong_day_144",
       "day": 144,
+      "phonetic_distractors": [
+        "invite",
+        "insert",
+        "inside",
+        "input",
+        "incest"
+      ],
       "fav": false,
       "known": false
     },
@@ -34761,6 +42690,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_144_1",
       "cluster": "luong_day_144",
       "day": 144,
+      "phonetic_distractors": [
+        "replies",
+        "rely",
+        "replied",
+        "repair",
+        "apply"
+      ],
       "fav": false,
       "known": false
     },
@@ -34808,6 +42744,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_144_3",
       "cluster": "luong_day_144",
       "day": 144,
+      "phonetic_distractors": [
+        "layer",
+        "lane",
+        "lay",
+        "cake",
+        "laid"
+      ],
       "fav": false,
       "known": false
     },
@@ -34832,6 +42775,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_144_4",
       "cluster": "luong_day_144",
       "day": 144,
+      "phonetic_distractors": [
+        "certification",
+        "modification",
+        "verification",
+        "motivation",
+        "localization"
+      ],
       "fav": false,
       "known": false
     },
@@ -34881,6 +42831,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_144_6",
       "cluster": "luong_day_144",
       "day": 144,
+      "phonetic_distractors": [
+        "subjective",
+        "affecting",
+        "objects",
+        "attractive",
+        "subject"
+      ],
       "fav": false,
       "known": false
     },
@@ -34905,6 +42862,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_144_7",
       "cluster": "luong_day_144",
       "day": 144,
+      "phonetic_distractors": [
+        "click",
+        "plastic",
+        "clinic",
+        "classes",
+        "chronic"
+      ],
       "fav": false,
       "known": false
     },
@@ -34929,6 +42893,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_144_8",
       "cluster": "luong_day_144",
       "day": 144,
+      "phonetic_distractors": [
+        "contract",
+        "context",
+        "contractor",
+        "contact",
+        "contest"
+      ],
       "fav": false,
       "known": false
     },
@@ -34953,6 +42924,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_144_9",
       "cluster": "luong_day_144",
       "day": 144,
+      "phonetic_distractors": [
+        "human",
+        "carmen",
+        "acute",
+        "cayman",
+        "occasion"
+      ],
       "fav": false,
       "known": false
     },
@@ -34977,6 +42955,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_145_0",
       "cluster": "luong_day_145",
       "day": 145,
+      "phonetic_distractors": [
+        "aisle",
+        "fail",
+        "isle",
+        "fool",
+        "fell"
+      ],
       "fav": false,
       "known": false
     },
@@ -35000,6 +42985,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_145_1",
       "cluster": "luong_day_145",
       "day": 145,
+      "phonetic_distractors": [
+        "brain",
+        "trace",
+        "trail",
+        "tray",
+        "trade"
+      ],
       "fav": false,
       "known": false
     },
@@ -35024,6 +43016,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_145_2",
       "cluster": "luong_day_145",
       "day": 145,
+      "phonetic_distractors": [
+        "application",
+        "annotation",
+        "elevation",
+        "animation",
+        "validation"
+      ],
       "fav": false,
       "known": false
     },
@@ -35047,6 +43046,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_145_3",
       "cluster": "luong_day_145",
       "day": 145,
+      "phonetic_distractors": [
+        "guideline",
+        "timeline",
+        "headline",
+        "polite",
+        "plan"
+      ],
       "fav": false,
       "known": false
     },
@@ -35071,6 +43077,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_145_4",
       "cluster": "luong_day_145",
       "day": 145,
+      "phonetic_distractors": [
+        "sims",
+        "summer",
+        "singer",
+        "stir",
+        "bitter"
+      ],
       "fav": false,
       "known": false
     },
@@ -35094,6 +43107,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_145_5",
       "cluster": "luong_day_145",
       "day": 145,
+      "phonetic_distractors": [
+        "benchmark",
+        "lexmark",
+        "clark",
+        "clarke",
+        "denmark"
+      ],
       "fav": false,
       "known": false
     },
@@ -35118,6 +43138,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_145_6",
       "cluster": "luong_day_145",
       "day": 145,
+      "phonetic_distractors": [
+        "display",
+        "displayed",
+        "reception",
+        "decision",
+        "discussion"
+      ],
       "fav": false,
       "known": false
     },
@@ -35142,6 +43169,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_145_7",
       "cluster": "luong_day_145",
       "day": 145,
+      "phonetic_distractors": [
+        "filling",
+        "wishing",
+        "fitting",
+        "shipping",
+        "caching"
+      ],
       "fav": false,
       "known": false
     },
@@ -35166,6 +43200,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_145_8",
       "cluster": "luong_day_145",
       "day": 145,
+      "phonetic_distractors": [
+        "verbal",
+        "virtue",
+        "versatile",
+        "fuel",
+        "viral"
+      ],
       "fav": false,
       "known": false
     },
@@ -35214,6 +43255,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_146_0",
       "cluster": "luong_day_146",
       "day": 146,
+      "phonetic_distractors": [
+        "memory",
+        "measure",
+        "mumbai",
+        "mambo",
+        "melbourne"
+      ],
       "fav": false,
       "known": false
     },
@@ -35240,6 +43288,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_146_1",
       "cluster": "luong_day_146",
       "day": 146,
+      "phonetic_distractors": [
+        "annual",
+        "annually",
+        "daniel",
+        "menu",
+        "fuel"
+      ],
       "fav": false,
       "known": false
     },
@@ -35264,6 +43319,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_146_2",
       "cluster": "luong_day_146",
       "day": 146,
+      "phonetic_distractors": [
+        "sweat",
+        "seat",
+        "wheat",
+        "suites",
+        "sort"
+      ],
       "fav": false,
       "known": false
     },
@@ -35288,6 +43350,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_146_3",
       "cluster": "luong_day_146",
       "day": 146,
+      "phonetic_distractors": [
+        "link",
+        "singer",
+        "sick",
+        "sing",
+        "pink"
+      ],
       "fav": false,
       "known": false
     },
@@ -35312,6 +43381,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_146_4",
       "cluster": "luong_day_146",
       "day": 146,
+      "phonetic_distractors": [
+        "pull",
+        "bush",
+        "put",
+        "pour",
+        "mesh"
+      ],
       "fav": false,
       "known": false
     },
@@ -35335,6 +43411,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_146_5",
       "cluster": "luong_day_146",
       "day": 146,
+      "phonetic_distractors": [
+        "rating",
+        "dating",
+        "weighted",
+        "waiting",
+        "knitting"
+      ],
       "fav": false,
       "known": false
     },
@@ -35359,6 +43442,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_146_6",
       "cluster": "luong_day_146",
       "day": 146,
+      "phonetic_distractors": [
+        "standard",
+        "stands",
+        "standing",
+        "startup",
+        "status"
+      ],
       "fav": false,
       "known": false
     },
@@ -35383,6 +43473,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_146_7",
       "cluster": "luong_day_146",
       "day": 146,
+      "phonetic_distractors": [
+        "personalized",
+        "destruction",
+        "distraction",
+        "dependency",
+        "dimensional"
+      ],
       "fav": false,
       "known": false
     },
@@ -35432,6 +43529,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_146_9",
       "cluster": "luong_day_146",
       "day": 146,
+      "phonetic_distractors": [
+        "distributor",
+        "distributors",
+        "distribution",
+        "contributor",
+        "restricted"
+      ],
       "fav": false,
       "known": false
     },
@@ -35456,6 +43560,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_147_0",
       "cluster": "luong_day_147",
       "day": 147,
+      "phonetic_distractors": [
+        "save",
+        "sale",
+        "surf",
+        "same",
+        "sail"
+      ],
       "fav": false,
       "known": false
     },
@@ -35480,6 +43591,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_147_1",
       "cluster": "luong_day_147",
       "day": 147,
+      "phonetic_distractors": [
+        "academic",
+        "empathetic",
+        "academics",
+        "economic",
+        "public"
+      ],
       "fav": false,
       "known": false
     },
@@ -35504,6 +43622,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_147_2",
       "cluster": "luong_day_147",
       "day": 147,
+      "phonetic_distractors": [
+        "navigator",
+        "allocate",
+        "validate",
+        "mitigate",
+        "navigation"
+      ],
       "fav": false,
       "known": false
     },
@@ -35528,6 +43653,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_147_3",
       "cluster": "luong_day_147",
       "day": 147,
+      "phonetic_distractors": [
+        "responses",
+        "response",
+        "responded",
+        "responding",
+        "respective"
+      ],
       "fav": false,
       "known": false
     },
@@ -35552,6 +43684,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_147_4",
       "cluster": "luong_day_147",
       "day": 147,
+      "phonetic_distractors": [
+        "stockholm",
+        "stapler",
+        "household",
+        "households",
+        "statewide"
+      ],
       "fav": false,
       "known": false
     },
@@ -35577,6 +43716,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_147_5",
       "cluster": "luong_day_147",
       "day": 147,
+      "phonetic_distractors": [
+        "neighbors",
+        "overhead",
+        "childhood",
+        "enabled",
+        "naked"
+      ],
       "fav": false,
       "known": false
     },
@@ -35600,6 +43746,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_147_6",
       "cluster": "luong_day_147",
       "day": 147,
+      "phonetic_distractors": [
+        "village",
+        "merge",
+        "damage",
+        "limit",
+        "much"
+      ],
       "fav": false,
       "known": false
     },
@@ -35649,6 +43802,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_147_8",
       "cluster": "luong_day_147",
       "day": 147,
+      "phonetic_distractors": [
+        "file",
+        "face",
+        "phase",
+        "sale",
+        "fame"
+      ],
       "fav": false,
       "known": false
     },
@@ -35698,6 +43858,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_148_0",
       "cluster": "luong_day_148",
       "day": 148,
+      "phonetic_distractors": [
+        "introducing",
+        "interests",
+        "reproduce",
+        "produce",
+        "entrance"
+      ],
       "fav": false,
       "known": false
     },
@@ -35722,6 +43889,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_148_1",
       "cluster": "luong_day_148",
       "day": 148,
+      "phonetic_distractors": [
+        "symantec",
+        "romantic",
+        "mnemonic",
+        "static",
+        "synthetic"
+      ],
       "fav": false,
       "known": false
     },
@@ -35746,6 +43920,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_148_2",
       "cluster": "luong_day_148",
       "day": 148,
+      "phonetic_distractors": [
+        "residential",
+        "presidential",
+        "criminal",
+        "rejection",
+        "retention"
+      ],
       "fav": false,
       "known": false
     },
@@ -35794,6 +43975,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_148_4",
       "cluster": "luong_day_148",
       "day": 148,
+      "phonetic_distractors": [
+        "past",
+        "cast",
+        "fat",
+        "fist",
+        "vast"
+      ],
       "fav": false,
       "known": false
     },
@@ -35818,6 +44006,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_148_5",
       "cluster": "luong_day_148",
       "day": 148,
+      "phonetic_distractors": [
+        "religious",
+        "syllabus",
+        "discuss",
+        "emission",
+        "delivery"
+      ],
       "fav": false,
       "known": false
     },
@@ -35844,6 +44039,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_148_6",
       "cluster": "luong_day_148",
       "day": 148,
+      "phonetic_distractors": [
+        "frequency",
+        "friction",
+        "sequence",
+        "treatment",
+        "recent"
+      ],
       "fav": false,
       "known": false
     },
@@ -35894,6 +44096,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_148_8",
       "cluster": "luong_day_148",
       "day": 148,
+      "phonetic_distractors": [
+        "class",
+        "click",
+        "cut",
+        "column",
+        "cloud"
+      ],
       "fav": false,
       "known": false
     },
@@ -35918,6 +44127,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_148_9",
       "cluster": "luong_day_148",
       "day": 148,
+      "phonetic_distractors": [
+        "stock",
+        "step",
+        "swap",
+        "star",
+        "stir"
+      ],
       "fav": false,
       "known": false
     },
@@ -35969,6 +44185,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_149_1",
       "cluster": "luong_day_149",
       "day": 149,
+      "phonetic_distractors": [
+        "depend",
+        "divided",
+        "divisions",
+        "defend",
+        "division"
+      ],
       "fav": false,
       "known": false
     },
@@ -35993,6 +44216,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_149_2",
       "cluster": "luong_day_149",
       "day": 149,
+      "phonetic_distractors": [
+        "architectural",
+        "architects",
+        "protect",
+        "connector",
+        "collector"
+      ],
       "fav": false,
       "known": false
     },
@@ -36019,6 +44249,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_149_3",
       "cluster": "luong_day_149",
       "day": 149,
+      "phonetic_distractors": [
+        "deadline",
+        "guideline",
+        "airline",
+        "helen",
+        "healthy"
+      ],
       "fav": false,
       "known": false
     },
@@ -36043,6 +44280,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_149_4",
       "cluster": "luong_day_149",
       "day": 149,
+      "phonetic_distractors": [
+        "date",
+        "weight",
+        "gage",
+        "game",
+        "gave"
+      ],
       "fav": false,
       "known": false
     },
@@ -36067,6 +44311,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_149_5",
       "cluster": "luong_day_149",
       "day": 149,
+      "phonetic_distractors": [
+        "variable",
+        "portable",
+        "printable",
+        "terrible",
+        "reliable"
+      ],
       "fav": false,
       "known": false
     },
@@ -36092,6 +44343,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_149_6",
       "cluster": "luong_day_149",
       "day": 149,
+      "phonetic_distractors": [
+        "headline",
+        "headset",
+        "tenant",
+        "variant",
+        "guarantee"
+      ],
       "fav": false,
       "known": false
     },
@@ -36115,6 +44373,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_149_7",
       "cluster": "luong_day_149",
       "day": 149,
+      "phonetic_distractors": [
+        "equally",
+        "socialize",
+        "analyze",
+        "appetizer",
+        "analyzed"
+      ],
       "fav": false,
       "known": false
     },
@@ -36139,6 +44404,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_149_8",
       "cluster": "luong_day_149",
       "day": 149,
+      "phonetic_distractors": [
+        "directors",
+        "directly",
+        "correctly",
+        "directive",
+        "directed"
+      ],
       "fav": false,
       "known": false
     },
@@ -36162,6 +44434,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_149_9",
       "cluster": "luong_day_149",
       "day": 149,
+      "phonetic_distractors": [
+        "hosted",
+        "posting",
+        "voting",
+        "posted",
+        "postings"
+      ],
       "fav": false,
       "known": false
     },
@@ -36186,6 +44465,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_150_0",
       "cluster": "luong_day_150",
       "day": 150,
+      "phonetic_distractors": [
+        "advertise",
+        "summarize",
+        "analyze",
+        "appetizer",
+        "actors"
+      ],
       "fav": false,
       "known": false
     },
@@ -36210,6 +44496,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_150_1",
       "cluster": "luong_day_150",
       "day": 150,
+      "phonetic_distractors": [
+        "constitute",
+        "substance",
+        "subtitle",
+        "constitutes",
+        "substances"
+      ],
       "fav": false,
       "known": false
     },
@@ -36235,6 +44528,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_150_2",
       "cluster": "luong_day_150",
       "day": 150,
+      "phonetic_distractors": [
+        "overdraw",
+        "overhang",
+        "overnight",
+        "warcraft",
+        "aircraft"
+      ],
       "fav": false,
       "known": false
     },
@@ -36259,6 +44559,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_150_3",
       "cluster": "luong_day_150",
       "day": 150,
+      "phonetic_distractors": [
+        "autonomy",
+        "anonymous",
+        "automate",
+        "promise",
+        "conscious"
+      ],
       "fav": false,
       "known": false
     },
@@ -36283,6 +44590,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_150_4",
       "cluster": "luong_day_150",
       "day": 150,
+      "phonetic_distractors": [
+        "pass",
+        "fast",
+        "cast",
+        "vast",
+        "pat"
+      ],
       "fav": false,
       "known": false
     },
@@ -36307,6 +44621,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_150_5",
       "cluster": "luong_day_150",
       "day": 150,
+      "phonetic_distractors": [
+        "bit",
+        "route",
+        "beat",
+        "suit",
+        "boom"
+      ],
       "fav": false,
       "known": false
     },
@@ -36332,6 +44653,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_150_6",
       "cluster": "luong_day_150",
       "day": 150,
+      "phonetic_distractors": [
+        "translation",
+        "transition",
+        "transmission",
+        "translations",
+        "attraction"
+      ],
       "fav": false,
       "known": false
     },
@@ -36356,6 +44684,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_150_7",
       "cluster": "luong_day_150",
       "day": 150,
+      "phonetic_distractors": [
+        "rescue",
+        "garlic",
+        "barbara",
+        "barbados",
+        "garbage"
+      ],
       "fav": false,
       "known": false
     },
@@ -36382,6 +44717,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_150_8",
       "cluster": "luong_day_150",
       "day": 150,
+      "phonetic_distractors": [
+        "apart",
+        "report",
+        "port",
+        "start",
+        "detour"
+      ],
       "fav": false,
       "known": false
     },
@@ -36408,6 +44750,13 @@ const VOCAB_DATA_MAP = {
       "key": "luong_day_150_9",
       "cluster": "luong_day_150",
       "day": 150,
+      "phonetic_distractors": [
+        "misinformation",
+        "confirmation",
+        "transformation",
+        "infatuation",
+        "syndication"
+      ],
       "fav": false,
       "known": false
     }
@@ -36435,6 +44784,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_1_0",
       "cluster": "cluster_1",
       "day": 1,
+      "phonetic_distractors": [
+        "oh",
+        "so",
+        "go",
+        "though",
+        "due"
+      ],
       "fav": false,
       "known": false
     },
@@ -36459,6 +44815,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To receive money as payment for work that you do.",
       "cluster": "cluster_1",
       "day": 1,
+      "phonetic_distractors": [
+        "herb",
+        "earth",
+        "in",
+        "urge",
+        "ann"
+      ],
       "fav": false,
       "known": false
     },
@@ -36483,6 +44846,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Information about recent events.",
       "cluster": "cluster_1",
       "day": 1,
+      "phonetic_distractors": [
+        "lose",
+        "newer",
+        "knew",
+        "nuke",
+        "gnu"
+      ],
       "fav": false,
       "known": false
     },
@@ -36507,6 +44877,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "A person who is very good at sports or physical exercise, especially one who competes in organized events.",
       "cluster": "cluster_1",
       "day": 1,
+      "phonetic_distractors": [
+        "elite",
+        "fleet",
+        "delete",
+        "ashley",
+        "highly"
+      ],
       "fav": false,
       "known": false
     },
@@ -36530,6 +44907,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "One of the independent groups of stars in the universe.",
       "cluster": "cluster_1",
       "day": 1,
+      "phonetic_distractors": [
+        "alex",
+        "balance",
+        "policy",
+        "gallery",
+        "gadgets"
+      ],
       "fav": false,
       "known": false
     },
@@ -36554,6 +44938,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To make things of the same type all have the same basic features.",
       "cluster": "cluster_1",
       "day": 1,
+      "phonetic_distractors": [
+        "standards",
+        "standings",
+        "stanford",
+        "standing",
+        "advertise"
+      ],
       "fav": false,
       "known": false
     },
@@ -36652,6 +45043,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_1_9",
       "cluster": "cluster_1",
       "day": 1,
+      "phonetic_distractors": [
+        "bottles",
+        "intellect",
+        "buttons",
+        "beatles",
+        "boston"
+      ],
       "fav": false,
       "known": false
     },
@@ -36700,6 +45098,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "A set of animals or plants in which the members have similar characteristics to each other.",
       "cluster": "cluster_2",
       "day": 2,
+      "phonetic_distractors": [
+        "cds",
+        "pcs",
+        "speakers",
+        "speeds",
+        "speeches"
+      ],
       "fav": false,
       "known": false
     },
@@ -36724,6 +45129,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Existing in or as part of a tradition; long-established.",
       "cluster": "cluster_2",
       "day": 2,
+      "phonetic_distractors": [
+        "traditions",
+        "additional",
+        "erudition",
+        "conditional",
+        "professional"
+      ],
       "fav": false,
       "known": false
     },
@@ -36821,6 +45233,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_2_6",
       "cluster": "cluster_2",
       "day": 2,
+      "phonetic_distractors": [
+        "allowance",
+        "appliance",
+        "science",
+        "lions",
+        "lion"
+      ],
       "fav": false,
       "known": false
     },
@@ -36917,6 +45336,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To use drugs, exercises, etc. to cure a person of a disease or heal an injury.",
       "cluster": "cluster_3",
       "day": 3,
+      "phonetic_distractors": [
+        "trait",
+        "street",
+        "trout",
+        "trio",
+        "trees"
+      ],
       "fav": false,
       "known": false
     },
@@ -36941,6 +45367,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "A room or building with scientific equipment for doing scientific tests or for teaching science.",
       "cluster": "cluster_3",
       "day": 3,
+      "phonetic_distractors": [
+        "laboratories",
+        "mandatory",
+        "territory",
+        "library",
+        "statutory"
+      ],
       "fav": false,
       "known": false
     },
@@ -36965,6 +45398,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To prepare and issue a book, journal, piece of music, or other work for public sale.",
       "cluster": "cluster_3",
       "day": 3,
+      "phonetic_distractors": [
+        "public",
+        "abolish",
+        "dublin",
+        "polish",
+        "pollute"
+      ],
       "fav": false,
       "known": false
     },
@@ -36991,6 +45431,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_3_3",
       "cluster": "cluster_3",
       "day": 3,
+      "phonetic_distractors": [
+        "supplied",
+        "supplier",
+        "apply",
+        "supplies",
+        "sublime"
+      ],
       "fav": false,
       "known": false
     },
@@ -37041,6 +45488,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_3_5",
       "cluster": "cluster_3",
       "day": 3,
+      "phonetic_distractors": [
+        "whereas",
+        "awareness",
+        "paris",
+        "wherever",
+        "wellness"
+      ],
       "fav": false,
       "known": false
     },
@@ -37065,6 +45519,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Visually attractive, especially in a quaint or pretty style.",
       "cluster": "cluster_3",
       "day": 3,
+      "phonetic_distractors": [
+        "literacy",
+        "accuracy",
+        "purchased",
+        "thickness",
+        "picnic"
+      ],
       "fav": false,
       "known": false
     },
@@ -37091,6 +45552,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_3_7",
       "cluster": "cluster_3",
       "day": 3,
+      "phonetic_distractors": [
+        "valuable",
+        "renewable",
+        "cultural",
+        "reliable",
+        "colorful"
+      ],
       "fav": false,
       "known": false
     },
@@ -37117,6 +45585,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_3_8",
       "cluster": "cluster_3",
       "day": 3,
+      "phonetic_distractors": [
+        "trouble",
+        "animal",
+        "double",
+        "arabic",
+        "rebel"
+      ],
       "fav": false,
       "known": false
     },
@@ -37141,6 +45616,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Sternness or severity of manner or attitude; difficult economic conditions created by government measures to reduce public expenditure.",
       "cluster": "cluster_3",
       "day": 3,
+      "phonetic_distractors": [
+        "charity",
+        "territory",
+        "society",
+        "steadily",
+        "strictly"
+      ],
       "fav": false,
       "known": false
     },
@@ -37167,6 +45649,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_4_0",
       "cluster": "cluster_4",
       "day": 4,
+      "phonetic_distractors": [
+        "score",
+        "star",
+        "story",
+        "storm",
+        "stage"
+      ],
       "fav": false,
       "known": false
     },
@@ -37217,6 +45706,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_4_2",
       "cluster": "cluster_4",
       "day": 4,
+      "phonetic_distractors": [
+        "hungary",
+        "younger",
+        "hungry",
+        "anger",
+        "hunter"
+      ],
       "fav": false,
       "known": false
     },
@@ -37265,6 +45761,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "involving, using, or relating to computers, especially the internet.",
       "cluster": "cluster_4",
       "day": 4,
+      "phonetic_distractors": [
+        "fiber",
+        "fibre",
+        "stir",
+        "suburb",
+        "sour"
+      ],
       "fav": false,
       "known": false
     },
@@ -37289,6 +45792,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "The group of people in a country or part of a country who have the power to make and change laws.",
       "cluster": "cluster_4",
       "day": 4,
+      "phonetic_distractors": [
+        "legislate",
+        "legislation",
+        "legislative",
+        "escalator",
+        "elevator"
+      ],
       "fav": false,
       "known": false
     },
@@ -37315,6 +45825,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_4_6",
       "cluster": "cluster_4",
       "day": 4,
+      "phonetic_distractors": [
+        "whore",
+        "pour",
+        "core",
+        "nor",
+        "more"
+      ],
       "fav": false,
       "known": false
     },
@@ -37339,6 +45856,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "The release of an offender from detention, subject to a period of good behavior under supervision.",
       "cluster": "cluster_4",
       "day": 4,
+      "phonetic_distractors": [
+        "rotation",
+        "irrigation",
+        "promotion",
+        "donation",
+        "relation"
+      ],
       "fav": false,
       "known": false
     },
@@ -37412,6 +45936,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_5_0",
       "cluster": "cluster_5",
       "day": 5,
+      "phonetic_distractors": [
+        "miller",
+        "mic",
+        "mill",
+        "silk",
+        "mills"
+      ],
       "fav": false,
       "known": false
     },
@@ -37486,6 +46017,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Medical care given to a patient for an illness or injury.",
       "cluster": "cluster_5",
       "day": 5,
+      "phonetic_distractors": [
+        "tournament",
+        "treated",
+        "recent",
+        "retirement",
+        "achievement"
+      ],
       "fav": false,
       "known": false
     },
@@ -37510,6 +46048,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Existing or occurring inside a particular country; not foreign or international.",
       "cluster": "cluster_5",
       "day": 5,
+      "phonetic_distractors": [
+        "semester",
+        "dramatic",
+        "genetic",
+        "acoustic",
+        "suggesting"
+      ],
       "fav": false,
       "known": false
     },
@@ -37534,6 +46079,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "In, relating to, or characteristic of the countryside rather than the town.",
       "cluster": "cluster_5",
       "day": 5,
+      "phonetic_distractors": [
+        "neural",
+        "oral",
+        "carroll",
+        "coral",
+        "rachel"
+      ],
       "fav": false,
       "known": false
     },
@@ -37560,6 +46112,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_5_6",
       "cluster": "cluster_5",
       "day": 5,
+      "phonetic_distractors": [
+        "distributor",
+        "contribute",
+        "district",
+        "attribute",
+        "distributors"
+      ],
       "fav": false,
       "known": false
     },
@@ -37586,6 +46145,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_5_7",
       "cluster": "cluster_5",
       "day": 5,
+      "phonetic_distractors": [
+        "automotive",
+        "automatic",
+        "animated",
+        "automation",
+        "stated"
+      ],
       "fav": false,
       "known": false
     },
@@ -37612,6 +46178,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_5_8",
       "cluster": "cluster_5",
       "day": 5,
+      "phonetic_distractors": [
+        "continental",
+        "fundamental",
+        "documented",
+        "detrimental",
+        "confidential"
+      ],
       "fav": false,
       "known": false
     },
@@ -37638,6 +46211,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_5_9",
       "cluster": "cluster_5",
       "day": 5,
+      "phonetic_distractors": [
+        "migrate",
+        "depart",
+        "divided",
+        "detroit",
+        "decided"
+      ],
       "fav": false,
       "known": false
     },
@@ -37663,6 +46243,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_6_0",
       "cluster": "cluster_6",
       "day": 6,
+      "phonetic_distractors": [
+        "confident",
+        "maintenance",
+        "continuity",
+        "communist",
+        "dominant"
+      ],
       "fav": false,
       "known": false
     },
@@ -37687,6 +46274,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Being the same in quantity, size, degree, or value.",
       "cluster": "cluster_6",
       "day": 6,
+      "phonetic_distractors": [
+        "evil",
+        "aqua",
+        "eagle",
+        "model",
+        "fuel"
+      ],
       "fav": false,
       "known": false
     },
@@ -37711,6 +46305,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To do physical activities to make your body strong and healthy.",
       "cluster": "cluster_6",
       "day": 6,
+      "phonetic_distractors": [
+        "expertise",
+        "extras",
+        "excess",
+        "excerpt",
+        "memorize"
+      ],
       "fav": false,
       "known": false
     },
@@ -37735,6 +46336,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "a small device or machine with a particular purpose.",
       "cluster": "cluster_6",
       "day": 6,
+      "phonetic_distractors": [
+        "habit",
+        "jacket",
+        "ballot",
+        "gamma",
+        "janet"
+      ],
       "fav": false,
       "known": false
     },
@@ -37759,6 +46367,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Everything that exists, especially all physical matter, including all the stars, planets, galaxies, etc. in space.",
       "cluster": "cluster_6",
       "day": 6,
+      "phonetic_distractors": [
+        "units",
+        "universal",
+        "unix",
+        "unified",
+        "unity"
+      ],
       "fav": false,
       "known": false
     },
@@ -37784,6 +46399,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Relating to education and scholarship.",
       "cluster": "cluster_6",
       "day": 6,
+      "phonetic_distractors": [
+        "epidemic",
+        "economic",
+        "cosmic",
+        "genetic",
+        "atomic"
+      ],
       "fav": false,
       "known": false
     },
@@ -37810,6 +46432,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_6_6",
       "cluster": "cluster_6",
       "day": 6,
+      "phonetic_distractors": [
+        "territories",
+        "charity",
+        "laboratory",
+        "therefore",
+        "austerity"
+      ],
       "fav": false,
       "known": false
     },
@@ -37834,6 +46463,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To improve the quality or usefulness of something, or change it for a newer or better version.",
       "cluster": "cluster_6",
       "day": 6,
+      "phonetic_distractors": [
+        "afraid",
+        "appeared",
+        "agreed",
+        "upgrading",
+        "upload"
+      ],
       "fav": false,
       "known": false
     },
@@ -37860,6 +46496,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Not supporting one person or group more than another.",
       "cluster": "cluster_6",
       "day": 6,
+      "phonetic_distractors": [
+        "martial",
+        "imperial",
+        "marshall",
+        "marvel",
+        "impression"
+      ],
       "fav": false,
       "known": false
     },
@@ -37886,6 +46529,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_6_9",
       "cluster": "cluster_6",
       "day": 6,
+      "phonetic_distractors": [
+        "fund",
+        "massage",
+        "aside",
+        "fossil",
+        "feed"
+      ],
       "fav": false,
       "known": false
     },
@@ -37910,6 +46560,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "The way in which people in a particular area, country, or social group pronounce words.",
       "cluster": "cluster_7",
       "day": 7,
+      "phonetic_distractors": [
+        "except",
+        "account",
+        "accept",
+        "extent",
+        "assessed"
+      ],
       "fav": false,
       "known": false
     },
@@ -37934,6 +46591,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "A brother or sister.",
       "cluster": "cluster_7",
       "day": 7,
+      "phonetic_distractors": [
+        "sitting",
+        "spelling",
+        "sterling",
+        "selling",
+        "killing"
+      ],
       "fav": false,
       "known": false
     },
@@ -37958,6 +46622,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Causing or likely to cause damage.",
       "cluster": "cluster_7",
       "day": 7,
+      "phonetic_distractors": [
+        "carmen",
+        "marvel",
+        "parcel",
+        "marble",
+        "normal"
+      ],
       "fav": false,
       "known": false
     },
@@ -37981,6 +46652,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_7_3",
       "cluster": "cluster_7",
       "day": 7,
+      "phonetic_distractors": [
+        "gothic",
+        "garbage",
+        "public",
+        "relic",
+        "grill"
+      ],
       "fav": false,
       "known": false
     },
@@ -38005,6 +46683,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "The way in which two things are connected.",
       "cluster": "cluster_7",
       "day": 7,
+      "phonetic_distractors": [
+        "citizenship",
+        "religions",
+        "reactions",
+        "relocation",
+        "creations"
+      ],
       "fav": false,
       "known": false
     },
@@ -38031,6 +46716,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_7_5",
       "cluster": "cluster_7",
       "day": 7,
+      "phonetic_distractors": [
+        "journalist",
+        "mechanism",
+        "terrorism",
+        "jerusalem",
+        "journalists"
+      ],
       "fav": false,
       "known": false
     },
@@ -38057,6 +46749,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_7_6",
       "cluster": "cluster_7",
       "day": 7,
+      "phonetic_distractors": [
+        "favour",
+        "favor",
+        "glacier",
+        "flour",
+        "layer"
+      ],
       "fav": false,
       "known": false
     },
@@ -38081,6 +46780,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "The action or process of innovating; a new method, idea, product, etc.",
       "cluster": "cluster_7",
       "day": 7,
+      "phonetic_distractors": [
+        "inflation",
+        "irrigation",
+        "elevation",
+        "indication",
+        "insulation"
+      ],
       "fav": false,
       "known": false
     },
@@ -38105,6 +46811,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Too great to be overcome.",
       "cluster": "cluster_7",
       "day": 7,
+      "phonetic_distractors": [
+        "sustainable",
+        "governmental",
+        "compatible",
+        "comfortable",
+        "responsible"
+      ],
       "fav": false,
       "known": false
     },
@@ -38129,6 +46842,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "The ability to move your body quickly and easily.",
       "cluster": "cluster_7",
       "day": 7,
+      "phonetic_distractors": [
+        "ability",
+        "abilities",
+        "authority",
+        "salinity",
+        "facility"
+      ],
       "fav": false,
       "known": false
     },
@@ -38155,6 +46875,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "In good health; promoting good health.",
       "cluster": "cluster_8",
       "day": 8,
+      "phonetic_distractors": [
+        "wealth",
+        "highly",
+        "holy",
+        "belly",
+        "henry"
+      ],
       "fav": false,
       "known": false
     },
@@ -38181,6 +46908,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_8_1",
       "cluster": "cluster_8",
       "day": 8,
+      "phonetic_distractors": [
+        "virtual",
+        "battle",
+        "ritual",
+        "nature",
+        "castle"
+      ],
       "fav": false,
       "known": false
     },
@@ -38207,6 +46941,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Materials that are no longer needed and are thrown away.",
       "cluster": "cluster_8",
       "day": 8,
+      "phonetic_distractors": [
+        "taste",
+        "paste",
+        "wait",
+        "faced",
+        "based"
+      ],
       "fav": false,
       "known": false
     },
@@ -38231,6 +46972,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Someone who paints, draws, or makes sculptures.",
       "cluster": "cluster_8",
       "day": 8,
+      "phonetic_distractors": [
+        "harvest",
+        "august",
+        "largest",
+        "greatest",
+        "trust"
+      ],
       "fav": false,
       "known": false
     },
@@ -38257,6 +47005,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_8_4",
       "cluster": "cluster_8",
       "day": 8,
+      "phonetic_distractors": [
+        "parent",
+        "warranty",
+        "parents",
+        "therapy",
+        "penalty"
+      ],
       "fav": false,
       "known": false
     },
@@ -38281,6 +47036,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To take part in or become involved in an activity.",
       "cluster": "cluster_8",
       "day": 8,
+      "phonetic_distractors": [
+        "participant",
+        "participating",
+        "participants",
+        "participation",
+        "partition"
+      ],
       "fav": false,
       "known": false
     },
@@ -38304,6 +47066,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "In a manner relating to the mind or psychology.",
       "cluster": "cluster_8",
       "day": 8,
+      "phonetic_distractors": [
+        "rental",
+        "metals",
+        "dental",
+        "generally",
+        "gently"
+      ],
       "fav": false,
       "known": false
     },
@@ -38329,6 +47098,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_8_7",
       "cluster": "cluster_8",
       "day": 8,
+      "phonetic_distractors": [
+        "trout",
+        "doubt",
+        "debt",
+        "crowd",
+        "draw"
+      ],
       "fav": false,
       "known": false
     },
@@ -38356,6 +47132,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_8_8",
       "cluster": "cluster_8",
       "day": 8,
+      "phonetic_distractors": [
+        "newest",
+        "robust",
+        "nearest",
+        "adjust",
+        "announced"
+      ],
       "fav": false,
       "known": false
     },
@@ -38382,6 +47165,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_8_9",
       "cluster": "cluster_8",
       "day": 8,
+      "phonetic_distractors": [
+        "description",
+        "rendition",
+        "nutrition",
+        "erudition",
+        "christian"
+      ],
       "fav": false,
       "known": false
     },
@@ -38408,6 +47198,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_9_0",
       "cluster": "cluster_9",
       "day": 9,
+      "phonetic_distractors": [
+        "lodging",
+        "comic",
+        "locking",
+        "topic",
+        "sonic"
+      ],
       "fav": false,
       "known": false
     },
@@ -38530,6 +47327,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Featuring new methods; advanced and original.",
       "cluster": "cluster_9",
       "day": 9,
+      "phonetic_distractors": [
+        "innovate",
+        "innovation",
+        "iterative",
+        "initiative",
+        "indicating"
+      ],
       "fav": false,
       "known": false
     },
@@ -38554,6 +47358,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To keep something as it is, especially in order to prevent it from decaying or being damaged.",
       "cluster": "cluster_9",
       "day": 9,
+      "phonetic_distractors": [
+        "preferred",
+        "prefers",
+        "prefer",
+        "prison",
+        "observe"
+      ],
       "fav": false,
       "known": false
     },
@@ -38580,6 +47391,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_9_7",
       "cluster": "cluster_9",
       "day": 9,
+      "phonetic_distractors": [
+        "mixture",
+        "lecture",
+        "texts",
+        "texas",
+        "test"
+      ],
       "fav": false,
       "known": false
     },
@@ -38604,6 +47422,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "For or relating to young people.",
       "cluster": "cluster_9",
       "day": 9,
+      "phonetic_distractors": [
+        "terminal",
+        "vinyl",
+        "optional",
+        "rational",
+        "national"
+      ],
       "fav": false,
       "known": false
     },
@@ -38652,6 +47477,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "A very large ball of burning gas in space that is usually seen from the earth as a point of light in the sky at night.",
       "cluster": "cluster_10",
       "day": 10,
+      "phonetic_distractors": [
+        "store",
+        "stop",
+        "stock",
+        "stage",
+        "stir"
+      ],
       "fav": false,
       "known": false
     },
@@ -38678,6 +47510,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_10_1",
       "cluster": "cluster_10",
       "day": 10,
+      "phonetic_distractors": [
+        "tide",
+        "teddy",
+        "tiny",
+        "tied",
+        "highly"
+      ],
       "fav": false,
       "known": false
     },
@@ -38702,6 +47541,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To have or use something at the same time as someone else.",
       "cluster": "cluster_10",
       "day": 10,
+      "phonetic_distractors": [
+        "fair",
+        "rare",
+        "fare",
+        "shell",
+        "sure"
+      ],
       "fav": false,
       "known": false
     },
@@ -38728,6 +47574,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_10_3",
       "cluster": "cluster_10",
       "day": 10,
+      "phonetic_distractors": [
+        "naval",
+        "model",
+        "fossil",
+        "knowledge",
+        "neural"
+      ],
       "fav": false,
       "known": false
     },
@@ -38752,6 +47605,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "An organized journey for a particular purpose.",
       "cluster": "cluster_10",
       "day": 10,
+      "phonetic_distractors": [
+        "exhibition",
+        "exploration",
+        "erudition",
+        "expiration",
+        "exhibitions"
+      ],
       "fav": false,
       "known": false
     },
@@ -38776,6 +47636,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "All of the people born and living at about the same time, regarded collectively.",
       "cluster": "cluster_10",
       "day": 10,
+      "phonetic_distractors": [
+        "separation",
+        "generated",
+        "federation",
+        "rendition",
+        "foundation"
+      ],
       "fav": false,
       "known": false
     },
@@ -38802,6 +47669,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_10_6",
       "cluster": "cluster_10",
       "day": 10,
+      "phonetic_distractors": [
+        "tried",
+        "tries",
+        "try",
+        "trait",
+        "dry"
+      ],
       "fav": false,
       "known": false
     },
@@ -38850,6 +47724,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "A widespread occurrence of an infectious disease in a community at a particular time.",
       "cluster": "cluster_10",
       "day": 10,
+      "phonetic_distractors": [
+        "academic",
+        "academics",
+        "economic",
+        "public",
+        "premiere"
+      ],
       "fav": false,
       "known": false
     },
@@ -38876,6 +47757,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_10_9",
       "cluster": "cluster_10",
       "day": 10,
+      "phonetic_distractors": [
+        "metropolis",
+        "detrimental",
+        "anthropology",
+        "methodology",
+        "traditional"
+      ],
       "fav": false,
       "known": false
     },
@@ -38902,6 +47790,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_11_0",
       "cluster": "cluster_11",
       "day": 11,
+      "phonetic_distractors": [
+        "fred",
+        "flesh",
+        "fair",
+        "fry",
+        "rare"
+      ],
       "fav": false,
       "known": false
     },
@@ -38926,6 +47821,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To give money as a payment for something.",
       "cluster": "cluster_11",
       "day": 11,
+      "phonetic_distractors": [
+        "send",
+        "spent",
+        "spell",
+        "spread",
+        "spain"
+      ],
       "fav": false,
       "known": false
     },
@@ -38976,6 +47878,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_11_3",
       "cluster": "cluster_11",
       "day": 11,
+      "phonetic_distractors": [
+        "sour",
+        "our",
+        "shower",
+        "hour",
+        "powder"
+      ],
       "fav": false,
       "known": false
     },
@@ -39002,6 +47911,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_11_4",
       "cluster": "cluster_11",
       "day": 11,
+      "phonetic_distractors": [
+        "emission",
+        "mission",
+        "emissions",
+        "notion",
+        "ocean"
+      ],
       "fav": false,
       "known": false
     },
@@ -39026,6 +47942,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To direct the way that a ship, aircraft, or spacecraft will travel.",
       "cluster": "cluster_11",
       "day": 11,
+      "phonetic_distractors": [
+        "navigator",
+        "mitigate",
+        "navigation",
+        "delegate",
+        "gadget"
+      ],
       "fav": false,
       "known": false
     },
@@ -39076,6 +47999,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_11_7",
       "cluster": "cluster_11",
       "day": 11,
+      "phonetic_distractors": [
+        "navigate",
+        "irrigation",
+        "annotation",
+        "litigation",
+        "animation"
+      ],
       "fav": false,
       "known": false
     },
@@ -39102,6 +48032,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_11_8",
       "cluster": "cluster_11",
       "day": 11,
+      "phonetic_distractors": [
+        "complimentary",
+        "conferencing",
+        "competitive",
+        "experiences",
+        "inexpensive"
+      ],
       "fav": false,
       "known": false
     },
@@ -39126,6 +48063,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "all the chemical processes in your body, especially those that cause food to be used for energy and growth.",
       "cluster": "cluster_11",
       "day": 11,
+      "phonetic_distractors": [
+        "anachronism",
+        "journalism",
+        "mechanism",
+        "terrorism",
+        "protectionism"
+      ],
       "fav": false,
       "known": false
     },
@@ -39152,6 +48096,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_12_0",
       "cluster": "cluster_12",
       "day": 12,
+      "phonetic_distractors": [
+        "stan",
+        "stage",
+        "stir",
+        "store",
+        "loan"
+      ],
       "fav": false,
       "known": false
     },
@@ -39176,6 +48127,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To put a computer program onto a computer so that the computer can use it.",
       "cluster": "cluster_12",
       "day": 12,
+      "phonetic_distractors": [
+        "intel",
+        "instead",
+        "store",
+        "steal",
+        "insect"
+      ],
       "fav": false,
       "known": false
     },
@@ -39200,6 +48158,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "A person who lives or has their home in a place.",
       "cluster": "cluster_12",
       "day": 12,
+      "phonetic_distractors": [
+        "residence",
+        "resistant",
+        "evident",
+        "pendant",
+        "relevant"
+      ],
       "fav": false,
       "known": false
     },
@@ -39224,6 +48189,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To cover the surface of something with paint, as decoration or protection.",
       "cluster": "cluster_12",
       "day": 12,
+      "phonetic_distractors": [
+        "paste",
+        "point",
+        "saint",
+        "patient",
+        "layout"
+      ],
       "fav": false,
       "known": false
     },
@@ -39250,6 +48222,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_12_4",
       "cluster": "cluster_12",
       "day": 12,
+      "phonetic_distractors": [
+        "terrestrial",
+        "industrial",
+        "agrarian",
+        "palestinian",
+        "industries"
+      ],
       "fav": false,
       "known": false
     },
@@ -39276,6 +48255,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_12_5",
       "cluster": "cluster_12",
       "day": 12,
+      "phonetic_distractors": [
+        "too",
+        "tube",
+        "room",
+        "boom",
+        "whom"
+      ],
       "fav": false,
       "known": false
     },
@@ -39300,6 +48286,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To watch and check a situation carefully for a period of time in order to discover something about it.",
       "cluster": "cluster_12",
       "day": 12,
+      "phonetic_distractors": [
+        "monster",
+        "manager",
+        "connoisseur",
+        "minister",
+        "modular"
+      ],
       "fav": false,
       "known": false
     },
@@ -39326,6 +48319,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_12_7",
       "cluster": "cluster_12",
       "day": 12,
+      "phonetic_distractors": [
+        "attitude",
+        "attitudes",
+        "latitude",
+        "magnitude",
+        "alcohol"
+      ],
       "fav": false,
       "known": false
     },
@@ -39375,6 +48375,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To fall very quickly and suddenly.",
       "cluster": "cluster_12",
       "day": 12,
+      "phonetic_distractors": [
+        "climate",
+        "promote",
+        "planet",
+        "plumbing",
+        "limit"
+      ],
       "fav": false,
       "known": false
     },
@@ -39447,6 +48454,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "A fixed regular payment made by an employer to an employee.",
       "cluster": "cluster_13",
       "day": 13,
+      "phonetic_distractors": [
+        "gallery",
+        "sally",
+        "salaries",
+        "surgery",
+        "valley"
+      ],
       "fav": false,
       "known": false
     },
@@ -39471,6 +48485,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To damage something so badly that it cannot be used.",
       "cluster": "cluster_13",
       "day": 13,
+      "phonetic_distractors": [
+        "detroit",
+        "disorder",
+        "pastry",
+        "degree",
+        "deter"
+      ],
       "fav": false,
       "known": false
     },
@@ -39521,6 +48542,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_13_5",
       "cluster": "cluster_13",
       "day": 13,
+      "phonetic_distractors": [
+        "saturn",
+        "matter",
+        "pottery",
+        "pastor",
+        "satin"
+      ],
       "fav": false,
       "known": false
     },
@@ -39545,6 +48573,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To move from one region or habitat to another according to the seasons.",
       "cluster": "cluster_13",
       "day": 13,
+      "phonetic_distractors": [
+        "great",
+        "upgrade",
+        "trait",
+        "migration",
+        "greater"
+      ],
       "fav": false,
       "known": false
     },
@@ -39571,6 +48606,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_13_7",
       "cluster": "cluster_13",
       "day": 13,
+      "phonetic_distractors": [
+        "philosophy",
+        "salinity",
+        "validity",
+        "necessity",
+        "capacity"
+      ],
       "fav": false,
       "known": false
     },
@@ -39595,6 +48637,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Including or involving several countries or individuals of several nationalities.",
       "cluster": "cluster_13",
       "day": 13,
+      "phonetic_distractors": [
+        "international",
+        "conventional",
+        "sustainable",
+        "conditional",
+        "dimensional"
+      ],
       "fav": false,
       "known": false
     },
@@ -39643,6 +48692,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "A group of people living in the same place or having a particular characteristic in common.",
       "cluster": "cluster_14",
       "day": 14,
+      "phonetic_distractors": [
+        "communities",
+        "immunity",
+        "commuter",
+        "communicate",
+        "commodity"
+      ],
       "fav": false,
       "known": false
     },
@@ -39669,6 +48725,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Information, understanding, or skill that you get from experience or education.",
       "cluster": "cluster_14",
       "day": 14,
+      "phonetic_distractors": [
+        "novel",
+        "college",
+        "village",
+        "mileage",
+        "solid"
+      ],
       "fav": false,
       "known": false
     },
@@ -39695,6 +48758,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_14_2",
       "cluster": "cluster_14",
       "day": 14,
+      "phonetic_distractors": [
+        "humid",
+        "humor",
+        "houston",
+        "newman",
+        "yemen"
+      ],
       "fav": false,
       "known": false
     },
@@ -39719,6 +48789,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To present a form of entertainment to an audience.",
       "cluster": "cluster_14",
       "day": 14,
+      "phonetic_distractors": [
+        "reform",
+        "inform",
+        "perfume",
+        "norm",
+        "platform"
+      ],
       "fav": false,
       "known": false
     },
@@ -39745,6 +48822,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_14_4",
       "cluster": "cluster_14",
       "day": 14,
+      "phonetic_distractors": [
+        "recover",
+        "flavor",
+        "believes",
+        "behalf",
+        "remainder"
+      ],
       "fav": false,
       "known": false
     },
@@ -39767,6 +48851,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "As a further matter; besides.",
       "cluster": "cluster_14",
       "day": 14,
+      "phonetic_distractors": [
+        "rover",
+        "border",
+        "mortgage",
+        "river",
+        "grove"
+      ],
       "fav": false,
       "known": false
     },
@@ -39815,6 +48906,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Yielding profit or financial gain.",
       "cluster": "cluster_14",
       "day": 14,
+      "phonetic_distractors": [
+        "printable",
+        "particle",
+        "reasonable",
+        "professional",
+        "charitable"
+      ],
       "fav": false,
       "known": false
     },
@@ -39839,6 +48937,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Avant-garde ideas, styles, and methods are very original or modern in comparison to the period in which they happen.",
       "cluster": "cluster_14",
       "day": 14,
+      "phonetic_distractors": [
+        "appointed",
+        "myanmar",
+        "contrary",
+        "postcard",
+        "montgomery"
+      ],
       "fav": false,
       "known": false
     },
@@ -39862,6 +48967,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "The technology of sending signals, images and messages over long distances by radio, phone, television, etc.",
       "cluster": "cluster_14",
       "day": 14,
+      "phonetic_distractors": [
+        "instrumentation",
+        "representations",
+        "marginalization",
+        "congratulations",
+        "sensationalism"
+      ],
       "fav": false,
       "known": false
     },
@@ -39886,6 +48998,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To give a spoken or written account of something that one has observed, heard, done, or investigated.",
       "cluster": "cluster_15",
       "day": 15,
+      "phonetic_distractors": [
+        "support",
+        "resource",
+        "import",
+        "resort",
+        "airport"
+      ],
       "fav": false,
       "known": false
     },
@@ -39910,6 +49029,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To win or get a point, goal, etc. in a competition, sport, game, or test.",
       "cluster": "cluster_15",
       "day": 15,
+      "phonetic_distractors": [
+        "store",
+        "corps",
+        "sky",
+        "sphere",
+        "skill"
+      ],
       "fav": false,
       "known": false
     },
@@ -39934,6 +49060,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "In a way that deliberately avoids harm or errors.",
       "cluster": "cluster_15",
       "day": 15,
+      "phonetic_distractors": [
+        "therapy",
+        "mentally",
+        "carroll",
+        "generally",
+        "coral"
+      ],
       "fav": false,
       "known": false
     },
@@ -39960,6 +49093,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_15_3",
       "cluster": "cluster_15",
       "day": 15,
+      "phonetic_distractors": [
+        "gave",
+        "way",
+        "wait",
+        "wage",
+        "dave"
+      ],
       "fav": false,
       "known": false
     },
@@ -39984,6 +49124,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "A task or piece of work allocated to someone as part of a course of study.",
       "cluster": "cluster_15",
       "day": 15,
+      "phonetic_distractors": [
+        "alignment",
+        "assessment",
+        "opponent",
+        "assistant",
+        "excitement"
+      ],
       "fav": false,
       "known": false
     },
@@ -40008,6 +49155,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "The identification of the nature of an illness or other problem by examination of the symptoms.",
       "cluster": "cluster_15",
       "day": 15,
+      "phonetic_distractors": [
+        "diagnose",
+        "diagnostic",
+        "sciences",
+        "hypothesis",
+        "darkness"
+      ],
       "fav": false,
       "known": false
     },
@@ -40034,6 +49188,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_15_6",
       "cluster": "cluster_15",
       "day": 15,
+      "phonetic_distractors": [
+        "packing",
+        "encouraging",
+        "passing",
+        "packages",
+        "picking"
+      ],
       "fav": false,
       "known": false
     },
@@ -40058,6 +49219,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "The production and discharge of something, especially gas.",
       "cluster": "cluster_15",
       "day": 15,
+      "phonetic_distractors": [
+        "emotion",
+        "omissions",
+        "editions",
+        "emotions",
+        "initial"
+      ],
       "fav": false,
       "known": false
     },
@@ -40082,6 +49250,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To produce a substance by a chemical reaction in plants or animals, or to combine separate parts.",
       "cluster": "cluster_15",
       "day": 15,
+      "phonetic_distractors": [
+        "synthesis",
+        "minimize",
+        "penalize",
+        "analyze",
+        "stabilize"
+      ],
       "fav": false,
       "known": false
     },
@@ -40106,6 +49281,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To search widely for food or provisions.",
       "cluster": "cluster_15",
       "day": 15,
+      "phonetic_distractors": [
+        "forge",
+        "fridge",
+        "marriage",
+        "force",
+        "form"
+      ],
       "fav": false,
       "known": false
     },
@@ -40153,6 +49335,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_16_1",
       "cluster": "cluster_16",
       "day": 16,
+      "phonetic_distractors": [
+        "cheap",
+        "keys",
+        "seas",
+        "cheat",
+        "peas"
+      ],
       "fav": false,
       "known": false
     },
@@ -40178,6 +49367,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_16_2",
       "cluster": "cluster_16",
       "day": 16,
+      "phonetic_distractors": [
+        "test",
+        "waste",
+        "paste",
+        "faced",
+        "based"
+      ],
       "fav": false,
       "known": false
     },
@@ -40204,6 +49400,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_16_3",
       "cluster": "cluster_16",
       "day": 16,
+      "phonetic_distractors": [
+        "survive",
+        "survivor",
+        "arrival",
+        "survivors",
+        "service"
+      ],
       "fav": false,
       "known": false
     },
@@ -40250,6 +49453,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "After a particular thing has happened; afterward.",
       "cluster": "cluster_16",
       "day": 16,
+      "phonetic_distractors": [
+        "consequently",
+        "frequently",
+        "consistently",
+        "sufficiently",
+        "substantially"
+      ],
       "fav": false,
       "known": false
     },
@@ -40275,6 +49485,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_16_6",
       "cluster": "cluster_16",
       "day": 16,
+      "phonetic_distractors": [
+        "least",
+        "beast",
+        "cost",
+        "arrest",
+        "yield"
+      ],
       "fav": false,
       "known": false
     },
@@ -40301,6 +49518,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_16_7",
       "cluster": "cluster_16",
       "day": 16,
+      "phonetic_distractors": [
+        "distinction",
+        "instruction",
+        "detection",
+        "discretion",
+        "description"
+      ],
       "fav": false,
       "known": false
     },
@@ -40327,6 +49551,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_16_8",
       "cluster": "cluster_16",
       "day": 16,
+      "phonetic_distractors": [
+        "conditional",
+        "conditions",
+        "positioning",
+        "rendition",
+        "containing"
+      ],
       "fav": false,
       "known": false
     },
@@ -40351,6 +49582,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To present information about something in a way that provokes public interest and excitement, at the expense of accuracy.",
       "cluster": "cluster_16",
       "day": 16,
+      "phonetic_distractors": [
+        "sensationalism",
+        "marginalize",
+        "conditional",
+        "recreational",
+        "personalized"
+      ],
       "fav": false,
       "known": false
     },
@@ -40375,6 +49613,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Seize (someone) by legal authority and take into custody.",
       "cluster": "cluster_17",
       "day": 17,
+      "phonetic_distractors": [
+        "test",
+        "pest",
+        "chest",
+        "nest",
+        "west"
+      ],
       "fav": false,
       "known": false
     },
@@ -40423,6 +49668,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "At or to a high degree or level.",
       "cluster": "cluster_17",
       "day": 17,
+      "phonetic_distractors": [
+        "wiley",
+        "holy",
+        "holly",
+        "healthy",
+        "valley"
+      ],
       "fav": false,
       "known": false
     },
@@ -40448,6 +49700,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "A large number of people gathered together in a disorganized or unruly way.",
       "cluster": "cluster_17",
       "day": 17,
+      "phonetic_distractors": [
+        "crown",
+        "crude",
+        "proud",
+        "cloud",
+        "cross"
+      ],
       "fav": false,
       "known": false
     },
@@ -40496,6 +49755,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "The capacity to have an effect on the character, development, or behavior of someone or something.",
       "cluster": "cluster_17",
       "day": 17,
+      "phonetic_distractors": [
+        "influx",
+        "fluent",
+        "inflation",
+        "fluency",
+        "infants"
+      ],
       "fav": false,
       "known": false
     },
@@ -40520,6 +49786,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To share information with others by speaking, writing, moving your body, or using other signals.",
       "cluster": "cluster_17",
       "day": 17,
+      "phonetic_distractors": [
+        "community",
+        "communication",
+        "communities",
+        "domesticate",
+        "component"
+      ],
       "fav": false,
       "known": false
     },
@@ -40544,6 +49817,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "A line of words printed in large letters as the title of a story in a newspaper.",
       "cluster": "cluster_17",
       "day": 17,
+      "phonetic_distractors": [
+        "deadline",
+        "airline",
+        "helen",
+        "healthy",
+        "timeline"
+      ],
       "fav": false,
       "known": false
     },
@@ -40592,6 +49872,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "A planned route or journey.",
       "cluster": "cluster_17",
       "day": 17,
+      "phonetic_distractors": [
+        "literary",
+        "scenario",
+        "temporary",
+        "literacy",
+        "invest"
+      ],
       "fav": false,
       "known": false
     },
@@ -40616,6 +49903,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Take (another person's property) without permission or legal right.",
       "cluster": "cluster_18",
       "day": 18,
+      "phonetic_distractors": [
+        "steam",
+        "style",
+        "still",
+        "seal",
+        "steve"
+      ],
       "fav": false,
       "known": false
     },
@@ -40642,6 +49936,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_18_1",
       "cluster": "cluster_18",
       "day": 18,
+      "phonetic_distractors": [
+        "toner",
+        "inner",
+        "donor",
+        "over",
+        "owned"
+      ],
       "fav": false,
       "known": false
     },
@@ -40668,6 +49969,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_18_2",
       "cluster": "cluster_18",
       "day": 18,
+      "phonetic_distractors": [
+        "guides",
+        "gods",
+        "woods",
+        "guide",
+        "should"
+      ],
       "fav": false,
       "known": false
     },
@@ -40716,6 +50024,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To cause someone to suffer for doing something wrong.",
       "cluster": "cluster_18",
       "day": 18,
+      "phonetic_distractors": [
+        "analyze",
+        "penalty",
+        "reynolds",
+        "panels",
+        "penalties"
+      ],
       "fav": false,
       "known": false
     },
@@ -40742,6 +50057,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_18_5",
       "cluster": "cluster_18",
       "day": 18,
+      "phonetic_distractors": [
+        "miss",
+        "mic",
+        "math",
+        "mill",
+        "mere"
+      ],
       "fav": false,
       "known": false
     },
@@ -40768,6 +50090,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_18_6",
       "cluster": "cluster_18",
       "day": 18,
+      "phonetic_distractors": [
+        "fear",
+        "score",
+        "fair",
+        "severe",
+        "store"
+      ],
       "fav": false,
       "known": false
     },
@@ -40794,6 +50123,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_18_7",
       "cluster": "cluster_18",
       "day": 18,
+      "phonetic_distractors": [
+        "optimal",
+        "optimum",
+        "optical",
+        "optics",
+        "writings"
+      ],
       "fav": false,
       "known": false
     },
@@ -40818,6 +50154,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "In a way that leaves no doubt.",
       "cluster": "cluster_18",
       "day": 18,
+      "phonetic_distractors": [
+        "frequently",
+        "equivalent",
+        "inequality",
+        "inextricably",
+        "inevitably"
+      ],
       "fav": false,
       "known": false
     },
@@ -40844,6 +50187,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_18_9",
       "cluster": "cluster_18",
       "day": 18,
+      "phonetic_distractors": [
+        "theoretical",
+        "symmetrical",
+        "vehicle",
+        "magical",
+        "graphical"
+      ],
       "fav": false,
       "known": false
     },
@@ -40870,6 +50220,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "An amount that has to be paid or spent to buy or obtain something.",
       "cluster": "cluster_19",
       "day": 19,
+      "phonetic_distractors": [
+        "coast",
+        "cart",
+        "casa",
+        "cast",
+        "caught"
+      ],
       "fav": false,
       "known": false
     },
@@ -40896,6 +50253,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_19_1",
       "cluster": "cluster_19",
       "day": 19,
+      "phonetic_distractors": [
+        "mind",
+        "wild",
+        "filed",
+        "child",
+        "mile"
+      ],
       "fav": false,
       "known": false
     },
@@ -40920,6 +50284,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "An expert who studies or works in one of the sciences.",
       "cluster": "cluster_19",
       "day": 19,
+      "phonetic_distractors": [
+        "scientific",
+        "consist",
+        "giants",
+        "agents",
+        "soonest"
+      ],
       "fav": false,
       "known": false
     },
@@ -40946,6 +50317,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_19_3",
       "cluster": "cluster_19",
       "day": 19,
+      "phonetic_distractors": [
+        "statute",
+        "staff",
+        "stats",
+        "stan",
+        "attach"
+      ],
       "fav": false,
       "known": false
     },
@@ -40970,6 +50348,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To examine a crime, problem, statement, etc. carefully to discover the truth.",
       "cluster": "cluster_19",
       "day": 19,
+      "phonetic_distractors": [
+        "investigator",
+        "investigators",
+        "investment",
+        "investigation",
+        "domesticate"
+      ],
       "fav": false,
       "known": false
     },
@@ -40995,6 +50380,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_19_5",
       "cluster": "cluster_19",
       "day": 19,
+      "phonetic_distractors": [
+        "dialogue",
+        "dialog",
+        "finest",
+        "minus",
+        "connoisseur"
+      ],
       "fav": false,
       "known": false
     },
@@ -41019,6 +50411,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "The use of largely automatic equipment in a system of manufacturing or other production process.",
       "cluster": "cluster_19",
       "day": 19,
+      "phonetic_distractors": [
+        "animation",
+        "estimation",
+        "automated",
+        "innovation",
+        "irrigation"
+      ],
       "fav": false,
       "known": false
     },
@@ -41045,6 +50444,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_19_7",
       "cluster": "cluster_19",
       "day": 19,
+      "phonetic_distractors": [
+        "oversleep",
+        "overnight",
+        "pcs",
+        "mercy",
+        "versus"
+      ],
       "fav": false,
       "known": false
     },
@@ -41071,6 +50477,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_19_8",
       "cluster": "cluster_19",
       "day": 19,
+      "phonetic_distractors": [
+        "starvation",
+        "taxation",
+        "salvation",
+        "mitigation",
+        "sanction"
+      ],
       "fav": false,
       "known": false
     },
@@ -41095,6 +50508,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Unity or agreement of feeling or action, especially among individuals with a common interest.",
       "cluster": "cluster_19",
       "day": 19,
+      "phonetic_distractors": [
+        "volatility",
+        "popularity",
+        "prosperity",
+        "celebrate",
+        "salinity"
+      ],
       "fav": false,
       "known": false
     },
@@ -41119,6 +50539,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To watch carefully the way something happens or the way someone does something.",
       "cluster": "cluster_20",
       "day": 20,
+      "phonetic_distractors": [
+        "above",
+        "deserve",
+        "reserve",
+        "conserve",
+        "suburb"
+      ],
       "fav": false,
       "known": false
     },
@@ -41143,6 +50570,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To say exactly what something means.",
       "cluster": "cluster_20",
       "day": 20,
+      "phonetic_distractors": [
+        "design",
+        "divine",
+        "device",
+        "defeat",
+        "defend"
+      ],
       "fav": false,
       "known": false
     },
@@ -41167,6 +50601,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "At a fast speed; rapidly.",
       "cluster": "cluster_20",
       "day": 20,
+      "phonetic_distractors": [
+        "clearly",
+        "quilt",
+        "weekly",
+        "wiki",
+        "widely"
+      ],
       "fav": false,
       "known": false
     },
@@ -41193,6 +50634,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_20_3",
       "cluster": "cluster_20",
       "day": 20,
+      "phonetic_distractors": [
+        "cheap",
+        "char",
+        "chip",
+        "pop",
+        "top"
+      ],
       "fav": false,
       "known": false
     },
@@ -41219,6 +50667,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_20_4",
       "cluster": "cluster_20",
       "day": 20,
+      "phonetic_distractors": [
+        "asked",
+        "debt",
+        "assess",
+        "cell",
+        "acid"
+      ],
       "fav": false,
       "known": false
     },
@@ -41245,6 +50700,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_20_5",
       "cluster": "cluster_20",
       "day": 20,
+      "phonetic_distractors": [
+        "exterior",
+        "ontario",
+        "entry",
+        "increase",
+        "entire"
+      ],
       "fav": false,
       "known": false
     },
@@ -41268,6 +50730,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_20_6",
       "cluster": "cluster_20",
       "day": 20,
+      "phonetic_distractors": [
+        "asset",
+        "flood",
+        "seed",
+        "castle",
+        "isa"
+      ],
       "fav": false,
       "known": false
     },
@@ -41293,6 +50762,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_20_7",
       "cluster": "cluster_20",
       "day": 20,
+      "phonetic_distractors": [
+        "prison",
+        "roman",
+        "rosa",
+        "chosen",
+        "broken"
+      ],
       "fav": false,
       "known": false
     },
@@ -41317,6 +50793,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Tending to cause harm.",
       "cluster": "cluster_20",
       "day": 20,
+      "phonetic_distractors": [
+        "instrumental",
+        "monumental",
+        "tremendous",
+        "supplemental",
+        "represented"
+      ],
       "fav": false,
       "known": false
     },
@@ -41343,6 +50826,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_20_9",
       "cluster": "cluster_20",
       "day": 20,
+      "phonetic_distractors": [
+        "congestion",
+        "consensus",
+        "congested",
+        "constituency",
+        "conditional"
+      ],
       "fav": false,
       "known": false
     },
@@ -41390,6 +50880,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "The action of buying and selling goods and services.",
       "cluster": "cluster_21",
       "day": 21,
+      "phonetic_distractors": [
+        "trait",
+        "train",
+        "trace",
+        "trained",
+        "trail"
+      ],
       "fav": false,
       "known": false
     },
@@ -41416,6 +50913,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_21_2",
       "cluster": "cluster_21",
       "day": 21,
+      "phonetic_distractors": [
+        "wrist",
+        "repeat",
+        "defeat",
+        "roast",
+        "relieve"
+      ],
       "fav": false,
       "known": false
     },
@@ -41464,6 +50968,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Movement of people to a new area or country in order to find work or better living conditions.",
       "cluster": "cluster_21",
       "day": 21,
+      "phonetic_distractors": [
+        "migrate",
+        "citation",
+        "violation",
+        "regression",
+        "duration"
+      ],
       "fav": false,
       "known": false
     },
@@ -41490,6 +51001,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_21_5",
       "cluster": "cluster_21",
       "day": 21,
+      "phonetic_distractors": [
+        "flavor",
+        "greater",
+        "layer",
+        "laser",
+        "labour"
+      ],
       "fav": false,
       "known": false
     },
@@ -41514,6 +51032,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "An accepted standard or a way of behaving or doing things that most people agree with.",
       "cluster": "cluster_21",
       "day": 21,
+      "phonetic_distractors": [
+        "form",
+        "north",
+        "warm",
+        "farm",
+        "chore"
+      ],
       "fav": false,
       "known": false
     },
@@ -41540,6 +51065,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_21_7",
       "cluster": "cluster_21",
       "day": 21,
+      "phonetic_distractors": [
+        "strategies",
+        "status",
+        "tragedy",
+        "astrology",
+        "travel"
+      ],
       "fav": false,
       "known": false
     },
@@ -41564,6 +51096,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "The language or dialect spoken by the ordinary people in a particular country or region.",
       "cluster": "cluster_21",
       "day": 21,
+      "phonetic_distractors": [
+        "particular",
+        "circular",
+        "vertical",
+        "molecular",
+        "popular"
+      ],
       "fav": false,
       "known": false
     },
@@ -41613,6 +51152,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "With an ability to express oneself easily and articulately.",
       "cluster": "cluster_22",
       "day": 22,
+      "phonetic_distractors": [
+        "fluency",
+        "efficiently",
+        "recently",
+        "currently",
+        "frequently"
+      ],
       "fav": false,
       "known": false
     },
@@ -41637,6 +51183,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "All the words known and used by a particular person, or all the words that exist in a particular language.",
       "cluster": "cluster_22",
       "day": 22,
+      "phonetic_distractors": [
+        "feb",
+        "february",
+        "vernacular",
+        "laboratory",
+        "dictionary"
+      ],
       "fav": false,
       "known": false
     },
@@ -41661,6 +51214,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "An event at which objects such as paintings are shown to the public.",
       "cluster": "cluster_22",
       "day": 22,
+      "phonetic_distractors": [
+        "expedition",
+        "erudition",
+        "coalition",
+        "expiration",
+        "acquisition"
+      ],
       "fav": false,
       "known": false
     },
@@ -41685,6 +51245,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To change the place where you live or work.",
       "cluster": "cluster_22",
       "day": 22,
+      "phonetic_distractors": [
+        "mood",
+        "movie",
+        "moon",
+        "match",
+        "rule"
+      ],
       "fav": false,
       "known": false
     },
@@ -41709,6 +51276,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "The ability to keep doing something difficult, unpleasant, or painful for a long time.",
       "cluster": "cluster_22",
       "day": 22,
+      "phonetic_distractors": [
+        "entrance",
+        "endless",
+        "deterrence",
+        "audience",
+        "anyone"
+      ],
       "fav": false,
       "known": false
     },
@@ -41733,6 +51307,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "A formal statement of the rules on which a subject of study is based or of ideas that are suggested to explain a fact or event.",
       "cluster": "cluster_22",
       "day": 22,
+      "phonetic_distractors": [
+        "three",
+        "theories",
+        "busy",
+        "fear",
+        "degree"
+      ],
       "fav": false,
       "known": false
     },
@@ -41757,6 +51338,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To receive money, property, or a title as an heir at the death of the previous holder.",
       "cluster": "cluster_22",
       "day": 22,
+      "phonetic_distractors": [
+        "invest",
+        "invent",
+        "interpret",
+        "insect",
+        "incest"
+      ],
       "fav": false,
       "known": false
     },
@@ -41853,6 +51441,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To find information, a place, or an object, especially for the first time.",
       "cluster": "cluster_23",
       "day": 23,
+      "phonetic_distractors": [
+        "recover",
+        "discuss",
+        "discussed",
+        "disorder",
+        "discount"
+      ],
       "fav": false,
       "known": false
     },
@@ -41879,6 +51474,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_23_1",
       "cluster": "cluster_23",
       "day": 23,
+      "phonetic_distractors": [
+        "messenger",
+        "passage",
+        "manager",
+        "pastor",
+        "challenged"
+      ],
       "fav": false,
       "known": false
     },
@@ -41905,6 +51507,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_23_2",
       "cluster": "cluster_23",
       "day": 23,
+      "phonetic_distractors": [
+        "depict",
+        "apart",
+        "report",
+        "defeat",
+        "support"
+      ],
       "fav": false,
       "known": false
     },
@@ -41929,6 +51538,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Full of people, leaving little or no room for movement; packed.",
       "cluster": "cluster_23",
       "day": 23,
+      "phonetic_distractors": [
+        "credit",
+        "threaded",
+        "cradle",
+        "candle",
+        "treated"
+      ],
       "fav": false,
       "known": false
     },
@@ -41955,6 +51571,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_23_4",
       "cluster": "cluster_23",
       "day": 23,
+      "phonetic_distractors": [
+        "mixer",
+        "texture",
+        "mixed",
+        "picture",
+        "fixtures"
+      ],
       "fav": false,
       "known": false
     },
@@ -41980,6 +51603,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "An arrival or entry of large numbers of people or things.",
       "cluster": "cluster_23",
       "day": 23,
+      "phonetic_distractors": [
+        "influence",
+        "deluxe",
+        "index",
+        "infants",
+        "alex"
+      ],
       "fav": false,
       "known": false
     },
@@ -42004,6 +51634,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To develop gradually, especially from a simple to a more complex form.",
       "cluster": "cluster_23",
       "day": 23,
+      "phonetic_distractors": [
+        "involve",
+        "involved",
+        "solve",
+        "involves",
+        "valve"
+      ],
       "fav": false,
       "known": false
     },
@@ -42028,6 +51665,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "A line separating two political or geographical areas, especially countries.",
       "cluster": "cluster_23",
       "day": 23,
+      "phonetic_distractors": [
+        "board",
+        "bored",
+        "boards",
+        "barrier",
+        "bidder"
+      ],
       "fav": false,
       "known": false
     },
@@ -42053,6 +51697,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_23_8",
       "cluster": "cluster_23",
       "day": 23,
+      "phonetic_distractors": [
+        "pedestrian",
+        "festival",
+        "industrial",
+        "tutorial",
+        "parental"
+      ],
       "fav": false,
       "known": false
     },
@@ -42077,6 +51728,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "No longer produced or used; out of date.",
       "cluster": "cluster_23",
       "day": 23,
+      "phonetic_distractors": [
+        "absolute",
+        "absent",
+        "gasoline",
+        "athlete",
+        "receipt"
+      ],
       "fav": false,
       "known": false
     },
@@ -42148,6 +51806,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "With reference to a particular area or one's neighbourhood.",
       "cluster": "cluster_24",
       "day": 24,
+      "phonetic_distractors": [
+        "likely",
+        "totally",
+        "vocal",
+        "locale",
+        "lonely"
+      ],
       "fav": false,
       "known": false
     },
@@ -42174,6 +51839,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_24_3",
       "cluster": "cluster_24",
       "day": 24,
+      "phonetic_distractors": [
+        "psi",
+        "ski",
+        "kai",
+        "spy",
+        "chi"
+      ],
       "fav": false,
       "known": false
     },
@@ -42224,6 +51896,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_24_5",
       "cluster": "cluster_24",
       "day": 24,
+      "phonetic_distractors": [
+        "forestry",
+        "extra",
+        "forecast",
+        "artist",
+        "forest"
+      ],
       "fav": false,
       "known": false
     },
@@ -42248,6 +51927,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Any basic substance that is used in or produced by a reaction involving changes to atoms or molecules.",
       "cluster": "cluster_24",
       "day": 24,
+      "phonetic_distractors": [
+        "ethical",
+        "chronicle",
+        "physical",
+        "vehicle",
+        "jessica"
+      ],
       "fav": false,
       "known": false
     },
@@ -42274,6 +51960,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_24_7",
       "cluster": "cluster_24",
       "day": 24,
+      "phonetic_distractors": [
+        "late",
+        "light",
+        "drought",
+        "paint",
+        "taste"
+      ],
       "fav": false,
       "known": false
     },
@@ -42299,6 +51992,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_24_8",
       "cluster": "cluster_24",
       "day": 24,
+      "phonetic_distractors": [
+        "comic",
+        "comics",
+        "causing",
+        "cosmetic",
+        "commit"
+      ],
       "fav": false,
       "known": false
     },
@@ -42371,6 +52071,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To become completely well again after an illness or injury.",
       "cluster": "cluster_25",
       "day": 25,
+      "phonetic_distractors": [
+        "discover",
+        "river",
+        "mixture",
+        "rocket",
+        "relieve"
+      ],
       "fav": false,
       "known": false
     },
@@ -42397,6 +52104,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_25_2",
       "cluster": "cluster_25",
       "day": 25,
+      "phonetic_distractors": [
+        "rule",
+        "roof",
+        "room",
+        "wrote",
+        "ruth"
+      ],
       "fav": false,
       "known": false
     },
@@ -42421,6 +52135,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To control or be the person in charge of something, such as a country.",
       "cluster": "cluster_25",
       "day": 25,
+      "phonetic_distractors": [
+        "root",
+        "route",
+        "roof",
+        "fool",
+        "cool"
+      ],
       "fav": false,
       "known": false
     },
@@ -42445,6 +52166,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "The condition of being grossly fat or overweight.",
       "cluster": "cluster_25",
       "day": 25,
+      "phonetic_distractors": [
+        "density",
+        "busty",
+        "mobility",
+        "abc",
+        "ability"
+      ],
       "fav": false,
       "known": false
     },
@@ -42471,6 +52199,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_25_5",
       "cluster": "cluster_25",
       "day": 25,
+      "phonetic_distractors": [
+        "generic",
+        "domestic",
+        "aesthetic",
+        "synthetic",
+        "until"
+      ],
       "fav": false,
       "known": false
     },
@@ -42495,6 +52230,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "The presence in or introduction into the environment of a substance or thing that has harmful or poisonous effects.",
       "cluster": "cluster_25",
       "day": 25,
+      "phonetic_distractors": [
+        "solution",
+        "petition",
+        "position",
+        "evolution",
+        "possession"
+      ],
       "fav": false,
       "known": false
     },
@@ -42519,6 +52261,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To turn in a circular motion around a central point.",
       "cluster": "cluster_25",
       "day": 25,
+      "phonetic_distractors": [
+        "retail",
+        "roast",
+        "robot",
+        "estate",
+        "wrote"
+      ],
       "fav": false,
       "known": false
     },
@@ -42543,6 +52292,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To push or move something somewhere, often with a lot of force.",
       "cluster": "cluster_25",
       "day": 25,
+      "phonetic_distractors": [
+        "propose",
+        "parallel",
+        "prepare",
+        "arable",
+        "provide"
+      ],
       "fav": false,
       "known": false
     },
@@ -42567,6 +52323,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To use something in a way that helps you, often unfairly.",
       "cluster": "cluster_25",
       "day": 25,
+      "phonetic_distractors": [
+        "export",
+        "expert",
+        "explore",
+        "employ",
+        "split"
+      ],
       "fav": false,
       "known": false
     },
@@ -42593,6 +52356,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_26_0",
       "cluster": "cluster_26",
       "day": 26,
+      "phonetic_distractors": [
+        "define",
+        "divine",
+        "desire",
+        "device",
+        "disease"
+      ],
       "fav": false,
       "known": false
     },
@@ -42619,6 +52389,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_26_1",
       "cluster": "cluster_26",
       "day": 26,
+      "phonetic_distractors": [
+        "sour",
+        "psi",
+        "say",
+        "sea",
+        "sie"
+      ],
       "fav": false,
       "known": false
     },
@@ -42645,6 +52422,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_26_2",
       "cluster": "cluster_26",
       "day": 26,
+      "phonetic_distractors": [
+        "mission",
+        "marine",
+        "mean",
+        "motion",
+        "milan"
+      ],
       "fav": false,
       "known": false
     },
@@ -42671,6 +52455,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_26_3",
       "cluster": "cluster_26",
       "day": 26,
+      "phonetic_distractors": [
+        "cost",
+        "roast",
+        "most",
+        "cast",
+        "post"
+      ],
       "fav": false,
       "known": false
     },
@@ -42697,6 +52488,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_26_4",
       "cluster": "cluster_26",
       "day": 26,
+      "phonetic_distractors": [
+        "reception",
+        "exception",
+        "recession",
+        "section",
+        "percentage"
+      ],
       "fav": false,
       "known": false
     },
@@ -42747,6 +52545,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_26_6",
       "cluster": "cluster_26",
       "day": 26,
+      "phonetic_distractors": [
+        "action",
+        "mission",
+        "section",
+        "addiction",
+        "auction"
+      ],
       "fav": false,
       "known": false
     },
@@ -42795,6 +52600,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Something that exists and can be seen, felt, tasted, etc., especially something unusual or interesting.",
       "cluster": "cluster_26",
       "day": 26,
+      "phonetic_distractors": [
+        "punishment",
+        "contaminate",
+        "monopoly",
+        "monopolize",
+        "accommodate"
+      ],
       "fav": false,
       "known": false
     },
@@ -42819,6 +52631,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "The process of renovating and improving a house or district so that it conforms to middle-class taste.",
       "cluster": "cluster_26",
       "day": 26,
+      "phonetic_distractors": [
+        "identification",
+        "verification",
+        "specification",
+        "certification",
+        "optimization"
+      ],
       "fav": false,
       "known": false
     },
@@ -42843,6 +52662,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To design and/or create something that has never been made before.",
       "cluster": "cluster_27",
       "day": 27,
+      "phonetic_distractors": [
+        "invest",
+        "event",
+        "intent",
+        "insect",
+        "incest"
+      ],
       "fav": false,
       "known": false
     },
@@ -42867,6 +52693,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Liked or admired by many people or by a particular person or group.",
       "cluster": "cluster_27",
       "day": 27,
+      "phonetic_distractors": [
+        "regular",
+        "modular",
+        "polymer",
+        "parcel",
+        "people"
+      ],
       "fav": false,
       "known": false
     },
@@ -42891,6 +52724,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "All the animals, plants, rocks, etc. in the world and all the features, forces, and processes that happen or exist independently of people.",
       "cluster": "cluster_27",
       "day": 27,
+      "phonetic_distractors": [
+        "nurture",
+        "neighbor",
+        "teacher",
+        "newer",
+        "layer"
+      ],
       "fav": false,
       "known": false
     },
@@ -42915,6 +52755,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "A building in which people are legally held as a punishment for a crime.",
       "cluster": "cluster_27",
       "day": 27,
+      "phonetic_distractors": [
+        "frozen",
+        "poison",
+        "proven",
+        "ribbon",
+        "britain"
+      ],
       "fav": false,
       "known": false
     },
@@ -42939,6 +52786,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "protected against a particular disease by particular substances in the blood.",
       "cluster": "cluster_27",
       "day": 27,
+      "phonetic_distractors": [
+        "moon",
+        "reuse",
+        "commute",
+        "emotion",
+        "move"
+      ],
       "fav": false,
       "known": false
     },
@@ -42962,6 +52816,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_27_5",
       "cluster": "cluster_27",
       "day": 27,
+      "phonetic_distractors": [
+        "brain",
+        "breeze",
+        "browse",
+        "brand",
+        "iran"
+      ],
       "fav": false,
       "known": false
     },
@@ -42988,6 +52849,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_27_6",
       "cluster": "cluster_27",
       "day": 27,
+      "phonetic_distractors": [
+        "carrier",
+        "barry",
+        "border",
+        "breeze",
+        "breed"
+      ],
       "fav": false,
       "known": false
     },
@@ -43014,6 +52882,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_27_7",
       "cluster": "cluster_27",
       "day": 27,
+      "phonetic_distractors": [
+        "rural",
+        "novel",
+        "oral",
+        "carroll",
+        "coral"
+      ],
       "fav": false,
       "known": false
     },
@@ -43040,6 +52915,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Producing a great deal of profit.",
       "cluster": "cluster_27",
       "day": 27,
+      "phonetic_distractors": [
+        "decorative",
+        "narrative",
+        "creative",
+        "relative",
+        "alternative"
+      ],
       "fav": false,
       "known": false
     },
@@ -43064,6 +52946,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To compose the sequence of steps and moves for a performance of dance.",
       "cluster": "cluster_27",
       "day": 27,
+      "phonetic_distractors": [
+        "paragraph",
+        "photograph",
+        "paragraphs",
+        "program",
+        "geographic"
+      ],
       "fav": false,
       "known": false
     },
@@ -43090,6 +52979,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_28_0",
       "cluster": "cluster_28",
       "day": 28,
+      "phonetic_distractors": [
+        "truly",
+        "treaty",
+        "trail",
+        "rocky",
+        "mali"
+      ],
       "fav": false,
       "known": false
     },
@@ -43116,6 +53012,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Not done, seen, happening, etc. very often.",
       "cluster": "cluster_28",
       "day": 28,
+      "phonetic_distractors": [
+        "fair",
+        "share",
+        "fare",
+        "rep",
+        "bare"
+      ],
       "fav": false,
       "known": false
     },
@@ -43142,6 +53045,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_28_2",
       "cluster": "cluster_28",
       "day": 28,
+      "phonetic_distractors": [
+        "reason",
+        "origin",
+        "ruin",
+        "jun",
+        "roman"
+      ],
       "fav": false,
       "known": false
     },
@@ -43168,6 +53078,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_28_3",
       "cluster": "cluster_28",
       "day": 28,
+      "phonetic_distractors": [
+        "sally",
+        "valve",
+        "rally",
+        "highly",
+        "shallow"
+      ],
       "fav": false,
       "known": false
     },
@@ -43242,6 +53159,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_28_6",
       "cluster": "cluster_28",
       "day": 28,
+      "phonetic_distractors": [
+        "alternate",
+        "lucrative",
+        "punitive",
+        "iterative",
+        "interactive"
+      ],
       "fav": false,
       "known": false
     },
@@ -43266,6 +53190,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "The infliction or imposition of a penalty as retribution for an offense.",
       "cluster": "cluster_28",
       "day": 28,
+      "phonetic_distractors": [
+        "petition",
+        "commitment",
+        "sufficient",
+        "position",
+        "positions"
+      ],
       "fav": false,
       "known": false
     },
@@ -43292,6 +53223,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_28_8",
       "cluster": "cluster_28",
       "day": 28,
+      "phonetic_distractors": [
+        "equality",
+        "inequality",
+        "quality",
+        "humidity",
+        "security"
+      ],
       "fav": false,
       "known": false
     },
@@ -43316,6 +53254,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "As is certain to happen; unavoidably.",
       "cluster": "cluster_28",
       "day": 28,
+      "phonetic_distractors": [
+        "inventory",
+        "effectively",
+        "nationally",
+        "eventually",
+        "invisible"
+      ],
       "fav": false,
       "known": false
     },
@@ -43340,6 +53285,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "A picture made using paint.",
       "cluster": "cluster_29",
       "day": 29,
+      "phonetic_distractors": [
+        "pointing",
+        "dating",
+        "waiting",
+        "rating",
+        "ranging"
+      ],
       "fav": false,
       "known": false
     },
@@ -43388,6 +53340,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "a plan to show how much money a person or organization will earn and how much they will need or be able to spend.",
       "cluster": "cluster_29",
       "day": 29,
+      "phonetic_distractors": [
+        "commit",
+        "bit",
+        "buses",
+        "butt",
+        "judges"
+      ],
       "fav": false,
       "known": false
     },
@@ -43414,6 +53373,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_29_3",
       "cluster": "cluster_29",
       "day": 29,
+      "phonetic_distractors": [
+        "feed",
+        "seed",
+        "knead",
+        "wide",
+        "wheel"
+      ],
       "fav": false,
       "known": false
     },
@@ -43486,6 +53452,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "The suppression or prohibition of any parts of books, films, news, etc. that are considered obscene, politically unacceptable, or a threat to security.",
       "cluster": "cluster_29",
       "day": 29,
+      "phonetic_distractors": [
+        "sponsorship",
+        "scholarship",
+        "sensory",
+        "sensors",
+        "ownership"
+      ],
       "fav": false,
       "known": false
     },
@@ -43512,6 +53485,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_29_7",
       "cluster": "cluster_29",
       "day": 29,
+      "phonetic_distractors": [
+        "meter",
+        "matter",
+        "meets",
+        "meta",
+        "meeting"
+      ],
       "fav": false,
       "known": false
     },
@@ -43585,6 +53565,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_30_0",
       "cluster": "cluster_30",
       "day": 30,
+      "phonetic_distractors": [
+        "arrest",
+        "test",
+        "paste",
+        "chest",
+        "nest"
+      ],
       "fav": false,
       "known": false
     },
@@ -43611,6 +53598,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_30_1",
       "cluster": "cluster_30",
       "day": 30,
+      "phonetic_distractors": [
+        "cake",
+        "break",
+        "make",
+        "book",
+        "bike"
+      ],
       "fav": false,
       "known": false
     },
@@ -43658,6 +53652,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "The commercial organization and operation of holidays and visits to places of interest.",
       "cluster": "cluster_30",
       "day": 30,
+      "phonetic_distractors": [
+        "prison",
+        "resume",
+        "touring",
+        "triple",
+        "terrorism"
+      ],
       "fav": false,
       "known": false
     },
@@ -43681,6 +53682,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_30_4",
       "cluster": "cluster_30",
       "day": 30,
+      "phonetic_distractors": [
+        "promise",
+        "robust",
+        "crisis",
+        "closest",
+        "promising"
+      ],
       "fav": false,
       "known": false
     },
@@ -43729,6 +53737,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Behavior involving physical force intended to hurt, damage, or kill.",
       "cluster": "cluster_30",
       "day": 30,
+      "phonetic_distractors": [
+        "violent",
+        "violin",
+        "silence",
+        "balance",
+        "alliance"
+      ],
       "fav": false,
       "known": false
     },
@@ -43777,6 +53792,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To sign or give formal consent to a treaty, contract, or agreement, making it officially valid.",
       "cluster": "cluster_30",
       "day": 30,
+      "phonetic_distractors": [
+        "notify",
+        "satisfy",
+        "battle",
+        "modify",
+        "satellite"
+      ],
       "fav": false,
       "known": false
     },
@@ -43803,6 +53825,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_30_9",
       "cluster": "cluster_30",
       "day": 30,
+      "phonetic_distractors": [
+        "assess",
+        "ups",
+        "kiss",
+        "above",
+        "bit"
+      ],
       "fav": false,
       "known": false
     },
@@ -43851,6 +53880,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "A large area of land covered with trees and plants.",
       "cluster": "cluster_31",
       "day": 31,
+      "phonetic_distractors": [
+        "forced",
+        "forecast",
+        "force",
+        "aug",
+        "frost"
+      ],
       "fav": false,
       "known": false
     },
@@ -43877,6 +53913,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_31_2",
       "cluster": "cluster_31",
       "day": 31,
+      "phonetic_distractors": [
+        "guide",
+        "tidy",
+        "wide",
+        "died",
+        "hide"
+      ],
       "fav": false,
       "known": false
     },
@@ -43903,6 +53946,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_31_3",
       "cluster": "cluster_31",
       "day": 31,
+      "phonetic_distractors": [
+        "fresh",
+        "pepper",
+        "treasure",
+        "prayers",
+        "prep"
+      ],
       "fav": false,
       "known": false
     },
@@ -43929,6 +53979,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_31_4",
       "cluster": "cluster_31",
       "day": 31,
+      "phonetic_distractors": [
+        "modified",
+        "model",
+        "models",
+        "monitor",
+        "ratify"
+      ],
       "fav": false,
       "known": false
     },
@@ -43955,6 +54012,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_31_5",
       "cluster": "cluster_31",
       "day": 31,
+      "phonetic_distractors": [
+        "latest",
+        "deficit",
+        "database",
+        "artist",
+        "dayton"
+      ],
       "fav": false,
       "known": false
     },
@@ -43979,6 +54043,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To judge or determine the significance, worth, or quality of.",
       "cluster": "cluster_31",
       "day": 31,
+      "phonetic_distractors": [
+        "evaluating",
+        "evaluation",
+        "values",
+        "valued",
+        "vacuum"
+      ],
       "fav": false,
       "known": false
     },
@@ -44028,6 +54099,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_31_8",
       "cluster": "cluster_31",
       "day": 31,
+      "phonetic_distractors": [
+        "submitted",
+        "submission",
+        "vulnerable",
+        "sustainable",
+        "symmetrical"
+      ],
       "fav": false,
       "known": false
     },
@@ -44054,6 +54132,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_31_9",
       "cluster": "cluster_31",
       "day": 31,
+      "phonetic_distractors": [
+        "colloquial",
+        "journalism",
+        "criterion",
+        "acquisition",
+        "bulgarian"
+      ],
       "fav": false,
       "known": false
     },
@@ -44078,6 +54163,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "A member of your family.",
       "cluster": "cluster_32",
       "day": 32,
+      "phonetic_distractors": [
+        "negative",
+        "relic",
+        "narrative",
+        "positive",
+        "editing"
+      ],
       "fav": false,
       "known": false
     },
@@ -44104,6 +54196,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_32_1",
       "cluster": "cluster_32",
       "day": 32,
+      "phonetic_distractors": [
+        "mild",
+        "bind",
+        "signed",
+        "minor",
+        "lined"
+      ],
       "fav": false,
       "known": false
     },
@@ -44128,6 +54227,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "a large system consisting of many similar parts that are connected together to allow movement or communication between or along the parts.",
       "cluster": "cluster_32",
       "day": 32,
+      "phonetic_distractors": [
+        "artwork",
+        "homework",
+        "notebook",
+        "edward",
+        "never"
+      ],
       "fav": false,
       "known": false
     },
@@ -44152,6 +54258,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "A television station.",
       "cluster": "cluster_32",
       "day": 32,
+      "phonetic_distractors": [
+        "chapel",
+        "panel",
+        "battle",
+        "castle",
+        "candle"
+      ],
       "fav": false,
       "known": false
     },
@@ -44176,6 +54289,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To train someone to obey rules or a code of behavior, using punishment to correct disobedience.",
       "cluster": "cluster_32",
       "day": 32,
+      "phonetic_distractors": [
+        "display",
+        "displayed",
+        "reception",
+        "decision",
+        "discussion"
+      ],
       "fav": false,
       "known": false
     },
@@ -44202,6 +54322,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_32_5",
       "cluster": "cluster_32",
       "day": 32,
+      "phonetic_distractors": [
+        "forest",
+        "podcast",
+        "format",
+        "forced",
+        "broadcast"
+      ],
       "fav": false,
       "known": false
     },
@@ -44226,6 +54353,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "A person's child or children; the young of an animal or plant.",
       "cluster": "cluster_32",
       "day": 32,
+      "phonetic_distractors": [
+        "string",
+        "flooring",
+        "desperate",
+        "springs",
+        "springer"
+      ],
       "fav": false,
       "known": false
     },
@@ -44250,6 +54384,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To publicly display a work of art or item of interest in an art gallery or museum.",
       "cluster": "cluster_32",
       "day": 32,
+      "phonetic_distractors": [
+        "exist",
+        "examine",
+        "exists",
+        "exact",
+        "exempt"
+      ],
       "fav": false,
       "known": false
     },
@@ -44325,6 +54466,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_33_0",
       "cluster": "cluster_33",
       "day": 33,
+      "phonetic_distractors": [
+        "understood",
+        "understand",
+        "industry",
+        "mandatory",
+        "consistent"
+      ],
       "fav": false,
       "known": false
     },
@@ -44350,6 +54498,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_33_1",
       "cluster": "cluster_33",
       "day": 33,
+      "phonetic_distractors": [
+        "smell",
+        "spell",
+        "soil",
+        "shell",
+        "sole"
+      ],
       "fav": false,
       "known": false
     },
@@ -44376,6 +54531,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_33_2",
       "cluster": "cluster_33",
       "day": 33,
+      "phonetic_distractors": [
+        "rule",
+        "roof",
+        "room",
+        "wrote",
+        "ruth"
+      ],
       "fav": false,
       "known": false
     },
@@ -44400,6 +54562,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "A person who has surpassed all rivals in a sporting contest or other competition.",
       "cluster": "cluster_33",
       "day": 33,
+      "phonetic_distractors": [
+        "hampton",
+        "famine",
+        "campus",
+        "salmon",
+        "cameron"
+      ],
       "fav": false,
       "known": false
     },
@@ -44424,6 +54593,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Features belonging to the culture of a particular society, such as traditions, languages, or buildings, that were created in the past and still have historical importance.",
       "cluster": "cluster_33",
       "day": 33,
+      "phonetic_distractors": [
+        "shortage",
+        "helena",
+        "marilyn",
+        "horrible",
+        "merit"
+      ],
       "fav": false,
       "known": false
     },
@@ -44450,6 +54626,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_33_5",
       "cluster": "cluster_33",
       "day": 33,
+      "phonetic_distractors": [
+        "stabilize",
+        "unable",
+        "label",
+        "tables",
+        "station"
+      ],
       "fav": false,
       "known": false
     },
@@ -44476,6 +54659,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_33_6",
       "cluster": "cluster_33",
       "day": 33,
+      "phonetic_distractors": [
+        "trend",
+        "french",
+        "train",
+        "treasure",
+        "trained"
+      ],
       "fav": false,
       "known": false
     },
@@ -44502,6 +54692,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_33_7",
       "cluster": "cluster_33",
       "day": 33,
+      "phonetic_distractors": [
+        "surface",
+        "service",
+        "purpose",
+        "topless",
+        "circus"
+      ],
       "fav": false,
       "known": false
     },
@@ -44549,6 +54746,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "The action of supporting or opposing a particular person or thing in an unfair way.",
       "cluster": "cluster_33",
       "day": 33,
+      "phonetic_distractors": [
+        "bytes",
+        "bus",
+        "bios",
+        "bikes",
+        "baths"
+      ],
       "fav": false,
       "known": false
     },
@@ -44573,6 +54777,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "A system of vehicles, such as buses, trains, etc. for getting from one place to another.",
       "cluster": "cluster_34",
       "day": 34,
+      "phonetic_distractors": [
+        "transform",
+        "passport",
+        "transparent",
+        "export",
+        "translate"
+      ],
       "fav": false,
       "known": false
     },
@@ -44599,6 +54810,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_34_1",
       "cluster": "cluster_34",
       "day": 34,
+      "phonetic_distractors": [
+        "work",
+        "marie",
+        "were",
+        "worthy",
+        "worse"
+      ],
       "fav": false,
       "known": false
     },
@@ -44625,6 +54843,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_34_2",
       "cluster": "cluster_34",
       "day": 34,
+      "phonetic_distractors": [
+        "memorial",
+        "maternal",
+        "serial",
+        "bacterial",
+        "tutorial"
+      ],
       "fav": false,
       "known": false
     },
@@ -44649,6 +54874,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Having a great deal to do; keeping occupied.",
       "cluster": "cluster_34",
       "day": 34,
+      "phonetic_distractors": [
+        "billy",
+        "biz",
+        "theory",
+        "build",
+        "belief"
+      ],
       "fav": false,
       "known": false
     },
@@ -44674,6 +54906,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Relating to the ideas, customs, and social behavior of a society.",
       "cluster": "cluster_34",
       "day": 34,
+      "phonetic_distractors": [
+        "culture",
+        "colorful",
+        "cultures",
+        "coverage",
+        "collision"
+      ],
       "fav": false,
       "known": false
     },
@@ -44698,6 +54937,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To look at or consider a person or thing carefully in order to discover something about them.",
       "cluster": "cluster_34",
       "day": 34,
+      "phonetic_distractors": [
+        "exams",
+        "examining",
+        "exhibit",
+        "exact",
+        "exempt"
+      ],
       "fav": false,
       "known": false
     },
@@ -44724,6 +54970,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_34_6",
       "cluster": "cluster_34",
       "day": 34,
+      "phonetic_distractors": [
+        "values",
+        "value",
+        "valued",
+        "volume",
+        "victim"
+      ],
       "fav": false,
       "known": false
     },
@@ -44749,6 +55002,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_34_7",
       "cluster": "cluster_34",
       "day": 34,
+      "phonetic_distractors": [
+        "rotate",
+        "tale",
+        "real",
+        "email",
+        "recall"
+      ],
       "fav": false,
       "known": false
     },
@@ -44798,6 +55058,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_34_9",
       "cluster": "cluster_34",
       "day": 34,
+      "phonetic_distractors": [
+        "chronological",
+        "accessibility",
+        "archaeological",
+        "sportsmanship",
+        "psychoanalysis"
+      ],
       "fav": false,
       "known": false
     },
@@ -44848,6 +55115,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_35_1",
       "cluster": "cluster_35",
       "day": 35,
+      "phonetic_distractors": [
+        "treat",
+        "stream",
+        "straight",
+        "screen",
+        "trait"
+      ],
       "fav": false,
       "known": false
     },
@@ -44872,6 +55146,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To win against someone in a fight, war, or competition.",
       "cluster": "cluster_35",
       "day": 35,
+      "phonetic_distractors": [
+        "delete",
+        "receipt",
+        "define",
+        "disease",
+        "lift"
+      ],
       "fav": false,
       "known": false
     },
@@ -44898,6 +55179,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_35_3",
       "cluster": "cluster_35",
       "day": 35,
+      "phonetic_distractors": [
+        "crossing",
+        "drill",
+        "drilling",
+        "dating",
+        "growing"
+      ],
       "fav": false,
       "known": false
     },
@@ -44924,6 +55212,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_35_4",
       "cluster": "cluster_35",
       "day": 35,
+      "phonetic_distractors": [
+        "liabilities",
+        "stability",
+        "facility",
+        "visibility",
+        "eligibility"
+      ],
       "fav": false,
       "known": false
     },
@@ -44948,6 +55243,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "The health, happiness, and fortunes of a person or group.",
       "cluster": "cluster_35",
       "day": 35,
+      "phonetic_distractors": [
+        "airfare",
+        "wealth",
+        "therefore",
+        "wolf",
+        "wells"
+      ],
       "fav": false,
       "known": false
     },
@@ -44974,6 +55276,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_35_6",
       "cluster": "cluster_35",
       "day": 35,
+      "phonetic_distractors": [
+        "consecutive",
+        "decorative",
+        "lucrative",
+        "informative",
+        "respective"
+      ],
       "fav": false,
       "known": false
     },
@@ -45000,6 +55309,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_35_7",
       "cluster": "cluster_35",
       "day": 35,
+      "phonetic_distractors": [
+        "sprint",
+        "reprint",
+        "deterrent",
+        "reprints",
+        "desperate"
+      ],
       "fav": false,
       "known": false
     },
@@ -45025,6 +55341,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "The act of spreading something, especially information, widely.",
       "cluster": "cluster_35",
       "day": 35,
+      "phonetic_distractors": [
+        "determination",
+        "destination",
+        "disseminate",
+        "elimination",
+        "discrimination"
+      ],
       "fav": false,
       "known": false
     },
@@ -45051,6 +55374,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_35_9",
       "cluster": "cluster_35",
       "day": 35,
+      "phonetic_distractors": [
+        "anonymous",
+        "conscious",
+        "animal",
+        "economy",
+        "automate"
+      ],
       "fav": false,
       "known": false
     },
@@ -45101,6 +55431,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_36_1",
       "cluster": "cluster_36",
       "day": 36,
+      "phonetic_distractors": [
+        "stay",
+        "state",
+        "stayed",
+        "stake",
+        "sage"
+      ],
       "fav": false,
       "known": false
     },
@@ -45125,6 +55462,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To look through a book or magazine without reading everything, or to walk around a shop looking at several things.",
       "cluster": "cluster_36",
       "day": 36,
+      "phonetic_distractors": [
+        "breeze",
+        "brown",
+        "crowd",
+        "drought",
+        "brain"
+      ],
       "fav": false,
       "known": false
     },
@@ -45151,6 +55495,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_36_3",
       "cluster": "cluster_36",
       "day": 36,
+      "phonetic_distractors": [
+        "and",
+        "found",
+        "find",
+        "funny",
+        "mind"
+      ],
       "fav": false,
       "known": false
     },
@@ -45175,6 +55526,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "An illegal act; a crime.",
       "cluster": "cluster_36",
       "day": 36,
+      "phonetic_distractors": [
+        "fence",
+        "assess",
+        "affairs",
+        "affects",
+        "defence"
+      ],
       "fav": false,
       "known": false
     },
@@ -45199,6 +55557,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "The art of drawing solid objects on a two-dimensional surface so as to give the right impression of their height, width, depth, and position in relation to each other when viewed from a particular point.",
       "cluster": "cluster_36",
       "day": 36,
+      "phonetic_distractors": [
+        "respective",
+        "prospective",
+        "respected",
+        "directive",
+        "protective"
+      ],
       "fav": false,
       "known": false
     },
@@ -45223,6 +55588,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To have formal discussions with someone in order to reach an agreement with them.",
       "cluster": "cluster_36",
       "day": 36,
+      "phonetic_distractors": [
+        "alleviate",
+        "associate",
+        "affiliate",
+        "negotiation",
+        "appreciate"
+      ],
       "fav": false,
       "known": false
     },
@@ -45249,6 +55621,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_36_7",
       "cluster": "cluster_36",
       "day": 36,
+      "phonetic_distractors": [
+        "stagnation",
+        "salvation",
+        "innovation",
+        "cooperation",
+        "attraction"
+      ],
       "fav": false,
       "known": false
     },
@@ -45273,6 +55652,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Imprison or confine.",
       "cluster": "cluster_36",
       "day": 36,
+      "phonetic_distractors": [
+        "incorporate",
+        "increased",
+        "interstate",
+        "incorporated",
+        "corporate"
+      ],
       "fav": false,
       "known": false
     },
@@ -45346,6 +55732,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_37_1",
       "cluster": "cluster_37",
       "day": 37,
+      "phonetic_distractors": [
+        "justice",
+        "coastal",
+        "justin",
+        "custody",
+        "system"
+      ],
       "fav": false,
       "known": false
     },
@@ -45370,6 +55763,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "An extended period of leisure and recreation, especially one spent away from home or in traveling.",
       "cluster": "cluster_37",
       "day": 37,
+      "phonetic_distractors": [
+        "solid",
+        "holland",
+        "knowledge",
+        "flood",
+        "policy"
+      ],
       "fav": false,
       "known": false
     },
@@ -45394,6 +55794,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "to use something again.",
       "cluster": "cluster_37",
       "day": 37,
+      "phonetic_distractors": [
+        "review",
+        "remove",
+        "reduce",
+        "reviewed",
+        "reviews"
+      ],
       "fav": false,
       "known": false
     },
@@ -45444,6 +55851,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_37_5",
       "cluster": "cluster_37",
       "day": 37,
+      "phonetic_distractors": [
+        "referral",
+        "ritual",
+        "eternal",
+        "reverse",
+        "liberal"
+      ],
       "fav": false,
       "known": false
     },
@@ -45468,6 +55882,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To introduce changes and new ideas.",
       "cluster": "cluster_37",
       "day": 37,
+      "phonetic_distractors": [
+        "innovative",
+        "indicate",
+        "invite",
+        "innovation",
+        "invest"
+      ],
       "fav": false,
       "known": false
     },
@@ -45494,6 +55915,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_37_7",
       "cluster": "cluster_37",
       "day": 37,
+      "phonetic_distractors": [
+        "conscious",
+        "cognitive",
+        "coalition",
+        "technician",
+        "partition"
+      ],
       "fav": false,
       "known": false
     },
@@ -45518,6 +55946,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Believing in or based on the principle that all people are equal.",
       "cluster": "cluster_37",
       "day": 37,
+      "phonetic_distractors": [
+        "vegetarian",
+        "bulgarian",
+        "humanitarian",
+        "pedestrian",
+        "protection"
+      ],
       "fav": false,
       "known": false
     },
@@ -45542,6 +55977,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "A solution or remedy for all difficulties or diseases.",
       "cluster": "cluster_37",
       "day": 37,
+      "phonetic_distractors": [
+        "policy",
+        "tennessee",
+        "andrea",
+        "fancy",
+        "nancy"
+      ],
       "fav": false,
       "known": false
     },
@@ -45565,6 +56007,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Involving or relating to the use of computer technology.",
       "cluster": "cluster_38",
       "day": 38,
+      "phonetic_distractors": [
+        "original",
+        "visible",
+        "double",
+        "dental",
+        "subtle"
+      ],
       "fav": false,
       "known": false
     },
@@ -45615,6 +56064,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_38_2",
       "cluster": "cluster_38",
       "day": 38,
+      "phonetic_distractors": [
+        "spain",
+        "spice",
+        "spouse",
+        "stage",
+        "spell"
+      ],
       "fav": false,
       "known": false
     },
@@ -45663,6 +56119,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Knowledge or perception of a situation or fact.",
       "cluster": "cluster_38",
       "day": 38,
+      "phonetic_distractors": [
+        "wellness",
+        "offense",
+        "warehouse",
+        "terrace",
+        "witness"
+      ],
       "fav": false,
       "known": false
     },
@@ -45687,6 +56150,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To create or represent something by carving, casting, or other shaping techniques.",
       "cluster": "cluster_38",
       "day": 38,
+      "phonetic_distractors": [
+        "cult",
+        "script",
+        "commit",
+        "culture",
+        "collide"
+      ],
       "fav": false,
       "known": false
     },
@@ -45712,6 +56182,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_38_6",
       "cluster": "cluster_38",
       "day": 38,
+      "phonetic_distractors": [
+        "alex",
+        "ballot",
+        "talent",
+        "allen",
+        "allan"
+      ],
       "fav": false,
       "known": false
     },
@@ -45736,6 +56213,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "The act of stopping something from happening or of stopping someone from doing something.",
       "cluster": "cluster_38",
       "day": 38,
+      "phonetic_distractors": [
+        "retention",
+        "protection",
+        "provincial",
+        "projection",
+        "presented"
+      ],
       "fav": false,
       "known": false
     },
@@ -45760,6 +56244,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To return someone to a good, healthy, or normal life or state after they have been in prison or ill.",
       "cluster": "cluster_38",
       "day": 38,
+      "phonetic_distractors": [
+        "rehabilitation",
+        "facilitate",
+        "reliability",
+        "possibilities",
+        "liabilities"
+      ],
       "fav": false,
       "known": false
     },
@@ -45786,6 +56277,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_38_9",
       "cluster": "cluster_38",
       "day": 38,
+      "phonetic_distractors": [
+        "melissa",
+        "delicious",
+        "mission",
+        "collision",
+        "pollution"
+      ],
       "fav": false,
       "known": false
     },
@@ -45860,6 +56358,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_39_2",
       "cluster": "cluster_39",
       "day": 39,
+      "phonetic_distractors": [
+        "coast",
+        "most",
+        "wrist",
+        "wrote",
+        "post"
+      ],
       "fav": false,
       "known": false
     },
@@ -45886,6 +56391,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_39_3",
       "cluster": "cluster_39",
       "day": 39,
+      "phonetic_distractors": [
+        "marcus",
+        "market",
+        "markets",
+        "discuss",
+        "drainage"
+      ],
       "fav": false,
       "known": false
     },
@@ -45912,6 +56424,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_39_4",
       "cluster": "cluster_39",
       "day": 39,
+      "phonetic_distractors": [
+        "prove",
+        "proof",
+        "rule",
+        "root",
+        "brain"
+      ],
       "fav": false,
       "known": false
     },
@@ -45935,6 +56454,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_39_5",
       "cluster": "cluster_39",
       "day": 39,
+      "phonetic_distractors": [
+        "steal",
+        "stream",
+        "stem",
+        "scheme",
+        "steel"
+      ],
       "fav": false,
       "known": false
     },
@@ -45959,6 +56485,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To show a feeling, opinion, or fact.",
       "cluster": "cluster_39",
       "day": 39,
+      "phonetic_distractors": [
+        "expense",
+        "extreme",
+        "explore",
+        "stress",
+        "expand"
+      ],
       "fav": false,
       "known": false
     },
@@ -45984,6 +56517,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Discourage (someone) from doing something by instilling doubt or fear of the consequences.",
       "cluster": "cluster_39",
       "day": 39,
+      "phonetic_distractors": [
+        "litter",
+        "daughter",
+        "dinner",
+        "auditor",
+        "differ"
+      ],
       "fav": false,
       "known": false
     },
@@ -46008,6 +56548,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "The process in which the beauty or quality of something is destroyed or spoiled.",
       "cluster": "cluster_39",
       "day": 39,
+      "phonetic_distractors": [
+        "destination",
+        "erudition",
+        "regulation",
+        "delegation",
+        "accommodation"
+      ],
       "fav": false,
       "known": false
     },
@@ -46034,6 +56581,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_39_9",
       "cluster": "cluster_39",
       "day": 39,
+      "phonetic_distractors": [
+        "laura",
+        "floors",
+        "floor",
+        "fauna",
+        "force"
+      ],
       "fav": false,
       "known": false
     },
@@ -46060,6 +56614,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_40_0",
       "cluster": "cluster_40",
       "day": 40,
+      "phonetic_distractors": [
+        "form",
+        "forge",
+        "fork",
+        "fourth",
+        "four"
+      ],
       "fav": false,
       "known": false
     },
@@ -46086,6 +56647,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_40_1",
       "cluster": "cluster_40",
       "day": 40,
+      "phonetic_distractors": [
+        "marie",
+        "mean",
+        "maria",
+        "murray",
+        "marina"
+      ],
       "fav": false,
       "known": false
     },
@@ -46129,6 +56697,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_40_3",
       "cluster": "cluster_40",
       "day": 40,
+      "phonetic_distractors": [
+        "excavate",
+        "elevator",
+        "sculpture",
+        "sculpt",
+        "assimilate"
+      ],
       "fav": false,
       "known": false
     },
@@ -46153,6 +56728,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To combine two or more things in order to become more effective.",
       "cluster": "cluster_40",
       "day": 40,
+      "phonetic_distractors": [
+        "integral",
+        "integrating",
+        "innovate",
+        "integration",
+        "mitigate"
+      ],
       "fav": false,
       "known": false
     },
@@ -46176,6 +56758,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_40_5",
       "cluster": "cluster_40",
       "day": 40,
+      "phonetic_distractors": [
+        "actor",
+        "acquire",
+        "water",
+        "scooter",
+        "creator"
+      ],
       "fav": false,
       "known": false
     },
@@ -46200,6 +56789,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To compel observance of or compliance with a law, rule, or obligation.",
       "cluster": "cluster_40",
       "day": 40,
+      "phonetic_distractors": [
+        "inform",
+        "endorsed",
+        "norm",
+        "outsource",
+        "resource"
+      ],
       "fav": false,
       "known": false
     },
@@ -46224,6 +56820,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "A structure or building that is built to honour a special person or event.",
       "cluster": "cluster_40",
       "day": 40,
+      "phonetic_distractors": [
+        "management",
+        "punishment",
+        "continent",
+        "manuals",
+        "document"
+      ],
       "fav": false,
       "known": false
     },
@@ -46250,6 +56853,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Make less severe, serious, or painful.",
       "cluster": "cluster_40",
       "day": 40,
+      "phonetic_distractors": [
+        "innovate",
+        "navigate",
+        "integrate",
+        "automate",
+        "delegate"
+      ],
       "fav": false,
       "known": false
     },
@@ -46301,6 +56911,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_41_0",
       "cluster": "cluster_41",
       "day": 41,
+      "phonetic_distractors": [
+        "freeze",
+        "feeling",
+        "rising",
+        "browsing",
+        "framing"
+      ],
       "fav": false,
       "known": false
     },
@@ -46327,6 +56944,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_41_1",
       "cluster": "cluster_41",
       "day": 41,
+      "phonetic_distractors": [
+        "spell",
+        "cell",
+        "small",
+        "smile",
+        "sell"
+      ],
       "fav": false,
       "known": false
     },
@@ -46353,6 +56977,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_41_2",
       "cluster": "cluster_41",
       "day": 41,
+      "phonetic_distractors": [
+        "must",
+        "just",
+        "debt",
+        "cost",
+        "drought"
+      ],
       "fav": false,
       "known": false
     },
@@ -46401,6 +57032,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "A set of rules that must be followed when solving a particular problem.",
       "cluster": "cluster_41",
       "day": 41,
+      "phonetic_distractors": [
+        "alberta",
+        "aluminium",
+        "cognition",
+        "tourism",
+        "algeria"
+      ],
       "fav": false,
       "known": false
     },
@@ -46425,6 +57063,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To organize and perform a particular activity.",
       "cluster": "cluster_41",
       "day": 41,
+      "phonetic_distractors": [
+        "convict",
+        "contact",
+        "connect",
+        "conscious",
+        "connoisseur"
+      ],
       "fav": false,
       "known": false
     },
@@ -46449,6 +57094,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "An animal that hunts, kills, and eats other animals.",
       "cluster": "cluster_41",
       "day": 41,
+      "phonetic_distractors": [
+        "editor",
+        "credit",
+        "profit",
+        "pressure",
+        "producer"
+      ],
       "fav": false,
       "known": false
     },
@@ -46475,6 +57127,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To protect something and prevent it from being changed or destroyed.",
       "cluster": "cluster_41",
       "day": 41,
+      "phonetic_distractors": [
+        "concern",
+        "consume",
+        "concert",
+        "concerned",
+        "cancer"
+      ],
       "fav": false,
       "known": false
     },
@@ -46500,6 +57159,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_41_8",
       "cluster": "cluster_41",
       "day": 41,
+      "phonetic_distractors": [
+        "anachronism",
+        "metabolism",
+        "prerequisite",
+        "professionals",
+        "practitioners"
+      ],
       "fav": false,
       "known": false
     },
@@ -46552,6 +57218,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_42_0",
       "cluster": "cluster_42",
       "day": 42,
+      "phonetic_distractors": [
+        "checked",
+        "text",
+        "checking",
+        "chest",
+        "scout"
+      ],
       "fav": false,
       "known": false
     },
@@ -46576,6 +57249,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Relating to the present or recent times as opposed to the remote past.",
       "cluster": "cluster_42",
       "day": 42,
+      "phonetic_distractors": [
+        "model",
+        "murder",
+        "moderate",
+        "auburn",
+        "maiden"
+      ],
       "fav": false,
       "known": false
     },
@@ -46600,6 +57280,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "The earth, together with all of its countries and peoples.",
       "cluster": "cluster_42",
       "day": 42,
+      "phonetic_distractors": [
+        "wild",
+        "worried",
+        "word",
+        "wealth",
+        "yield"
+      ],
       "fav": false,
       "known": false
     },
@@ -46624,6 +57311,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "A regular gathering of people for the purchase and sale of provisions, livestock, and other commodities.",
       "cluster": "cluster_42",
       "day": 42,
+      "phonetic_distractors": [
+        "marked",
+        "marcus",
+        "rocket",
+        "carpet",
+        "martin"
+      ],
       "fav": false,
       "known": false
     },
@@ -46648,6 +57342,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To cause something to become fixed or stop changing.",
       "cluster": "cluster_42",
       "day": 42,
+      "phonetic_distractors": [
+        "stable",
+        "tables",
+        "symbols",
+        "cables",
+        "enables"
+      ],
       "fav": false,
       "known": false
     },
@@ -46671,6 +57372,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_42_5",
       "cluster": "cluster_42",
       "day": 42,
+      "phonetic_distractors": [
+        "carmen",
+        "bargain",
+        "carpet",
+        "martin",
+        "combine"
+      ],
       "fav": false,
       "known": false
     },
@@ -46695,6 +57403,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "A change in the way a country is governed, usually to a different political system and often using violence or war.",
       "cluster": "cluster_42",
       "day": 42,
+      "phonetic_distractors": [
+        "resolution",
+        "revelation",
+        "resolutions",
+        "pollution",
+        "regulation"
+      ],
       "fav": false,
       "known": false
     },
@@ -46720,6 +57435,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Spending a lot of time sitting down and not moving.",
       "cluster": "cluster_42",
       "day": 42,
+      "phonetic_distractors": [
+        "cemetery",
+        "secondary",
+        "commentary",
+        "legendary",
+        "ordinary"
+      ],
       "fav": false,
       "known": false
     },
@@ -46744,6 +57466,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Inspiring fear or respect through being impressively large, powerful, intense, or capable.",
       "cluster": "cluster_42",
       "day": 42,
+      "phonetic_distractors": [
+        "affordable",
+        "charitable",
+        "portable",
+        "formula",
+        "renewable"
+      ],
       "fav": false,
       "known": false
     },
@@ -46795,6 +57524,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_43_0",
       "cluster": "cluster_43",
       "day": 43,
+      "phonetic_distractors": [
+        "learn",
+        "bone",
+        "leone",
+        "len",
+        "lows"
+      ],
       "fav": false,
       "known": false
     },
@@ -46819,6 +57555,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To keep safe from harm or injury.",
       "cluster": "cluster_43",
       "day": 43,
+      "phonetic_distractors": [
+        "project",
+        "protest",
+        "architect",
+        "connect",
+        "propel"
+      ],
       "fav": false,
       "known": false
     },
@@ -46844,6 +57587,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_43_2",
       "cluster": "cluster_43",
       "day": 43,
+      "phonetic_distractors": [
+        "weed",
+        "weak",
+        "weekly",
+        "weeks",
+        "leader"
+      ],
       "fav": false,
       "known": false
     },
@@ -46868,6 +57618,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To study again something you have already learned.",
       "cluster": "cluster_43",
       "day": 43,
+      "phonetic_distractors": [
+        "reuse",
+        "region",
+        "revenue",
+        "retail",
+        "river"
+      ],
       "fav": false,
       "known": false
     },
@@ -46892,6 +57649,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "The process of providing or obtaining the food necessary for health and growth.",
       "cluster": "cluster_43",
       "day": 43,
+      "phonetic_distractors": [
+        "nutrient",
+        "nitrogen",
+        "petition",
+        "patricia",
+        "neutral"
+      ],
       "fav": false,
       "known": false
     },
@@ -46940,6 +57704,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Related to the mental and emotional state of a person.",
       "cluster": "cluster_43",
       "day": 43,
+      "phonetic_distractors": [
+        "biological",
+        "ecological",
+        "archaeological",
+        "technological",
+        "geological"
+      ],
       "fav": false,
       "known": false
     },
@@ -46964,6 +57735,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "A punishment, or the usual punishment, for doing something that is against a law.",
       "cluster": "cluster_43",
       "day": 43,
+      "phonetic_distractors": [
+        "penalties",
+        "penalize",
+        "specialty",
+        "mentally",
+        "density"
+      ],
       "fav": false,
       "known": false
     },
@@ -46990,6 +57768,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_43_8",
       "cluster": "cluster_43",
       "day": 43,
+      "phonetic_distractors": [
+        "photography",
+        "biography",
+        "geography",
+        "photographer",
+        "choreography"
+      ],
       "fav": false,
       "known": false
     },
@@ -47040,6 +57825,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_44_0",
       "cluster": "cluster_44",
       "day": 44,
+      "phonetic_distractors": [
+        "suite",
+        "swap",
+        "sweet",
+        "sleep",
+        "seed"
+      ],
       "fav": false,
       "known": false
     },
@@ -47066,6 +57858,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_44_1",
       "cluster": "cluster_44",
       "day": 44,
+      "phonetic_distractors": [
+        "mild",
+        "world",
+        "wiley",
+        "wide",
+        "filed"
+      ],
       "fav": false,
       "known": false
     },
@@ -47090,6 +57889,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_44_2",
       "cluster": "cluster_44",
       "day": 44,
+      "phonetic_distractors": [
+        "forming",
+        "warning",
+        "charming",
+        "boring",
+        "walking"
+      ],
       "fav": false,
       "known": false
     },
@@ -47116,6 +57922,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_44_3",
       "cluster": "cluster_44",
       "day": 44,
+      "phonetic_distractors": [
+        "dig",
+        "milk",
+        "build",
+        "deter",
+        "display"
+      ],
       "fav": false,
       "known": false
     },
@@ -47142,6 +57955,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_44_4",
       "cluster": "cluster_44",
       "day": 44,
+      "phonetic_distractors": [
+        "ryan",
+        "run",
+        "rule",
+        "region",
+        "urban"
+      ],
       "fav": false,
       "known": false
     },
@@ -47166,6 +57986,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To decide officially in a law court that someone is guilty of a crime.",
       "cluster": "cluster_44",
       "day": 44,
+      "phonetic_distractors": [
+        "conduct",
+        "conflict",
+        "contact",
+        "convert",
+        "connect"
+      ],
       "fav": false,
       "known": false
     },
@@ -47192,6 +58019,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_44_6",
       "cluster": "cluster_44",
       "day": 44,
+      "phonetic_distractors": [
+        "simulation",
+        "population",
+        "regulation",
+        "calculation",
+        "occupation"
+      ],
       "fav": false,
       "known": false
     },
@@ -47216,6 +58050,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To make something less pure or make it poisonous.",
       "cluster": "cluster_44",
       "day": 44,
+      "phonetic_distractors": [
+        "contamination",
+        "punishment",
+        "cultivate",
+        "continent",
+        "commitment"
+      ],
       "fav": false,
       "known": false
     },
@@ -47240,6 +58081,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To give new life, energy, activity, or success to something.",
       "cluster": "cluster_44",
       "day": 44,
+      "phonetic_distractors": [
+        "recycle",
+        "rentals",
+        "realized",
+        "retailers",
+        "revisions"
+      ],
       "fav": false,
       "known": false
     },
@@ -47287,6 +58135,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Make a journey, typically of some length or abroad.",
       "cluster": "cluster_45",
       "day": 45,
+      "phonetic_distractors": [
+        "fragile",
+        "trial",
+        "triple",
+        "tackle",
+        "travis"
+      ],
       "fav": false,
       "known": false
     },
@@ -47311,6 +58166,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "A legally recognized subject or national of a state or commonwealth.",
       "cluster": "cluster_45",
       "day": 45,
+      "phonetic_distractors": [
+        "silicon",
+        "citation",
+        "susan",
+        "satin",
+        "solomon"
+      ],
       "fav": false,
       "known": false
     },
@@ -47330,6 +58192,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_45_2",
       "cluster": "cluster_45",
       "day": 45,
+      "phonetic_distractors": [
+        "stir",
+        "actor",
+        "cooler",
+        "skirts",
+        "schools"
+      ],
       "fav": false,
       "known": false
     },
@@ -47354,6 +58223,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To try to be more successful than someone or something else.",
       "cluster": "cluster_45",
       "day": 45,
+      "phonetic_distractors": [
+        "complete",
+        "commute",
+        "commit",
+        "compile",
+        "compute"
+      ],
       "fav": false,
       "known": false
     },
@@ -47378,6 +58254,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "The state of being extremely poor.",
       "cluster": "cluster_45",
       "day": 45,
+      "phonetic_distractors": [
+        "pottery",
+        "property",
+        "party",
+        "policy",
+        "lottery"
+      ],
       "fav": false,
       "known": false
     },
@@ -47449,6 +58332,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "A sum of money charged for teaching or instruction by a school, college, or university.",
       "cluster": "cluster_45",
       "day": 45,
+      "phonetic_distractors": [
+        "musician",
+        "human",
+        "mission",
+        "tradition",
+        "emission"
+      ],
       "fav": false,
       "known": false
     },
@@ -47499,6 +58389,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_45_9",
       "cluster": "cluster_45",
       "day": 45,
+      "phonetic_distractors": [
+        "geography",
+        "topography",
+        "biography",
+        "bibliography",
+        "photography"
+      ],
       "fav": false,
       "known": false
     },
@@ -47523,6 +58420,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "In a way that gives protection from danger or risk.",
       "cluster": "cluster_46",
       "day": 46,
+      "phonetic_distractors": [
+        "safety",
+        "slowly",
+        "sail",
+        "mainly",
+        "bailey"
+      ],
       "fav": false,
       "known": false
     },
@@ -47549,6 +58453,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_46_1",
       "cluster": "cluster_46",
       "day": 46,
+      "phonetic_distractors": [
+        "loan",
+        "len",
+        "lawn",
+        "iron",
+        "lane"
+      ],
       "fav": false,
       "known": false
     },
@@ -47573,6 +58484,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "the degree to which people keep themselves or their environment clean, especially to prevent disease.",
       "cluster": "cluster_46",
       "day": 46,
+      "phonetic_distractors": [
+        "highly",
+        "gene",
+        "jean",
+        "eugene",
+        "screen"
+      ],
       "fav": false,
       "known": false
     },
@@ -47597,6 +58515,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "The person who leads or commands a group, organization, or country.",
       "cluster": "cluster_46",
       "day": 46,
+      "phonetic_distractors": [
+        "reader",
+        "cedar",
+        "leads",
+        "leeds",
+        "ladder"
+      ],
       "fav": false,
       "known": false
     },
@@ -47623,6 +58548,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_46_4",
       "cluster": "cluster_46",
       "day": 46,
+      "phonetic_distractors": [
+        "model",
+        "fuel",
+        "castle",
+        "novel",
+        "casa"
+      ],
       "fav": false,
       "known": false
     },
@@ -47673,6 +58605,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_46_6",
       "cluster": "cluster_46",
       "day": 46,
+      "phonetic_distractors": [
+        "stream",
+        "exterior",
+        "express",
+        "pastry",
+        "street"
+      ],
       "fav": false,
       "known": false
     },
@@ -47697,6 +58636,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "A widely held but fixed and oversimplified image or idea of a particular type of person or thing.",
       "cluster": "cluster_46",
       "day": 46,
+      "phonetic_distractors": [
+        "startup",
+        "strictly",
+        "austerity",
+        "scenarios",
+        "scenario"
+      ],
       "fav": false,
       "known": false
     },
@@ -47723,6 +58669,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_46_8",
       "cluster": "cluster_46",
       "day": 46,
+      "phonetic_distractors": [
+        "deteriorate",
+        "mitigation",
+        "determination",
+        "deforestation",
+        "destruction"
+      ],
       "fav": false,
       "known": false
     },
@@ -47747,6 +58700,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "The process of developing or organizing something in order to make as much money as possible.",
       "cluster": "cluster_46",
       "day": 46,
+      "phonetic_distractors": [
+        "civilization",
+        "communication",
+        "consultation",
+        "characterization",
+        "calculation"
+      ],
       "fav": false,
       "known": false
     },
@@ -47771,6 +58731,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To teach someone, especially using the formal system of school, college, or university.",
       "cluster": "cluster_47",
       "day": 47,
+      "phonetic_distractors": [
+        "educators",
+        "innovate",
+        "hurricane",
+        "elevator",
+        "automate"
+      ],
       "fav": false,
       "known": false
     },
@@ -47821,6 +58788,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Grow or cause to grow and become more mature, advanced, or elaborate.",
       "cluster": "cluster_47",
       "day": 47,
+      "phonetic_distractors": [
+        "devices",
+        "philip",
+        "devoted",
+        "division",
+        "dylan"
+      ],
       "fav": false,
       "known": false
     },
@@ -47845,6 +58819,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To produce a picture or diagram by making lines and marks on paper with a pencil, pen, etc.",
       "cluster": "cluster_47",
       "day": 47,
+      "phonetic_distractors": [
+        "dry",
+        "drew",
+        "debt",
+        "dig",
+        "cross"
+      ],
       "fav": false,
       "known": false
     },
@@ -47869,6 +58850,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "In some countries, the group of (usually) elected politicians or other people who make the laws.",
       "cluster": "cluster_47",
       "day": 47,
+      "phonetic_distractors": [
+        "document",
+        "protect",
+        "implement",
+        "prevent",
+        "tournament"
+      ],
       "fav": false,
       "known": false
     },
@@ -47895,6 +58883,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_47_5",
       "cluster": "cluster_47",
       "day": 47,
+      "phonetic_distractors": [
+        "aye",
+        "earl",
+        "eyed",
+        "mile",
+        "ice"
+      ],
       "fav": false,
       "known": false
     },
@@ -47921,6 +58916,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_47_6",
       "cluster": "cluster_47",
       "day": 47,
+      "phonetic_distractors": [
+        "extract",
+        "attract",
+        "restrict",
+        "district",
+        "contract"
+      ],
       "fav": false,
       "known": false
     },
@@ -47947,6 +58949,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_47_7",
       "cluster": "cluster_47",
       "day": 47,
+      "phonetic_distractors": [
+        "play",
+        "allow",
+        "sow",
+        "pack",
+        "aisle"
+      ],
       "fav": false,
       "known": false
     },
@@ -47973,6 +58982,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_47_8",
       "cluster": "cluster_47",
       "day": 47,
+      "phonetic_distractors": [
+        "endurance",
+        "digital",
+        "influence",
+        "conditional",
+        "editions"
+      ],
       "fav": false,
       "known": false
     },
@@ -48019,6 +59035,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "At a slow speed; not quickly.",
       "cluster": "cluster_48",
       "day": 48,
+      "phonetic_distractors": [
+        "safely",
+        "solar",
+        "holy",
+        "sole",
+        "sold"
+      ],
       "fav": false,
       "known": false
     },
@@ -48045,6 +59068,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_48_1",
       "cluster": "cluster_48",
       "day": 48,
+      "phonetic_distractors": [
+        "share",
+        "fear",
+        "rare",
+        "bare",
+        "dare"
+      ],
       "fav": false,
       "known": false
     },
@@ -48093,6 +59123,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Treating people equally without favouritism or discrimination.",
       "cluster": "cluster_48",
       "day": 48,
+      "phonetic_distractors": [
+        "share",
+        "fear",
+        "rare",
+        "bare",
+        "dare"
+      ],
       "fav": false,
       "known": false
     },
@@ -48119,6 +59156,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_48_4",
       "cluster": "cluster_48",
       "day": 48,
+      "phonetic_distractors": [
+        "error",
+        "emma",
+        "para",
+        "aaron",
+        "area"
+      ],
       "fav": false,
       "known": false
     },
@@ -48145,6 +59189,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_48_5",
       "cluster": "cluster_48",
       "day": 48,
+      "phonetic_distractors": [
+        "contain",
+        "obtain",
+        "justin",
+        "container",
+        "stage"
+      ],
       "fav": false,
       "known": false
     },
@@ -48169,6 +59220,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "A person who is in charge of a sports game and who makes certain that the rules are followed.",
       "cluster": "cluster_48",
       "day": 48,
+      "phonetic_distractors": [
+        "memory",
+        "effort",
+        "ready",
+        "jeffrey",
+        "every"
+      ],
       "fav": false,
       "known": false
     },
@@ -48195,6 +59253,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_48_7",
       "cluster": "cluster_48",
       "day": 48,
+      "phonetic_distractors": [
+        "carpet",
+        "corpus",
+        "portrait",
+        "orbit",
+        "korea"
+      ],
       "fav": false,
       "known": false
     },
@@ -48219,6 +59284,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To score more points than someone else.",
       "cluster": "cluster_48",
       "day": 48,
+      "phonetic_distractors": [
+        "outsource",
+        "outdoor",
+        "store",
+        "outdoors",
+        "scored"
+      ],
       "fav": false,
       "known": false
     },
@@ -48243,6 +59315,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "All the animals that live wild in a particular area.",
       "cluster": "cluster_48",
       "day": 48,
+      "phonetic_distractors": [
+        "fund",
+        "flora",
+        "launch",
+        "force",
+        "von"
+      ],
       "fav": false,
       "known": false
     },
@@ -48269,6 +59348,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_49_0",
       "cluster": "cluster_49",
       "day": 49,
+      "phonetic_distractors": [
+        "therapy",
+        "readily",
+        "remedy",
+        "messy",
+        "revenue"
+      ],
       "fav": false,
       "known": false
     },
@@ -48295,6 +59381,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_49_1",
       "cluster": "cluster_49",
       "day": 49,
+      "phonetic_distractors": [
+        "rather",
+        "grammar",
+        "matter",
+        "gallery",
+        "manner"
+      ],
       "fav": false,
       "known": false
     },
@@ -48319,6 +59412,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "The act of protecting somebody/something.",
       "cluster": "cluster_49",
       "day": 49,
+      "phonetic_distractors": [
+        "projection",
+        "profession",
+        "production",
+        "prevention",
+        "detection"
+      ],
       "fav": false,
       "known": false
     },
@@ -48345,6 +59445,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_49_3",
       "cluster": "cluster_49",
       "day": 49,
+      "phonetic_distractors": [
+        "dana",
+        "dates",
+        "theta",
+        "dayton",
+        "date"
+      ],
       "fav": false,
       "known": false
     },
@@ -48371,6 +59478,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_49_4",
       "cluster": "cluster_49",
       "day": 49,
+      "phonetic_distractors": [
+        "telephony",
+        "jeremy",
+        "therapy",
+        "promote",
+        "parent"
+      ],
       "fav": false,
       "known": false
     },
@@ -48395,6 +59509,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To control or influence a person or situation cleverly, unfairly, or unscrupulously.",
       "cluster": "cluster_49",
       "day": 49,
+      "phonetic_distractors": [
+        "assimilate",
+        "monopoly",
+        "monopolize",
+        "simulate",
+        "material"
+      ],
       "fav": false,
       "known": false
     },
@@ -48416,6 +59537,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "As another option or possibility.",
       "cluster": "cluster_49",
       "day": 49,
+      "phonetic_distractors": [
+        "alternatives",
+        "automatically",
+        "ultimately",
+        "relatively",
+        "effectively"
+      ],
       "fav": false,
       "known": false
     },
@@ -48466,6 +59594,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_49_8",
       "cluster": "cluster_49",
       "day": 49,
+      "phonetic_distractors": [
+        "memorial",
+        "recorded",
+        "remarkable",
+        "recorders",
+        "proportion"
+      ],
       "fav": false,
       "known": false
     },
@@ -48487,6 +59622,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Even though; although.",
       "cluster": "cluster_49",
       "day": 49,
+      "phonetic_distractors": [
+        "orbit",
+        "being",
+        "elliott",
+        "least",
+        "elite"
+      ],
       "fav": false,
       "known": false
     },
@@ -48511,6 +59653,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To pursue and kill a wild animal for sport or food.",
       "cluster": "cluster_50",
       "day": 50,
+      "phonetic_distractors": [
+        "honey",
+        "hint",
+        "cunt",
+        "paint",
+        "fund"
+      ],
       "fav": false,
       "known": false
     },
@@ -48535,6 +59684,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To change words into a different language.",
       "cluster": "cluster_50",
       "day": 50,
+      "phonetic_distractors": [
+        "transit",
+        "transmit",
+        "translator",
+        "translation",
+        "travel"
+      ],
       "fav": false,
       "known": false
     },
@@ -48559,6 +59715,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "A mother or father of a person or an animal.",
       "cluster": "cluster_50",
       "day": 50,
+      "phonetic_distractors": [
+        "patient",
+        "guarantee",
+        "pleasant",
+        "print",
+        "pendant"
+      ],
       "fav": false,
       "known": false
     },
@@ -48583,6 +59746,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "The aggregate of people living together in a more or less ordered community.",
       "cluster": "cluster_50",
       "day": 50,
+      "phonetic_distractors": [
+        "societies",
+        "anxiety",
+        "spicy",
+        "austerity",
+        "subsidy"
+      ],
       "fav": false,
       "known": false
     },
@@ -48604,6 +59774,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "In spite of that; notwithstanding; all the same.",
       "cluster": "cluster_50",
       "day": 50,
+      "phonetic_distractors": [
+        "netherlands",
+        "generally",
+        "governance",
+        "novelty",
+        "evidence"
+      ],
       "fav": false,
       "known": false
     },
@@ -48628,6 +59805,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "A group of countries ruled by a single person, government, or country.",
       "cluster": "cluster_50",
       "day": 50,
+      "phonetic_distractors": [
+        "emperor",
+        "employ",
+        "empty",
+        "mpeg",
+        "employer"
+      ],
       "fav": false,
       "known": false
     },
@@ -48652,6 +59836,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To stop something from happening or someone from doing something.",
       "cluster": "cluster_50",
       "day": 50,
+      "phonetic_distractors": [
+        "print",
+        "prison",
+        "invent",
+        "protect",
+        "predict"
+      ],
       "fav": false,
       "known": false
     },
@@ -48675,6 +59866,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Prevention of wasteful use of a resource.",
       "cluster": "cluster_50",
       "day": 50,
+      "phonetic_distractors": [
+        "conversation",
+        "confirmation",
+        "consultation",
+        "cancellation",
+        "conversations"
+      ],
       "fav": false,
       "known": false
     },
@@ -48724,6 +59922,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_50_9",
       "cluster": "cluster_50",
       "day": 50,
+      "phonetic_distractors": [
+        "california",
+        "smithsonian",
+        "switzerland",
+        "miscellaneous",
+        "entrepreneur"
+      ],
       "fav": false,
       "known": false
     },
@@ -48749,6 +59954,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Any small creature with six legs and a body divided into three parts.",
       "cluster": "cluster_51",
       "day": 51,
+      "phonetic_distractors": [
+        "incest",
+        "elect",
+        "invest",
+        "invent",
+        "indirect"
+      ],
       "fav": false,
       "known": false
     },
@@ -48775,6 +59987,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_51_1",
       "cluster": "cluster_51",
       "day": 51,
+      "phonetic_distractors": [
+        "decimal",
+        "vegetable",
+        "estimate",
+        "pesticide",
+        "stable"
+      ],
       "fav": false,
       "known": false
     },
@@ -48799,6 +60018,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To send goods to another country for sale.",
       "cluster": "cluster_51",
       "day": 51,
+      "phonetic_distractors": [
+        "exploit",
+        "passport",
+        "expert",
+        "escort",
+        "airport"
+      ],
       "fav": false,
       "known": false
     },
@@ -48818,6 +60044,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_51_3",
       "cluster": "cluster_51",
       "day": 51,
+      "phonetic_distractors": [
+        "export",
+        "report",
+        "support",
+        "transport",
+        "import"
+      ],
       "fav": false,
       "known": false
     },
@@ -48842,6 +60075,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "A work of art such as a painting, film, or book that is made with great skill.",
       "cluster": "cluster_51",
       "day": 51,
+      "phonetic_distractors": [
+        "masters",
+        "mystery",
+        "factory",
+        "history",
+        "asteroid"
+      ],
       "fav": false,
       "known": false
     },
@@ -48868,6 +60108,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_51_5",
       "cluster": "cluster_51",
       "day": 51,
+      "phonetic_distractors": [
+        "travel",
+        "gadget",
+        "arable",
+        "fuel",
+        "fossil"
+      ],
       "fav": false,
       "known": false
     },
@@ -48889,6 +60136,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "In circumstances different from those present or considered; or else.",
       "cluster": "cluster_51",
       "day": 51,
+      "phonetic_distractors": [
+        "others",
+        "acquire",
+        "likewise",
+        "occurs",
+        "attorneys"
+      ],
       "fav": false,
       "known": false
     },
@@ -48913,6 +60167,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "A thing that discourages or is intended to discourage someone from doing something.",
       "cluster": "cluster_51",
       "day": 51,
+      "phonetic_distractors": [
+        "deterrence",
+        "different",
+        "determined",
+        "distant",
+        "determine"
+      ],
       "fav": false,
       "known": false
     },
@@ -48937,6 +60198,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "The male head of a family or tribe.",
       "cluster": "cluster_51",
       "day": 51,
+      "phonetic_distractors": [
+        "pastry",
+        "periodic",
+        "patrick",
+        "period",
+        "portray"
+      ],
       "fav": false,
       "known": false
     },
@@ -48963,6 +60231,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_51_9",
       "cluster": "cluster_51",
       "day": 51,
+      "phonetic_distractors": [
+        "intersection",
+        "introduction",
+        "inspections",
+        "instruction",
+        "destruction"
+      ],
       "fav": false,
       "known": false
     },
@@ -48989,6 +60264,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_52_0",
       "cluster": "cluster_52",
       "day": 52,
+      "phonetic_distractors": [
+        "pastor",
+        "packard",
+        "pattern",
+        "asteroid",
+        "acid"
+      ],
       "fav": false,
       "known": false
     },
@@ -49015,6 +60297,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_52_1",
       "cluster": "cluster_52",
       "day": 52,
+      "phonetic_distractors": [
+        "matter",
+        "actor",
+        "wrapped",
+        "adaptor",
+        "pastor"
+      ],
       "fav": false,
       "known": false
     },
@@ -49041,6 +60330,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_52_2",
       "cluster": "cluster_52",
       "day": 52,
+      "phonetic_distractors": [
+        "fought",
+        "sought",
+        "taught",
+        "thong",
+        "debt"
+      ],
       "fav": false,
       "known": false
     },
@@ -49067,6 +60363,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_52_3",
       "cluster": "cluster_52",
       "day": 52,
+      "phonetic_distractors": [
+        "cape",
+        "shade",
+        "ship",
+        "tape",
+        "sheep"
+      ],
       "fav": false,
       "known": false
     },
@@ -49091,6 +60394,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "The act of keeping something the same or of preventing it from being damaged.",
       "cluster": "cluster_52",
       "day": 52,
+      "phonetic_distractors": [
+        "reservations",
+        "preparation",
+        "presentation",
+        "observation",
+        "generation"
+      ],
       "fav": false,
       "known": false
     },
@@ -49117,6 +60427,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_52_5",
       "cluster": "cluster_52",
       "day": 52,
+      "phonetic_distractors": [
+        "arable",
+        "altitude",
+        "animal",
+        "local",
+        "cycle"
+      ],
       "fav": false,
       "known": false
     },
@@ -49143,6 +60460,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_52_6",
       "cluster": "cluster_52",
       "day": 52,
+      "phonetic_distractors": [
+        "protective",
+        "protected",
+        "predicted",
+        "protecting",
+        "prospective"
+      ],
       "fav": false,
       "known": false
     },
@@ -49169,6 +60493,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_52_7",
       "cluster": "cluster_52",
       "day": 52,
+      "phonetic_distractors": [
+        "aviation",
+        "relation",
+        "deviation",
+        "rotation",
+        "variation"
+      ],
       "fav": false,
       "known": false
     },
@@ -49195,6 +60526,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_52_8",
       "cluster": "cluster_52",
       "day": 52,
+      "phonetic_distractors": [
+        "germany",
+        "harmony",
+        "human",
+        "helena",
+        "judgment"
+      ],
       "fav": false,
       "known": false
     },
@@ -49219,6 +60557,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "The process of taking in and fully understanding information or ideas, or absorbing people into a wider culture.",
       "cluster": "cluster_52",
       "day": 52,
+      "phonetic_distractors": [
+        "simulation",
+        "assimilate",
+        "accommodation",
+        "elimination",
+        "isolation"
+      ],
       "fav": false,
       "known": false
     },
@@ -49245,6 +60590,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_53_0",
       "cluster": "cluster_53",
       "day": 53,
+      "phonetic_distractors": [
+        "mystery",
+        "sister",
+        "sisters",
+        "factory",
+        "pastry"
+      ],
       "fav": false,
       "known": false
     },
@@ -49269,6 +60621,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Contrary to or forbidden by law.",
       "cluster": "cluster_53",
       "day": 53,
+      "phonetic_distractors": [
+        "legally",
+        "eagle",
+        "illness",
+        "global",
+        "local"
+      ],
       "fav": false,
       "known": false
     },
@@ -49295,6 +60654,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_53_2",
       "cluster": "cluster_53",
       "day": 53,
+      "phonetic_distractors": [
+        "prozac",
+        "diagram",
+        "progress",
+        "paragraph",
+        "grammar"
+      ],
       "fav": false,
       "known": false
     },
@@ -49319,6 +60685,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To search and discover about something.",
       "cluster": "cluster_53",
       "day": 53,
+      "phonetic_distractors": [
+        "exploring",
+        "explain",
+        "exploit",
+        "export",
+        "express"
+      ],
       "fav": false,
       "known": false
     },
@@ -49343,6 +60716,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "A person who watches an activity, especially a sports event, without taking part.",
       "cluster": "cluster_53",
       "day": 53,
+      "phonetic_distractors": [
+        "spectrum",
+        "equator",
+        "aspects",
+        "operator",
+        "potato"
+      ],
       "fav": false,
       "known": false
     },
@@ -49367,6 +60747,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To learn or develop a skill, habit, or quality.",
       "cluster": "cluster_53",
       "day": 53,
+      "phonetic_distractors": [
+        "choir",
+        "occur",
+        "require",
+        "wire",
+        "quite"
+      ],
       "fav": false,
       "known": false
     },
@@ -49393,6 +60780,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_53_6",
       "cluster": "cluster_53",
       "day": 53,
+      "phonetic_distractors": [
+        "presentation",
+        "transportation",
+        "participation",
+        "prescription",
+        "specification"
+      ],
       "fav": false,
       "known": false
     },
@@ -49443,6 +60837,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "An expert on matters involving the judgement of beauty, quality or skill in art, food or music.",
       "cluster": "cluster_53",
       "day": 53,
+      "phonetic_distractors": [
+        "conscious",
+        "concert",
+        "monitor",
+        "cancer",
+        "honest"
+      ],
       "fav": false,
       "known": false
     },
@@ -49467,6 +60868,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "A very large city, often the most important city in a large area or country.",
       "cluster": "cluster_53",
       "day": 53,
+      "phonetic_distractors": [
+        "monopoly",
+        "monopolize",
+        "material",
+        "stimulus",
+        "autonomous"
+      ],
       "fav": false,
       "known": false
     },
@@ -49493,6 +60901,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_54_0",
       "cluster": "cluster_54",
       "day": 54,
+      "phonetic_distractors": [
+        "death",
+        "debt",
+        "wealth",
+        "pepper",
+        "rep"
+      ],
       "fav": false,
       "known": false
     },
@@ -49517,6 +60932,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To join in marriage.",
       "cluster": "cluster_54",
       "day": 54,
+      "phonetic_distractors": [
+        "messy",
+        "larry",
+        "cherry",
+        "vary",
+        "gary"
+      ],
       "fav": false,
       "known": false
     },
@@ -49543,6 +60965,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_54_2",
       "cluster": "cluster_54",
       "day": 54,
+      "phonetic_distractors": [
+        "train",
+        "trade",
+        "trace",
+        "treat",
+        "trail"
+      ],
       "fav": false,
       "known": false
     },
@@ -49567,6 +60996,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To transmit a program or information by radio or television.",
       "cluster": "cluster_54",
       "day": 54,
+      "phonetic_distractors": [
+        "podcast",
+        "forecast",
+        "broadband",
+        "bracket",
+        "breakfast"
+      ],
       "fav": false,
       "known": false
     },
@@ -49593,6 +61029,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_54_4",
       "cluster": "cluster_54",
       "day": 54,
+      "phonetic_distractors": [
+        "accurate",
+        "accurately",
+        "literacy",
+        "currency",
+        "actually"
+      ],
       "fav": false,
       "known": false
     },
@@ -49617,6 +61060,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To study or examine something in detail, in order to discover more about it.",
       "cluster": "cluster_54",
       "day": 54,
+      "phonetic_distractors": [
+        "penalize",
+        "channels",
+        "panels",
+        "analog",
+        "anaheim"
+      ],
       "fav": false,
       "known": false
     },
@@ -49643,6 +61093,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_54_6",
       "cluster": "cluster_54",
       "day": 54,
+      "phonetic_distractors": [
+        "mortgage",
+        "shortly",
+        "norton",
+        "shorter",
+        "portal"
+      ],
       "fav": false,
       "known": false
     },
@@ -49669,6 +61126,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "The power or right to do something; the people or an organization who have the power to make decisions.",
       "cluster": "cluster_54",
       "day": 54,
+      "phonetic_distractors": [
+        "authorities",
+        "majority",
+        "agility",
+        "therapy",
+        "forty"
+      ],
       "fav": false,
       "known": false
     },
@@ -49693,6 +61157,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "One of the official areas of a country that elects someone to represent it in a parliament.",
       "cluster": "cluster_54",
       "day": 54,
+      "phonetic_distractors": [
+        "consistency",
+        "consultancy",
+        "conspiracy",
+        "consistent",
+        "conceptual"
+      ],
       "fav": false,
       "known": false
     },
@@ -49717,6 +61188,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Behaviour in sport that is fair and shows respect to the other players.",
       "cluster": "cluster_54",
       "day": 54,
+      "phonetic_distractors": [
+        "citizenship",
+        "apartments",
+        "relationship",
+        "corresponding",
+        "preferences"
+      ],
       "fav": false,
       "known": false
     },
@@ -49743,6 +61221,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_55_0",
       "cluster": "cluster_55",
       "day": 55,
+      "phonetic_distractors": [
+        "service",
+        "circus",
+        "purchase",
+        "surplus",
+        "nervous"
+      ],
       "fav": false,
       "known": false
     },
@@ -49793,6 +61278,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_55_2",
       "cluster": "cluster_55",
       "day": 55,
+      "phonetic_distractors": [
+        "publish",
+        "published",
+        "dublin",
+        "publisher",
+        "pollute"
+      ],
       "fav": false,
       "known": false
     },
@@ -49819,6 +61311,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_55_3",
       "cluster": "cluster_55",
       "day": 55,
+      "phonetic_distractors": [
+        "technologies",
+        "psychology",
+        "terminology",
+        "ecology",
+        "equality"
+      ],
       "fav": false,
       "known": false
     },
@@ -49843,6 +61342,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Relating to the enjoyment or study of beauty.",
       "cluster": "cluster_55",
       "day": 55,
+      "phonetic_distractors": [
+        "genetic",
+        "static",
+        "ethnic",
+        "synthetic",
+        "setting"
+      ],
       "fav": false,
       "known": false
     },
@@ -49868,6 +61374,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_55_5",
       "cluster": "cluster_55",
       "day": 55,
+      "phonetic_distractors": [
+        "shadow",
+        "valley",
+        "tahoe",
+        "shell",
+        "halo"
+      ],
       "fav": false,
       "known": false
     },
@@ -49892,6 +61405,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "A person who writes for newspapers, magazines, or news websites.",
       "cluster": "cluster_55",
       "day": 55,
+      "phonetic_distractors": [
+        "genesis",
+        "analyst",
+        "journals",
+        "violent",
+        "innocent"
+      ],
       "fav": false,
       "known": false
     },
@@ -49918,6 +61438,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_55_7",
       "cluster": "cluster_55",
       "day": 55,
+      "phonetic_distractors": [
+        "cunt",
+        "hunt",
+        "currency",
+        "kurt",
+        "merchant"
+      ],
       "fav": false,
       "known": false
     },
@@ -49967,6 +61494,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "One of many large rocks that circle the sun.",
       "cluster": "cluster_55",
       "day": 55,
+      "phonetic_distractors": [
+        "actor",
+        "password",
+        "acid",
+        "returned",
+        "pastor"
+      ],
       "fav": false,
       "known": false
     },
@@ -49993,6 +61527,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_56_0",
       "cluster": "cluster_56",
       "day": 56,
+      "phonetic_distractors": [
+        "root",
+        "route",
+        "ruin",
+        "booty",
+        "teen"
+      ],
       "fav": false,
       "known": false
     },
@@ -50019,6 +61560,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_56_1",
       "cluster": "cluster_56",
       "day": 56,
+      "phonetic_distractors": [
+        "wide",
+        "why",
+        "pipe",
+        "type",
+        "while"
+      ],
       "fav": false,
       "known": false
     },
@@ -50043,6 +61591,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "A rule made by a government.",
       "cluster": "cluster_56",
       "day": 56,
+      "phonetic_distractors": [
+        "lay",
+        "lol",
+        "lee",
+        "shaw",
+        "long"
+      ],
       "fav": false,
       "known": false
     },
@@ -50069,6 +61624,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_56_3",
       "cluster": "cluster_56",
       "day": 56,
+      "phonetic_distractors": [
+        "stir",
+        "sow",
+        "power",
+        "sao",
+        "south"
+      ],
       "fav": false,
       "known": false
     },
@@ -50093,6 +61655,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "The natural environment in which an animal or plant usually lives.",
       "cluster": "cluster_56",
       "day": 56,
+      "phonetic_distractors": [
+        "habits",
+        "rabbit",
+        "cabinet",
+        "gadget",
+        "heritage"
+      ],
       "fav": false,
       "known": false
     },
@@ -50118,6 +61687,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_56_5",
       "cluster": "cluster_56",
       "day": 56,
+      "phonetic_distractors": [
+        "overseas",
+        "overall",
+        "conversely",
+        "overnight",
+        "versus"
+      ],
       "fav": false,
       "known": false
     },
@@ -50142,6 +61718,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To make an unpleasant feeling, such as pain or worry, less strong.",
       "cluster": "cluster_56",
       "day": 56,
+      "phonetic_distractors": [
+        "believe",
+        "relief",
+        "really",
+        "receipt",
+        "belief"
+      ],
       "fav": false,
       "known": false
     },
@@ -50166,6 +61749,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "The art of forming solid objects that represent a thing, person, idea, etc.",
       "cluster": "cluster_56",
       "day": 56,
+      "phonetic_distractors": [
+        "culture",
+        "escalator",
+        "cultures",
+        "capture",
+        "scholar"
+      ],
       "fav": false,
       "known": false
     },
@@ -50190,6 +61780,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "A particular way of performing a song, piece of music, or poem.",
       "cluster": "cluster_56",
       "day": 56,
+      "phonetic_distractors": [
+        "condition",
+        "generation",
+        "foundation",
+        "tradition",
+        "erudition"
+      ],
       "fav": false,
       "known": false
     },
@@ -50214,6 +61811,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "The act by newspapers, television, etc. of presenting information in a way that is shocking or exciting.",
       "cluster": "cluster_56",
       "day": 56,
+      "phonetic_distractors": [
+        "sensationalize",
+        "protectionism",
+        "bilingualism",
+        "psychoanalysis",
+        "sustainability"
+      ],
       "fav": false,
       "known": false
     },
@@ -50238,6 +61842,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "A member of the government in charge of a particular department.",
       "cluster": "cluster_57",
       "day": 57,
+      "phonetic_distractors": [
+        "monitor",
+        "monster",
+        "minute",
+        "minutes",
+        "ministry"
+      ],
       "fav": false,
       "known": false
     },
@@ -50264,6 +61875,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_57_1",
       "cluster": "cluster_57",
       "day": 57,
+      "phonetic_distractors": [
+        "after",
+        "acts",
+        "stir",
+        "matter",
+        "chapter"
+      ],
       "fav": false,
       "known": false
     },
@@ -50288,6 +61906,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Over a large area or range; extensively.",
       "cluster": "cluster_57",
       "day": 57,
+      "phonetic_distractors": [
+        "wiley",
+        "highly",
+        "wild",
+        "tidy",
+        "likely"
+      ],
       "fav": false,
       "known": false
     },
@@ -50337,6 +61962,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_57_4",
       "cluster": "cluster_57",
       "day": 57,
+      "phonetic_distractors": [
+        "computer",
+        "computers",
+        "compute",
+        "commit",
+        "compete"
+      ],
       "fav": false,
       "known": false
     },
@@ -50361,6 +61993,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To start a company or organization that will continue for a long time.",
       "cluster": "cluster_57",
       "day": 57,
+      "phonetic_distractors": [
+        "stylish",
+        "publish",
+        "sibling",
+        "static",
+        "english"
+      ],
       "fav": false,
       "known": false
     },
@@ -50387,6 +62026,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_57_6",
       "cluster": "cluster_57",
       "day": 57,
+      "phonetic_distractors": [
+        "trait",
+        "train",
+        "trade",
+        "trail",
+        "tray"
+      ],
       "fav": false,
       "known": false
     },
@@ -50411,6 +62057,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "The belief in freedom and equality between people, or a system of government based on this belief.",
       "cluster": "cluster_57",
       "day": 57,
+      "phonetic_distractors": [
+        "diplomacy",
+        "bureaucracy",
+        "decreased",
+        "discussed",
+        "remarks"
+      ],
       "fav": false,
       "known": false
     },
@@ -50437,6 +62090,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_57_8",
       "cluster": "cluster_57",
       "day": 57,
+      "phonetic_distractors": [
+        "reasoning",
+        "seasons",
+        "seasonal",
+        "stunning",
+        "susan"
+      ],
       "fav": false,
       "known": false
     },
@@ -50461,6 +62121,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To get or keep exclusively to oneself; have a monopoly of.",
       "cluster": "cluster_57",
       "day": 57,
+      "phonetic_distractors": [
+        "monopoly",
+        "penalize",
+        "metropolis",
+        "manipulate",
+        "commercialize"
+      ],
       "fav": false,
       "known": false
     },
@@ -50487,6 +62154,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_58_0",
       "cluster": "cluster_58",
       "day": 58,
+      "phonetic_distractors": [
+        "wells",
+        "well",
+        "health",
+        "welsh",
+        "healthy"
+      ],
       "fav": false,
       "known": false
     },
@@ -50511,6 +62185,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "A global computer network providing a variety of information and communication facilities.",
       "cluster": "cluster_58",
       "day": 58,
+      "phonetic_distractors": [
+        "interact",
+        "internal",
+        "intent",
+        "interview",
+        "invent"
+      ],
       "fav": false,
       "known": false
     },
@@ -50535,6 +62216,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "A test done in order to learn something or to discover if something works or is true.",
       "cluster": "cluster_58",
       "day": 58,
+      "phonetic_distractors": [
+        "instrument",
+        "implement",
+        "expressions",
+        "excitement",
+        "expression"
+      ],
       "fav": false,
       "known": false
     },
@@ -50607,6 +62295,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "A line that marks the limits of an area; a dividing line.",
       "cluster": "cluster_58",
       "day": 58,
+      "phonetic_distractors": [
+        "boundaries",
+        "founder",
+        "border",
+        "sensory",
+        "century"
+      ],
       "fav": false,
       "known": false
     },
@@ -50633,6 +62328,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_58_6",
       "cluster": "cluster_58",
       "day": 58,
+      "phonetic_distractors": [
+        "relation",
+        "fraction",
+        "region",
+        "sanction",
+        "attraction"
+      ],
       "fav": false,
       "known": false
     },
@@ -50656,6 +62358,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "The fact of being able to use two languages equally well.",
       "cluster": "cluster_58",
       "day": 58,
+      "phonetic_distractors": [
+        "metabolism",
+        "protectionism",
+        "anachronism",
+        "delinquency",
+        "linguistics"
+      ],
       "fav": false,
       "known": false
     },
@@ -50729,6 +62438,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_59_0",
       "cluster": "cluster_59",
       "day": 59,
+      "phonetic_distractors": [
+        "doug",
+        "dear",
+        "dick",
+        "diff",
+        "pig"
+      ],
       "fav": false,
       "known": false
     },
@@ -50777,6 +62493,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To provide with a home and the necessities of life.",
       "cluster": "cluster_59",
       "day": 59,
+      "phonetic_distractors": [
+        "sport",
+        "report",
+        "import",
+        "sort",
+        "sports"
+      ],
       "fav": false,
       "known": false
     },
@@ -50801,6 +62524,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "A person who shows the way to others, especially one employed to show tourists around places of interest.",
       "cluster": "cluster_59",
       "day": 59,
+      "phonetic_distractors": [
+        "tide",
+        "god",
+        "wide",
+        "died",
+        "hide"
+      ],
       "fav": false,
       "known": false
     },
@@ -50825,6 +62555,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "The activity of visiting places of interest in a particular location.",
       "cluster": "cluster_59",
       "day": 59,
+      "phonetic_distractors": [
+        "lighting",
+        "sitting",
+        "setting",
+        "string",
+        "stopping"
+      ],
       "fav": false,
       "known": false
     },
@@ -50849,6 +62586,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "The state of being equal, especially in status, rights, and opportunities.",
       "cluster": "cluster_59",
       "day": 59,
+      "phonetic_distractors": [
+        "ecology",
+        "qualities",
+        "qualify",
+        "economy",
+        "liquidity"
+      ],
       "fav": false,
       "known": false
     },
@@ -50873,6 +62617,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To compete in a sports competition that you won before and try to win it again.",
       "cluster": "cluster_59",
       "day": 59,
+      "phonetic_distractors": [
+        "defence",
+        "depend",
+        "defined",
+        "defense",
+        "define"
+      ],
       "fav": false,
       "known": false
     },
@@ -50899,6 +62650,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_59_7",
       "cluster": "cluster_59",
       "day": 59,
+      "phonetic_distractors": [
+        "consultant",
+        "assistant",
+        "consistency",
+        "consultants",
+        "assistance"
+      ],
       "fav": false,
       "known": false
     },
@@ -50923,6 +62681,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Present, appearing, or found everywhere.",
       "cluster": "cluster_59",
       "day": 59,
+      "phonetic_distractors": [
+        "antiquity",
+        "liquidity",
+        "requests",
+        "musical",
+        "asbestos"
+      ],
       "fav": false,
       "known": false
     },
@@ -50971,6 +62736,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "The measured amount of heat in a place or in the body.",
       "cluster": "cluster_60",
       "day": 60,
+      "phonetic_distractors": [
+        "temporal",
+        "template",
+        "temple",
+        "texture",
+        "emerald"
+      ],
       "fav": false,
       "known": false
     },
@@ -50996,6 +62768,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Belonging or relating to a particular area or neighborhood.",
       "cluster": "cluster_60",
       "day": 60,
+      "phonetic_distractors": [
+        "vocal",
+        "focal",
+        "global",
+        "oval",
+        "cycle"
+      ],
       "fav": false,
       "known": false
     },
@@ -51046,6 +62825,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_60_3",
       "cluster": "cluster_60",
       "day": 60,
+      "phonetic_distractors": [
+        "manner",
+        "latter",
+        "motor",
+        "mats",
+        "master"
+      ],
       "fav": false,
       "known": false
     },
@@ -51069,6 +62855,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_60_4",
       "cluster": "cluster_60",
       "day": 60,
+      "phonetic_distractors": [
+        "inner",
+        "winter",
+        "inter",
+        "injured",
+        "ranger"
+      ],
       "fav": false,
       "known": false
     },
@@ -51093,6 +62886,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "An area on the edge of a large town or city where people who work in the town or city often live.",
       "cluster": "cluster_60",
       "day": 60,
+      "phonetic_distractors": [
+        "subway",
+        "cyber",
+        "suffer",
+        "summer",
+        "southern"
+      ],
       "fav": false,
       "known": false
     },
@@ -51119,6 +62919,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "That can be trusted to do something well; that you can rely on.",
       "cluster": "cluster_60",
       "day": 60,
+      "phonetic_distractors": [
+        "renewable",
+        "visible",
+        "reliance",
+        "desirable",
+        "removable"
+      ],
       "fav": false,
       "known": false
     },
@@ -51143,6 +62950,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "The ability of an organism to resist a particular infection or toxin.",
       "cluster": "cluster_60",
       "day": 60,
+      "phonetic_distractors": [
+        "community",
+        "units",
+        "communities",
+        "immunology",
+        "simulate"
+      ],
       "fav": false,
       "known": false
     },
@@ -51167,6 +62981,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Spreading out over a large area in an untidy or irregular way.",
       "cluster": "cluster_60",
       "day": 60,
+      "phonetic_distractors": [
+        "spreading",
+        "spelling",
+        "spring",
+        "sibling",
+        "drawing"
+      ],
       "fav": false,
       "known": false
     },
@@ -51191,6 +63012,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Characterized by the treatment of the whole person, taking into account mental and social factors.",
       "cluster": "cluster_60",
       "day": 60,
+      "phonetic_distractors": [
+        "plastic",
+        "heuristic",
+        "olympic",
+        "hosted",
+        "hosting"
+      ],
       "fav": false,
       "known": false
     },
@@ -51217,6 +63045,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_61_0",
       "cluster": "cluster_61",
       "day": 61,
+      "phonetic_distractors": [
+        "offer",
+        "stir",
+        "owner",
+        "water",
+        "sour"
+      ],
       "fav": false,
       "known": false
     },
@@ -51242,6 +63077,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_61_1",
       "cluster": "cluster_61",
       "day": 61,
+      "phonetic_distractors": [
+        "sort",
+        "fault",
+        "walt",
+        "sought",
+        "vault"
+      ],
       "fav": false,
       "known": false
     },
@@ -51268,6 +63110,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_61_2",
       "cluster": "cluster_61",
       "day": 61,
+      "phonetic_distractors": [
+        "pos",
+        "peas",
+        "purse",
+        "pee",
+        "pete"
+      ],
       "fav": false,
       "known": false
     },
@@ -51292,6 +63141,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "A cylinder-shaped device for making objects that are far away look closer and larger.",
       "cluster": "cluster_61",
       "day": 61,
+      "phonetic_distractors": [
+        "telephone",
+        "telecom",
+        "tennessee",
+        "glasgow",
+        "telephony"
+      ],
       "fav": false,
       "known": false
     },
@@ -51318,6 +63174,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_61_4",
       "cluster": "cluster_61",
       "day": 61,
+      "phonetic_distractors": [
+        "photographic",
+        "demographic",
+        "geography",
+        "graphics",
+        "choreograph"
+      ],
       "fav": false,
       "known": false
     },
@@ -51342,6 +63205,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To succeed in getting into a competition.",
       "cluster": "cluster_61",
       "day": 61,
+      "phonetic_distractors": [
+        "qualified",
+        "quality",
+        "equality",
+        "colonize",
+        "modify"
+      ],
       "fav": false,
       "known": false
     },
@@ -51366,6 +63236,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Having all constituent parts linked or connected.",
       "cluster": "cluster_61",
       "day": 61,
+      "phonetic_distractors": [
+        "interested",
+        "unexpected",
+        "interesting",
+        "intersection",
+        "integrating"
+      ],
       "fav": false,
       "known": false
     },
@@ -51390,6 +63267,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To depict someone or something in a work of art or literature.",
       "cluster": "cluster_61",
       "day": 61,
+      "phonetic_distractors": [
+        "portrait",
+        "porter",
+        "portal",
+        "ports",
+        "shortage"
+      ],
       "fav": false,
       "known": false
     },
@@ -51414,6 +63298,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Following the order in which a series of events happened.",
       "cluster": "cluster_61",
       "day": 61,
+      "phonetic_distractors": [
+        "archaeological",
+        "technological",
+        "psychological",
+        "biological",
+        "ecological"
+      ],
       "fav": false,
       "known": false
     },
@@ -51440,6 +63331,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_61_9",
       "cluster": "cluster_61",
       "day": 61,
+      "phonetic_distractors": [
+        "psychological",
+        "circulation",
+        "specialists",
+        "sexuality",
+        "indianapolis"
+      ],
       "fav": false,
       "known": false
     },
@@ -51490,6 +63388,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_62_1",
       "cluster": "cluster_62",
       "day": 62,
+      "phonetic_distractors": [
+        "oregon",
+        "region",
+        "organ",
+        "oracle",
+        "russian"
+      ],
       "fav": false,
       "known": false
     },
@@ -51514,6 +63419,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To discover the exact size or amount of something.",
       "cluster": "cluster_62",
       "day": 62,
+      "phonetic_distractors": [
+        "leisure",
+        "messy",
+        "matter",
+        "memory",
+        "melt"
+      ],
       "fav": false,
       "known": false
     },
@@ -51537,6 +63449,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Controlled by or connected to another computer or to a network.",
       "cluster": "cluster_62",
       "day": 62,
+      "phonetic_distractors": [
+        "offline",
+        "outline",
+        "nine",
+        "airline",
+        "klein"
+      ],
       "fav": false,
       "known": false
     },
@@ -51563,6 +63482,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_62_4",
       "cluster": "cluster_62",
       "day": 62,
+      "phonetic_distractors": [
+        "warcraft",
+        "aircraft",
+        "abstract",
+        "podcast",
+        "extract"
+      ],
       "fav": false,
       "known": false
     },
@@ -51589,6 +63515,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_62_5",
       "cluster": "cluster_62",
       "day": 62,
+      "phonetic_distractors": [
+        "connoisseur",
+        "kansas",
+        "canvas",
+        "caution",
+        "concert"
+      ],
       "fav": false,
       "known": false
     },
@@ -51615,6 +63548,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_62_6",
       "cluster": "cluster_62",
       "day": 62,
+      "phonetic_distractors": [
+        "industry",
+        "sedentary",
+        "infants",
+        "industries",
+        "commentary"
+      ],
       "fav": false,
       "known": false
     },
@@ -51639,6 +63579,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "to make a process in a factory or office operate by machines or computers, in order to reduce the amount of work done by humans and the time taken to do the work.",
       "cluster": "cluster_62",
       "day": 62,
+      "phonetic_distractors": [
+        "tomato",
+        "autumn",
+        "commit",
+        "innovate",
+        "trait"
+      ],
       "fav": false,
       "known": false
     },
@@ -51689,6 +63636,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_62_9",
       "cluster": "cluster_62",
       "day": 62,
+      "phonetic_distractors": [
+        "americas",
+        "american",
+        "theatrical",
+        "americans",
+        "numerical"
+      ],
       "fav": false,
       "known": false
     },
@@ -51713,6 +63667,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "A large town.",
       "cluster": "cluster_63",
       "day": 63,
+      "phonetic_distractors": [
+        "kitty",
+        "cities",
+        "silly",
+        "sit",
+        "stir"
+      ],
       "fav": false,
       "known": false
     },
@@ -51737,6 +63698,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To communicate with or react to each other.",
       "cluster": "cluster_63",
       "day": 63,
+      "phonetic_distractors": [
+        "internet",
+        "indirect",
+        "incorrect",
+        "interview",
+        "interpret"
+      ],
       "fav": false,
       "known": false
     },
@@ -51761,6 +63729,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "A place, amenity, or piece of equipment provided for a particular purpose.",
       "cluster": "cluster_63",
       "day": 63,
+      "phonetic_distractors": [
+        "facilities",
+        "agility",
+        "liability",
+        "validity",
+        "stability"
+      ],
       "fav": false,
       "known": false
     },
@@ -51809,6 +63784,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To remove earth that is covering very old objects buried in the ground in order to discover things about the past.",
       "cluster": "cluster_63",
       "day": 63,
+      "phonetic_distractors": [
+        "escalator",
+        "innovate",
+        "exploit",
+        "export",
+        "cultivate"
+      ],
       "fav": false,
       "known": false
     },
@@ -51835,6 +63817,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_63_5",
       "cluster": "cluster_63",
       "day": 63,
+      "phonetic_distractors": [
+        "utilize",
+        "penalize",
+        "analyze",
+        "urbanize",
+        "satellite"
+      ],
       "fav": false,
       "known": false
     },
@@ -51861,6 +63850,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_63_6",
       "cluster": "cluster_63",
       "day": 63,
+      "phonetic_distractors": [
+        "trait",
+        "trolley",
+        "street",
+        "truly",
+        "pretty"
+      ],
       "fav": false,
       "known": false
     },
@@ -51910,6 +63906,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_63_8",
       "cluster": "cluster_63",
       "day": 63,
+      "phonetic_distractors": [
+        "gene",
+        "jean",
+        "reno",
+        "keno",
+        "geo"
+      ],
       "fav": false,
       "known": false
     },
@@ -52008,6 +64011,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_64_2",
       "cluster": "cluster_64",
       "day": 64,
+      "phonetic_distractors": [
+        "educate",
+        "horizon",
+        "terrain",
+        "human",
+        "decade"
+      ],
       "fav": false,
       "known": false
     },
@@ -52031,6 +64041,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Wild animals collectively.",
       "cluster": "cluster_64",
       "day": 64,
+      "phonetic_distractors": [
+        "worldwide",
+        "widely",
+        "nightlife",
+        "headline",
+        "timeline"
+      ],
       "fav": false,
       "known": false
     },
@@ -52057,6 +64074,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_64_4",
       "cluster": "cluster_64",
       "day": 64,
+      "phonetic_distractors": [
+        "spice",
+        "slide",
+        "slight",
+        "light",
+        "space"
+      ],
       "fav": false,
       "known": false
     },
@@ -52081,6 +64105,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "The state of being crowded and full of traffic.",
       "cluster": "cluster_64",
       "day": 64,
+      "phonetic_distractors": [
+        "congested",
+        "suggestion",
+        "question",
+        "connection",
+        "suggestions"
+      ],
       "fav": false,
       "known": false
     },
@@ -52105,6 +64136,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To put a decision, plan, agreement, etc. into effect.",
       "cluster": "cluster_64",
       "day": 64,
+      "phonetic_distractors": [
+        "complement",
+        "employment",
+        "supplement",
+        "improvement",
+        "important"
+      ],
       "fav": false,
       "known": false
     },
@@ -52129,6 +64167,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "The wealth and resources of a country or region.",
       "cluster": "cluster_64",
       "day": 64,
+      "phonetic_distractors": [
+        "economies",
+        "ecology",
+        "connoisseur",
+        "equality",
+        "kennedy"
+      ],
       "fav": false,
       "known": false
     },
@@ -52155,6 +64200,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_64_8",
       "cluster": "cluster_64",
       "day": 64,
+      "phonetic_distractors": [
+        "natural",
+        "cultural",
+        "bilingual",
+        "batteries",
+        "liberal"
+      ],
       "fav": false,
       "known": false
     },
@@ -52180,6 +64232,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "(of animals) active at night.",
       "cluster": "cluster_64",
       "day": 64,
+      "phonetic_distractors": [
+        "maternal",
+        "internal",
+        "eternal",
+        "external",
+        "doctrine"
+      ],
       "fav": false,
       "known": false
     },
@@ -52206,6 +64265,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_65_0",
       "cluster": "cluster_65",
       "day": 65,
+      "phonetic_distractors": [
+        "motion",
+        "emotion",
+        "action",
+        "machine",
+        "fiction"
+      ],
       "fav": false,
       "known": false
     },
@@ -52232,6 +64298,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_65_1",
       "cluster": "cluster_65",
       "day": 65,
+      "phonetic_distractors": [
+        "stretch",
+        "street",
+        "trace",
+        "stream",
+        "spread"
+      ],
       "fav": false,
       "known": false
     },
@@ -52258,6 +64331,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_65_2",
       "cluster": "cluster_65",
       "day": 65,
+      "phonetic_distractors": [
+        "empire",
+        "empty",
+        "emily",
+        "mpeg",
+        "emperor"
+      ],
       "fav": false,
       "known": false
     },
@@ -52284,6 +64364,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_65_3",
       "cluster": "cluster_65",
       "day": 65,
+      "phonetic_distractors": [
+        "crap",
+        "drop",
+        "cop",
+        "calm",
+        "crowd"
+      ],
       "fav": false,
       "known": false
     },
@@ -52310,6 +64397,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_65_4",
       "cluster": "cluster_65",
       "day": 65,
+      "phonetic_distractors": [
+        "second",
+        "lemon",
+        "lessons",
+        "lesson",
+        "region"
+      ],
       "fav": false,
       "known": false
     },
@@ -52334,6 +64428,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "By a strikingly large amount or to a strikingly large extent.",
       "cluster": "cluster_65",
       "day": 65,
+      "phonetic_distractors": [
+        "automatically",
+        "aromatic",
+        "automatic",
+        "admittedly",
+        "domestic"
+      ],
       "fav": false,
       "known": false
     },
@@ -52360,6 +64461,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_65_6",
       "cluster": "cluster_65",
       "day": 65,
+      "phonetic_distractors": [
+        "nested",
+        "arrested",
+        "suicide",
+        "specified",
+        "penalize"
+      ],
       "fav": false,
       "known": false
     },
@@ -52386,6 +64494,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_65_7",
       "cluster": "cluster_65",
       "day": 65,
+      "phonetic_distractors": [
+        "aromatic",
+        "automatic",
+        "domestic",
+        "promoting",
+        "romantic"
+      ],
       "fav": false,
       "known": false
     },
@@ -52410,6 +64525,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "The act of treating someone or something as if they are not important.",
       "cluster": "cluster_65",
       "day": 65,
+      "phonetic_distractors": [
+        "organizations",
+        "rehabilitation",
+        "commercialization",
+        "organisations",
+        "modifications"
+      ],
       "fav": false,
       "known": false
     },
@@ -52436,6 +64558,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_65_9",
       "cluster": "cluster_65",
       "day": 65,
+      "phonetic_distractors": [
+        "spectator",
+        "pentium",
+        "central",
+        "symptom",
+        "portrait"
+      ],
       "fav": false,
       "known": false
     },
@@ -52460,6 +64589,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "A financial gain, especially the difference between the amount earned and the amount spent.",
       "cluster": "cluster_66",
       "day": 66,
+      "phonetic_distractors": [
+        "rocket",
+        "promise",
+        "product",
+        "pocket",
+        "promised"
+      ],
       "fav": false,
       "known": false
     },
@@ -52510,6 +64646,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_66_2",
       "cluster": "cluster_66",
       "day": 66,
+      "phonetic_distractors": [
+        "start",
+        "star",
+        "cart",
+        "mars",
+        "sorry"
+      ],
       "fav": false,
       "known": false
     },
@@ -52534,6 +64677,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To say a word or a letter in a particular way.",
       "cluster": "cluster_66",
       "day": 66,
+      "phonetic_distractors": [
+        "announce",
+        "finance",
+        "produce",
+        "promotes",
+        "princess"
+      ],
       "fav": false,
       "known": false
     },
@@ -52558,6 +64708,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "A person related to you who lived a long time ago.",
       "cluster": "cluster_66",
       "day": 66,
+      "phonetic_distractors": [
+        "incest",
+        "manchester",
+        "investor",
+        "accessed",
+        "invest"
+      ],
       "fav": false,
       "known": false
     },
@@ -52582,6 +64739,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To judge or decide the amount, value, quality, or importance of something.",
       "cluster": "cluster_66",
       "day": 66,
+      "phonetic_distractors": [
+        "asset",
+        "offense",
+        "cell",
+        "abyss",
+        "ups"
+      ],
       "fav": false,
       "known": false
     },
@@ -52606,6 +64770,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "An idea or explanation for something that is based on known facts but has not yet been proved.",
       "cluster": "cluster_66",
       "day": 66,
+      "phonetic_distractors": [
+        "synthesis",
+        "diagnosis",
+        "autonomous",
+        "purchases",
+        "hypothetical"
+      ],
       "fav": false,
       "known": false
     },
@@ -52655,6 +64826,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "In a way that is impossible to disentangle or separate.",
       "cluster": "cluster_66",
       "day": 66,
+      "phonetic_distractors": [
+        "electricity",
+        "explicitly",
+        "extrapolate",
+        "increasingly",
+        "unequivocally"
+      ],
       "fav": false,
       "known": false
     },
@@ -52681,6 +64859,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_66_9",
       "cluster": "cluster_66",
       "day": 66,
+      "phonetic_distractors": [
+        "paste",
+        "poultry",
+        "poetry",
+        "extreme",
+        "painting"
+      ],
       "fav": false,
       "known": false
     },
@@ -52706,6 +64891,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_67_0",
       "cluster": "cluster_67",
       "day": 67,
+      "phonetic_distractors": [
+        "every",
+        "entry",
+        "any",
+        "enemy",
+        "allergy"
+      ],
       "fav": false,
       "known": false
     },
@@ -52730,6 +64922,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To take control or possession of foreign land, or a group of people, by force.",
       "cluster": "cluster_67",
       "day": 67,
+      "phonetic_distractors": [
+        "copper",
+        "cock",
+        "anchor",
+        "soccer",
+        "collar"
+      ],
       "fav": false,
       "known": false
     },
@@ -52753,6 +64952,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "one of the periods into which a year is divided at a college or university.",
       "cluster": "cluster_67",
       "day": 67,
+      "phonetic_distractors": [
+        "suggests",
+        "suggest",
+        "cement",
+        "commuter",
+        "domestic"
+      ],
       "fav": false,
       "known": false
     },
@@ -52777,6 +64983,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "The qualification obtained by students who successfully complete a university or college course.",
       "cluster": "cluster_67",
       "day": 67,
+      "phonetic_distractors": [
+        "dig",
+        "theory",
+        "dear",
+        "disney",
+        "decrease"
+      ],
       "fav": false,
       "known": false
     },
@@ -52801,6 +65014,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To come together or cause to come together again after a period of separation.",
       "cluster": "cluster_67",
       "day": 67,
+      "phonetic_distractors": [
+        "report",
+        "overnight",
+        "recent",
+        "reached",
+        "require"
+      ],
       "fav": false,
       "known": false
     },
@@ -52849,6 +65069,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To an increasing extent; more and more.",
       "cluster": "cluster_67",
       "day": 67,
+      "phonetic_distractors": [
+        "accordingly",
+        "exclusively",
+        "intensity",
+        "incredible",
+        "ingredient"
+      ],
       "fav": false,
       "known": false
     },
@@ -52873,6 +65100,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "A device sent up into space to travel around the earth, used for collecting information or communicating by radio, television, etc.",
       "cluster": "cluster_67",
       "day": 67,
+      "phonetic_distractors": [
+        "battle",
+        "ratify",
+        "analyze",
+        "settle",
+        "sculpt"
+      ],
       "fav": false,
       "known": false
     },
@@ -52897,6 +65131,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To discover proof or some other information, especially after careful searching.",
       "cluster": "cluster_67",
       "day": 67,
+      "phonetic_distractors": [
+        "owner",
+        "nerve",
+        "inner",
+        "and",
+        "occur"
+      ],
       "fav": false,
       "known": false
     },
@@ -52921,6 +65162,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "The method and practice of teaching.",
       "cluster": "cluster_67",
       "day": 67,
+      "phonetic_distractors": [
+        "penalty",
+        "ceremony",
+        "paraguay",
+        "readily",
+        "telephony"
+      ],
       "fav": false,
       "known": false
     },
@@ -52945,6 +65193,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "small pieces of rubbish that have been left lying on the ground in public places.",
       "cluster": "cluster_68",
       "day": 68,
+      "phonetic_distractors": [
+        "deter",
+        "latter",
+        "lighter",
+        "liver",
+        "letter"
+      ],
       "fav": false,
       "known": false
     },
@@ -52971,6 +65226,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_68_1",
       "cluster": "cluster_68",
       "day": 68,
+      "phonetic_distractors": [
+        "finder",
+        "boundary",
+        "fund",
+        "wound",
+        "render"
+      ],
       "fav": false,
       "known": false
     },
@@ -52997,6 +65259,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_68_2",
       "cluster": "cluster_68",
       "day": 68,
+      "phonetic_distractors": [
+        "stan",
+        "stack",
+        "stat",
+        "stuff",
+        "stage"
+      ],
       "fav": false,
       "known": false
     },
@@ -53021,6 +65290,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "the process of becoming well again after an illness or injury.",
       "cluster": "cluster_68",
       "day": 68,
+      "phonetic_distractors": [
+        "discovery",
+        "recovered",
+        "disagree",
+        "victory",
+        "innovate"
+      ],
       "fav": false,
       "known": false
     },
@@ -53047,6 +65323,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_68_4",
       "cluster": "cluster_68",
       "day": 68,
+      "phonetic_distractors": [
+        "interaction",
+        "intervention",
+        "introspection",
+        "infection",
+        "interactions"
+      ],
       "fav": false,
       "known": false
     },
@@ -53071,6 +65354,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "the income that a government or company receives regularly.",
       "cluster": "cluster_68",
       "day": 68,
+      "phonetic_distractors": [
+        "heaven",
+        "devon",
+        "seven",
+        "evans",
+        "avenue"
+      ],
       "fav": false,
       "known": false
     },
@@ -53095,6 +65385,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To decide what the intended meaning of something is.",
       "cluster": "cluster_68",
       "day": 68,
+      "phonetic_distractors": [
+        "internet",
+        "interact",
+        "enterprise",
+        "inherit",
+        "integrate"
+      ],
       "fav": false,
       "known": false
     },
@@ -53121,6 +65418,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_68_7",
       "cluster": "cluster_68",
       "day": 68,
+      "phonetic_distractors": [
+        "clicks",
+        "equipped",
+        "phillips",
+        "illness",
+        "clocks"
+      ],
       "fav": false,
       "known": false
     },
@@ -53170,6 +65474,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_68_9",
       "cluster": "cluster_68",
       "day": 68,
+      "phonetic_distractors": [
+        "holistic",
+        "realistic",
+        "artistic",
+        "pristine",
+        "linguistic"
+      ],
       "fav": false,
       "known": false
     },
@@ -53194,6 +65505,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Of or from a long time ago, having lasted for a very long time.",
       "cluster": "cluster_69",
       "day": 69,
+      "phonetic_distractors": [
+        "merchant",
+        "agent",
+        "infant",
+        "alienate",
+        "patient"
+      ],
       "fav": false,
       "known": false
     },
@@ -53220,6 +65538,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_69_1",
       "cluster": "cluster_69",
       "day": 69,
+      "phonetic_distractors": [
+        "train",
+        "brown",
+        "break",
+        "brave",
+        "bahrain"
+      ],
       "fav": false,
       "known": false
     },
@@ -53246,6 +65571,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_69_2",
       "cluster": "cluster_69",
       "day": 69,
+      "phonetic_distractors": [
+        "felt",
+        "meant",
+        "belt",
+        "dealt",
+        "met"
+      ],
       "fav": false,
       "known": false
     },
@@ -53272,6 +65604,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_69_3",
       "cluster": "cluster_69",
       "day": 69,
+      "phonetic_distractors": [
+        "scheduling",
+        "smell",
+        "spell",
+        "skill",
+        "settle"
+      ],
       "fav": false,
       "known": false
     },
@@ -53296,6 +65635,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "In a regular and even manner.",
       "cluster": "cluster_69",
       "day": 69,
+      "phonetic_distractors": [
+        "specially",
+        "steady",
+        "readily",
+        "stephanie",
+        "stable"
+      ],
       "fav": false,
       "known": false
     },
@@ -53320,6 +65666,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To build houses, offices, etc. in an area of countryside so that it becomes a town.",
       "cluster": "cluster_69",
       "day": 69,
+      "phonetic_distractors": [
+        "analyze",
+        "colonize",
+        "burns",
+        "lions",
+        "buses"
+      ],
       "fav": false,
       "known": false
     },
@@ -53346,6 +65699,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_69_6",
       "cluster": "cluster_69",
       "day": 69,
+      "phonetic_distractors": [
+        "nutrition",
+        "neutral",
+        "deterrent",
+        "student",
+        "astronaut"
+      ],
       "fav": false,
       "known": false
     },
@@ -53372,6 +65732,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_69_7",
       "cluster": "cluster_69",
       "day": 69,
+      "phonetic_distractors": [
+        "controversy",
+        "contribution",
+        "artificial",
+        "conservation",
+        "constitution"
+      ],
       "fav": false,
       "known": false
     },
@@ -53398,6 +65765,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_69_8",
       "cluster": "cluster_69",
       "day": 69,
+      "phonetic_distractors": [
+        "administrative",
+        "prehistoric",
+        "decentralize",
+        "interconnected",
+        "consecutive"
+      ],
       "fav": false,
       "known": false
     },
@@ -53424,6 +65798,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_69_9",
       "cluster": "cluster_69",
       "day": 69,
+      "phonetic_distractors": [
+        "sims",
+        "summer",
+        "singer",
+        "stir",
+        "litter"
+      ],
       "fav": false,
       "known": false
     },
@@ -53449,6 +65830,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_70_0",
       "cluster": "cluster_70",
       "day": 70,
+      "phonetic_distractors": [
+        "soil",
+        "bowl",
+        "belle",
+        "boy",
+        "boys"
+      ],
       "fav": false,
       "known": false
     },
@@ -53473,6 +65861,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "The arts and other manifestations of human intellectual achievement regarded collectively.",
       "cluster": "cluster_70",
       "day": 70,
+      "phonetic_distractors": [
+        "color",
+        "colour",
+        "collide",
+        "cultural",
+        "creature"
+      ],
       "fav": false,
       "known": false
     },
@@ -53497,6 +65892,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "A conversation between a journalist and a person of public interest.",
       "cluster": "cluster_70",
       "day": 70,
+      "phonetic_distractors": [
+        "interval",
+        "internet",
+        "interact",
+        "interface",
+        "internal"
+      ],
       "fav": false,
       "known": false
     },
@@ -53521,6 +65923,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Existing, occurring, or carried on between nations.",
       "cluster": "cluster_70",
       "day": 70,
+      "phonetic_distractors": [
+        "interactions",
+        "interaction",
+        "interracial",
+        "intersection",
+        "multinational"
+      ],
       "fav": false,
       "known": false
     },
@@ -53547,6 +65956,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_70_4",
       "cluster": "cluster_70",
       "day": 70,
+      "phonetic_distractors": [
+        "recorder",
+        "border",
+        "reporter",
+        "destroy",
+        "discover"
+      ],
       "fav": false,
       "known": false
     },
@@ -53573,6 +65989,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_70_5",
       "cluster": "cluster_70",
       "day": 70,
+      "phonetic_distractors": [
+        "urban",
+        "turn",
+        "terrain",
+        "turbo",
+        "define"
+      ],
       "fav": false,
       "known": false
     },
@@ -53599,6 +66022,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_70_6",
       "cluster": "cluster_70",
       "day": 70,
+      "phonetic_distractors": [
+        "statistical",
+        "logistics",
+        "analytics",
+        "realistic",
+        "scientists"
+      ],
       "fav": false,
       "known": false
     },
@@ -53648,6 +66078,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_70_8",
       "cluster": "cluster_70",
       "day": 70,
+      "phonetic_distractors": [
+        "furnishings",
+        "finishing",
+        "publishing",
+        "visiting",
+        "ownership"
+      ],
       "fav": false,
       "known": false
     },
@@ -53672,6 +66109,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "The relationship between members of the same family.",
       "cluster": "cluster_70",
       "day": 70,
+      "phonetic_distractors": [
+        "township",
+        "conscious",
+        "cashier",
+        "vintage",
+        "finnish"
+      ],
       "fav": false,
       "known": false
     },
@@ -53696,6 +66140,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "A legally accepted relationship between two people in which they live together.",
       "cluster": "cluster_71",
       "day": 71,
+      "phonetic_distractors": [
+        "forage",
+        "marry",
+        "sharing",
+        "mary",
+        "paris"
+      ],
       "fav": false,
       "known": false
     },
@@ -53746,6 +66197,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_71_2",
       "cluster": "cluster_71",
       "day": 71,
+      "phonetic_distractors": [
+        "stable",
+        "terminal",
+        "unable",
+        "citation",
+        "titled"
+      ],
       "fav": false,
       "known": false
     },
@@ -53770,6 +66228,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "to copy or move programs or information to a larger computer system or to the internet.",
       "cluster": "cluster_71",
       "day": 71,
+      "phonetic_distractors": [
+        "applied",
+        "applause",
+        "supplied",
+        "approach",
+        "allowed"
+      ],
       "fav": false,
       "known": false
     },
@@ -53796,6 +66261,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_71_4",
       "cluster": "cluster_71",
       "day": 71,
+      "phonetic_distractors": [
+        "mechanics",
+        "magical",
+        "metallica",
+        "technical",
+        "chemical"
+      ],
       "fav": false,
       "known": false
     },
@@ -53845,6 +66317,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_71_6",
       "cluster": "cluster_71",
       "day": 71,
+      "phonetic_distractors": [
+        "courts",
+        "context",
+        "critics",
+        "vertex",
+        "latex"
+      ],
       "fav": false,
       "known": false
     },
@@ -53893,6 +66372,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "The fact of depending on each other.",
       "cluster": "cluster_71",
       "day": 71,
+      "phonetic_distractors": [
+        "independence",
+        "independent",
+        "interventions",
+        "introspection",
+        "independently"
+      ],
       "fav": false,
       "known": false
     },
@@ -53940,6 +66426,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "A fight between armed forces.",
       "cluster": "cluster_72",
       "day": 72,
+      "phonetic_distractors": [
+        "cattle",
+        "bottle",
+        "barrel",
+        "castle",
+        "channel"
+      ],
       "fav": false,
       "known": false
     },
@@ -53966,6 +66459,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_72_1",
       "cluster": "cluster_72",
       "day": 72,
+      "phonetic_distractors": [
+        "gross",
+        "glossary",
+        "gregory",
+        "rotary",
+        "grammar"
+      ],
       "fav": false,
       "known": false
     },
@@ -53990,6 +66490,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "All the inhabitants of a particular town, area, or country.",
       "cluster": "cluster_72",
       "day": 72,
+      "phonetic_distractors": [
+        "circulation",
+        "regulation",
+        "simulation",
+        "compilation",
+        "computation"
+      ],
       "fav": false,
       "known": false
     },
@@ -54014,6 +66521,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "A large closed area of land with rows of seats around the sides and often with no roof, used for sports events.",
       "cluster": "cluster_72",
       "day": 72,
+      "phonetic_distractors": [
+        "sodium",
+        "stable",
+        "stream",
+        "saddam",
+        "steady"
+      ],
       "fav": false,
       "known": false
     },
@@ -54040,6 +66554,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_72_4",
       "cluster": "cluster_72",
       "day": 72,
+      "phonetic_distractors": [
+        "creativity",
+        "probability",
+        "volatility",
+        "possibility",
+        "reproductive"
+      ],
       "fav": false,
       "known": false
     },
@@ -54062,6 +66583,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "For that reason; consequently.",
       "cluster": "cluster_72",
       "day": 72,
+      "phonetic_distractors": [
+        "airfare",
+        "thereby",
+        "welfare",
+        "enforce",
+        "thereof"
+      ],
       "fav": false,
       "known": false
     },
@@ -54088,6 +66616,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Rise and fall irregularly in number or amount.",
       "cluster": "cluster_72",
       "day": 72,
+      "phonetic_distractors": [
+        "alienate",
+        "cultivate",
+        "eliminate",
+        "excavate",
+        "accommodate"
+      ],
       "fav": false,
       "known": false
     },
@@ -54112,6 +66647,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Involving competition, or wanting very much to win or be more successful than other people.",
       "cluster": "cluster_72",
       "day": 72,
+      "phonetic_distractors": [
+        "competitors",
+        "comparative",
+        "comparing",
+        "compatible",
+        "consecutive"
+      ],
       "fav": false,
       "known": false
     },
@@ -54134,6 +66676,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "By that means; as a result of that.",
       "cluster": "cluster_72",
       "day": 72,
+      "phonetic_distractors": [
+        "thereof",
+        "nearby",
+        "their",
+        "whereas",
+        "fair"
+      ],
       "fav": false,
       "known": false
     },
@@ -54158,6 +66707,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "The exclusive possession or control of the supply or trade in a commodity or service.",
       "cluster": "cluster_72",
       "day": 72,
+      "phonetic_distractors": [
+        "monopolize",
+        "mentally",
+        "manually",
+        "monthly",
+        "velocity"
+      ],
       "fav": false,
       "known": false
     },
@@ -54182,6 +66738,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To form a word or words with the letters in the correct order.",
       "cluster": "cluster_73",
       "day": 73,
+      "phonetic_distractors": [
+        "smell",
+        "cell",
+        "spec",
+        "spare",
+        "sell"
+      ],
       "fav": false,
       "known": false
     },
@@ -54206,6 +66769,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To experience physical or mental pain.",
       "cluster": "cluster_73",
       "day": 73,
+      "phonetic_distractors": [
+        "summer",
+        "refer",
+        "buffer",
+        "safer",
+        "stir"
+      ],
       "fav": false,
       "known": false
     },
@@ -54232,6 +66802,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_73_2",
       "cluster": "cluster_73",
       "day": 73,
+      "phonetic_distractors": [
+        "buyer",
+        "hide",
+        "her",
+        "wire",
+        "tire"
+      ],
       "fav": false,
       "known": false
     },
@@ -54258,6 +66835,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_73_3",
       "cluster": "cluster_73",
       "day": 73,
+      "phonetic_distractors": [
+        "debt",
+        "effort",
+        "deserve",
+        "deborah",
+        "dealt"
+      ],
       "fav": false,
       "known": false
     },
@@ -54282,6 +66866,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "money given as part of the cost of something, to help or encourage it to happen.",
       "cluster": "cluster_73",
       "day": 73,
+      "phonetic_distractors": [
+        "consider",
+        "somebody",
+        "sussex",
+        "submit",
+        "succeed"
+      ],
       "fav": false,
       "known": false
     },
@@ -54308,6 +66899,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_73_5",
       "cluster": "cluster_73",
       "day": 73,
+      "phonetic_distractors": [
+        "continent",
+        "maintained",
+        "entrance",
+        "maintains",
+        "mountains"
+      ],
       "fav": false,
       "known": false
     },
@@ -54332,6 +66930,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "The way in which you are treated and educated when young, especially by your parents.",
       "cluster": "cluster_73",
       "day": 73,
+      "phonetic_distractors": [
+        "appearing",
+        "upgrading",
+        "sprawling",
+        "packaging",
+        "drilling"
+      ],
       "fav": false,
       "known": false
     },
@@ -54355,6 +66960,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "The scientific study of the structure and development of language in general or of particular languages.",
       "cluster": "cluster_73",
       "day": 73,
+      "phonetic_distractors": [
+        "logistics",
+        "statistics",
+        "analytics",
+        "heuristic",
+        "semantics"
+      ],
       "fav": false,
       "known": false
     },
@@ -54381,6 +66993,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_73_8",
       "cluster": "cluster_73",
       "day": 73,
+      "phonetic_distractors": [
+        "resistance",
+        "resistant",
+        "residence",
+        "reliance",
+        "recipients"
+      ],
       "fav": false,
       "known": false
     },
@@ -54405,6 +67024,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "In its original condition; unspoiled.",
       "cluster": "cluster_73",
       "day": 73,
+      "phonetic_distractors": [
+        "christine",
+        "pretty",
+        "christina",
+        "preston",
+        "princeton"
+      ],
       "fav": false,
       "known": false
     },
@@ -54429,6 +67055,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Extending or reaching throughout the world.",
       "cluster": "cluster_74",
       "day": 74,
+      "phonetic_distractors": [
+        "wildlife",
+        "worlds",
+        "collide",
+        "childhood",
+        "certified"
+      ],
       "fav": false,
       "known": false
     },
@@ -54453,6 +67086,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "a particular set of clothes that has to be worn by the members of the same organization or group of people.",
       "cluster": "cluster_74",
       "day": 74,
+      "phonetic_distractors": [
+        "unified",
+        "reform",
+        "inform",
+        "platform",
+        "universe"
+      ],
       "fav": false,
       "known": false
     },
@@ -54479,6 +67119,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To join two or more things together.",
       "cluster": "cluster_74",
       "day": 74,
+      "phonetic_distractors": [
+        "collect",
+        "correct",
+        "affect",
+        "consent",
+        "cunt"
+      ],
       "fav": false,
       "known": false
     },
@@ -54502,6 +67149,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "The weather conditions prevailing in an area.",
       "cluster": "cluster_74",
       "day": 74,
+      "phonetic_distractors": [
+        "plummet",
+        "climb",
+        "limit",
+        "client",
+        "quiet"
+      ],
       "fav": false,
       "known": false
     },
@@ -54528,6 +67182,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_74_4",
       "cluster": "cluster_74",
       "day": 74,
+      "phonetic_distractors": [
+        "simulate",
+        "stamina",
+        "curriculum",
+        "symbols",
+        "fabulous"
+      ],
       "fav": false,
       "known": false
     },
@@ -54552,6 +67213,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "A place that draws visitors by providing something of interest or pleasure.",
       "cluster": "cluster_74",
       "day": 74,
+      "phonetic_distractors": [
+        "fraction",
+        "reaction",
+        "attractive",
+        "attention",
+        "addiction"
+      ],
       "fav": false,
       "known": false
     },
@@ -54576,6 +67244,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To do or make something that looks real but is not real.",
       "cluster": "cluster_74",
       "day": 74,
+      "phonetic_distractors": [
+        "stimulus",
+        "assimilate",
+        "symbols",
+        "simple",
+        "simulation"
+      ],
       "fav": false,
       "known": false
     },
@@ -54625,6 +67300,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_74_8",
       "cluster": "cluster_74",
       "day": 74,
+      "phonetic_distractors": [
+        "vermont",
+        "meant",
+        "cement",
+        "forget",
+        "percent"
+      ],
       "fav": false,
       "known": false
     },
@@ -54673,6 +67355,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "A structure with a roof and walls, such as a house, school, store, or factory.",
       "cluster": "cluster_75",
       "day": 75,
+      "phonetic_distractors": [
+        "bidding",
+        "billing",
+        "folding",
+        "builders",
+        "bleeding"
+      ],
       "fav": false,
       "known": false
     },
@@ -54697,6 +67386,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "A person whose job is teaching, especially in a school.",
       "cluster": "cluster_75",
       "day": 75,
+      "phonetic_distractors": [
+        "feature",
+        "leader",
+        "nature",
+        "creature",
+        "nurture"
+      ],
       "fav": false,
       "known": false
     },
@@ -54721,6 +67417,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "An extremely large, round mass of rock and metal or of gas that moves in a circular path around the sun or another star.",
       "cluster": "cluster_75",
       "day": 75,
+      "phonetic_distractors": [
+        "plant",
+        "plummet",
+        "planner",
+        "platinum",
+        "planners"
+      ],
       "fav": false,
       "known": false
     },
@@ -54745,6 +67448,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Someone or something that has been hurt, damaged, or killed or has suffered.",
       "cluster": "cluster_75",
       "day": 75,
+      "phonetic_distractors": [
+        "vintage",
+        "victor",
+        "visit",
+        "vacuum",
+        "licking"
+      ],
       "fav": false,
       "known": false
     },
@@ -54770,6 +67480,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_75_4",
       "cluster": "cluster_75",
       "day": 75,
+      "phonetic_distractors": [
+        "draw",
+        "fry",
+        "dried",
+        "drive",
+        "die"
+      ],
       "fav": false,
       "known": false
     },
@@ -54794,6 +67511,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "An opinion or a judgement about somebody/something that has been thought about very carefully.",
       "cluster": "cluster_75",
       "day": 75,
+      "phonetic_distractors": [
+        "assignment",
+        "assistant",
+        "segment",
+        "assignments",
+        "achievement"
+      ],
       "fav": false,
       "known": false
     },
@@ -54820,6 +67544,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_75_6",
       "cluster": "cluster_75",
       "day": 75,
+      "phonetic_distractors": [
+        "rendition",
+        "generation",
+        "fountain",
+        "donation",
+        "condition"
+      ],
       "fav": false,
       "known": false
     },
@@ -54844,6 +67575,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "A mixture of gases that surrounds any planet.",
       "cluster": "cluster_75",
       "day": 75,
+      "phonetic_distractors": [
+        "atmospheric",
+        "satisfy",
+        "trusted",
+        "satisfied",
+        "outscore"
+      ],
       "fav": false,
       "known": false
     },
@@ -54868,6 +67606,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To establish a colony in or on a place.",
       "cluster": "cluster_75",
       "day": 75,
+      "phonetic_distractors": [
+        "commons",
+        "collins",
+        "columns",
+        "colony",
+        "qualify"
+      ],
       "fav": false,
       "known": false
     },
@@ -54894,6 +67639,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_75_9",
       "cluster": "cluster_75",
       "day": 75,
+      "phonetic_distractors": [
+        "reliable",
+        "convertible",
+        "invisible",
+        "removable",
+        "principle"
+      ],
       "fav": false,
       "known": false
     },
@@ -54920,6 +67672,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_76_0",
       "cluster": "cluster_76",
       "day": 76,
+      "phonetic_distractors": [
+        "joyce",
+        "chess",
+        "voice",
+        "chase",
+        "chop"
+      ],
       "fav": false,
       "known": false
     },
@@ -54946,6 +67705,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_76_1",
       "cluster": "cluster_76",
       "day": 76,
+      "phonetic_distractors": [
+        "feed",
+        "weed",
+        "knead",
+        "seat",
+        "seas"
+      ],
       "fav": false,
       "known": false
     },
@@ -54971,6 +67737,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_76_2",
       "cluster": "cluster_76",
       "day": 76,
+      "phonetic_distractors": [
+        "lifetime",
+        "livestock",
+        "textile",
+        "install",
+        "lighting"
+      ],
       "fav": false,
       "known": false
     },
@@ -54995,6 +67768,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "A large area of countryside, especially in relation to its appearance.",
       "cluster": "cluster_76",
       "day": 76,
+      "phonetic_distractors": [
+        "mandate",
+        "indicate",
+        "handmade",
+        "landing",
+        "candidate"
+      ],
       "fav": false,
       "known": false
     },
@@ -55021,6 +67801,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_76_4",
       "cluster": "cluster_76",
       "day": 76,
+      "phonetic_distractors": [
+        "chronic",
+        "traffic",
+        "orgasm",
+        "panic",
+        "organize"
+      ],
       "fav": false,
       "known": false
     },
@@ -55045,6 +67832,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Carry out or perpetrate (a mistake, crime, or immoral act).",
       "cluster": "cluster_76",
       "day": 76,
+      "phonetic_distractors": [
+        "coming",
+        "commute",
+        "compete",
+        "emit",
+        "budget"
+      ],
       "fav": false,
       "known": false
     },
@@ -55068,6 +67862,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_76_6",
       "cluster": "cluster_76",
       "day": 76,
+      "phonetic_distractors": [
+        "earn",
+        "earth",
+        "urge",
+        "earl",
+        "array"
+      ],
       "fav": false,
       "known": false
     },
@@ -55092,6 +67893,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "The subjects comprising a course of study in a school or college.",
       "cluster": "cluster_76",
       "day": 76,
+      "phonetic_distractors": [
+        "simulate",
+        "stimulus",
+        "particular",
+        "calculate",
+        "jerusalem"
+      ],
       "fav": false,
       "known": false
     },
@@ -55118,6 +67926,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_76_8",
       "cluster": "cluster_76",
       "day": 76,
+      "phonetic_distractors": [
+        "litigation",
+        "irrigation",
+        "motivation",
+        "michigan",
+        "limitation"
+      ],
       "fav": false,
       "known": false
     },
@@ -55166,6 +67981,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To travel in a curved path around a much larger object such as the Earth or sun.",
       "cluster": "cluster_77",
       "day": 77,
+      "phonetic_distractors": [
+        "habit",
+        "oral",
+        "butt",
+        "organ",
+        "but"
+      ],
       "fav": false,
       "known": false
     },
@@ -55214,6 +68036,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "A room or building that is used for showing works of art.",
       "cluster": "cluster_77",
       "day": 77,
+      "phonetic_distractors": [
+        "salary",
+        "galleries",
+        "gather",
+        "valley",
+        "battery"
+      ],
       "fav": false,
       "known": false
     },
@@ -55238,6 +68067,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "A person who is receiving medical treatment, especially in a hospital.",
       "cluster": "cluster_77",
       "day": 77,
+      "phonetic_distractors": [
+        "payment",
+        "paint",
+        "parent",
+        "nation",
+        "patent"
+      ],
       "fav": false,
       "known": false
     },
@@ -55264,6 +68100,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_77_4",
       "cluster": "cluster_77",
       "day": 77,
+      "phonetic_distractors": [
+        "interpret",
+        "surprise",
+        "entries",
+        "internalize",
+        "exercise"
+      ],
       "fav": false,
       "known": false
     },
@@ -55288,6 +68131,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "A thing made or adapted for a particular purpose, especially a piece of mechanical or electronic equipment.",
       "cluster": "cluster_77",
       "day": 77,
+      "phonetic_distractors": [
+        "divide",
+        "divine",
+        "define",
+        "design",
+        "divorce"
+      ],
       "fav": false,
       "known": false
     },
@@ -55312,6 +68162,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To end an activity or custom officially.",
       "cluster": "cluster_77",
       "day": 77,
+      "phonetic_distractors": [
+        "publish",
+        "polish",
+        "public",
+        "abyss",
+        "demolish"
+      ],
       "fav": false,
       "known": false
     },
@@ -55336,6 +68193,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "A group of people, often a family, who live together.",
       "cluster": "cluster_77",
       "day": 77,
+      "phonetic_distractors": [
+        "slowly",
+        "housewives",
+        "handheld",
+        "enrolled",
+        "housewares"
+      ],
       "fav": false,
       "known": false
     },
@@ -55360,6 +68224,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To completely change something so that it is much better.",
       "cluster": "cluster_77",
       "day": 77,
+      "phonetic_distractors": [
+        "resolutions",
+        "resolution",
+        "revelation",
+        "revolutionary",
+        "regulations"
+      ],
       "fav": false,
       "known": false
     },
@@ -55386,6 +68257,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_77_9",
       "cluster": "cluster_77",
       "day": 77,
+      "phonetic_distractors": [
+        "reprints",
+        "preparing",
+        "replacing",
+        "replace",
+        "reporting"
+      ],
       "fav": false,
       "known": false
     },
@@ -55412,6 +68290,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_78_0",
       "cluster": "cluster_78",
       "day": 78,
+      "phonetic_distractors": [
+        "instrument",
+        "investment",
+        "instruments",
+        "infringement",
+        "involvement"
+      ],
       "fav": false,
       "known": false
     },
@@ -55436,6 +68321,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "A physical or mental feature which is regarded as indicating a condition of disease.",
       "cluster": "cluster_78",
       "day": 78,
+      "phonetic_distractors": [
+        "simple",
+        "system",
+        "simpson",
+        "systems",
+        "hampton"
+      ],
       "fav": false,
       "known": false
     },
@@ -55462,6 +68354,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_78_2",
       "cluster": "cluster_78",
       "day": 78,
+      "phonetic_distractors": [
+        "away",
+        "bake",
+        "wave",
+        "cake",
+        "way"
+      ],
       "fav": false,
       "known": false
     },
@@ -55509,6 +68408,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To further the progress of something, especially to support or actively encourage.",
       "cluster": "cluster_78",
       "day": 78,
+      "phonetic_distractors": [
+        "plummet",
+        "promoting",
+        "remote",
+        "propose",
+        "prompt"
+      ],
       "fav": false,
       "known": false
     },
@@ -55533,6 +68439,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Relating to cognition or the mental processes of perception, memory, judgment, and reasoning.",
       "cluster": "cluster_78",
       "day": 78,
+      "phonetic_distractors": [
+        "cognition",
+        "creative",
+        "punitive",
+        "positive",
+        "cottages"
+      ],
       "fav": false,
       "known": false
     },
@@ -55557,6 +68470,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Designed for people to live in.",
       "cluster": "cluster_78",
       "day": 78,
+      "phonetic_distractors": [
+        "residence",
+        "residents",
+        "rendition",
+        "reception",
+        "provincial"
+      ],
       "fav": false,
       "known": false
     },
@@ -55583,6 +68503,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_78_7",
       "cluster": "cluster_78",
       "day": 78,
+      "phonetic_distractors": [
+        "sour",
+        "stay",
+        "outer",
+        "sir",
+        "easter"
+      ],
       "fav": false,
       "known": false
     },
@@ -55607,6 +68534,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To become worse.",
       "cluster": "cluster_78",
       "day": 78,
+      "phonetic_distractors": [
+        "deterioration",
+        "deterrent",
+        "deliberate",
+        "interior",
+        "decreased"
+      ],
       "fav": false,
       "known": false
     },
@@ -55631,6 +68565,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "The study of meanings in a language.",
       "cluster": "cluster_78",
       "day": 78,
+      "phonetic_distractors": [
+        "symantec",
+        "syntax",
+        "romantic",
+        "symbiotic",
+        "tactics"
+      ],
       "fav": false,
       "known": false
     },
@@ -55655,6 +68596,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To make air, water, or earth dirty or harmful.",
       "cluster": "cluster_79",
       "day": 79,
+      "phonetic_distractors": [
+        "plot",
+        "petite",
+        "alot",
+        "pilot",
+        "cult"
+      ],
       "fav": false,
       "known": false
     },
@@ -55681,6 +68629,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_79_1",
       "cluster": "cluster_79",
       "day": 79,
+      "phonetic_distractors": [
+        "move",
+        "moon",
+        "mud",
+        "food",
+        "moved"
+      ],
       "fav": false,
       "known": false
     },
@@ -55707,6 +68662,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_79_2",
       "cluster": "cluster_79",
       "day": 79,
+      "phonetic_distractors": [
+        "product",
+        "protect",
+        "prevent",
+        "depict",
+        "reject"
+      ],
       "fav": false,
       "known": false
     },
@@ -55733,6 +68695,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_79_3",
       "cluster": "cluster_79",
       "day": 79,
+      "phonetic_distractors": [
+        "fair",
+        "sphere",
+        "fare",
+        "dear",
+        "fit"
+      ],
       "fav": false,
       "known": false
     },
@@ -55754,6 +68723,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Used to introduce a concession or recognition that something is true or is the case.",
       "cluster": "cluster_79",
       "day": 79,
+      "phonetic_distractors": [
+        "ltd",
+        "committed",
+        "actively",
+        "automatically",
+        "dramatically"
+      ],
       "fav": false,
       "known": false
     },
@@ -55780,6 +68756,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_79_5",
       "cluster": "cluster_79",
       "day": 79,
+      "phonetic_distractors": [
+        "applies",
+        "upload",
+        "plays",
+        "clause",
+        "appears"
+      ],
       "fav": false,
       "known": false
     },
@@ -55806,6 +68789,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_79_6",
       "cluster": "cluster_79",
       "day": 79,
+      "phonetic_distractors": [
+        "structure",
+        "deterrent",
+        "student",
+        "parent",
+        "abstract"
+      ],
       "fav": false,
       "known": false
     },
@@ -55830,6 +68820,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Not guilty of a crime or offense.",
       "cluster": "cluster_79",
       "day": 79,
+      "phonetic_distractors": [
+        "infant",
+        "instant",
+        "incident",
+        "innovate",
+        "ancient"
+      ],
       "fav": false,
       "known": false
     },
@@ -55856,6 +68853,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_79_8",
       "cluster": "cluster_79",
       "day": 79,
+      "phonetic_distractors": [
+        "deficit",
+        "navigate",
+        "educate",
+        "mitigate",
+        "celebrate"
+      ],
       "fav": false,
       "known": false
     },
@@ -55880,6 +68884,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To cleverly get an advantage over someone, especially a competitor.",
       "cluster": "cluster_79",
       "day": 79,
+      "phonetic_distractors": [
+        "manager",
+        "stamina",
+        "commuter",
+        "revenue",
+        "monitor"
+      ],
       "fav": false,
       "known": false
     },
@@ -55906,6 +68917,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_80_0",
       "cluster": "cluster_80",
       "day": 80,
+      "phonetic_distractors": [
+        "serial",
+        "single",
+        "simple",
+        "civil",
+        "signature"
+      ],
       "fav": false,
       "known": false
     },
@@ -55932,6 +68950,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_80_1",
       "cluster": "cluster_80",
       "day": 80,
+      "phonetic_distractors": [
+        "syria",
+        "serious",
+        "serial",
+        "spearhead",
+        "lineage"
+      ],
       "fav": false,
       "known": false
     },
@@ -55956,6 +68981,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To stay in the air or water without sinking or falling.",
       "cluster": "cluster_80",
       "day": 80,
+      "phonetic_distractors": [
+        "flight",
+        "flows",
+        "flat",
+        "fleet",
+        "flow"
+      ],
       "fav": false,
       "known": false
     },
@@ -55980,6 +69012,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "A system of money in general use in a particular country.",
       "cluster": "cluster_80",
       "day": 80,
+      "phonetic_distractors": [
+        "currencies",
+        "current",
+        "agency",
+        "courtesy",
+        "occurrence"
+      ],
       "fav": false,
       "known": false
     },
@@ -56004,6 +69043,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "The act of studying or examining something in detail, in order to discover or understand more about it.",
       "cluster": "cluster_80",
       "day": 80,
+      "phonetic_distractors": [
+        "analysts",
+        "analyses",
+        "analytics",
+        "analyst",
+        "notices"
+      ],
       "fav": false,
       "known": false
     },
@@ -56072,6 +69118,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "In contrast or comparison with the fact that.",
       "cluster": "cluster_80",
       "day": 80,
+      "phonetic_distractors": [
+        "errors",
+        "wells",
+        "fares",
+        "wear",
+        "wars"
+      ],
       "fav": false,
       "known": false
     },
@@ -56096,6 +69149,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To spend the winter in a dormant state.",
       "cluster": "cluster_80",
       "day": 80,
+      "phonetic_distractors": [
+        "alienate",
+        "internet",
+        "migrate",
+        "habit",
+        "hygiene"
+      ],
       "fav": false,
       "known": false
     },
@@ -56121,6 +69181,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_80_9",
       "cluster": "cluster_80",
       "day": 80,
+      "phonetic_distractors": [
+        "semantics",
+        "synthetic",
+        "periodic",
+        "symantec",
+        "exotic"
+      ],
       "fav": false,
       "known": false
     },
@@ -56169,6 +69236,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Relating to the whole world; worldwide.",
       "cluster": "cluster_81",
       "day": 81,
+      "phonetic_distractors": [
+        "local",
+        "globe",
+        "label",
+        "mobile",
+        "noble"
+      ],
       "fav": false,
       "known": false
     },
@@ -56193,6 +69267,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "A journey made in an aircraft or in space.",
       "cluster": "cluster_81",
       "day": 81,
+      "phonetic_distractors": [
+        "float",
+        "lite",
+        "fight",
+        "flat",
+        "fly"
+      ],
       "fav": false,
       "known": false
     },
@@ -56217,6 +69298,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "By itself with little or no direct human control.",
       "cluster": "cluster_81",
       "day": 81,
+      "phonetic_distractors": [
+        "dramatically",
+        "automated",
+        "dramatic",
+        "aromatic",
+        "automotive"
+      ],
       "fav": false,
       "known": false
     },
@@ -56243,6 +69331,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_81_4",
       "cluster": "cluster_81",
       "day": 81,
+      "phonetic_distractors": [
+        "century",
+        "censor",
+        "sensors",
+        "centuries",
+        "sexy"
+      ],
       "fav": false,
       "known": false
     },
@@ -56291,6 +69386,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "(especially of a disease or something bad) continuing for a long time.",
       "cluster": "cluster_81",
       "day": 81,
+      "phonetic_distractors": [
+        "comic",
+        "clinic",
+        "sonic",
+        "erotic",
+        "convict"
+      ],
       "fav": false,
       "known": false
     },
@@ -56315,6 +69417,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Far down or in; intensely.",
       "cluster": "cluster_81",
       "day": 81,
+      "phonetic_distractors": [
+        "delhi",
+        "daily",
+        "deadly",
+        "weekly",
+        "deal"
+      ],
       "fav": false,
       "known": false
     },
@@ -56340,6 +69449,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_81_8",
       "cluster": "cluster_81",
       "day": 81,
+      "phonetic_distractors": [
+        "agricultural",
+        "practical",
+        "alphabetical",
+        "mechanical",
+        "agriculture"
+      ],
       "fav": false,
       "known": false
     },
@@ -56365,6 +69481,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_81_9",
       "cluster": "cluster_81",
       "day": 81,
+      "phonetic_distractors": [
+        "interstate",
+        "internet",
+        "internal",
+        "interval",
+        "nextel"
+      ],
       "fav": false,
       "known": false
     },
@@ -56390,6 +69513,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_82_0",
       "cluster": "cluster_82",
       "day": 82,
+      "phonetic_distractors": [
+        "perform",
+        "platinum",
+        "uniform",
+        "transform",
+        "passport"
+      ],
       "fav": false,
       "known": false
     },
@@ -56438,6 +69568,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To pull or draw someone or something towards them.",
       "cluster": "cluster_82",
       "day": 82,
+      "phonetic_distractors": [
+        "tracked",
+        "attacked",
+        "track",
+        "attack",
+        "tracks"
+      ],
       "fav": false,
       "known": false
     },
@@ -56486,6 +69623,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Done consciously and intentionally.",
       "cluster": "cluster_82",
       "day": 82,
+      "phonetic_distractors": [
+        "delivers",
+        "liberal",
+        "gilbert",
+        "delivered",
+        "delivering"
+      ],
       "fav": false,
       "known": false
     },
@@ -56511,6 +69655,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_82_5",
       "cluster": "cluster_82",
       "day": 82,
+      "phonetic_distractors": [
+        "grants",
+        "reuse",
+        "resource",
+        "pronounce",
+        "warehouse"
+      ],
       "fav": false,
       "known": false
     },
@@ -56535,6 +69686,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "A competition for teams or single players in which a series of games is played.",
       "cluster": "cluster_82",
       "day": 82,
+      "phonetic_distractors": [
+        "treatment",
+        "testament",
+        "parliament",
+        "innocent",
+        "implement"
+      ],
       "fav": false,
       "known": false
     },
@@ -56559,6 +69717,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To change completely the appearance or character of something or someone.",
       "cluster": "cluster_82",
       "day": 82,
+      "phonetic_distractors": [
+        "transport",
+        "transfer",
+        "transfers",
+        "transferred",
+        "platform"
+      ],
       "fav": false,
       "known": false
     },
@@ -56583,6 +69748,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "All the living things that are related directly to the same living thing that existed long ago.",
       "cluster": "cluster_82",
       "day": 82,
+      "phonetic_distractors": [
+        "linda",
+        "linear",
+        "period",
+        "income",
+        "syria"
+      ],
       "fav": false,
       "known": false
     },
@@ -56607,6 +69779,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Behaviour, especially of a young person, that is illegal or not acceptable to most people.",
       "cluster": "cluster_82",
       "day": 82,
+      "phonetic_distractors": [
+        "democracy",
+        "deliberately",
+        "distinction",
+        "frequency",
+        "diplomacy"
+      ],
       "fav": false,
       "known": false
     },
@@ -56633,6 +69812,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_83_0",
       "cluster": "cluster_83",
       "day": 83,
+      "phonetic_distractors": [
+        "nathan",
+        "notion",
+        "patient",
+        "action",
+        "mission"
+      ],
       "fav": false,
       "known": false
     },
@@ -56659,6 +69845,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_83_1",
       "cluster": "cluster_83",
       "day": 83,
+      "phonetic_distractors": [
+        "arrest",
+        "taste",
+        "pest",
+        "text",
+        "chest"
+      ],
       "fav": false,
       "known": false
     },
@@ -56685,6 +69878,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_83_2",
       "cluster": "cluster_83",
       "day": 83,
+      "phonetic_distractors": [
+        "curve",
+        "nov",
+        "serve",
+        "nav",
+        "nurse"
+      ],
       "fav": false,
       "known": false
     },
@@ -56710,6 +69910,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_83_3",
       "cluster": "cluster_83",
       "day": 83,
+      "phonetic_distractors": [
+        "loan",
+        "bowl",
+        "zone",
+        "shown",
+        "known"
+      ],
       "fav": false,
       "known": false
     },
@@ -56736,6 +69943,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_83_4",
       "cluster": "cluster_83",
       "day": 83,
+      "phonetic_distractors": [
+        "lifestyle",
+        "plastic",
+        "lighting",
+        "acoustic",
+        "laptop"
+      ],
       "fav": false,
       "known": false
     },
@@ -56760,6 +69974,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "If a company outsources, it pays to have part of its work done by another company.",
       "cluster": "cluster_83",
       "day": 83,
+      "phonetic_distractors": [
+        "outscore",
+        "resource",
+        "outdoor",
+        "outsourcing",
+        "outdoors"
+      ],
       "fav": false,
       "known": false
     },
@@ -56810,6 +70031,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_83_7",
       "cluster": "cluster_83",
       "day": 83,
+      "phonetic_distractors": [
+        "sheriff",
+        "terrace",
+        "era",
+        "thereof",
+        "verify"
+      ],
       "fav": false,
       "known": false
     },
@@ -56833,6 +70061,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_83_8",
       "cluster": "cluster_83",
       "day": 83,
+      "phonetic_distractors": [
+        "quantity",
+        "conscious",
+        "custom",
+        "bottom",
+        "column"
+      ],
       "fav": false,
       "known": false
     },
@@ -56859,6 +70094,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_83_9",
       "cluster": "cluster_83",
       "day": 83,
+      "phonetic_distractors": [
+        "marion",
+        "regression",
+        "bulgarian",
+        "librarian",
+        "aquarium"
+      ],
       "fav": false,
       "known": false
     },
@@ -56883,6 +70125,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To choose someone to hold public office or some other position by voting.",
       "cluster": "cluster_84",
       "day": 84,
+      "phonetic_distractors": [
+        "effect",
+        "insect",
+        "looked",
+        "reject",
+        "direct"
+      ],
       "fav": false,
       "known": false
     },
@@ -56907,6 +70156,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To prepare someone or yourself for a job, activity, or sport, by learning skills and/or by mental or physical exercise.",
       "cluster": "cluster_84",
       "day": 84,
+      "phonetic_distractors": [
+        "trait",
+        "brain",
+        "trade",
+        "trace",
+        "trail"
+      ],
       "fav": false,
       "known": false
     },
@@ -56931,6 +70187,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To send a spacecraft into the sky or into space.",
       "cluster": "cluster_84",
       "day": 84,
+      "phonetic_distractors": [
+        "lawn",
+        "lunch",
+        "loan",
+        "law",
+        "fauna"
+      ],
       "fav": false,
       "known": false
     },
@@ -56955,6 +70218,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To impose a tax on someone or something.",
       "cluster": "cluster_84",
       "day": 84,
+      "phonetic_distractors": [
+        "tex",
+        "packs",
+        "racks",
+        "fax",
+        "tracks"
+      ],
       "fav": false,
       "known": false
     },
@@ -56981,6 +70251,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_84_4",
       "cluster": "cluster_84",
       "day": 84,
+      "phonetic_distractors": [
+        "spice",
+        "space",
+        "slice",
+        "spider",
+        "spies"
+      ],
       "fav": false,
       "known": false
     },
@@ -57003,6 +70280,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "In addition to; apart from.",
       "cluster": "cluster_84",
       "day": 84,
+      "phonetic_distractors": [
+        "builds",
+        "bids",
+        "decide",
+        "build",
+        "believes"
+      ],
       "fav": false,
       "known": false
     },
@@ -57029,6 +70313,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_84_6",
       "cluster": "cluster_84",
       "day": 84,
+      "phonetic_distractors": [
+        "identity",
+        "entity",
+        "deputy",
+        "mentally",
+        "deficit"
+      ],
       "fav": false,
       "known": false
     },
@@ -57053,6 +70344,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To provide with a place to live or to be stored in.",
       "cluster": "cluster_84",
       "day": 84,
+      "phonetic_distractors": [
+        "assimilate",
+        "accommodation",
+        "comedy",
+        "holiday",
+        "eliminate"
+      ],
       "fav": false,
       "known": false
     },
@@ -57079,6 +70377,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_84_8",
       "cluster": "cluster_84",
       "day": 84,
+      "phonetic_distractors": [
+        "bleeding",
+        "being",
+        "teaching",
+        "blogging",
+        "blocking"
+      ],
       "fav": false,
       "known": false
     },
@@ -57105,6 +70410,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_84_9",
       "cluster": "cluster_84",
       "day": 84,
+      "phonetic_distractors": [
+        "feed",
+        "seed",
+        "weed",
+        "neo",
+        "reed"
+      ],
       "fav": false,
       "known": false
     },
@@ -57129,6 +70441,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Famous or important in history, or potentially so.",
       "cluster": "cluster_85",
       "day": 85,
+      "phonetic_distractors": [
+        "restored",
+        "restore",
+        "hispanic",
+        "district",
+        "disorder"
+      ],
       "fav": false,
       "known": false
     },
@@ -57153,6 +70472,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Relating to the body as opposed to the mind.",
       "cluster": "cluster_85",
       "day": 85,
+      "phonetic_distractors": [
+        "physics",
+        "fiscal",
+        "chemical",
+        "vehicle",
+        "magical"
+      ],
       "fav": false,
       "known": false
     },
@@ -57177,6 +70503,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To conduct the policy, actions, and affairs of a state, organization, or people.",
       "cluster": "cluster_85",
       "day": 85,
+      "phonetic_distractors": [
+        "gun",
+        "oven",
+        "southern",
+        "lovers",
+        "cover"
+      ],
       "fav": false,
       "known": false
     },
@@ -57202,6 +70535,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_85_3",
       "cluster": "cluster_85",
       "day": 85,
+      "phonetic_distractors": [
+        "dry",
+        "fly",
+        "free",
+        "cry",
+        "phi"
+      ],
       "fav": false,
       "known": false
     },
@@ -57226,6 +70566,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To learn something so that you will remember it exactly.",
       "cluster": "cluster_85",
       "day": 85,
+      "phonetic_distractors": [
+        "memories",
+        "memory",
+        "members",
+        "measures",
+        "empire"
+      ],
       "fav": false,
       "known": false
     },
@@ -57251,6 +70598,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_85_5",
       "cluster": "cluster_85",
       "day": 85,
+      "phonetic_distractors": [
+        "innovation",
+        "litigation",
+        "immigration",
+        "mitigation",
+        "probation"
+      ],
       "fav": false,
       "known": false
     },
@@ -57275,6 +70629,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Able to speak a language very well and easily.",
       "cluster": "cluster_85",
       "day": 85,
+      "phonetic_distractors": [
+        "fluency",
+        "fluid",
+        "client",
+        "front",
+        "alienate"
+      ],
       "fav": false,
       "known": false
     },
@@ -57301,6 +70662,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_85_7",
       "cluster": "cluster_85",
       "day": 85,
+      "phonetic_distractors": [
+        "discretion",
+        "impression",
+        "recession",
+        "detection",
+        "regression"
+      ],
       "fav": false,
       "known": false
     },
@@ -57327,6 +70695,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_85_8",
       "cluster": "cluster_85",
       "day": 85,
+      "phonetic_distractors": [
+        "creative",
+        "innovative",
+        "native",
+        "stated",
+        "interactive"
+      ],
       "fav": false,
       "known": false
     },
@@ -57351,6 +70726,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To guess or think about what might happen using information that is already known.",
       "cluster": "cluster_85",
       "day": 85,
+      "phonetic_distractors": [
+        "extraction",
+        "contaminate",
+        "metropolis",
+        "strategies",
+        "translator"
+      ],
       "fav": false,
       "known": false
     },
@@ -57371,6 +70753,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_86_0",
       "cluster": "cluster_86",
       "day": 86,
+      "phonetic_distractors": [
+        "blackjack",
+        "backed",
+        "batman",
+        "bank",
+        "backup"
+      ],
       "fav": false,
       "known": false
     },
@@ -57397,6 +70786,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Involving the use of skill and the imagination to produce something new or a work of art.",
       "cluster": "cluster_86",
       "day": 86,
+      "phonetic_distractors": [
+        "creating",
+        "create",
+        "creator",
+        "creates",
+        "created"
+      ],
       "fav": false,
       "known": false
     },
@@ -57423,6 +70819,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_86_2",
       "cluster": "cluster_86",
       "day": 86,
+      "phonetic_distractors": [
+        "cultural",
+        "commercial",
+        "maternal",
+        "coverage",
+        "collision"
+      ],
       "fav": false,
       "known": false
     },
@@ -57447,6 +70850,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "a formal talk on a serious subject given to a group of people, especially students.",
       "cluster": "cluster_86",
       "day": 86,
+      "phonetic_distractors": [
+        "texture",
+        "leisure",
+        "vector",
+        "venture",
+        "lesser"
+      ],
       "fav": false,
       "known": false
     },
@@ -57471,6 +70881,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Consciously and intentionally; on purpose.",
       "cluster": "cluster_86",
       "day": 86,
+      "phonetic_distractors": [
+        "efficiently",
+        "delinquency",
+        "salinity",
+        "separately",
+        "delivering"
+      ],
       "fav": false,
       "known": false
     },
@@ -57519,6 +70936,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "In, relating to, or characteristic of a town or city.",
       "cluster": "cluster_86",
       "day": 86,
+      "phonetic_distractors": [
+        "herbal",
+        "herb",
+        "earn",
+        "turbine",
+        "ruin"
+      ],
       "fav": false,
       "known": false
     },
@@ -57543,6 +70967,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "The force that attracts objects towards one another, especially the force that makes things fall to the ground.",
       "cluster": "cluster_86",
       "day": 86,
+      "phonetic_distractors": [
+        "gadget",
+        "travel",
+        "privacy",
+        "gratis",
+        "trinity"
+      ],
       "fav": false,
       "known": false
     },
@@ -57568,6 +70999,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To lead something such as an attack or a course of action.",
       "cluster": "cluster_86",
       "day": 86,
+      "phonetic_distractors": [
+        "spread",
+        "period",
+        "spears",
+        "spirit",
+        "appeared"
+      ],
       "fav": false,
       "known": false
     },
@@ -57592,6 +71030,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To make a record or tell the history of something.",
       "cluster": "cluster_86",
       "day": 86,
+      "phonetic_distractors": [
+        "tropical",
+        "critical",
+        "chemical",
+        "clinical",
+        "graphical"
+      ],
       "fav": false,
       "known": false
     },
@@ -57618,6 +71063,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_87_0",
       "cluster": "cluster_87",
       "day": 87,
+      "phonetic_distractors": [
+        "famine",
+        "salmon",
+        "manage",
+        "savage",
+        "package"
+      ],
       "fav": false,
       "known": false
     },
@@ -57644,6 +71096,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To make something better, or to become better.",
       "cluster": "cluster_87",
       "day": 87,
+      "phonetic_distractors": [
+        "approve",
+        "improving",
+        "prune",
+        "immune",
+        "import"
+      ],
       "fav": false,
       "known": false
     },
@@ -57668,6 +71127,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To give someone something that they need.",
       "cluster": "cluster_87",
       "day": 87,
+      "phonetic_distractors": [
+        "proved",
+        "preferred",
+        "pride",
+        "proceed",
+        "providing"
+      ],
       "fav": false,
       "known": false
     },
@@ -57694,6 +71160,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_87_3",
       "cluster": "cluster_87",
       "day": 87,
+      "phonetic_distractors": [
+        "form",
+        "charm",
+        "harm",
+        "calm",
+        "fair"
+      ],
       "fav": false,
       "known": false
     },
@@ -57742,6 +71215,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "In a way that achieves maximum productivity with minimum wasted effort or expense.",
       "cluster": "cluster_87",
       "day": 87,
+      "phonetic_distractors": [
+        "efficiency",
+        "sufficiently",
+        "fluently",
+        "additionally",
+        "initially"
+      ],
       "fav": false,
       "known": false
     },
@@ -57766,6 +71246,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Able to use two languages equally well.",
       "cluster": "cluster_87",
       "day": 87,
+      "phonetic_distractors": [
+        "bilateral",
+        "language",
+        "burlington",
+        "bicycle",
+        "clinical"
+      ],
       "fav": false,
       "known": false
     },
@@ -57790,6 +71277,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To make or enact laws.",
       "cluster": "cluster_87",
       "day": 87,
+      "phonetic_distractors": [
+        "legislature",
+        "legislative",
+        "educate",
+        "regulate",
+        "legislation"
+      ],
       "fav": false,
       "known": false
     },
@@ -57814,6 +71308,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To move the control of an organization or government from a single place to several smaller ones.",
       "cluster": "cluster_87",
       "day": 87,
+      "phonetic_distractors": [
+        "internalize",
+        "dimensions",
+        "identifies",
+        "destruction",
+        "monopolize"
+      ],
       "fav": false,
       "known": false
     },
@@ -57839,6 +71340,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To make something bad such as pain or problems less severe.",
       "cluster": "cluster_87",
       "day": 87,
+      "phonetic_distractors": [
+        "affiliate",
+        "appreciate",
+        "alienate",
+        "innovate",
+        "cultivate"
+      ],
       "fav": false,
       "known": false
     },
@@ -57889,6 +71397,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_88_1",
       "cluster": "cluster_88",
       "day": 88,
+      "phonetic_distractors": [
+        "score",
+        "six",
+        "square",
+        "declare",
+        "sixth"
+      ],
       "fav": false,
       "known": false
     },
@@ -57915,6 +71430,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_88_2",
       "cluster": "cluster_88",
       "day": 88,
+      "phonetic_distractors": [
+        "rule",
+        "root",
+        "route",
+        "room",
+        "ruth"
+      ],
       "fav": false,
       "known": false
     },
@@ -57938,6 +71460,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "A room in which a class of students is taught.",
       "cluster": "cluster_88",
       "day": 88,
+      "phonetic_distractors": [
+        "consume",
+        "bathroom",
+        "classic",
+        "classics",
+        "classes"
+      ],
       "fav": false,
       "known": false
     },
@@ -57962,6 +71491,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "The ability to acquire and apply knowledge and skills.",
       "cluster": "cluster_88",
       "day": 88,
+      "phonetic_distractors": [
+        "intelligent",
+        "influence",
+        "intention",
+        "relevance",
+        "interference"
+      ],
       "fav": false,
       "known": false
     },
@@ -57986,6 +71522,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To show or represent by a drawing, painting, or other art form.",
       "cluster": "cluster_88",
       "day": 88,
+      "phonetic_distractors": [
+        "depart",
+        "detect",
+        "picked",
+        "elect",
+        "defeat"
+      ],
       "fav": false,
       "known": false
     },
@@ -58010,6 +71553,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To mate and then produce offspring.",
       "cluster": "cluster_88",
       "day": 88,
+      "phonetic_distractors": [
+        "breeze",
+        "buried",
+        "brief",
+        "brad",
+        "reid"
+      ],
       "fav": false,
       "known": false
     },
@@ -58036,6 +71586,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_88_7",
       "cluster": "cluster_88",
       "day": 88,
+      "phonetic_distractors": [
+        "algeria",
+        "criteria",
+        "victoria",
+        "material",
+        "factory"
+      ],
       "fav": false,
       "known": false
     },
@@ -58084,6 +71641,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_88_9",
       "cluster": "cluster_88",
       "day": 88,
+      "phonetic_distractors": [
+        "volatility",
+        "pharmacology",
+        "anthropology",
+        "methodology",
+        "terminology"
+      ],
       "fav": false,
       "known": false
     },
@@ -58108,6 +71672,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To make something by putting bricks or other materials together.",
       "cluster": "cluster_89",
       "day": 89,
+      "phonetic_distractors": [
+        "filled",
+        "billy",
+        "bills",
+        "below",
+        "bold"
+      ],
       "fav": false,
       "known": false
     },
@@ -58134,6 +71705,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_89_1",
       "cluster": "cluster_89",
       "day": 89,
+      "phonetic_distractors": [
+        "distant",
+        "discussed",
+        "discrete",
+        "discover",
+        "dispatched"
+      ],
       "fav": false,
       "known": false
     },
@@ -58182,6 +71760,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Low in price, especially in relation to similar items or services.",
       "cluster": "cluster_89",
       "day": 89,
+      "phonetic_distractors": [
+        "chop",
+        "cheese",
+        "keep",
+        "cheat",
+        "sheep"
+      ],
       "fav": false,
       "known": false
     },
@@ -58208,6 +71793,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_89_4",
       "cluster": "cluster_89",
       "day": 89,
+      "phonetic_distractors": [
+        "actually",
+        "january",
+        "sanction",
+        "sedentary",
+        "psychiatry"
+      ],
       "fav": false,
       "known": false
     },
@@ -58230,6 +71822,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "In a way that is appropriate to the particular circumstances.",
       "cluster": "cluster_89",
       "day": 89,
+      "phonetic_distractors": [
+        "recording",
+        "accordance",
+        "awarded",
+        "recordings",
+        "authority"
+      ],
       "fav": false,
       "known": false
     },
@@ -58256,6 +71855,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_89_6",
       "cluster": "cluster_89",
       "day": 89,
+      "phonetic_distractors": [
+        "private",
+        "gravity",
+        "policy",
+        "promise",
+        "crisis"
+      ],
       "fav": false,
       "known": false
     },
@@ -58281,6 +71887,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Having feelings that are typical of a caring mother towards a child.",
       "cluster": "cluster_89",
       "day": 89,
+      "phonetic_distractors": [
+        "internal",
+        "eternal",
+        "material",
+        "nocturnal",
+        "colorful"
+      ],
       "fav": false,
       "known": false
     },
@@ -58331,6 +71944,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_89_9",
       "cluster": "cluster_89",
       "day": 89,
+      "phonetic_distractors": [
+        "sanction",
+        "lincoln",
+        "blanket",
+        "plastic",
+        "reaction"
+      ],
       "fav": false,
       "known": false
     },
@@ -58357,6 +71977,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_90_0",
       "cluster": "cluster_90",
       "day": 90,
+      "phonetic_distractors": [
+        "dare",
+        "dead",
+        "des",
+        "dot",
+        "set"
+      ],
       "fav": false,
       "known": false
     },
@@ -58383,6 +72010,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_90_1",
       "cluster": "cluster_90",
       "day": 90,
+      "phonetic_distractors": [
+        "suburb",
+        "away",
+        "sunday",
+        "severe",
+        "sustain"
+      ],
       "fav": false,
       "known": false
     },
@@ -58409,6 +72043,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_90_2",
       "cluster": "cluster_90",
       "day": 90,
+      "phonetic_distractors": [
+        "poet",
+        "pose",
+        "some",
+        "palm",
+        "owen"
+      ],
       "fav": false,
       "known": false
     },
@@ -58435,6 +72076,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_90_3",
       "cluster": "cluster_90",
       "day": 90,
+      "phonetic_distractors": [
+        "culture",
+        "create",
+        "teacher",
+        "creator",
+        "reached"
+      ],
       "fav": false,
       "known": false
     },
@@ -58459,6 +72107,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "The amount by which money spent or owed is greater than money earned in a particular period of time.",
       "cluster": "cluster_90",
       "day": 90,
+      "phonetic_distractors": [
+        "dataset",
+        "density",
+        "medicine",
+        "delegate",
+        "offices"
+      ],
       "fav": false,
       "known": false
     },
@@ -58485,6 +72140,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_90_5",
       "cluster": "cluster_90",
       "day": 90,
+      "phonetic_distractors": [
+        "pipeline",
+        "timely",
+        "headline",
+        "turbine",
+        "online"
+      ],
       "fav": false,
       "known": false
     },
@@ -58509,6 +72171,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "A form of a language that people speak in a particular part of a country.",
       "cluster": "cluster_90",
       "day": 90,
+      "phonetic_distractors": [
+        "collect",
+        "select",
+        "elect",
+        "connect",
+        "violent"
+      ],
       "fav": false,
       "known": false
     },
@@ -58533,6 +72202,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Medical treatment of injuries or diseases that involves cutting open a person's body.",
       "cluster": "cluster_90",
       "day": 90,
+      "phonetic_distractors": [
+        "salary",
+        "merger",
+        "surgeon",
+        "servers",
+        "nursery"
+      ],
       "fav": false,
       "known": false
     },
@@ -58557,6 +72233,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "The situation when the members of a group or society are united.",
       "cluster": "cluster_90",
       "day": 90,
+      "phonetic_distractors": [
+        "collision",
+        "colon",
+        "coleman",
+        "korean",
+        "region"
+      ],
       "fav": false,
       "known": false
     },
@@ -58581,6 +72264,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "A particular period of time in history or a person's life.",
       "cluster": "cluster_90",
       "day": 90,
+      "phonetic_distractors": [
+        "epic",
+        "pack",
+        "era",
+        "chuck",
+        "punk"
+      ],
       "fav": false,
       "known": false
     },
@@ -58604,6 +72294,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Convert waste into reusable material.",
       "cluster": "cluster_91",
       "day": 91,
+      "phonetic_distractors": [
+        "recycling",
+        "vehicle",
+        "peaceful",
+        "michael",
+        "recall"
+      ],
       "fav": false,
       "known": false
     },
@@ -58628,6 +72325,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "the buildings of a college or university and the land that surrounds them.",
       "cluster": "cluster_91",
       "day": 91,
+      "phonetic_distractors": [
+        "camps",
+        "kansas",
+        "cameron",
+        "caps",
+        "canvas"
+      ],
       "fav": false,
       "known": false
     },
@@ -58652,6 +72356,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Forming an essential foundation or starting point.",
       "cluster": "cluster_91",
       "day": 91,
+      "phonetic_distractors": [
+        "bake",
+        "basis",
+        "buses",
+        "brick",
+        "sick"
+      ],
       "fav": false,
       "known": false
     },
@@ -58702,6 +72413,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_91_4",
       "cluster": "cluster_91",
       "day": 91,
+      "phonetic_distractors": [
+        "martin",
+        "doctor",
+        "dayton",
+        "gotten",
+        "cartridge"
+      ],
       "fav": false,
       "known": false
     },
@@ -58750,6 +72468,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "a large amount of information stored in a computer system in such a way that it can be easily looked at or changed.",
       "cluster": "cluster_91",
       "day": 91,
+      "phonetic_distractors": [
+        "dataset",
+        "debate",
+        "dayton",
+        "davis",
+        "mitigate"
+      ],
       "fav": false,
       "known": false
     },
@@ -58774,6 +72499,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To care for and encourage the growth or development of someone or something.",
       "cluster": "cluster_91",
       "day": 91,
+      "phonetic_distractors": [
+        "nature",
+        "nerve",
+        "search",
+        "teacher",
+        "newer"
+      ],
       "fav": false,
       "known": false
     },
@@ -58798,6 +72530,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "The action of clearing a wide area of trees.",
       "cluster": "cluster_91",
       "day": 91,
+      "phonetic_distractors": [
+        "deterioration",
+        "description",
+        "information",
+        "discrimination",
+        "destruction"
+      ],
       "fav": false,
       "known": false
     },
@@ -58847,6 +72586,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "The ability to do something well, usually gained through training or experience.",
       "cluster": "cluster_92",
       "day": 92,
+      "phonetic_distractors": [
+        "skin",
+        "still",
+        "scale",
+        "skip",
+        "school"
+      ],
       "fav": false,
       "known": false
     },
@@ -58873,6 +72619,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_92_1",
       "cluster": "cluster_92",
       "day": 92,
+      "phonetic_distractors": [
+        "cos",
+        "chris",
+        "crowd",
+        "draw",
+        "crop"
+      ],
       "fav": false,
       "known": false
     },
@@ -58897,6 +72650,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "A sports competition or event in which two people or teams compete against each other.",
       "cluster": "cluster_92",
       "day": 92,
+      "phonetic_distractors": [
+        "map",
+        "much",
+        "batch",
+        "man",
+        "math"
+      ],
       "fav": false,
       "known": false
     },
@@ -58920,6 +72680,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "A book used as a standard work for the study of a subject.",
       "cluster": "cluster_92",
       "day": 92,
+      "phonetic_distractors": [
+        "texts",
+        "textile",
+        "textiles",
+        "texture",
+        "notebook"
+      ],
       "fav": false,
       "known": false
     },
@@ -58946,6 +72713,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_92_4",
       "cluster": "cluster_92",
       "day": 92,
+      "phonetic_distractors": [
+        "thread",
+        "throat",
+        "debt",
+        "fresh",
+        "asset"
+      ],
       "fav": false,
       "known": false
     },
@@ -58971,6 +72745,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Designed to keep something undesirable such as illness from occurring.",
       "cluster": "cluster_92",
       "day": 92,
+      "phonetic_distractors": [
+        "preventing",
+        "presenting",
+        "printing",
+        "protective",
+        "perspective"
+      ],
       "fav": false,
       "known": false
     },
@@ -58993,6 +72774,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "As a result.",
       "cluster": "cluster_92",
       "day": 92,
+      "phonetic_distractors": [
+        "subsequently",
+        "constantly",
+        "consequence",
+        "consistently",
+        "consequences"
+      ],
       "fav": false,
       "known": false
     },
@@ -59017,6 +72805,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "A period of temporary economic decline during which trade and industrial activity are reduced.",
       "cluster": "cluster_92",
       "day": 92,
+      "phonetic_distractors": [
+        "reception",
+        "session",
+        "emotion",
+        "mission",
+        "depression"
+      ],
       "fav": false,
       "known": false
     },
@@ -59089,6 +72884,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Someone who visits a person or place.",
       "cluster": "cluster_93",
       "day": 93,
+      "phonetic_distractors": [
+        "visits",
+        "victor",
+        "visited",
+        "visiting",
+        "emit"
+      ],
       "fav": false,
       "known": false
     },
@@ -59115,6 +72917,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_93_1",
       "cluster": "cluster_93",
       "day": 93,
+      "phonetic_distractors": [
+        "electrical",
+        "inextricably",
+        "liquidity",
+        "effectively",
+        "electronic"
+      ],
       "fav": false,
       "known": false
     },
@@ -59141,6 +72950,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_93_2",
       "cluster": "cluster_93",
       "day": 93,
+      "phonetic_distractors": [
+        "memories",
+        "memorize",
+        "messy",
+        "measure",
+        "marry"
+      ],
       "fav": false,
       "known": false
     },
@@ -59165,6 +72981,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "The money that a person, a region, a country, etc. earns from work, from investing money, from business, etc.",
       "cluster": "cluster_93",
       "day": 93,
+      "phonetic_distractors": [
+        "interim",
+        "become",
+        "incoming",
+        "outcome",
+        "inches"
+      ],
       "fav": false,
       "known": false
     },
@@ -59189,6 +73012,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "A painting, photograph, drawing, etc. of a person or, less commonly, of a group of people.",
       "cluster": "cluster_93",
       "day": 93,
+      "phonetic_distractors": [
+        "portray",
+        "portal",
+        "corporate",
+        "profit",
+        "shortage"
+      ],
       "fav": false,
       "known": false
     },
@@ -59213,6 +73043,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "The reporting of a particular important event or subject.",
       "cluster": "cluster_93",
       "day": 93,
+      "phonetic_distractors": [
+        "covering",
+        "covered",
+        "covers",
+        "cultural",
+        "govern"
+      ],
       "fav": false,
       "known": false
     },
@@ -59237,6 +73074,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Not physically existing as such but made by software to appear to do so.",
       "cluster": "cluster_93",
       "day": 93,
+      "phonetic_distractors": [
+        "ritual",
+        "verbal",
+        "virtue",
+        "fuel",
+        "natural"
+      ],
       "fav": false,
       "known": false
     },
@@ -59261,6 +73105,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "A general increase in prices and fall in the purchasing value of money.",
       "cluster": "cluster_93",
       "day": 93,
+      "phonetic_distractors": [
+        "innovation",
+        "insulation",
+        "infection",
+        "irrigation",
+        "influence"
+      ],
       "fav": false,
       "known": false
     },
@@ -59283,6 +73134,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "In spite of.",
       "cluster": "cluster_93",
       "day": 93,
+      "phonetic_distractors": [
+        "understanding",
+        "corresponding",
+        "participating",
+        "prehistoric",
+        "palestinian"
+      ],
       "fav": false,
       "known": false
     },
@@ -59307,6 +73165,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Treat (a person, group, or concept) as insignificant or peripheral.",
       "cluster": "cluster_93",
       "day": 93,
+      "phonetic_distractors": [
+        "particles",
+        "articles",
+        "internalize",
+        "monopolize",
+        "particle"
+      ],
       "fav": false,
       "known": false
     },
@@ -59333,6 +73198,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_94_0",
       "cluster": "cluster_94",
       "day": 94,
+      "phonetic_distractors": [
+        "floyd",
+        "fluid",
+        "flush",
+        "blood",
+        "flight"
+      ],
       "fav": false,
       "known": false
     },
@@ -59359,6 +73231,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_94_1",
       "cluster": "cluster_94",
       "day": 94,
+      "phonetic_distractors": [
+        "middle",
+        "medal",
+        "fossil",
+        "novel",
+        "modify"
+      ],
       "fav": false,
       "known": false
     },
@@ -59383,6 +73262,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "A belief, principle, or way of acting that people in a particular society or group have continued to follow for a long time.",
       "cluster": "cluster_94",
       "day": 94,
+      "phonetic_distractors": [
+        "erudition",
+        "edition",
+        "addition",
+        "rendition",
+        "tuition"
+      ],
       "fav": false,
       "known": false
     },
@@ -59409,6 +73295,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_94_3",
       "cluster": "cluster_94",
       "day": 94,
+      "phonetic_distractors": [
+        "marry",
+        "mercy",
+        "mary",
+        "jesse",
+        "many"
+      ],
       "fav": false,
       "known": false
     },
@@ -59435,6 +73328,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_94_4",
       "cluster": "cluster_94",
       "day": 94,
+      "phonetic_distractors": [
+        "renewal",
+        "virtual",
+        "mitchell",
+        "rachel",
+        "removal"
+      ],
       "fav": false,
       "known": false
     },
@@ -59461,6 +73361,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_94_5",
       "cluster": "cluster_94",
       "day": 94,
+      "phonetic_distractors": [
+        "congestion",
+        "suggested",
+        "convicted",
+        "collected",
+        "conducted"
+      ],
       "fav": false,
       "known": false
     },
@@ -59485,6 +73392,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To hit something violently.",
       "cluster": "cluster_94",
       "day": 94,
+      "phonetic_distractors": [
+        "allied",
+        "colored",
+        "culture",
+        "color",
+        "supplied"
+      ],
       "fav": false,
       "known": false
     },
@@ -59509,6 +73423,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "The basic physical and organizational structures and facilities needed for the operation of a society.",
       "cluster": "cluster_94",
       "day": 94,
+      "phonetic_distractors": [
+        "instructors",
+        "entrepreneur",
+        "industrial",
+        "restructuring",
+        "introductory"
+      ],
       "fav": false,
       "known": false
     },
@@ -59533,6 +73454,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "The process of making something conform to a standard.",
       "cluster": "cluster_94",
       "day": 94,
+      "phonetic_distractors": [
+        "civilization",
+        "commercialization",
+        "characterization",
+        "transformation",
+        "consideration"
+      ],
       "fav": false,
       "known": false
     },
@@ -59558,6 +73486,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_94_9",
       "cluster": "cluster_94",
       "day": 94,
+      "phonetic_distractors": [
+        "knit",
+        "nil",
+        "near",
+        "fish",
+        "wish"
+      ],
       "fav": false,
       "known": false
     },
@@ -59582,6 +73517,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "a disease of the body or mind.",
       "cluster": "cluster_95",
       "day": 95,
+      "phonetic_distractors": [
+        "wellness",
+        "business",
+        "bonus",
+        "fitness",
+        "witness"
+      ],
       "fav": false,
       "known": false
     },
@@ -59608,6 +73550,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_95_1",
       "cluster": "cluster_95",
       "day": 95,
+      "phonetic_distractors": [
+        "planet",
+        "planner",
+        "plans",
+        "planned",
+        "paint"
+      ],
       "fav": false,
       "known": false
     },
@@ -59634,6 +73583,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_95_2",
       "cluster": "cluster_95",
       "day": 95,
+      "phonetic_distractors": [
+        "pack",
+        "had",
+        "hash",
+        "back",
+        "mac"
+      ],
       "fav": false,
       "known": false
     },
@@ -59660,6 +73616,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_95_3",
       "cluster": "cluster_95",
       "day": 95,
+      "phonetic_distractors": [
+        "subject",
+        "reject",
+        "elect",
+        "connect",
+        "insect"
+      ],
       "fav": false,
       "known": false
     },
@@ -59684,6 +73647,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "The treatment of a physical problem or an illness.",
       "cluster": "cluster_95",
       "day": 95,
+      "phonetic_distractors": [
+        "recipe",
+        "jeremy",
+        "tariff",
+        "authority",
+        "theory"
+      ],
       "fav": false,
       "known": false
     },
@@ -59710,6 +73680,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_95_5",
       "cluster": "cluster_95",
       "day": 95,
+      "phonetic_distractors": [
+        "deployment",
+        "democracy",
+        "delicious",
+        "literacy",
+        "depression"
+      ],
       "fav": false,
       "known": false
     },
@@ -59736,6 +73713,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_95_6",
       "cluster": "cluster_95",
       "day": 95,
+      "phonetic_distractors": [
+        "statistics",
+        "holistic",
+        "analytics",
+        "domestic",
+        "linguistics"
+      ],
       "fav": false,
       "known": false
     },
@@ -59762,6 +73746,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_95_7",
       "cluster": "cluster_95",
       "day": 95,
+      "phonetic_distractors": [
+        "agricultural",
+        "chemical",
+        "structure",
+        "theatrical",
+        "recovery"
+      ],
       "fav": false,
       "known": false
     },
@@ -59788,6 +73779,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_95_8",
       "cluster": "cluster_95",
       "day": 95,
+      "phonetic_distractors": [
+        "negative",
+        "lucrative",
+        "relative",
+        "native",
+        "positive"
+      ],
       "fav": false,
       "known": false
     },
@@ -59812,6 +73810,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "An object made by a human being, typically an item of cultural or historical interest.",
       "cluster": "cluster_95",
       "day": 95,
+      "phonetic_distractors": [
+        "artist",
+        "architect",
+        "interact",
+        "protect",
+        "article"
+      ],
       "fav": false,
       "known": false
     },
@@ -59836,6 +73841,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "The feeling of being certain that something exists or is true.",
       "cluster": "cluster_96",
       "day": 96,
+      "phonetic_distractors": [
+        "believe",
+        "billy",
+        "relief",
+        "busy",
+        "leaf"
+      ],
       "fav": false,
       "known": false
     },
@@ -59860,6 +73872,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Go to see and spend time with (someone) socially or go to see (a place).",
       "cluster": "cluster_96",
       "day": 96,
+      "phonetic_distractors": [
+        "emit",
+        "resist",
+        "exit",
+        "commit",
+        "receipt"
+      ],
       "fav": false,
       "known": false
     },
@@ -59886,6 +73905,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_96_2",
       "cluster": "cluster_96",
       "day": 96,
+      "phonetic_distractors": [
+        "cost",
+        "carve",
+        "court",
+        "karl",
+        "caught"
+      ],
       "fav": false,
       "known": false
     },
@@ -59912,6 +73938,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_96_3",
       "cluster": "cluster_96",
       "day": 96,
+      "phonetic_distractors": [
+        "factors",
+        "actors",
+        "battery",
+        "faster",
+        "facts"
+      ],
       "fav": false,
       "known": false
     },
@@ -59936,6 +73969,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Showing a great deal of variety; very different.",
       "cluster": "cluster_96",
       "day": 96,
+      "phonetic_distractors": [
+        "device",
+        "dice",
+        "reverse",
+        "adverse",
+        "dover"
+      ],
       "fav": false,
       "known": false
     },
@@ -59960,6 +74000,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "The action or process of successfully joining or mixing with a different group of people.",
       "cluster": "cluster_96",
       "day": 96,
+      "phonetic_distractors": [
+        "integrated",
+        "immigration",
+        "innovation",
+        "integrate",
+        "irrigation"
+      ],
       "fav": false,
       "known": false
     },
@@ -60010,6 +74057,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_96_7",
       "cluster": "cluster_96",
       "day": 96,
+      "phonetic_distractors": [
+        "equal",
+        "science",
+        "section",
+        "equally",
+        "frequent"
+      ],
       "fav": false,
       "known": false
     },
@@ -60033,6 +74087,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "relating to the study of the financial systems at a national level.",
       "cluster": "cluster_96",
       "day": 96,
+      "phonetic_distractors": [
+        "agrochemical",
+        "sportsmanship",
+        "anachronism",
+        "chronological",
+        "accessibility"
+      ],
       "fav": false,
       "known": false
     },
@@ -60057,6 +74118,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To make something that is already bad even worse.",
       "cluster": "cluster_96",
       "day": 96,
+      "phonetic_distractors": [
+        "exhibit",
+        "examine",
+        "collaborate",
+        "emancipate",
+        "evaluate"
+      ],
       "fav": false,
       "known": false
     },
@@ -60080,6 +74148,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "An electronic device for storing and processing data.",
       "cluster": "cluster_97",
       "day": 97,
+      "phonetic_distractors": [
+        "commuter",
+        "commute",
+        "computed",
+        "computing",
+        "compete"
+      ],
       "fav": false,
       "known": false
     },
@@ -60106,6 +74181,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_97_1",
       "cluster": "cluster_97",
       "day": 97,
+      "phonetic_distractors": [
+        "customs",
+        "custody",
+        "customize",
+        "container",
+        "justice"
+      ],
       "fav": false,
       "known": false
     },
@@ -60132,6 +74214,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_97_2",
       "cluster": "cluster_97",
       "day": 97,
+      "phonetic_distractors": [
+        "fossil",
+        "funeral",
+        "dual",
+        "fool",
+        "fatal"
+      ],
       "fav": false,
       "known": false
     },
@@ -60158,6 +74247,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_97_3",
       "cluster": "cluster_97",
       "day": 97,
+      "phonetic_distractors": [
+        "auction",
+        "mission",
+        "sanction",
+        "fiction",
+        "nation"
+      ],
       "fav": false,
       "known": false
     },
@@ -60182,6 +74278,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To tame an animal and keep it as a pet or for farm produce.",
       "cluster": "cluster_97",
       "day": 97,
+      "phonetic_distractors": [
+        "communicate",
+        "investigate",
+        "connecticut",
+        "cultivate",
+        "construct"
+      ],
       "fav": false,
       "known": false
     },
@@ -60208,6 +74311,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_97_5",
       "cluster": "cluster_97",
       "day": 97,
+      "phonetic_distractors": [
+        "biographies",
+        "geography",
+        "topography",
+        "biology",
+        "photography"
+      ],
       "fav": false,
       "known": false
     },
@@ -60258,6 +74368,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_97_7",
       "cluster": "cluster_97",
       "day": 97,
+      "phonetic_distractors": [
+        "altitude",
+        "latitude",
+        "acid",
+        "stated",
+        "stud"
+      ],
       "fav": false,
       "known": false
     },
@@ -60284,6 +74401,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_97_8",
       "cluster": "cluster_97",
       "day": 97,
+      "phonetic_distractors": [
+        "humid",
+        "humans",
+        "raymond",
+        "unified",
+        "happened"
+      ],
       "fav": false,
       "known": false
     },
@@ -60308,6 +74432,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To spread information, knowledge, etc., so that it reaches many people.",
       "cluster": "cluster_97",
       "day": 97,
+      "phonetic_distractors": [
+        "dissemination",
+        "eliminate",
+        "distant",
+        "assimilate",
+        "discount"
+      ],
       "fav": false,
       "known": false
     },
@@ -60358,6 +74489,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_98_1",
       "cluster": "cluster_98",
       "day": 98,
+      "phonetic_distractors": [
+        "wrist",
+        "disk",
+        "disc",
+        "rick",
+        "receipt"
+      ],
       "fav": false,
       "known": false
     },
@@ -60382,6 +74520,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "A drug or other preparation for the treatment or prevention of disease.",
       "cluster": "cluster_98",
       "day": 98,
+      "phonetic_distractors": [
+        "madison",
+        "marilyn",
+        "medical",
+        "deficit",
+        "mason"
+      ],
       "fav": false,
       "known": false
     },
@@ -60408,6 +74553,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "The group of people who have gathered to watch or listen to something.",
       "cluster": "cluster_98",
       "day": 98,
+      "phonetic_distractors": [
+        "endurance",
+        "balance",
+        "alliance",
+        "science",
+        "options"
+      ],
       "fav": false,
       "known": false
     },
@@ -60432,6 +74584,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Difference in size, degree, circumstances, etc.; lack of equality.",
       "cluster": "cluster_98",
       "day": 98,
+      "phonetic_distractors": [
+        "antiquity",
+        "liquidity",
+        "qualities",
+        "technology",
+        "physiology"
+      ],
       "fav": false,
       "known": false
     },
@@ -60458,6 +74617,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_98_5",
       "cluster": "cluster_98",
       "day": 98,
+      "phonetic_distractors": [
+        "tunnel",
+        "stamina",
+        "juvenile",
+        "eternal",
+        "germany"
+      ],
       "fav": false,
       "known": false
     },
@@ -60484,6 +74650,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_98_6",
       "cluster": "cluster_98",
       "day": 98,
+      "phonetic_distractors": [
+        "contains",
+        "contained",
+        "containing",
+        "control",
+        "sustain"
+      ],
       "fav": false,
       "known": false
     },
@@ -60532,6 +74705,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "The process of returning someone to a good, healthy, or normal life or state after they have been in prison or ill.",
       "cluster": "cluster_98",
       "day": 98,
+      "phonetic_distractors": [
+        "rehabilitate",
+        "utilization",
+        "reliability",
+        "deforestation",
+        "civilization"
+      ],
       "fav": false,
       "known": false
     },
@@ -60604,6 +74784,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "A set of ideas or a plan of what to do in particular situations.",
       "cluster": "cluster_99",
       "day": 99,
+      "phonetic_distractors": [
+        "policies",
+        "polymer",
+        "plus",
+        "palace",
+        "poly"
+      ],
       "fav": false,
       "known": false
     },
@@ -60654,6 +74841,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_99_3",
       "cluster": "cluster_99",
       "day": 99,
+      "phonetic_distractors": [
+        "vertical",
+        "chemical",
+        "recycle",
+        "physical",
+        "magical"
+      ],
       "fav": false,
       "known": false
     },
@@ -60702,6 +74896,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "(of punishment of a person) strict or harsh.",
       "cluster": "cluster_99",
       "day": 99,
+      "phonetic_distractors": [
+        "sphere",
+        "civic",
+        "appear",
+        "sucking",
+        "saving"
+      ],
       "fav": false,
       "known": false
     },
@@ -60728,6 +74929,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_99_6",
       "cluster": "cluster_99",
       "day": 99,
+      "phonetic_distractors": [
+        "human",
+        "humanoid",
+        "humor",
+        "humans",
+        "fuel"
+      ],
       "fav": false,
       "known": false
     },
@@ -60754,6 +74962,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_99_7",
       "cluster": "cluster_99",
       "day": 99,
+      "phonetic_distractors": [
+        "native",
+        "voting",
+        "massive",
+        "meeting",
+        "motor"
+      ],
       "fav": false,
       "known": false
     },
@@ -60802,6 +75017,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To commit a crime or a violent or harmful act.",
       "cluster": "cluster_99",
       "day": 99,
+      "phonetic_distractors": [
+        "portrait",
+        "portray",
+        "protect",
+        "integrate",
+        "celebrate"
+      ],
       "fav": false,
       "known": false
     },
@@ -60826,6 +75048,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Able to be used for a practical purpose or in several ways.",
       "cluster": "cluster_100",
       "day": 100,
+      "phonetic_distractors": [
+        "uses",
+        "peaceful",
+        "usage",
+        "fuel",
+        "fossil"
+      ],
       "fav": false,
       "known": false
     },
@@ -60852,6 +75081,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_100_1",
       "cluster": "cluster_100",
       "day": 100,
+      "phonetic_distractors": [
+        "filing",
+        "filling",
+        "failing",
+        "dealing",
+        "feeding"
+      ],
       "fav": false,
       "known": false
     },
@@ -60878,6 +75114,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_100_2",
       "cluster": "cluster_100",
       "day": 100,
+      "phonetic_distractors": [
+        "delay",
+        "despite",
+        "dispatch",
+        "deeply",
+        "destroy"
+      ],
       "fav": false,
       "known": false
     },
@@ -60901,6 +75144,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "A period of one hundred years.",
       "cluster": "cluster_100",
       "day": 100,
+      "phonetic_distractors": [
+        "sensory",
+        "centuries",
+        "censor",
+        "sensor",
+        "sensors"
+      ],
       "fav": false,
       "known": false
     },
@@ -60925,6 +75175,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "An instance of one moving object or person striking violently against another.",
       "cluster": "cluster_100",
       "day": 100,
+      "phonetic_distractors": [
+        "coalition",
+        "commission",
+        "cohesion",
+        "cultural",
+        "pollution"
+      ],
       "fav": false,
       "known": false
     },
@@ -60951,6 +75208,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_100_5",
       "cluster": "cluster_100",
       "day": 100,
+      "phonetic_distractors": [
+        "cart",
+        "karl",
+        "carl",
+        "cars",
+        "card"
+      ],
       "fav": false,
       "known": false
     },
@@ -60975,6 +75239,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To judge or decide something after thinking carefully about it.",
       "cluster": "cluster_100",
       "day": 100,
+      "phonetic_distractors": [
+        "include",
+        "consume",
+        "collide",
+        "concerned",
+        "canal"
+      ],
       "fav": false,
       "known": false
     },
@@ -60999,6 +75270,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To completely destroy a building, especially in order to use the land for something else.",
       "cluster": "cluster_100",
       "day": 100,
+      "phonetic_distractors": [
+        "abolish",
+        "english",
+        "polish",
+        "evolve",
+        "publish"
+      ],
       "fav": false,
       "known": false
     },
@@ -61022,6 +75300,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "The ability to read and write.",
       "cluster": "cluster_100",
       "day": 100,
+      "phonetic_distractors": [
+        "literally",
+        "literary",
+        "literature",
+        "deterrence",
+        "accuracy"
+      ],
       "fav": false,
       "known": false
     },
@@ -61046,6 +75331,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To set free, especially from legal, social, or political restrictions.",
       "cluster": "cluster_100",
       "day": 100,
+      "phonetic_distractors": [
+        "indicate",
+        "candidate",
+        "participate",
+        "investigate",
+        "translate"
+      ],
       "fav": false,
       "known": false
     },
@@ -61072,6 +75364,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_101_0",
       "cluster": "cluster_101",
       "day": 101,
+      "phonetic_distractors": [
+        "daughter",
+        "walter",
+        "walker",
+        "stir",
+        "matter"
+      ],
       "fav": false,
       "known": false
     },
@@ -61093,6 +75392,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_101_1",
       "cluster": "cluster_101",
       "day": 101,
+      "phonetic_distractors": [
+        "innovate",
+        "escalator",
+        "educate",
+        "delegate",
+        "elevation"
+      ],
       "fav": false,
       "known": false
     },
@@ -61143,6 +75449,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_101_3",
       "cluster": "cluster_101",
       "day": 101,
+      "phonetic_distractors": [
+        "farm",
+        "alot",
+        "clark",
+        "ultra",
+        "charm"
+      ],
       "fav": false,
       "known": false
     },
@@ -61193,6 +75506,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_101_5",
       "cluster": "cluster_101",
       "day": 101,
+      "phonetic_distractors": [
+        "variety",
+        "agility",
+        "authority",
+        "society",
+        "gravity"
+      ],
       "fav": false,
       "known": false
     },
@@ -61217,6 +75537,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Relating to finance or money.",
       "cluster": "cluster_101",
       "day": 101,
+      "phonetic_distractors": [
+        "finance",
+        "financing",
+        "banana",
+        "potential",
+        "maternal"
+      ],
       "fav": false,
       "known": false
     },
@@ -61241,6 +75568,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "The state of being comfortable, healthy, or happy.",
       "cluster": "cluster_101",
       "day": 101,
+      "phonetic_distractors": [
+        "welding",
+        "albeit",
+        "wedding",
+        "selling",
+        "helping"
+      ],
       "fav": false,
       "known": false
     },
@@ -61267,6 +75601,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_101_8",
       "cluster": "cluster_101",
       "day": 101,
+      "phonetic_distractors": [
+        "requirement",
+        "requirements",
+        "recruitment",
+        "argument",
+        "punishment"
+      ],
       "fav": false,
       "known": false
     },
@@ -61292,6 +75633,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_101_9",
       "cluster": "cluster_101",
       "day": 101,
+      "phonetic_distractors": [
+        "posing",
+        "coaching",
+        "loading",
+        "pulling",
+        "passing"
+      ],
       "fav": false,
       "known": false
     },
@@ -61316,6 +75664,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "A person who is studying at a school, college or university.",
       "cluster": "cluster_102",
       "day": 102,
+      "phonetic_distractors": [
+        "stamina",
+        "fluent",
+        "steadily",
+        "susan",
+        "evident"
+      ],
       "fav": false,
       "known": false
     },
@@ -61342,6 +75697,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_102_1",
       "cluster": "cluster_102",
       "day": 102,
+      "phonetic_distractors": [
+        "managed",
+        "monitor",
+        "manner",
+        "managing",
+        "manor"
+      ],
       "fav": false,
       "known": false
     },
@@ -61366,6 +75728,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Vehicles moving on a road or public highway.",
       "cluster": "cluster_102",
       "day": 102,
+      "phonetic_distractors": [
+        "graphic",
+        "tracking",
+        "track",
+        "trick",
+        "graphics"
+      ],
       "fav": false,
       "known": false
     },
@@ -61390,6 +75759,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Relating to the first language a person learned as a child.",
       "cluster": "cluster_102",
       "day": 102,
+      "phonetic_distractors": [
+        "motive",
+        "dating",
+        "weighted",
+        "waiting",
+        "rating"
+      ],
       "fav": false,
       "known": false
     },
@@ -61438,6 +75814,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To send out a beam, noise, smell, or gas.",
       "cluster": "cluster_102",
       "day": 102,
+      "phonetic_distractors": [
+        "commit",
+        "myth",
+        "visit",
+        "knit",
+        "bit"
+      ],
       "fav": false,
       "known": false
     },
@@ -61464,6 +75847,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_102_6",
       "cluster": "cluster_102",
       "day": 102,
+      "phonetic_distractors": [
+        "calm",
+        "copper",
+        "comic",
+        "comp",
+        "camps"
+      ],
       "fav": false,
       "known": false
     },
@@ -61488,6 +75878,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To examine a book, movie, etc. officially and suppress unacceptable parts of it.",
       "cluster": "cluster_102",
       "day": 102,
+      "phonetic_distractors": [
+        "sensory",
+        "sensors",
+        "sense",
+        "centre",
+        "sender"
+      ],
       "fav": false,
       "known": false
     },
@@ -61514,6 +75911,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_102_8",
       "cluster": "cluster_102",
       "day": 102,
+      "phonetic_distractors": [
+        "dramatic",
+        "automatic",
+        "dramatically",
+        "promoting",
+        "romantic"
+      ],
       "fav": false,
       "known": false
     },
@@ -61540,6 +75944,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_102_9",
       "cluster": "cluster_102",
       "day": 102,
+      "phonetic_distractors": [
+        "analytical",
+        "analysis",
+        "analysts",
+        "athletics",
+        "logistics"
+      ],
       "fav": false,
       "known": false
     },
@@ -61566,6 +75977,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_103_0",
       "cluster": "cluster_103",
       "day": 103,
+      "phonetic_distractors": [
+        "move",
+        "moved",
+        "moves",
+        "messy",
+        "mood"
+      ],
       "fav": false,
       "known": false
     },
@@ -61590,6 +76008,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "An institution providing medical and surgical treatment and nursing care for sick or injured people.",
       "cluster": "cluster_103",
       "day": 103,
+      "phonetic_distractors": [
+        "hostel",
+        "capitol",
+        "hostels",
+        "gospel",
+        "capital"
+      ],
       "fav": false,
       "known": false
     },
@@ -61616,6 +76041,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_103_2",
       "cluster": "cluster_103",
       "day": 103,
+      "phonetic_distractors": [
+        "summaries",
+        "summary",
+        "suburb",
+        "southern",
+        "submit"
+      ],
       "fav": false,
       "known": false
     },
@@ -61640,6 +76072,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "The process of increasing in size.",
       "cluster": "cluster_103",
       "day": 103,
+      "phonetic_distractors": [
+        "grove",
+        "gross",
+        "grown",
+        "grows",
+        "grill"
+      ],
       "fav": false,
       "known": false
     },
@@ -61666,6 +76105,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_103_4",
       "cluster": "cluster_103",
       "day": 103,
+      "phonetic_distractors": [
+        "drill",
+        "grid",
+        "grip",
+        "rule",
+        "growth"
+      ],
       "fav": false,
       "known": false
     },
@@ -61692,6 +76138,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_103_5",
       "cluster": "cluster_103",
       "day": 103,
+      "phonetic_distractors": [
+        "purpose",
+        "surface",
+        "service",
+        "nervous",
+        "versus"
+      ],
       "fav": false,
       "known": false
     },
@@ -61714,6 +76167,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "In addition; besides (used to introduce a fresh consideration in an argument).",
       "cluster": "cluster_103",
       "day": 103,
+      "phonetic_distractors": [
+        "fathers",
+        "anymore",
+        "outscore",
+        "ferment",
+        "surgery"
+      ],
       "fav": false,
       "known": false
     },
@@ -61740,6 +76200,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_103_7",
       "cluster": "cluster_103",
       "day": 103,
+      "phonetic_distractors": [
+        "sense",
+        "centre",
+        "sender",
+        "center",
+        "spencer"
+      ],
       "fav": false,
       "known": false
     },
@@ -61792,6 +76259,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_103_9",
       "cluster": "cluster_103",
       "day": 103,
+      "phonetic_distractors": [
+        "encouraging",
+        "exercises",
+        "surprising",
+        "rendering",
+        "messaging"
+      ],
       "fav": false,
       "known": false
     },
@@ -61818,6 +76292,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_104_0",
       "cluster": "cluster_104",
       "day": 104,
+      "phonetic_distractors": [
+        "freeze",
+        "breed",
+        "browse",
+        "brief",
+        "breach"
+      ],
       "fav": false,
       "known": false
     },
@@ -61844,6 +76325,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_104_1",
       "cluster": "cluster_104",
       "day": 104,
+      "phonetic_distractors": [
+        "regulate",
+        "cellular",
+        "popular",
+        "rental",
+        "readily"
+      ],
       "fav": false,
       "known": false
     },
@@ -61868,6 +76356,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Very quickly; at a great rate.",
       "cluster": "cluster_104",
       "day": 104,
+      "phonetic_distractors": [
+        "rapids",
+        "family",
+        "readily",
+        "chapel",
+        "badly"
+      ],
       "fav": false,
       "known": false
     },
@@ -61916,6 +76411,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To start to include more different types or things.",
       "cluster": "cluster_104",
       "day": 104,
+      "phonetic_distractors": [
+        "diversity",
+        "devices",
+        "verify",
+        "specify",
+        "oversleep"
+      ],
       "fav": false,
       "known": false
     },
@@ -61940,6 +76442,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "In danger of being harmed, lost, unsuccessful, etc.",
       "cluster": "cluster_104",
       "day": 104,
+      "phonetic_distractors": [
+        "encouraged",
+        "enabled",
+        "rendered",
+        "encountered",
+        "engaged"
+      ],
       "fav": false,
       "known": false
     },
@@ -61964,6 +76473,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "A grant or payment made to support a student's education.",
       "cluster": "cluster_104",
       "day": 104,
+      "phonetic_distractors": [
+        "censorship",
+        "sponsorship",
+        "kinship",
+        "colorado",
+        "scottish"
+      ],
       "fav": false,
       "known": false
     },
@@ -62014,6 +76530,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_104_8",
       "cluster": "cluster_104",
       "day": 104,
+      "phonetic_distractors": [
+        "possibility",
+        "availability",
+        "solidarity",
+        "hospitality",
+        "possibilities"
+      ],
       "fav": false,
       "known": false
     },
@@ -62038,6 +76561,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "In or coming from a place outside the planet Earth.",
       "cluster": "cluster_104",
       "day": 104,
+      "phonetic_distractors": [
+        "extraordinary",
+        "instrumentation",
+        "environmental",
+        "experimental",
+        "representation"
+      ],
       "fav": false,
       "known": false
     },
@@ -62062,6 +76592,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "The place to which someone or something is going or being sent.",
       "cluster": "cluster_105",
       "day": 105,
+      "phonetic_distractors": [
+        "estimation",
+        "dissemination",
+        "degradation",
+        "restoration",
+        "designation"
+      ],
       "fav": false,
       "known": false
     },
@@ -62110,6 +76647,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Something that lives and moves but is not a human, bird, fish, or insect.",
       "cluster": "cluster_105",
       "day": 105,
+      "phonetic_distractors": [
+        "arable",
+        "annual",
+        "minimal",
+        "analyze",
+        "plummet"
+      ],
       "fav": false,
       "known": false
     },
@@ -62134,6 +76678,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "A large strong building, built in the past by a ruler or important person, to protect the people inside from attack.",
       "cluster": "cluster_105",
       "day": 105,
+      "phonetic_distractors": [
+        "carroll",
+        "cattle",
+        "cancel",
+        "camel",
+        "carol"
+      ],
       "fav": false,
       "known": false
     },
@@ -62184,6 +76735,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_105_5",
       "cluster": "cluster_105",
       "day": 105,
+      "phonetic_distractors": [
+        "acute",
+        "commute",
+        "pollute",
+        "rocket",
+        "cruz"
+      ],
       "fav": false,
       "known": false
     },
@@ -62208,6 +76766,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "The physical and/or mental strength to do something that might be difficult and will take a long time.",
       "cluster": "cluster_105",
       "day": 105,
+      "phonetic_distractors": [
+        "salmon",
+        "famine",
+        "terminal",
+        "student",
+        "satin"
+      ],
       "fav": false,
       "known": false
     },
@@ -62232,6 +76797,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To recognize and name the exact character of a disease or a problem, by examining it.",
       "cluster": "cluster_105",
       "day": 105,
+      "phonetic_distractors": [
+        "diagnosis",
+        "science",
+        "douglas",
+        "diagram",
+        "giants"
+      ],
       "fav": false,
       "known": false
     },
@@ -62256,6 +76828,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Highly advanced; innovative or pioneering.",
       "cluster": "cluster_105",
       "day": 105,
+      "phonetic_distractors": [
+        "coating",
+        "coming",
+        "putting",
+        "commit",
+        "extinct"
+      ],
       "fav": false,
       "known": false
     },
@@ -62306,6 +76885,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Using or involving physical force intended to hurt, damage, or kill.",
       "cluster": "cluster_106",
       "day": 106,
+      "phonetic_distractors": [
+        "violence",
+        "violin",
+        "silent",
+        "innocent",
+        "dialect"
+      ],
       "fav": false,
       "known": false
     },
@@ -62329,6 +76915,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_106_1",
       "cluster": "cluster_106",
       "day": 106,
+      "phonetic_distractors": [
+        "paper",
+        "depth",
+        "power",
+        "pressure",
+        "measure"
+      ],
       "fav": false,
       "known": false
     },
@@ -62353,6 +76946,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "A branch of knowledge studied or taught.",
       "cluster": "cluster_106",
       "day": 106,
+      "phonetic_distractors": [
+        "object",
+        "suspect",
+        "suggest",
+        "select",
+        "connect"
+      ],
       "fav": false,
       "known": false
     },
@@ -62372,6 +76972,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_106_3",
       "cluster": "cluster_106",
       "day": 106,
+      "phonetic_distractors": [
+        "america",
+        "compressed",
+        "emerald",
+        "library",
+        "martha"
+      ],
       "fav": false,
       "known": false
     },
@@ -62396,6 +77003,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Fairness in the way people are dealt with, or the system of laws in a country that judges and punishes people.",
       "cluster": "cluster_106",
       "day": 106,
+      "phonetic_distractors": [
+        "justin",
+        "custom",
+        "justify",
+        "sustain",
+        "assess"
+      ],
       "fav": false,
       "known": false
     },
@@ -62421,6 +77035,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_106_5",
       "cluster": "cluster_106",
       "day": 106,
+      "phonetic_distractors": [
+        "compute",
+        "commit",
+        "computer",
+        "compete",
+        "acute"
+      ],
       "fav": false,
       "known": false
     },
@@ -62445,6 +77066,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Someone who competes with or opposes another in a contest, game, or argument.",
       "cluster": "cluster_106",
       "day": 106,
+      "phonetic_distractors": [
+        "apparent",
+        "component",
+        "patient",
+        "parent",
+        "assignment"
+      ],
       "fav": false,
       "known": false
     },
@@ -62469,6 +77097,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "The friendly and generous reception and entertainment of guests, visitors, or strangers.",
       "cluster": "cluster_106",
       "day": 106,
+      "phonetic_distractors": [
+        "volatility",
+        "possibility",
+        "possibilities",
+        "opportunity",
+        "hospitals"
+      ],
       "fav": false,
       "known": false
     },
@@ -62493,6 +77128,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Inflicting or intended as punishment.",
       "cluster": "cluster_106",
       "day": 106,
+      "phonetic_distractors": [
+        "positive",
+        "units",
+        "unity",
+        "lucrative",
+        "immunity"
+      ],
       "fav": false,
       "known": false
     },
@@ -62517,6 +77159,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To become part of a group, country, society, etc.",
       "cluster": "cluster_106",
       "day": 106,
+      "phonetic_distractors": [
+        "simulate",
+        "assimilation",
+        "eliminate",
+        "accommodate",
+        "facilitate"
+      ],
       "fav": false,
       "known": false
     },
@@ -62567,6 +77216,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_107_1",
       "cluster": "cluster_107",
       "day": 107,
+      "phonetic_distractors": [
+        "convict",
+        "conduct",
+        "contact",
+        "contract",
+        "influx"
+      ],
       "fav": false,
       "known": false
     },
@@ -62613,6 +77269,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "The round object that moves in the sky around the earth and can be seen at night.",
       "cluster": "cluster_107",
       "day": 107,
+      "phonetic_distractors": [
+        "move",
+        "mood",
+        "men",
+        "june",
+        "maine"
+      ],
       "fav": false,
       "known": false
     },
@@ -62663,6 +77326,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_107_5",
       "cluster": "cluster_107",
       "day": 107,
+      "phonetic_distractors": [
+        "trim",
+        "drama",
+        "grammar",
+        "cross",
+        "travel"
+      ],
       "fav": false,
       "known": false
     },
@@ -62687,6 +77357,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Able to be maintained at a certain rate or level.",
       "cluster": "cluster_107",
       "day": 107,
+      "phonetic_distractors": [
+        "available",
+        "adjustable",
+        "substantial",
+        "vulnerable",
+        "submersible"
+      ],
       "fav": false,
       "known": false
     },
@@ -62713,6 +77390,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_107_7",
       "cluster": "cluster_107",
       "day": 107,
+      "phonetic_distractors": [
+        "transmission",
+        "transaction",
+        "translation",
+        "rendition",
+        "tradition"
+      ],
       "fav": false,
       "known": false
     },
@@ -62737,6 +77421,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Informal and more suitable for use in speech than in writing.",
       "cluster": "cluster_107",
       "day": 107,
+      "phonetic_distractors": [
+        "colonial",
+        "cultural",
+        "colorful",
+        "colombia",
+        "collectible"
+      ],
       "fav": false,
       "known": false
     },
@@ -62761,6 +77452,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "The distant past, especially before the sixth century.",
       "cluster": "cluster_107",
       "day": 107,
+      "phonetic_distractors": [
+        "inequality",
+        "antigua",
+        "antibody",
+        "integrity",
+        "utility"
+      ],
       "fav": false,
       "known": false
     },
@@ -62785,6 +77483,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To bring something into existence.",
       "cluster": "cluster_108",
       "day": 108,
+      "phonetic_distractors": [
+        "creator",
+        "trait",
+        "creative",
+        "creature",
+        "treat"
+      ],
       "fav": false,
       "known": false
     },
@@ -62810,6 +77515,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "A settled or regular tendency or practice, especially one that is hard to give up.",
       "cluster": "cluster_108",
       "day": 108,
+      "phonetic_distractors": [
+        "rabbit",
+        "gadget",
+        "orbit",
+        "jacket",
+        "ballot"
+      ],
       "fav": false,
       "known": false
     },
@@ -62836,6 +77548,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_108_2",
       "cluster": "cluster_108",
       "day": 108,
+      "phonetic_distractors": [
+        "surf",
+        "same",
+        "sail",
+        "say",
+        "save"
+      ],
       "fav": false,
       "known": false
     },
@@ -62862,6 +77581,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_108_3",
       "cluster": "cluster_108",
       "day": 108,
+      "phonetic_distractors": [
+        "roast",
+        "rotate",
+        "robert",
+        "wrote",
+        "robust"
+      ],
       "fav": false,
       "known": false
     },
@@ -62888,6 +77614,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_108_4",
       "cluster": "cluster_108",
       "day": 108,
+      "phonetic_distractors": [
+        "sealed",
+        "shield",
+        "field",
+        "feed",
+        "seed"
+      ],
       "fav": false,
       "known": false
     },
@@ -62914,6 +77647,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_108_5",
       "cluster": "cluster_108",
       "day": 108,
+      "phonetic_distractors": [
+        "action",
+        "section",
+        "junction",
+        "function",
+        "plankton"
+      ],
       "fav": false,
       "known": false
     },
@@ -62940,6 +77680,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_108_6",
       "cluster": "cluster_108",
       "day": 108,
+      "phonetic_distractors": [
+        "article",
+        "beneficial",
+        "tradition",
+        "erudition",
+        "artifact"
+      ],
       "fav": false,
       "known": false
     },
@@ -62966,6 +77713,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_108_7",
       "cluster": "cluster_108",
       "day": 108,
+      "phonetic_distractors": [
+        "priorities",
+        "priority",
+        "authorities",
+        "penalize",
+        "portrait"
+      ],
       "fav": false,
       "known": false
     },
@@ -63014,6 +77768,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "A set of principles concerned with the nature and appreciation of beauty, especially in art.",
       "cluster": "cluster_108",
       "day": 108,
+      "phonetic_distractors": [
+        "athletics",
+        "genetics",
+        "genetic",
+        "tactics",
+        "static"
+      ],
       "fav": false,
       "known": false
     },
@@ -63038,6 +77799,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To buy or bring in products from another country.",
       "cluster": "cluster_109",
       "day": 109,
+      "phonetic_distractors": [
+        "report",
+        "support",
+        "impaired",
+        "airport",
+        "newport"
+      ],
       "fav": false,
       "known": false
     },
@@ -63064,6 +77832,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_109_1",
       "cluster": "cluster_109",
       "day": 109,
+      "phonetic_distractors": [
+        "sight",
+        "knight",
+        "tight",
+        "lat",
+        "late"
+      ],
       "fav": false,
       "known": false
     },
@@ -63088,6 +77863,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To continue to live or exist, especially in spite of danger or hardship.",
       "cluster": "cluster_109",
       "day": 109,
+      "phonetic_distractors": [
+        "survivor",
+        "survival",
+        "service",
+        "survey",
+        "servers"
+      ],
       "fav": false,
       "known": false
     },
@@ -63112,6 +77894,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To go and live somewhere, especially permanently.",
       "cluster": "cluster_109",
       "day": 109,
+      "phonetic_distractors": [
+        "subtle",
+        "metal",
+        "setup",
+        "battle",
+        "steal"
+      ],
       "fav": false,
       "known": false
     },
@@ -63136,6 +77925,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "A person who organizes and operates a business or businesses, taking on greater than normal financial risks.",
       "cluster": "cluster_109",
       "day": 109,
+      "phonetic_distractors": [
+        "encryption",
+        "temperature",
+        "interpret",
+        "continent",
+        "nitrogen"
+      ],
       "fav": false,
       "known": false
     },
@@ -63160,6 +77956,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "The action of discouraging an action or event through instilling doubt or fear of the consequences.",
       "cluster": "cluster_109",
       "day": 109,
+      "phonetic_distractors": [
+        "difference",
+        "deterrent",
+        "different",
+        "distance",
+        "determined"
+      ],
       "fav": false,
       "known": false
     },
@@ -63184,6 +77987,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To organize something to make a profit.",
       "cluster": "cluster_109",
       "day": 109,
+      "phonetic_distractors": [
+        "commissioners",
+        "commissions",
+        "internalize",
+        "monopolize",
+        "colorful"
+      ],
       "fav": false,
       "known": false
     },
@@ -63208,6 +78018,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "A room, group of rooms, or building in which someone may live or stay.",
       "cluster": "cluster_109",
       "day": 109,
+      "phonetic_distractors": [
+        "assimilation",
+        "accommodate",
+        "combination",
+        "nomination",
+        "compilation"
+      ],
       "fav": false,
       "known": false
     },
@@ -63257,6 +78074,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_109_9",
       "cluster": "cluster_109",
       "day": 109,
+      "phonetic_distractors": [
+        "marco",
+        "cargo",
+        "mario",
+        "bargain",
+        "smart"
+      ],
       "fav": false,
       "known": false
     },
@@ -63283,6 +78107,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_110_0",
       "cluster": "cluster_110",
       "day": 110,
+      "phonetic_distractors": [
+        "dom",
+        "cock",
+        "cam",
+        "palm",
+        "comp"
+      ],
       "fav": false,
       "known": false
     },
@@ -63307,6 +78138,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To put money, effort, time, etc. into something to make a profit or get an advantage.",
       "cluster": "cluster_110",
       "day": 110,
+      "phonetic_distractors": [
+        "invent",
+        "incest",
+        "insect",
+        "nest",
+        "event"
+      ],
       "fav": false,
       "known": false
     },
@@ -63333,6 +78171,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_110_2",
       "cluster": "cluster_110",
       "day": 110,
+      "phonetic_distractors": [
+        "boil",
+        "cell",
+        "sole",
+        "sail",
+        "seal"
+      ],
       "fav": false,
       "known": false
     },
@@ -63359,6 +78204,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_110_3",
       "cluster": "cluster_110",
       "day": 110,
+      "phonetic_distractors": [
+        "delegate",
+        "celebration",
+        "collaborate",
+        "educate",
+        "integrate"
+      ],
       "fav": false,
       "known": false
     },
@@ -63385,6 +78237,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_110_4",
       "cluster": "cluster_110",
       "day": 110,
+      "phonetic_distractors": [
+        "transmit",
+        "translate",
+        "traffic",
+        "tract",
+        "tracking"
+      ],
       "fav": false,
       "known": false
     },
@@ -63411,6 +78270,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_110_5",
       "cluster": "cluster_110",
       "day": 110,
+      "phonetic_distractors": [
+        "alot",
+        "lat",
+        "pot",
+        "slot",
+        "plate"
+      ],
       "fav": false,
       "known": false
     },
@@ -63437,6 +78303,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_110_6",
       "cluster": "cluster_110",
       "day": 110,
+      "phonetic_distractors": [
+        "agreement",
+        "incident",
+        "investment",
+        "environment",
+        "treatment"
+      ],
       "fav": false,
       "known": false
     },
@@ -63463,6 +78336,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_110_7",
       "cluster": "cluster_110",
       "day": 110,
+      "phonetic_distractors": [
+        "distinct",
+        "extract",
+        "exciting",
+        "expect",
+        "exterior"
+      ],
       "fav": false,
       "known": false
     },
@@ -63511,6 +78391,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To list the different forms of a verb.",
       "cluster": "cluster_110",
       "day": 110,
+      "phonetic_distractors": [
+        "conduct",
+        "candidate",
+        "innovate",
+        "conscious",
+        "connoisseur"
+      ],
       "fav": false,
       "known": false
     },
@@ -63535,6 +78422,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "The time when someone is a child.",
       "cluster": "cluster_111",
       "day": 111,
+      "phonetic_distractors": [
+        "likelihood",
+        "wildlife",
+        "worldwide",
+        "children",
+        "challenged"
+      ],
       "fav": false,
       "known": false
     },
@@ -63555,6 +78449,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_111_1",
       "cluster": "cluster_111",
       "day": 111,
+      "phonetic_distractors": [
+        "suits",
+        "stage",
+        "space",
+        "stress",
+        "trace"
+      ],
       "fav": false,
       "known": false
     },
@@ -63581,6 +78482,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_111_2",
       "cluster": "cluster_111",
       "day": 111,
+      "phonetic_distractors": [
+        "herb",
+        "earn",
+        "urge",
+        "perth",
+        "earl"
+      ],
       "fav": false,
       "known": false
     },
@@ -63605,6 +78513,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "A disorder of structure or function in a human, animal, or plant.",
       "cluster": "cluster_111",
       "day": 111,
+      "phonetic_distractors": [
+        "busy",
+        "defeat",
+        "design",
+        "deserve",
+        "series"
+      ],
       "fav": false,
       "known": false
     },
@@ -63630,6 +78545,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_111_4",
       "cluster": "cluster_111",
       "day": 111,
+      "phonetic_distractors": [
+        "morgan",
+        "shortage",
+        "organ",
+        "moral",
+        "morris"
+      ],
       "fav": false,
       "known": false
     },
@@ -63654,6 +78576,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "The ability to be maintained at a certain rate or level, especially avoiding depletion of natural resources.",
       "cluster": "cluster_111",
       "day": 111,
+      "phonetic_distractors": [
+        "accessibility",
+        "accountability",
+        "vulnerability",
+        "availability",
+        "compatibility"
+      ],
       "fav": false,
       "known": false
     },
@@ -63680,6 +78609,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_111_6",
       "cluster": "cluster_111",
       "day": 111,
+      "phonetic_distractors": [
+        "cached",
+        "cache",
+        "career",
+        "sheer",
+        "clear"
+      ],
       "fav": false,
       "known": false
     },
@@ -63704,6 +78640,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To give something, especially money or time, in order to achieve something together with other people.",
       "cluster": "cluster_111",
       "day": 111,
+      "phonetic_distractors": [
+        "attribute",
+        "contributing",
+        "contributor",
+        "distribute",
+        "continue"
+      ],
       "fav": false,
       "known": false
     },
@@ -63751,6 +78694,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Connected with language or the study of language.",
       "cluster": "cluster_111",
       "day": 111,
+      "phonetic_distractors": [
+        "existing",
+        "holistic",
+        "logistics",
+        "heuristic",
+        "diagnostic"
+      ],
       "fav": false,
       "known": false
     },
@@ -63770,6 +78720,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_112_0",
       "cluster": "cluster_112",
       "day": 112,
+      "phonetic_distractors": [
+        "announces",
+        "synthesize",
+        "analysis",
+        "financing",
+        "finances"
+      ],
       "fav": false,
       "known": false
     },
@@ -63794,6 +78751,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To build something or put together different parts to form something whole.",
       "cluster": "cluster_112",
       "day": 112,
+      "phonetic_distractors": [
+        "constraint",
+        "instructor",
+        "kentucky",
+        "constraints",
+        "connecticut"
+      ],
       "fav": false,
       "known": false
     },
@@ -63819,6 +78783,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_112_2",
       "cluster": "cluster_112",
       "day": 112,
+      "phonetic_distractors": [
+        "lasting",
+        "classic",
+        "holistic",
+        "plant",
+        "blast"
+      ],
       "fav": false,
       "known": false
     },
@@ -63843,6 +78814,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To put yourself or someone else onto the official list of members of a course or group.",
       "cluster": "cluster_112",
       "day": 112,
+      "phonetic_distractors": [
+        "scroll",
+        "role",
+        "payroll",
+        "control",
+        "rule"
+      ],
       "fav": false,
       "known": false
     },
@@ -63867,6 +78845,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "A system for controlling or managing a country, company, or organization that is operated by a large number of officials employed to follow rules carefully.",
       "cluster": "cluster_112",
       "day": 112,
+      "phonetic_distractors": [
+        "democracy",
+        "biography",
+        "bankruptcy",
+        "breakfast",
+        "choreography"
+      ],
       "fav": false,
       "known": false
     },
@@ -63893,6 +78878,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_112_5",
       "cluster": "cluster_112",
       "day": 112,
+      "phonetic_distractors": [
+        "collaborate",
+        "ultimate",
+        "alienate",
+        "innovate",
+        "contaminate"
+      ],
       "fav": false,
       "known": false
     },
@@ -63919,6 +78911,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_112_6",
       "cluster": "cluster_112",
       "day": 112,
+      "phonetic_distractors": [
+        "reliable",
+        "reasonable",
+        "removable",
+        "renewal",
+        "printable"
+      ],
       "fav": false,
       "known": false
     },
@@ -63943,6 +78942,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "In a sufficiently great or important way as to be worthy of attention.",
       "cluster": "cluster_112",
       "day": 112,
+      "phonetic_distractors": [
+        "significance",
+        "magnificent",
+        "consequently",
+        "subsequently",
+        "consistently"
+      ],
       "fav": false,
       "known": false
     },
@@ -63969,6 +78975,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_112_8",
       "cluster": "cluster_112",
       "day": 112,
+      "phonetic_distractors": [
+        "historical",
+        "realistic",
+        "pediatric",
+        "heuristic",
+        "registrar"
+      ],
       "fav": false,
       "known": false
     },
@@ -63993,6 +79006,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To accept or absorb an idea, opinion, belief, etc. so that it becomes part of your character.",
       "cluster": "cluster_112",
       "day": 112,
+      "phonetic_distractors": [
+        "intervals",
+        "interval",
+        "internet",
+        "maternal",
+        "penalize"
+      ],
       "fav": false,
       "known": false
     },
@@ -64016,6 +79036,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Schoolwork that a student is required to do at home.",
       "cluster": "cluster_113",
       "day": 113,
+      "phonetic_distractors": [
+        "network",
+        "hometown",
+        "artwork",
+        "holmes",
+        "hammer"
+      ],
       "fav": false,
       "known": false
     },
@@ -64040,6 +79067,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "An act of traveling from one place to another.",
       "cluster": "cluster_113",
       "day": 113,
+      "phonetic_distractors": [
+        "jenny",
+        "jersey",
+        "johnny",
+        "earn",
+        "worry"
+      ],
       "fav": false,
       "known": false
     },
@@ -64066,6 +79100,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_113_2",
       "cluster": "cluster_113",
       "day": 113,
+      "phonetic_distractors": [
+        "league",
+        "leave",
+        "lee",
+        "reef",
+        "laugh"
+      ],
       "fav": false,
       "known": false
     },
@@ -64092,6 +79133,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_113_3",
       "cluster": "cluster_113",
       "day": 113,
+      "phonetic_distractors": [
+        "convert",
+        "conserve",
+        "cost",
+        "connoisseur",
+        "concept"
+      ],
       "fav": false,
       "known": false
     },
@@ -64115,6 +79163,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "A period of ten years, especially a period such as 2010 to 2019.",
       "cluster": "cluster_113",
       "day": 113,
+      "phonetic_distractors": [
+        "arcade",
+        "dead",
+        "delayed",
+        "deck",
+        "debt"
+      ],
       "fav": false,
       "known": false
     },
@@ -64163,6 +79218,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "The ability to speak or write a language easily, well, and quickly.",
       "cluster": "cluster_113",
       "day": 113,
+      "phonetic_distractors": [
+        "fluent",
+        "fluently",
+        "alliance",
+        "influence",
+        "currency"
+      ],
       "fav": false,
       "known": false
     },
@@ -64187,6 +79249,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Relating to the study of human history and prehistory through the excavation of sites and the analysis of artifacts.",
       "cluster": "cluster_113",
       "day": 113,
+      "phonetic_distractors": [
+        "chronological",
+        "psychological",
+        "ecological",
+        "technological",
+        "geological"
+      ],
       "fav": false,
       "known": false
     },
@@ -64235,6 +79304,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "A thing belonging or appropriate to a period other than that in which it exists.",
       "cluster": "cluster_113",
       "day": 113,
+      "phonetic_distractors": [
+        "mechanism",
+        "protectionism",
+        "metabolism",
+        "terrorism",
+        "mechanisms"
+      ],
       "fav": false,
       "known": false
     },
@@ -64261,6 +79337,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_114_0",
       "cluster": "cluster_114",
       "day": 114,
+      "phonetic_distractors": [
+        "defend",
+        "tiffany",
+        "roland",
+        "returned",
+        "raymond"
+      ],
       "fav": false,
       "known": false
     },
@@ -64284,6 +79367,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_114_1",
       "cluster": "cluster_114",
       "day": 114,
+      "phonetic_distractors": [
+        "flowers",
+        "flyer",
+        "flight",
+        "flood",
+        "plough"
+      ],
       "fav": false,
       "known": false
     },
@@ -64308,6 +79398,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "A person whose job is to discover information about news events and describe them.",
       "cluster": "cluster_114",
       "day": 114,
+      "phonetic_distractors": [
+        "reports",
+        "resorts",
+        "recorder",
+        "resort",
+        "disorder"
+      ],
       "fav": false,
       "known": false
     },
@@ -64331,6 +79428,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Relating to or derived from the sun.",
       "cluster": "cluster_114",
       "day": 114,
+      "phonetic_distractors": [
+        "sole",
+        "sold",
+        "roller",
+        "seller",
+        "soul"
+      ],
       "fav": false,
       "known": false
     },
@@ -64357,6 +79461,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_114_4",
       "cluster": "cluster_114",
       "day": 114,
+      "phonetic_distractors": [
+        "resistance",
+        "resident",
+        "resilience",
+        "assistant",
+        "distant"
+      ],
       "fav": false,
       "known": false
     },
@@ -64381,6 +79492,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Regularly or customarily; often.",
       "cluster": "cluster_114",
       "day": 114,
+      "phonetic_distractors": [
+        "frequency",
+        "frequencies",
+        "recently",
+        "fluently",
+        "presently"
+      ],
       "fav": false,
       "known": false
     },
@@ -64407,6 +79525,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_114_6",
       "cluster": "cluster_114",
       "day": 114,
+      "phonetic_distractors": [
+        "solomon",
+        "silicon",
+        "sullivan",
+        "heritage",
+        "citizen"
+      ],
       "fav": false,
       "known": false
     },
@@ -64455,6 +79580,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Information, especially of a biased or misleading nature, used to promote a political cause or point of view.",
       "cluster": "cluster_114",
       "day": 114,
+      "phonetic_distractors": [
+        "prominent",
+        "providence",
+        "proposition",
+        "provinces",
+        "profitable"
+      ],
       "fav": false,
       "known": false
     },
@@ -64477,6 +79609,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Introducing a statement or idea which reverses one that has just been made or referred to.",
       "cluster": "cluster_114",
       "day": 114,
+      "phonetic_distractors": [
+        "convert",
+        "conscious",
+        "connoisseur",
+        "concert",
+        "poverty"
+      ],
       "fav": false,
       "known": false
     },
@@ -64501,6 +79640,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "The flat panel or area on an electronic device on which images and data are displayed.",
       "cluster": "cluster_115",
       "day": 115,
+      "phonetic_distractors": [
+        "street",
+        "stream",
+        "sorry",
+        "syria",
+        "scan"
+      ],
       "fav": false,
       "known": false
     },
@@ -64527,6 +79673,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_115_1",
       "cluster": "cluster_115",
       "day": 115,
+      "phonetic_distractors": [
+        "patrol",
+        "country",
+        "countries",
+        "container",
+        "enroll"
+      ],
       "fav": false,
       "known": false
     },
@@ -64551,6 +79704,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "A type of product manufactured by a particular company under a particular name.",
       "cluster": "cluster_115",
       "day": 115,
+      "phonetic_distractors": [
+        "banned",
+        "branch",
+        "brad",
+        "grande",
+        "grand"
+      ],
       "fav": false,
       "known": false
     },
@@ -64575,6 +79735,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "A time when people vote in order to choose someone for a political or official job.",
       "cluster": "cluster_115",
       "day": 115,
+      "phonetic_distractors": [
+        "detection",
+        "section",
+        "correction",
+        "infection",
+        "direction"
+      ],
       "fav": false,
       "known": false
     },
@@ -64599,6 +79766,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Someone who studies a subject, especially in order to discover new information or reach a new understanding.",
       "cluster": "cluster_115",
       "day": 115,
+      "phonetic_distractors": [
+        "reseller",
+        "creature",
+        "nurture",
+        "resource",
+        "teacher"
+      ],
       "fav": false,
       "known": false
     },
@@ -64625,6 +79799,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_115_5",
       "cluster": "cluster_115",
       "day": 115,
+      "phonetic_distractors": [
+        "struck",
+        "structural",
+        "stroke",
+        "stretch",
+        "striking"
+      ],
       "fav": false,
       "known": false
     },
@@ -64651,6 +79832,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_115_6",
       "cluster": "cluster_115",
       "day": 115,
+      "phonetic_distractors": [
+        "prayer",
+        "pressing",
+        "relic",
+        "promote",
+        "pressure"
+      ],
       "fav": false,
       "known": false
     },
@@ -64675,6 +79863,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Very informal language that is usually spoken rather than written, used especially by particular groups of people.",
       "cluster": "cluster_115",
       "day": 115,
+      "phonetic_distractors": [
+        "slice",
+        "staff",
+        "yang",
+        "blank",
+        "stan"
+      ],
       "fav": false,
       "known": false
     },
@@ -64700,6 +79895,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_115_8",
       "cluster": "cluster_115",
       "day": 115,
+      "phonetic_distractors": [
+        "agility",
+        "velocity",
+        "validity",
+        "trinity",
+        "publicity"
+      ],
       "fav": false,
       "known": false
     },
@@ -64726,6 +79928,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Never having happened or existed in the past.",
       "cluster": "cluster_115",
       "day": 115,
+      "phonetic_distractors": [
+        "presidential",
+        "representing",
+        "unexpected",
+        "represented",
+        "contributed"
+      ],
       "fav": false,
       "known": false
     },
@@ -64750,6 +79959,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "The rules about how words change their form and combine with other words to make sentences.",
       "cluster": "cluster_116",
       "day": 116,
+      "phonetic_distractors": [
+        "grams",
+        "gather",
+        "greater",
+        "hammer",
+        "grande"
+      ],
       "fav": false,
       "known": false
     },
@@ -64774,6 +79990,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Someone whose job is to teach people to improve at a sport, skill, or school subject.",
       "cluster": "cluster_116",
       "day": 116,
+      "phonetic_distractors": [
+        "cope",
+        "cove",
+        "code",
+        "catch",
+        "coal"
+      ],
       "fav": false,
       "known": false
     },
@@ -64798,6 +80021,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "A piece of writing in a newspaper or magazine.",
       "cluster": "cluster_116",
       "day": 116,
+      "phonetic_distractors": [
+        "optical",
+        "oracle",
+        "arable",
+        "artist",
+        "artificial"
+      ],
       "fav": false,
       "known": false
     },
@@ -64822,6 +80052,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "The programs and other operating information used by a computer.",
       "cluster": "cluster_116",
       "day": 116,
+      "phonetic_distractors": [
+        "somewhere",
+        "spyware",
+        "square",
+        "softball",
+        "footwear"
+      ],
       "fav": false,
       "known": false
     },
@@ -64846,6 +80083,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "A planned way of doing something, especially in order to win a game or a war.",
       "cluster": "cluster_116",
       "day": 116,
+      "phonetic_distractors": [
+        "clicks",
+        "static",
+        "critics",
+        "topics",
+        "techniques"
+      ],
       "fav": false,
       "known": false
     },
@@ -64872,6 +80116,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_116_5",
       "cluster": "cluster_116",
       "day": 116,
+      "phonetic_distractors": [
+        "expiration",
+        "explanation",
+        "expedition",
+        "declaration",
+        "inspiration"
+      ],
       "fav": false,
       "known": false
     },
@@ -64896,6 +80147,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Human society with its well developed social organizations, or the culture and way of life of a society.",
       "cluster": "cluster_116",
       "day": 116,
+      "phonetic_distractors": [
+        "assimilation",
+        "evaluation",
+        "syndication",
+        "simulation",
+        "organisation"
+      ],
       "fav": false,
       "known": false
     },
@@ -64920,6 +80178,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To control or maintain the rate or speed of a machine or process so that it operates properly.",
       "cluster": "cluster_116",
       "day": 116,
+      "phonetic_distractors": [
+        "regular",
+        "regulation",
+        "regularly",
+        "alienate",
+        "simulate"
+      ],
       "fav": false,
       "known": false
     },
@@ -64969,6 +80234,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_116_9",
       "cluster": "cluster_116",
       "day": 116,
+      "phonetic_distractors": [
+        "salmon",
+        "fashion",
+        "damage",
+        "fan",
+        "roman"
+      ],
       "fav": false,
       "known": false
     },
@@ -65019,6 +80291,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_117_1",
       "cluster": "cluster_117",
       "day": 117,
+      "phonetic_distractors": [
+        "financing",
+        "france",
+        "banana",
+        "announce",
+        "fund"
+      ],
       "fav": false,
       "known": false
     },
@@ -65043,6 +80322,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To bring up a child.",
       "cluster": "cluster_117",
       "day": 117,
+      "phonetic_distractors": [
+        "days",
+        "rise",
+        "phrase",
+        "rage",
+        "rail"
+      ],
       "fav": false,
       "known": false
     },
@@ -65067,6 +80353,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To increase in size, number, or importance.",
       "cluster": "cluster_117",
       "day": 117,
+      "phonetic_distractors": [
+        "exposed",
+        "expired",
+        "explained",
+        "expense",
+        "extend"
+      ],
       "fav": false,
       "known": false
     },
@@ -65091,6 +80384,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "The fact of many different types of things or people being included in something; a range of different things or people.",
       "cluster": "cluster_117",
       "day": 117,
+      "phonetic_distractors": [
+        "poverty",
+        "density",
+        "diversify",
+        "devices",
+        "different"
+      ],
       "fav": false,
       "known": false
     },
@@ -65115,6 +80415,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "The act of working together with someone or doing what they ask you.",
       "cluster": "cluster_117",
       "day": 117,
+      "phonetic_distractors": [
+        "corporation",
+        "expiration",
+        "separation",
+        "operations",
+        "cooperative"
+      ],
       "fav": false,
       "known": false
     },
@@ -65139,6 +80446,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "The action or process of investing money for profit or material result.",
       "cluster": "cluster_117",
       "day": 117,
+      "phonetic_distractors": [
+        "investigate",
+        "involvement",
+        "environment",
+        "assessment",
+        "excitement"
+      ],
       "fav": false,
       "known": false
     },
@@ -65187,6 +80501,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To cause someone to feel isolated or estranged.",
       "cluster": "cluster_117",
       "day": 117,
+      "phonetic_distractors": [
+        "ancient",
+        "fluent",
+        "eliminate",
+        "agent",
+        "client"
+      ],
       "fav": false,
       "known": false
     },
@@ -65211,6 +80532,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Relating to teaching or education.",
       "cluster": "cluster_117",
       "day": 117,
+      "phonetic_distractors": [
+        "psychological",
+        "biological",
+        "ecological",
+        "technological",
+        "geological"
+      ],
       "fav": false,
       "known": false
     },
@@ -65237,6 +80565,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_118_0",
       "cluster": "cluster_118",
       "day": 118,
+      "phonetic_distractors": [
+        "artist",
+        "largest",
+        "hottest",
+        "market",
+        "forest"
+      ],
       "fav": false,
       "known": false
     },
@@ -65263,6 +80598,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_118_1",
       "cluster": "cluster_118",
       "day": 118,
+      "phonetic_distractors": [
+        "surf",
+        "church",
+        "serve",
+        "sir",
+        "surrey"
+      ],
       "fav": false,
       "known": false
     },
@@ -65289,6 +80631,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_118_2",
       "cluster": "cluster_118",
       "day": 118,
+      "phonetic_distractors": [
+        "report",
+        "outsource",
+        "reuse",
+        "researcher",
+        "force"
+      ],
       "fav": false,
       "known": false
     },
@@ -65313,6 +80662,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To give food to or to consume food.",
       "cluster": "cluster_118",
       "day": 118,
+      "phonetic_distractors": [
+        "seed",
+        "weed",
+        "knead",
+        "reed",
+        "food"
+      ],
       "fav": false,
       "known": false
     },
@@ -65339,6 +80695,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_118_4",
       "cluster": "cluster_118",
       "day": 118,
+      "phonetic_distractors": [
+        "interest",
+        "internet",
+        "interact",
+        "integrate",
+        "insect"
+      ],
       "fav": false,
       "known": false
     },
@@ -65362,6 +80725,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "The variety of plant and animal life in the world.",
       "cluster": "cluster_118",
       "day": 118,
+      "phonetic_distractors": [
+        "university",
+        "universities",
+        "electricity",
+        "productivity",
+        "complexity"
+      ],
       "fav": false,
       "known": false
     },
@@ -65386,6 +80756,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To defeat someone so that they cannot continue in a competition.",
       "cluster": "cluster_118",
       "day": 118,
+      "phonetic_distractors": [
+        "alienate",
+        "assimilate",
+        "disseminate",
+        "elimination",
+        "efficient"
+      ],
       "fav": false,
       "known": false
     },
@@ -65410,6 +80787,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "Laws, considered collectively.",
       "cluster": "cluster_118",
       "day": 118,
+      "phonetic_distractors": [
+        "legislature",
+        "legislative",
+        "education",
+        "vegetation",
+        "revelation"
+      ],
       "fav": false,
       "known": false
     },
@@ -65434,6 +80818,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "An object, tradition, or system from the past that continues to exist.",
       "cluster": "cluster_118",
       "day": 118,
+      "phonetic_distractors": [
+        "realm",
+        "replica",
+        "eric",
+        "selling",
+        "rolling"
+      ],
       "fav": false,
       "known": false
     },
@@ -65460,6 +80851,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_118_9",
       "cluster": "cluster_118",
       "day": 118,
+      "phonetic_distractors": [
+        "finnish",
+        "fetish",
+        "finish",
+        "flip",
+        "fish"
+      ],
       "fav": false,
       "known": false
     },
@@ -65485,6 +80883,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_119_0",
       "cluster": "cluster_119",
       "day": 119,
+      "phonetic_distractors": [
+        "breeze",
+        "phrase",
+        "fees",
+        "trees",
+        "fresh"
+      ],
       "fav": false,
       "known": false
     },
@@ -65509,6 +80914,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "A large cylinder-shaped object that moves very fast by forcing out burning gases, used for space travel or as a weapon.",
       "cluster": "cluster_119",
       "day": 119,
+      "phonetic_distractors": [
+        "pocket",
+        "socket",
+        "profit",
+        "market",
+        "rocky"
+      ],
       "fav": false,
       "known": false
     },
@@ -65533,6 +80945,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "A building where objects of historical, scientific, or artistic interest are kept.",
       "cluster": "cluster_119",
       "day": 119,
+      "phonetic_distractors": [
+        "musical",
+        "musician",
+        "muslim",
+        "mutual",
+        "music"
+      ],
       "fav": false,
       "known": false
     },
@@ -65557,6 +80976,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To express a choice or opinion in an election or meeting.",
       "cluster": "cluster_119",
       "day": 119,
+      "phonetic_distractors": [
+        "volt",
+        "wrote",
+        "goat",
+        "coat",
+        "vat"
+      ],
       "fav": false,
       "known": false
     },
@@ -65581,6 +81007,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To work with someone else for a special purpose.",
       "cluster": "cluster_119",
       "day": 119,
+      "phonetic_distractors": [
+        "collaborative",
+        "cultivate",
+        "collaboration",
+        "cultural",
+        "celebrate"
+      ],
       "fav": false,
       "known": false
     },
@@ -65607,6 +81040,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_119_5",
       "cluster": "cluster_119",
       "day": 119,
+      "phonetic_distractors": [
+        "particular",
+        "vernacular",
+        "substantially",
+        "particles",
+        "substantial"
+      ],
       "fav": false,
       "known": false
     },
@@ -65633,6 +81073,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_119_6",
       "cluster": "cluster_119",
       "day": 119,
+      "phonetic_distractors": [
+        "carbon",
+        "martin",
+        "carmen",
+        "begun",
+        "bahrain"
+      ],
       "fav": false,
       "known": false
     },
@@ -65681,6 +81128,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "The state of being prosperous or successful, especially financially.",
       "cluster": "cluster_119",
       "day": 119,
+      "phonetic_distractors": [
+        "prospects",
+        "prospect",
+        "priority",
+        "processes",
+        "primarily"
+      ],
       "fav": false,
       "known": false
     },
@@ -65707,6 +81161,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_119_9",
       "cluster": "cluster_119",
       "day": 119,
+      "phonetic_distractors": [
+        "stops",
+        "stats",
+        "six",
+        "since",
+        "stamps"
+      ],
       "fav": false,
       "known": false
     },
@@ -65757,6 +81218,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_120_1",
       "cluster": "cluster_120",
       "day": 120,
+      "phonetic_distractors": [
+        "hack",
+        "pam",
+        "pike",
+        "pick",
+        "pat"
+      ],
       "fav": false,
       "known": false
     },
@@ -65781,6 +81249,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To describe or draw attention to a product, service, or event in a public medium in order to promote sales or attendance.",
       "cluster": "cluster_120",
       "day": 120,
+      "phonetic_distractors": [
+        "advise",
+        "advertising",
+        "advisor",
+        "adverse",
+        "advice"
+      ],
       "fav": false,
       "known": false
     },
@@ -65805,6 +81280,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To legally dissolve one's marriage with someone.",
       "cluster": "cluster_120",
       "day": 120,
+      "phonetic_distractors": [
+        "device",
+        "decor",
+        "disorder",
+        "outsource",
+        "resource"
+      ],
       "fav": false,
       "known": false
     },
@@ -65829,6 +81311,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "To use fuel, energy, time, or a product, especially in large amounts.",
       "cluster": "cluster_120",
       "day": 120,
+      "phonetic_distractors": [
+        "conserve",
+        "assume",
+        "concern",
+        "confirm",
+        "commute"
+      ],
       "fav": false,
       "known": false
     },
@@ -65855,6 +81344,13 @@ const VOCAB_DATA_MAP = {
       "key": "cluster_120_5",
       "cluster": "cluster_120",
       "day": 120,
+      "phonetic_distractors": [
+        "hurricane",
+        "latino",
+        "arcade",
+        "moscow",
+        "colorado"
+      ],
       "fav": false,
       "known": false
     },
@@ -65903,6 +81399,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "In a way that involves rigid enforcement or that demands obedience.",
       "cluster": "cluster_120",
       "day": 120,
+      "phonetic_distractors": [
+        "strongly",
+        "structure",
+        "steadily",
+        "quickly",
+        "austerity"
+      ],
       "fav": false,
       "known": false
     },
@@ -65952,6 +81455,13 @@ const VOCAB_DATA_MAP = {
       "en_def": "The quality of having or showing great knowledge or learning.",
       "cluster": "cluster_120",
       "day": 120,
+      "phonetic_distractors": [
+        "tradition",
+        "edition",
+        "traditions",
+        "addition",
+        "rendition"
+      ],
       "fav": false,
       "known": false
     }

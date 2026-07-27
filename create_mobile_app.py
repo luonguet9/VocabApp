@@ -208,7 +208,7 @@ const CLUSTERS_DATA_MAP = {json.dumps(clusters_data_map, ensure_ascii=False, ind
 
             if (resource === '/api/fav') {
                 const p = window.getProgress();
-                const ts = new Date().toISOString();
+                const ts = new Date().toISOString().replace('T', ' ').substring(0, 19);
                 if (!p[body.key]) p[body.key] = { fav: body.fav, known: false, date: null, updated_at: ts };
                 else { p[body.key].fav = body.fav; p[body.key].updated_at = ts; }
                 window.saveProgressData(p);
@@ -217,7 +217,7 @@ const CLUSTERS_DATA_MAP = {json.dumps(clusters_data_map, ensure_ascii=False, ind
 
             if (resource === '/api/known') {
                 const p = window.getProgress();
-                const ts = new Date().toISOString();
+                const ts = new Date().toISOString().replace('T', ' ').substring(0, 19);
                 if (!p[body.key]) p[body.key] = { fav: false, known: body.known, date: null, updated_at: ts };
                 else { p[body.key].known = body.known; p[body.key].updated_at = ts; }
                 window.saveProgressData(p);

@@ -997,6 +997,19 @@ h1 { font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; ga
   </div>
 </div>
 
+<!-- ── TOPIC POPUP OVERLAY ────────────────────────────── -->
+<div id="topicPopupOverlay" class="hidden">
+  <div class="popup-box" style="padding: 24px; max-width: 400px; text-align: center;">
+    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 24px;">
+      <h2 style="margin:0; font-size:1.25rem;">🏷️ Select Level / Deck</h2>
+      <button id="btnCloseTopicPopup" style="background:transparent; border:none; font-size:1.5rem; cursor:pointer; color:#64748b; line-height:1;">&times;</button>
+    </div>
+    <div id="topicList" style="display:flex; flex-direction:column; gap:8px;"></div>
+  </div>
+</div>
+
+
+
 <div id="historyOverlay" class="hidden">
   <div class="history-box" style="padding:0; overflow:hidden; display:flex; flex-direction:column;">
     <div style="display:flex; justify-content:space-between; align-items:center; padding: 24px 24px 12px 24px;">
@@ -2265,18 +2278,20 @@ function renderQuiz() {
 
   let candidateTypes = ['vi_to_en', 'en_to_vi'];
   if (tier === 'EASY') {
-    candidateTypes = ['vi_to_en', 'en_to_vi'];
+    candidateTypes = ['vi_to_en', 'en_to_vi', 'listening_basic'];
   } else if (tier === 'MEDIUM') {
     candidateTypes = [];
-    if (exHasTerm) candidateTypes.push('cloze');
+    if (exHasTerm) candidateTypes.push('cloze', 'listening_cloze');
     if (foundPrep) candidateTypes.push('preposition');
-    candidateTypes.push('vi_to_en');
+    candidateTypes.push('vi_to_en', 'listening_basic');
     if (candidateTypes.length === 0) candidateTypes = ['vi_to_en', 'en_to_vi'];
   } else if (tier === 'HARD') {
     candidateTypes = [];
     if (c.en_def) candidateTypes.push('en_def');
-    if (exHasTerm) candidateTypes.push('cloze');
+    if (exHasTerm) candidateTypes.push('cloze', 'listening_cloze');
     if (hasSyns && exHasTerm) candidateTypes.push('synonym_match');
+    if (c.phonetic_distractors && c.phonetic_distractors.length >= 3) candidateTypes.push('listening_minimal');
+    candidateTypes.push('listening_basic');
     if (candidateTypes.length === 0) candidateTypes = ['vi_to_en', 'en_to_vi'];
   } else { // HARDCORE - Academic / Hardcore Mastery!
     candidateTypes = [];
@@ -2284,8 +2299,9 @@ function renderQuiz() {
       candidateTypes.push('en_def');
       candidateTypes.push('error_detection');
     }
-    if (exHasTerm) candidateTypes.push('cloze');
+    if (exHasTerm) candidateTypes.push('cloze', 'listening_cloze');
     if (hasSyns && exHasTerm) candidateTypes.push('synonym_match');
+    if (c.phonetic_distractors && c.phonetic_distractors.length >= 3) candidateTypes.push('listening_minimal');
     if (candidateTypes.length === 0) candidateTypes = ['vi_to_en', 'en_to_vi'];
   }
 
@@ -2422,6 +2438,73 @@ function renderQuiz() {
       btn.addEventListener('click', () => checkAnswer(btn));
       optsEl.appendChild(btn);
     });
+  } else if (quizType === 'listening_basic') {
+    labelEl.innerHTML = 'Nghe và chọn nghĩa tiếng Việt chính xác:';
+    qEl.innerHTML = `<button class="btn-speaker-huge" onclick="speak('${c.term.replace(/'/g, "\\'")}')">🔊</button>`;
+    const wrong = getSmartDistractors(c, 3, tier, 'vi_to_en', c.term);
+    opts = shuffle([c, ...wrong]);
+    opts.forEach(opt => {
+      const btn = document.createElement('button');
+      btn.className = 'quiz-opt';
+      btn.textContent = opt.vi.split('|')[0].split('—')[0].trim();
+      if (opt === c) btn.dataset.correct = '1';
+      btn.addEventListener('click', () => checkAnswer(btn));
+      optsEl.appendChild(btn);
+    });
+  } else if (quizType === 'listening_cloze') {
+    labelEl.innerHTML = 'Nghe câu ví dụ và chọn từ đúng điền vào chỗ trống:';
+    const regex = new RegExp(c.term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi');
+    const blanked = ex.replace(regex, '___');
+    qEl.innerHTML = `<button class="btn-speaker-huge" onclick="speak('${ex.replace(/'/g, "\\'")}')">🔊</button> <em class="quiz-cloze-text">"${blanked}"</em>`;
+    const wrong = getSmartDistractors(c, 3, tier, 'cloze', c.term);
+    opts = shuffle([c, ...wrong]);
+    opts.forEach(opt => {
+      const btn = document.createElement('button');
+      btn.className = 'quiz-opt';
+      btn.textContent = opt.term;
+      if (opt === c) btn.dataset.correct = '1';
+      btn.addEventListener('click', () => checkAnswer(btn));
+      optsEl.appendChild(btn);
+    });
+  } else if (quizType === 'listening_minimal') {
+    labelEl.innerHTML = `Nghe và chọn loa phát âm đúng của từ: <strong style="color:#6366f1">${c.vi.split('—')[0].trim()}</strong>`;
+    qEl.innerHTML = `<div style="font-size:0.95rem;color:#334155;margin-top:4px;">Lắng nghe thật kỹ để phân biệt các âm tương đồng!</div>`;
+    const distractors = c.phonetic_distractors || [];
+    const wrong = distractors.slice(0, 3).map(w => ({ term: w, isAudioOpt: true }));
+    const correctObj = { term: c.term, isAudioOpt: true, orig: c };
+    opts = shuffle([correctObj, ...wrong]);
+    
+    // Create a 2-column grid for the options
+    const gridEl = document.createElement('div');
+    gridEl.style.display = 'grid';
+    gridEl.style.gridTemplateColumns = '1fr 1fr';
+    gridEl.style.gap = '8px';
+    
+    opts.forEach((opt, idx) => {
+      const itemWrap = document.createElement('div');
+      itemWrap.style.display = 'flex';
+      itemWrap.style.flexDirection = 'column';
+      itemWrap.style.gap = '4px';
+      
+      const playBtn = document.createElement('button');
+      playBtn.className = 'btn';
+      playBtn.style.padding = '12px';
+      playBtn.style.background = '#e0e7ff';
+      playBtn.style.color = '#4338ca';
+      playBtn.innerHTML = '🔊 Nghe';
+      playBtn.onclick = () => speak(opt.term);
+      
+      const btn = document.createElement('button');
+      btn.className = 'quiz-opt';
+      btn.textContent = `Chọn Loa ${idx + 1}`;
+      if (opt === correctObj) btn.dataset.correct = '1';
+      btn.addEventListener('click', () => checkAnswer(btn));
+      
+      itemWrap.appendChild(playBtn);
+      itemWrap.appendChild(btn);
+      gridEl.appendChild(itemWrap);
+    });
+    optsEl.appendChild(gridEl);
   } else {
     labelEl.innerHTML = 'Chọn từ tiếng Anh đúng nghĩa:';
     qEl.textContent = c.vi.split('—')[0].trim();
