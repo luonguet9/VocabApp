@@ -22,6 +22,7 @@ html { background-color: #f8fafc; }
 body {
   font-family: 'Be Vietnam Pro', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
   background: #f8fafc;
+  background-image: radial-gradient(ellipse at 20% 0%, rgba(99,102,241,0.07) 0%, transparent 60%), radial-gradient(ellipse at 80% 100%, rgba(168,85,247,0.07) 0%, transparent 60%);
   min-height: 100vh;
   display: flex; flex-direction: column; align-items: center;
   padding: calc(12px + env(safe-area-inset-top, 0px)) calc(12px + env(safe-area-inset-right, 0px)) calc(40px + env(safe-area-inset-bottom, 0px)) calc(12px + env(safe-area-inset-left, 0px));
@@ -29,6 +30,67 @@ body {
 h1, h2, h3, h4, button, input, select, textarea, .cluster-name, .mode-tab, .title-gradient, .practice-title, .poc-label, .cq-practice-title {
   font-family: 'Be Vietnam Pro', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
 }
+
+/* ── POPUP SYSTEM ────────────────────────────────────── */
+.popup-overlay {
+  position: fixed; inset: 0;
+  background: rgba(15,23,42,0.62);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  display: flex; align-items: center; justify-content: center;
+  z-index: 1000;
+  padding: calc(16px + env(safe-area-inset-top,0px)) calc(16px + env(safe-area-inset-right,0px)) calc(16px + env(safe-area-inset-bottom,0px)) calc(16px + env(safe-area-inset-left,0px));
+}
+.popup-dialog {
+  background: #ffffff;
+  border-radius: 28px;
+  border: 1px solid #ede9fe;
+  box-shadow: 0 20px 60px rgba(79,70,229,0.15), 0 4px 16px rgba(0,0,0,0.06);
+  width: 100%; max-width: 440px; overflow: hidden;
+}
+.popup-dialog--sm { max-width: 360px; }
+.popup-dialog--lg { max-width: 520px; max-height: 82vh; display: flex; flex-direction: column; overflow: hidden; }
+.popup-header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 22px 24px 0;
+}
+.popup-title { font-size: 1.15rem; font-weight: 800; color: #0f172a; margin: 0; }
+.popup-close {
+  width: 34px; height: 34px; border-radius: 50%;
+  background: #f1f5f9; border: none;
+  font-size: 1.1rem; cursor: pointer; color: #64748b;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0; transition: background 0.15s, color 0.15s;
+}
+.popup-close:hover { background: #e2e8f0; color: #1e293b; }
+.popup-body { padding: 14px 24px 20px; flex: 1; overflow-y: auto; }
+.popup-footer { display: flex; gap: 10px; padding: 0 24px 22px; }
+.popup-btn {
+  flex: 1; min-height: 48px; padding: 0 20px;
+  border: none; border-radius: 50px;
+  font-size: 0.95rem; font-weight: 700; font-family: inherit;
+  cursor: pointer; transition: all 0.3s cubic-bezier(0.34,1.56,0.64,1);
+  letter-spacing: 0.01em;
+}
+.popup-btn:active { transform: scale(0.97); }
+.popup-btn-primary {
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #a855f7 100%);
+  color: #fff; box-shadow: 0 4px 20px rgba(99,102,241,0.4);
+}
+.popup-btn-primary:hover { box-shadow: 0 8px 30px rgba(99,102,241,0.5); transform: translateY(-3px) scale(1.02); }
+.popup-btn-danger {
+  background: linear-gradient(135deg, #f43f5e 0%, #ec4899 100%);
+  color: #fff; box-shadow: 0 4px 20px rgba(244,63,94,0.35);
+}
+.popup-btn-danger:hover { box-shadow: 0 8px 28px rgba(244,63,94,0.45); transform: translateY(-2px); }
+.popup-btn-ghost { background: linear-gradient(135deg, #f0f0ff, #faf5ff); color: #6366f1; border: 1.5px solid #c4b5fd; }
+.popup-btn-ghost:hover { background: linear-gradient(135deg, #e0e0ff, #f0ebff); border-color: #8b5cf6; }
+[data-theme="dark"] .popup-dialog { background: #1a1d2e; border: 1px solid rgba(99,102,241,0.25); }
+[data-theme="dark"] .popup-title { color: #f8fafc; }
+[data-theme="dark"] .popup-close { background: #334155; color: #94a3b8; }
+[data-theme="dark"] .popup-close:hover { background: #475569; color: #f1f5f9; }
+[data-theme="dark"] .popup-btn-ghost { background: rgba(99,102,241,0.1); color: #a5b4fc; border-color: rgba(99,102,241,0.3); }
+[data-theme="dark"] .popup-btn-ghost:hover { background: rgba(99,102,241,0.2); color: #c4b5fd; border-color: rgba(99,102,241,0.5); }
 
 /* ── SETUP OVERLAY ──────────────────────────────────── */
 #loginOverlay {
@@ -39,22 +101,15 @@ h1, h2, h3, h4, button, input, select, textarea, .cluster-name, .mode-tab, .titl
   padding: calc(16px + env(safe-area-inset-top, 0px)) calc(16px + env(safe-area-inset-right, 0px)) calc(16px + env(safe-area-inset-bottom, 0px)) calc(16px + env(safe-area-inset-left, 0px));
 }
 [data-theme="dark"] #loginOverlay {
-  background: #0f172a;
+  background: #0f1117;
 }
 #loginOverlay.is-switching {
-  background: rgba(15, 23, 42, 0.55);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
+  background: rgba(15, 23, 42, 0.62);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
 }
 [data-theme="dark"] #loginOverlay.is-switching {
   background: rgba(15, 23, 42, 0.75);
-}
-#settingsOverlay, #historyOverlay, #topicPopupOverlay {
-  position: fixed; inset: 0;
-  background: rgba(15, 23, 42, 0.55);
-  display: flex; align-items: center; justify-content: center;
-  z-index: 100;
-  padding: calc(16px + env(safe-area-inset-top, 0px)) calc(16px + env(safe-area-inset-right, 0px)) calc(16px + env(safe-area-inset-bottom, 0px)) calc(16px + env(safe-area-inset-left, 0px));
 }
 .history-box {
   background: #fff; border-radius: 20px;
@@ -157,9 +212,9 @@ h1 { font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; ga
 /* Primary Navigation Mode Bar */
 .mode-bar {
   display: flex; gap: 8px; width: 100%;
-  background: #f8fafc; padding: 8px; border-radius: 20px;
-  border: 1px solid #e2e8f0; margin-bottom: 16px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+  background: rgba(237,233,254,0.4); padding: 8px; border-radius: 20px;
+  border: 1px solid #ede9fe; margin-bottom: 16px;
+  box-shadow: 0 4px 12px rgba(124,58,237,0.04);
 }
 .mode-tab {
   flex: 1; min-height: 46px; border-radius: 14px; border: none;
@@ -169,10 +224,14 @@ h1 { font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; ga
 }
 .mode-tab:hover:not(.active) { color: #1e293b; background: rgba(255,255,255,0.6); transform: translateY(-1px); }
 .mode-tab.active {
-  background: #ffffff; color: #4f46e5; font-weight: 800;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.06); transform: translateY(-2px);
-  border: 1px solid #e2e8f0;
+  background: linear-gradient(135deg, #ffffff, #faf5ff); color: #7c3aed; font-weight: 800;
+  box-shadow: 0 6px 16px rgba(124,58,237,0.1); transform: translateY(-2px);
+  border: 1px solid #ddd6fe;
 }
+/* Lucide icons */
+.lucide { flex-shrink: 0; vertical-align: -3px; }
+.btn-fav.active .lucide, .fav-star.active .lucide,
+.cluster-fav-star.active .lucide, .btn-cluster-fav-back.active .lucide { fill: currentColor; }
 .btn-settings {
   min-height: 38px; padding: 0 14px;
   border-radius: 12px; border: 1px solid #e2e8f0;
@@ -289,9 +348,9 @@ h1 { font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; ga
   position: absolute; width: 100%; height: 100%;
   backface-visibility: hidden;
   background: #ffffff; border-radius: 24px;
-  border: 1px solid #e2e8f0;
+  border: 1px solid #ede9fe;
   padding: 20px 20px 18px;
-  box-shadow: 0 12px 32px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 20px rgba(99,102,241,0.08), 0 1px 4px rgba(0,0,0,0.04);
   display: flex; flex-direction: column;
   justify-content: center; align-items: center;
   text-align: center; overflow-y: auto;
@@ -377,6 +436,7 @@ h1 { font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; ga
 .btn:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,0.1); }
 .btn:active { transform: scale(0.98); opacity: 0.85; }
 .btn-know    { background: linear-gradient(135deg, #10b981 0%, #059669 100%); color: #fff; }
+.btn-know.is-known { outline: 2px solid rgba(16,185,129,0.5); }
 .btn-unknown { background: linear-gradient(135deg, #f43f5e 0%, #e11d48 100%); color: #fff; }
 
 /* Favorite button (inside flash-btns row) */
@@ -396,9 +456,9 @@ h1 { font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; ga
 
 .quiz-q-box {
   background: #ffffff; border-radius: 24px;
-  border: 1px solid #e2e8f0;
+  border: 1px solid #ede9fe;
   padding: 24px 28px;
-  box-shadow: 0 12px 32px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 20px rgba(99,102,241,0.08), 0 1px 4px rgba(0,0,0,0.04);
   text-align: center; margin-bottom: 16px; position: relative;
 }
 .quiz-q-label {
@@ -426,13 +486,18 @@ h1 { font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; ga
 .quiz-opt:disabled { cursor: default; opacity: 0.85; }
 
 .quiz-next-wrap { text-align: center; margin-top: 16px; }
-.btn-next { background: linear-gradient(135deg, #4f46e5 0%, #6366f1 100%); color: #fff; flex: none; padding: 0 32px; min-height: 48px; border-radius: 16px; font-weight: 700; box-shadow: 0 4px 12px rgba(79,70,229,0.25); transition: all 0.2s; }
-.btn-next:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(79,70,229,0.35); }
+.btn-next { background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #a855f7 100%); color: #fff; flex: none; padding: 0 32px; min-height: 48px; border-radius: 50px; font-weight: 700; box-shadow: 0 4px 20px rgba(99,102,241,0.4); transition: all 0.3s cubic-bezier(0.34,1.56,0.64,1); }
+.btn-next:hover { transform: translateY(-3px) scale(1.02); box-shadow: 0 8px 30px rgba(99,102,241,0.5); }
 
 .quiz-term-en { font-weight: 700; font-size: 1.3rem; color: #1e293b; }
 .quiz-example-hint { font-size: 0.82rem; color: #64748b; margin-top: 6px; font-style: italic; }
 .quiz-cloze-text { font-size: 0.97rem; color: #1e293b; line-height: 1.6; }
 .quiz-en-def-text { font-size: 0.95rem; color: #334155; line-height: 1.6; font-style: italic; background: #f8fafc; padding: 12px 16px; border-left: 4px solid #6366f1; border-radius: 8px; margin-top: 6px; }
+.btn-speaker-huge { font-size: 2.8rem; background: none; border: none; cursor: pointer; padding: 8px 12px; line-height: 1; border-radius: 12px; transition: transform 0.15s; }
+.btn-speaker-huge:hover { transform: scale(1.15); }
+.quiz-listen-hint { font-size: 0.92rem; color: #64748b; margin-top: 4px; }
+.btn-listen-play { padding: 10px 12px; border-radius: 12px; border: none; background: #e0e7ff; color: #4338ca; font-size: 0.9rem; font-weight: 600; cursor: pointer; transition: background 0.15s; }
+.btn-listen-play:hover { background: #c7d2fe; }
 .badge-tier { display: inline-block; padding: 2px 10px; border-radius: 12px; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; margin-right: 8px; letter-spacing: 0.03em; }
 .badge-auto { background: #e0e7ff; color: #4338ca; border: 1px solid #c7d2fe; }
 .badge-easy { background: #dcfce7; color: #15803d; border: 1px solid #86efac; }
@@ -457,9 +522,9 @@ h1 { font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; ga
 /* ── RESULT / LOADING ────────────────────────────────── */
 .result-box {
   width: 100%; background: #ffffff; border-radius: 24px;
-  border: 1px solid #e2e8f0;
+  border: 1px solid #ede9fe;
   padding: 40px 24px;
-  box-shadow: 0 12px 32px rgba(0,0,0,0.05); text-align: center;
+  box-shadow: 0 4px 20px rgba(99,102,241,0.08), 0 1px 4px rgba(0,0,0,0.04); text-align: center;
 }
 .result-box h2 { font-size: 1.8rem; margin-bottom: 12px; font-weight: 700; color: #0f172a; }
 .result-box p  { color: #64748b; margin-bottom: 24px; font-size: 1rem; line-height: 1.5; }
@@ -467,8 +532,8 @@ h1 { font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; ga
 .result-stat   { padding: 8px 16px; border-radius: 20px; font-size: 0.85rem; font-weight: 700; }
 .stat-know   { background: #ecfdf5; color: #047857; border: 1px solid #a7f3d0; }
 .stat-unknown{ background: #fff1f2; color: #be123c; border: 1px solid #fecdd3; }
-.btn-restart { background: linear-gradient(135deg, #4f46e5 0%, #6366f1 100%); color: #fff; flex: none; padding: 0 32px; min-height: 48px; border-radius: 16px; font-weight: 700; box-shadow: 0 4px 12px rgba(79,70,229,0.25); transition: all 0.2s; }
-.btn-restart:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(79,70,229,0.35); }
+.btn-restart { background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #a855f7 100%); color: #fff; flex: none; padding: 0 32px; min-height: 48px; border-radius: 50px; font-weight: 700; box-shadow: 0 4px 20px rgba(99,102,241,0.4); transition: all 0.3s cubic-bezier(0.34,1.56,0.64,1); }
+.btn-restart:hover { transform: translateY(-3px) scale(1.02); box-shadow: 0 8px 30px rgba(99,102,241,0.5); }
 
 .loading { color: #9ca3af; font-size: 0.9rem; padding: 48px 0; text-align: center; width: 100%; }
 .hidden { display: none !important; }
@@ -569,12 +634,12 @@ h1 { font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; ga
 
 .cluster-card {
   width: 100%; max-width: 100%; background: #ffffff; border-radius: 24px;
-  box-shadow: 0 12px 32px rgba(0,0,0,0.05); overflow: hidden;
-  border: 1px solid #e2e8f0; margin-bottom: 16px;
+  box-shadow: 0 4px 20px rgba(99,102,241,0.08), 0 1px 4px rgba(0,0,0,0.04); overflow: hidden;
+  border: 1px solid #ede9fe; margin-bottom: 16px;
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .cluster-card:hover {
-  box-shadow: 0 16px 40px rgba(0,0,0,0.08);
+  box-shadow: 0 8px 32px rgba(99,102,241,0.14);
 }
 .cluster-card-front {
   padding: 28px 20px 24px; cursor: pointer; position: relative;
@@ -651,7 +716,7 @@ h1 { font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; ga
 .btn-back-clean span { font-size: 1.15rem; line-height: 1; margin-top: -1px; }
 .btn-back-clean:hover { background: #f1f5f9; color: #0f172a; border-color: #cbd5e1; transform: translateX(-2px); }
 
-.cq-practice-section { max-width: 540px; margin: 0 auto; padding: 24px 28px 32px; background: #ffffff; border-radius: 24px; border: 1px solid #e2e8f0; box-shadow: 0 12px 32px rgba(0,0,0,0.05); }
+.cq-practice-section { max-width: 540px; margin: 0 auto; padding: 24px 28px 32px; background: #ffffff; border-radius: 24px; border: 1px solid #ede9fe; box-shadow: 0 4px 20px rgba(99,102,241,0.08), 0 1px 4px rgba(0,0,0,0.04); }
 .cq-top-bar { display: flex; justify-content: flex-start; }
 .cq-header { text-align: center; margin-bottom: 24px; }
 .cq-icon-glow { font-size: 2.6rem; margin-bottom: 8px; display: inline-block; filter: drop-shadow(0 6px 12px rgba(139,92,246,0.15)); }
@@ -808,35 +873,46 @@ h1 { font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; ga
   .quiz-options { gap: 8px !important; }
   .quiz-opt { padding: 12px 14px !important; min-height: 44px !important; font-size: 0.9rem !important; border-radius: 14px !important; }
   .quiz-next-wrap { margin-top: 8px !important; margin-bottom: 8px !important; position: sticky !important; bottom: 10px !important; z-index: 100 !important; }
-  .btn-next { width: 100% !important; min-height: 46px !important; font-size: 1rem !important; box-shadow: 0 6px 20px rgba(79,70,229,0.4) !important; }
+  .btn-next { width: 100% !important; min-height: 46px !important; font-size: 1rem !important; box-shadow: 0 6px 20px rgba(99,102,241,0.4) !important; }
   .quiz-explain-box { padding: 12px 14px !important; font-size: 0.84rem !important; margin: 8px 0 !important; }
 }
 /* ── DARK THEME OVERRIDES ──────────────────────────────── */
-[data-theme="dark"] html { background-color: #0f172a; }
-[data-theme="dark"] body { background: #0f172a; color: #f8fafc; }
+[data-theme="dark"] html { background-color: #0f1117; }
+[data-theme="dark"] body { background: #0f1117; background-image: radial-gradient(ellipse at 20% 0%, rgba(99,102,241,0.18) 0%, transparent 60%), radial-gradient(ellipse at 80% 100%, rgba(168,85,247,0.15) 0%, transparent 60%); color: #f8fafc; }
 [data-theme="dark"] h1, [data-theme="dark"] h2, [data-theme="dark"] h3, [data-theme="dark"] .en-term, [data-theme="dark"] .cq-practice-title, [data-theme="dark"] .quiz-q-text, [data-theme="dark"] .quiz-term-en, [data-theme="dark"] .cq-card-label, [data-theme="dark"] .cwt-term, [data-theme="dark"] .cluster-back-title, [data-theme="dark"] .poc-label, [data-theme="dark"] .cfw-term, [data-theme="dark"] .quiz-cloze-text { color: #f8fafc; }
+[data-theme="dark"] .quiz-listen-hint { color: #94a3b8; }
+[data-theme="dark"] .btn-listen-play { background: #1e3a5f; color: #93c5fd; }
+[data-theme="dark"] .btn-listen-play:hover { background: #1e40af; }
 [data-theme="dark"] .vi-meaning {
   background: linear-gradient(90deg, #38bdf8 0%, #818cf8 50%, #c084fc 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   filter: drop-shadow(0 2px 8px rgba(129, 140, 248, 0.25));
 }
-[data-theme="dark"] .setup-box, [data-theme="dark"] .history-box, [data-theme="dark"] .topic-popup-item { background: #1e293b; border-color: #334155; color: #f8fafc; }
+[data-theme="dark"] .setup-box, [data-theme="dark"] .history-box, [data-theme="dark"] .topic-popup-item { background: #1a1d2e; border-color: rgba(99,102,241,0.2); color: #f8fafc; }
 [data-theme="dark"] .setup-label span, [data-theme="dark"] .setup-box h2, [data-theme="dark"] .history-date { color: #f8fafc; }
 [data-theme="dark"] .setup-total, [data-theme="dark"] .history-word { background: #334155; color: #cbd5e1; }
 [data-theme="dark"] .setup-subtitle, [data-theme="dark"] .setup-section-title { color: #94a3b8; }
 [data-theme="dark"] .setup-divider { border-color: #334155; }
 [data-theme="dark"] select { background: #1e293b !important; color: #f8fafc !important; border: 1px solid #334155 !important; }
-[data-theme="dark"] .mode-bar { background: #1e293b; border-color: #334155; }
+[data-theme="dark"] .mode-bar { background: rgba(99,102,241,0.08); border-color: rgba(99,102,241,0.2); }
 [data-theme="dark"] .mode-tab { color: #94a3b8; }
 [data-theme="dark"] .mode-tab:hover:not(.active) { color: #f8fafc; background: rgba(255,255,255,0.1); }
-[data-theme="dark"] .mode-tab.active { background: #334155; color: #818cf8; border-color: #475569; }
-[data-theme="dark"] .btn-settings, [data-theme="dark"] .btn-filter-state, [data-theme="dark"] .btn-topic-trigger, [data-theme="dark"] .filter-group { background: #1e293b; border-color: #334155; color: #cbd5e1; }
+[data-theme="dark"] .mode-tab.active { background: #1a1d2e; color: #a5b4fc; border-color: rgba(99,102,241,0.3); }
+[data-theme="dark"] #settingsUserInfoBlock { background: #0f1117 !important; border-color: rgba(99,102,241,0.2) !important; }
+[data-theme="dark"] #settingsUserInfoBlock .settingsUserName, [data-theme="dark"] #settingsUserName { color: #f8fafc !important; }
+#btnHistoryFilterUnknown { background: #f8fafc; color: #64748b; border: 1.5px solid #e2e8f0; border-radius: 50px; }
+#btnHistoryFilterUnknown.active { background: linear-gradient(135deg, #6366f1, #8b5cf6); color: #fff; border-color: transparent; box-shadow: 0 4px 12px rgba(99,102,241,0.4); }
+[data-theme="dark"] #btnHistoryFilterUnknown { background: #1a1d2e; border-color: rgba(99,102,241,0.3); color: #94a3b8; }
+[data-theme="dark"] #btnHistoryFilterUnknown.active { background: linear-gradient(135deg, #6366f1, #8b5cf6); color: #fff; border-color: transparent; box-shadow: 0 4px 16px rgba(99,102,241,0.5); }
+[data-theme="dark"] .btn-settings, [data-theme="dark"] .btn-filter-state, [data-theme="dark"] .btn-topic-trigger, [data-theme="dark"] .filter-group { background: #1a1d2e; border-color: rgba(99,102,241,0.2); color: #cbd5e1; }
+[data-theme="dark"] .btn-filter-state.active { background: rgba(14,165,233,0.15); color: #38bdf8; border-color: #0ea5e9; box-shadow: 0 4px 12px rgba(14,165,233,0.2); }
+[data-theme="dark"] .topic-popup-item.active { background: rgba(16,185,129,0.12); color: #34d399; border-color: #10b981; }
 [data-theme="dark"] .btn-settings:hover, [data-theme="dark"] .btn-filter-state:hover, [data-theme="dark"] .btn-topic-trigger:hover { background: #334155; color: #f8fafc; border-color: #475569; }
 [data-theme="dark"] .filter-group button { color: #94a3b8; }
 [data-theme="dark"] .filter-group button:not(.active):hover { background: #334155; color: #f8fafc; }
 [data-theme="dark"] .filter-group button.active { background: #4f46e5; color: #fff; }
-[data-theme="dark"] .card-face, [data-theme="dark"] .quiz-q-box, [data-theme="dark"] .result-box, [data-theme="dark"] .cq-practice-section { background: #1e293b; border-color: #334155; color: #f8fafc; box-shadow: 0 12px 32px rgba(0,0,0,0.25); }
+[data-theme="dark"] .card-face, [data-theme="dark"] .quiz-q-box, [data-theme="dark"] .result-box, [data-theme="dark"] .cq-practice-section { background: #1a1d2e; border-color: rgba(99,102,241,0.2); color: #f8fafc; box-shadow: 0 4px 20px rgba(0,0,0,0.3), 0 0 0 1px rgba(99,102,241,0.1); }
 [data-theme="dark"] .btn-nav { background: #334155; border-color: #475569; color: #cbd5e1; }
 [data-theme="dark"] .btn-nav:hover:not(:disabled) { background: #475569; color: #f8fafc; }
 [data-theme="dark"] .en-example, [data-theme="dark"] .vi-pron, [data-theme="dark"] .pron-row, [data-theme="dark"] .flip-hint, [data-theme="dark"] .extra-label, [data-theme="dark"] .quiz-example-hint, [data-theme="dark"] .diff-label, [data-theme="dark"] .poc-desc, [data-theme="dark"] .cq-card-desc, [data-theme="dark"] .cfw-vi-front { color: #94a3b8; }
@@ -846,7 +922,7 @@ h1 { font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; ga
 [data-theme="dark"] .extra-pill, [data-theme="dark"] .cluster-front-word { background: #334155; border-color: #475569; color: #cbd5e1; }
 [data-theme="dark"] .syn-pill { background: #064e3b; border-color: #059669; color: #34d399; }
 [data-theme="dark"] .ant-pill { background: #881337; border-color: #be123c; color: #fca5a5; }
-[data-theme="dark"] .quiz-opt { background: #1e293b; border-color: #334155; color: #f8fafc; }
+[data-theme="dark"] .quiz-opt { background: #1a1d2e; border-color: rgba(99,102,241,0.2); color: #f8fafc; }
 [data-theme="dark"] .quiz-opt:hover:not(:disabled) { background: #334155; border-color: #8b5cf6; }
 [data-theme="dark"] .quiz-opt.correct { background: #064e3b; border-color: #10b981; color: #6ee7b7; }
 [data-theme="dark"] .quiz-opt.wrong { background: #881337; border-color: #f43f5e; color: #fca5a5; }
@@ -854,42 +930,43 @@ h1 { font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; ga
 [data-theme="dark"] .diff-btn { color: #94a3b8; }
 [data-theme="dark"] .diff-btn:hover { background: #334155; color: #f8fafc; }
 [data-theme="dark"] .diff-btn.active { background: #334155; color: #818cf8; border-color: #475569; }
-[data-theme="dark"] .timeline-word { background: #1e293b; border-color: #334155; color: #cbd5e1; }
+[data-theme="dark"] .timeline-word { background: #1a1d2e; border-color: rgba(99,102,241,0.2); color: #cbd5e1; }
 [data-theme="dark"] .timeline-word:hover { border-color: #8b5cf6; }
 [data-theme="dark"] .timeline-word.selected { background: #3b0764; border-color: #8b5cf6; color: #d8b4fe; }
 [data-theme="dark"] .timeline-word.correct-order { background: #064e3b; border-color: #10b981; color: #6ee7b7; }
 [data-theme="dark"] .timeline-word.wrong-order { background: #881337; border-color: #f43f5e; color: #fca5a5; }
 [data-theme="dark"] .quiz-explain-box, [data-theme="dark"] .cluster-tip-box { background: #064e3b; border-color: #059669; color: #6ee7b7; }
 
-[data-theme="dark"] .practice-option-card { background: #1e293b; border-color: #334155; }
+[data-theme="dark"] .practice-option-card { background: #1a1d2e; border-color: rgba(99,102,241,0.2); }
 [data-theme="dark"] .practice-option-card.card-flash:hover { border-color: #3b82f6; background: #1e3a8a; }
 [data-theme="dark"] .practice-option-card.card-cluster:hover { border-color: #8b5cf6; background: #4c1d95; }
 [data-theme="dark"] .btn-back-clean { background: #1e293b; border-color: #334155; color: #cbd5e1; }
 [data-theme="dark"] .btn-back-clean:hover { background: #334155; color: #f8fafc; }
-[data-theme="dark"] .cq-card-btn { background: #1e293b !important; border-color: #334155 !important; }
+[data-theme="dark"] .cq-card-btn { background: #1a1d2e !important; border-color: rgba(99,102,241,0.2) !important; }
 [data-theme="dark"] .cq-card-btn:hover { background: #334155 !important; }
 [data-theme="dark"] .cq-studied:hover { background: #064e3b !important; border-color: #10b981 !important; }
 [data-theme="dark"] .cq-unknown:hover { background: #78350f !important; border-color: #f59e0b !important; }
 [data-theme="dark"] .cq-all:hover { background: #4c1d95 !important; border-color: #8b5cf6 !important; }
 [data-theme="dark"] .cq-card-btn .cq-icon-box { background: #334155 !important; }
 [data-theme="dark"] .cq-card-btn .cq-card-count { background: #334155 !important; border-color: #475569 !important; color: #cbd5e1 !important; }
-[data-theme="dark"] .cluster-card, [data-theme="dark"] .cluster-word-entry { background: #1e293b; border-color: #334155; }
+[data-theme="dark"] .cluster-card, [data-theme="dark"] .cluster-word-entry { background: #1a1d2e; border-color: rgba(99,102,241,0.2); }
 [data-theme="dark"] .cluster-name { background: none; -webkit-text-fill-color: #f8fafc; color: #f8fafc; }
 [data-theme="dark"] .cluster-flip-hint { background: #334155; color: #cbd5e1; }
-[data-theme="dark"] .cluster-card-back, [data-theme="dark"] .cluster-back-header, [data-theme="dark"] .cluster-reg-pills, [data-theme="dark"] .cluster-action-btns { background: #1e293b; border-color: #334155; }
+[data-theme="dark"] .cluster-card-back, [data-theme="dark"] .cluster-back-header, [data-theme="dark"] .cluster-reg-pills, [data-theme="dark"] .cluster-action-btns { background: #1a1d2e; border-color: rgba(99,102,241,0.15); }
 [data-theme="dark"] .cluster-close-btn { background: #334155; color: #cbd5e1; }
 [data-theme="dark"] .cluster-close-btn:hover { background: #475569; color: #f8fafc; }
 [data-theme="dark"] .reg-pill { background: #334155; border-color: #475569; color: #cbd5e1; }
 [data-theme="dark"] .reg-pill:hover { background: #475569; color: #f8fafc; }
 [data-theme="dark"] .reg-pill.active { background: #4f46e5; color: #fff; border-color: #4f46e5; }
-[data-theme="dark"] .cluster-word-entry { border-color: #334155; }
-[data-theme="dark"] .cluster-word-entry:hover { border-color: #475569; }
+[data-theme="dark"] .cluster-word-entry { border-color: rgba(99,102,241,0.2); }
+[data-theme="dark"] .cluster-word-entry:hover { border-color: rgba(99,102,241,0.4); }
 [data-theme="dark"] .cwt-note { background: #334155; color: #cbd5e1; }
 [data-theme="dark"] .cwt-warn { background: #7f1d1d; color: #fca5a5; border-color: #991b1b; }
 [data-theme="dark"] .btn-cluster-fav-back { background: #334155; border-color: #475569; color: #64748b; }
 [data-theme="dark"] .result-box h2, [data-theme="dark"] .result-box p { color: #f8fafc; }
 [data-theme="dark"] .history-box h2 { color: #f8fafc !important; }
-[data-theme="dark"] .setup-ip-input { background: #0f172a; border-color: #334155; color: #f8fafc; }
+.setup-ip-input { background: #faf5ff; color: #1e293b; border-radius: 50px; border: 1.5px solid #e9d5ff; }
+[data-theme="dark"] .setup-ip-input { background: #1a1d2e; border-color: rgba(99,102,241,0.3); color: #f8fafc; }
 [data-theme="dark"] .btn-back-clean { background: #1e293b !important; border-color: #334155 !important; color: #cbd5e1 !important; }
 [data-theme="dark"] .btn-back-clean:hover { background: #334155 !important; color: #f8fafc !important; }
 [data-theme="dark"] .quiz-q-text div { color: #cbd5e1 !important; }
@@ -899,26 +976,26 @@ h1 { font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; ga
 [data-theme="dark"] .avatar-circle:hover { background:#475569 !important; }
 [data-theme="dark"] .avatar-name { color:#cbd5e1 !important; }
 [data-theme="dark"] #pinPrompt { color:#cbd5e1 !important; }
-[data-theme="dark"] #pinInput { background:#1e293b; color:#f8fafc; border-color:#334155; }
+[data-theme="dark"] #pinInput { background:#1a1d2e; color:#f8fafc; border-color:rgba(99,102,241,0.3); }
 /* PIN FORM STYLES */
 .pin-form-wrap { display: flex; flex-direction: column; align-items: center; animation: fadeIn 0.2s ease-out; }
 @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-.pin-input { width: 160px; text-align: center; padding: 14px 16px; border-radius: 12px; border: 2px solid #e2e8f0; background: #f8fafc; outline: none; font-size: 1.8rem; font-weight: 700; letter-spacing: 6px; color: #1e293b; transition: all 0.2s ease; margin-bottom: 24px; }
-.pin-input:focus { border-color: #4f46e5; box-shadow: 0 0 0 4px rgba(79,70,229,0.15); background: #ffffff; }
+.pin-input { width: 160px; text-align: center; padding: 14px 16px; border-radius: 20px; border: 2px solid #e9d5ff; background: #faf5ff; outline: none; font-size: 1.8rem; font-weight: 700; letter-spacing: 6px; color: #1e293b; transition: all 0.2s ease; margin-bottom: 24px; }
+.pin-input:focus { border-color: #8b5cf6; box-shadow: 0 0 0 4px rgba(139,92,246,0.12); background: #ffffff; }
 .pin-btn-group { display: flex; gap: 12px; width: 100%; justify-content: center; }
-.pin-btn-cancel { padding: 12px 20px; border-radius: 12px; background: #f1f5f9; color: #475569; border: none; font-weight: 600; font-size: 1rem; cursor: pointer; transition: background 0.2s; flex: 1; }
-.pin-btn-cancel:hover { background: #e2e8f0; }
-.pin-btn-submit { padding: 12px 20px; border-radius: 12px; background: #4f46e5; color: #fff; border: none; font-weight: 600; font-size: 1rem; cursor: pointer; transition: background 0.2s, transform 0.1s; flex: 1.5; box-shadow: 0 4px 12px rgba(79,70,229,0.25); }
-.pin-btn-submit:hover { background: #4338ca; }
+.pin-btn-cancel { padding: 12px 20px; border-radius: 50px; background: linear-gradient(135deg, #f0f0ff, #faf5ff); color: #6366f1; border: 1.5px solid #c4b5fd; font-weight: 600; font-size: 1rem; cursor: pointer; transition: background 0.2s; flex: 1; }
+.pin-btn-cancel:hover { background: linear-gradient(135deg, #e0e0ff, #f0ebff); }
+.pin-btn-submit { padding: 12px 20px; border-radius: 50px; background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #a855f7 100%); color: #fff; border: none; font-weight: 600; font-size: 1rem; cursor: pointer; transition: all 0.3s cubic-bezier(0.34,1.56,0.64,1); flex: 1.5; box-shadow: 0 4px 20px rgba(99,102,241,0.4); }
+.pin-btn-submit:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(99,102,241,0.5); }
 .pin-btn-submit:active { transform: scale(0.96); }
-[data-theme="dark"] .pin-input { background: #1e293b; color: #f8fafc; border-color: #334155; }
-[data-theme="dark"] .pin-input:focus { border-color: #6366f1; background: #0f172a; }
-[data-theme="dark"] .pin-btn-cancel { background: #334155; color: #cbd5e1; }
-[data-theme="dark"] .pin-btn-cancel:hover { background: #475569; }
-[data-theme="dark"] .btn-settings { background: #1e293b !important; color: #cbd5e1 !important; border-color: #334155 !important; }
+[data-theme="dark"] .pin-input { background: #1a1d2e; color: #f8fafc; border-color: rgba(99,102,241,0.3); }
+[data-theme="dark"] .pin-input:focus { border-color: #8b5cf6; background: #0f1117; }
+[data-theme="dark"] .pin-btn-cancel { background: rgba(99,102,241,0.1); color: #a5b4fc; border-color: rgba(99,102,241,0.3); }
+[data-theme="dark"] .pin-btn-cancel:hover { background: rgba(99,102,241,0.2); }
+[data-theme="dark"] .btn-settings { background: rgba(99,102,241,0.08) !important; color: #a5b4fc !important; border-color: rgba(99,102,241,0.25) !important; }
 [data-theme="dark"] #btnReset { background: #450a0a !important; color: #fca5a5 !important; border-color: #7f1d1d !important; }
-[data-theme="dark"] select#themeSelector { background: #1e293b !important; color: #f8fafc !important; border-color: #334155 !important; }
-[data-theme="dark"] #settingsUserInfoBlock { background: #1e293b !important; border-color: #334155 !important; }
+[data-theme="dark"] select#themeSelector { background: #1a1d2e !important; color: #f8fafc !important; border-color: rgba(99,102,241,0.25) !important; }
+[data-theme="dark"] #settingsUserInfoBlock { background: #1a1d2e !important; border-color: rgba(99,102,241,0.2) !important; }
 [data-theme="dark"] #settingsUserName { color: #f8fafc !important; }
 [data-theme="dark"] #settingsUserAvatar { background: #334155 !important; }
 </style>
@@ -932,7 +1009,7 @@ h1 { font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; ga
       const meta = document.getElementById('metaThemeColor');
       if (isDark) {
         document.documentElement.setAttribute('data-theme', 'dark');
-        if (meta) meta.setAttribute('content', '#0f172a');
+        if (meta) meta.setAttribute('content', '#0f1117');
       } else {
         document.documentElement.removeAttribute('data-theme');
         if (meta) meta.setAttribute('content', '#f8fafc');
@@ -958,13 +1035,14 @@ h1 { font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; ga
     });
   })();
 </script>
+  <script src="https://unpkg.com/lucide@0.525.0/dist/umd/lucide.min.js"></script>
 </head>
 <body>
 
 <!-- ── LOGIN OVERLAY ──────────────────────────────────────── -->
 <div id="loginOverlay" class="hidden" onclick="if(this.classList.contains('is-switching') && event.target === this) { this.classList.add('hidden'); }">
   <div class="setup-box" style="max-width: 400px; text-align: center; position:relative;">
-    <button id="btnCloseLogin" onclick="document.getElementById('loginOverlay').classList.add('hidden')" style="display:none; position:absolute; top:12px; right:16px; background:transparent; border:none; font-size:1.5rem; cursor:pointer; color:#64748b; line-height:1;">&times;</button>
+    <button id="btnCloseLogin" onclick="document.getElementById('loginOverlay').classList.add('hidden')" style="display:none; position:absolute; top:12px; right:16px; background:transparent; border:none; cursor:pointer; color:#64748b; line-height:1; display:flex; align-items:center;"><i data-lucide="x" width="20" height="20"></i></button>
     <h2 style="font-size:1.3rem; margin-bottom:20px;">Ai đang học vậy?</h2>
     <div id="userList" style="display:flex; justify-content:center; gap:20px; flex-wrap:wrap; margin-bottom: 20px;">
        <!-- Avatars injected here -->
@@ -983,68 +1061,59 @@ h1 { font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; ga
   </div>
 </div>
 
-<!-- ── HISTORY OVERLAY ────────────────────────────────── -->
 <!-- ── SYNC DIALOG ─────────────────────────────────────── -->
-<div id="syncDialog" class="hidden" style="position:fixed;inset:0;background:rgba(0,0,0,0.4);z-index:1000;display:flex;align-items:center;justify-content:center;padding:24px;">
-  <div class="setup-box" style="max-width:380px;">
-    <h2 style="margin:0 0 6px;">🔄 Đồng bộ với PC</h2>
-    <p class="setup-subtitle" style="margin-bottom:16px;">Nhập địa chỉ PC đang chạy server</p>
-    <input type="text" id="syncIpInput" class="setup-ip-input" style="width:100%;box-sizing:border-box;padding:12px 14px;border-radius:12px;border:1.5px solid #cbd5e1;font-size:0.95rem;font-family:inherit;outline:none;margin-bottom:16px;">
-    <div style="display:flex;gap:10px;">
-      <button id="btnSyncCancel" class="btn-settings" style="flex:1;padding:12px;border-radius:12px;">Huỷ</button>
-      <button id="btnSyncConfirm" class="btn-start" style="flex:2;padding:12px;margin:0;border-radius:12px;">Đồng bộ</button>
+<div id="syncDialog" class="hidden popup-overlay" style="z-index:1100;">
+  <div class="popup-dialog popup-dialog--sm">
+    <div class="popup-header">
+      <h2 class="popup-title"><i data-lucide="refresh-cw" width="17" height="17"></i> Đồng bộ với PC</h2>
+    </div>
+    <div class="popup-body">
+      <p style="font-size:0.85rem;color:#64748b;margin:0 0 14px;">Nhập địa chỉ PC đang chạy server</p>
+      <input type="text" id="syncIpInput" class="setup-ip-input" style="width:100%;box-sizing:border-box;padding:12px 14px;font-size:0.95rem;font-family:inherit;outline:none;transition:border-color 0.2s,box-shadow 0.2s;">
+    </div>
+    <div class="popup-footer">
+      <button id="btnSyncCancel" class="popup-btn popup-btn-ghost">Huỷ</button>
+      <button id="btnSyncConfirm" class="popup-btn popup-btn-primary" style="flex:2;"><i data-lucide="refresh-cw" width="15" height="15"></i> Đồng bộ</button>
     </div>
   </div>
 </div>
 
-<!-- ── TOPIC POPUP OVERLAY ────────────────────────────── -->
-<div id="topicPopupOverlay" class="hidden">
-  <div class="popup-box" style="padding: 24px; max-width: 400px; text-align: center;">
-    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 24px;">
-      <h2 style="margin:0; font-size:1.25rem;">🏷️ Select Level / Deck</h2>
-      <button id="btnCloseTopicPopup" style="background:transparent; border:none; font-size:1.5rem; cursor:pointer; color:#64748b; line-height:1;">&times;</button>
-    </div>
-    <div id="topicList" style="display:flex; flex-direction:column; gap:8px;"></div>
-  </div>
-</div>
 
-
-
-<div id="historyOverlay" class="hidden">
-  <div class="history-box" style="padding:0; overflow:hidden; display:flex; flex-direction:column;">
-    <div style="display:flex; justify-content:space-between; align-items:center; padding: 24px 24px 12px 24px;">
-      <h2 style="font-size:1.3rem; margin:0;">📅 Lịch sử học</h2>
-      <div style="display:flex; align-items:center; gap:10px;">
-        <button id="btnHistoryFilterUnknown" style="font-size:0.78rem; font-weight:600; padding:5px 10px; border-radius:8px; border:1.5px solid #e2e8f0; background:#f8fafc; color:#64748b; cursor:pointer;">Chưa thuộc</button>
-        <button onclick="document.getElementById('historyOverlay').classList.add('hidden')" style="background:transparent; border:none; font-size:1.5rem; cursor:pointer; color:#64748b; line-height:1;">&times;</button>
+<!-- ── HISTORY OVERLAY ────────────────────────────────── -->
+<div id="historyOverlay" class="hidden popup-overlay" style="z-index:1100;">
+  <div class="popup-dialog popup-dialog--lg">
+    <div class="popup-header">
+      <h2 class="popup-title"><i data-lucide="history" width="17" height="17"></i> Lịch sử học</h2>
+      <div style="display:flex;align-items:center;gap:8px;">
+        <button id="btnHistoryFilterUnknown" style="font-size:0.78rem;font-weight:600;padding:5px 14px;cursor:pointer;transition:all 0.2s cubic-bezier(0.34,1.56,0.64,1);">Chưa thuộc</button>
+        <button class="popup-close" onclick="document.getElementById('historyOverlay').classList.add('hidden')"><i data-lucide="x" width="18" height="18"></i></button>
       </div>
     </div>
-    <div id="historyContent" style="padding: 0 24px 24px 24px; overflow-y: auto; max-height: calc(80vh - 70px);"><p style="color:#9ca3af;font-size:0.85rem">Đang tải...</p></div>
+    <div id="historyContent" class="popup-body"><p style="color:#9ca3af;font-size:0.85rem">Đang tải...</p></div>
   </div>
 </div>
 
 <!-- ── SETTINGS OVERLAY ───────────────────────────────── -->
-<div id="settingsOverlay" class="hidden">
-  <div class="setup-box" style="padding: 24px; max-width: 480px;">
-    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 24px;">
-      <h2 style="margin:0; font-size:1.4rem;">⚙️ Cài đặt</h2>
-      <button onclick="document.getElementById('settingsOverlay').classList.add('hidden')" style="background:transparent; border:none; font-size:1.5rem; cursor:pointer; color:#64748b; line-height:1;">&times;</button>
+<div id="settingsOverlay" class="hidden popup-overlay">
+  <div class="popup-dialog popup-dialog--lg">
+    <div class="popup-header">
+      <h2 class="popup-title"><i data-lucide="settings" width="17" height="17"></i> Cài đặt</h2>
+      <button class="popup-close" onclick="document.getElementById('settingsOverlay').classList.add('hidden')"><i data-lucide="x" width="18" height="18"></i></button>
     </div>
+    <div class="popup-body">
+      <!-- Current User Info -->
+      <div id="settingsUserInfoBlock" style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;padding:14px 16px;background:#f8fafc;border-radius:16px;border:1px solid #e2e8f0;">
+        <div style="display:flex;align-items:center;gap:14px;">
+          <div id="settingsUserAvatar" class="avatar-circle" style="width:44px;height:44px;font-size:1.6rem;margin:0;border-radius:50%;background:#e2e8f0;display:flex;align-items:center;justify-content:center;">👤</div>
+          <div style="text-align:left;">
+            <div style="font-size:0.78rem;color:#64748b;font-weight:600;text-transform:uppercase;letter-spacing:0.04em;">Đang đăng nhập</div>
+            <div id="settingsUserName" style="font-size:1.1rem;font-weight:800;color:#1e293b;">...</div>
+          </div>
+        </div>
+        <button class="popup-btn popup-btn-ghost" onclick="showLoginOverlay(true);" style="flex:none;padding:0 18px;min-height:38px;font-size:0.88rem;">Đổi</button>
+      </div>
 
-    <!-- Current User Info -->
-    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 24px; padding: 16px; background: #f8fafc; border-radius: 12px; border: 1px solid #e2e8f0;" id="settingsUserInfoBlock">
-       <div style="display:flex; align-items:center; gap: 16px;">
-         <div id="settingsUserAvatar" class="avatar-circle" style="width:48px;height:48px;font-size:1.8rem;margin:0;border-radius:50%;background:#e2e8f0;display:flex;align-items:center;justify-content:center;">👤</div>
-         <div style="text-align: left;">
-           <div style="font-size:0.85rem; color:#64748b; font-weight:600;">Đang đăng nhập dưới tên</div>
-           <div id="settingsUserName" style="font-size:1.2rem; font-weight:700; color:#1e293b;">...</div>
-         </div>
-       </div>
-       <button class="btn-settings" onclick="showLoginOverlay(true);" style="background:#fff; color:#4f46e5; border:2px solid #4f46e5; font-weight:600; padding:8px 16px; border-radius:8px; cursor:pointer; transition:all 0.2s; white-space:nowrap;">Đổi</button>
-    </div>
-
-    <div class="settings-group">
-      <p class="setup-section-title" style="margin-bottom:12px; font-size:0.85rem;">HỌC TẬP</p>
+      <p class="setup-section-title" style="margin-bottom:10px;">HỌC TẬP</p>
       <div class="setup-row" style="margin-bottom:8px;">
         <div class="setup-label">
           <span>Từ mới / ngày</span>
@@ -1053,71 +1122,82 @@ h1 { font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; ga
         <input type="range" id="dailySlider" min="3" max="30" value="10">
       </div>
       <p class="setup-subtitle" style="margin-bottom:16px;">Tối đa <strong id="previewNew">10</strong> từ mới / ngày. Từ cũ tự động ôn lại.</p>
-    </div>
 
-    <hr class="setup-divider" style="margin: 20px 0;">
+      <hr class="setup-divider" style="margin:16px 0;">
 
-    <div class="settings-group">
-      <p class="setup-section-title" style="margin-bottom:12px; font-size:0.85rem;">GIAO DIỆN (THEME)</p>
-      <div class="setup-row" style="margin-bottom: 16px;">
-        <select id="themeSelector" style="width: 100%; padding: 12px; border-radius: 12px; border: 1px solid #cbd5e1; font-size: 0.95rem; font-family: inherit; font-weight: 500; cursor: pointer; outline: none; background: #f8fafc; color: #1e293b;">
-          <option value="auto">Tự động (Theo hệ thống)</option>
-          <option value="light">Sáng (Light)</option>
-          <option value="dark">Tối (Dark)</option>
-        </select>
+      <p class="setup-section-title" style="margin-bottom:10px;">GIAO DIỆN (THEME)</p>
+      <select id="themeSelector" style="width:100%;padding:12px;border-radius:12px;border:1px solid #cbd5e1;font-size:0.95rem;font-family:inherit;font-weight:500;cursor:pointer;outline:none;background:#f8fafc;color:#1e293b;margin-bottom:4px;">
+        <option value="auto">Tự động (Theo hệ thống)</option>
+        <option value="light">Sáng (Light)</option>
+        <option value="dark">Tối (Dark)</option>
+      </select>
+
+      <hr class="setup-divider" style="margin:16px 0;">
+
+      <p class="setup-section-title" style="margin-bottom:10px;">TÀI KHOẢN & DỮ LIỆU</p>
+      <div style="display:flex;flex-direction:column;gap:10px;">
+        <button class="popup-btn popup-btn-ghost" id="btnSyncPC" style="flex:none;width:100%;text-align:left;justify-content:flex-start;"><i data-lucide="refresh-cw" width="15" height="15"></i> Đồng bộ với PC</button>
+        <p id="syncStatusText" style="font-size:0.78rem;color:#94a3b8;margin:-4px 0 0 2px;"></p>
+        <button class="popup-btn popup-btn-ghost" id="btnOpenHistory" style="flex:none;width:100%;text-align:left;justify-content:flex-start;"><i data-lucide="history" width="15" height="15"></i> Lịch sử học</button>
+        <button id="btnReset" class="popup-btn popup-btn-danger" style="flex:none;width:100%;"><i data-lucide="alert-triangle" width="15" height="15" style="vertical-align:-2px"></i> Xóa toàn bộ tiến độ</button>
       </div>
     </div>
-
-    <hr class="setup-divider" style="margin: 20px 0;">
-
-    <div class="settings-group">
-      <p class="setup-section-title" style="margin-bottom:12px; font-size:0.85rem;">TÀI KHOẢN & DỮ LIỆU</p>
-      <div style="margin-bottom:12px;">
-        <button class="btn-settings" id="btnSyncPC" style="width:100%; background:#f1f5f9; color:#334155; border:1px solid #e2e8f0; font-weight:600; padding:12px; border-radius:12px; cursor:pointer;">🔄 Đồng bộ với PC</button>
-        <p id="syncStatusText" style="font-size:0.78rem; color:#94a3b8; margin:6px 0 0 2px;"></p>
-      </div>
-      <div style="margin-bottom: 12px;">
-        <button class="btn-settings" id="btnOpenHistory" style="width:100%; background:#f1f5f9; color:#334155; border:1px solid #e2e8f0; font-weight:600; padding:12px; border-radius:12px; cursor:pointer;">📅 Lịch sử</button>
-      </div>
-      <button id="btnReset" style="width:100%; background:#fef2f2; color:#ef4444; border:2px solid #fecaca; font-weight:600; padding:12px; border-radius:12px; cursor:pointer; transition:all 0.2s;">⚠️ Xóa toàn bộ tiến độ</button>
-    </div>
-
-    <div style="margin-top: 32px;">
-      <button class="btn-start" id="btnStart" style="width: 100%; margin:0; padding:14px; border-radius:12px; font-size:1.1rem; box-shadow:0 4px 12px rgba(79,70,229,0.25);">Lưu cài đặt</button>
+    <div class="popup-footer">
+      <button class="popup-btn popup-btn-primary" id="btnStart" style="font-size:1rem;"><i data-lucide="save" width="16" height="16"></i> Lưu cài đặt</button>
     </div>
   </div>
 </div>
 
 <!-- ── TOPIC POPUP OVERLAY ────────────────────────────── -->
-<div id="topicPopupOverlay" class="hidden">
-  <div class="setup-box" style="max-width:380px;">
-    <h2 style="font-size:1.2rem;margin-bottom:16px;">📁 Chọn chủ đề từ vựng</h2>
-    <div id="topicPopupList" style="display:flex;flex-direction:column;gap:8px;max-height:60vh;overflow-y:auto;margin-bottom:16px;"></div>
-    <button class="btn-start" style="background:#64748b;min-height:44px;" id="btnCloseTopicPopup">Đóng</button>
+<div id="topicPopupOverlay" class="hidden popup-overlay">
+  <div class="popup-dialog">
+    <div class="popup-header">
+      <h2 class="popup-title"><i data-lucide="folder-open" width="17" height="17"></i> <span id="topicPopupTitle">Chọn chủ đề</span></h2>
+      <button class="popup-close" id="btnCloseTopicPopup"><i data-lucide="x" width="18" height="18"></i></button>
+    </div>
+    <div class="popup-body" style="padding-top:12px;">
+      <div id="topicPopupList" style="display:flex;flex-direction:column;gap:8px;max-height:55vh;overflow-y:auto;"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ── CONFIRM DIALOG ─────────────────────────────────── -->
+<div id="confirmDialog" class="hidden popup-overlay">
+  <div class="popup-dialog popup-dialog--sm">
+    <div class="popup-header">
+      <h2 class="popup-title" id="confirmTitle">Xác nhận</h2>
+    </div>
+    <div class="popup-body">
+      <p id="confirmMessage" style="margin:0;color:#64748b;line-height:1.65;font-size:0.95rem;"></p>
+    </div>
+    <div class="popup-footer">
+      <button class="popup-btn popup-btn-ghost" id="confirmCancel">Huỷ</button>
+      <button class="popup-btn popup-btn-danger" id="confirmOk">Xóa</button>
+    </div>
   </div>
 </div>
 
 <!-- ── HEADER ─────────────────────────────────────────── -->
 <div class="header">
   <div class="header-top">
-    <h1><span>📚</span> <span class="title-gradient">Vocab Practice</span></h1>
+    <h1><i data-lucide="book-open" width="22" height="22" style="color:#6366f1;vertical-align:-3px"></i> <span class="title-gradient">Vocab Practice</span></h1>
     <div style="display:flex;gap:8px;align-items:center;">
       <div id="currentUserAvatar" class="avatar-circle" style="width:32px;height:32px;font-size:1.2rem;margin:0;border-radius:50%;background:#f1f5f9;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 4px rgba(0,0,0,0.05);cursor:pointer;" title="Đổi người dùng" onclick="showLoginOverlay(true);">👤</div>
-      <button class="btn-settings" id="btnOpenSettings">⚙️ Cài đặt</button>
+      <button class="btn-settings" id="btnOpenSettings"><i data-lucide="settings" width="18" height="18"></i> Cài đặt</button>
     </div>
   </div>
 
   <!-- Primary Navigation Mode Bar -->
   <div class="mode-bar" id="modeSel">
-    <button class="mode-tab" data-mode="cluster">📦 Clusters</button>
-    <button class="mode-tab active" data-mode="flash">🃏 Flashcard</button>
-    <button class="mode-tab" data-mode="quiz">✏️ Practice</button>
+    <button class="mode-tab" data-mode="cluster"><i data-lucide="layout-grid" width="18" height="18"></i> Clusters</button>
+    <button class="mode-tab active" data-mode="flash"><i data-lucide="layers" width="18" height="18"></i> Flashcard</button>
+    <button class="mode-tab" data-mode="quiz"><i data-lucide="pencil-line" width="18" height="18"></i> Practice</button>
   </div>
 
   <!-- Unified Controls / Filter / Back Navigation Bar -->
   <div class="controls-bar" id="controlsBar" style="display:flex; align-items:center; justify-content:center; gap:10px; flex-wrap:wrap; margin-bottom:14px; width:100%;">
     <button id="btnPracticeBack" class="btn-back-clean hidden" onclick="showPracticeHome()" style="margin:0; background:#ffffff; padding:7px 14px; border-radius:12px; border:1px solid #cbd5e1; font-weight:700; color:#334155; box-shadow:0 2px 4px rgba(0,0,0,0.03); display:flex; align-items:center; gap:4px; font-size:0.9rem; white-space:nowrap;">
-      <span style="font-size:1.1rem; line-height:1;">‹</span> Về chọn môn
+      <i data-lucide="chevron-left" width="16" height="16"></i> Về chọn môn
     </button>
     <div style="display:flex; gap:10px; flex-wrap:wrap; align-items:center; justify-content:center;">
       <div id="deckBar"></div>
@@ -1142,16 +1222,16 @@ h1 { font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; ga
   <div id="clusterArea">
     <div id="clusterCard" class="cluster-card"></div>
     <div class="cluster-nav">
-      <button class="btn-nav" id="btnClusterPrev" disabled>‹</button>
+      <button class="btn-nav" id="btnClusterPrev" disabled><i data-lucide="chevron-left" width="18" height="18"></i></button>
       <span class="cluster-nav-info" id="clusterNavInfo"></span>
-      <button class="btn-nav" id="btnClusterNext">›</button>
+      <button class="btn-nav" id="btnClusterNext"><i data-lucide="chevron-right" width="18" height="18"></i></button>
     </div>
   </div>
   <div id="clusterResult" class="result-box hidden">
-    <h2>🎉 Xem xong!</h2>
+    <h2><i data-lucide="trophy" width="20" height="20" style="color:#f59e0b;vertical-align:-3px"></i> Xem xong!</h2>
     <p id="clusterResultText"></p>
     <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
-      <button class="btn btn-restart" id="btnClusterRestart">🔀 Xem lại</button>
+      <button class="btn btn-restart" id="btnClusterRestart"><i data-lucide="shuffle" width="15" height="15"></i> Xem lại</button>
     </div>
   </div>
 </div>
@@ -1162,13 +1242,13 @@ h1 { font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; ga
   <div id="practiceHome" style="width:100%">
     <div class="cq-practice-section">
       <div class="cq-header" style="margin-top: 8px;">
-        <div class="cq-icon-glow">✨</div>
+        <div class="cq-icon-glow"><i data-lucide="sparkles" width="32" height="32"></i></div>
         <div class="cq-practice-title">Chế độ Trắc nghiệm</div>
         <div class="cq-practice-sub">Chọn môn luyện tập để kiểm tra và củng cố phản xạ từ vựng của bạn</div>
       </div>
       <div class="cq-practice-cards">
         <button class="cq-card-btn cq-all" data-practice="flash" style="background:linear-gradient(90deg, #ffffff 0%, #eff6ff 100%); border-color:#dbeafe;">
-          <div class="cq-icon-box" style="background:#dbeafe;"><span class="cq-card-icon">🃏</span></div>
+          <div class="cq-icon-box" style="background:#dbeafe;"><span class="cq-card-icon"><i data-lucide="layers" width="28" height="28"></i></span></div>
           <div class="cq-text-box">
             <span class="cq-card-label">Trắc nghiệm Từ vựng</span>
             <span class="cq-card-desc">Ôn tập từ đơn B1, B2, C1, chuyên ngành qua các câu hỏi nhanh</span>
@@ -1176,7 +1256,7 @@ h1 { font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; ga
           <span class="cq-card-count" style="background:#eff6ff; color:#1d4ed8; border:1px solid #bfdbfe;">Từ đơn</span>
         </button>
         <button class="cq-card-btn cq-all" data-practice="clusters" style="background:linear-gradient(90deg, #ffffff 0%, #faf5ff 100%); border-color:#e9d5ff;">
-          <div class="cq-icon-box" style="background:#f3e8ff;"><span class="cq-card-icon">📦</span></div>
+          <div class="cq-icon-box" style="background:#f3e8ff;"><span class="cq-card-icon"><i data-lucide="package" width="28" height="28"></i></span></div>
           <div class="cq-text-box">
             <span class="cq-card-label">Trắc nghiệm Cụm từ</span>
             <span class="cq-card-desc">Kiểm tra khả năng vận dụng cấu trúc và từ lóng trong giao tiếp</span>
@@ -1195,29 +1275,29 @@ h1 { font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; ga
     <div class="quiz-options" id="quizOpts"></div>
     <div class="quiz-explain-box hidden" id="quizExplain"></div>
     <div class="quiz-next-wrap">
-      <button class="btn btn-next hidden" id="btnNext">Câu tiếp →</button>
+      <button class="btn btn-next hidden" id="btnNext">Câu tiếp <i data-lucide="arrow-right" width="14" height="14"></i></button>
     </div>
   </div>
   <div id="quizResult" class="result-box hidden">
-    <h2>🎯 Kết quả</h2>
+    <h2><i data-lucide="target" width="20" height="20" style="vertical-align:-3px"></i> Kết quả</h2>
     <p id="quizResultText"></p>
     <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
-      <button class="btn btn-restart" onclick="startSession()">🔄 Làm lại</button>
-      <button class="btn btn-restart" style="background:#10b981" onclick="loadMoreCards()">📚 Học thêm</button>
-      <button class="btn btn-restart" style="background:#6b7280" onclick="showPracticeHome()">← Về chọn môn</button>
+      <button class="btn btn-restart" onclick="startSession()"><i data-lucide="refresh-cw" width="16" height="16"></i> Làm lại</button>
+      <button class="btn btn-restart" style="background:#10b981" onclick="loadMoreCards()"><i data-lucide="book-open" width="15" height="15"></i> Học thêm</button>
+      <button class="btn btn-restart" style="background:#6b7280" onclick="showPracticeHome()"><i data-lucide="arrow-left" width="15" height="15"></i> Về chọn môn</button>
     </div>
   </div>
   <!-- Cluster practice: chọn phạm vi -->
   <div id="clusterPracticePane" class="hidden" style="width:100%">
     <div class="cq-practice-section">
       <div class="cq-header">
-        <div class="cq-icon-glow">📦</div>
+        <div class="cq-icon-glow"><i data-lucide="package" width="32" height="32"></i></div>
         <div class="cq-practice-title">Luyện tập Cụm từ (Clusters)</div>
         <div class="cq-practice-sub">Chọn phạm vi câu hỏi trắc nghiệm để rèn luyện phản xạ và củng cố cách vận dụng từ trong giao tiếp</div>
       </div>
       <div class="cq-practice-cards">
         <button class="cq-card-btn cq-unknown" data-cqfilter="unknown">
-          <div class="cq-icon-box"><span class="cq-card-icon">⚡</span></div>
+          <div class="cq-icon-box"><span class="cq-card-icon"><i data-lucide="zap" width="28" height="28"></i></span></div>
           <div class="cq-text-box">
             <span class="cq-card-label">Cần ôn luyện</span>
             <span class="cq-card-desc">Tập trung củng cố những cụm từ đang học nhưng chưa thuộc</span>
@@ -1225,7 +1305,7 @@ h1 { font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; ga
           <span class="cq-card-count badge-amber" id="cqCountUnknown">–</span>
         </button>
         <button class="cq-card-btn cq-studied" data-cqfilter="known">
-          <div class="cq-icon-box"><span class="cq-card-icon">🎯</span></div>
+          <div class="cq-icon-box"><span class="cq-card-icon"><i data-lucide="target" width="28" height="28"></i></span></div>
           <div class="cq-text-box">
             <span class="cq-card-label">Đã thuộc</span>
             <span class="cq-card-desc">Kiểm tra lại các cấu trúc đã ghi nhớ để chống quên</span>
@@ -1233,7 +1313,7 @@ h1 { font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; ga
           <span class="cq-card-count badge-emerald" id="cqCountKnown">–</span>
         </button>
         <button class="cq-card-btn cq-all" data-cqfilter="all">
-          <div class="cq-icon-box"><span class="cq-card-icon">🌐</span></div>
+          <div class="cq-icon-box"><span class="cq-card-icon"><i data-lucide="globe" width="28" height="28"></i></span></div>
           <div class="cq-text-box">
             <span class="cq-card-label">Tất cả</span>
             <span class="cq-card-desc">Thử sức với toàn bộ từ điển cụm từ</span>
@@ -1256,15 +1336,15 @@ h1 { font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; ga
       </div>
       <div class="quiz-explain-box hidden" id="cqExplain"></div>
       <div class="quiz-next-wrap">
-        <button class="btn btn-next hidden" id="cqBtnNext">Câu tiếp →</button>
+        <button class="btn btn-next hidden" id="cqBtnNext">Câu tiếp <i data-lucide="arrow-right" width="14" height="14"></i></button>
       </div>
     </div>
     <div id="cqResult" class="result-box hidden">
-      <h2>🎯 Kết quả</h2>
+      <h2><i data-lucide="target" width="20" height="20" style="vertical-align:-3px"></i> Kết quả</h2>
       <p id="cqResultText"></p>
       <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
-        <button class="btn btn-restart" id="btnCqRetry">🔄 Làm lại</button>
-        <button class="btn btn-restart" style="background:#6b7280" id="btnExitClusterQuiz">← Quay lại</button>
+        <button class="btn btn-restart" id="btnCqRetry"><i data-lucide="refresh-cw" width="16" height="16"></i> Làm lại</button>
+        <button class="btn btn-restart" style="background:#6b7280" id="btnExitClusterQuiz"><i data-lucide="arrow-left" width="15" height="15"></i> Quay lại</button>
       </div>
     </div>
   </div>
@@ -1313,8 +1393,9 @@ async function showLoginOverlay(isSwitching = false) {
             div.style.cssText = 'cursor:pointer; display:flex; flex-direction:column; align-items:center; gap:8px; position:relative;';
             const avatarBg = isCurrent ? 'background:#dcfce7; border:3px solid #16a34a;' : 'background:#f1f5f9; border:3px solid transparent;';
             const nameColor = isCurrent ? 'color:#16a34a; font-weight:700;' : 'color:#475569; font-weight:600;';
-            const checkIcon = isCurrent ? '<div style="position:absolute; top:-5px; right:-5px; background:#16a34a; color:#fff; border-radius:50%; width:24px; height:24px; display:flex; align-items:center; justify-content:center; font-size:14px; box-shadow:0 2px 4px rgba(0,0,0,0.2);">✓</div>' : '';
+            const checkIcon = isCurrent ? '<div style="position:absolute; top:-5px; right:-5px; background:#16a34a; color:#fff; border-radius:50%; width:24px; height:24px; display:flex; align-items:center; justify-content:center; box-shadow:0 2px 4px rgba(0,0,0,0.2);"><i data-lucide="check" width="14" height="14"></i></div>' : '';
             div.innerHTML = `<div class="avatar-circle" style="font-size:3rem; width:80px; height:80px; display:flex; align-items:center; justify-content:center; border-radius:50%; transition:all 0.2s; ${avatarBg}">${u.avatar}</div>${checkIcon}<span class="avatar-name" style="${nameColor}">${u.name}</span>`;
+            if (checkIcon) lucide.createIcons({ nodes: [div] });
             if (isCurrent) {
                 div.onclick = () => {
                     document.getElementById('loginOverlay').classList.add('hidden');
@@ -1359,7 +1440,7 @@ async function submitLogin() {
         document.getElementById('settingsOverlay').classList.add('hidden');
         loadCards();
     } else {
-        alert('Mã PIN không đúng!');
+        showToast('Mã PIN không đúng!', 'err');
         document.getElementById('pinInput').value = '';
     }
 }
@@ -1455,15 +1536,15 @@ function renderHistoryContent() {
     const label = day.date === today ? 'Hôm nay' :
       new Date(day.date + 'T00:00:00').toLocaleDateString('vi-VN', { day: '2-digit', month: '2-digit', year: 'numeric' });
     return `<div class="history-day">
-      <div class="history-date">📆 ${label}<em>${words.length} từ</em></div>
+      <div class="history-date"><i data-lucide="calendar" width="13" height="13" style="vertical-align:-2px"></i> ${label}<em>${words.length} từ</em></div>
       <div class="history-words">${words.map(w => `<span class="history-word">${w}</span>`).join('')}</div>
     </div>`;
   }).filter(Boolean).join('');
   el.innerHTML = days || '<p style="color:#9ca3af;font-size:0.85rem">Không có từ nào phù hợp.</p>';
+  if (days) lucide.createIcons({ nodes: [el] });
 }
 
 document.getElementById('btnOpenHistory').addEventListener('click', async () => {
-  document.getElementById('settingsOverlay').classList.add('hidden');
   document.getElementById('historyOverlay').classList.remove('hidden');
   const el = document.getElementById('historyContent');
   el.innerHTML = '<p style="color:#9ca3af;font-size:0.85rem">Đang tải...</p>';
@@ -1480,9 +1561,7 @@ document.getElementById('btnOpenHistory').addEventListener('click', async () => 
 
 document.getElementById('btnHistoryFilterUnknown').addEventListener('click', function() {
   _historyFilterUnknown = !_historyFilterUnknown;
-  this.style.background = _historyFilterUnknown ? '#4f46e5' : '#f8fafc';
-  this.style.color = _historyFilterUnknown ? '#fff' : '#64748b';
-  this.style.borderColor = _historyFilterUnknown ? '#4f46e5' : '#e2e8f0';
+  this.classList.toggle('active', _historyFilterUnknown);
   if (_historyData.length) renderHistoryContent();
 });
 
@@ -1500,14 +1579,35 @@ document.getElementById('topicPopupOverlay').addEventListener('click', e => {
   if (e.target === e.currentTarget) e.currentTarget.classList.add('hidden');
 });
 
-document.getElementById('btnReset').addEventListener('click', async () => {
+// ── CONFIRM DIALOG ───────────────────────────────────────────────────────────
+function showConfirm(title, message, onConfirm, { okLabel = 'Xác nhận', okClass = 'popup-btn-danger', cancelLabel = 'Huỷ' } = {}) {
+  const dialog = document.getElementById('confirmDialog');
+  document.getElementById('confirmTitle').textContent = title;
+  document.getElementById('confirmMessage').innerHTML = message;
+  const okBtn = document.getElementById('confirmOk');
+  okBtn.textContent = okLabel;
+  okBtn.className = `popup-btn ${okClass}`;
+  document.getElementById('confirmCancel').textContent = cancelLabel;
+  dialog.classList.remove('hidden');
+  okBtn.addEventListener('click', () => { dialog.classList.add('hidden'); onConfirm(); }, { once: true });
+  document.getElementById('confirmCancel').addEventListener('click', () => dialog.classList.add('hidden'), { once: true });
+  dialog.addEventListener('click', e => { if (e.target === e.currentTarget) dialog.classList.add('hidden'); }, { once: true });
+}
+
+document.getElementById('btnReset').addEventListener('click', () => {
   const userName = document.getElementById('settingsUserName').textContent || 'bạn';
-  if (!confirm(`Xóa toàn bộ tiến độ của ${userName} (fav + known + lịch sử học)?\nHành động này không thể hoàn tác.`)) return;
-  await fetch('/api/reset', { method: 'POST' });
-  localStorage.removeItem('vocabDailyNew');
-  dailyNew = 10;
-  document.getElementById('settingsOverlay').classList.add('hidden');
-  await loadCards();
+  showConfirm(
+    'Xóa tiến độ',
+    `Xóa toàn bộ tiến độ của <strong>${userName}</strong> (fav, known, lịch sử học)?<br><br>Hành động này <strong>không thể hoàn tác</strong>.`,
+    async () => {
+      await fetch('/api/reset', { method: 'POST' });
+      localStorage.removeItem('vocabDailyNew');
+      dailyNew = 10;
+      document.getElementById('settingsOverlay').classList.add('hidden');
+      await loadCards();
+    },
+    { okLabel: 'Xóa tất cả', cancelLabel: 'Huỷ' }
+  );
 });
 
 // ── LOAD DATA ────────────────────────────────────────────────────────────────
@@ -1526,9 +1626,9 @@ async function updateCurrentUserUI() {
             const setNameEl = document.getElementById('settingsUserName');
             if(setNameEl) setNameEl.textContent = user.name;
             const btnReset = document.getElementById('btnReset');
-            if(btnReset) btnReset.innerHTML = `⚠️ Xóa tiến độ của ${user.name}`;
+            if(btnReset) { btnReset.innerHTML = `<i data-lucide="alert-triangle" width="15" height="15" style="vertical-align:-2px"></i> Xóa tiến độ của ${user.name}`; lucide.createIcons({ nodes: [btnReset] }); }
             const btnSyncPC = document.getElementById('btnSyncPC');
-            if(btnSyncPC) btnSyncPC.innerHTML = `🔄 Đồng bộ (${user.name})`;
+            if(btnSyncPC) { btnSyncPC.innerHTML = `<i data-lucide="refresh-cw" width="15" height="15"></i> Đồng bộ (${user.name})`; lucide.createIcons({ nodes: [btnSyncPC] }); }
         }
     } catch(e){}
 }
@@ -1584,8 +1684,9 @@ async function renderQuickStats() {
   // Only set if currently on flash tab (avoid showing on other tabs after switch)
   if (mode === 'flash') bar.style.display = 'flex';
   bar.innerHTML =
-    `<span id="statKnown">📚 Đã thuộc: <strong style="color:#10b981">${knownN}</strong> / ${totalN}</span>` +
-    (streak > 0 ? `<span>🔥 Streak: <strong style="color:#f59e0b">${streak} ngày</strong></span>` : '');
+    `<span id="statKnown"><i data-lucide="book-open" width="13" height="13" style="vertical-align:-2px"></i> Đã thuộc: <strong style="color:#10b981">${knownN}</strong> / ${totalN}</span>` +
+    (streak > 0 ? `<span><i data-lucide="flame" width="13" height="13" style="vertical-align:-2px;color:#f59e0b"></i> Streak: <strong style="color:#f59e0b">${streak} ngày</strong></span>` : '');
+  lucide.createIcons({ nodes: [bar] });
 }
 
 function updateKnownCount() {
@@ -1593,7 +1694,8 @@ function updateKnownCount() {
   if (!el || !allCards) return;
   const knownN = allCards.filter(c => c.known).length;
   const totalN = dictionaryCards ? dictionaryCards.length : allCards.length;
-  el.innerHTML = `📚 Đã thuộc: <strong style="color:#10b981">${knownN}</strong> / ${totalN}`;
+  el.innerHTML = `<i data-lucide="book-open" width="13" height="13" style="vertical-align:-2px"></i> Đã thuộc: <strong style="color:#10b981">${knownN}</strong> / ${totalN}`;
+  lucide.createIcons({ nodes: [el] });
 }
 
 async function _fetchAndRender(n) {
@@ -1610,7 +1712,8 @@ async function _fetchAndRender(n) {
     data = await res.json();
   } catch (e) {
     document.getElementById('flashSection').innerHTML =
-      '<div class="loading" style="color:#ef4444;">❌ Không tải được dữ liệu. Hãy kiểm tra kết nối và thử lại.</div>';
+      '<div class="loading" style="color:#ef4444;"><i data-lucide="x-circle" width="16" height="16" style="vertical-align:-3px"></i> Không tải được dữ liệu. Hãy kiểm tra kết nối và thử lại.</div>';
+    lucide.createIcons({ nodes: [document.getElementById('flashSection')] });
     return;
   }
   allCards      = data.cards;
@@ -1625,16 +1728,16 @@ async function _fetchAndRender(n) {
   document.getElementById('flashSection').innerHTML = `
     <div id="cardArea">
       <div class="card-row">
-        <button class="btn-nav" id="btnNavPrev">‹</button>
+        <button class="btn-nav" id="btnNavPrev"><i data-lucide="chevron-left" width="18" height="18"></i></button>
         <div class="card-col">
           <div class="card-wrap" id="cardWrap">
             <div class="card" id="card">
               <div class="card-face card-front">
-                <div class="fav-star hidden" id="favStar">★</div>
+                <div class="fav-star hidden" id="favStar"><i data-lucide="star" width="16" height="16"></i></div>
                 <div class="card-tags">
                   <div class="deck-tag" id="deckTag">B1</div>
                   <div class="topic-tag hidden" id="topicTag"></div>
-                  <div class="known-badge hidden" id="knownBadge">✅ Đã thuộc</div>
+                  <div class="known-badge hidden" id="knownBadge"><i data-lucide="circle-check" width="13" height="13" style="vertical-align:-2px"></i> Đã thuộc</div>
                 </div>
                 <div class="term-row">
                   <span class="en-term" id="enTerm"></span>
@@ -1651,28 +1754,29 @@ async function _fetchAndRender(n) {
             </div>
           </div>
           <div class="flash-btns hidden" id="flashBtns">
-            <button class="btn btn-unknown" id="btnUnknown">✗ Cần ôn</button>
-            <button class="btn-fav" id="btnFav">☆</button>
-            <button class="btn btn-know" id="btnKnow">✓ Nhớ rồi</button>
+            <button class="btn btn-unknown" id="btnUnknown"><i data-lucide="x" width="15" height="15"></i> Cần ôn</button>
+            <button class="btn-fav" id="btnFav"><i data-lucide="star" width="20" height="20"></i></button>
+            <button class="btn btn-know" id="btnKnow"><i data-lucide="check" width="15" height="15"></i> Nhớ rồi</button>
           </div>
         </div>
-        <button class="btn-nav" id="btnNavNext">›</button>
+        <button class="btn-nav" id="btnNavNext"><i data-lucide="chevron-right" width="18" height="18"></i></button>
       </div>
     </div>
     <div id="flashResult" class="result-box hidden">
-      <h2>🎉 Xong rồi!</h2>
+      <h2><i data-lucide="trophy" width="20" height="20" style="color:#f59e0b;vertical-align:-3px"></i> Xong rồi!</h2>
       <div class="result-stats">
         <span class="result-stat stat-know" id="resKnow"></span>
         <span class="result-stat stat-unknown" id="resUnknown"></span>
       </div>
       <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
-        <button class="btn btn-restart" onclick="startSession()">🔄 Học lại</button>
-        <button class="btn btn-restart" style="background:#10b981" onclick="loadMoreCards()">📚 Học thêm ${dailyNew} từ</button>
+        <button class="btn btn-restart" onclick="startSession(); lucide.createIcons();"><i data-lucide="refresh-cw" width="16" height="16"></i> Học lại</button>
+        <button class="btn btn-restart" style="background:#10b981" onclick="loadMoreCards()"><i data-lucide="book-open" width="15" height="15"></i> Học thêm ${dailyNew} từ</button>
       </div>
     </div>`;
 
   bindFlashEvents();
   startSession();
+  lucide.createIcons({ nodes: [document.getElementById('flashSection')] });
 }
 
 // ── HELPERS ──────────────────────────────────────────────────────────────────
@@ -1706,35 +1810,38 @@ function buildDeckBar() {
     const cfav = clusterData ? clusterData.filter(c => c.fav).length : 0;
     const call = clusterData ? clusterData.length : 0;
     items = [
-      ['all', `🌐 All Levels (${call})`, 'All'],
-      ['B1', `📗 B1 Clusters (${cb1})`, `B1 (${cb1})`],
-      ['B2', `📘 B2 Clusters (${cb2})`, `B2 (${cb2})`],
-      ['C1', `📙 C1 Clusters (${cc1})`, `C1 (${cc1})`],
-      ['fav', `★ Favorites (${cfav})`, `★ (${cfav})`]
+      ['all', `<i data-lucide="globe" width="13" height="13" style="vertical-align:-2px"></i> All Levels (${call})`, 'All'],
+      ['B1', `<i data-lucide="book" width="13" height="13" style="vertical-align:-2px;color:#16a34a"></i> B1 Clusters (${cb1})`, `B1 (${cb1})`],
+      ['B2', `<i data-lucide="book" width="13" height="13" style="vertical-align:-2px;color:#2563eb"></i> B2 Clusters (${cb2})`, `B2 (${cb2})`],
+      ['C1', `<i data-lucide="book" width="13" height="13" style="vertical-align:-2px;color:#9333ea"></i> C1 Clusters (${cc1})`, `C1 (${cc1})`],
+      ['fav', `<i data-lucide="star" width="13" height="13" style="color:#f59e0b;vertical-align:-2px"></i> Favorites (${cfav})`, `<i data-lucide="star" width="11" height="11" style="color:#f59e0b;vertical-align:-2px"></i> (${cfav})`]
     ];
   } else {
     const b1n = allCards ? allCards.filter(c => c.deck === 'B1').length : 0;
     const b2n = allCards ? allCards.filter(c => c.deck === 'B2').length : 0;
     const c1n = allCards ? allCards.filter(c => c.deck === 'C1' || c.deck === 'C1/C2').length : 0;
     items = [
-      ['all', '🌐 All Levels', 'All'],
-      ['B1', `📗 B1 Vocab (${b1n})`, `B1 (${b1n})`],
-      ['B2', `📘 B2 Vocab (${b2n})`, `B2 (${b2n})`],
-      ['C1', `📙 C1 Vocab (${c1n})`, `C1 (${c1n})`],
-      ['fav', '★ Favorites', '★ Fav']
+      ['all', '<i data-lucide="globe" width="13" height="13" style="vertical-align:-2px"></i> All Levels', 'All'],
+      ['B1', `<i data-lucide="book" width="13" height="13" style="vertical-align:-2px;color:#16a34a"></i> B1 Vocab (${b1n})`, `B1 (${b1n})`],
+      ['B2', `<i data-lucide="book" width="13" height="13" style="vertical-align:-2px;color:#2563eb"></i> B2 Vocab (${b2n})`, `B2 (${b2n})`],
+      ['C1', `<i data-lucide="book" width="13" height="13" style="vertical-align:-2px;color:#9333ea"></i> C1 Vocab (${c1n})`, `C1 (${c1n})`],
+      ['fav', '<i data-lucide="star" width="13" height="13" style="color:#f59e0b;vertical-align:-2px"></i> Favorites', '<i data-lucide="star" width="11" height="11" style="color:#f59e0b;vertical-align:-2px"></i> Fav']
     ];
   }
   const activeItem = items.find(([val]) => val === deck) || items[0];
 
   const trigger = document.createElement('button');
   trigger.className = 'btn-topic-trigger';
-  trigger.innerHTML = `<span>🏷️ Level: <strong style="color:#059669">${activeItem[2]}</strong></span> <span style="font-size:0.75rem;opacity:0.6;margin-left:4px">▼</span>`;
+  const deckColor = deck === 'fav' ? '#f59e0b' : '#059669';
+  trigger.innerHTML = `<span><i data-lucide="tag" width="12" height="12" style="vertical-align:-2px"></i> Level: <strong style="color:${deckColor}">${activeItem[2]}</strong></span> <i data-lucide="chevron-down" width="12" height="12" style="opacity:0.6;margin-left:4px"></i>`;
+
   trigger.onclick = () => {
-    document.querySelector('#topicPopupOverlay h2').textContent = isClusterCtx ? '🏷️ Select Cluster Level' : '🏷️ Select Level / Deck';
+    document.getElementById('topicPopupTitle').textContent = isClusterCtx ? 'Select Level' : 'Select Level';
     buildDeckPopupList(items);
     document.getElementById('topicPopupOverlay').classList.remove('hidden');
   };
   bar.appendChild(trigger);
+  lucide.createIcons({ nodes: [trigger] });
   buildStateBar();
 }
 
@@ -1744,7 +1851,7 @@ function buildDeckPopupList(items) {
   items.forEach(([val, label]) => {
     const btn = document.createElement('button');
     btn.className = 'topic-popup-item' + (deck === val ? ' active' : '');
-    btn.innerHTML = `<span>${label}</span> <span class="tpi-check">${deck === val ? '✓' : ''}</span>`;
+    btn.innerHTML = `<span>${label}</span> <span class="tpi-check">${deck === val ? '<i data-lucide="check" width="13" height="13"></i>' : ''}</span>`;
     btn.onclick = () => {
       if (deck !== val) {
         deck = val;
@@ -1766,6 +1873,7 @@ function buildDeckPopupList(items) {
     };
     list.appendChild(btn);
   });
+  lucide.createIcons({ nodes: [list] });
 }
 
 function buildTopicBar() {
@@ -1777,13 +1885,15 @@ function buildTopicBar() {
   const trigger = document.createElement('button');
   trigger.className = 'btn-topic-trigger';
   const currentLabel = topic === 'all' ? 'All' : topic;
-  trigger.innerHTML = `<span>📁 Topic: <strong style="color:#4f46e5">${currentLabel}</strong></span> <span style="font-size:0.75rem;opacity:0.6;margin-left:4px">▼</span>`;
+  trigger.innerHTML = `<span><i data-lucide="folder" width="12" height="12" style="vertical-align:-2px"></i> Topic: <strong style="color:#4f46e5">${currentLabel}</strong></span> <i data-lucide="chevron-down" width="12" height="12" style="opacity:0.6;margin-left:4px"></i>`;
+
   trigger.onclick = () => {
-    document.querySelector('#topicPopupOverlay h2').textContent = '📁 Select Topic';
+    document.getElementById('topicPopupTitle').textContent = 'Select Topic';
     buildTopicPopupList(topics);
     document.getElementById('topicPopupOverlay').classList.remove('hidden');
   };
   bar.appendChild(trigger);
+  lucide.createIcons({ nodes: [trigger] });
 }
 
 function buildTopicPopupList(topics) {
@@ -1792,7 +1902,7 @@ function buildTopicPopupList(topics) {
 
   const allBtn = document.createElement('button');
   allBtn.className = 'topic-popup-item' + (topic === 'all' ? ' active' : '');
-  allBtn.innerHTML = `<span>🌐 All Topics</span> <span class="tpi-check">${topic === 'all' ? '✓' : ''}</span>`;
+  allBtn.innerHTML = `<span><i data-lucide="globe" width="13" height="13" style="vertical-align:-2px"></i> All Topics</span> <span class="tpi-check">${topic === 'all' ? '<i data-lucide="check" width="13" height="13"></i>' : ''}</span>`;
   allBtn.onclick = () => {
     if (topic !== 'all') { topic = 'all'; buildTopicBar(); startSession(); }
     document.getElementById('topicPopupOverlay').classList.add('hidden');
@@ -1802,13 +1912,14 @@ function buildTopicPopupList(topics) {
   topics.forEach(t => {
     const btn = document.createElement('button');
     btn.className = 'topic-popup-item' + (topic === t ? ' active' : '');
-    btn.innerHTML = `<span>📂 ${t}</span> <span class="tpi-check">${topic === t ? '✓' : ''}</span>`;
+    btn.innerHTML = `<span><i data-lucide="folder-open" width="13" height="13" style="vertical-align:-2px"></i> ${t}</span> <span class="tpi-check">${topic === t ? '<i data-lucide="check" width="13" height="13"></i>' : ''}</span>`;
     btn.onclick = () => {
       if (topic !== t) { topic = t; buildTopicBar(); startSession(); }
       document.getElementById('topicPopupOverlay').classList.add('hidden');
     };
     list.appendChild(btn);
   });
+  lucide.createIcons({ nodes: [list] });
 }
 
 function buildStateBar() {
@@ -1818,22 +1929,24 @@ function buildStateBar() {
   if (mode === 'cluster' || practiceSubMode === 'cluster_pane' || practiceSubMode === 'cluster_quiz' || (mode === 'quiz' && practiceSubMode === 'home')) return;
 
   const items = [
-    ['all', '📖 All Statuses', 'All'],
-    ['unknown', '⚡ Review Needed', 'Review'],
-    ['new', '🆕 New Cards', 'New'],
-    ['known', '✅ Mastered', 'Mastered']
+    ['all', '<i data-lucide="book-open" width="13" height="13" style="vertical-align:-2px"></i> All Statuses', 'All'],
+    ['unknown', '<i data-lucide="zap" width="13" height="13" style="vertical-align:-2px"></i> Review Needed', 'Review'],
+    ['new', '<i data-lucide="plus-circle" width="13" height="13" style="vertical-align:-2px"></i> New Cards', 'New'],
+    ['known', '<i data-lucide="circle-check" width="13" height="13" style="vertical-align:-2px"></i> Mastered', 'Mastered']
   ];
   const activeItem = items.find(([val]) => val === cardFilter) || items[0];
 
   const trigger = document.createElement('button');
   trigger.className = 'btn-topic-trigger';
-  trigger.innerHTML = `<span>⚡ Status: <strong style="color:#0284c7">${activeItem[2]}</strong></span> <span style="font-size:0.75rem;opacity:0.6;margin-left:4px">▼</span>`;
+  trigger.innerHTML = `<span><i data-lucide="zap" width="12" height="12" style="vertical-align:-2px"></i> Status: <strong style="color:#0284c7">${activeItem[2]}</strong></span> <i data-lucide="chevron-down" width="12" height="12" style="opacity:0.6;margin-left:4px"></i>`;
+
   trigger.onclick = () => {
-    document.querySelector('#topicPopupOverlay h2').textContent = '⚡ Select Card Status';
+    document.getElementById('topicPopupTitle').textContent = 'Select Status';
     buildStatePopupList(items);
     document.getElementById('topicPopupOverlay').classList.remove('hidden');
   };
   bar.appendChild(trigger);
+  lucide.createIcons({ nodes: [trigger] });
 }
 
 function buildStatePopupList(items) {
@@ -1842,7 +1955,7 @@ function buildStatePopupList(items) {
   items.forEach(([val, label]) => {
     const btn = document.createElement('button');
     btn.className = 'topic-popup-item' + (cardFilter === val ? ' active' : '');
-    btn.innerHTML = `<span>${label}</span> <span class="tpi-check">${cardFilter === val ? '✓' : ''}</span>`;
+    btn.innerHTML = `<span>${label}</span> <span class="tpi-check">${cardFilter === val ? '<i data-lucide="check" width="13" height="13"></i>' : ''}</span>`;
     btn.onclick = () => {
       if (cardFilter !== val) {
         cardFilter = val;
@@ -1853,6 +1966,7 @@ function buildStatePopupList(items) {
     };
     list.appendChild(btn);
   });
+  lucide.createIcons({ nodes: [list] });
 }
 
 function buildDifficultyBar() {
@@ -1862,23 +1976,25 @@ function buildDifficultyBar() {
   if (mode !== 'quiz' || !practiceSubMode || practiceSubMode === 'home' || practiceSubMode === 'cluster_pane') return;
 
   const items = [
-    ['auto', '🎲 Auto', '#6366f1'],
-    ['easy', '🟢 Easy', '#16a34a'],
-    ['medium', '🟡 Medium', '#ca8a04'],
-    ['hard', '🔴 Hard', '#e11d48'],
-    ['hardcore', '🔥 Hardcore', '#9333ea']
+    ['auto', '<i data-lucide="shuffle" width="12" height="12" style="vertical-align:-2px"></i> Auto', '#6366f1'],
+    ['easy', '<i data-lucide="circle" width="10" height="10" style="vertical-align:-1px;fill:#16a34a;stroke:#16a34a"></i> Easy', '#16a34a'],
+    ['medium', '<i data-lucide="circle" width="10" height="10" style="vertical-align:-1px;fill:#ca8a04;stroke:#ca8a04"></i> Medium', '#ca8a04'],
+    ['hard', '<i data-lucide="circle" width="10" height="10" style="vertical-align:-1px;fill:#e11d48;stroke:#e11d48"></i> Hard', '#e11d48'],
+    ['hardcore', '<i data-lucide="flame" width="12" height="12" style="vertical-align:-2px"></i> Hardcore', '#9333ea']
   ];
   const activeItem = items.find(([val]) => val === currentDifficulty) || items[0];
 
   const trigger = document.createElement('button');
   trigger.className = 'btn-topic-trigger';
-  trigger.innerHTML = `<span>🎯 Difficulty: <strong style="color:${activeItem[2]}">${activeItem[1]}</strong></span> <span style="font-size:0.75rem;opacity:0.6;margin-left:4px">▼</span>`;
+  trigger.innerHTML = `<span><i data-lucide="target" width="12" height="12" style="vertical-align:-2px"></i> Difficulty: <strong style="color:${activeItem[2]}">${activeItem[1]}</strong></span> <i data-lucide="chevron-down" width="12" height="12" style="opacity:0.6;margin-left:4px"></i>`;
+
   trigger.onclick = () => {
-    document.querySelector('#topicPopupOverlay h2').textContent = '🎯 Select Difficulty';
+    document.getElementById('topicPopupTitle').textContent = 'Select Difficulty';
     buildDifficultyPopupList(items);
     document.getElementById('topicPopupOverlay').classList.remove('hidden');
   };
   bar.appendChild(trigger);
+  lucide.createIcons({ nodes: [trigger] });
 }
 
 function buildDifficultyPopupList(items) {
@@ -1887,7 +2003,7 @@ function buildDifficultyPopupList(items) {
   items.forEach(([val, label, color]) => {
     const btn = document.createElement('button');
     btn.className = 'topic-popup-item' + (currentDifficulty === val ? ' active' : '');
-    btn.innerHTML = `<span style="color:${color};font-weight:700">${label}</span> <span class="tpi-check" style="color:${color}">${currentDifficulty === val ? '✓' : ''}</span>`;
+    btn.innerHTML = `<span style="color:${color};font-weight:700">${label}</span> <span class="tpi-check" style="color:${color}">${currentDifficulty === val ? '<i data-lucide="check" width="13" height="13"></i>' : ''}</span>`;
     btn.onclick = () => {
       if (currentDifficulty !== val) {
         setDifficulty(val);
@@ -1896,6 +2012,7 @@ function buildDifficultyPopupList(items) {
     };
     list.appendChild(btn);
   });
+  lucide.createIcons({ nodes: [list] });
 }
 
 function shuffle(arr) {
@@ -1940,7 +2057,7 @@ function renderPronHTML(pron) {
   const { us, uk } = parsePron(pron);
   if (!us && !uk) return '';
   const row = (flag, ipa, accent) =>
-    `<div class="pron-row"><span class="pron-flag">${flag}</span><span class="pron-ipa">${ipa}</span><button class="btn-pron" data-accent="${accent}">🔊</button></div>`;
+    `<div class="pron-row"><span class="pron-flag">${flag}</span><span class="pron-ipa">${ipa}</span><button class="btn-pron" data-accent="${accent}"><i data-lucide="volume-2" width="14" height="14"></i></button></div>`;
   if (us === uk && us) return row('AmE / BrE', us, 'us');
   return (us ? row('AmE', us, 'us') : '') + (uk ? row('BrE', uk, 'uk') : '');
 }
@@ -1951,15 +2068,19 @@ function renderFlash() {
     document.getElementById('cardArea').classList.add('hidden');
     document.getElementById('resKnow').textContent    = '';
     document.getElementById('resUnknown').textContent = '';
-    document.getElementById('flashResult').querySelector('h2').textContent = '😕 Không có thẻ nào';
+    const h2empty = document.getElementById('flashResult').querySelector('h2');
+    h2empty.innerHTML = '<i data-lucide="frown" width="20" height="20" style="color:#9ca3af;vertical-align:-3px"></i> Không có thẻ nào';
+    lucide.createIcons({ nodes: [h2empty] });
     document.getElementById('flashResult').classList.remove('hidden');
     return;
   }
   if (flashIdx >= flashCards.length) {
     document.getElementById('cardArea').classList.add('hidden');
-    document.getElementById('resKnow').textContent    = `✓ Nhớ: ${knownCount()}`;
-    document.getElementById('resUnknown').textContent = `✗ Cần ôn: ${unknownCount()}`;
-    document.getElementById('flashResult').querySelector('h2').textContent = '🎉 Xong rồi!';
+    document.getElementById('resKnow').textContent    = `Nhớ: ${knownCount()}`;
+    document.getElementById('resUnknown').textContent = `Cần ôn: ${unknownCount()}`;
+    const h2done = document.getElementById('flashResult').querySelector('h2');
+    h2done.innerHTML = '<i data-lucide="trophy" width="20" height="20" style="color:#f59e0b;vertical-align:-3px"></i> Xong rồi!';
+    lucide.createIcons({ nodes: [h2done] });
     document.getElementById('flashResult').classList.remove('hidden');
     return;
   }
@@ -1971,7 +2092,7 @@ function renderFlash() {
 
   // Favorite star
   const star = document.getElementById('favStar');
-  star.textContent = c.fav ? '★' : '☆';
+  star.classList.toggle('active', c.fav);
   star.classList.toggle('hidden', false);
 
   const deckTagEl = document.getElementById('deckTag');
@@ -1979,10 +2100,15 @@ function renderFlash() {
   deckTagEl.className = 'deck-tag' + (c.deck ? ' ' + c.deck : '');
   document.getElementById('enTerm').textContent       = c.term;
   const pronHTML = renderPronHTML(c.pron);
-  document.getElementById('pronFront').innerHTML = pronHTML;
+  const pronFrontEl = document.getElementById('pronFront');
+  const pronBackEl  = document.getElementById('pronBack');
+  pronFrontEl.innerHTML = pronHTML;
   document.getElementById('enExample').textContent    = c.example;
   document.getElementById('viMeaning').textContent    = c.vi;
-  document.getElementById('pronBack').innerHTML = pronHTML;
+  pronBackEl.innerHTML = pronHTML;
+  if (pronHTML) {
+    lucide.createIcons({ nodes: [pronFrontEl, pronBackEl] });
+  }
   const posEl = document.getElementById('posBadge');
   if (c.pos && c.pos !== 'phrase' && c.pos !== 'phr.') {
     posEl.textContent = c.pos.startsWith('(') ? c.pos : `(${c.pos})`;
@@ -1994,16 +2120,17 @@ function renderFlash() {
   const extraEl = document.getElementById('cardExtra');
   let extraHtml = '';
   if (c.collocations && c.collocations.length) {
-    extraHtml += `<div class="extra-sec"><span class="extra-label">💡 Collocations:</span> <span class="extra-tags">${c.collocations.map(col => `<span class="extra-pill">${col}</span>`).join('')}</span></div>`;
+    extraHtml += `<div class="extra-sec"><span class="extra-label"><i data-lucide="lightbulb" width="13" height="13" style="vertical-align:-2px"></i> Collocations:</span> <span class="extra-tags">${c.collocations.map(col => `<span class="extra-pill">${col}</span>`).join('')}</span></div>`;
   }
   if (c.synonyms && c.synonyms.length) {
-    extraHtml += `<div class="extra-sec"><span class="extra-label">🔗 Đồng nghĩa:</span> <span class="extra-tags">${c.synonyms.map(s => `<span class="extra-pill syn-pill">${s}</span>`).join('')}</span></div>`;
+    extraHtml += `<div class="extra-sec"><span class="extra-label"><i data-lucide="link-2" width="13" height="13" style="vertical-align:-2px"></i> Đồng nghĩa:</span> <span class="extra-tags">${c.synonyms.map(s => `<span class="extra-pill syn-pill">${s}</span>`).join('')}</span></div>`;
   }
   if (c.antonyms && c.antonyms.length) {
-    extraHtml += `<div class="extra-sec"><span class="extra-label">↔ Trái nghĩa:</span> <span class="extra-tags">${c.antonyms.map(a => `<span class="extra-pill ant-pill">${a}</span>`).join('')}</span></div>`;
+    extraHtml += `<div class="extra-sec"><span class="extra-label"><i data-lucide="arrow-left-right" width="13" height="13" style="vertical-align:-2px"></i> Trái nghĩa:</span> <span class="extra-tags">${c.antonyms.map(a => `<span class="extra-pill ant-pill">${a}</span>`).join('')}</span></div>`;
   }
   if (extraHtml) {
     extraEl.innerHTML = extraHtml;
+    lucide.createIcons({ nodes: [extraEl] });
     extraEl.classList.remove('hidden');
   } else {
     extraEl.classList.add('hidden');
@@ -2013,13 +2140,12 @@ function renderFlash() {
   if (c.topic) { topicTag.textContent = c.topic; topicTag.classList.remove('hidden'); }
   else          { topicTag.classList.add('hidden'); }
   document.getElementById('knownBadge').classList.toggle('hidden', !c.known);
-  document.getElementById('btnKnow').textContent = c.known ? '✓ Nhớ rồi ✅' : '✓ Nhớ rồi';
+  document.getElementById('btnKnow').classList.toggle('is-known', c.known);
   document.getElementById('card').classList.remove('flipped');
   document.getElementById('flashBtns').classList.add('hidden');
 
   // Sync fav button
   const btn = document.getElementById('btnFav');
-  btn.textContent = c.fav ? '★' : '☆';
   btn.classList.toggle('active', c.fav);
 
   flipped = false;
@@ -2029,8 +2155,10 @@ function renderFlash() {
 }
 
 function updateFlashStats() {
-  document.getElementById('stats').innerHTML =
-    `Thẻ ${flashIdx + 1}/${flashCards.length} &nbsp;·&nbsp; <span class="badge-unk">✗ ${unknownCount()}</span> &nbsp;<span class="badge-know">✓ ${knownCount()}</span> &nbsp;·&nbsp; Học mới: ${newIntroduced}/${newServed}`;
+  const statsEl = document.getElementById('stats');
+  statsEl.innerHTML =
+    `Thẻ ${flashIdx + 1}/${flashCards.length} &nbsp;·&nbsp; <span class="badge-unk"><i data-lucide="x" width="11" height="11"></i> ${unknownCount()}</span> &nbsp;<span class="badge-know"><i data-lucide="check" width="11" height="11"></i> ${knownCount()}</span> &nbsp;·&nbsp; Học mới: ${newIntroduced}/${newServed}`;
+  lucide.createIcons({ nodes: [statsEl] });
 }
 
 function introduceCard(c) {
@@ -2098,9 +2226,8 @@ function bindFlashEvents() {
     e.stopPropagation();
     const c = flashCards[flashIdx];
     toggleFav(c);
-    document.getElementById('btnFav').textContent = c.fav ? '★' : '☆';
     document.getElementById('btnFav').classList.toggle('active', c.fav);
-    e.currentTarget.textContent = c.fav ? '★' : '☆';
+    e.currentTarget.classList.toggle('active', c.fav);
   });
   document.getElementById('btnKnow').addEventListener('click', () => markCard(true));
   document.getElementById('btnUnknown').addEventListener('click', () => markCard(false));
@@ -2113,9 +2240,8 @@ function bindFlashEvents() {
   document.getElementById('btnFav').addEventListener('click', () => {
     const c = flashCards[flashIdx];
     toggleFav(c);
-    document.getElementById('btnFav').textContent = c.fav ? '★' : '☆';
     document.getElementById('btnFav').classList.toggle('active', c.fav);
-    document.getElementById('favStar').textContent = c.fav ? '★' : '☆';
+    document.getElementById('favStar').classList.toggle('active', c.fav);
   });
 }
 
@@ -2240,7 +2366,9 @@ function renderQuiz() {
   if (quizCards.length === 0) {
     document.getElementById('quizArea').classList.add('hidden');
     document.getElementById('quizResultText').textContent = '';
-    document.getElementById('quizResult').querySelector('h2').textContent = '😕 Không có thẻ nào';
+    const h2qempty = document.getElementById('quizResult').querySelector('h2');
+    h2qempty.innerHTML = '<i data-lucide="frown" width="20" height="20" style="color:#9ca3af;vertical-align:-3px"></i> Không có thẻ nào';
+    lucide.createIcons({ nodes: [h2qempty] });
     document.getElementById('quizResult').classList.remove('hidden');
     return;
   }
@@ -2249,7 +2377,9 @@ function renderQuiz() {
     document.getElementById('quizArea').classList.add('hidden');
     document.getElementById('quizResultText').innerHTML =
       `Đúng <strong>${quizScore} / ${quizCards.length}</strong> (${pct}%)`;
-    document.getElementById('quizResult').querySelector('h2').textContent = '🎯 Kết quả';
+    const h2qresult = document.getElementById('quizResult').querySelector('h2');
+    h2qresult.innerHTML = '<i data-lucide="target" width="20" height="20" style="vertical-align:-3px"></i> Kết quả';
+    lucide.createIcons({ nodes: [h2qresult] });
     document.getElementById('quizResult').classList.remove('hidden');
     return;
   }
@@ -2314,10 +2444,10 @@ function renderQuiz() {
   document.getElementById('quizExplain').classList.add('hidden');
 
   const tierBadgeMap = {
-    'EASY': '<span class="badge-tier badge-easy" style="margin-left:4px">🟢 Easy</span>',
-    'MEDIUM': '<span class="badge-tier badge-medium" style="margin-left:4px">🟡 Medium</span>',
-    'HARD': '<span class="badge-tier badge-hard" style="margin-left:4px">🔴 Hard</span>',
-    'HARDCORE': '<span class="badge-tier badge-hardcore" style="margin-left:4px">🔥 Hardcore</span>'
+    'EASY': '<span class="badge-tier badge-easy" style="margin-left:4px"><i data-lucide="circle" width="8" height="8" style="fill:#16a34a;stroke:#16a34a;vertical-align:-1px"></i> Easy</span>',
+    'MEDIUM': '<span class="badge-tier badge-medium" style="margin-left:4px"><i data-lucide="circle" width="8" height="8" style="fill:#ca8a04;stroke:#ca8a04;vertical-align:-1px"></i> Medium</span>',
+    'HARD': '<span class="badge-tier badge-hard" style="margin-left:4px"><i data-lucide="circle" width="8" height="8" style="fill:#e11d48;stroke:#e11d48;vertical-align:-1px"></i> Hard</span>',
+    'HARDCORE': '<span class="badge-tier badge-hardcore" style="margin-left:4px"><i data-lucide="flame" width="12" height="12" style="vertical-align:-2px"></i> Hardcore</span>'
   };
   const diffBadgeHtml = tierBadgeMap[tier] || tierBadgeMap['MEDIUM'];
 
@@ -2383,7 +2513,7 @@ function renderQuiz() {
     });
   } else if (quizType === 'en_def') {
     labelEl.innerHTML = 'Định nghĩa Anh-Anh — Chọn từ chính xác:';
-    qEl.innerHTML = `<div class="quiz-en-def-text">📖 "${c.en_def}"</div>`;
+    qEl.innerHTML = `<div class="quiz-en-def-text"><i data-lucide="book-open" width="13" height="13" style="vertical-align:-2px"></i> "${c.en_def}"</div>`;
     const wrong = getSmartDistractors(c, 3, tier, quizType, c.term);
     opts = shuffle([c, ...wrong]);
     opts.forEach(opt => {
@@ -2440,7 +2570,8 @@ function renderQuiz() {
     });
   } else if (quizType === 'listening_basic') {
     labelEl.innerHTML = 'Nghe và chọn nghĩa tiếng Việt chính xác:';
-    qEl.innerHTML = `<button class="btn-speaker-huge" onclick="speak('${c.term.replace(/'/g, "\\'")}')">🔊</button>`;
+    qEl.innerHTML = `<button class="btn-speaker-huge" onclick="speak('${c.term.replace(/'/g, "\\'")}')"><i data-lucide="volume-2" width="28" height="28"></i></button>`;
+    lucide.createIcons({ nodes: [qEl] });
     const wrong = getSmartDistractors(c, 3, tier, 'vi_to_en', c.term);
     opts = shuffle([c, ...wrong]);
     opts.forEach(opt => {
@@ -2455,7 +2586,8 @@ function renderQuiz() {
     labelEl.innerHTML = 'Nghe câu ví dụ và chọn từ đúng điền vào chỗ trống:';
     const regex = new RegExp(c.term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi');
     const blanked = ex.replace(regex, '___');
-    qEl.innerHTML = `<button class="btn-speaker-huge" onclick="speak('${ex.replace(/'/g, "\\'")}')">🔊</button> <em class="quiz-cloze-text">"${blanked}"</em>`;
+    qEl.innerHTML = `<button class="btn-speaker-huge" onclick="speak('${ex.replace(/'/g, "\\'")}')"><i data-lucide="volume-2" width="28" height="28"></i></button> <em class="quiz-cloze-text">"${blanked}"</em>`;
+    lucide.createIcons({ nodes: [qEl] });
     const wrong = getSmartDistractors(c, 3, tier, 'cloze', c.term);
     opts = shuffle([c, ...wrong]);
     opts.forEach(opt => {
@@ -2468,38 +2600,36 @@ function renderQuiz() {
     });
   } else if (quizType === 'listening_minimal') {
     labelEl.innerHTML = `Nghe và chọn loa phát âm đúng của từ: <strong style="color:#6366f1">${c.vi.split('—')[0].trim()}</strong>`;
-    qEl.innerHTML = `<div style="font-size:0.95rem;color:#334155;margin-top:4px;">Lắng nghe thật kỹ để phân biệt các âm tương đồng!</div>`;
+    qEl.innerHTML = `<div class="quiz-listen-hint">Lắng nghe thật kỹ để phân biệt các âm tương đồng!</div>`;
     const distractors = c.phonetic_distractors || [];
     const wrong = distractors.slice(0, 3).map(w => ({ term: w, isAudioOpt: true }));
     const correctObj = { term: c.term, isAudioOpt: true, orig: c };
     opts = shuffle([correctObj, ...wrong]);
-    
+
     // Create a 2-column grid for the options
     const gridEl = document.createElement('div');
     gridEl.style.display = 'grid';
     gridEl.style.gridTemplateColumns = '1fr 1fr';
     gridEl.style.gap = '8px';
-    
+
     opts.forEach((opt, idx) => {
       const itemWrap = document.createElement('div');
       itemWrap.style.display = 'flex';
       itemWrap.style.flexDirection = 'column';
       itemWrap.style.gap = '4px';
-      
+
       const playBtn = document.createElement('button');
-      playBtn.className = 'btn';
-      playBtn.style.padding = '12px';
-      playBtn.style.background = '#e0e7ff';
-      playBtn.style.color = '#4338ca';
-      playBtn.innerHTML = '🔊 Nghe';
+      playBtn.className = 'btn-listen-play';
+      playBtn.innerHTML = '<i data-lucide="volume-2" width="14" height="14"></i> Nghe';
+      lucide.createIcons({ nodes: [playBtn] });
       playBtn.onclick = () => speak(opt.term);
-      
+
       const btn = document.createElement('button');
       btn.className = 'quiz-opt';
       btn.textContent = `Chọn Loa ${idx + 1}`;
       if (opt === correctObj) btn.dataset.correct = '1';
       btn.addEventListener('click', () => checkAnswer(btn));
-      
+
       itemWrap.appendChild(playBtn);
       itemWrap.appendChild(btn);
       gridEl.appendChild(itemWrap);
@@ -2521,8 +2651,10 @@ function renderQuiz() {
   }
 
   document.getElementById('btnNext').classList.add('hidden');
-  document.getElementById('stats').innerHTML =
+  const statsEl = document.getElementById('stats');
+  statsEl.innerHTML =
     `Câu ${quizIdx + 1}/${quizCards.length} &nbsp;·&nbsp; <span class="badge-know">Đúng: ${quizScore}</span> &nbsp;·&nbsp; <span class="badge-unk">Sai: ${quizWrong}</span> &nbsp;·&nbsp; ${diffBadgeHtml}`;
+  lucide.createIcons({ nodes: [statsEl, document.getElementById('quizQ')] });
 }
 
 function checkAnswer(btn) {
@@ -2543,15 +2675,16 @@ function checkAnswer(btn) {
   const explainEl = document.getElementById('quizExplain');
   const posDisplay = (c.pos && c.pos !== 'phrase' && c.pos !== 'phr.') ? ` <em>(${c.pos})</em>` : '';
   let exHtml = `<strong>${c.term}</strong>${posDisplay}: ${c.vi}` +
-    (c.en_def ? `<br><span style="color:#475569;font-size:0.84rem;">📖 ${c.en_def}</span>` : '') +
+    (c.en_def ? `<br><span style="color:#475569;font-size:0.84rem;"><i data-lucide="book-open" width="12" height="12" style="vertical-align:-2px"></i> ${c.en_def}</span>` : '') +
     (c.example ? `<br><em>"${c.example}"</em>` : '');
   if (c.collocations && c.collocations.length) {
-    exHtml += `<div style="margin-top:6px;"><span class="extra-label">💡 Collocations:</span> ${c.collocations.map(col => `<span class="extra-pill">${col}</span>`).join(' ')}</div>`;
+    exHtml += `<div style="margin-top:6px;"><span class="extra-label"><i data-lucide="lightbulb" width="13" height="13" style="vertical-align:-2px"></i> Collocations:</span> ${c.collocations.map(col => `<span class="extra-pill">${col}</span>`).join(' ')}</div>`;
   }
   if (c.synonyms && c.synonyms.length) {
-    exHtml += `<div style="margin-top:4px;"><span class="extra-label">🔗 Đồng nghĩa:</span> ${c.synonyms.map(s => `<span class="extra-pill syn-pill">${s}</span>`).join(' ')}</div>`;
+    exHtml += `<div style="margin-top:4px;"><span class="extra-label"><i data-lucide="link-2" width="13" height="13" style="vertical-align:-2px"></i> Đồng nghĩa:</span> ${c.synonyms.map(s => `<span class="extra-pill syn-pill">${s}</span>`).join(' ')}</div>`;
   }
   explainEl.innerHTML = exHtml;
+  lucide.createIcons({ nodes: [explainEl] });
   explainEl.classList.remove('hidden');
   document.getElementById('btnNext').classList.remove('hidden');
 }
@@ -2620,7 +2753,7 @@ function renderClusterQuiz() {
   if (!cqQuestions.length) {
     area.classList.add('hidden');
     document.getElementById('cqResultText').textContent =
-      cqFilter === 'unknown' ? '🎉 Bạn đã thuộc hết clusters rồi hoặc chưa học cluster nào!' :
+      cqFilter === 'unknown' ? 'Bạn đã thuộc hết clusters rồi hoặc chưa học cluster nào!' :
       cqFilter === 'known' ? 'Bạn chưa đánh dấu thuộc cluster nào. Hãy xem qua các clusters trước!' :
       'Không đủ dữ liệu để tạo câu hỏi.';
     result.classList.remove('hidden');
@@ -2643,15 +2776,17 @@ function renderClusterQuiz() {
   document.getElementById('cqOpts').innerHTML = '';
   document.getElementById('cqTimeline').classList.add('hidden');
   const diffMap = {
-    'auto': '<span class="badge-tier badge-auto" style="margin-left:4px">🎲 Auto</span>',
-    'easy': '<span class="badge-tier badge-easy" style="margin-left:4px">🟢 Easy</span>',
-    'medium': '<span class="badge-tier badge-medium" style="margin-left:4px">🟡 Medium</span>',
-    'hard': '<span class="badge-tier badge-hard" style="margin-left:4px">🔴 Hard</span>',
-    'hardcore': '<span class="badge-tier badge-hardcore" style="margin-left:4px">🔥 Hardcore</span>'
+    'auto': '<span class="badge-tier badge-auto" style="margin-left:4px"><i data-lucide="shuffle" width="11" height="11" style="vertical-align:-2px"></i> Auto</span>',
+    'easy': '<span class="badge-tier badge-easy" style="margin-left:4px"><i data-lucide="circle" width="8" height="8" style="fill:#16a34a;stroke:#16a34a;vertical-align:-1px"></i> Easy</span>',
+    'medium': '<span class="badge-tier badge-medium" style="margin-left:4px"><i data-lucide="circle" width="8" height="8" style="fill:#ca8a04;stroke:#ca8a04;vertical-align:-1px"></i> Medium</span>',
+    'hard': '<span class="badge-tier badge-hard" style="margin-left:4px"><i data-lucide="circle" width="8" height="8" style="fill:#e11d48;stroke:#e11d48;vertical-align:-1px"></i> Hard</span>',
+    'hardcore': '<span class="badge-tier badge-hardcore" style="margin-left:4px"><i data-lucide="flame" width="12" height="12" style="vertical-align:-2px"></i> Hardcore</span>'
   };
   const diffBadgeHtml = diffMap[currentDifficulty] || diffMap['auto'];
-  document.getElementById('stats').innerHTML =
+  const cqStatsEl = document.getElementById('stats');
+  cqStatsEl.innerHTML =
     `Cluster Quiz ${cqIdx + 1}/${cqQuestions.length} &nbsp;·&nbsp; <span class="badge-know">Đúng: ${cqScore}</span> &nbsp;·&nbsp; <span class="badge-unk">Sai: ${cqWrong}</span> &nbsp;·&nbsp; ${diffBadgeHtml}`;
+  lucide.createIcons({ nodes: [cqStatsEl] });
 
   const q = cqQuestions[cqIdx];
   if (q.type === 'situation')   renderSituationQuiz(q);
@@ -2661,7 +2796,9 @@ function renderClusterQuiz() {
 
 function renderSituationQuiz(q) {
   const { cluster: c, word: w } = q;
-  document.getElementById('cqLabel').textContent = `📍 Situation Match — ${c.name}`;
+  const cqLabelEl = document.getElementById('cqLabel');
+  cqLabelEl.innerHTML = `<i data-lucide="map-pin" width="13" height="13" style="vertical-align:-2px"></i> Situation Match — ${c.name}`;
+  lucide.createIcons({ nodes: [cqLabelEl] });
   document.getElementById('cqQ').innerHTML =
     `<em class="quiz-cloze-text">"${w.situation}"</em>` +
     `<div style="font-size:0.8rem;color:#9ca3af;margin-top:6px">Bạn nên dùng từ nào?</div>`;
@@ -2720,8 +2857,11 @@ function renderTimelineSort(q) {
   cqSortAnswer   = sorted.map(w => w.term);
   cqSortSelected = [];
 
-  document.getElementById('cqLabel').textContent = `⏱ Timeline Sort — ${c.name}`;
-  document.getElementById('cqQ').innerHTML = 'Sắp xếp từ <strong>Formal → Casual</strong> bằng cách click lần lượt:';
+  const cqLabelTl = document.getElementById('cqLabel');
+  cqLabelTl.innerHTML = `<i data-lucide="timer" width="13" height="13" style="vertical-align:-2px"></i> Timeline Sort — ${c.name}`;
+  lucide.createIcons({ nodes: [cqLabelTl] });
+  document.getElementById('cqQ').innerHTML = 'Sắp xếp từ <strong>Formal <i data-lucide="arrow-right" width="13" height="13" style="vertical-align:-2px"></i> Casual</strong> bằng cách click lần lượt:';
+  lucide.createIcons({ nodes: [document.getElementById('cqQ')] });
   document.getElementById('cqTimeline').classList.remove('hidden');
 
   const wordsEl = document.getElementById('cqTimelineWords');
@@ -2779,7 +2919,9 @@ function renderOddOneOut(q) {
     ? bPool[Math.floor(Math.random() * bPool.length)]
     : cB.words[Math.floor(Math.random() * cB.words.length)];
 
-  document.getElementById('cqLabel').textContent = '🔍 Odd One Out';
+  const cqLabelOdd = document.getElementById('cqLabel');
+  cqLabelOdd.innerHTML = '<i data-lucide="search" width="13" height="13" style="vertical-align:-2px"></i> Odd One Out';
+  lucide.createIcons({ nodes: [cqLabelOdd] });
   document.getElementById('cqQ').innerHTML =
     `Từ nào KHÔNG thuộc nhóm <strong>"${cA.name}"</strong>?`;
 
@@ -2969,10 +3111,10 @@ document.getElementById('quizSection').addEventListener('click', e => {
 
 // ── CLUSTER ──────────────────────────────────────────────────────────────────
 const REG_CONFIG = {
-  formal:  { icon: '🎩', label: 'Formal',  color: '#7c3aed', pct: 5  },
-  neutral: { icon: '⚖️', label: 'Neutral', color: '#3b82f6', pct: 37 },
-  casual:  { icon: '😊', label: 'Casual',  color: '#f59e0b', pct: 63 },
-  spoken:  { icon: '🗣️', label: 'Spoken',  color: '#ef4444', pct: 95 },
+  formal:  { icon: '<i data-lucide="briefcase" width="14" height="14" style="color:#7c3aed;vertical-align:-2px"></i>', label: 'Formal',  color: '#7c3aed', pct: 5  },
+  neutral: { icon: '<i data-lucide="scale" width="14" height="14" style="color:#3b82f6;vertical-align:-2px"></i>',     label: 'Neutral', color: '#3b82f6', pct: 37 },
+  casual:  { icon: '<i data-lucide="smile" width="14" height="14" style="color:#f59e0b;vertical-align:-2px"></i>',     label: 'Casual',  color: '#f59e0b', pct: 63 },
+  spoken:  { icon: '<i data-lucide="mic" width="14" height="14" style="color:#ef4444;vertical-align:-2px"></i>',       label: 'Spoken',  color: '#ef4444', pct: 95 },
 };
 const TYPE_LABELS = { synonym:'Synonym', casual:'Casual', thematic:'Thematic', collocation:'Collocation', filler:'Filler' };
 
@@ -2985,7 +3127,11 @@ function clusterState(c) {
   if (c.introduced_date) return 'learning';
   return 'new';
 }
-const STATE_ICON = { new:'👁️', learning:'🌱', known:'✅' };
+const STATE_ICON = {
+  new:      '<i data-lucide="eye" width="16" height="16" style="color:#64748b"></i>',
+  learning: '<i data-lucide="sprout" width="16" height="16" style="color:#f59e0b"></i>',
+  known:    '<i data-lucide="circle-check" width="16" height="16" style="color:#10b981"></i>'
+};
 
 async function ensureClusterData() {
   if (!_clusterPromise) {
@@ -3014,13 +3160,15 @@ function buildClusterTypeBar() {
 
   const trigger = document.createElement('button');
   trigger.className = 'btn-topic-trigger';
-  trigger.innerHTML = `<span>📁 Type: <strong style="color:#7c3aed">${activeItem[1]}</strong></span> <span style="font-size:0.75rem;opacity:0.6;margin-left:4px">▼</span>`;
+  trigger.innerHTML = `<span><i data-lucide="folder" width="12" height="12" style="vertical-align:-2px"></i> Type: <strong style="color:#7c3aed">${activeItem[1]}</strong></span> <i data-lucide="chevron-down" width="12" height="12" style="opacity:0.6;margin-left:4px"></i>`;
+
   trigger.onclick = () => {
-    document.querySelector('#topicPopupOverlay h2').textContent = '📁 Select Cluster Type';
+    document.getElementById('topicPopupTitle').textContent = 'Select Type';
     buildClusterPopupList(items);
     document.getElementById('topicPopupOverlay').classList.remove('hidden');
   };
   bar.appendChild(trigger);
+  lucide.createIcons({ nodes: [trigger] });
 }
 
 function buildClusterPopupList(items) {
@@ -3029,13 +3177,14 @@ function buildClusterPopupList(items) {
   items.forEach(([val, label]) => {
     const btn = document.createElement('button');
     btn.className = 'topic-popup-item' + (clusterTypeFilter === val ? ' active' : '');
-    btn.innerHTML = `<span>📂 ${label}</span> <span class="tpi-check">${clusterTypeFilter === val ? '✓' : ''}</span>`;
+    btn.innerHTML = `<span><i data-lucide="folder-open" width="13" height="13" style="vertical-align:-2px"></i> ${label}</span> <span class="tpi-check">${clusterTypeFilter === val ? '<i data-lucide="check" width="13" height="13"></i>' : ''}</span>`;
     btn.onclick = () => {
       if (clusterTypeFilter !== val) { clusterTypeFilter = val; buildClusterTypeBar(); startClusters(); }
       document.getElementById('topicPopupOverlay').classList.add('hidden');
     };
     list.appendChild(btn);
   });
+  lucide.createIcons({ nodes: [list] });
 }
 
 function getFilteredClusters() {
@@ -3076,7 +3225,9 @@ function renderCluster() {
   if (clusterCards.length === 0) {
     area.classList.add('hidden');
     document.getElementById('clusterResultText').textContent = 'Không có cluster nào phù hợp.';
-    document.getElementById('clusterResult').querySelector('h2').textContent = '😕 Trống';
+    const h2trg = document.getElementById('clusterResult').querySelector('h2');
+    h2trg.innerHTML = '<i data-lucide="frown" width="20" height="20" style="color:#9ca3af;vertical-align:-3px"></i> Trống';
+    lucide.createIcons({ nodes: [h2trg] });
     result.classList.remove('hidden');
     return;
   }
@@ -3084,9 +3235,12 @@ function renderCluster() {
   if (clusterIdx >= clusterCards.length) {
     area.classList.add('hidden');
     const knownN = clusterCards.filter(c => c.known).length;
-    document.getElementById('clusterResultText').textContent =
-      `Đã xem ${clusterCards.length} clusters · ✅ Thuộc: ${knownN}`;
-    document.getElementById('clusterResult').querySelector('h2').textContent = '🎉 Xem xong!';
+    const clusterResultText = document.getElementById('clusterResultText');
+    clusterResultText.innerHTML = `Đã xem ${clusterCards.length} clusters &nbsp;·&nbsp; <i data-lucide="circle-check" width="13" height="13" style="color:#10b981;vertical-align:-2px"></i> Thuộc: ${knownN}`;
+    lucide.createIcons({ nodes: [clusterResultText] });
+    const h2done2 = document.getElementById('clusterResult').querySelector('h2');
+    h2done2.innerHTML = '<i data-lucide="trophy" width="20" height="20" style="color:#f59e0b;vertical-align:-3px"></i> Xem xong!';
+    lucide.createIcons({ nodes: [h2done2] });
     result.classList.remove('hidden');
     return;
   }
@@ -3097,11 +3251,14 @@ function renderCluster() {
   const c = clusterCards[clusterIdx];
   clusterRegFilter = 'all';
   document.getElementById('clusterCard').innerHTML = buildFrontHTML(c);
+  lucide.createIcons({ nodes: [document.getElementById('clusterCard')] });
   document.getElementById('clusterNavInfo').textContent = `${clusterIdx + 1} / ${clusterCards.length}`;
   document.getElementById('btnClusterPrev').disabled = clusterIdx === 0;
   document.getElementById('btnClusterNext').disabled = false;
-  document.getElementById('stats').innerHTML =
-    `Cluster ${clusterIdx + 1}/${clusterCards.length} &nbsp;·&nbsp; <span class="badge-know">✅ Thuộc: ${clusterCards.filter(c => c.known).length}</span>`;
+  const clStatsEl = document.getElementById('stats');
+  clStatsEl.innerHTML =
+    `Cluster ${clusterIdx + 1}/${clusterCards.length} &nbsp;·&nbsp; <span class="badge-know"><i data-lucide="circle-check" width="11" height="11" style="vertical-align:-2px"></i> Thuộc: ${clusterCards.filter(c => c.known).length}</span>`;
+  lucide.createIcons({ nodes: [clStatsEl] });
 }
 
 function buildFrontHTML(c) {
@@ -3122,7 +3279,7 @@ function buildFrontHTML(c) {
   return `<div class="cluster-card-front" id="clusterFront">
     <div class="cluster-state-row">
       <span id="clusterStateIcon">${STATE_ICON[st]}</span>
-      <span class="cluster-fav-star" id="clusterFavBtn">${c.fav ? '★' : '☆'}</span>
+      <span class="cluster-fav-star${c.fav ? ' active' : ''}" id="clusterFavBtn"><i data-lucide="star" width="18" height="18"></i></span>
     </div>
     <div class="cluster-badges">
       <span class="cluster-type-tag">${TYPE_LABELS[c.type] || c.type}</span>
@@ -3131,7 +3288,7 @@ function buildFrontHTML(c) {
     <div class="cluster-name">${c.name}</div>
     ${c.vi_name ? `<div class="cluster-vi-name">${c.vi_name}</div>` : ''}
     <div class="cluster-front-words${c.words.length >= 4 ? ' two-col' : ''}">${wordRows}</div>
-    <div class="cluster-flip-hint">👆 Tap để xem chi tiết</div>
+    <div class="cluster-flip-hint"><i data-lucide="mouse-pointer-click" width="14" height="14" style="vertical-align:-2px"></i> Tap để xem chi tiết</div>
   </div>`;
 }
 
@@ -3142,7 +3299,9 @@ function openClusterBack(c) {
       method: 'POST', headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ key: c.id }),
     });
-    document.getElementById('clusterStateIcon').textContent = STATE_ICON[clusterState(c)];
+    const stIcon = document.getElementById('clusterStateIcon');
+    stIcon.innerHTML = STATE_ICON[clusterState(c)];
+    lucide.createIcons({ nodes: [stIcon] });
   }
   document.getElementById('clusterFront').classList.add('hidden');
   // Remove any existing back, re-render fresh
@@ -3153,6 +3312,7 @@ function openClusterBack(c) {
   back.className = 'cluster-card-back';
   back.innerHTML = buildBackHTML(c);
   document.getElementById('clusterCard').appendChild(back);
+  lucide.createIcons({ nodes: [back] });
 }
 
 function buildBackHTML(c) {
@@ -3179,10 +3339,10 @@ function buildBackHTML(c) {
       const pronText = pronHtml
         ? `<div class="cwt-pron">${w.pron.replace(/🇺🇸\s+🇬🇧\s+/, 'AmE/BrE ').replace(/🇺🇸\s+/, 'AmE ').replace(/🇬🇧\s+/, 'BrE ').trim()}</div>`
         : '';
-      const noteHtml = w.note ? `<div class="cwt-note">📌 ${w.note}</div>` : '';
+      const noteHtml = w.note ? `<div class="cwt-note"><i data-lucide="pin" width="13" height="13" style="vertical-align:-2px"></i> ${w.note}</div>` : '';
       const warnHtml = (w.wrong_usage || w.contrast)
-        ? `<div class="cwt-warn">⚠️ ${w.wrong_usage || 'Contrast: ' + w.contrast}</div>` : '';
-      const ttsBtn = `<button class="btn-pron" data-term="${w.term}" data-accent="us">🔊</button>`;
+        ? `<div class="cwt-warn"><i data-lucide="alert-triangle" width="13" height="13" style="vertical-align:-2px"></i> ${w.wrong_usage || 'Contrast: ' + w.contrast}</div>` : '';
+      const ttsBtn = `<button class="btn-pron" data-term="${w.term}" data-accent="us"><i data-lucide="volume-2" width="13" height="13"></i></button>`;
       wordsHtml += `<div class="cluster-word-entry">
         <div class="cwt-header">
           <span class="cwt-term">${w.term}</span>
@@ -3198,21 +3358,21 @@ function buildBackHTML(c) {
     wordsHtml += `</div>`;
   });
 
-  const tipHtml = c.tip ? `<div class="cluster-tip-box">💡 ${c.tip}</div>` : '';
+  const tipHtml = c.tip ? `<div class="cluster-tip-box"><i data-lucide="lightbulb" width="14" height="14" style="vertical-align:-2px"></i> ${c.tip}</div>` : '';
 
   return `
     <div class="cluster-back-header">
       <span class="cluster-back-title">${c.name}${c.vi_name ? ` <span class="cluster-back-vi">${c.vi_name}</span>` : ''}</span>
       <span class="cluster-word-count">${c.words.length} từ</span>
-      <button class="cluster-close-btn" id="clusterCloseBtn">← Về</button>
+      <button class="cluster-close-btn" id="clusterCloseBtn"><i data-lucide="arrow-left" width="14" height="14"></i> Về</button>
     </div>
     <div class="cluster-reg-pills" id="clusterRegPills">${pills}</div>
     <div class="cluster-words-list" id="clusterWordsList">${wordsHtml}</div>
     ${tipHtml}
     <div class="cluster-action-btns">
-      <button class="btn btn-cluster-learning" id="btnClusterLearning">🌱 Tiếp theo</button>
-      <button class="btn-cluster-fav-back${c.fav ? ' active' : ''}" id="btnClusterFavBack">${c.fav ? '★' : '☆'}</button>
-      <button class="btn btn-cluster-known${st === 'known' ? ' known' : ''}" id="btnClusterKnown">${st === 'known' ? '✅ Thuộc rồi ✓' : '✅ Thuộc rồi'}</button>
+      <button class="btn btn-cluster-learning" id="btnClusterLearning"><i data-lucide="sprout" width="15" height="15" style="vertical-align:-2px"></i> Tiếp theo</button>
+      <button class="btn-cluster-fav-back${c.fav ? ' active' : ''}" id="btnClusterFavBack"><i data-lucide="star" width="18" height="18"></i></button>
+      <button class="btn btn-cluster-known${st === 'known' ? ' known' : ''}" id="btnClusterKnown"><i data-lucide="circle-check" width="15" height="15" style="vertical-align:-2px"></i> Thuộc rồi</button>
     </div>`;
 }
 
@@ -3237,10 +3397,10 @@ document.getElementById('clusterSection').addEventListener('click', e => {
   }
 
   // Fav on front
-  if (e.target.id === 'clusterFavBtn') {
+  if (e.target.closest('#clusterFavBtn')) {
     c.fav = !c.fav;
     fetch('/api/fav', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ key: c.id, fav: c.fav }) });
-    e.target.textContent = c.fav ? '★' : '☆';
+    e.target.closest('#clusterFavBtn').classList.toggle('active', c.fav);
     return;
   }
 
@@ -3275,21 +3435,20 @@ document.getElementById('clusterSection').addEventListener('click', e => {
   if (e.target.id === 'btnClusterKnown') {
     c.known = !c.known;
     fetch('/api/known', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ key: c.id, known: c.known }) });
-    e.target.textContent = c.known ? '✅ Thuộc rồi ✓' : '✅ Thuộc rồi';
+    e.target.classList.toggle('known', c.known);
     e.target.classList.toggle('known', c.known);
     const si = document.getElementById('clusterStateIcon');
-    if (si) si.textContent = STATE_ICON[clusterState(c)];
+    if (si) { si.innerHTML = STATE_ICON[clusterState(c)]; lucide.createIcons({ nodes: [si] }); }
     return;
   }
 
   // Fav on back
-  if (e.target.id === 'btnClusterFavBack') {
+  if (e.target.closest('#btnClusterFavBack')) {
     c.fav = !c.fav;
     fetch('/api/fav', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ key: c.id, fav: c.fav }) });
-    e.target.textContent = c.fav ? '★' : '☆';
-    e.target.classList.toggle('active', c.fav);
+    e.target.closest('#btnClusterFavBack').classList.toggle('active', c.fav);
     const fs = document.getElementById('clusterFavBtn');
-    if (fs) fs.textContent = c.fav ? '★' : '☆';
+    if (fs) fs.classList.toggle('active', c.fav);
     return;
   }
 });
@@ -3400,6 +3559,7 @@ if (localStorage.getItem('vocabUserId') && localStorage.getItem('vocabUserPin'))
 } else {
     showLoginOverlay();
 }
+lucide.createIcons();
 </script>
 </body>
 </html>

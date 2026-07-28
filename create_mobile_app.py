@@ -4,7 +4,11 @@
 import re
 import json
 import hashlib
+import urllib.request
 from pathlib import Path
+
+LUCIDE_CDN = "https://unpkg.com/lucide@0.525.0/dist/umd/lucide.min.js"
+LUCIDE_LOCAL = "lucide.min.js"
 
 BASE_DIR = Path(__file__).parent.resolve()
 SRC_HTML = BASE_DIR / "app" / "templates" / "index.html"
@@ -12,7 +16,6 @@ MOBILE_DIR = BASE_DIR / "mobile"
 MOBILE_DIR.mkdir(exist_ok=True)
 OUT_HTML = MOBILE_DIR / "index.html"
 VOCAB_JS = MOBILE_DIR / "vocab.js"
-CLUSTERS_JS = MOBILE_DIR / "clusters.js"
 
 def _hash_pin(pin) -> str:
     """SHA-256 hash of PIN, first 16 hex chars — stored in vocab.js instead of plain PIN."""
@@ -245,6 +248,19 @@ const CLUSTERS_DATA_MAP = {json.dumps(clusters_data_map, ensure_ascii=False, ind
 """
     html = html.replace("</head>", mock_interceptor + "</head>")
 
+    # Download Lucide locally for offline use
+    lucide_path = MOBILE_DIR / LUCIDE_LOCAL
+    if not lucide_path.exists():
+        print(f"[DL]  Downloading Lucide icons from CDN...")
+        urllib.request.urlretrieve(LUCIDE_CDN, lucide_path)
+    print(f"[OK] Lucide icons available at {lucide_path}")
+
+    # Replace CDN src with local path in mobile HTML
+    html = html.replace(
+        f'<script src="{LUCIDE_CDN}"></script>',
+        f'<script src="./{LUCIDE_LOCAL}"></script>'
+    )
+
     with open(OUT_HTML, "w", encoding="utf-8") as f:
         f.write(html)
     print(f"[OK] Generated offline mobile app at {OUT_HTML}")
@@ -256,6 +272,7 @@ const CLUSTERS_DATA_MAP = {json.dumps(clusters_data_map, ensure_ascii=False, ind
   './',
   './index.html',
   './vocab.js',
+  './lucide.min.js',
   './manifest.json'
 ];
 

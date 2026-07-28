@@ -174,7 +174,7 @@ def start_day():
             session.append(c)
             new_n += 1
 
-    _POOL_FIELDS = {"key", "term", "vi", "pos", "deck", "topic", "en_def"}
+    _POOL_FIELDS = {"key", "term", "vi", "pos", "deck", "topic", "en_def", "phonetic_distractors"}
     pool = [{k: c[k] for k in _POOL_FIELDS if k in c} for c in all_cards]
     return jsonify({"cards": session, "all_cards": pool, "review": review_n,
                     "today_introduced": today_n, "new": new_n})
@@ -317,15 +317,14 @@ if __name__ == "__main__":
     init_db()
     ip = local_ip()
     print()
-    print("╔══════════════════════════════════════════╗")
-    print("║       📚  Vocab Practice — Server        ║")
-    print("╠══════════════════════════════════════════╣")
-    print(f"║  PC nay   : http://localhost:{PORT}          ║")
-    print(f"║  Thiet bi : http://{ip}:{PORT}       ║")
-    print("║  Nhan Ctrl+C de dung                     ║")
-    print("╚══════════════════════════════════════════╝")
+    print("=" * 44)
+    print("  Vocab Practice -- Server")
+    print("=" * 44)
+    print(f"  PC nay   : http://localhost:{PORT}")
+    print(f"  Thiet bi : http://{ip}:{PORT}")
+    print("  Nhan Ctrl+C de dung")
+    print("=" * 44)
     print()
 
-    from waitress import serve
-    serve(app, host="0.0.0.0", port=PORT, threads=4)
+    app.run(host="0.0.0.0", port=PORT, debug=False, use_reloader=False, threaded=True)
 

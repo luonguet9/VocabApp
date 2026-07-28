@@ -5,7 +5,7 @@ Web app học từ vựng và cụm từ tiếng Anh chuyên nghiệp cho IT pro
 Hỗ trợ cả chế độ Web PC (Flask Backend đa người dùng) và ứng dụng Offline HTML/Mobile App (PWA).
 
 ## Stack & Storage
-- **Backend**: Python + Flask + Waitress (port 5100)
+- **Backend**: Python + Flask dev server (port 5100) — `app.run(debug=False, use_reloader=False, threaded=True)`. Waitress đã bị bỏ vì hung khi chạy qua subprocess trên Windows.
 - **Frontend**: Single-page app, vanilla JS, HTML5, modern design
 - **Storage**:
   - `data/users.json`: Danh sách người dùng và PIN để xác thực.
@@ -32,7 +32,7 @@ ENG/
 ├── app/
 │   ├── main.py              # Flask server, tất cả API endpoints (Multi-User)
 │   └── templates/
-│       └── index.html       # Toàn bộ frontend (HTML + CSS + JS, ~3200 lines)
+│       └── index.html       # Toàn bộ frontend (HTML + CSS + JS, ~3800 lines)
 ```
 
 ## JSON Formats
@@ -86,6 +86,8 @@ Migration tự động khi server khởi động (ALTER TABLE nếu chưa có `u
 - **Toast**: `showToast(msg, type)` — hiện bottom toast, tự ẩn sau 3s.
 - **quickStatsBar**: hiện "Đã thuộc X/total + Streak N ngày" chỉ ở tab Flash Card.
 - **cardFilter**: `'all'` | `'unknown'` (chưa thuộc) | `'new'` | `'known'` — reset về `'all'` mỗi lần `loadCards()`.
+- **Lucide icons**: Dùng Lucide v0.525.0 (`<i data-lucide="name">`). **RULE**: Mỗi khi set `.innerHTML` có chứa `<i data-lucide>`, bắt buộc gọi `lucide.createIcons({ nodes: [el] })` ngay sau đó — nếu không icon sẽ không render (silent failure). Static HTML trong template tự render khi page load. Với `.textContent` phải đổi sang `.innerHTML` trước.
+- **Lucide trong mobile PWA**: `lucide.min.js` được bundle vào `mobile/` và load bởi `create_mobile_app.py`. Mọi Lucide pattern trong `index.html` cũng cần được patch vào `mobile/index.html`.
 
 ## Offline Mobile Build (PWA cho Github Pages)
 ```bash
