@@ -3,6 +3,7 @@ const ASSETS = [
   './',
   './index.html',
   './vocab.js',
+  './lucide.min.js',
   './manifest.json'
 ];
 

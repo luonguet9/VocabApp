@@ -57,3 +57,10 @@ output_part*.txt
 *.swo
 .DS_Store
 Thumbs.db
+augment_phonetics.py
+test.py
+test_phonetics.py
+sync.py
+*backup*.json
+output.txt
+fix_regex.py

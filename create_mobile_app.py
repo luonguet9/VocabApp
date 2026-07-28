@@ -5,6 +5,7 @@ import re
 import json
 import hashlib
 import urllib.request
+import ssl
 from pathlib import Path
 
 LUCIDE_CDN = "https://unpkg.com/lucide@0.525.0/dist/umd/lucide.min.js"
@@ -252,7 +253,11 @@ const CLUSTERS_DATA_MAP = {json.dumps(clusters_data_map, ensure_ascii=False, ind
     lucide_path = MOBILE_DIR / LUCIDE_LOCAL
     if not lucide_path.exists():
         print(f"[DL]  Downloading Lucide icons from CDN...")
-        urllib.request.urlretrieve(LUCIDE_CDN, lucide_path)
+        ctx = ssl.create_default_context()
+        ctx.check_hostname = False
+        ctx.verify_mode = ssl.CERT_NONE
+        with urllib.request.urlopen(LUCIDE_CDN, context=ctx) as response, open(lucide_path, 'wb') as out_file:
+            out_file.write(response.read())
     print(f"[OK] Lucide icons available at {lucide_path}")
 
     # Replace CDN src with local path in mobile HTML
