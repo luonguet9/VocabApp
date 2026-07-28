@@ -1602,7 +1602,16 @@ document.getElementById('btnReset').addEventListener('click', () => {
     'Xóa tiến độ',
     `Xóa toàn bộ tiến độ của <strong>${userName}</strong> (fav, known, lịch sử học)?<br><br>Hành động này <strong>không thể hoàn tác</strong>.`,
     async () => {
-      await fetch('/api/reset', { method: 'POST' }); localStorage.removeItem('vocab_progress'); localStorage.removeItem('last_sync_time');
+      await fetch('/api/reset', { method: 'POST' });
+      const savedIp = localStorage.getItem('last_pc_ip');
+      if (savedIp) {
+        const syncUrl = getSyncUrl(savedIp);
+        if (syncUrl) {
+          const resetUrl = syncUrl.replace('/api/sync', '/api/reset');
+          await fetch(resetUrl, { method: 'POST' }).catch(() => {});
+        }
+      }
+      localStorage.removeItem('vocab_progress'); localStorage.removeItem('last_sync_time');
       localStorage.removeItem('vocabDailyNew');
       dailyNew = 10;
       document.getElementById('settingsOverlay').classList.add('hidden');
