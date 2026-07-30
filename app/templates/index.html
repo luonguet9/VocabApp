@@ -17,7 +17,7 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
 /* ── BASE (mobile first) ────────────────────────────── */
-:root { color-scheme: light dark; }
+:root { color-scheme: light dark; --primary-color: #6366f1; --text-color: #0f172a; }
 html { background-color: #f8fafc; }
 body {
   font-family: 'Be Vietnam Pro', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
@@ -27,7 +27,7 @@ body {
   display: flex; flex-direction: column; align-items: center;
   padding: calc(12px + env(safe-area-inset-top, 0px)) calc(12px + env(safe-area-inset-right, 0px)) calc(40px + env(safe-area-inset-bottom, 0px)) calc(12px + env(safe-area-inset-left, 0px));
 }
-h1, h2, h3, h4, button, input, select, textarea, .cluster-name, .mode-tab, .title-gradient, .practice-title, .poc-label, .cq-practice-title {
+h1, h2, h3, h4, button, input, select, textarea, .cluster-name, .mode-tab, .title-gradient, .practice-title, .cq-practice-title {
   font-family: 'Be Vietnam Pro', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
 }
 
@@ -111,12 +111,6 @@ h1, h2, h3, h4, button, input, select, textarea, .cluster-name, .mode-tab, .titl
 [data-theme="dark"] #loginOverlay.is-switching {
   background: rgba(15, 23, 42, 0.75);
 }
-.history-box {
-  background: #fff; border-radius: 20px;
-  padding: 28px 24px; width: 100%; max-width: 480px;
-  max-height: 80vh; overflow-y: auto;
-  box-shadow: 0 8px 40px rgba(0,0,0,0.18);
-}
 .history-day { margin-bottom: 18px; }
 .history-date {
   font-size: 0.82rem; font-weight: 700; color: #374151;
@@ -131,9 +125,10 @@ h1, h2, h3, h4, button, input, select, textarea, .cluster-name, .mode-tab, .titl
   padding: 2px 8px; border-radius: 4px;
 }
 .setup-box {
-  background: #fff; border-radius: 20px;
+  background: #fff; border-radius: 28px;
+  border: 1px solid #ede9fe;
   padding: 28px 24px; width: 100%; max-width: 400px;
-  box-shadow: 0 8px 40px rgba(0,0,0,0.18);
+  box-shadow: 0 20px 60px rgba(79,70,229,0.15), 0 4px 16px rgba(0,0,0,0.06);
 }
 .setup-box h2 { font-size: 1.2rem; color: #1a1a2e; margin-bottom: 6px; }
 .setup-subtitle { font-size: 0.8rem; color: #9ca3af; margin-bottom: 24px; }
@@ -162,22 +157,6 @@ input[type=range]::-moz-range-thumb {
   border-radius: 50%; background: #4f46e5; cursor: pointer;
 }
 
-.setup-total {
-  font-size: 0.82rem; color: #6b7280; text-align: center;
-  margin-bottom: 20px; padding: 10px;
-  background: #f9fafb; border-radius: 10px;
-}
-.setup-total strong { color: #4f46e5; }
-
-.btn-start {
-  width: 100%; min-height: 52px;
-  background: #4f46e5; color: #fff;
-  border: none; border-radius: 12px;
-  font-size: 1rem; font-weight: 700; cursor: pointer;
-  transition: opacity 0.15s;
-}
-.btn-start:active { opacity: 0.8; }
-
 .setup-divider {
   border: none; border-top: 1px solid #e5e7eb;
   margin: 20px 0;
@@ -186,15 +165,6 @@ input[type=range]::-moz-range-thumb {
   font-size: 0.75rem; font-weight: 700; text-transform: uppercase;
   letter-spacing: 0.07em; color: #9ca3af; margin-bottom: 14px;
 }
-.btn-reset {
-  width: 100%; min-height: 40px;
-  background: none; color: #ef4444;
-  border: 1px solid #fca5a5; border-radius: 10px;
-  font-size: 0.85rem; cursor: pointer;
-  transition: background 0.15s;
-}
-.btn-reset:hover { background: #fff1f2; }
-
 /* ── HEADER ─────────────────────────────────────────── */
 .header { width: 100%; margin-bottom: 16px; }
 #flashSection { width: 100%; display: flex; flex-direction: column; align-items: center; }
@@ -246,30 +216,6 @@ h1 { font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; ga
   display: flex; align-items: center; justify-content: space-between;
   gap: 10px; flex-wrap: wrap; margin-bottom: 14px;
 }
-.filter-group {
-  display: flex; border-radius: 14px; overflow: hidden;
-  border: 1px solid #e2e8f0; background: #ffffff; flex-wrap: wrap;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.02); padding: 3px; gap: 3px;
-}
-.filter-group button {
-  min-height: 36px; padding: 0 14px; border-radius: 10px;
-  border: none; background: transparent; cursor: pointer;
-  font-size: 0.85rem; font-weight: 600; color: #64748b;
-  transition: all 0.2s cubic-bezier(0.16,1,0.3,1);
-}
-.filter-group button.active { background: #4f46e5; color: #fff; font-weight: 700; box-shadow: 0 2px 8px rgba(79,70,229,0.25); }
-.filter-group button:not(.active):hover { background: #f1f5f9; color: #1e293b; }
-
-.btn-filter-state {
-  min-height: 42px; padding: 0 16px;
-  border-radius: 14px; border: 1px solid #e2e8f0;
-  background: #ffffff; cursor: pointer; font-size: 0.85rem; font-weight: 600; color: #475569;
-  transition: all 0.2s cubic-bezier(0.16,1,0.3,1); display: inline-flex; align-items: center; gap: 6px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.02);
-}
-.btn-filter-state:hover { background: #f8fafc; border-color: #cbd5e1; color: #0f172a; transform: translateY(-1px); }
-.btn-filter-state.active { background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); color: #0284c7; border-color: #7dd3fc; font-weight: 700; box-shadow: 0 4px 12px rgba(14,165,233,0.15); }
-
 .known-badge { font-size: 0.68rem; font-weight: 600; background: #dcfce7; color: #15803d; padding: 2px 10px; border-radius: 20px; }
 
 
@@ -304,14 +250,6 @@ h1 { font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; ga
   box-shadow: 0 4px 12px rgba(22,197,94,0.12);
 }
 .tpi-check { font-size: 1.1rem; font-weight: 800; color: #16a34a; }
-.chip {
-  padding: 6px 16px; border-radius: 20px; border: 1px solid #e2e8f0;
-  background: #ffffff; font-size: 0.82rem; font-weight: 600; color: #64748b;
-  cursor: pointer; transition: all 0.2s cubic-bezier(0.16,1,0.3,1); white-space: nowrap;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.02);
-}
-.chip.active { background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%); color: #fff; border-color: #7c3aed; box-shadow: 0 4px 12px rgba(124,58,237,0.25); font-weight: 700; transform: translateY(-1px); }
-.chip:hover:not(.active) { background: #f8fafc; border-color: #cbd5e1; color: #0f172a; transform: translateY(-1px); }
 
 /* ── FLASHCARD ───────────────────────────────────────── */
 .card-row {
@@ -416,6 +354,8 @@ h1 { font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; ga
   border: 1px solid #d1d5db; background: #fff;
   font-size: 0.72rem; cursor: pointer; color: #374151;
   transition: background 0.15s; flex-shrink: 0;
+  min-width: 36px; min-height: 36px;
+  display: inline-flex; align-items: center; justify-content: center;
 }
 .btn-pron:hover { background: #f3f4f6; }
 .en-term    { font-size: 1.5rem; font-weight: 700; color: #111827; line-height: 1.4; }
@@ -493,6 +433,9 @@ h1 { font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; ga
 .quiz-example-hint { font-size: 0.82rem; color: #64748b; margin-top: 6px; font-style: italic; }
 .quiz-cloze-text { font-size: 0.97rem; color: #1e293b; line-height: 1.6; }
 .quiz-en-def-text { font-size: 0.95rem; color: #334155; line-height: 1.6; font-style: italic; background: #f8fafc; padding: 12px 16px; border-left: 4px solid #6366f1; border-radius: 8px; margin-top: 6px; }
+.quiz-hint-btn { display: block; margin: 8px auto 0; background: none; border: none; color: #8b5cf6; font-size: 0.82rem; font-weight: 600; cursor: pointer; padding: 10px 12px; min-height: 40px; border-radius: 6px; }
+.quiz-hint-btn:hover { background: #f3e8ff; }
+.quiz-hint-text { font-size: 0.88rem; color: #6d28d9; line-height: 1.5; background: #faf5ff; padding: 10px 14px; border-left: 4px solid #a78bfa; border-radius: 8px; margin-top: 8px; }
 .btn-speaker-huge { font-size: 2.8rem; background: none; border: none; cursor: pointer; padding: 8px 12px; line-height: 1; border-radius: 12px; transition: transform 0.15s; }
 .btn-speaker-huge:hover { transform: scale(1.15); }
 .quiz-listen-hint { font-size: 0.92rem; color: #64748b; margin-top: 4px; }
@@ -504,12 +447,6 @@ h1 { font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; ga
 .badge-medium { background: #fef9c3; color: #a16207; border: 1px solid #fde047; }
 .badge-hard { background: #fee2e2; color: #b91c1c; border: 1px solid #fca5a5; }
 .badge-hardcore { background: linear-gradient(135deg, #7f1d1d 0%, #991b1b 100%); color: #ffffff; border: 1px solid #ef4444; box-shadow: 0 2px 8px rgba(185,28,28,0.3); }
-.difficulty-bar { display: flex; gap: 6px; flex-wrap: wrap; align-items: center; justify-content: center; margin: 0 auto 16px auto; padding: 6px 12px; background: #f8fafc; border: 1.5px solid #e2e8f0; border-radius: 20px; width: fit-content; max-width: 100%; }
-.diff-label { font-size: 0.8rem; font-weight: 700; color: #334155; margin-right: 4px; }
-.diff-btn { padding: 4px 12px; border-radius: 14px; border: 1px solid transparent; background: transparent; font-size: 0.8rem; font-weight: 600; color: #334155; cursor: pointer; transition: all 0.2s cubic-bezier(0.16,1,0.3,1); }
-.diff-btn:hover { background: #e2e8f0; color: #1e293b; }
-.diff-btn.active { background: #ffffff; color: #4f46e5; border-color: #c7d2fe; font-weight: 700; box-shadow: 0 2px 6px rgba(79,70,229,0.12); }
-.diff-btn.diff-hardcore.active { background: linear-gradient(135deg, #7f1d1d 0%, #991b1b 100%); color: #ffffff; border-color: #ef4444; box-shadow: 0 2px 8px rgba(185,28,28,0.3); }
 .quiz-explain-box { background: #f0fdf4; border: 1px solid #86efac; border-radius: 16px; padding: 14px 18px; font-size: 0.88rem; color: #334155; margin: 12px 0; text-align: left; line-height: 1.6; box-shadow: 0 4px 12px rgba(22,101,52,0.05); }
 .quiz-explain-box strong { color: #0f172a; font-size: 1.05em; }
 .cq-timeline-words { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-top: 10px; }
@@ -578,9 +515,6 @@ h1 { font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; ga
 
   /* practice desktop */
   #practiceHome { max-width: 580px; margin: 0 auto; }
-  .practice-option-cards { gap: 20px; }
-  .practice-option-card { max-width: 270px; padding: 24px 20px; }
-  .poc-icon { font-size: 2rem; }
   .cq-practice-section { max-width: 500px; margin: 0 auto; }
   #clusterQuizArea { max-width: min(720px, calc(100vw - 48px)); margin: 0 auto; }
 
@@ -690,24 +624,6 @@ h1 { font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; ga
 .practice-header-box { text-align: center; margin-bottom: 16px; }
 .practice-title { font-size: 1.15rem; font-weight: 700; color: #1e293b; margin-bottom: 4px; }
 .practice-subtitle { font-size: 0.82rem; color: #64748b; line-height: 1.4; max-width: 320px; margin: 0 auto; }
-.practice-option-cards { display: flex; gap: 14px; width: 100%; justify-content: center; }
-@media (max-width: 480px) { .practice-option-cards { flex-direction: column; } }
-.practice-option-card {
-  flex: 1; max-width: 280px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 8px;
-  padding: 20px 16px; background: #ffffff; border: 1.5px solid #e2e8f0; border-radius: 18px;
-  cursor: pointer; transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1); box-shadow: 0 4px 12px rgba(0,0,0,0.03);
-  position: relative; overflow: hidden;
-}
-.practice-option-card:hover { transform: translateY(-3px); box-shadow: 0 12px 24px rgba(0,0,0,0.08); }
-.practice-option-card.card-flash:hover { border-color: #3b82f6; background: linear-gradient(180deg, #ffffff 0%, #eff6ff 100%); }
-.practice-option-card.card-cluster:hover { border-color: #8b5cf6; background: linear-gradient(180deg, #ffffff 0%, #faf5ff 100%); }
-.practice-option-card:active { transform: scale(0.98); }
-.poc-badge { font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; padding: 3px 10px; border-radius: 20px; margin-bottom: 2px; }
-.badge-flash { background: #dbeafe; color: #1d4ed8; }
-.badge-cluster { background: #f3e8ff; color: #6b21a8; }
-.poc-icon { font-size: 2.2rem; line-height: 1; filter: drop-shadow(0 4px 6px rgba(0,0,0,0.08)); }
-.poc-label { font-size: 1.05rem; font-weight: 700; color: #0f172a; }
-.poc-desc { font-size: 0.78rem; color: #64748b; line-height: 1.45; }
 .btn-back-clean {
   display: inline-flex; align-items: center; gap: 6px; font-size: 0.85rem; font-weight: 600;
   color: #64748b; background: #f8fafc; border: 1px solid #e2e8f0; padding: 6px 14px;
@@ -777,7 +693,7 @@ h1 { font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; ga
 }
 .cluster-close-btn {
   border: none; background: #f1f5f9; font-size: 0.85rem; font-weight: 600; color: #475569;
-  cursor: pointer; padding: 6px 12px; border-radius: 8px; transition: all 0.15s;
+  cursor: pointer; padding: 6px 12px; min-height: 40px; border-radius: 8px; transition: all 0.15s;
 }
 .cluster-close-btn:hover { background: #e2e8f0; color: #0f172a; }
 .cluster-reg-pills {
@@ -785,7 +701,8 @@ h1 { font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; ga
   padding: 12px 20px; border-bottom: 1px solid #f1f5f9;
 }
 .reg-pill {
-  padding: 5px 14px; border-radius: 20px; border: 1px solid #e2e8f0;
+  padding: 5px 14px; min-height: 40px; box-sizing: border-box; display: inline-flex; align-items: center;
+  border-radius: 20px; border: 1px solid #e2e8f0;
   background: #f8fafc; font-size: 0.78rem; font-weight: 600; color: #64748b; cursor: pointer; transition: all 0.2s;
 }
 .reg-pill:hover { background: #f1f5f9; border-color: #cbd5e1; color: #334155; }
@@ -878,9 +795,10 @@ h1 { font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; ga
   .quiz-explain-box { padding: 12px 14px !important; font-size: 0.84rem !important; margin: 8px 0 !important; }
 }
 /* ── DARK THEME OVERRIDES ──────────────────────────────── */
+[data-theme="dark"] { --primary-color: #818cf8; --text-color: #f8fafc; }
 [data-theme="dark"] html { background-color: #0f1117; }
 [data-theme="dark"] body { background: #0f1117; background-image: radial-gradient(ellipse at 20% 0%, rgba(99,102,241,0.18) 0%, transparent 60%), radial-gradient(ellipse at 80% 100%, rgba(168,85,247,0.15) 0%, transparent 60%); color: #f8fafc; }
-[data-theme="dark"] h1, [data-theme="dark"] h2, [data-theme="dark"] h3, [data-theme="dark"] .en-term, [data-theme="dark"] .cq-practice-title, [data-theme="dark"] .quiz-q-text, [data-theme="dark"] .cq-card-label, [data-theme="dark"] .cwt-term, [data-theme="dark"] .cluster-back-title, [data-theme="dark"] .poc-label, [data-theme="dark"] .cfw-term, [data-theme="dark"] .quiz-cloze-text { color: #f8fafc; }
+[data-theme="dark"] h1, [data-theme="dark"] h2, [data-theme="dark"] h3, [data-theme="dark"] .en-term, [data-theme="dark"] .cq-practice-title, [data-theme="dark"] .quiz-q-text, [data-theme="dark"] .cq-card-label, [data-theme="dark"] .cwt-term, [data-theme="dark"] .cluster-back-title, [data-theme="dark"] .cfw-term, [data-theme="dark"] .quiz-cloze-text { color: #f8fafc; }
 [data-theme="dark"] .quiz-listen-hint { color: #94a3b8; }
 [data-theme="dark"] .btn-listen-play { background: #1e3a5f; color: #93c5fd; }
 [data-theme="dark"] .btn-listen-play:hover { background: #1e40af; }
@@ -890,12 +808,15 @@ h1 { font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; ga
   -webkit-text-fill-color: transparent;
   filter: drop-shadow(0 2px 8px rgba(129, 140, 248, 0.25));
 }
-[data-theme="dark"] .setup-box, [data-theme="dark"] .history-box, [data-theme="dark"] .topic-popup-item { background: #1a1d2e; border-color: rgba(99,102,241,0.2); color: #f8fafc; }
+[data-theme="dark"] .setup-box, [data-theme="dark"] .topic-popup-item { background: #1a1d2e; border-color: rgba(99,102,241,0.2); color: #f8fafc; }
 [data-theme="dark"] .setup-label span, [data-theme="dark"] .setup-box h2, [data-theme="dark"] .history-date { color: #f8fafc; }
-[data-theme="dark"] .setup-total, [data-theme="dark"] .history-word { background: #334155; color: #cbd5e1; }
+[data-theme="dark"] .history-word { background: #334155; color: #cbd5e1; }
 [data-theme="dark"] .setup-subtitle, [data-theme="dark"] .setup-section-title { color: #94a3b8; }
 [data-theme="dark"] .setup-divider { border-color: #334155; }
 [data-theme="dark"] select { background: #1e293b !important; color: #f8fafc !important; border: 1px solid #334155 !important; }
+.quick-stats-bar { display:none; justify-content:center; gap:16px; flex-wrap:wrap; margin:6px 0 10px; font-size:0.82rem; font-weight:600; color:#64748b; }
+[data-theme="dark"] .stats { color: #cbd5e1; }
+[data-theme="dark"] .quick-stats-bar { color: #94a3b8; }
 [data-theme="dark"] .mode-bar { background: rgba(99,102,241,0.08); border-color: rgba(99,102,241,0.2); }
 [data-theme="dark"] .mode-tab { color: #94a3b8; }
 [data-theme="dark"] .mode-tab:hover:not(.active) { color: #f8fafc; background: rgba(255,255,255,0.1); }
@@ -906,17 +827,13 @@ h1 { font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; ga
 #btnHistoryFilterUnknown.active { background: linear-gradient(135deg, #6366f1, #8b5cf6); color: #fff; border-color: transparent; box-shadow: 0 4px 12px rgba(99,102,241,0.4); }
 [data-theme="dark"] #btnHistoryFilterUnknown { background: #1a1d2e; border-color: rgba(99,102,241,0.3); color: #94a3b8; }
 [data-theme="dark"] #btnHistoryFilterUnknown.active { background: linear-gradient(135deg, #6366f1, #8b5cf6); color: #fff; border-color: transparent; box-shadow: 0 4px 16px rgba(99,102,241,0.5); }
-[data-theme="dark"] .btn-settings, [data-theme="dark"] .btn-filter-state, [data-theme="dark"] .btn-topic-trigger, [data-theme="dark"] .filter-group { background: #1a1d2e; border-color: rgba(99,102,241,0.2); color: #cbd5e1; }
-[data-theme="dark"] .btn-filter-state.active { background: rgba(14,165,233,0.15); color: #38bdf8; border-color: #0ea5e9; box-shadow: 0 4px 12px rgba(14,165,233,0.2); }
+[data-theme="dark"] .btn-settings, [data-theme="dark"] .btn-topic-trigger { background: #1a1d2e; border-color: rgba(99,102,241,0.2); color: #cbd5e1; }
 [data-theme="dark"] .topic-popup-item.active { background: rgba(16,185,129,0.12); color: #34d399; border-color: #10b981; }
-[data-theme="dark"] .btn-settings:hover, [data-theme="dark"] .btn-filter-state:hover, [data-theme="dark"] .btn-topic-trigger:hover { background: #334155; color: #f8fafc; border-color: #475569; }
-[data-theme="dark"] .filter-group button { color: #94a3b8; }
-[data-theme="dark"] .filter-group button:not(.active):hover { background: #334155; color: #f8fafc; }
-[data-theme="dark"] .filter-group button.active { background: #4f46e5; color: #fff; }
+[data-theme="dark"] .btn-settings:hover, [data-theme="dark"] .btn-topic-trigger:hover { background: #334155; color: #f8fafc; border-color: #475569; }
 [data-theme="dark"] .card-face, [data-theme="dark"] .quiz-q-box, [data-theme="dark"] .result-box, [data-theme="dark"] .cq-practice-section { background: #1a1d2e; border-color: rgba(99,102,241,0.2); color: #f8fafc; box-shadow: 0 4px 20px rgba(0,0,0,0.3), 0 0 0 1px rgba(99,102,241,0.1); }
 [data-theme="dark"] .btn-nav { background: #334155; border-color: #475569; color: #cbd5e1; }
 [data-theme="dark"] .btn-nav:hover:not(:disabled) { background: #475569; color: #f8fafc; }
-[data-theme="dark"] .en-example, [data-theme="dark"] .vi-pron, [data-theme="dark"] .pron-row, [data-theme="dark"] .flip-hint, [data-theme="dark"] .extra-label, [data-theme="dark"] .quiz-example-hint, [data-theme="dark"] .diff-label, [data-theme="dark"] .poc-desc, [data-theme="dark"] .cq-card-desc, [data-theme="dark"] .cfw-vi-front { color: #94a3b8; }
+[data-theme="dark"] .en-example, [data-theme="dark"] .vi-pron, [data-theme="dark"] .pron-row, [data-theme="dark"] .flip-hint, [data-theme="dark"] .extra-label, [data-theme="dark"] .quiz-example-hint, [data-theme="dark"] .cq-card-desc, [data-theme="dark"] .cfw-vi-front { color: #94a3b8; }
 [data-theme="dark"] .btn-pron { background: #334155; border-color: #475569; color: #cbd5e1; }
 [data-theme="dark"] .btn-pron:hover { background: #475569; }
 [data-theme="dark"] .btn-fav { background: #334155; border-color: #475569; color: #64748b; }
@@ -928,9 +845,9 @@ h1 { font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; ga
 [data-theme="dark"] .quiz-opt.correct { background: #064e3b; border-color: #10b981; color: #6ee7b7; }
 [data-theme="dark"] .quiz-opt.wrong { background: #881337; border-color: #f43f5e; color: #fca5a5; }
 [data-theme="dark"] .quiz-en-def-text, [data-theme="dark"] .cwt-example { background: #334155; color: #cbd5e1; border-left-color: #6366f1; }
-[data-theme="dark"] .diff-btn { color: #94a3b8; }
-[data-theme="dark"] .diff-btn:hover { background: #334155; color: #f8fafc; }
-[data-theme="dark"] .diff-btn.active { background: #334155; color: #818cf8; border-color: #475569; }
+[data-theme="dark"] .quiz-hint-btn { color: #c4b5fd; }
+[data-theme="dark"] .quiz-hint-btn:hover { background: rgba(139,92,246,0.15); }
+[data-theme="dark"] .quiz-hint-text { background: rgba(139,92,246,0.12); color: #ddd6fe; border-left-color: #8b5cf6; }
 [data-theme="dark"] .timeline-word { background: #1a1d2e; border-color: rgba(99,102,241,0.2); color: #cbd5e1; }
 [data-theme="dark"] .timeline-word:hover { border-color: #8b5cf6; }
 [data-theme="dark"] .timeline-word.selected { background: #3b0764; border-color: #8b5cf6; color: #d8b4fe; }
@@ -939,9 +856,6 @@ h1 { font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; ga
 [data-theme="dark"] .quiz-explain-box, [data-theme="dark"] .cluster-tip-box { background: #064e3b; border-color: #059669; color: #cbd5e1; }
 [data-theme="dark"] .quiz-explain-box strong { color: #ffffff; }
 
-[data-theme="dark"] .practice-option-card { background: #1a1d2e; border-color: rgba(99,102,241,0.2); }
-[data-theme="dark"] .practice-option-card.card-flash:hover { border-color: #3b82f6; background: #1e3a8a; }
-[data-theme="dark"] .practice-option-card.card-cluster:hover { border-color: #8b5cf6; background: #4c1d95; }
 [data-theme="dark"] .btn-back-clean { background: #1e293b; border-color: #334155; color: #cbd5e1; }
 [data-theme="dark"] .btn-back-clean:hover { background: #334155; color: #f8fafc; }
 [data-theme="dark"] .cq-card-btn { background: #1a1d2e !important; border-color: rgba(99,102,241,0.2) !important; }
@@ -966,14 +880,13 @@ h1 { font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; ga
 [data-theme="dark"] .cwt-warn { background: #7f1d1d; color: #fca5a5; border-color: #991b1b; }
 [data-theme="dark"] .btn-cluster-fav-back { background: #334155; border-color: #475569; color: #64748b; }
 [data-theme="dark"] .result-box h2, [data-theme="dark"] .result-box p { color: #f8fafc; }
-[data-theme="dark"] .history-box h2 { color: #f8fafc !important; }
 .setup-ip-input { background: #faf5ff; color: #1e293b; border-radius: 50px; border: 1.5px solid #e9d5ff; }
 [data-theme="dark"] .setup-ip-input { background: #1a1d2e; border-color: rgba(99,102,241,0.3); color: #f8fafc; }
 [data-theme="dark"] .btn-back-clean { background: #1e293b !important; border-color: #334155 !important; color: #cbd5e1 !important; }
 [data-theme="dark"] .btn-back-clean:hover { background: #334155 !important; color: #f8fafc !important; }
 [data-theme="dark"] .quiz-q-text div { color: #cbd5e1 !important; }
 [data-theme="dark"] .quiz-q-text span { color: #94a3b8 !important; }
-[data-theme="dark"] .btn-filter-state strong, [data-theme="dark"] .btn-topic-trigger strong { filter: brightness(1.4); }
+[data-theme="dark"] .btn-topic-trigger strong { filter: brightness(1.4); }
 [data-theme="dark"] .avatar-circle { background:#334155 !important; }
 [data-theme="dark"] .avatar-circle:hover { background:#475569 !important; }
 [data-theme="dark"] .avatar-name { color:#cbd5e1 !important; }
@@ -1000,6 +913,53 @@ h1 { font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; ga
 [data-theme="dark"] #settingsUserInfoBlock { background: #1a1d2e !important; border-color: rgba(99,102,241,0.2) !important; }
 [data-theme="dark"] #settingsUserName { color: #f8fafc !important; }
 [data-theme="dark"] #settingsUserAvatar { background: #334155 !important; }
+
+/* ── TAP FEEDBACK — works on all devices (touch + mouse) ─── */
+.btn-next:active                            { transform: scale(0.97); opacity: 0.9; }
+.mode-tab:active:not(.active)               { transform: scale(0.96); opacity: 0.8; }
+.cq-card-btn:active                         { transform: scale(0.98) !important; opacity: 0.9; }
+.btn-fav:active,
+.fav-star:active,
+.cluster-fav-star:active,
+.btn-cluster-fav-back:active                { transform: scale(0.88) rotate(-5deg); }
+.btn-nav:active:not(:disabled)              { transform: scale(0.94); opacity: 0.8; }
+.btn-settings:active,
+.btn-back-clean:active                      { transform: scale(0.96); opacity: 0.85; }
+.btn-topic-trigger:active                   { transform: scale(0.97); opacity: 0.85; }
+.timeline-word:active                       { transform: scale(0.95); }
+.cluster-front-word:active                  { transform: scale(0.97); opacity: 0.85; }
+.topic-popup-item:active                    { transform: translateX(2px); background: #f0f0ff; }
+.btn-speaker-huge:active                    { transform: scale(0.92); opacity: 0.9; }
+.btn-pron:active                            { transform: scale(0.95); opacity: 0.85; }
+.btn-listen-play:active                     { transform: scale(0.93); opacity: 0.85; }
+[data-theme="dark"] .topic-popup-item:active { background: rgba(99,102,241,0.15); }
+
+/* ── HOVER TRANSFORMS: DESKTOP ONLY — prevent stuck state on touch ─── */
+@media (hover: none) {
+  .popup-btn-primary:hover,
+  .popup-btn-danger:hover,
+  .mode-tab:hover:not(.active),
+  .btn-settings:hover,
+  .btn-topic-trigger:hover,
+  .topic-popup-item:hover,
+  .fav-star:hover,
+  .cluster-fav-star:hover,
+  .btn:hover,
+  .btn-fav:hover,
+  .quiz-opt:hover:not(:disabled),
+  .btn-next:hover,
+  .btn-speaker-huge:hover,
+  .timeline-word:hover,
+  .cluster-word-entry:hover,
+  .btn-restart:hover,
+  .cq-card-btn:hover,
+  .cq-card-btn:hover .cq-icon-box,
+  .btn-back-clean:hover,
+  .btn-cluster-learning:hover,
+  .btn-cluster-known:hover,
+  .btn-cluster-fav-back:hover,
+  .pin-btn-submit:hover { transform: none; }
+}
 </style>
 <script>
   (function() {
@@ -1164,7 +1124,7 @@ h1 { font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; ga
 </div>
 
 <!-- ── CONFIRM DIALOG ─────────────────────────────────── -->
-<div id="confirmDialog" class="hidden popup-overlay">
+<div id="confirmDialog" class="hidden popup-overlay" style="z-index:1200;">
   <div class="popup-dialog popup-dialog--sm">
     <div class="popup-header">
       <h2 class="popup-title" id="confirmTitle">Xác nhận</h2>
@@ -1211,7 +1171,7 @@ h1 { font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; ga
 
   <div class="stats" id="stats"></div>
   <!-- S6: quick stats strip — only visible on flash tab (tab-only-flash) -->
-  <div id="quickStatsBar" class="tab-only-flash" style="display:none; justify-content:center; gap:16px; flex-wrap:wrap; margin:6px 0 10px; font-size:0.82rem; font-weight:600; color:#64748b;"></div>
+  <div id="quickStatsBar" class="tab-only-flash quick-stats-bar" style="display:none;"></div>
 </div>
 
 <!-- ── FLASHCARD ──────────────────────────────────────── -->
@@ -1264,6 +1224,14 @@ h1 { font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; ga
             <span class="cq-card-desc">Kiểm tra khả năng vận dụng cấu trúc và từ lóng trong giao tiếp</span>
           </div>
           <span class="cq-card-count badge-purple">Cụm từ</span>
+        </button>
+        <button class="cq-card-btn cq-all" data-practice="pron" style="background:linear-gradient(90deg, #ffffff 0%, #ecfeff 100%); border-color:#a5f3fc;">
+          <div class="cq-icon-box" style="background:#cffafe;"><span class="cq-card-icon"><i data-lucide="headphones" width="28" height="28"></i></span></div>
+          <div class="cq-text-box">
+            <span class="cq-card-label">Luyện Phát âm</span>
+            <span class="cq-card-desc">Nghe TTS, nhận diện phiên âm IPA và phân biệt các âm dễ nhầm lẫn</span>
+          </div>
+          <span class="cq-card-count" style="background:#cffafe;color:#155e75;border:1px solid #67e8f9;">Phát âm</span>
         </button>
       </div>
     </div>
@@ -1397,7 +1365,6 @@ async function showLoginOverlay(isSwitching = false) {
             const nameColor = isCurrent ? 'color:#16a34a; font-weight:700;' : 'color:#475569; font-weight:600;';
             const checkIcon = isCurrent ? '<div style="position:absolute; top:-5px; right:-5px; background:#16a34a; color:#fff; border-radius:50%; width:24px; height:24px; display:flex; align-items:center; justify-content:center; box-shadow:0 2px 4px rgba(0,0,0,0.2);"><i data-lucide="check" width="14" height="14"></i></div>' : '';
             div.innerHTML = `<div class="avatar-circle" style="font-size:3rem; width:80px; height:80px; display:flex; align-items:center; justify-content:center; border-radius:50%; transition:all 0.2s; ${avatarBg}">${u.avatar}</div>${checkIcon}<span class="avatar-name" style="${nameColor}">${u.name}</span>`;
-            if (checkIcon) lucide.createIcons({ nodes: [div] });
             if (isCurrent) {
                 div.onclick = () => {
                     document.getElementById('loginOverlay').classList.add('hidden');
@@ -1406,6 +1373,7 @@ async function showLoginOverlay(isSwitching = false) {
                 div.onclick = () => showPinForm(u.id, u.name, u.avatar);
             }
             container.appendChild(div);
+            if (checkIcon) lucide.createIcons({ nodes: [div] });
         });
     } catch (e) {
         console.error(e);
@@ -1456,10 +1424,12 @@ document.getElementById('pinInput').addEventListener('keypress', function (e) {
 // ── STATE ────────────────────────────────────────────────────────────────────
 let allCards = [], sessionCards = [], dictionaryCards = [];
 let deck = 'all', mode = 'flash', topic = 'all', practiceSubMode = 'home';
-let cardFilter = 'all'; // 'all' | 'unknown' | 'new'
+let cardFilter = 'all'; // 'all' | 'unknown' | 'new' | 'known'
+let pronMode = false;  // true = Luyện Phát âm (locks quiz to pron-only types)
+const MIN_PHONETIC_DISTRACTORS = 3;  // số distractor tối thiểu để bật listening_minimal/ipa_pick
 let dailyNew = parseInt(localStorage.getItem('vocabDailyNew') || '10');
 let extraNew = 0;
-let reviewCount = 0, newServed = 0, newIntroduced = 0;
+let newServed = 0, newIntroduced = 0;
 let flashCards = [], flashIdx = 0, flipped = false;
 let sessionMarks = new Map(); // key → true/false, tracks last mark per card this session
 function knownCount()   { return [...sessionMarks.values()].filter(v => v).length; }
@@ -1582,18 +1552,27 @@ document.getElementById('topicPopupOverlay').addEventListener('click', e => {
 });
 
 // ── CONFIRM DIALOG ───────────────────────────────────────────────────────────
+let _confirmAbort = null;
 function showConfirm(title, message, onConfirm, { okLabel = 'Xác nhận', okClass = 'popup-btn-danger', cancelLabel = 'Huỷ' } = {}) {
   const dialog = document.getElementById('confirmDialog');
   document.getElementById('confirmTitle').textContent = title;
-  document.getElementById('confirmMessage').innerHTML = message;
+  const confirmMessageEl = document.getElementById('confirmMessage');
+  confirmMessageEl.innerHTML = message;
+  lucide.createIcons({ nodes: [confirmMessageEl] });
   const okBtn = document.getElementById('confirmOk');
   okBtn.textContent = okLabel;
   okBtn.className = `popup-btn ${okClass}`;
   document.getElementById('confirmCancel').textContent = cancelLabel;
   dialog.classList.remove('hidden');
-  okBtn.addEventListener('click', () => { dialog.classList.add('hidden'); onConfirm(); }, { once: true });
-  document.getElementById('confirmCancel').addEventListener('click', () => dialog.classList.add('hidden'), { once: true });
-  dialog.addEventListener('click', e => { if (e.target === e.currentTarget) dialog.classList.add('hidden'); }, { once: true });
+
+  // Gỡ toàn bộ listener của lần mở dialog trước (nếu người dùng Huỷ mà chưa bắn) để tránh
+  // nhiều closure onConfirm cùng chạy khi cuối cùng bấm Xác nhận.
+  if (_confirmAbort) _confirmAbort.abort();
+  _confirmAbort = new AbortController();
+  const { signal } = _confirmAbort;
+  okBtn.addEventListener('click', () => { dialog.classList.add('hidden'); onConfirm(); }, { signal });
+  document.getElementById('confirmCancel').addEventListener('click', () => dialog.classList.add('hidden'), { signal });
+  dialog.addEventListener('click', e => { if (e.target === e.currentTarget) dialog.classList.add('hidden'); }, { signal });
 }
 
 document.getElementById('btnReset').addEventListener('click', () => {
@@ -1639,7 +1618,16 @@ async function updateCurrentUserUI() {
             const btnReset = document.getElementById('btnReset');
             if(btnReset) { btnReset.innerHTML = `<i data-lucide="alert-triangle" width="15" height="15" style="vertical-align:-2px"></i> Xóa tiến độ của ${user.name}`; lucide.createIcons({ nodes: [btnReset] }); }
             const btnSyncPC = document.getElementById('btnSyncPC');
-            if(btnSyncPC) { btnSyncPC.innerHTML = `<i data-lucide="refresh-cw" width="15" height="15"></i> Đồng bộ (${user.name})`; lucide.createIcons({ nodes: [btnSyncPC] }); }
+            if(btnSyncPC) {
+                // "Đồng bộ với PC" chỉ có nghĩa ở bản mobile PWA (offline, progress lưu localStorage)
+                // -- getProgress() chỉ tồn tại khi create_mobile_app.py patch vào; bản desktop không có.
+                if (typeof getProgress !== 'function') {
+                    btnSyncPC.style.display = 'none';
+                } else {
+                    btnSyncPC.innerHTML = `<i data-lucide="refresh-cw" width="15" height="15"></i> Đồng bộ (${user.name})`;
+                    lucide.createIcons({ nodes: [btnSyncPC] });
+                }
+            }
         }
     } catch(e){}
 }
@@ -1647,12 +1635,13 @@ async function updateCurrentUserUI() {
 async function loadCards() {
   extraNew = 0;
   deck = 'all'; topic = 'all'; cardFilter = 'all';
+  _userGen++;              // vô hiệu hoá mọi response /api/clusters đang bay của user cũ
   _clusterPromise = null;  // reset cluster cache on user switch
   buildDeckBar();
   updateCurrentUserUI();
   await _fetchAndRender(dailyNew);
   // S2: silent auto-sync using saved IP or default Tailscale hostname
-  const savedIp = localStorage.getItem('last_pc_ip') || DEFAULT_PC_IP;
+  const savedIp = localStorage.getItem('last_pc_ip');
   if (savedIp) {
     const url = getSyncUrl(savedIp);
     if (url) doSync(url, true).catch(() => {});
@@ -1665,6 +1654,7 @@ async function loadMoreCards() {
 }
 
 // S6: Render quick stats strip (known count + streak)
+let _historyCache = null, _historyCacheExpiry = 0;
 async function renderQuickStats() {
   const bar = document.getElementById('quickStatsBar');
   if (!bar || !allCards) return;
@@ -1676,9 +1666,13 @@ async function renderQuickStats() {
   // streak: fetch history, count consecutive days ending today/yesterday
   let streak = 0;
   try {
-    const res = await fetch('/api/history');
-    if (res.ok) {
-      const hist = await res.json(); // [{date, words}] sorted desc
+    const _now = Date.now();
+    if (!_historyCache || _now > _historyCacheExpiry) {
+      const res = await fetch('/api/history');
+      if (res.ok) { _historyCache = await res.json(); _historyCacheExpiry = _now + 60000; }
+    }
+    if (_historyCache) {
+      const hist = _historyCache; // [{date, words}] sorted desc
       const dates = new Set(hist.map(d => d.date));
       const today = new Date();
       for (let i = 0; i < 365; i++) {
@@ -1709,7 +1703,9 @@ function updateKnownCount() {
   lucide.createIcons({ nodes: [el] });
 }
 
+let _fetchGen = 0;  // tăng mỗi lần gọi -- bỏ qua response đến sau nhưng ứng với lần gọi cũ hơn
 async function _fetchAndRender(n) {
+  const myGen = ++_fetchGen;
   document.getElementById('flashSection').innerHTML = '<div class="loading">Đang tải dữ liệu...</div>';
 
   let data;
@@ -1722,14 +1718,15 @@ async function _fetchAndRender(n) {
     if (!res.ok) throw new Error('HTTP ' + res.status);
     data = await res.json();
   } catch (e) {
+    if (myGen !== _fetchGen) return;  // đã có lần gọi mới hơn, bỏ qua lỗi của lần cũ
     document.getElementById('flashSection').innerHTML =
       '<div class="loading" style="color:#ef4444;"><i data-lucide="x-circle" width="16" height="16" style="vertical-align:-3px"></i> Không tải được dữ liệu. Hãy kiểm tra kết nối và thử lại.</div>';
     lucide.createIcons({ nodes: [document.getElementById('flashSection')] });
     return;
   }
+  if (myGen !== _fetchGen) return;  // response lỗi thời -- một lần gọi mới hơn đã/đang xử lý
   allCards      = data.cards;
   dictionaryCards = data.all_cards || data.cards;
-  reviewCount   = data.review;
   newServed     = data.today_introduced + data.new;
   newIntroduced = data.today_introduced;
 
@@ -1807,6 +1804,20 @@ function getActive() {
   return base;
 }
 
+function activeFilterSummaryText() {
+  const parts = [];
+  if (deck !== 'all') parts.push(deck === 'fav' ? 'Yêu thích' : `Deck ${deck}`);
+  if (topic !== 'all') parts.push(topic);
+  if (cardFilter !== 'all') parts.push(cardFilter === 'unknown' ? 'Chưa thuộc' : cardFilter === 'new' ? 'Mới' : 'Đã thuộc');
+  return parts.join(' · ');
+}
+
+function resetVocabFilters() {
+  deck = 'all'; topic = 'all'; cardFilter = 'all';
+  startSession();
+  lucide.createIcons();
+}
+
 function buildDeckBar() {
   const bar = document.getElementById('deckBar');
   if (!bar) return;
@@ -1847,7 +1858,7 @@ function buildDeckBar() {
   trigger.innerHTML = `<span><i data-lucide="tag" width="12" height="12" style="vertical-align:-2px"></i> Level: <strong style="color:${deckColor}">${activeItem[2]}</strong></span> <i data-lucide="chevron-down" width="12" height="12" style="opacity:0.6;margin-left:4px"></i>`;
 
   trigger.onclick = () => {
-    document.getElementById('topicPopupTitle').textContent = isClusterCtx ? 'Select Level' : 'Select Level';
+    document.getElementById('topicPopupTitle').textContent = 'Select Level';
     buildDeckPopupList(items);
     document.getElementById('topicPopupOverlay').classList.remove('hidden');
   };
@@ -1939,11 +1950,16 @@ function buildStateBar() {
   bar.innerHTML = '';
   if (mode === 'cluster' || practiceSubMode === 'cluster_pane' || practiceSubMode === 'cluster_quiz' || (mode === 'quiz' && practiceSubMode === 'home')) return;
 
+  const base = topic === 'all' ? sessionCards : sessionCards.filter(c => c.topic === topic);
+  const nAll     = base.length;
+  const nUnknown = base.filter(c => !c.known).length;
+  const nNew     = base.filter(c => c.is_new).length;
+  const nKnown   = base.filter(c => c.known).length;
   const items = [
-    ['all', '<i data-lucide="book-open" width="13" height="13" style="vertical-align:-2px"></i> All Statuses', 'All'],
-    ['unknown', '<i data-lucide="zap" width="13" height="13" style="vertical-align:-2px"></i> Review Needed', 'Review'],
-    ['new', '<i data-lucide="plus-circle" width="13" height="13" style="vertical-align:-2px"></i> New Cards', 'New'],
-    ['known', '<i data-lucide="circle-check" width="13" height="13" style="vertical-align:-2px"></i> Mastered', 'Mastered']
+    ['all',     `<i data-lucide="book-open" width="13" height="13" style="vertical-align:-2px"></i> All Statuses (${nAll})`,       `All (${nAll})`],
+    ['unknown', `<i data-lucide="zap" width="13" height="13" style="vertical-align:-2px"></i> Review Needed (${nUnknown})`,        `Review (${nUnknown})`],
+    ['new',     `<i data-lucide="plus-circle" width="13" height="13" style="vertical-align:-2px"></i> New Cards (${nNew})`,        `New (${nNew})`],
+    ['known',   `<i data-lucide="circle-check" width="13" height="13" style="vertical-align:-2px"></i> Mastered (${nKnown})`,      `Mastered (${nKnown})`]
   ];
   const activeItem = items.find(([val]) => val === cardFilter) || items[0];
 
@@ -2039,9 +2055,9 @@ function startSession() {
   sessionCards = getDeckCards();
   buildDeckBar();
   buildTopicBar();
-  const active = shuffle(getActive());
-  flashCards = active;
-  quizCards  = shuffle(getActive());
+  const active = getActive();
+  flashCards = shuffle(active);
+  quizCards  = shuffle([...active]);
   flashIdx = 0; flipped = false; sessionMarks = new Map();
   quizIdx  = 0; quizScore = 0; quizWrong = 0;
   if (mode === 'flash') renderFlash();
@@ -2049,6 +2065,10 @@ function startSession() {
 }
 
 // ── PRONUNCIATION ─────────────────────────────────────────────────────────────
+function pillVi(text, viMap) {
+  return (viMap && viMap[text]) ? ` <span style="opacity:0.65;font-weight:500">(${viMap[text]})</span>` : '';
+}
+
 function parsePron(pron) {
   if (!pron) return { us: '', uk: '' };
   // Old format without flags — skip entirely
@@ -2080,7 +2100,9 @@ function renderFlash() {
     document.getElementById('resKnow').textContent    = '';
     document.getElementById('resUnknown').textContent = '';
     const h2empty = document.getElementById('flashResult').querySelector('h2');
-    h2empty.innerHTML = '<i data-lucide="frown" width="20" height="20" style="color:#9ca3af;vertical-align:-3px"></i> Không có thẻ nào';
+    const filterSummary = activeFilterSummaryText();
+    h2empty.innerHTML = '<i data-lucide="frown" width="20" height="20" style="color:#9ca3af;vertical-align:-3px"></i> Không có thẻ nào' +
+      (filterSummary ? `<div style="font-size:0.8rem;font-weight:500;color:#94a3b8;margin-top:6px">Đang lọc: ${filterSummary} <button type="button" onclick="resetVocabFilters()" style="margin-left:6px;color:#6366f1;background:none;border:none;font-weight:700;cursor:pointer;text-decoration:underline">Xóa bộ lọc</button></div>` : '');
     lucide.createIcons({ nodes: [h2empty] });
     document.getElementById('flashResult').classList.remove('hidden');
     return;
@@ -2131,13 +2153,13 @@ function renderFlash() {
   const extraEl = document.getElementById('cardExtra');
   let extraHtml = '';
   if (c.collocations && c.collocations.length) {
-    extraHtml += `<div class="extra-sec"><span class="extra-label"><i data-lucide="lightbulb" width="13" height="13" style="vertical-align:-2px"></i> Collocations:</span> <span class="extra-tags">${c.collocations.map(col => `<span class="extra-pill">${col}</span>`).join('')}</span></div>`;
+    extraHtml += `<div class="extra-sec"><span class="extra-label"><i data-lucide="lightbulb" width="13" height="13" style="vertical-align:-2px"></i> Collocations:</span> <span class="extra-tags">${c.collocations.map(col => `<span class="extra-pill">${col}${pillVi(col, c.collocations_vi)}</span>`).join('')}</span></div>`;
   }
   if (c.synonyms && c.synonyms.length) {
-    extraHtml += `<div class="extra-sec"><span class="extra-label"><i data-lucide="link-2" width="13" height="13" style="vertical-align:-2px"></i> Đồng nghĩa:</span> <span class="extra-tags">${c.synonyms.map(s => `<span class="extra-pill syn-pill">${s}</span>`).join('')}</span></div>`;
+    extraHtml += `<div class="extra-sec"><span class="extra-label"><i data-lucide="link-2" width="13" height="13" style="vertical-align:-2px"></i> Đồng nghĩa:</span> <span class="extra-tags">${c.synonyms.map(s => `<span class="extra-pill syn-pill">${s}${pillVi(s, c.synonyms_vi)}</span>`).join('')}</span></div>`;
   }
   if (c.antonyms && c.antonyms.length) {
-    extraHtml += `<div class="extra-sec"><span class="extra-label"><i data-lucide="arrow-left-right" width="13" height="13" style="vertical-align:-2px"></i> Trái nghĩa:</span> <span class="extra-tags">${c.antonyms.map(a => `<span class="extra-pill ant-pill">${a}</span>`).join('')}</span></div>`;
+    extraHtml += `<div class="extra-sec"><span class="extra-label"><i data-lucide="arrow-left-right" width="13" height="13" style="vertical-align:-2px"></i> Trái nghĩa:</span> <span class="extra-tags">${c.antonyms.map(a => `<span class="extra-pill ant-pill">${a}${pillVi(a, c.antonyms_vi)}</span>`).join('')}</span></div>`;
   }
   if (extraHtml) {
     extraEl.innerHTML = extraHtml;
@@ -2176,11 +2198,12 @@ function introduceCard(c) {
   if (!c || !c.is_new) return;
   c.is_new = false;
   newIntroduced++;
+  _historyCache = null; // invalidate so renderQuickStats re-fetches fresh history
   fetch('/api/introduce', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ key: c.key }),
-  });
+  }).then(() => renderQuickStats());
 }
 
 function flipCard() {
@@ -2206,6 +2229,8 @@ function markCard(known) {
   updateKnownCount();
 }
 
+const SWIPE_THRESHOLD_PX = 60;
+
 function bindFlashEvents() {
   const wrap = document.getElementById('cardWrap');
 
@@ -2220,7 +2245,7 @@ function bindFlashEvents() {
     if (!flipped) return;
     const dx = e.changedTouches[0].clientX - _tx;
     const dy = e.changedTouches[0].clientY - _ty;
-    if (Math.abs(dx) < 60 || Math.abs(dx) < Math.abs(dy)) return;
+    if (Math.abs(dx) < SWIPE_THRESHOLD_PX || Math.abs(dx) < Math.abs(dy)) return;
     e.preventDefault(); // suppress synthesized click
     markCard(dx > 0);
   });
@@ -2287,9 +2312,10 @@ function getCardTier(c) {
   if (currentDifficulty !== 'auto') {
     return currentDifficulty.toUpperCase();
   }
-  if (c.known || c.deck === 'C1' || c.deck === 'C1/C2' || c.deck === 'B2') {
+  if (c.known || c.deck === 'C1' || c.deck === 'C1/C2') {
     return Math.random() < 0.65 ? 'HARDCORE' : 'HARD';
   }
+  if (c.deck === 'B2') return 'HARD';
   const rand = Math.random();
   if (rand < 0.15) return 'EASY';
   if (rand < 0.65) return 'MEDIUM';
@@ -2301,6 +2327,8 @@ function getPoolCards() {
   if (typeof VOCAB_DATA !== 'undefined' && VOCAB_DATA.length > 0) return VOCAB_DATA;
   return allCards;
 }
+
+const ORTHO_TRAP_SIMILARITY_THRESHOLD = 0.40;  // ngưỡng giống nhau về chữ viết để coi là "bẫy chính tả" (tier HARD/HARDCORE)
 
 function getSmartDistractors(c, count, tier, type, targetString) {
   const pool = getPoolCards();
@@ -2315,6 +2343,37 @@ function getSmartDistractors(c, count, tier, type, targetString) {
     return shuffle(preps.filter(p => p !== targetLower)).slice(0, count).map(p => ({ term: p, vi: 'Giới từ: ' + p }));
   }
 
+  if (type === 'collocations') {
+    // Collect phrase fragments from other cards' collocations as distractors
+    const colPool = shuffle(pool.filter(x => x.key !== c.key && x.collocations && x.collocations.length));
+    const seen = new Set([targetLower]);
+    const result = [];
+    for (const x of colPool) {
+      const xEsc = x.term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      const xReg = new RegExp('\\b' + xEsc + '\\b', 'i');
+      for (const col of x.collocations) {
+        const part = col.replace(xReg, '').trim();
+        if (part && !seen.has(part.toLowerCase())) {
+          seen.add(part.toLowerCase());
+          result.push({ term: part, vi: 'Collocation' });
+          if (result.length >= count) break;
+        }
+      }
+      if (result.length >= count) break;
+    }
+    // Fallback to vocab terms if not enough phrase fragments
+    if (result.length < count) {
+      for (const x of shuffle(pool.filter(x => x.key !== c.key))) {
+        if (!seen.has(x.term.toLowerCase())) {
+          seen.add(x.term.toLowerCase());
+          result.push({ term: x.term, vi: x.vi });
+          if (result.length >= count) break;
+        }
+      }
+    }
+    return result.slice(0, count);
+  }
+
   let orthoTraps = [];
   if (tier === 'HARD' || tier === 'HARDCORE') {
     orthoTraps = pool.filter(x => {
@@ -2323,7 +2382,7 @@ function getSmartDistractors(c, count, tier, type, targetString) {
       const sim = getSimilarity(xTerm, targetLower);
       const prefixMatch = targetLower.length >= 4 && xTerm.startsWith(targetLower.slice(0, 3));
       const suffixMatch = targetLower.length >= 5 && xTerm.endsWith(targetLower.slice(-4));
-      return sim >= 0.40 || prefixMatch || suffixMatch;
+      return sim >= ORTHO_TRAP_SIMILARITY_THRESHOLD || prefixMatch || suffixMatch;
     });
     orthoTraps = shuffle(orthoTraps);
 
@@ -2345,27 +2404,37 @@ function getSmartDistractors(c, count, tier, type, targetString) {
     }
   }
 
-  const posAndLevelMatches = shuffle(pool.filter(x => {
-    if (x.key === c.key || x.term.toLowerCase() === targetLower) return false;
-    const xPos = (x.pos || '').toLowerCase();
-    const posMatch = (isVerb && xPos.includes('v.')) || (isNoun && xPos.includes('n.')) || (isAdj && xPos.includes('adj.')) || (!isVerb && !isNoun && !isAdj);
-    const levelMatch = (tier === 'HARD' || tier === 'HARDCORE') ? (x.deck === 'C1' || x.deck === 'C1/C2' || x.deck === 'B2') : true;
-    return posMatch && levelMatch && x.topic === c.topic;
-  }));
-
-  const topicMatches = shuffle(pool.filter(x => x.key !== c.key && x.term.toLowerCase() !== targetLower && x.topic === c.topic));
-  const generalMatches = shuffle(pool.filter(x => x.key !== c.key && x.term.toLowerCase() !== targetLower));
-
   const combined = [];
   const seen = new Set([targetLower, c.term.toLowerCase()]);
-
-  [...orthoTraps, ...posAndLevelMatches, ...topicMatches, ...generalMatches].forEach(item => {
-    const itemTermLower = item.term.toLowerCase();
-    if (!seen.has(itemTermLower) && combined.length < count) {
-      seen.add(itemTermLower);
-      combined.push(item);
+  const addFrom = (list) => {
+    for (const item of list) {
+      if (combined.length >= count) break;
+      const itemTermLower = item.term.toLowerCase();
+      if (!seen.has(itemTermLower)) {
+        seen.add(itemTermLower);
+        combined.push(item);
+      }
     }
-  });
+  };
+
+  // Chỉ filter/shuffle từng pool kế tiếp khi pool trước chưa đủ `count` -- tránh
+  // duyệt/shuffle toàn bộ dictionaryCards (~1500 thẻ/user) không cần thiết ở mỗi câu hỏi.
+  addFrom(orthoTraps);
+  if (combined.length < count) {
+    addFrom(shuffle(pool.filter(x => {
+      if (x.key === c.key || x.term.toLowerCase() === targetLower) return false;
+      const xPos = (x.pos || '').toLowerCase();
+      const posMatch = (isVerb && xPos.includes('v.')) || (isNoun && xPos.includes('n.')) || (isAdj && xPos.includes('adj.')) || (!isVerb && !isNoun && !isAdj);
+      const levelMatch = (tier === 'HARD' || tier === 'HARDCORE') ? (x.deck === 'C1' || x.deck === 'C1/C2' || x.deck === 'B2') : true;
+      return posMatch && levelMatch && x.topic === c.topic;
+    })));
+  }
+  if (combined.length < count) {
+    addFrom(shuffle(pool.filter(x => x.key !== c.key && x.term.toLowerCase() !== targetLower && x.topic === c.topic)));
+  }
+  if (combined.length < count) {
+    addFrom(shuffle(pool.filter(x => x.key !== c.key && x.term.toLowerCase() !== targetLower)));
+  }
 
   return combined;
 }
@@ -2378,7 +2447,9 @@ function renderQuiz() {
     document.getElementById('quizArea').classList.add('hidden');
     document.getElementById('quizResultText').textContent = '';
     const h2qempty = document.getElementById('quizResult').querySelector('h2');
-    h2qempty.innerHTML = '<i data-lucide="frown" width="20" height="20" style="color:#9ca3af;vertical-align:-3px"></i> Không có thẻ nào';
+    const qFilterSummary = activeFilterSummaryText();
+    h2qempty.innerHTML = '<i data-lucide="frown" width="20" height="20" style="color:#9ca3af;vertical-align:-3px"></i> Không có thẻ nào' +
+      (qFilterSummary ? `<div style="font-size:0.8rem;font-weight:500;color:#94a3b8;margin-top:6px">Đang lọc: ${qFilterSummary} <button type="button" onclick="resetVocabFilters()" style="margin-left:6px;color:#6366f1;background:none;border:none;font-weight:700;cursor:pointer;text-decoration:underline">Xóa bộ lọc</button></div>` : '');
     lucide.createIcons({ nodes: [h2qempty] });
     document.getElementById('quizResult').classList.remove('hidden');
     return;
@@ -2420,7 +2491,11 @@ function renderQuiz() {
   const hasAnts = c.antonyms && c.antonyms.length > 0;
 
   let candidateTypes = ['vi_to_en', 'en_to_vi'];
-  if (tier === 'EASY') {
+  if (pronMode) {
+    candidateTypes = ['listening_basic'];
+    if (c.phonetic_distractors && c.phonetic_distractors.length >= MIN_PHONETIC_DISTRACTORS) candidateTypes.push('listening_minimal');
+    if (c.ipa_distractors && new Set(Object.values(c.ipa_distractors)).size >= MIN_PHONETIC_DISTRACTORS) candidateTypes.push('ipa_pick');
+  } else if (tier === 'EASY') {
     candidateTypes = ['vi_to_en', 'en_to_vi', 'listening_basic'];
   } else if (tier === 'MEDIUM') {
     candidateTypes = [];
@@ -2436,7 +2511,7 @@ function renderQuiz() {
     if (hasSyns && exHasTerm) candidateTypes.push('synonym_match');
     if (hasCollocs) candidateTypes.push('collocations');
     if (hasAnts) candidateTypes.push('antonyms');
-    if (c.phonetic_distractors && c.phonetic_distractors.length >= 3) candidateTypes.push('listening_minimal');
+    if (c.phonetic_distractors && c.phonetic_distractors.length >= MIN_PHONETIC_DISTRACTORS) candidateTypes.push('listening_minimal');
     candidateTypes.push('listening_basic');
     if (candidateTypes.length === 0) candidateTypes = ['vi_to_en', 'en_to_vi'];
   } else { // HARDCORE - Academic / Hardcore Mastery!
@@ -2449,7 +2524,7 @@ function renderQuiz() {
     if (hasSyns && exHasTerm) candidateTypes.push('synonym_match');
     if (hasCollocs) candidateTypes.push('collocations');
     if (hasAnts) candidateTypes.push('antonyms');
-    if (c.phonetic_distractors && c.phonetic_distractors.length >= 3) candidateTypes.push('listening_minimal');
+    if (c.phonetic_distractors && c.phonetic_distractors.length >= MIN_PHONETIC_DISTRACTORS) candidateTypes.push('listening_minimal');
     if (candidateTypes.length === 0) candidateTypes = ['vi_to_en', 'en_to_vi'];
   }
 
@@ -2532,7 +2607,11 @@ function renderQuiz() {
     });
   } else if (quizType === 'en_def') {
     labelEl.innerHTML = 'Định nghĩa Anh-Anh — Chọn từ chính xác:';
-    qEl.innerHTML = `<div class="quiz-en-def-text"><i data-lucide="book-open" width="13" height="13" style="vertical-align:-2px"></i> "${c.en_def}"</div>`;
+    const hintHtml = c.en_def_vi
+      ? `<button type="button" class="quiz-hint-btn" onclick="this.nextElementSibling.classList.remove('hidden'); this.remove()"><i data-lucide="lightbulb" width="12" height="12" style="vertical-align:-2px"></i> Gợi ý</button>
+         <div class="quiz-hint-text hidden">${c.en_def_vi}</div>`
+      : '';
+    qEl.innerHTML = `<div class="quiz-en-def-text"><i data-lucide="book-open" width="13" height="13" style="vertical-align:-2px"></i> "${c.en_def}"</div>${hintHtml}`;
     const wrong = getSmartDistractors(c, 3, tier, quizType, c.term);
     opts = shuffle([c, ...wrong]);
     opts.forEach(opt => {
@@ -2562,12 +2641,13 @@ function renderQuiz() {
     });
   } else if (quizType === 'collocations' && hasCollocs) {
     labelEl.innerHTML = `Hoàn thành cụm từ (Collocations):`;
-    const colloc = c.collocations[Math.floor(Math.random() * c.collocations.length)];
-    const regex = new RegExp('\\b' + c.term.replace(/[.*+?^${}()|[\\]\\\\]/g, '\\$&') + '\\b', 'i');
-    let targetPart = colloc.replace(regex, '').trim();
-    if (!targetPart) { targetPart = c.term; }
+    const termEsc = c.term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const termRegex = new RegExp('\\b' + termEsc + '\\b', 'i');
+    const validCollocs = c.collocations.filter(col => col.replace(termRegex, '').trim());
+    const colloc = (validCollocs.length ? validCollocs : c.collocations)[Math.floor(Math.random() * (validCollocs.length || c.collocations.length))];
+    const targetPart = colloc.replace(termRegex, '').trim() || c.term;
     const blanked = colloc.replace(targetPart, '___');
-    qEl.innerHTML = `Từ nào thường đi kèm với từ <strong style="color:var(--text-color)">"${c.term}"</strong>?<br><em class="quiz-cloze-text" style="display:block;margin-top:10px;">"${blanked}"</em>`;
+    qEl.innerHTML = `Từ nào thường đi kèm với từ <strong>"${c.term}"</strong>?<br><em class="quiz-cloze-text" style="display:block;margin-top:10px;">"${blanked}"</em>`;
     const wrong = getSmartDistractors(c, 3, tier, 'collocations', targetPart);
     const correctObj = { term: targetPart, vi: 'Collocation' };
     opts = shuffle([correctObj, ...wrong]);
@@ -2636,28 +2716,15 @@ function renderQuiz() {
       btn.addEventListener('click', () => checkAnswer(btn));
       optsEl.appendChild(btn);
     });
-  } else if (quizType === 'listening_cloze') {
-    labelEl.innerHTML = 'Nghe câu ví dụ và chọn từ đúng điền vào chỗ trống:';
-    const regex = new RegExp(c.term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi');
-    const blanked = ex.replace(regex, '___');
-    qEl.innerHTML = `<button class="btn-speaker-huge" onclick="speak('${ex.replace(/'/g, "\\'")}')"><i data-lucide="volume-2" width="28" height="28"></i></button> <em class="quiz-cloze-text">"${blanked}"</em>`;
-    lucide.createIcons({ nodes: [qEl] });
-    const wrong = getSmartDistractors(c, 3, tier, 'cloze', c.term);
-    opts = shuffle([c, ...wrong]);
-    opts.forEach(opt => {
-      const btn = document.createElement('button');
-      btn.className = 'quiz-opt';
-      btn.textContent = opt.term;
-      if (opt === c) btn.dataset.correct = '1';
-      btn.addEventListener('click', () => checkAnswer(btn));
-      optsEl.appendChild(btn);
-    });
   } else if (quizType === 'listening_minimal') {
     labelEl.innerHTML = `Lắng nghe thật kỹ để phân biệt các âm tương đồng!`;
     qEl.innerHTML = `Nghe và chọn loa phát âm đúng của từ: <strong style="color:var(--text-color)">${c.vi.split('—')[0].trim()}</strong>`;
     const distractors = c.phonetic_distractors || [];
-    const wrong = distractors.slice(0, 3).map(w => ({ term: w, isAudioOpt: true }));
-    const correctObj = { term: c.term, isAudioOpt: true, orig: c };
+    const distractorIpaMap = c.ipa_distractors || {};
+    const correctIpa = parsePron(c.pron).us || parsePron(c.pron).uk;
+    const wrong = distractors.filter(w => (distractorIpaMap[w] || '') !== correctIpa)
+      .slice(0, 3).map(w => ({ term: w, ipa: distractorIpaMap[w] || '', isAudioOpt: true }));
+    const correctObj = { term: c.term, ipa: correctIpa, isAudioOpt: true, orig: c };
     opts = shuffle([correctObj, ...wrong]);
 
     opts.forEach((opt, idx) => {
@@ -2684,12 +2751,28 @@ function renderQuiz() {
       btn.textContent = `Chọn Loa ${idx + 1}`;
       btn.dataset.origText = `Chọn Loa ${idx + 1}`;
       btn.dataset.revealText = opt.term;
+      if (opt.ipa) btn.dataset.revealIpa = opt.ipa;
       if (opt === correctObj) btn.dataset.correct = '1';
       btn.addEventListener('click', () => checkAnswer(btn));
 
       itemWrap.appendChild(playBtn);
       itemWrap.appendChild(btn);
       optsEl.appendChild(itemWrap);
+    });
+  } else if (quizType === 'ipa_pick') {
+    const correctIPA = parsePron(c.pron).us || parsePron(c.pron).uk;
+    labelEl.innerHTML = 'Nghe và chọn ký hiệu phiên âm <strong>IPA</strong> đúng của từ:';
+    qEl.innerHTML = `<div style="font-size:1.15em;font-weight:700;color:var(--text-color);margin-bottom:10px">${c.term}</div>` +
+      `<button class="btn-speaker-huge" onclick="speak('${c.term.replace(/'/g, "\\'")}')"><i data-lucide="volume-2" width="28" height="28"></i></button>`;
+    lucide.createIcons({ nodes: [qEl] });
+    const distractorIPAs = shuffle([...new Set(Object.values(c.ipa_distractors))].filter(ipa => ipa !== correctIPA)).slice(0, 3);
+    shuffle([correctIPA, ...distractorIPAs]).forEach(ipa => {
+      const btn = document.createElement('button');
+      btn.className = 'quiz-opt';
+      btn.innerHTML = `<span style="font-family:'Courier New',monospace;font-size:1.05em;letter-spacing:0.02em">${ipa}</span>`;
+      if (ipa === correctIPA) btn.dataset.correct = '1';
+      btn.addEventListener('click', () => checkAnswer(btn));
+      optsEl.appendChild(btn);
     });
   } else {
     labelEl.innerHTML = 'Chọn từ tiếng Anh đúng nghĩa:';
@@ -2719,7 +2802,8 @@ function checkAnswer(btn) {
     b.disabled = true;
     if (b.dataset.correct === '1') b.classList.add('correct');
     if (b.dataset.revealText) {
-      b.innerHTML = `${b.dataset.origText} <i data-lucide="arrow-right" width="14" height="14" style="vertical-align:-2px;margin:0 4px;display:inline-block"></i> <strong>${b.dataset.revealText}</strong>`;
+      const ipaHtml = b.dataset.revealIpa ? ` <span style="font-family:'Courier New',monospace;font-weight:400;opacity:0.85;font-size:0.9em">${b.dataset.revealIpa}</span>` : '';
+      b.innerHTML = `${b.dataset.origText} <i data-lucide="arrow-right" width="14" height="14" style="vertical-align:-2px;margin:0 4px;display:inline-block"></i> <strong>${b.dataset.revealText}</strong>${ipaHtml}`;
       lucide.createIcons({ nodes: [b] });
     }
   });
@@ -2734,15 +2818,19 @@ function checkAnswer(btn) {
   const c = quizCards[quizIdx];
   const explainEl = document.getElementById('quizExplain');
   const posDisplay = (c.pos && c.pos !== 'phrase' && c.pos !== 'phr.') ? ` <em>(${c.pos})</em>` : '';
-  const pronDisplay = c.pron ? ` <span style="font-family:monospace;color:#8b5cf6;font-size:0.95em">/${c.pron.replace(/^\/|\/$/g, '')}/</span>` : '';
+  const _pp = parsePron(c.pron);
+  const pronDisplay = (_pp.us || _pp.uk) ? ` <span style="font-family:monospace;color:#8b5cf6;font-size:0.95em">${_pp.us || _pp.uk}</span>` : '';
   let exHtml = `<strong>${c.term}</strong>${pronDisplay}${posDisplay}: ${c.vi}` +
     (c.en_def ? `<br><span style="font-size:0.84rem; opacity:0.85"><i data-lucide="book-open" width="12" height="12" style="vertical-align:-2px"></i> ${c.en_def}</span>` : '') +
     (c.example ? `<br><em style="opacity:0.95">"${c.example}"</em>` : '');
   if (c.collocations && c.collocations.length) {
-    exHtml += `<div style="margin-top:6px;"><span class="extra-label"><i data-lucide="lightbulb" width="13" height="13" style="vertical-align:-2px"></i> Collocations:</span> ${c.collocations.map(col => `<span class="extra-pill">${col}</span>`).join(' ')}</div>`;
+    exHtml += `<div style="margin-top:6px;"><span class="extra-label"><i data-lucide="lightbulb" width="13" height="13" style="vertical-align:-2px"></i> Collocations:</span> ${c.collocations.map(col => `<span class="extra-pill">${col}${pillVi(col, c.collocations_vi)}</span>`).join(' ')}</div>`;
   }
   if (c.synonyms && c.synonyms.length) {
-    exHtml += `<div style="margin-top:4px;"><span class="extra-label"><i data-lucide="link-2" width="13" height="13" style="vertical-align:-2px"></i> Đồng nghĩa:</span> ${c.synonyms.map(s => `<span class="extra-pill syn-pill">${s}</span>`).join(' ')}</div>`;
+    exHtml += `<div style="margin-top:4px;"><span class="extra-label"><i data-lucide="link-2" width="13" height="13" style="vertical-align:-2px"></i> Đồng nghĩa:</span> ${c.synonyms.map(s => `<span class="extra-pill syn-pill">${s}${pillVi(s, c.synonyms_vi)}</span>`).join(' ')}</div>`;
+  }
+  if (c.antonyms && c.antonyms.length) {
+    exHtml += `<div style="margin-top:4px;"><span class="extra-label"><i data-lucide="arrow-left-right" width="13" height="13" style="vertical-align:-2px"></i> Trái nghĩa:</span> ${c.antonyms.map(a => `<span class="extra-pill" style="background:#fee2e2;color:#dc2626;border-color:#fca5a5">${a}${pillVi(a, c.antonyms_vi)}</span>`).join(' ')}</div>`;
   }
   explainEl.innerHTML = exHtml;
   lucide.createIcons({ nodes: [explainEl] });
@@ -2962,6 +3050,7 @@ function renderTimelineSort(q) {
         }).join('<br>');
         const explainEl = document.getElementById('cqExplain');
         explainEl.innerHTML = `Thứ tự đúng:<br>${lines}`;
+        lucide.createIcons({ nodes: [explainEl] });
         explainEl.classList.remove('hidden');
         document.getElementById('cqBtnNext').classList.remove('hidden');
       }
@@ -3063,8 +3152,13 @@ function updatePracticeBackBar() {
     if (topicBar) topicBar.style.display = '';
     if (stateBar) stateBar.style.display = '';
     if (diffPopupBar) {
-      diffPopupBar.style.display = '';
-      buildDifficultyBar();
+      // Luyện Phát âm khoá cứng loại câu hỏi (xem buildQuizQuestion) -- Difficulty không có tác dụng, nên ẩn đi.
+      if (pronMode) {
+        diffPopupBar.style.display = 'none';
+      } else {
+        diffPopupBar.style.display = '';
+        buildDifficultyBar();
+      }
     }
     showProg();
   } else if (practiceSubMode === 'cluster_pane') {
@@ -3120,6 +3214,7 @@ document.getElementById('modeSel').addEventListener('click', e => {
 
 function showPracticeHome() {
   practiceSubMode = 'home';
+  pronMode = false;
   buildDeckBar();
   updatePracticeBackBar();
   document.getElementById('practiceHome').classList.remove('hidden');
@@ -3136,10 +3231,20 @@ document.getElementById('quizSection').addEventListener('click', e => {
     document.getElementById('practiceHome').classList.add('hidden');
     if (optCard.dataset.practice === 'flash') {
       practiceSubMode = 'flash';
+      cardFilter = 'all';
+      pronMode = false;
+      document.getElementById('quizArea').classList.remove('hidden');
+      updatePracticeBackBar();
+      startSession();
+    } else if (optCard.dataset.practice === 'pron') {
+      practiceSubMode = 'flash';
+      cardFilter = 'all';
+      pronMode = true;
       document.getElementById('quizArea').classList.remove('hidden');
       updatePracticeBackBar();
       startSession();
     } else {
+      pronMode = false;
       practiceSubMode = 'cluster_pane';
       document.getElementById('clusterPracticePane').classList.remove('hidden');
       updatePracticeBackBar();
@@ -3182,6 +3287,7 @@ const TYPE_LABELS = { synonym:'Synonym', casual:'Casual', thematic:'Thematic', c
 let clusterData = [], clusterCards = [], clusterIdx = 0;
 let clusterTypeFilter = 'all', clusterRegFilter = 'all';
 let _clusterPromise = null;
+let _userGen = 0;  // tăng mỗi lần loadCards() chạy (đổi user) -- dùng để bỏ qua response /api/clusters lỗi thời
 
 function clusterState(c) {
   if (c.known) return 'known';
@@ -3195,10 +3301,11 @@ const STATE_ICON = {
 };
 
 async function ensureClusterData() {
+  const myGen = _userGen;
   if (!_clusterPromise) {
     _clusterPromise = fetch('/api/clusters')
       .then(r => { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
-      .then(data => { clusterData = data.clusters || []; })
+      .then(data => { if (myGen === _userGen) clusterData = data.clusters || []; })
       .catch(e => { _clusterPromise = null; throw e; });
   }
   return _clusterPromise;
@@ -3285,7 +3392,14 @@ function renderCluster() {
 
   if (clusterCards.length === 0) {
     area.classList.add('hidden');
-    document.getElementById('clusterResultText').textContent = 'Không có cluster nào phù hợp.';
+    const clusterResultTextEl = document.getElementById('clusterResultText');
+    const cParts = [];
+    if (deck !== 'all') cParts.push(deck === 'fav' ? 'Yêu thích' : `Level ${deck}`);
+    if (clusterTypeFilter !== 'all') cParts.push(clusterTypeFilter);
+    const cFilterSummary = cParts.join(' · ');
+    clusterResultTextEl.innerHTML = 'Không có cluster nào phù hợp.' +
+      (cFilterSummary ? `<div style="font-size:0.8rem;font-weight:500;color:#94a3b8;margin-top:6px">Đang lọc: ${cFilterSummary} <button type="button" onclick="deck='all'; clusterTypeFilter='all'; startClusters(); lucide.createIcons();" style="margin-left:6px;color:#6366f1;background:none;border:none;font-weight:700;cursor:pointer;text-decoration:underline">Xóa bộ lọc</button></div>` : '');
+    lucide.createIcons({ nodes: [clusterResultTextEl] });
     const h2trg = document.getElementById('clusterResult').querySelector('h2');
     h2trg.innerHTML = '<i data-lucide="frown" width="20" height="20" style="color:#9ca3af;vertical-align:-3px"></i> Trống';
     lucide.createIcons({ nodes: [h2trg] });
@@ -3496,7 +3610,6 @@ document.getElementById('clusterSection').addEventListener('click', e => {
   if (e.target.closest('#btnClusterKnown')) {
     c.known = !c.known;
     fetch('/api/known', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ key: c.id, known: c.known }) });
-    e.target.classList.toggle('known', c.known);
     e.target.classList.toggle('known', c.known);
     const si = document.getElementById('clusterStateIcon');
     if (si) { si.innerHTML = STATE_ICON[clusterState(c)]; lucide.createIcons({ nodes: [si] }); }

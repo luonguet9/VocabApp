@@ -6,9 +6,10 @@ import re
 import socket
 import sqlite3
 import sys
+import time
 from datetime import date
 from pathlib import Path
-from flask import Flask, jsonify, render_template, request, send_from_directory
+from flask import Flask, abort, jsonify, render_template, request, send_from_directory
 
 if getattr(sys, 'frozen', False):
     BUNDLE_DIR = Path(sys._MEIPASS)
@@ -47,7 +48,7 @@ def init_db():
         # Migration: add updated_at for existing DBs
         try:
             conn.execute("ALTER TABLE progress ADD COLUMN updated_at TEXT")
-        except Exception:
+        except sqlite3.OperationalError:
             pass  # column already exists
 
 def get_users():
@@ -61,12 +62,10 @@ def get_auth_user():
     user_id = request.headers.get("X-User-Id")
     pin = request.headers.get("X-User-Pin")
     if not user_id:
-        from flask import abort
         abort(401)
     for u in get_users().get("users", []):
         if u["id"] == user_id and u["pin"] == pin:
             return user_id
-    from flask import abort
     abort(401)
 
 def load_vocab(user_id) -> list[dict]:
@@ -92,21 +91,32 @@ def api_get_users():
     safe_users = [{"id": u["id"], "name": u["name"], "avatar": u["avatar"]} for u in users]
     return jsonify({"users": safe_users})
 
+LOGIN_MAX_ATTEMPTS = 5
+LOGIN_LOCKOUT_SECONDS = 60
+_login_attempts = {}  # ip -> (fail_count, last_fail_ts)
+
 @app.route("/api/login", methods=["POST"])
 def api_login():
+    ip = request.remote_addr
+    fail_count, last_fail = _login_attempts.get(ip, (0, 0))
+    if fail_count >= LOGIN_MAX_ATTEMPTS and time.time() - last_fail < LOGIN_LOCKOUT_SECONDS:
+        return jsonify({"ok": False, "error": "too many attempts"}), 429
+
     data = request.json or {}
     uid = data.get("id")
     pin = data.get("pin")
     for u in get_users().get("users", []):
         if u["id"] == uid and u["pin"] == pin:
+            _login_attempts.pop(ip, None)
             return jsonify({"ok": True})
+    _login_attempts[ip] = (fail_count + 1, time.time())
     return jsonify({"ok": False}), 401
 
 
 @app.route("/api/fav", methods=["POST"])
 def fav_card():
     user_id = get_auth_user()
-    data = request.json
+    data = request.json or {}
     key  = data.get("key", "")
     if not key:
         return jsonify({"ok": False, "error": "missing key"}), 400
@@ -121,7 +131,7 @@ def fav_card():
 @app.route("/api/known", methods=["POST"])
 def known_card():
     user_id = get_auth_user()
-    data = request.json
+    data = request.json or {}
     key  = data.get("key", "")
     if not key:
         return jsonify({"ok": False, "error": "missing key"}), 400
@@ -137,7 +147,7 @@ def known_card():
 @app.route("/api/start-day", methods=["POST"])
 def start_day():
     user_id = get_auth_user()
-    n         = int(request.json.get("new", 10))
+    n         = int((request.json or {}).get("new", 10))
     all_cards = load_vocab(user_id)
 
     today = date.today().isoformat()
@@ -174,7 +184,7 @@ def start_day():
             session.append(c)
             new_n += 1
 
-    _POOL_FIELDS = {"key", "term", "vi", "pos", "deck", "topic", "en_def", "phonetic_distractors"}
+    _POOL_FIELDS = {"key", "term", "vi", "pos", "deck", "topic", "en_def", "phonetic_distractors", "collocations"}
     pool = [{k: c[k] for k in _POOL_FIELDS if k in c} for c in all_cards]
     return jsonify({"cards": session, "all_cards": pool, "review": review_n,
                     "today_introduced": today_n, "new": new_n})
@@ -183,7 +193,7 @@ def start_day():
 @app.route("/api/introduce", methods=["POST"])
 def introduce():
     user_id = get_auth_user()
-    key   = request.json.get("key", "")
+    key   = (request.json or {}).get("key", "")
     today = date.today().isoformat()
     if not key:
         return jsonify({"ok": False}), 400

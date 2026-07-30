@@ -1,4 +1,4 @@
-const CACHE_NAME = 'vocab-offline-90218a83';
+const CACHE_NAME = 'vocab-offline-15ba4b3f';
 const ASSETS = [
   './',
   './index.html',
@@ -26,6 +26,7 @@ self.addEventListener('activate', e => {
 });
 
 self.addEventListener('fetch', e => {
+  if (e.request.method !== 'GET') return;  // Cache API chỉ chấp nhận GET -- POST (vd /api/sync) đi thẳng qua network
   e.respondWith(
     fetch(e.request)
       .then(res => {
@@ -33,6 +34,6 @@ self.addEventListener('fetch', e => {
         caches.open(CACHE_NAME).then(cache => cache.put(e.request, resClone));
         return res;
       })
-      .catch(() => caches.match(e.request))
+      .catch(() => caches.match(e.request).then(cached => cached || caches.match('./index.html')))
   );
 });

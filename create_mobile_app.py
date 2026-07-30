@@ -5,7 +5,6 @@ import re
 import json
 import hashlib
 import urllib.request
-import ssl
 from pathlib import Path
 
 LUCIDE_CDN = "https://unpkg.com/lucide@0.525.0/dist/umd/lucide.min.js"
@@ -17,6 +16,17 @@ MOBILE_DIR = BASE_DIR / "mobile"
 MOBILE_DIR.mkdir(exist_ok=True)
 OUT_HTML = MOBILE_DIR / "index.html"
 VOCAB_JS = MOBILE_DIR / "vocab.js"
+
+MANIFEST_CONTENT = {
+    "name": "Vocab Practice",
+    "short_name": "Vocab",
+    "description": "Offline English Vocabulary Practice",
+    "start_url": "./index.html",
+    "display": "standalone",
+    "background_color": "#0f172a",
+    "theme_color": "#0f172a",
+    "orientation": "portrait-primary",
+}
 
 def _hash_pin(pin) -> str:
     """SHA-256 hash of PIN, first 16 hex chars — stored in vocab.js instead of plain PIN."""
@@ -140,9 +150,10 @@ const CLUSTERS_DATA_MAP = {json.dumps(clusters_data_map, ensure_ascii=False, ind
                 const today = new Date().toLocaleDateString('en-CA');
                 const vocab = VOCAB_DATA_MAP[uid] || [];
 
+                const vocabKeys = new Set(vocab.map(item => item.key));
                 let today_n = 0;
                 for (const key of Object.keys(p)) {
-                    if (p[key] && p[key].date === today) today_n++;
+                    if (vocabKeys.has(key) && p[key] && p[key].date === today) today_n++;
                 }
                 let review_n = 0;
                 const session = [];
@@ -253,22 +264,34 @@ const CLUSTERS_DATA_MAP = {json.dumps(clusters_data_map, ensure_ascii=False, ind
     lucide_path = MOBILE_DIR / LUCIDE_LOCAL
     if not lucide_path.exists():
         print(f"[DL]  Downloading Lucide icons from CDN...")
-        ctx = ssl.create_default_context()
-        ctx.check_hostname = False
-        ctx.verify_mode = ssl.CERT_NONE
-        with urllib.request.urlopen(LUCIDE_CDN, context=ctx) as response, open(lucide_path, 'wb') as out_file:
+        with urllib.request.urlopen(LUCIDE_CDN) as response, open(lucide_path, 'wb') as out_file:
             out_file.write(response.read())
     print(f"[OK] Lucide icons available at {lucide_path}")
 
     # Replace CDN src with local path in mobile HTML
-    html = html.replace(
-        f'<script src="{LUCIDE_CDN}"></script>',
-        f'<script src="./{LUCIDE_LOCAL}"></script>'
-    )
+    cdn_tag = f'<script src="{LUCIDE_CDN}"></script>'
+    if cdn_tag not in html:
+        raise RuntimeError(
+            f"Lucide CDN tag not found in {SRC_HTML} -- LUCIDE_CDN is out of date "
+            "(version/attributes changed?). Update LUCIDE_CDN in create_mobile_app.py "
+            "or mobile/index.html will still point at the CDN and break offline."
+        )
+    html = html.replace(cdn_tag, f'<script src="./{LUCIDE_LOCAL}"></script>')
 
     with open(OUT_HTML, "w", encoding="utf-8") as f:
         f.write(html)
     print(f"[OK] Generated offline mobile app at {OUT_HTML}")
+
+    # Generate manifest.json (previously only existed because it was committed by hand)
+    with open(MOBILE_DIR / "manifest.json", "w", encoding="utf-8") as f:
+        json.dump(MANIFEST_CONTENT, f, ensure_ascii=False, indent=2)
+    print(f"[OK] Generated {MOBILE_DIR / 'manifest.json'}")
+
+    # Remove stale build artifacts from older versions of this script
+    stale_clusters_js = MOBILE_DIR / "clusters.js"
+    if stale_clusters_js.exists():
+        stale_clusters_js.unlink()
+        print(f"[OK] Removed stale {stale_clusters_js} (cluster data now lives in vocab.js)")
 
     # Generate sw.js with Network-First offline fallback strategy
     sw_path = MOBILE_DIR / "sw.js"
@@ -300,6 +323,7 @@ self.addEventListener('activate', e => {
 });
 
 self.addEventListener('fetch', e => {
+  if (e.request.method !== 'GET') return;  // Cache API chỉ chấp nhận GET -- POST (vd /api/sync) đi thẳng qua network
   e.respondWith(
     fetch(e.request)
       .then(res => {
@@ -307,7 +331,7 @@ self.addEventListener('fetch', e => {
         caches.open(CACHE_NAME).then(cache => cache.put(e.request, resClone));
         return res;
       })
-      .catch(() => caches.match(e.request))
+      .catch(() => caches.match(e.request).then(cached => cached || caches.match('./index.html')))
   );
 });
 """

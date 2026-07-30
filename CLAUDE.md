@@ -50,11 +50,23 @@ ENG/
   "topic": "Tech | Business | ...",
   "en_def": "English dictionary definition",
   "synonyms": ["word1", "word2"],
+  "antonyms": ["word1"],
   "collocations": ["colloc 1", "colloc 2"],
   "cluster": "cluster_1",
-  "day": 1
+  "day": 1,
+  "en_def_vi": "Bản dịch tiếng Việt của en_def — hint cho nút Gợi ý ở quiz en_def",
+  "synonyms_vi": {"word1": "nghĩa tiếng Việt"},
+  "antonyms_vi": {"word1": "nghĩa tiếng Việt"},
+  "collocations_vi": {"colloc 1": "nghĩa tiếng Việt"},
+  "example_vi": "Bản dịch tiếng Việt của example (data-only, CHƯA wire vào UI)",
+  "phonetic_distractors": ["word1", "word2", "word3"],
+  "ipa_distractors": {"word1": "/ipa1/", "word2": "/ipa2/"}
 }
 ```
+- Các field `*_vi` (trừ `en_def_vi`) và `phonetic_distractors`/`ipa_distractors` **không bắt buộc** — chỉ có ở phần lớn card đã được backfill; term nhiều từ (vd "merge conflict") thường không có 2 field distractors vì quiz phát âm chỉ áp dụng cho từ đơn.
+- `synonyms_vi`/`collocations_vi`/`antonyms_vi` là **object map** `{cụm gốc: nghĩa Việt}` (không phải mảng song song) để tránh lệch khi lọc/dedupe — dùng chung hàm `pillVi(text, viMap)` trong `index.html` để hiện `(nghĩa việt)` mờ cạnh mỗi pill, CHỈ ở flashcard back và explain box sau khi trả lời (không hiện lúc quiz đang hỏi collocations/synonym_match/antonyms vì các field gốc chính là đáp án quiz).
+- `ipa_distractors` là object map `{từ: IPA}` (không phải mảng) để giữ đúng liên kết từ↔IPA khi hiển thị.
+- **Bất biến quan trọng**: nếu sửa `en_def`, PHẢI generate lại `en_def_vi` tương ứng — 2 field này luôn phải khớp nội dung.
 
 ### 2. `clusters.json` Schema (Root)
 Mỗi cụm chứa `id`, `name`, `type`, `level`, `desc`, và mảng `words`.
@@ -88,6 +100,8 @@ Migration tự động khi server khởi động (ALTER TABLE nếu chưa có `u
 - **cardFilter**: `'all'` | `'unknown'` (chưa thuộc) | `'new'` | `'known'` — reset về `'all'` mỗi lần `loadCards()`.
 - **Lucide icons**: Dùng Lucide v0.525.0 (`<i data-lucide="name">`). **RULE**: Mỗi khi set `.innerHTML` có chứa `<i data-lucide>`, bắt buộc gọi `lucide.createIcons({ nodes: [el] })` ngay sau đó — nếu không icon sẽ không render (silent failure). Static HTML trong template tự render khi page load. Với `.textContent` phải đổi sang `.innerHTML` trước.
 - **Lucide trong mobile PWA**: `lucide.min.js` được bundle vào `mobile/` và load bởi `create_mobile_app.py`. Mọi Lucide pattern trong `index.html` cũng cần được patch vào `mobile/index.html`.
+- **Luyện Phát âm** (`pronMode`, Practice Home `data-practice="pron"`): khi bật, `buildQuizQuestion()` chỉ chọn trong 3 quiz type: `listening_basic` (luôn có), `listening_minimal` (cần `phonetic_distractors.length >= 3`), `ipa_pick` (cần `Object.values(c.ipa_distractors)` có ≥3 giá trị unique). Reset `pronMode = false` mỗi khi vào `showPracticeHome()` hoặc đổi mode khác.
+- **Nút "Gợi ý" (quiz `en_def`)**: `.quiz-hint-btn` ẩn `.quiz-hint-text` (chứa `c.en_def_vi`) mặc định, click để reveal — chỉ dịch phần định nghĩa (câu hỏi), không lộ đáp án (term).
 
 ## Offline Mobile Build (PWA cho Github Pages)
 ```bash
