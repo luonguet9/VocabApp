@@ -167,6 +167,7 @@ input[type=range]::-moz-range-thumb {
 }
 /* ── HEADER ─────────────────────────────────────────── */
 .header { width: 100%; margin-bottom: 16px; }
+#learnSection   { width: 100%; display: flex; flex-direction: column; align-items: center; }
 #flashSection { width: 100%; display: flex; flex-direction: column; align-items: center; }
 #quizSection  { width: 100%; display: flex; flex-direction: column; align-items: center; }
 #cardArea     { width: 100%; display: flex; flex-direction: column; align-items: center; }
@@ -312,6 +313,7 @@ h1 { font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; ga
 .deck-tag.B1 { background: #dcfce7; color: #15803d; }
 .deck-tag.B2 { background: #fef3c7; color: #92400e; }
 .deck-tag.C1 { background: #ffe4e6; color: #9f1239; }
+.deck-tag.C2 { background: #4c0519; color: #ffe4e6; }
 .topic-tag {
   font-size: 0.68rem; font-weight: 600;
   background: #f0fdf4; color: #15803d;
@@ -358,6 +360,11 @@ h1 { font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; ga
   display: inline-flex; align-items: center; justify-content: center;
 }
 .btn-pron:hover { background: #f3f4f6; }
+/* Compact icon-only variant when AmE/BrE differ and stack as 2 rows (avoid 2x full-size 36px buttons) */
+.pron-row .btn-pron {
+  min-width: 24px; min-height: 24px; padding: 0; border: none; background: transparent; border-radius: 50%;
+}
+.pron-row .btn-pron:hover { background: #f3f4f6; }
 .en-term    { font-size: 1.5rem; font-weight: 700; color: #111827; line-height: 1.4; }
 .en-example { font-size: 0.9rem; color: #6b7280; margin-top: 10px; font-style: italic; line-height: 1.5; }
 .flip-hint  { font-size: 0.75rem; color: #d1d5db; margin-top: 14px; }
@@ -521,6 +528,7 @@ h1 { font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; ga
   /* cluster desktop */
   .cluster-card { max-width: min(600px, calc(100vw - 48px)); border-radius: 20px; box-shadow: 0 8px 24px rgba(0,0,0,0.07); border: 1px solid rgba(226,232,240,0.8); }
   .cluster-nav  { max-width: min(600px, calc(100vw - 48px)); }
+  .pattern-card { max-width: min(600px, calc(100vw - 48px)); padding: 32px 36px; }
 
   .cluster-card-front { padding: 32px 36px 24px; gap: 12px; min-height: 280px; height: auto; }
   .cluster-badges .cluster-type-tag,
@@ -564,7 +572,7 @@ h1 { font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; ga
 }
 
 /* ── CLUSTER CARD ────────────────────────────────────────── */
-#clusterSection, #clusterArea, #clusterQuizArea { width: 100%; max-width: min(720px, calc(100vw - 48px)); display: flex; flex-direction: column; align-items: center; }
+#clusterSection, #clusterArea, #clusterQuizArea, #patternLearnArea, #patternQuizArea { width: 100%; max-width: min(720px, calc(100vw - 48px)); display: flex; flex-direction: column; align-items: center; }
 #clusterPracticePane { width: 100%; display: flex; flex-direction: column; align-items: center; }
 
 .cluster-card {
@@ -743,6 +751,98 @@ h1 { font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; ga
   background: #f0fdf4; border-radius: 12px; border: 1px solid #dcfce7;
   font-size: 0.82rem; color: #166534; border-left: 4px solid #22c55e; line-height: 1.5; font-weight: 500;
 }
+.cluster-dialogue-box {
+  margin: 10px 18px 8px; padding: 14px 16px;
+  background: #f8fafc; border-radius: 12px; border: 1px solid #e2e8f0;
+}
+.cluster-dialogue-title {
+  font-size: 0.72rem; font-weight: 800; color: #64748b; text-transform: uppercase;
+  letter-spacing: 0.04em; margin-bottom: 10px;
+}
+.cluster-dialogue-turn { display: flex; gap: 8px; margin-bottom: 8px; align-items: baseline; }
+.cluster-dialogue-turn:last-child { margin-bottom: 0; }
+.cluster-dialogue-speaker {
+  flex-shrink: 0; font-size: 0.72rem; font-weight: 800; color: #ffffff;
+  background: #94a3b8; border-radius: 50%; width: 20px; height: 20px;
+  display: flex; align-items: center; justify-content: center;
+}
+.cluster-dialogue-turn[data-speaker="B"] .cluster-dialogue-speaker { background: #6366f1; }
+.cluster-dialogue-text { font-size: 0.86rem; color: #334155; line-height: 1.5; }
+.cluster-dialogue-text strong { color: #4f46e5; font-weight: 700; }
+/* ── PATTERN (Luyện Pattern) ─────────────────────────────────────────────────
+   Màu sắc tái dùng đúng quy ước đã có sẵn trong app (không tự bịa màu mới):
+   - Badge bước học: tím giống .cluster-level-tag (đây là accent "thương hiệu" duy nhất của Pattern)
+   - Note ngữ pháp: xanh lá giống .cluster-tip-box (tip, không phải cảnh báo)
+   - alt_frame (cách nói tương đương): pill xám trung tính giống .cwt-note
+   - Cặp confusable (so sánh A/B): xanh dương giống .cluster-type-tag (side A) vs cam giống .cwt-warn (side B)
+     — CHỈ 2 màu này mang nghĩa "phe A / phe B", không dùng lại ở chỗ khác để khỏi gây nhầm nghĩa.
+─────────────────────────────────────────────────────────────────────────── */
+.pattern-card { width: 100%; max-width: 100%; background: #fff; border-radius: 20px; box-shadow: 0 4px 20px rgba(99,102,241,0.08), 0 1px 4px rgba(0,0,0,0.04); border: 1px solid #ede9fe; padding: 28px 22px; margin: 0 auto 16px; box-sizing: border-box; text-align: center; }
+.pattern-phase-badge {
+  display: block; width: fit-content; font-size: 0.7rem; font-weight: 800; color: #7c3aed; background: #ede9fe;
+  padding: 4px 12px; border-radius: 20px; letter-spacing: 0.03em; margin: 0 auto 16px;
+}
+.pattern-frame {
+  font-size: 1.6rem; font-weight: 800;
+  background: linear-gradient(135deg, #1e293b 0%, #4f46e5 100%);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+}
+.pattern-vi-frame { font-size: 1.02rem; color: #6b7280; margin-top: 6px; }
+.pattern-alt-frame {
+  display: inline-flex; align-items: center; gap: 4px; width: fit-content; margin: 10px auto 0;
+  font-size: 0.78rem; font-weight: 600; color: #475569; background: #f1f5f9; border: 1px solid #e2e8f0;
+  padding: 4px 12px; border-radius: 20px;
+}
+.pattern-note-box {
+  margin-top: 16px; padding: 14px 16px; background: #f0fdf4; border-radius: 12px; border: 1px solid #dcfce7; border-left: 4px solid #22c55e;
+  font-size: 0.82rem; color: #166534; line-height: 1.5; text-align: left; font-weight: 500;
+}
+.pattern-examples { margin-top: 16px; display: flex; flex-direction: column; gap: 10px; text-align: left; }
+.pattern-example-row {
+  display: flex; align-items: center; gap: 10px; background: #f8fafc; border-radius: 10px; padding: 10px 12px;
+}
+.pattern-example-text { flex: 1; min-width: 0; }
+.pattern-example-en { display: block; font-size: 0.92rem; color: #1e293b; font-weight: 600; }
+.pattern-example-vi { display: block; font-size: 0.8rem; color: #94a3b8; margin-top: 2px; }
+.pattern-shadow-hint { font-size: 0.85rem; color: #6b7280; margin-top: 10px; }
+.pattern-shadow-list { display: flex; flex-direction: column; gap: 14px; margin-top: 16px; text-align: left; }
+.pattern-shadow-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; background: #f8fafc; border-radius: 12px; padding: 14px; }
+.pattern-situation { margin-top: 16px; font-size: 0.98rem; color: #1e293b; line-height: 1.6; background: #f8fafc; border-radius: 12px; padding: 14px; text-align: left; }
+.pattern-hint-box { margin-top: 10px; font-size: 0.8rem; color: #6b7280; background: #f1f5f9; border-radius: 8px; padding: 8px 12px; text-align: left; }
+.pattern-answer-box { margin-top: 14px; display: flex; align-items: center; justify-content: space-between; gap: 12px; background: #ecfdf5; border: 1px solid #a7f3d0; border-radius: 12px; padding: 14px; text-align: left; }
+.pattern-answer-text { font-size: 0.98rem; color: #065f46; font-weight: 600; }
+.pattern-selfrate-row { display: flex; gap: 10px; margin-top: 16px; }
+.pattern-selfrate-row .btn { flex: 1; }
+.pattern-btn-row { margin-top: 20px; }
+.pattern-compare-block { width: 100%; box-sizing: border-box; border-radius: 14px; padding: 14px 16px; margin-top: 10px; }
+.pattern-compare-block.side-a { background: #e0f2fe; border: 1px solid #bae6fd; }
+.pattern-compare-block.side-b { background: #fff7ed; border: 1px solid #fed7aa; }
+.pattern-compare-block .pattern-frame { font-size: 1.25rem; background: none; -webkit-text-fill-color: initial; }
+.pattern-compare-block.side-a .pattern-frame { color: #0369a1; }
+.pattern-compare-block.side-b .pattern-frame { color: #9a3412; }
+.pattern-compare-block .pattern-situation, .pattern-compare-block .pattern-answer-box { margin-top: 12px; background: #fff; }
+.pattern-compare-divider {
+  display: block; width: fit-content; margin: 10px auto; font-size: 0.72rem; font-weight: 800; color: #fff;
+  background: #94a3b8; padding: 3px 14px; border-radius: 20px; letter-spacing: 0.05em;
+}
+.pattern-compare-label { font-size: 0.78rem; font-weight: 800; margin: 16px 0 6px; text-transform: uppercase; letter-spacing: 0.03em; text-align: left; color: #64748b; }
+.pattern-compare-label.side-a { color: #0369a1; }
+.pattern-compare-label.side-b { color: #9a3412; }
+[data-theme="dark"] .pattern-card { background: #1a1d2e; }
+[data-theme="dark"] .pattern-frame { background: none; -webkit-text-fill-color: #f8fafc; color: #f8fafc; }
+[data-theme="dark"] .pattern-example-row, [data-theme="dark"] .pattern-situation, [data-theme="dark"] .pattern-shadow-row { background: #0f1420; }
+[data-theme="dark"] .pattern-example-en { color: #e2e8f0; }
+[data-theme="dark"] .pattern-alt-frame { background: #1e2536; border-color: #334155; color: #cbd5e1; }
+[data-theme="dark"] .pattern-note-box { background: #052e1a; border-color: #14532d; color: #86efac; }
+[data-theme="dark"] .pattern-answer-box { background: #064e3b; border-color: #059669; }
+[data-theme="dark"] .pattern-answer-text { color: #a7f3d0; }
+[data-theme="dark"] .pattern-compare-block.side-a { background: #0c2a3d; border-color: #0369a1; }
+[data-theme="dark"] .pattern-compare-block.side-b { background: #431407; border-color: #9a3412; }
+[data-theme="dark"] .pattern-compare-block.side-a .pattern-frame { color: #7dd3fc; -webkit-text-fill-color: #7dd3fc; }
+[data-theme="dark"] .pattern-compare-block.side-b .pattern-frame { color: #fed7aa; -webkit-text-fill-color: #fed7aa; }
+[data-theme="dark"] .pattern-compare-block .pattern-situation, [data-theme="dark"] .pattern-compare-block .pattern-answer-box { background: #0f1420; }
+[data-theme="dark"] .pattern-compare-label.side-a { color: #7dd3fc; }
+[data-theme="dark"] .pattern-compare-label.side-b { color: #fed7aa; }
 .cluster-action-btns {
   display: flex; gap: 12px; padding: 16px 20px;
   border-top: 1px solid #f1f5f9; background: #ffffff;
@@ -815,8 +915,22 @@ h1 { font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; ga
 [data-theme="dark"] .setup-divider { border-color: #334155; }
 [data-theme="dark"] select { background: #1e293b !important; color: #f8fafc !important; border: 1px solid #334155 !important; }
 .quick-stats-bar { display:none; justify-content:center; gap:16px; flex-wrap:wrap; margin:6px 0 10px; font-size:0.82rem; font-weight:600; color:#64748b; }
+.checklist-badge { position:absolute; top:2px; right:2px; min-width:15px; height:15px; padding:0 3px; border-radius:8px; background:#f59e0b; color:#fff; font-size:0.62rem; font-weight:800; display:none; align-items:center; justify-content:center; line-height:1; }
+.checklist-badge.cb-all-done { background:#10b981; }
+.cl-item { display:flex; align-items:center; gap:10px; padding:10px 12px; border-radius:12px; border:1px solid #fde68a; background:#fffbeb; margin-bottom:8px; cursor:pointer; transition:transform 0.15s; }
+.cl-item:hover { transform:translateY(-1px); }
+.cl-item.cl-done { background:#ecfdf5; border-color:#a7f3d0; }
+.cl-item-icon { width:32px; height:32px; border-radius:9px; display:flex; align-items:center; justify-content:center; background:#ffedd5; color:#9a3412; flex:none; }
+.cl-item.cl-done .cl-item-icon { background:#d1fae5; color:#047857; }
+.cl-item-label { font-weight:700; font-size:0.9rem; color:#1e293b; }
+.cl-item-sub { font-size:0.78rem; color:#94a3b8; font-weight:500; }
+.cl-item-check { margin-left:auto; color:#cbd5e1; }
+.cl-item.cl-done .cl-item-check { color:#10b981; }
 [data-theme="dark"] .stats { color: #cbd5e1; }
 [data-theme="dark"] .quick-stats-bar { color: #94a3b8; }
+[data-theme="dark"] .cl-item { background:rgba(180,83,9,0.12); border-color:rgba(252,211,77,0.25); }
+[data-theme="dark"] .cl-item.cl-done { background:rgba(4,120,87,0.15); border-color:rgba(110,231,183,0.25); }
+[data-theme="dark"] .cl-item-label { color:#f8fafc; }
 [data-theme="dark"] .mode-bar { background: rgba(99,102,241,0.08); border-color: rgba(99,102,241,0.2); }
 [data-theme="dark"] .mode-tab { color: #94a3b8; }
 [data-theme="dark"] .mode-tab:hover:not(.active) { color: #f8fafc; background: rgba(255,255,255,0.1); }
@@ -836,6 +950,8 @@ h1 { font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; ga
 [data-theme="dark"] .en-example, [data-theme="dark"] .vi-pron, [data-theme="dark"] .pron-row, [data-theme="dark"] .flip-hint, [data-theme="dark"] .extra-label, [data-theme="dark"] .quiz-example-hint, [data-theme="dark"] .cq-card-desc, [data-theme="dark"] .cfw-vi-front { color: #94a3b8; }
 [data-theme="dark"] .btn-pron { background: #334155; border-color: #475569; color: #cbd5e1; }
 [data-theme="dark"] .btn-pron:hover { background: #475569; }
+[data-theme="dark"] .pron-row .btn-pron { background: transparent; border-color: transparent; color: #cbd5e1; }
+[data-theme="dark"] .pron-row .btn-pron:hover { background: #334155; }
 [data-theme="dark"] .btn-fav { background: #334155; border-color: #475569; color: #64748b; }
 [data-theme="dark"] .extra-pill, [data-theme="dark"] .cluster-front-word { background: #334155; border-color: #475569; color: #cbd5e1; }
 [data-theme="dark"] .syn-pill { background: #064e3b; border-color: #059669; color: #34d399; }
@@ -874,6 +990,9 @@ h1 { font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; ga
 [data-theme="dark"] .reg-pill { background: #334155; border-color: #475569; color: #cbd5e1; }
 [data-theme="dark"] .reg-pill:hover { background: #475569; color: #f8fafc; }
 [data-theme="dark"] .reg-pill.active { background: #4f46e5; color: #fff; border-color: #4f46e5; }
+[data-theme="dark"] .cluster-dialogue-box { background: #1a1d2e; border-color: rgba(99,102,241,0.15); }
+[data-theme="dark"] .cluster-dialogue-text { color: #cbd5e1; }
+[data-theme="dark"] .cluster-dialogue-text strong { color: #a5b4fc; }
 [data-theme="dark"] .cluster-word-entry { border-color: rgba(99,102,241,0.2); }
 [data-theme="dark"] .cluster-word-entry:hover { border-color: rgba(99,102,241,0.4); }
 [data-theme="dark"] .cwt-note { background: #334155; color: #cbd5e1; }
@@ -1005,16 +1124,47 @@ h1 { font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; ga
 <script>
 // ── OFFLINE MOCK API INTERCEPTOR ─────────────────────────────────────────────
 (function() {
+    // Migrate legacy single-track progress (flat 'vocab_progress_<uid>' key) to the new
+    // per-track key 'vocab_progress_<uid>_<trackId>', so an existing offline install doesn't lose data.
+    (function migrateLegacyProgress() {
+        try {
+            USERS_DATA.forEach(u => {
+                const legacyKey = 'vocab_progress_' + u.id;
+                const legacy = localStorage.getItem(legacyKey);
+                if (legacy === null) return;
+                const tracks = TRACKS_DATA_MAP[u.id] || [{id: 'default'}];
+                const newKey = 'vocab_progress_' + u.id + '_' + tracks[0].id;
+                if (localStorage.getItem(newKey) === null) localStorage.setItem(newKey, legacy);
+                localStorage.removeItem(legacyKey);
+            });
+        } catch(e) {}
+    })();
+
     function getUid() { return localStorage.getItem('vocabUserId'); }
+    function getTrackId() {
+        const uid = getUid();
+        const tracks = TRACKS_DATA_MAP[uid] || [{id: 'default'}];
+        const saved = uid && localStorage.getItem('vocabTrackId_' + uid);
+        if (saved && tracks.some(t => t.id === saved)) return saved;
+        return tracks[0].id;
+    }
+    // Track "shared" (Common/TOEIC/IELTS) chỉ lưu 1 bản dùng chung trong SHARED_VOCAB_DATA
+    // (không lặp lại theo từng user) -- tra field "shared" trên TRACKS_DATA_MAP để biết lấy
+    // đúng nguồn.
+    function getVocabForTrack(uid, trackId) {
+        const track = (TRACKS_DATA_MAP[uid] || []).find(t => t.id === trackId);
+        if (track && track.shared) return SHARED_VOCAB_DATA[trackId] || [];
+        return (VOCAB_DATA_MAP[uid] || {})[trackId] || [];
+    }
     window.getProgress = function() {
         const uid = getUid();
         if (!uid) return {};
-        try { return JSON.parse(localStorage.getItem('vocab_progress_' + uid) || '{}'); } catch(e) { return {}; }
+        try { return JSON.parse(localStorage.getItem('vocab_progress_' + uid + '_' + getTrackId()) || '{}'); } catch(e) { return {}; }
     };
     window.saveProgressData = function(data) {
         const uid = getUid();
         if (!uid) return;
-        try { localStorage.setItem('vocab_progress_' + uid, JSON.stringify(data)); } catch(e) {}
+        try { localStorage.setItem('vocab_progress_' + uid + '_' + getTrackId(), JSON.stringify(data)); } catch(e) {}
     };
     const offlineFetch = window.fetch;
     window.fetch = async function(resource, config) {
@@ -1050,10 +1200,15 @@ h1 { font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; ga
                 return errorResponse("Unauthorized", 401);
             }
 
+            if (resource === '/api/tracks') {
+                const tracks = TRACKS_DATA_MAP[uid] || [{id: 'default', name: 'Mặc định'}];
+                return jsonResponse({ tracks, default: tracks[0].id });
+            }
+
             if (resource === '/api/start-day') {
                 const p = window.getProgress();
                 const today = new Date().toLocaleDateString('en-CA');
-                const vocab = VOCAB_DATA_MAP[uid] || [];
+                const vocab = getVocabForTrack(uid, getTrackId());
 
                 const vocabKeys = new Set(vocab.map(item => item.key));
                 let today_n = 0;
@@ -1093,16 +1248,30 @@ h1 { font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; ga
 
             if (resource === '/api/clusters') {
                 const p = window.getProgress();
-                const clusters = (CLUSTERS_DATA_MAP[uid] || []).map(c => {
-                    const st = p[c.id] || {};
-                    return { ...c, fav: Boolean(st.fav), known: Boolean(st.known), introduced_date: st.date || null };
-                });
+                const trackId = getTrackId();
+                const clusters = CLUSTERS_DATA
+                    .filter(c => (c.tracks || []).includes(trackId))
+                    .map(c => {
+                        const st = p[c.id] || {};
+                        return { ...c, fav: Boolean(st.fav), known: Boolean(st.known), introduced_date: st.date || null };
+                    });
                 return jsonResponse({ clusters });
+            }
+
+            if (resource === '/api/patterns') {
+                const p = window.getProgress();
+                // Luyện Pattern dùng chung cho mọi user/track (không lọc theo track như vocab/cluster).
+                const patterns = PATTERNS_DATA
+                    .map(pt => {
+                        const st = p[pt.id] || {};
+                        return { ...pt, fav: Boolean(st.fav), known: Boolean(st.known), introduced_date: st.date || null };
+                    });
+                return jsonResponse({ patterns });
             }
 
             if (resource === '/api/history') {
                 const p = window.getProgress();
-                const vocab = VOCAB_DATA_MAP[uid] || [];
+                const vocab = getVocabForTrack(uid, getTrackId());
                 const termMap = {};
                 for (const c of vocab) termMap[c.key] = c.term;
 
@@ -1145,7 +1314,7 @@ h1 { font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; ga
             }
 
             if (resource === '/api/reset') {
-                localStorage.removeItem('vocab_progress_' + uid);
+                localStorage.removeItem('vocab_progress_' + uid + '_' + getTrackId());
                 return jsonResponse({ ok: true });
             }
 
@@ -1204,6 +1373,17 @@ h1 { font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; ga
   </div>
 </div>
 
+<!-- ── CHECKLIST HỌC DAILY ────────────────────────────── -->
+<div id="checklistOverlay" class="hidden popup-overlay">
+  <div class="popup-dialog">
+    <div class="popup-header">
+      <h2 class="popup-title"><i data-lucide="list-checks" width="17" height="17"></i> Checklist hôm nay</h2>
+      <button class="popup-close" onclick="document.getElementById('checklistOverlay').classList.add('hidden')"><i data-lucide="x" width="18" height="18"></i></button>
+    </div>
+    <div id="checklistContent" class="popup-body"></div>
+  </div>
+</div>
+
 
 <!-- ── HISTORY OVERLAY ────────────────────────────────── -->
 <div id="historyOverlay" class="hidden popup-overlay" style="z-index:1100;">
@@ -1237,6 +1417,12 @@ h1 { font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; ga
           </div>
         </div>
         <button class="popup-btn popup-btn-ghost" onclick="showLoginOverlay(true);" style="flex:none;padding:0 18px;min-height:38px;font-size:0.88rem;">Đổi</button>
+      </div>
+
+      <div id="trackSwitchSection" style="display:none;">
+        <p class="setup-section-title" style="margin-bottom:10px;">BỘ TỪ VỰNG</p>
+        <div id="trackSwitchBar" style="margin-bottom:16px;"></div>
+        <hr class="setup-divider" style="margin:16px 0;">
       </div>
 
       <p class="setup-section-title" style="margin-bottom:10px;">HỌC TẬP</p>
@@ -1308,6 +1494,7 @@ h1 { font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; ga
   <div class="header-top">
     <h1><i data-lucide="book-open" width="22" height="22" style="color:#6366f1;vertical-align:-3px"></i> <span class="title-gradient">Vocab Practice</span></h1>
     <div style="display:flex;gap:8px;align-items:center;">
+      <button class="btn-settings" id="btnOpenChecklist" style="position:relative;padding:8px;" title="Checklist học hôm nay"><i data-lucide="list-checks" width="18" height="18"></i><span id="checklistBadge" class="checklist-badge"></span></button>
       <div id="currentUserAvatar" class="avatar-circle" style="width:32px;height:32px;font-size:1.2rem;margin:0;border-radius:50%;background:#f1f5f9;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 4px rgba(0,0,0,0.05);cursor:pointer;" title="Đổi người dùng" onclick="showLoginOverlay(true);">👤</div>
       <button class="btn-settings" id="btnOpenSettings"><i data-lucide="settings" width="18" height="18"></i> Cài đặt</button>
     </div>
@@ -1315,14 +1502,13 @@ h1 { font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; ga
 
   <!-- Primary Navigation Mode Bar -->
   <div class="mode-bar" id="modeSel">
-    <button class="mode-tab" data-mode="cluster"><i data-lucide="layout-grid" width="18" height="18"></i> Clusters</button>
-    <button class="mode-tab active" data-mode="flash"><i data-lucide="layers" width="18" height="18"></i> Flashcard</button>
-    <button class="mode-tab" data-mode="quiz"><i data-lucide="pencil-line" width="18" height="18"></i> Practice</button>
+    <button class="mode-tab active" data-section="learn"><i data-lucide="book-open" width="18" height="18"></i> Học</button>
+    <button class="mode-tab" data-section="review"><i data-lucide="pencil-line" width="18" height="18"></i> Ôn luyện</button>
   </div>
 
   <!-- Unified Controls / Filter / Back Navigation Bar -->
   <div class="controls-bar" id="controlsBar" style="display:flex; align-items:center; justify-content:center; gap:10px; flex-wrap:wrap; margin-bottom:14px; width:100%;">
-    <button id="btnPracticeBack" class="btn-back-clean hidden" onclick="showPracticeHome()" style="margin:0; background:#ffffff; padding:7px 14px; border-radius:12px; border:1px solid #cbd5e1; font-weight:700; color:#334155; box-shadow:0 2px 4px rgba(0,0,0,0.03); display:flex; align-items:center; gap:4px; font-size:0.9rem; white-space:nowrap;">
+    <button id="btnPracticeBack" class="btn-back-clean hidden" onclick="goBackHome()" style="margin:0; background:#ffffff; padding:7px 14px; border-radius:12px; border:1px solid #cbd5e1; font-weight:700; color:#334155; box-shadow:0 2px 4px rgba(0,0,0,0.03); display:flex; align-items:center; gap:4px; font-size:0.9rem; white-space:nowrap;">
       <i data-lucide="chevron-left" width="16" height="16"></i> Về chọn môn
     </button>
     <div style="display:flex; gap:10px; flex-wrap:wrap; align-items:center; justify-content:center;">
@@ -1338,33 +1524,87 @@ h1 { font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; ga
   <div id="quickStatsBar" class="tab-only-flash quick-stats-bar" style="display:none;"></div>
 </div>
 
-<!-- ── FLASHCARD ──────────────────────────────────────── -->
-<div id="flashSection">
-  <div class="loading" id="loadingMsg">Đang tải dữ liệu...</div>
-</div>
-
-<!-- ── CLUSTER ─────────────────────────────────────────── -->
-<div id="clusterSection" class="hidden">
-  <div id="clusterArea">
-    <div id="clusterCard" class="cluster-card"></div>
+<!-- ── HỌC ─────────────────────────────────────────────── -->
+<div id="learnSection">
+  <!-- Landing: chọn nội dung học -->
+  <div id="learnHome" class="hidden" style="width:100%">
+    <div class="cq-practice-section">
+      <div class="cq-header" style="margin-top: 8px;">
+        <div class="cq-icon-glow"><i data-lucide="graduation-cap" width="32" height="32"></i></div>
+        <div class="cq-practice-title">Chế độ Học</div>
+        <div class="cq-practice-sub">Chọn nội dung để học từ vựng, cụm từ và mẫu câu mới</div>
+      </div>
+      <div class="cq-practice-cards">
+        <button class="cq-card-btn cq-all" data-learn="flash" style="background:linear-gradient(90deg, #ffffff 0%, #eff6ff 100%); border-color:#dbeafe;">
+          <div class="cq-icon-box" style="background:#dbeafe;"><span class="cq-card-icon"><i data-lucide="layers" width="28" height="28"></i></span></div>
+          <div class="cq-text-box">
+            <span class="cq-card-label">Flashcard</span>
+            <span class="cq-card-desc">Học từ mới và ôn lại theo lịch lặp lại ngắt quãng (spaced repetition)</span>
+          </div>
+          <span class="cq-card-count" style="background:#eff6ff; color:#1d4ed8; border:1px solid #bfdbfe;">Từ đơn</span>
+        </button>
+        <button class="cq-card-btn cq-all" data-learn="cluster" style="background:linear-gradient(90deg, #ffffff 0%, #faf5ff 100%); border-color:#e9d5ff;">
+          <div class="cq-icon-box" style="background:#f3e8ff;"><span class="cq-card-icon"><i data-lucide="layout-grid" width="28" height="28"></i></span></div>
+          <div class="cq-text-box">
+            <span class="cq-card-label">Cụm từ (Clusters)</span>
+            <span class="cq-card-desc">Học cách chọn đúng cụm từ/cách diễn đạt theo từng tình huống</span>
+          </div>
+          <span class="cq-card-count badge-purple">Cụm từ</span>
+        </button>
+        <button class="cq-card-btn cq-all" data-learn="pattern" style="background:linear-gradient(90deg, #ffffff 0%, #fff7ed 100%); border-color:#fed7aa;">
+          <div class="cq-icon-box" style="background:#ffedd5;"><span class="cq-card-icon"><i data-lucide="puzzle" width="28" height="28"></i></span></div>
+          <div class="cq-text-box">
+            <span class="cq-card-label">Pattern</span>
+            <span class="cq-card-desc">Học khung câu và tự tạo câu của riêng bạn để giao tiếp linh hoạt</span>
+          </div>
+          <span class="cq-card-count" style="background:#ffedd5;color:#9a3412;border:1px solid #fed7aa;">Pattern</span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <!-- Flashcard -->
+  <div id="flashSection">
+    <div class="loading" id="loadingMsg">Đang tải dữ liệu...</div>
+  </div>
+  <!-- Cluster -->
+  <div id="clusterSection" class="hidden">
+    <div id="clusterArea">
+      <div id="clusterCard" class="cluster-card"></div>
+      <div class="cluster-nav">
+        <button class="btn-nav" id="btnClusterPrev" disabled><i data-lucide="chevron-left" width="18" height="18"></i></button>
+        <span class="cluster-nav-info" id="clusterNavInfo"></span>
+        <button class="btn-nav" id="btnClusterNext"><i data-lucide="chevron-right" width="18" height="18"></i></button>
+      </div>
+    </div>
+    <div id="clusterResult" class="result-box hidden">
+      <h2><i data-lucide="trophy" width="20" height="20" style="color:#f59e0b;vertical-align:-3px"></i> Xem xong!</h2>
+      <p id="clusterResultText"></p>
+      <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
+        <button class="btn btn-restart" id="btnClusterRestart"><i data-lucide="shuffle" width="15" height="15"></i> Xem lại</button>
+      </div>
+    </div>
+  </div>
+  <!-- Pattern learn flow: Input → Shadowing → Production -->
+  <div id="patternLearnArea" class="hidden" style="width:100%">
+    <div class="pattern-card" id="patternCard"></div>
     <div class="cluster-nav">
-      <button class="btn-nav" id="btnClusterPrev" disabled><i data-lucide="chevron-left" width="18" height="18"></i></button>
-      <span class="cluster-nav-info" id="clusterNavInfo"></span>
-      <button class="btn-nav" id="btnClusterNext"><i data-lucide="chevron-right" width="18" height="18"></i></button>
+      <button class="btn-nav" id="btnPatternPrev" disabled><i data-lucide="chevron-left" width="18" height="18"></i></button>
+      <span class="cluster-nav-info" id="patternNavInfo"></span>
+      <button class="btn-nav" id="btnPatternNext"><i data-lucide="chevron-right" width="18" height="18"></i></button>
     </div>
   </div>
-  <div id="clusterResult" class="result-box hidden">
-    <h2><i data-lucide="trophy" width="20" height="20" style="color:#f59e0b;vertical-align:-3px"></i> Xem xong!</h2>
-    <p id="clusterResultText"></p>
+  <div id="patternLearnResult" class="result-box hidden">
+    <h2><i data-lucide="trophy" width="20" height="20" style="color:#f59e0b;vertical-align:-3px"></i> Xong rồi!</h2>
+    <p id="patternLearnResultText"></p>
     <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
-      <button class="btn btn-restart" id="btnClusterRestart"><i data-lucide="shuffle" width="15" height="15"></i> Xem lại</button>
+      <button class="btn btn-restart" style="background:#6b7280" onclick="goBackHome()"><i data-lucide="arrow-left" width="15" height="15"></i> Về chọn môn</button>
     </div>
   </div>
 </div>
 
-<!-- ── PRACTICE ────────────────────────────────────────── -->
+<!-- ── ÔN LUYỆN ────────────────────────────────────────── -->
 <div id="quizSection" class="hidden">
-  <!-- Landing: chọn loại practice -->
+  <!-- Landing: chọn loại ôn luyện -->
   <div id="practiceHome" style="width:100%">
     <div class="cq-practice-section">
       <div class="cq-header" style="margin-top: 8px;">
@@ -1377,7 +1617,7 @@ h1 { font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; ga
           <div class="cq-icon-box" style="background:#dbeafe;"><span class="cq-card-icon"><i data-lucide="layers" width="28" height="28"></i></span></div>
           <div class="cq-text-box">
             <span class="cq-card-label">Trắc nghiệm Từ vựng</span>
-            <span class="cq-card-desc">Ôn tập từ đơn B1, B2, C1, chuyên ngành qua các câu hỏi nhanh</span>
+            <span class="cq-card-desc">Ôn tập từ đơn B1, B2, C1, C2, chuyên ngành qua các câu hỏi nhanh</span>
           </div>
           <span class="cq-card-count" style="background:#eff6ff; color:#1d4ed8; border:1px solid #bfdbfe;">Từ đơn</span>
         </button>
@@ -1396,6 +1636,14 @@ h1 { font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; ga
             <span class="cq-card-desc">Nghe TTS, nhận diện phiên âm IPA và phân biệt các âm dễ nhầm lẫn</span>
           </div>
           <span class="cq-card-count" style="background:#cffafe;color:#155e75;border:1px solid #67e8f9;">Phát âm</span>
+        </button>
+        <button class="cq-card-btn cq-all" data-practice="pattern" style="background:linear-gradient(90deg, #ffffff 0%, #fff7ed 100%); border-color:#fed7aa;">
+          <div class="cq-icon-box" style="background:#ffedd5;"><span class="cq-card-icon"><i data-lucide="puzzle" width="28" height="28"></i></span></div>
+          <div class="cq-text-box">
+            <span class="cq-card-label">Trắc nghiệm Pattern</span>
+            <span class="cq-card-desc">Làm bài tập điền khung câu để củng cố, có chấm điểm ngay</span>
+          </div>
+          <span class="cq-card-count" style="background:#ffedd5;color:#9a3412;border:1px solid #fed7aa;">Pattern</span>
         </button>
       </div>
     </div>
@@ -1418,7 +1666,7 @@ h1 { font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; ga
     <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
       <button class="btn btn-restart" onclick="startSession()"><i data-lucide="refresh-cw" width="16" height="16"></i> Làm lại</button>
       <button class="btn btn-restart" style="background:#10b981" onclick="loadMoreCards()"><i data-lucide="book-open" width="15" height="15"></i> Học thêm</button>
-      <button class="btn btn-restart" style="background:#6b7280" onclick="showPracticeHome()"><i data-lucide="arrow-left" width="15" height="15"></i> Về chọn môn</button>
+      <button class="btn btn-restart" style="background:#6b7280" onclick="goBackHome()"><i data-lucide="arrow-left" width="15" height="15"></i> Về chọn môn</button>
     </div>
   </div>
   <!-- Cluster practice: chọn phạm vi -->
@@ -1454,6 +1702,28 @@ h1 { font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; ga
           </div>
           <span class="cq-card-count badge-purple" id="cqCountAll">–</span>
         </button>
+      </div>
+    </div>
+  </div>
+  <!-- Pattern quiz -->
+  <div id="patternQuizArea" class="hidden" style="width:100%">
+    <div class="quiz-wrap" id="patQuizWrap">
+      <div class="quiz-q-box">
+        <div class="quiz-q-label" id="patQLabel"></div>
+        <div class="quiz-q-text" id="patQ"></div>
+      </div>
+      <div class="quiz-options" id="patOpts"></div>
+      <div class="quiz-explain-box hidden" id="patExplain"></div>
+      <div class="quiz-next-wrap">
+        <button class="btn btn-next hidden" id="patBtnNext">Câu tiếp <i data-lucide="arrow-right" width="14" height="14"></i></button>
+      </div>
+    </div>
+    <div id="patQuizResult" class="result-box hidden">
+      <h2><i data-lucide="trophy" width="20" height="20" style="color:#f59e0b;vertical-align:-3px"></i> Xong rồi!</h2>
+      <p id="patQuizResultText"></p>
+      <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
+        <button class="btn btn-restart" onclick="startPatternQuiz()"><i data-lucide="refresh-cw" width="16" height="16"></i> Làm lại</button>
+        <button class="btn btn-restart" style="background:#6b7280" onclick="goBackHome()"><i data-lucide="arrow-left" width="15" height="15"></i> Về chọn môn</button>
       </div>
     </div>
   </div>
@@ -1493,6 +1763,7 @@ window.fetch = async function(resource, config) {
         config.headers = config.headers || {};
         config.headers['X-User-Id'] = localStorage.getItem('vocabUserId') || '';
         config.headers['X-User-Pin'] = localStorage.getItem('vocabUserPin') || '';
+        config.headers['X-Track-Id'] = activeTrackId || '';
     }
     const response = await originalFetch(resource, config);
     if (response.status === 401 && resource !== '/api/login') {
@@ -1502,6 +1773,20 @@ window.fetch = async function(resource, config) {
 };
 
 let currentLoginUserId = null;
+
+// ── VOCAB TRACK (Bộ từ vựng: Common/TOEIC/IELTS...) — KHÔNG liên quan đến biến
+// `deck` (lọc CEFR B1/B2/C1 hiện có), đây là khái niệm chọn FILE vocab khác nhau.
+let activeTrackId = 'default';
+function loadActiveTrackId() {
+    const uid = localStorage.getItem('vocabUserId') || '';
+    activeTrackId = localStorage.getItem('vocabTrackId_' + uid) || 'default';
+}
+function saveActiveTrackId(trackId) {
+    activeTrackId = trackId;
+    const uid = localStorage.getItem('vocabUserId') || '';
+    if (uid) localStorage.setItem('vocabTrackId_' + uid, trackId);
+}
+loadActiveTrackId();
 
 async function showLoginOverlay(isSwitching = false) {
     const overlay = document.getElementById('loginOverlay');
@@ -1533,6 +1818,8 @@ async function showLoginOverlay(isSwitching = false) {
                 div.onclick = () => {
                     document.getElementById('loginOverlay').classList.add('hidden');
                 };
+            } else if (u.no_pin) {
+                div.onclick = () => doLogin(u.id, '');
             } else {
                 div.onclick = () => showPinForm(u.id, u.name, u.avatar);
             }
@@ -1560,20 +1847,27 @@ function cancelLogin() {
     document.getElementById('userList').classList.remove('hidden');
 }
 
-async function submitLogin() {
-    const pin = document.getElementById('pinInput').value;
+async function doLogin(userId, pin) {
     const res = await originalFetch('/api/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ id: currentLoginUserId, pin: pin })
+        body: JSON.stringify({ id: userId, pin: pin })
     });
     if (res.ok) {
-        localStorage.setItem('vocabUserId', currentLoginUserId);
+        localStorage.setItem('vocabUserId', userId);
         localStorage.setItem('vocabUserPin', pin);
+        loadActiveTrackId();
         document.getElementById('loginOverlay').classList.add('hidden');
         document.getElementById('settingsOverlay').classList.add('hidden');
         loadCards();
-    } else {
+    }
+    return res.ok;
+}
+
+async function submitLogin() {
+    const pin = document.getElementById('pinInput').value;
+    const ok = await doLogin(currentLoginUserId, pin);
+    if (!ok) {
         showToast('Mã PIN không đúng!', 'err');
         document.getElementById('pinInput').value = '';
     }
@@ -1779,8 +2073,16 @@ async function updateCurrentUserUI() {
             if(setAvatarEl) setAvatarEl.innerHTML = user.avatar;
             const setNameEl = document.getElementById('settingsUserName');
             if(setNameEl) setNameEl.textContent = user.name;
+            await buildTrackSwitchBar();
             const btnReset = document.getElementById('btnReset');
-            if(btnReset) { btnReset.innerHTML = `<i data-lucide="alert-triangle" width="15" height="15" style="vertical-align:-2px"></i> Xóa tiến độ của ${user.name}`; lucide.createIcons({ nodes: [btnReset] }); }
+            if(btnReset) {
+                const activeTrack = _availableTracks.find(t => t.id === activeTrackId);
+                const resetLabel = (_availableTracks.length > 1 && activeTrack)
+                    ? `Xóa tiến độ bộ "${activeTrack.name}" của ${user.name}`
+                    : `Xóa tiến độ của ${user.name}`;
+                btnReset.innerHTML = `<i data-lucide="alert-triangle" width="15" height="15" style="vertical-align:-2px"></i> ${resetLabel}`;
+                lucide.createIcons({ nodes: [btnReset] });
+            }
             const btnSyncPC = document.getElementById('btnSyncPC');
             if(btnSyncPC) {
                 // "Đồng bộ với PC" chỉ có nghĩa ở bản mobile PWA (offline, progress lưu localStorage)
@@ -1798,10 +2100,14 @@ async function updateCurrentUserUI() {
 
 async function loadCards() {
   extraNew = 0;
-  deck = 'all'; topic = 'all'; cardFilter = 'all';
+  deck = 'all'; topic = 'all'; cardFilter = 'new';
   _userGen++;              // vô hiệu hoá mọi response /api/clusters đang bay của user cũ
   _clusterPromise = null;  // reset cluster cache on user switch
+  _patternPromise = null;  // reset pattern cache on user switch
   buildDeckBar();
+  applyTabOnlyClasses();
+  updatePracticeBackBar();
+  renderChecklistBadge();
   updateCurrentUserUI();
   await _fetchAndRender(dailyNew);
   // S2: silent auto-sync using saved IP or default Tailscale hostname
@@ -1893,6 +2199,7 @@ async function _fetchAndRender(n) {
   dictionaryCards = data.all_cards || data.cards;
   newServed     = data.today_introduced + data.new;
   newIntroduced = data.today_introduced;
+  renderChecklistBadge();
 
   buildDeckBar();
   renderQuickStats();
@@ -1956,7 +2263,8 @@ function getDeckCards() {
   if (deck === 'fav') return allCards.filter(c => c.fav);
   if (deck === 'B1')  return allCards.filter(c => c.deck === 'B1');
   if (deck === 'B2')  return allCards.filter(c => c.deck === 'B2');
-  if (deck === 'C1')  return allCards.filter(c => c.deck === 'C1' || c.deck === 'C1/C2');
+  if (deck === 'C1')  return allCards.filter(c => c.deck === 'C1');
+  if (deck === 'C2')  return allCards.filter(c => c.deck === 'C2');
   return [...allCards];
 }
 
@@ -2005,12 +2313,14 @@ function buildDeckBar() {
   } else {
     const b1n = allCards ? allCards.filter(c => c.deck === 'B1').length : 0;
     const b2n = allCards ? allCards.filter(c => c.deck === 'B2').length : 0;
-    const c1n = allCards ? allCards.filter(c => c.deck === 'C1' || c.deck === 'C1/C2').length : 0;
+    const c1n = allCards ? allCards.filter(c => c.deck === 'C1').length : 0;
+    const c2n = allCards ? allCards.filter(c => c.deck === 'C2').length : 0;
     items = [
       ['all', '<i data-lucide="globe" width="13" height="13" style="vertical-align:-2px"></i> All Levels', 'All'],
       ['B1', `<i data-lucide="book" width="13" height="13" style="vertical-align:-2px;color:#16a34a"></i> B1 Vocab (${b1n})`, `B1 (${b1n})`],
       ['B2', `<i data-lucide="book" width="13" height="13" style="vertical-align:-2px;color:#2563eb"></i> B2 Vocab (${b2n})`, `B2 (${b2n})`],
       ['C1', `<i data-lucide="book" width="13" height="13" style="vertical-align:-2px;color:#9333ea"></i> C1 Vocab (${c1n})`, `C1 (${c1n})`],
+      ['C2', `<i data-lucide="book" width="13" height="13" style="vertical-align:-2px;color:#9f1239"></i> C2 Vocab (${c2n})`, `C2 (${c2n})`],
       ['fav', '<i data-lucide="star" width="13" height="13" style="color:#f59e0b;vertical-align:-2px"></i> Favorites', '<i data-lucide="star" width="11" height="11" style="color:#f59e0b;vertical-align:-2px"></i> Fav']
     ];
   }
@@ -2112,7 +2422,7 @@ function buildStateBar() {
   const bar = document.getElementById('stateBar');
   if (!bar) return;
   bar.innerHTML = '';
-  if (mode === 'cluster' || practiceSubMode === 'cluster_pane' || practiceSubMode === 'cluster_quiz' || (mode === 'quiz' && practiceSubMode === 'home')) return;
+  if (mode === 'cluster' || mode === 'pattern' || mode === 'learn_home' || practiceSubMode === 'cluster_pane' || practiceSubMode === 'cluster_quiz' || (mode === 'quiz' && practiceSubMode === 'home')) return;
 
   const base = topic === 'all' ? sessionCards : sessionCards.filter(c => c.topic === topic);
   const nAll     = base.length;
@@ -2206,6 +2516,57 @@ function buildDifficultyPopupList(items) {
   lucide.createIcons({ nodes: [list] });
 }
 
+// ── VOCAB TRACK SWITCHER (Bộ từ vựng: Common/TOEIC/IELTS...) ──────────────────
+let _availableTracks = [];
+
+async function buildTrackSwitchBar() {
+  const section = document.getElementById('trackSwitchSection');
+  if (!section) return;
+  try {
+    const res = await fetch('/api/tracks');
+    const data = await res.json();
+    _availableTracks = data.tracks || [];
+  } catch(e) { _availableTracks = []; }
+
+  if (_availableTracks.length < 2) { section.style.display = 'none'; return; }
+  section.style.display = '';
+
+  const activeItem = _availableTracks.find(t => t.id === activeTrackId) || _availableTracks[0];
+  const trigger = document.createElement('button');
+  trigger.className = 'btn-topic-trigger';
+  trigger.style.width = '100%';
+  trigger.innerHTML = `<span><i data-lucide="library" width="12" height="12" style="vertical-align:-2px"></i> Bộ từ vựng: <strong>${activeItem.name}</strong></span> <i data-lucide="chevron-down" width="12" height="12" style="opacity:0.6;margin-left:4px"></i>`;
+  trigger.onclick = () => {
+    document.getElementById('topicPopupTitle').textContent = 'Chọn bộ từ vựng';
+    buildTrackSwitchPopupList(_availableTracks);
+    document.getElementById('topicPopupOverlay').classList.remove('hidden');
+  };
+  const wrap = document.getElementById('trackSwitchBar');
+  wrap.innerHTML = '';
+  wrap.appendChild(trigger);
+  lucide.createIcons({ nodes: [trigger] });
+}
+
+function buildTrackSwitchPopupList(items) {
+  const list = document.getElementById('topicPopupList');
+  list.innerHTML = '';
+  items.forEach(t => {
+    const btn = document.createElement('button');
+    btn.className = 'topic-popup-item' + (activeTrackId === t.id ? ' active' : '');
+    btn.innerHTML = `<span>${t.name}</span> <span class="tpi-check">${activeTrackId === t.id ? '<i data-lucide="check" width="13" height="13"></i>' : ''}</span>`;
+    btn.onclick = () => {
+      document.getElementById('topicPopupOverlay').classList.add('hidden');
+      if (activeTrackId !== t.id) {
+        saveActiveTrackId(t.id);
+        document.getElementById('settingsOverlay').classList.add('hidden');
+        loadCards();
+      }
+    };
+    list.appendChild(btn);
+  });
+  lucide.createIcons({ nodes: [list] });
+}
+
 function shuffle(arr) {
   const a = [...arr];
   for (let i = a.length - 1; i > 0; i--) {
@@ -2258,8 +2619,17 @@ function renderPronHTML(pron) {
 }
 
 // ── FLASHCARD ────────────────────────────────────────────────────────────────
+function trySwitchToReview() {
+  if (cardFilter !== 'new') return false;
+  cardFilter = 'unknown';
+  showToast('Đã học hết từ mới hôm nay — chuyển sang ôn tập từ chưa thuộc');
+  startSession();
+  return true;
+}
+
 function renderFlash() {
   if (flashCards.length === 0) {
+    if (trySwitchToReview()) return;
     document.getElementById('cardArea').classList.add('hidden');
     document.getElementById('resKnow').textContent    = '';
     document.getElementById('resUnknown').textContent = '';
@@ -2272,6 +2642,7 @@ function renderFlash() {
     return;
   }
   if (flashIdx >= flashCards.length) {
+    if (trySwitchToReview()) return;
     document.getElementById('cardArea').classList.add('hidden');
     document.getElementById('resKnow').textContent    = `Nhớ: ${knownCount()}`;
     document.getElementById('resUnknown').textContent = `Cần ôn: ${unknownCount()}`;
@@ -2362,6 +2733,7 @@ function introduceCard(c) {
   if (!c || !c.is_new) return;
   c.is_new = false;
   newIntroduced++;
+  renderChecklistBadge();
   _historyCache = null; // invalidate so renderQuickStats re-fetches fresh history
   fetch('/api/introduce', {
     method: 'POST',
@@ -2476,7 +2848,7 @@ function getCardTier(c) {
   if (currentDifficulty !== 'auto') {
     return currentDifficulty.toUpperCase();
   }
-  if (c.known || c.deck === 'C1' || c.deck === 'C1/C2') {
+  if (c.known || c.deck === 'C1' || c.deck === 'C2') {
     return Math.random() < 0.65 ? 'HARDCORE' : 'HARD';
   }
   if (c.deck === 'B2') return 'HARD';
@@ -2589,7 +2961,7 @@ function getSmartDistractors(c, count, tier, type, targetString) {
       if (x.key === c.key || x.term.toLowerCase() === targetLower) return false;
       const xPos = (x.pos || '').toLowerCase();
       const posMatch = (isVerb && xPos.includes('v.')) || (isNoun && xPos.includes('n.')) || (isAdj && xPos.includes('adj.')) || (!isVerb && !isNoun && !isAdj);
-      const levelMatch = (tier === 'HARD' || tier === 'HARDCORE') ? (x.deck === 'C1' || x.deck === 'C1/C2' || x.deck === 'B2') : true;
+      const levelMatch = (tier === 'HARD' || tier === 'HARDCORE') ? (x.deck === 'C1' || x.deck === 'C2' || x.deck === 'B2') : true;
       return posMatch && levelMatch && x.topic === c.topic;
     })));
   }
@@ -2627,6 +2999,7 @@ function renderQuiz() {
     h2qresult.innerHTML = '<i data-lucide="target" width="20" height="20" style="vertical-align:-3px"></i> Kết quả';
     lucide.createIcons({ nodes: [h2qresult] });
     document.getElementById('quizResult').classList.remove('hidden');
+    if (todayPlan().review.key === (pronMode ? 'pron' : 'quizVocab')) markChecklistDone('review');
     return;
   }
 
@@ -3078,6 +3451,7 @@ function renderClusterQuiz() {
     document.getElementById('cqResultText').innerHTML =
       `Đúng <strong>${cqScore} / ${cqQuestions.length}</strong> (${pct}%)`;
     result.classList.remove('hidden');
+    if (todayPlan().review.key === 'quizCluster') markChecklistDone('review');
     return;
   }
 
@@ -3287,28 +3661,44 @@ function updatePracticeBackBar() {
   const showProg = () => { if (progBar) progBar.style.display = ''; if (stats) stats.style.display = ''; };
   const hideProg = () => { if (progBar) progBar.style.display = 'none'; if (stats) stats.style.display = 'none'; };
 
-  if (mode !== 'quiz' || !practiceSubMode || practiceSubMode === 'home') {
+  if (mode === 'learn_home') {
     backBtn.classList.add('hidden');
-    if (mode === 'flash') {
-      controlsBar.style.display = 'flex';
-      if (deckBar) deckBar.style.display = '';
-      if (topicBar) topicBar.style.display = '';
-      if (stateBar) stateBar.style.display = '';
-      if (diffPopupBar) diffPopupBar.style.display = 'none';
-      showProg();
-    } else if (mode === 'cluster') {
-      controlsBar.style.display = 'flex';
-      if (deckBar) deckBar.style.display = '';
-      if (topicBar) topicBar.style.display = '';
-      if (stateBar) stateBar.style.display = 'none';
-      if (diffPopupBar) diffPopupBar.style.display = 'none';
-      showProg();
-    } else {
-      // quiz/home
-      controlsBar.style.display = 'none';
-      if (diffPopupBar) diffPopupBar.style.display = 'none';
-      hideProg();
-    }
+    controlsBar.style.display = 'none';
+    if (diffPopupBar) diffPopupBar.style.display = 'none';
+    hideProg();
+  } else if (mode === 'flash') {
+    // Flashcard giờ nằm trong nhóm Học (không còn là tab gốc) -- cần back button về #learnHome.
+    controlsBar.style.display = 'flex';
+    backBtn.classList.remove('hidden');
+    if (deckBar) deckBar.style.display = '';
+    if (topicBar) topicBar.style.display = '';
+    if (stateBar) stateBar.style.display = '';
+    if (diffPopupBar) diffPopupBar.style.display = 'none';
+    showProg();
+  } else if (mode === 'cluster') {
+    controlsBar.style.display = 'flex';
+    backBtn.classList.remove('hidden');
+    if (deckBar) deckBar.style.display = '';
+    if (topicBar) topicBar.style.display = '';
+    if (stateBar) stateBar.style.display = 'none';
+    if (diffPopupBar) diffPopupBar.style.display = 'none';
+    showProg();
+  } else if (mode === 'pattern') {
+    // Pattern-Học — không dùng filter deck/difficulty; topicBar được TÁI DÙNG để hiện bộ lọc
+    // "So sánh to-V/V-ing" (buildPatternScopeBar tự ẩn nếu track không có nội dung compare).
+    controlsBar.style.display = 'flex';
+    backBtn.classList.remove('hidden');
+    if (deckBar) deckBar.style.display = 'none';
+    if (topicBar) topicBar.style.display = '';
+    if (stateBar) stateBar.style.display = 'none';
+    if (diffPopupBar) diffPopupBar.style.display = 'none';
+    hideProg();
+  } else if (!practiceSubMode || practiceSubMode === 'home') {
+    // mode === 'quiz', Ôn luyện home
+    backBtn.classList.add('hidden');
+    controlsBar.style.display = 'none';
+    if (diffPopupBar) diffPopupBar.style.display = 'none';
+    hideProg();
   } else if (practiceSubMode === 'flash') {
     controlsBar.style.display = 'flex';
     backBtn.classList.remove('hidden');
@@ -3333,8 +3723,7 @@ function updatePracticeBackBar() {
     if (stateBar) stateBar.style.display = 'none';
     if (diffPopupBar) diffPopupBar.style.display = 'none';
     hideProg();
-  } else {
-    // cluster_quiz
+  } else if (practiceSubMode === 'cluster_quiz') {
     controlsBar.style.display = 'flex';
     backBtn.classList.remove('hidden');
     if (deckBar) deckBar.style.display = '';
@@ -3345,40 +3734,228 @@ function updatePracticeBackBar() {
       buildDifficultyBar();
     }
     showProg();
+  } else {
+    // pattern_quiz — không dùng filter deck/difficulty, nhưng controlsBar phải giữ 'flex'
+    // (không phải 'none') vì backBtn nằm BÊN TRONG controlsBar — ẩn cả controlsBar sẽ ẩn
+    // luôn backBtn dù đã gỡ class 'hidden' của riêng nó. topicBar tái dùng cho bộ lọc
+    // "So sánh to-V/V-ing".
+    controlsBar.style.display = 'flex';
+    backBtn.classList.remove('hidden');
+    if (deckBar) deckBar.style.display = 'none';
+    if (topicBar) topicBar.style.display = '';
+    if (stateBar) stateBar.style.display = 'none';
+    if (diffPopupBar) diffPopupBar.style.display = 'none';
+    hideProg();
   }
 }
 
-document.getElementById('modeSel').addEventListener('click', e => {
-  if (!e.target.dataset.mode) return;
-  if (mode === e.target.dataset.mode) return;
-  mode = e.target.dataset.mode;
-  document.querySelectorAll('#modeSel button').forEach(b => b.classList.toggle('active', b === e.target));
-  document.getElementById('flashSection').classList.toggle('hidden', mode !== 'flash');
-  document.getElementById('quizSection').classList.toggle('hidden', mode !== 'quiz');
-  document.getElementById('clusterSection').classList.toggle('hidden', mode !== 'cluster');
-  // Tab-specific elements: add class "tab-only-flash/quiz/cluster" to show only on that tab
-  ['flash', 'quiz', 'cluster'].forEach(m => {
+// ── Checklist học daily ──────────────────────────────────────────────────────
+// Mục tiêu: mỗi ngày học tối thiểu ~30 phút = Flashcard (10 từ mới, ~12-15 phút) + 1 mục Học
+// (Cluster/Pattern, ~8-10 phút) + 1 mục Ôn luyện (trắc nghiệm/phát âm, ~8-10 phút).
+// Flashcard KHÔNG lưu localStorage -- tính thẳng từ newIntroduced/dailyNew (dữ liệu progress.db
+// đã sync PC<->mobile). 2 mục còn lại lưu localStorage riêng theo thiết bị (KHÔNG sync) vì
+// progress.db không phân biệt được "vào Trắc nghiệm Từ vựng" với "vào Flashcard" (cùng ghi
+// chung /api/known -- xem chi tiết ở mem:project-daily-checklist-widget).
+const WEEKDAY_PLAN = [
+  { learn: { key: 'cluster', label: 'Cluster (Học)', icon: 'layout-grid' }, review: { key: 'pron',        label: 'Luyện Phát âm',        icon: 'headphones' } }, // CN
+  { learn: { key: 'cluster', label: 'Cluster (Học)', icon: 'layout-grid' }, review: { key: 'quizVocab',    label: 'Trắc nghiệm Từ vựng',  icon: 'sparkles' } },   // T2
+  { learn: { key: 'pattern', label: 'Pattern (Học)', icon: 'puzzle' },      review: { key: 'quizCluster',  label: 'Trắc nghiệm Cụm từ',   icon: 'package' } },   // T3
+  { learn: { key: 'cluster', label: 'Cluster (Học)', icon: 'layout-grid' }, review: { key: 'pron',        label: 'Luyện Phát âm',        icon: 'headphones' } }, // T4
+  { learn: { key: 'pattern', label: 'Pattern (Học)', icon: 'puzzle' },      review: { key: 'quizPattern',  label: 'Trắc nghiệm Pattern',  icon: 'target' } },    // T5
+  { learn: { key: 'cluster', label: 'Cluster (Học)', icon: 'layout-grid' }, review: { key: 'quizVocab',    label: 'Trắc nghiệm Từ vựng',  icon: 'sparkles' } },   // T6
+  { learn: { key: 'pattern', label: 'Pattern (Học)', icon: 'puzzle' },      review: { key: 'quizCluster',  label: 'Trắc nghiệm Cụm từ',   icon: 'package' } },   // T7
+];
+
+const LEARN_TARGET = 3; // số cụm/pattern mới cần học trong ngày để tính "xong" mục Học
+
+function todayStr() { return new Date().toLocaleDateString('en-CA'); }
+function todayPlan() { return WEEKDAY_PLAN[new Date().getDay()]; }
+function isFlashDoneToday() { return newIntroduced >= dailyNew; }
+
+// Đếm cụm/pattern có introduced_date === hôm nay -- dữ liệu progress.db ĐÃ SYNC PC<->mobile
+// (giống cơ chế newIntroduced của Flashcard), không cần localStorage cho mục Học.
+function countLearnedToday(key) {
+  const today = todayStr();
+  if (key === 'cluster') return (clusterData || []).filter(c => c.introduced_date === today).length;
+  if (key === 'pattern') return (patternData || []).filter(p => p.introduced_date === today).length;
+  return 0;
+}
+
+// Mục Ôn luyện (hoàn thành 1 lượt trắc nghiệm) KHÔNG có tín hiệu sống để tính lại -- phiên quiz
+// không lưu lại sau khi rời màn hình, nên vẫn cần cờ localStorage riêng theo thiết bị (không sync).
+function getTodayChecklist() {
+  const uid = localStorage.getItem('vocabUserId');
+  if (!uid) return null;
+  const storeKey = 'dailyChecklist_' + uid;
+  let state;
+  try { state = JSON.parse(localStorage.getItem(storeKey) || 'null'); } catch (e) { state = null; }
+  const today = todayStr();
+  if (!state || state.date !== today) {
+    state = { date: today, review: false };
+    localStorage.setItem(storeKey, JSON.stringify(state));
+  }
+  return state;
+}
+
+function markChecklistDone(item) {
+  const uid = localStorage.getItem('vocabUserId');
+  if (!uid) return;
+  const state = getTodayChecklist();
+  if (!state || state[item]) return; // đã đánh dấu rồi, khỏi ghi/re-render lại vô ích
+  state[item] = true;
+  localStorage.setItem('dailyChecklist_' + uid, JSON.stringify(state));
+  renderChecklistBadge();
+  if (!document.getElementById('checklistOverlay').classList.contains('hidden')) renderChecklistPopup();
+}
+
+// clusterData/patternData chỉ fetch lười (lazy) khi user thực sự vào tab đó trong phiên hiện tại
+// -- ensure đúng nguồn dữ liệu của "mục Học" hôm nay trước khi tính, để badge/popup không báo
+// thiếu (0/3) chỉ vì user chưa mở tab đó lần nào trong phiên, dù thực ra đã học đủ từ trước
+// (trên máy khác, hoặc phiên trước trong cùng ngày).
+async function ensureLearnDataForToday() {
+  const key = todayPlan().learn.key;
+  if (key === 'cluster') await ensureClusterData().catch(() => {});
+  else if (key === 'pattern') await ensurePatternData().catch(() => {});
+}
+
+async function renderChecklistBadge() {
+  const badge = document.getElementById('checklistBadge');
+  if (!badge) return;
+  const state = getTodayChecklist();
+  if (!state) { badge.style.display = 'none'; return; }
+  await ensureLearnDataForToday();
+  const learnDone = countLearnedToday(todayPlan().learn.key) >= LEARN_TARGET;
+  const doneCount = (isFlashDoneToday() ? 1 : 0) + (learnDone ? 1 : 0) + (state.review ? 1 : 0);
+  badge.textContent = doneCount + '/3';
+  badge.classList.toggle('cb-all-done', doneCount === 3);
+  badge.style.display = 'flex';
+}
+
+async function renderChecklistPopup() {
+  const el = document.getElementById('checklistContent');
+  if (!el) return;
+  await ensureLearnDataForToday();
+  const state = getTodayChecklist();
+  const plan = todayPlan();
+  const learnCount = Math.min(countLearnedToday(plan.learn.key), LEARN_TARGET);
+  const items = [
+    { key: 'flash', done: isFlashDoneToday(), label: 'Flashcard', sub: `Học từ mới ${Math.min(newIntroduced, dailyNew)}/${dailyNew} hôm nay`, icon: 'layers' },
+    { key: 'learn', done: learnCount >= LEARN_TARGET, label: plan.learn.label, sub: `Học ${learnCount}/${LEARN_TARGET} mới hôm nay`, icon: plan.learn.icon },
+    { key: 'review', done: state ? state.review : false, label: plan.review.label, sub: 'Hoàn thành 1 lượt trắc nghiệm hôm nay', icon: plan.review.icon },
+  ];
+  const doneCount = items.filter(i => i.done).length;
+  el.innerHTML = `
+    <p style="font-size:0.82rem;color:#94a3b8;margin:0 0 12px;">Hoàn thành <strong style="color:#1e293b">${doneCount}/3</strong> mục — mỗi ngày làm đủ 3 mục là đạt ~30 phút học.</p>
+    ${items.map(i => `
+      <div class="cl-item ${i.done ? 'cl-done' : ''}" data-checklist-goto="${i.key}">
+        <div class="cl-item-icon"><i data-lucide="${i.icon}" width="16" height="16"></i></div>
+        <div>
+          <div class="cl-item-label">${i.label}</div>
+          <div class="cl-item-sub">${i.sub}</div>
+        </div>
+        <div class="cl-item-check"><i data-lucide="${i.done ? 'check-circle-2' : 'circle'}" width="20" height="20"></i></div>
+      </div>
+    `).join('')}
+  `;
+  lucide.createIcons({ nodes: [el] });
+}
+
+document.getElementById('btnOpenChecklist').addEventListener('click', () => {
+  document.getElementById('checklistContent').innerHTML = '<p style="color:#9ca3af;font-size:0.85rem">Đang tải...</p>';
+  document.getElementById('checklistOverlay').classList.remove('hidden');
+  renderChecklistPopup();
+});
+document.getElementById('checklistOverlay').addEventListener('click', e => {
+  if (e.target === e.currentTarget) e.currentTarget.classList.add('hidden');
+});
+document.getElementById('checklistContent').addEventListener('click', e => {
+  const item = e.target.closest('[data-checklist-goto]');
+  if (!item) return;
+  const goto = item.dataset.checklistGoto;
+  document.getElementById('checklistOverlay').classList.add('hidden');
+  const plan = todayPlan();
+  if (goto === 'flash') { document.querySelector('#modeSel [data-section="learn"]').click(); document.querySelector('#learnHome [data-learn="flash"]').click(); }
+  else if (goto === 'learn') { document.querySelector('#modeSel [data-section="learn"]').click(); document.querySelector(`#learnHome [data-learn="${plan.learn.key}"]`).click(); }
+  else if (goto === 'review') {
+    document.querySelector('#modeSel [data-section="review"]').click();
+    if (plan.review.key === 'quizVocab') document.querySelector('#practiceHome [data-practice="flash"]').click();
+    else if (plan.review.key === 'quizCluster') document.querySelector('#practiceHome [data-practice="clusters"]').click();
+    else if (plan.review.key === 'pron') document.querySelector('#practiceHome [data-practice="pron"]').click();
+    else if (plan.review.key === 'quizPattern') document.querySelector('#practiceHome [data-practice="pattern"]').click();
+  }
+});
+
+// Tab-specific elements: add class "tab-only-flash/quiz/cluster/pattern/learn_home" to show only on that mode
+function applyTabOnlyClasses() {
+  ['flash', 'quiz', 'cluster', 'pattern', 'learn_home'].forEach(m => {
     document.querySelectorAll(`.tab-only-${m}`).forEach(el => {
       el.style.display = mode === m ? (el.dataset.tabDisplay || 'flex') : 'none';
     });
   });
+}
+
+document.getElementById('modeSel').addEventListener('click', e => {
+  if (!e.target.dataset.section) return;
+  const section = e.target.dataset.section; // 'learn' | 'review'
+  document.querySelectorAll('#modeSel button').forEach(b => b.classList.toggle('active', b === e.target));
+  document.getElementById('learnSection').classList.toggle('hidden', section !== 'learn');
+  document.getElementById('quizSection').classList.toggle('hidden', section !== 'review');
+  if (section === 'learn') { showLearnHome(); }
+  else { showPracticeHome(); }
+});
+
+// Đi về màn hình chọn của nhóm hiện tại (Học hay Ôn luyện) -- dùng chung cho mọi nút "Về chọn môn"
+function goBackHome() {
+  if (mode === 'quiz') showPracticeHome();
+  else showLearnHome();
+}
+
+function showLearnHome() {
+  mode = 'learn_home';
+  practiceSubMode = 'home';
+  pronMode = false;
+  applyTabOnlyClasses();
+  buildDeckBar();
   updatePracticeBackBar();
-  if (mode === 'cluster') {
+  document.getElementById('learnHome').classList.remove('hidden');
+  document.getElementById('flashSection').classList.add('hidden');
+  document.getElementById('clusterSection').classList.add('hidden');
+  document.getElementById('patternLearnArea').classList.add('hidden');
+  document.getElementById('patternLearnResult').classList.add('hidden');
+}
+
+document.getElementById('learnSection').addEventListener('click', e => {
+  const learnBtn = e.target.closest('[data-learn]');
+  if (!learnBtn) return;
+  document.getElementById('learnHome').classList.add('hidden');
+  if (learnBtn.dataset.learn === 'flash') {
+    mode = 'flash';
+    applyTabOnlyClasses();
+    document.getElementById('flashSection').classList.remove('hidden');
+    updatePracticeBackBar();
+    document.getElementById('topicBar').innerHTML = '';
+    startSession();
+  } else if (learnBtn.dataset.learn === 'cluster') {
+    mode = 'cluster';
+    applyTabOnlyClasses();
+    document.getElementById('clusterSection').classList.remove('hidden');
+    updatePracticeBackBar();
     activateClusters();
-    return;
+  } else {
+    mode = 'pattern';
+    applyTabOnlyClasses();
+    practiceSubMode = 'pattern_learn';
+    document.getElementById('patternLearnArea').classList.remove('hidden');
+    updatePracticeBackBar();
+    startPatternLearn();
   }
-  if (mode === 'quiz') {
-    showPracticeHome();
-    return;
-  }
-  // mode === 'flash'
-  document.getElementById('topicBar').innerHTML = '';
-  startSession();
 });
 
 function showPracticeHome() {
+  mode = 'quiz';
   practiceSubMode = 'home';
   pronMode = false;
+  applyTabOnlyClasses();
   buildDeckBar();
   updatePracticeBackBar();
   document.getElementById('practiceHome').classList.remove('hidden');
@@ -3386,6 +3963,7 @@ function showPracticeHome() {
   document.getElementById('quizResult').classList.add('hidden');
   document.getElementById('clusterPracticePane').classList.add('hidden');
   document.getElementById('clusterQuizArea').classList.add('hidden');
+  document.getElementById('patternQuizArea').classList.add('hidden');
 }
 
 document.getElementById('quizSection').addEventListener('click', e => {
@@ -3407,6 +3985,12 @@ document.getElementById('quizSection').addEventListener('click', e => {
       document.getElementById('quizArea').classList.remove('hidden');
       updatePracticeBackBar();
       startSession();
+    } else if (optCard.dataset.practice === 'pattern') {
+      pronMode = false;
+      practiceSubMode = 'pattern_quiz';
+      document.getElementById('patternQuizArea').classList.remove('hidden');
+      updatePracticeBackBar();
+      startPatternQuiz();
     } else {
       pronMode = false;
       practiceSubMode = 'cluster_pane';
@@ -3437,6 +4021,8 @@ document.getElementById('quizSection').addEventListener('click', e => {
   if (e.target.closest('#cqBtnNext')) { cqIdx++; renderClusterQuiz(); return; }
   if (e.target.closest('#btnCqRetry')) { cqIdx = 0; cqScore = 0; cqWrong = 0; renderClusterQuiz(); return; }
   if (e.target.closest('#btnExitClusterQuiz')) { exitClusterQuiz(); return; }
+  // Pattern quiz nav
+  if (e.target.closest('#patBtnNext')) { patQuizIdx++; renderPatternQuiz(); return; }
 });
 
 // ── CLUSTER ──────────────────────────────────────────────────────────────────
@@ -3452,6 +4038,59 @@ let clusterData = [], clusterCards = [], clusterIdx = 0;
 let clusterTypeFilter = 'all', clusterRegFilter = 'all';
 let _clusterPromise = null;
 let _userGen = 0;  // tăng mỗi lần loadCards() chạy (đổi user) -- dùng để bỏ qua response /api/clusters lỗi thời
+
+let patternData = [], patternCards = [], patternIdx = 0, patternPhase = 1; // phase 1=Input, 2=Shadowing, 3=Production
+let patternProdIdx = 0, patternProdRevealed = false;
+let _patternPromise = null;
+let patQuizQuestions = [], patQuizIdx = 0, patQuizScore = 0, patQuizWrong = 0;
+let patternScopeFilter = 'all'; // 'all' | 'compare' (chỉ các pattern có confusable_with)
+
+function getFilteredPatternData() {
+  if (patternScopeFilter === 'compare') return patternData.filter(p => p.confusable_with);
+  return patternData;
+}
+
+function buildPatternScopeBar() {
+  const bar = document.getElementById('topicBar');
+  if (!bar) return;
+  bar.innerHTML = '';
+  const hasCompare = patternData.some(p => p.confusable_with);
+  if (!hasCompare) return; // track này chưa có nội dung so sánh to-V/V-ing -> ẩn hẳn bộ lọc
+  const items = [['all', 'Tất cả'], ['compare', 'So sánh to-V/V-ing']];
+  const activeItem = items.find(([val]) => val === patternScopeFilter) || items[0];
+
+  const trigger = document.createElement('button');
+  trigger.className = 'btn-topic-trigger';
+  trigger.innerHTML = `<span><i data-lucide="split" width="12" height="12" style="vertical-align:-2px"></i> Phạm vi: <strong style="color:#7c3aed">${activeItem[1]}</strong></span> <i data-lucide="chevron-down" width="12" height="12" style="opacity:0.6;margin-left:4px"></i>`;
+  trigger.onclick = () => {
+    document.getElementById('topicPopupTitle').textContent = 'Chọn phạm vi';
+    buildPatternScopePopupList(items);
+    document.getElementById('topicPopupOverlay').classList.remove('hidden');
+  };
+  bar.appendChild(trigger);
+  lucide.createIcons({ nodes: [trigger] });
+}
+
+function buildPatternScopePopupList(items) {
+  const list = document.getElementById('topicPopupList');
+  list.innerHTML = '';
+  items.forEach(([val, label]) => {
+    const btn = document.createElement('button');
+    btn.className = 'topic-popup-item' + (patternScopeFilter === val ? ' active' : '');
+    btn.innerHTML = `<span><i data-lucide="folder-open" width="13" height="13" style="vertical-align:-2px"></i> ${label}</span> <span class="tpi-check">${patternScopeFilter === val ? '<i data-lucide="check" width="13" height="13"></i>' : ''}</span>`;
+    btn.onclick = () => {
+      if (patternScopeFilter !== val) {
+        patternScopeFilter = val;
+        buildPatternScopeBar();
+        if (practiceSubMode === 'pattern_learn') startPatternLearn();
+        else if (practiceSubMode === 'pattern_quiz') startPatternQuiz();
+      }
+      document.getElementById('topicPopupOverlay').classList.add('hidden');
+    };
+    list.appendChild(btn);
+  });
+  lucide.createIcons({ nodes: [list] });
+}
 
 function clusterState(c) {
   if (c.known) return 'known';
@@ -3528,13 +4167,7 @@ function getFilteredClusters() {
 }
 
 function startClusters() {
-  const lvWeight = { 'B1': 1, 'B2': 2, 'C1': 3 };
-  clusterCards = getFilteredClusters().slice().sort((a, b) => {
-    const wa = lvWeight[a.level] || 9;
-    const wb = lvWeight[b.level] || 9;
-    if (wa !== wb) return wa - wb;
-    return (a.name || '').localeCompare(b.name || '');
-  });
+  clusterCards = getFilteredClusters().slice().sort((a, b) => (a.order ?? 999) - (b.order ?? 999));
   clusterIdx = 0;
   clusterRegFilter = 'all';
   renderCluster();
@@ -3547,6 +4180,429 @@ function updateCqCounts() {
   const nAll     = filtered.length;
   [['cqCountUnknown', nUnknown], ['cqCountKnown', nKnown], ['cqCountAll', nAll]
   ].forEach(([id, n]) => { const el = document.getElementById(id); if (el) el.textContent = n; });
+}
+
+// ── PATTERN (Luyện Pattern) ─────────────────────────────────────────────────
+async function ensurePatternData() {
+  const myGen = _userGen;
+  if (!_patternPromise) {
+    _patternPromise = fetch('/api/patterns')
+      .then(r => { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+      .then(data => { if (myGen === _userGen) patternData = data.patterns || []; })
+      .catch(e => { _patternPromise = null; throw e; });
+  }
+  return _patternPromise;
+}
+
+function groupPatternUnits(list) {
+  // Ghép 2 pattern dễ nhầm (confusable_with) thành 1 "unit" học chung để so sánh trực tiếp,
+  // thay vì học nối tiếp 2 thẻ riêng biệt rồi mới so sánh ở cuối.
+  const seen = new Set();
+  const units = [];
+  list.forEach(p => {
+    if (seen.has(p.id)) return;
+    if (p.confusable_with) {
+      const sibling = list.find(x => x.id === p.confusable_with);
+      if (sibling && !seen.has(sibling.id)) {
+        units.push({ type: 'pair', patterns: [p, sibling] });
+        seen.add(p.id); seen.add(sibling.id);
+        return;
+      }
+    }
+    units.push({ type: 'single', patterns: [p] });
+    seen.add(p.id);
+  });
+  return units;
+}
+
+async function startPatternLearn() {
+  document.getElementById('patternCard').innerHTML = '<div class="loading">Đang tải pattern...</div>';
+  await ensurePatternData();
+  buildPatternScopeBar();
+  const sorted = [...getFilteredPatternData()].sort((a, b) => (a.order ?? 999) - (b.order ?? 999));
+  patternCards = groupPatternUnits(sorted);
+  patternIdx = 0; patternPhase = 1; patternProdIdx = 0; patternProdRevealed = false;
+  renderPatternPhase();
+}
+
+function pickProductionPrompt(p) {
+  const prompts = p.production_prompts || [];
+  if (!prompts.length) return null;
+  return prompts[Math.floor(Math.random() * prompts.length)];
+}
+
+function renderPatternPhase() {
+  const area = document.getElementById('patternLearnArea');
+  const result = document.getElementById('patternLearnResult');
+  if (!area) return;
+
+  if (patternCards.length === 0) {
+    area.classList.add('hidden');
+    document.getElementById('patternLearnResultText').textContent = 'Chưa có pattern nào cho track này.';
+    result.classList.remove('hidden');
+    return;
+  }
+  if (patternIdx >= patternCards.length) {
+    area.classList.add('hidden');
+    const totalPatterns = patternCards.reduce((sum, u) => sum + u.patterns.length, 0);
+    document.getElementById('patternLearnResultText').textContent = `Đã học ${totalPatterns} pattern trong phiên này.`;
+    result.classList.remove('hidden');
+    return;
+  }
+
+  area.classList.remove('hidden');
+  result.classList.add('hidden');
+
+  const unit = patternCards[patternIdx];
+  let html = '';
+  if (patternPhase === 1) html = buildPatternInputHTML(unit);
+  else if (patternPhase === 2) html = buildPatternShadowHTML(unit);
+  else html = buildPatternProductionHTML(unit);
+
+  document.getElementById('patternCard').innerHTML = html;
+  lucide.createIcons({ nodes: [document.getElementById('patternCard')] });
+  document.getElementById('patternNavInfo').textContent = `${patternIdx + 1} / ${patternCards.length}`;
+  document.getElementById('btnPatternPrev').disabled = (patternIdx === 0);
+  document.getElementById('btnPatternNext').disabled = false;
+}
+
+function patExampleRow(ex) {
+  return `<div class="pattern-example-row">
+      <div class="pattern-example-text">
+        <span class="pattern-example-en">${ex.en}</span>
+        <span class="pattern-example-vi">${ex.vi}</span>
+      </div>
+      <button class="btn-pron" data-term="${ex.en.replace(/"/g, '&quot;')}" data-accent="us"><i data-lucide="volume-2" width="14" height="14"></i></button>
+    </div>`;
+}
+
+function buildPatternInputHTML(unit) {
+  if (unit.type === 'single') return buildPatternInputSingle(unit.patterns[0]);
+  const [a, b] = unit.patterns;
+  return `
+    <div class="pattern-phase-badge">Bước 1/3 · Input — So sánh 2 cách dùng</div>
+    <div class="pattern-compare-block side-a">
+      <div class="pattern-frame">${a.frame}</div>
+      <div class="pattern-vi-frame">${a.vi_frame}</div>
+    </div>
+    <div class="pattern-compare-divider">VS</div>
+    <div class="pattern-compare-block side-b">
+      <div class="pattern-frame">${b.frame}</div>
+      <div class="pattern-vi-frame">${b.vi_frame}</div>
+    </div>
+    <div class="pattern-note-box"><i data-lucide="lightbulb" width="13" height="13" style="vertical-align:-2px"></i> ${a.note}</div>
+    <div class="pattern-compare-label side-a">Ví dụ — ${a.frame}</div>
+    <div class="pattern-examples">${(a.examples || []).map(patExampleRow).join('')}</div>
+    <div class="pattern-compare-label side-b">Ví dụ — ${b.frame}</div>
+    <div class="pattern-examples">${(b.examples || []).map(patExampleRow).join('')}</div>
+    <div class="pattern-btn-row">
+      <button class="btn btn-cluster-learning" data-nextphase="2">Tiếp theo: Nghe &amp; Lặp lại <i data-lucide="arrow-right" width="14" height="14"></i></button>
+    </div>`;
+}
+
+function buildPatternInputSingle(p) {
+  const examplesHtml = (p.examples || []).map(patExampleRow).join('');
+  const altHtml = p.alt_frame ? `<div class="pattern-alt-frame"><i data-lucide="shuffle" width="12" height="12" style="vertical-align:-2px"></i> Cách nói khác: <strong>${p.alt_frame}</strong></div>` : '';
+  return `
+    <div class="pattern-phase-badge">Bước 1/3 · Input</div>
+    <div class="pattern-frame">${p.frame}</div>
+    <div class="pattern-vi-frame">${p.vi_frame}</div>
+    ${altHtml}
+    <div class="pattern-note-box"><i data-lucide="lightbulb" width="13" height="13" style="vertical-align:-2px"></i> ${p.note}</div>
+    <div class="pattern-examples">${examplesHtml}</div>
+    <div class="pattern-btn-row">
+      <button class="btn btn-cluster-learning" data-nextphase="2">Tiếp theo: Nghe &amp; Lặp lại <i data-lucide="arrow-right" width="14" height="14"></i></button>
+    </div>`;
+}
+
+function patShadowRow(ex) {
+  return `<div class="pattern-shadow-row">
+      <span class="pattern-example-en">${ex.en}</span>
+      <button class="btn-speaker-huge" data-term="${ex.en.replace(/"/g, '&quot;')}" data-accent="us"><i data-lucide="volume-2" width="22" height="22"></i></button>
+    </div>`;
+}
+
+function buildPatternShadowHTML(unit) {
+  if (unit.type === 'single') return buildPatternShadowSingle(unit.patterns[0]);
+  const [a, b] = unit.patterns;
+  return `
+    <div class="pattern-phase-badge">Bước 2/3 · Shadowing — So sánh</div>
+    <div class="pattern-shadow-hint">Nghe rồi lặp lại — chú ý nghe rõ sự khác biệt giữa 2 cách dùng:</div>
+    <div class="pattern-compare-block side-a">
+      <div class="pattern-frame">${a.frame}</div>
+      <div class="pattern-shadow-list">${(a.examples || []).map(patShadowRow).join('')}</div>
+    </div>
+    <div class="pattern-compare-divider">VS</div>
+    <div class="pattern-compare-block side-b">
+      <div class="pattern-frame">${b.frame}</div>
+      <div class="pattern-shadow-list">${(b.examples || []).map(patShadowRow).join('')}</div>
+    </div>
+    <div class="pattern-btn-row">
+      <button class="btn btn-cluster-learning" data-nextphase="3">Tiếp theo: Tự thử <i data-lucide="arrow-right" width="14" height="14"></i></button>
+    </div>`;
+}
+
+function buildPatternShadowSingle(p) {
+  const rowsHtml = (p.examples || []).map(patShadowRow).join('');
+  return `
+    <div class="pattern-phase-badge">Bước 2/3 · Shadowing</div>
+    <div class="pattern-frame">${p.frame}</div>
+    <div class="pattern-shadow-hint">Nghe từng câu rồi tự lặp lại theo, có thể bấm nghe lại nhiều lần:</div>
+    <div class="pattern-shadow-list">${rowsHtml}</div>
+    <div class="pattern-btn-row">
+      <button class="btn btn-cluster-learning" data-nextphase="3">Tiếp theo: Tự thử <i data-lucide="arrow-right" width="14" height="14"></i></button>
+    </div>`;
+}
+
+function patAnswerBox(prompt) {
+  if (!prompt) return '';
+  return `<div class="pattern-answer-box">
+      <span class="pattern-answer-text">${prompt.sample_answer}</span>
+      <button class="btn-speaker-huge" data-term="${prompt.sample_answer.replace(/"/g, '&quot;')}" data-accent="us"><i data-lucide="volume-2" width="20" height="20"></i></button>
+    </div>`;
+}
+
+function buildPatternProductionHTML(unit) {
+  if (unit.type === 'single') return buildPatternProductionSingle(unit.patterns[0]);
+  const [a, b] = unit.patterns;
+  const promptA = pickProductionPrompt(a);
+  const promptB = pickProductionPrompt(b);
+  if (!patternProdRevealed) {
+    return `
+      <div class="pattern-phase-badge">Bước 3/3 · Production — Thử cả 2</div>
+      <div class="pattern-compare-block side-a">
+        <div class="pattern-frame">${a.frame}</div>
+        <div class="pattern-situation">${promptA ? promptA.situation_vi : 'Chưa có tình huống.'}</div>
+      </div>
+      <div class="pattern-compare-divider">VS</div>
+      <div class="pattern-compare-block side-b">
+        <div class="pattern-frame">${b.frame}</div>
+        <div class="pattern-situation">${promptB ? promptB.situation_vi : 'Chưa có tình huống.'}</div>
+      </div>
+      <div class="pattern-btn-row"><button class="btn btn-cluster-learning" id="btnPatternReveal">Xem câu mẫu cả 2</button></div>`;
+  }
+  return `
+    <div class="pattern-phase-badge">Bước 3/3 · Production — Thử cả 2</div>
+    <div class="pattern-compare-block side-a">
+      <div class="pattern-frame">${a.frame}</div>
+      <div class="pattern-situation">${promptA ? promptA.situation_vi : ''}</div>
+      ${patAnswerBox(promptA)}
+    </div>
+    <div class="pattern-compare-divider">VS</div>
+    <div class="pattern-compare-block side-b">
+      <div class="pattern-frame">${b.frame}</div>
+      <div class="pattern-situation">${promptB ? promptB.situation_vi : ''}</div>
+      ${patAnswerBox(promptB)}
+    </div>
+    <div class="pattern-selfrate-row">
+      <button class="btn btn-cluster-known" data-rate="good"><i data-lucide="circle-check" width="15" height="15" style="vertical-align:-2px"></i> Đã ổn</button>
+      <button class="btn btn-cluster-learning" data-rate="review"><i data-lucide="rotate-ccw" width="15" height="15" style="vertical-align:-2px"></i> Cần ôn thêm</button>
+    </div>`;
+}
+
+function buildPatternProductionSingle(p) {
+  const prompt = pickProductionPrompt(p);
+  if (!prompt) {
+    return `
+      <div class="pattern-phase-badge">Bước 3/3 · Production</div>
+      <div class="pattern-frame">${p.frame}</div>
+      <div class="pattern-situation">Chưa có tình huống luyện tập cho pattern này.</div>
+      <div class="pattern-btn-row"><button class="btn btn-cluster-learning" id="btnPatternSkip">Pattern tiếp theo <i data-lucide="arrow-right" width="14" height="14"></i></button></div>`;
+  }
+  const slotsHtml = p.common_slots ? Object.entries(p.common_slots).map(([slot, words]) =>
+    `<div><strong>${slot}:</strong> ${words.join(', ')}</div>`).join('') : '';
+  const hintHtml = p.common_slots ? `
+    <button class="btn-cluster-fav-back" id="btnPatternHint" style="margin-top:10px"><i data-lucide="help-circle" width="15" height="15" style="vertical-align:-2px"></i> Gợi ý</button>
+    <div class="pattern-hint-box hidden" id="patternHintBox">${slotsHtml}</div>` : '';
+
+  if (!patternProdRevealed) {
+    return `
+      <div class="pattern-phase-badge">Bước 3/3 · Production</div>
+      <div class="pattern-frame">${p.frame}</div>
+      <div class="pattern-situation">${prompt.situation_vi}</div>
+      ${hintHtml}
+      <div class="pattern-btn-row"><button class="btn btn-cluster-learning" id="btnPatternReveal">Xem câu mẫu</button></div>`;
+  }
+  return `
+    <div class="pattern-phase-badge">Bước 3/3 · Production</div>
+    <div class="pattern-frame">${p.frame}</div>
+    <div class="pattern-situation">${prompt.situation_vi}</div>
+    ${patAnswerBox(prompt)}
+    <div class="pattern-selfrate-row">
+      <button class="btn btn-cluster-known" data-rate="good"><i data-lucide="circle-check" width="15" height="15" style="vertical-align:-2px"></i> Đã ổn</button>
+      <button class="btn btn-cluster-learning" data-rate="review"><i data-lucide="rotate-ccw" width="15" height="15" style="vertical-align:-2px"></i> Cần ôn thêm</button>
+    </div>`;
+}
+
+document.getElementById('patternLearnArea').addEventListener('click', e => {
+  if (e.target.closest('#btnPatternPrev')) {
+    if (patternIdx > 0) { patternIdx--; patternPhase = 1; patternProdRevealed = false; renderPatternPhase(); } return;
+  }
+  if (e.target.closest('#btnPatternNext')) {
+    patternIdx++; patternPhase = 1; patternProdRevealed = false; renderPatternPhase(); return;
+  }
+  const nextBtn = e.target.closest('[data-nextphase]');
+  if (nextBtn) { patternPhase = parseInt(nextBtn.dataset.nextphase, 10); renderPatternPhase(); return; }
+
+  const speakBtn = e.target.closest('.btn-pron, .btn-speaker-huge');
+  if (speakBtn && speakBtn.dataset.term) { speak(speakBtn.dataset.term, speakBtn.dataset.accent || 'us'); return; }
+
+  if (e.target.closest('#btnPatternHint')) {
+    document.getElementById('patternHintBox')?.classList.toggle('hidden'); return;
+  }
+  if (e.target.closest('#btnPatternReveal')) {
+    patternProdRevealed = true; renderPatternPhase(); return;
+  }
+  if (e.target.closest('#btnPatternSkip')) {
+    patternIdx++; patternPhase = 1; patternProdRevealed = false; renderPatternPhase(); return;
+  }
+  const rateBtn = e.target.closest('[data-rate]');
+  if (rateBtn) {
+    const unit = patternCards[patternIdx];
+    const known = rateBtn.dataset.rate === 'good';
+    unit.patterns.forEach(p => {
+      fetch('/api/known', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ key: p.id, known }) });
+      if (!p.introduced_date) {
+        p.introduced_date = todayStr();
+        fetch('/api/introduce', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ key: p.id }) });
+      }
+    });
+    renderChecklistBadge();
+    patternIdx++; patternPhase = 1; patternProdRevealed = false; renderPatternPhase();
+    return;
+  }
+});
+
+// ── PATTERN QUIZ (Làm bài tập) ───────────────────────────────────────────────
+function patFrameHeadWord(frame) {
+  const STOP = new Set(['it', 'could', 'would', 'should', 'you', 'a', 'an', 'the']);
+  const words = frame.replace(/[?.…]/g, '').split(/\s+/).filter(Boolean);
+  for (const w of words) {
+    const wl = w.toLowerCase().replace(/[^a-z]/g, '');
+    if (wl && !STOP.has(wl)) return w;
+  }
+  return words[0] || frame;
+}
+
+function buildPatQuestions() {
+  const pool = getFilteredPatternData();
+  const allHeadWords = pool.map(p => patFrameHeadWord(p.frame));
+  const allFrames = pool.map(p => p.frame);
+  const questions = [];
+
+  pool.forEach((p, i) => {
+    const head = allHeadWords[i];
+    // Skip the cloze (blank-the-head-word) question for confusable pairs — both frames in
+    // a to-V/V-ing pair share the same base verb (vd "stop to V" / "stop doing sth" đều
+    // có head word "stop"), nên câu hỏi điền từ đầu khung không phân biệt được 2 nghĩa.
+    if (!p.confusable_with) {
+      const blanked = p.frame.replace(head, '___');
+      const distractors = shuffle(allHeadWords.filter((w, j) => j !== i && w.toLowerCase() !== head.toLowerCase()))
+        .filter((w, idx, arr) => arr.indexOf(w) === idx)
+        .slice(0, 3);
+      questions.push({
+        type: 'cloze',
+        promptHtml: `<span class="quiz-cloze-text">${blanked}</span><div style="font-size:0.8rem;color:#9ca3af;margin-top:6px">${p.vi_frame}</div>`,
+        options: shuffle([head, ...distractors]),
+        correct: head,
+        explain: p.note || ''
+      });
+    }
+
+    if (p.alt_frame) {
+      const distractors2 = shuffle(allFrames.filter((f, j) => j !== i)).slice(0, 3);
+      questions.push({
+        type: 'rewrite',
+        promptHtml: `Cách viết nào <strong>tương đương</strong> với "<em>${p.frame}</em>"?`,
+        options: shuffle([p.alt_frame, ...distractors2]),
+        correct: p.alt_frame,
+        explain: p.note || ''
+      });
+    }
+
+    // Confusable pair — test whether learner picks the RIGHT frame for the meaning,
+    // with the confusable sibling as the sharpest possible distractor.
+    if (p.confusable_with) {
+      const sibling = pool.find(x => x.id === p.confusable_with);
+      if (sibling) {
+        const otherFrames = shuffle(allFrames.filter((f, j) => j !== i && pool[j].id !== p.confusable_with)).slice(0, 2);
+        questions.push({
+          type: 'confuse',
+          promptHtml: `"<em>${p.vi_frame}</em>" — dùng khung câu nào?`,
+          options: shuffle([p.frame, sibling.frame, ...otherFrames]),
+          correct: p.frame,
+          explain: p.note || ''
+        });
+      }
+    }
+  });
+
+  return shuffle(questions);
+}
+
+async function startPatternQuiz() {
+  document.getElementById('patQ').textContent = 'Đang tải...';
+  await ensurePatternData();
+  buildPatternScopeBar();
+  patQuizQuestions = buildPatQuestions();
+  patQuizIdx = 0; patQuizScore = 0; patQuizWrong = 0;
+  renderPatternQuiz();
+}
+
+function renderPatternQuiz() {
+  const area = document.getElementById('patQuizWrap');
+  const result = document.getElementById('patQuizResult');
+
+  if (!patQuizQuestions.length) {
+    area.classList.add('hidden');
+    document.getElementById('patQuizResultText').textContent = 'Chưa có pattern nào để làm bài tập.';
+    result.classList.remove('hidden');
+    return;
+  }
+  if (patQuizIdx >= patQuizQuestions.length) {
+    const pct = Math.round(patQuizScore / patQuizQuestions.length * 100);
+    area.classList.add('hidden');
+    document.getElementById('patQuizResultText').innerHTML = `Đúng <strong>${patQuizScore} / ${patQuizQuestions.length}</strong> (${pct}%)`;
+    result.classList.remove('hidden');
+    if (todayPlan().review.key === 'quizPattern') markChecklistDone('review');
+    return;
+  }
+
+  area.classList.remove('hidden');
+  result.classList.add('hidden');
+  document.getElementById('patExplain').classList.add('hidden');
+  document.getElementById('patExplain').innerHTML = '';
+  document.getElementById('patBtnNext').classList.add('hidden');
+  document.getElementById('patOpts').innerHTML = '';
+
+  const q = patQuizQuestions[patQuizIdx];
+  document.getElementById('patQLabel').innerHTML =
+    `<i data-lucide="puzzle" width="13" height="13" style="vertical-align:-2px"></i> Câu ${patQuizIdx + 1}/${patQuizQuestions.length}`;
+  lucide.createIcons({ nodes: [document.getElementById('patQLabel')] });
+  document.getElementById('patQ').innerHTML = q.promptHtml;
+
+  const optsEl = document.getElementById('patOpts');
+  q.options.forEach(opt => {
+    const btn = document.createElement('button');
+    btn.className = 'quiz-opt';
+    btn.textContent = opt;
+    if (opt === q.correct) btn.dataset.correct = '1';
+    btn.addEventListener('click', () => {
+      if (btn.disabled) return;
+      const correct = btn.dataset.correct === '1';
+      document.querySelectorAll('#patOpts .quiz-opt').forEach(b => {
+        b.disabled = true;
+        if (b.dataset.correct === '1') b.classList.add('correct');
+      });
+      if (!correct) { btn.classList.add('wrong'); patQuizWrong++; } else { patQuizScore++; }
+      document.getElementById('stats').innerHTML =
+        `Pattern Quiz ${patQuizIdx + 1}/${patQuizQuestions.length} &nbsp;·&nbsp; <span class="badge-know">Đúng: ${patQuizScore}</span> &nbsp;·&nbsp; <span class="badge-unk">Sai: ${patQuizWrong}</span>`;
+      const explainEl = document.getElementById('patExplain');
+      if (q.explain) { explainEl.innerHTML = q.explain; explainEl.classList.remove('hidden'); }
+      document.getElementById('patBtnNext').classList.remove('hidden');
+    });
+    optsEl.appendChild(btn);
+  });
 }
 
 function renderCluster() {
@@ -3641,6 +4697,7 @@ function openClusterBack(c) {
     const stIcon = document.getElementById('clusterStateIcon');
     stIcon.innerHTML = STATE_ICON[clusterState(c)];
     lucide.createIcons({ nodes: [stIcon] });
+    renderChecklistBadge();
   }
   document.getElementById('clusterFront').classList.add('hidden');
   // Remove any existing back, re-render fresh
@@ -3652,6 +4709,22 @@ function openClusterBack(c) {
   back.innerHTML = buildBackHTML(c);
   document.getElementById('clusterCard').appendChild(back);
   lucide.createIcons({ nodes: [back] });
+}
+
+function buildDialogueHTML(dialogue) {
+  if (!dialogue || !dialogue.length) return '';
+  const esc = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  const turns = dialogue.map(t => {
+    const textHtml = esc(t.text).replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+    return `<div class="cluster-dialogue-turn" data-speaker="${t.speaker}">
+      <span class="cluster-dialogue-speaker">${t.speaker}</span>
+      <span class="cluster-dialogue-text">${textHtml}</span>
+    </div>`;
+  }).join('');
+  return `<div class="cluster-dialogue-box">
+    <div class="cluster-dialogue-title"><i data-lucide="message-circle" width="13" height="13" style="vertical-align:-2px"></i> Hội thoại minh họa</div>
+    ${turns}
+  </div>`;
 }
 
 function buildBackHTML(c) {
@@ -3698,6 +4771,7 @@ function buildBackHTML(c) {
   });
 
   const tipHtml = c.tip ? `<div class="cluster-tip-box"><i data-lucide="lightbulb" width="14" height="14" style="vertical-align:-2px"></i> ${c.tip}</div>` : '';
+  const dialogueHtml = buildDialogueHTML(c.dialogue);
 
   return `
     <div class="cluster-back-header">
@@ -3708,6 +4782,7 @@ function buildBackHTML(c) {
     <div class="cluster-reg-pills" id="clusterRegPills">${pills}</div>
     <div class="cluster-words-list" id="clusterWordsList">${wordsHtml}</div>
     ${tipHtml}
+    ${dialogueHtml}
     <div class="cluster-action-btns">
       <button class="btn btn-cluster-learning" id="btnClusterLearning"><i data-lucide="sprout" width="15" height="15" style="vertical-align:-2px"></i> Tiếp theo</button>
       <button class="btn-cluster-fav-back${c.fav ? ' active' : ''}" id="btnClusterFavBack"><i data-lucide="star" width="18" height="18"></i></button>
@@ -3901,4 +4976,3 @@ lucide.createIcons();
 </script>
 </body>
 </html>
-

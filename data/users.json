@@ -11,6 +11,12 @@
       "name": "Khánh",
       "avatar": "🎓",
       "pin": "0000"
+    },
+    {
+      "id": "guest",
+      "name": "Guest",
+      "avatar": "👋",
+      "pin": ""
     }
   ]
 }

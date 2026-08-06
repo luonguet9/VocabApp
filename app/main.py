@@ -28,7 +28,7 @@ PORT       = 5100
 def add_cors(response):
     response.headers["Access-Control-Allow-Origin"] = "*"
     response.headers["Access-Control-Allow-Methods"] = "GET, POST, OPTIONS"
-    response.headers["Access-Control-Allow-Headers"] = "Content-Type, X-User-Id, X-User-Pin"
+    response.headers["Access-Control-Allow-Headers"] = "Content-Type, X-User-Id, X-User-Pin, X-Track-Id"
     return response
 
 
@@ -51,6 +51,18 @@ def init_db():
         except sqlite3.OperationalError:
             pass  # column already exists
 
+        # Migration: add track_id for existing DBs, backfill với track mặc định của mỗi user
+        try:
+            conn.execute("ALTER TABLE progress ADD COLUMN track_id TEXT")
+        except sqlite3.OperationalError:
+            pass  # column already exists
+        for u in get_users().get("users", []):
+            default_track = get_tracks(u["id"])[0]["id"]
+            conn.execute(
+                "UPDATE progress SET track_id = ? WHERE user_id = ? AND track_id IS NULL",
+                (default_track, u["id"])
+            )
+
 def get_users():
     path = BASE_DIR / "data" / "users.json"
     if not path.exists():
@@ -68,8 +80,31 @@ def get_auth_user():
             return user_id
     abort(401)
 
-def load_vocab(user_id) -> list[dict]:
-    path = BASE_DIR / "data" / user_id / "vocab.json"
+_DEFAULT_TRACK = [{"id": "default", "name": "Mặc định", "file": "vocab.json"}]
+
+def get_tracks(user_id) -> list[dict]:
+    path = BASE_DIR / "data" / user_id / "tracks.json"
+    if not path.exists():
+        return _DEFAULT_TRACK
+    with open(path, encoding="utf-8") as f:
+        data = json.load(f)
+    return data.get("tracks") or _DEFAULT_TRACK
+
+def resolve_track(user_id, track_id) -> dict:
+    tracks = get_tracks(user_id)
+    if track_id:
+        for t in tracks:
+            if t["id"] == track_id:
+                return t
+    return tracks[0]
+
+def get_track_id():
+    return request.headers.get("X-Track-Id") or None
+
+def load_vocab(user_id, track_id=None) -> list[dict]:
+    track = resolve_track(user_id, track_id)
+    base = BASE_DIR / "data" / ("shared" if track.get("shared") else user_id)
+    path = base / track["file"]
     if not path.exists():
         return []
     with open(path, encoding="utf-8") as f:
@@ -88,8 +123,15 @@ def index():
 @app.route("/api/users", methods=["GET"])
 def api_get_users():
     users = get_users().get("users", [])
-    safe_users = [{"id": u["id"], "name": u["name"], "avatar": u["avatar"]} for u in users]
+    safe_users = [{"id": u["id"], "name": u["name"], "avatar": u["avatar"], "no_pin": not u.get("pin")} for u in users]
     return jsonify({"users": safe_users})
+
+@app.route("/api/tracks", methods=["GET"])
+def api_get_tracks():
+    user_id = get_auth_user()
+    tracks = get_tracks(user_id)
+    safe_tracks = [{"id": t["id"], "name": t["name"]} for t in tracks]
+    return jsonify({"tracks": safe_tracks, "default": tracks[0]["id"]})
 
 LOGIN_MAX_ATTEMPTS = 5
 LOGIN_LOCKOUT_SECONDS = 60
@@ -120,11 +162,12 @@ def fav_card():
     key  = data.get("key", "")
     if not key:
         return jsonify({"ok": False, "error": "missing key"}), 400
+    track_id = resolve_track(user_id, get_track_id())["id"]
     with sqlite3.connect(DB_PATH) as conn:
         conn.execute(
-            "INSERT INTO progress(user_id,key,fav,known,updated_at) VALUES(?,?,?,0,datetime('now')) "
+            "INSERT INTO progress(user_id,key,fav,known,updated_at,track_id) VALUES(?,?,?,0,datetime('now'),?) "
             "ON CONFLICT(user_id,key) DO UPDATE SET fav=excluded.fav, updated_at=excluded.updated_at",
-            (user_id, key, 1 if data.get("fav") else 0)
+            (user_id, key, 1 if data.get("fav") else 0, track_id)
         )
     return jsonify({"ok": True})
 
@@ -135,11 +178,12 @@ def known_card():
     key  = data.get("key", "")
     if not key:
         return jsonify({"ok": False, "error": "missing key"}), 400
+    track_id = resolve_track(user_id, get_track_id())["id"]
     with sqlite3.connect(DB_PATH) as conn:
         conn.execute(
-            "INSERT INTO progress(user_id,key,fav,known,updated_at) VALUES(?,?,0,?,datetime('now')) "
+            "INSERT INTO progress(user_id,key,fav,known,updated_at,track_id) VALUES(?,?,0,?,datetime('now'),?) "
             "ON CONFLICT(user_id,key) DO UPDATE SET known=excluded.known, updated_at=excluded.updated_at",
-            (user_id, key, 1 if data.get("known") else 0)
+            (user_id, key, 1 if data.get("known") else 0, track_id)
         )
     return jsonify({"ok": True})
 
@@ -148,7 +192,7 @@ def known_card():
 def start_day():
     user_id = get_auth_user()
     n         = int((request.json or {}).get("new", 10))
-    all_cards = load_vocab(user_id)
+    all_cards = load_vocab(user_id, get_track_id())
 
     today = date.today().isoformat()
 
@@ -197,12 +241,13 @@ def introduce():
     today = date.today().isoformat()
     if not key:
         return jsonify({"ok": False}), 400
+    track_id = resolve_track(user_id, get_track_id())["id"]
     with sqlite3.connect(DB_PATH) as conn:
         conn.execute(
-            "INSERT INTO progress(user_id,key,fav,known,introduced_date) VALUES(?,?,0,0,?) "
+            "INSERT INTO progress(user_id,key,fav,known,introduced_date,track_id) VALUES(?,?,0,0,?,?) "
             "ON CONFLICT(user_id,key) DO UPDATE SET "
             "introduced_date=COALESCE(introduced_date, excluded.introduced_date)",
-            (user_id, key, today)
+            (user_id, key, today, track_id)
         )
     return jsonify({"ok": True})
 
@@ -218,7 +263,7 @@ def history():
             "WHERE user_id = ? AND introduced_date IS NOT NULL ORDER BY introduced_date DESC",
             (user_id,)
         ).fetchall()
-    card_map = {c["key"]: c["term"] for c in load_vocab(user_id)}
+    card_map = {c["key"]: c["term"] for c in load_vocab(user_id, get_track_id())}
     grouped  = {}
     for key, d in rows:
         if key not in card_map:
@@ -233,20 +278,22 @@ def history():
 @app.route("/api/reset", methods=["POST"])
 def reset_progress():
     user_id = get_auth_user()
+    track_id = resolve_track(user_id, get_track_id())["id"]
     with sqlite3.connect(DB_PATH) as conn:
-        conn.execute("DELETE FROM progress WHERE user_id = ?", (user_id,))
+        conn.execute("DELETE FROM progress WHERE user_id = ? AND track_id = ?", (user_id, track_id))
     return jsonify({"ok": True})
 
 
 @app.route("/api/clusters")
 def get_clusters():
     user_id = get_auth_user()
-    clusters_path = BASE_DIR / "clusters.json"
+    track_id = resolve_track(user_id, get_track_id())["id"]
+    clusters_path = BASE_DIR / "data" / "shared" / "clusters.json"
     if not clusters_path.exists():
         return jsonify({"clusters": []})
     with open(clusters_path, encoding="utf-8") as f:
         data = json.load(f)
-    clusters = data.get("clusters", [])
+    clusters = [c for c in data.get("clusters", []) if track_id in c.get("tracks", [])]
 
     if not DB_PATH.exists() or not clusters:
         return jsonify({"clusters": clusters})
@@ -270,11 +317,46 @@ def get_clusters():
     return jsonify({"clusters": clusters})
 
 
+@app.route("/api/patterns")
+def get_patterns():
+    user_id = get_auth_user()
+    patterns_path = BASE_DIR / "data" / "shared" / "patterns.json"
+    if not patterns_path.exists():
+        return jsonify({"patterns": []})
+    with open(patterns_path, encoding="utf-8") as f:
+        data = json.load(f)
+    # Luyện Pattern dùng chung cho mọi user/track (không lọc theo track như vocab/cluster) --
+    # theo yêu cầu user, tránh phải đổi track vocab chỉ để xem đủ nội dung pattern.
+    patterns = data.get("patterns", [])
+
+    if not DB_PATH.exists() or not patterns:
+        return jsonify({"patterns": patterns})
+
+    pattern_ids = [p["id"] for p in patterns]
+    placeholders = ",".join("?" * len(pattern_ids))
+    with sqlite3.connect(DB_PATH) as conn:
+        params = [user_id] + pattern_ids
+        rows = conn.execute(
+            f"SELECT key, fav, known, introduced_date FROM progress WHERE user_id = ? AND key IN ({placeholders})",
+            params
+        ).fetchall()
+    prog = {r[0]: {"fav": bool(r[1]), "known": bool(r[2]), "date": r[3]} for r in rows}
+
+    for p in patterns:
+        pr = prog.get(p["id"], {})
+        p["fav"] = pr.get("fav", False)
+        p["known"] = pr.get("known", False)
+        p["introduced_date"] = pr.get("date")
+
+    return jsonify({"patterns": patterns})
+
+
 @app.route("/api/sync", methods=["POST", "OPTIONS"])
 def sync_progress():
     if request.method == "OPTIONS":
         return jsonify({"ok": True})
     user_id = get_auth_user()
+    track_id = resolve_track(user_id, get_track_id())["id"]
     client_prog = request.json.get("progress", {}) if request.json else {}
     with sqlite3.connect(DB_PATH) as conn:
         for key, val in client_prog.items():
@@ -283,16 +365,17 @@ def sync_progress():
             dt    = val.get("date") if (val.get("date") and str(val.get("date")).strip()) else None
             cat   = val.get("updated_at")  # client updated_at (ISO string)
             conn.execute(
-                "INSERT INTO progress(user_id,key,fav,known,introduced_date,updated_at) VALUES(?,?,?,?,?,?) "
+                "INSERT INTO progress(user_id,key,fav,known,introduced_date,updated_at,track_id) VALUES(?,?,?,?,?,?,?) "
                 "ON CONFLICT(user_id,key) DO UPDATE SET "
                 "fav = CASE WHEN COALESCE(excluded.updated_at,'') > COALESCE(updated_at,'') THEN excluded.fav ELSE fav END, "
                 "known = CASE WHEN COALESCE(excluded.updated_at,'') > COALESCE(updated_at,'') THEN excluded.known ELSE known END, "
                 "updated_at = MAX(COALESCE(updated_at,''), COALESCE(excluded.updated_at,'')), "
                 "introduced_date = COALESCE(introduced_date, excluded.introduced_date)",
-                (user_id, key, fav, known, dt, cat)
+                (user_id, key, fav, known, dt, cat, track_id)
             )
         rows = conn.execute(
-            "SELECT key, fav, known, introduced_date, updated_at FROM progress WHERE user_id = ?", (user_id,)
+            "SELECT key, fav, known, introduced_date, updated_at FROM progress WHERE user_id = ? AND track_id = ?",
+            (user_id, track_id)
         ).fetchall()
         server_prog = {
             r[0]: {"fav": bool(r[1]), "known": bool(r[2]), "date": r[3], "updated_at": r[4]}

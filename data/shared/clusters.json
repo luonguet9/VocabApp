@@ -1,0 +1,4337 @@
+{
+  "clusters": [
+    {
+      "id": "syn_schedule",
+      "type": "synonym",
+      "subtype": null,
+      "name": "Arranging a Meeting",
+      "level": "B2",
+      "topic": "Meetings",
+      "tip": "schedule/arrange → formal email; set up → Slack/chat; pencil in → tạm thời, có thể thay đổi sau",
+      "words": [
+        {
+          "term": "schedule",
+          "level": "B1",
+          "vi": "lên lịch, đặt lịch",
+          "pron": "🇺🇸 /ˈskɛdʒuːl/ 🇬🇧 /ˈʃɛdjuːl/",
+          "register": "formal",
+          "example": "Let's schedule the sprint review for Friday at 2 PM.",
+          "note": "Default trong corporate email/calendar invite",
+          "situation": "Bạn cần gửi calendar invite formal cho client để đề xuất thời gian họp kỹ thuật."
+        },
+        {
+          "term": "arrange",
+          "level": "B1",
+          "vi": "sắp xếp, bố trí",
+          "pron": "🇺🇸 🇬🇧 /əˈreɪndʒ/",
+          "register": "neutral",
+          "example": "Can you arrange a call with the client this week?",
+          "note": "Versatile — dùng được cả viết lẫn nói",
+          "situation": "Trong cuộc gọi team, bạn cần tổ chức một call với BA và dev để align requirements."
+        },
+        {
+          "term": "set up",
+          "level": "B1",
+          "vi": "đặt lịch (thông thường)",
+          "pron": "🇺🇸 🇬🇧 /sɛt ʌp/",
+          "register": "casual",
+          "example": "Hey, let's set up a quick sync tomorrow morning.",
+          "note": "Phù hợp Slack, chat — tránh dùng trong formal email",
+          "wrong_usage": "❌ 'setup a meeting' — setup là danh từ/tính từ, không phải động từ",
+          "situation": "Trên Slack, bạn nhắn đồng nghiệp để đặt một quick sync về bug cần fix gấp."
+        },
+        {
+          "term": "pencil in",
+          "level": "B2",
+          "vi": "đặt lịch tạm thời (có thể thay đổi)",
+          "pron": "🇺🇸 🇬🇧 /ˈpɛnsəl ɪn/",
+          "register": "casual",
+          "example": "I'll pencil you in for Thursday — let me confirm later.",
+          "note": "Ngụ ý 'chưa chắc chắn', có thể reschedule",
+          "situation": "Bạn và manager chưa chắc về lịch, muốn giữ một slot trước nhưng sẽ confirm sau."
+        }
+      ],
+      "vi_name": "Sắp xếp lịch họp",
+      "tracks": [
+        "default",
+        "toeic"
+      ],
+      "order": 140,
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "Can we **schedule** a call with the client for next week?"
+        },
+        {
+          "speaker": "B",
+          "text": "Sure, I'll **arrange** everything with their team today."
+        },
+        {
+          "speaker": "A",
+          "text": "Actually, could you just **pencil in** Tuesday for now? Details might still change."
+        },
+        {
+          "speaker": "B",
+          "text": "No problem, I'll **set up** a placeholder invite and confirm the time later."
+        }
+      ]
+    },
+    {
+      "id": "syn_agree",
+      "type": "synonym",
+      "subtype": null,
+      "name": "Showing Agreement",
+      "level": "B2",
+      "topic": "Meetings",
+      "tip": "agree/concur → formal meeting; buy into → ủng hộ về tư tưởng; get behind → nhiệt tình hậu thuẫn",
+      "words": [
+        {
+          "term": "agree",
+          "level": "B1",
+          "vi": "đồng ý, nhất trí",
+          "pron": "🇺🇸 🇬🇧 /əˈɡriː/",
+          "register": "neutral",
+          "example": "I agree with your assessment of the timeline.",
+          "note": "Universal — dùng được mọi context",
+          "situation": "Trong meeting, bạn muốn xác nhận đồng ý với timeline mà PM đề xuất."
+        },
+        {
+          "term": "concur",
+          "level": "B2",
+          "vi": "đồng thuận (formal)",
+          "pron": "🇺🇸 /kənˈkɜːr/ 🇬🇧 /kənˈkɜː/",
+          "register": "formal",
+          "example": "I concur — we should delay the release until testing is complete.",
+          "note": "Rất formal, phù hợp executive meetings và written docs",
+          "situation": "Bạn là senior engineer viết vào decision log để ghi nhận sự đồng thuận về technical approach."
+        },
+        {
+          "term": "buy into",
+          "level": "B2",
+          "vi": "ủng hộ, chấp nhận (một ý tưởng)",
+          "pron": "🇺🇸 🇬🇧 /baɪ ˈɪntə/",
+          "register": "casual",
+          "example": "I'm fully buying into this approach — let's move forward.",
+          "note": "Nhấn mạnh sự tin tưởng vào ý tưởng, không chỉ là đồng ý",
+          "situation": "Sau khi nghe pitch về microservices migration, bạn thực sự tin tưởng vào approach này."
+        },
+        {
+          "term": "get behind",
+          "level": "B2",
+          "vi": "hậu thuẫn, đứng sau ủng hộ",
+          "pron": "🇺🇸 🇬🇧 /ɡɛt bɪˈhaɪnd/",
+          "register": "casual",
+          "example": "I can really get behind this proposal.",
+          "note": "Mang tính enthusiasm cao hơn 'agree' đơn thuần",
+          "situation": "Team đang thảo luận về đổi sang TypeScript, bạn muốn thể hiện sự ủng hộ nhiệt tình."
+        }
+      ],
+      "vi_name": "Thể hiện sự đồng ý",
+      "tracks": [
+        "default",
+        "toeic",
+        "common"
+      ],
+      "order": 50,
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "I think we should push the release by a week to fix the bugs properly."
+        },
+        {
+          "speaker": "B",
+          "text": "I **agree**, quality matters more than hitting the original deadline."
+        },
+        {
+          "speaker": "A",
+          "text": "Good, because I really need the whole team to **buy into** this plan."
+        },
+        {
+          "speaker": "B",
+          "text": "The QA lead will **concur** too — she raised the same concern yesterday."
+        },
+        {
+          "speaker": "A",
+          "text": "Great, once everyone's on board, I'm sure management will **get behind** it as well."
+        }
+      ]
+    },
+    {
+      "id": "syn_disagree",
+      "type": "synonym",
+      "subtype": null,
+      "name": "Disagreeing Professionally",
+      "level": "C1",
+      "topic": "Meetings",
+      "tip": "Luôn disagree về vấn đề, không phải con người. push back < challenge < object (tăng dần độ mạnh)",
+      "words": [
+        {
+          "term": "push back",
+          "level": "B2",
+          "vi": "phản đối, phản biện (nhẹ nhàng)",
+          "pron": "🇺🇸 🇬🇧 /pʊʃ bæk/",
+          "register": "neutral",
+          "example": "I want to push back on that estimate — two weeks seems too optimistic.",
+          "note": "Phổ biến nhất trong tech/startup culture",
+          "situation": "Trong sprint planning, bạn thấy estimate 2 tuần là quá lạc quan, muốn phản biện nhẹ nhàng."
+        },
+        {
+          "term": "challenge",
+          "level": "B2",
+          "vi": "đặt câu hỏi, phản biện",
+          "pron": "🇺🇸 🇬🇧 /ˈtʃælɪndʒ/",
+          "register": "neutral",
+          "example": "I'd like to challenge the assumption that users want this feature.",
+          "note": "challenge + assumption/claim — phổ biến trong data-driven discussions",
+          "situation": "Team đang assume users muốn feature mới — bạn muốn đặt câu hỏi về assumption đó."
+        },
+        {
+          "term": "have reservations about",
+          "level": "B2",
+          "vi": "có e ngại, nghi ngại về (điều gì đó)",
+          "pron": "🇺🇸 /hæv ˌrɛzərˈveɪʃənz əˈbaʊt/ 🇬🇧 /hæv ˌrɛzəˈveɪʃənz əˈbaʊt/",
+          "register": "formal",
+          "example": "I have reservations about rolling this out to all users at once.",
+          "note": "Lịch sự, ngụ ý chưa hoàn toàn tin tưởng nhưng không phản đối thẳng",
+          "situation": "Bạn không phản đối hẳn kế hoạch nhưng vẫn còn nghi ngại chưa được giải quyết trước khi triển khai."
+        },
+        {
+          "term": "beg to differ",
+          "level": "C1",
+          "vi": "không đồng ý (formal, lịch sự)",
+          "pron": "🇺🇸 /bɛɡ tə ˈdɪfər/ 🇬🇧 /bɛɡ tə ˈdɪfə/",
+          "register": "formal",
+          "example": "I beg to differ — the data tells a different story.",
+          "note": "Rất formal/polite, thường trong executive context",
+          "situation": "Trong executive meeting, Director đưa kết luận dựa trên data sai — bạn cần phản bác lịch sự và formal."
+        }
+      ],
+      "vi_name": "Phản đối chuyên nghiệp",
+      "tracks": [
+        "default",
+        "toeic"
+      ],
+      "order": 210,
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "I'd like to **push back** on the timeline — two weeks feels too tight."
+        },
+        {
+          "speaker": "B",
+          "text": "I have to **beg to differ**; the client already approved that date."
+        },
+        {
+          "speaker": "A",
+          "text": "Fair enough, but I still **have reservations about** skipping the load testing phase."
+        },
+        {
+          "speaker": "B",
+          "text": "That's a valid point. Want to **challenge** the current test plan with the QA team directly?"
+        }
+      ]
+    },
+    {
+      "id": "syn_emphasize",
+      "type": "synonym",
+      "subtype": null,
+      "name": "Emphasizing a Point",
+      "level": "C1",
+      "topic": "Discussion",
+      "tip": "highlight → có data/document để point to; underscore → viết; drive home → spoken, mang tính urgency cao",
+      "words": [
+        {
+          "term": "emphasize",
+          "level": "B1",
+          "vi": "nhấn mạnh",
+          "pron": "🇺🇸 🇬🇧 /ˈɛmfəsaɪz/",
+          "register": "neutral",
+          "example": "I want to emphasize that this deadline is non-negotiable.",
+          "note": "General-purpose, phù hợp mọi context",
+          "situation": "Trong standup, bạn muốn đảm bảo toàn team hiểu rằng deadline này không thể dời."
+        },
+        {
+          "term": "highlight",
+          "level": "B1",
+          "vi": "nêu bật, làm nổi bật",
+          "pron": "🇺🇸 🇬🇧 /ˈhaɪlaɪt/",
+          "register": "neutral",
+          "example": "The report highlights three critical bottlenecks.",
+          "note": "Thường dùng khi có data/document để point to",
+          "situation": "Khi trình bày performance report, bạn muốn chỉ ra 3 bottleneck quan trọng nhất trong data."
+        },
+        {
+          "term": "underscore",
+          "level": "B2",
+          "vi": "nhấn mạnh (trong văn bản)",
+          "pron": "🇺🇸 /ˌʌndərˈskɔːr/ 🇬🇧 /ˌʌndəˈskɔː/",
+          "register": "formal",
+          "example": "This incident underscores the need for better monitoring.",
+          "note": "Phổ biến trong technical writing và post-mortems",
+          "situation": "Trong post-mortem document sau outage, bạn muốn nhấn mạnh tầm quan trọng của monitoring."
+        },
+        {
+          "term": "drive home",
+          "level": "C1",
+          "vi": "nhấn mạnh để người nghe thực sự hiểu",
+          "pron": "🇺🇸 /draɪv hoʊm/ 🇬🇧 /draɪv həʊm/",
+          "register": "casual",
+          "example": "Let me drive this home: if we miss the launch date, we lose the contract.",
+          "note": "Mang tính urgency cao — dùng khi stakeholders chưa thực sự nắm vấn đề",
+          "situation": "Stakeholders vẫn chưa hiểu mức độ nghiêm trọng của security gap — cần nói mạnh và rõ hơn."
+        }
+      ],
+      "vi_name": "Nhấn mạnh quan điểm",
+      "tracks": [
+        "default",
+        "toeic"
+      ],
+      "order": 220,
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "In the report, can you **highlight** the drop in server uptime last month?"
+        },
+        {
+          "speaker": "B",
+          "text": "Sure, I'll also **emphasize** how it affected customer trust."
+        },
+        {
+          "speaker": "A",
+          "text": "Good — we really need to **underscore** the urgency to the stakeholders."
+        },
+        {
+          "speaker": "B",
+          "text": "I'll add a chart at the end to **drive home** just how costly another outage would be."
+        }
+      ]
+    },
+    {
+      "id": "syn_clarify",
+      "type": "synonym",
+      "subtype": null,
+      "name": "Asking for Clarification",
+      "level": "B2",
+      "topic": "Meetings",
+      "tip": "clarify → có sự mơ hồ; elaborate → cần thêm chi tiết; unpack → complex/abstract concept; walk through → hướng dẫn từng bước",
+      "words": [
+        {
+          "term": "clarify",
+          "level": "B1",
+          "vi": "làm rõ, giải thích",
+          "pron": "🇺🇸 🇬🇧 /ˈklærɪfaɪ/",
+          "register": "neutral",
+          "example": "Could you clarify what you mean by 'good enough'?",
+          "note": "Dùng khi có sự mơ hồ, một câu có thể hiểu nhiều cách",
+          "situation": "PM dùng từ 'done' mơ hồ — bạn không chắc ý họ là dev done hay QA passed."
+        },
+        {
+          "term": "elaborate",
+          "level": "B2",
+          "vi": "trình bày chi tiết hơn",
+          "pron": "🇺🇸 🇬🇧 /ɪˈlæbəreɪt/",
+          "register": "neutral",
+          "example": "Could you elaborate on the rollback plan?",
+          "note": "Dùng khi muốn nghe nhiều hơn về một điểm cụ thể",
+          "situation": "Architect trình bày solution ngắn gọn, bạn muốn nghe chi tiết hơn về rollback plan."
+        },
+        {
+          "term": "unpack",
+          "level": "B2",
+          "vi": "phân tích, giải thích từng phần",
+          "pron": "🇺🇸 🇬🇧 /ʌnˈpæk/",
+          "register": "casual",
+          "example": "Let's unpack what 'scalable' means for this system.",
+          "note": "Tech/startup culture — dùng cho abstract/complex concepts",
+          "situation": "Team đang dùng 'scalable' nhưng mỗi người hiểu khác nhau — cần align định nghĩa chung."
+        },
+        {
+          "term": "walk me through",
+          "level": "B2",
+          "vi": "hướng dẫn từng bước, giải thích theo thứ tự",
+          "pron": "🇺🇸 🇬🇧 /wɔːk miː θruː/",
+          "register": "casual",
+          "example": "Can you walk me through your deployment process?",
+          "note": "Request step-by-step explanation — rất phổ biến trong code review/onboarding",
+          "situation": "Bạn vừa join team mới và muốn hiểu quy trình deploy của team từng bước một."
+        }
+      ],
+      "vi_name": "Yêu cầu làm rõ",
+      "tracks": [
+        "default",
+        "toeic",
+        "common"
+      ],
+      "order": 70,
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "Could you **clarify** what you mean by \"technical debt\" in this context?"
+        },
+        {
+          "speaker": "B",
+          "text": "Sure. Which part is unclear — do you need me to **elaborate**?"
+        },
+        {
+          "speaker": "A",
+          "text": "The deployment risks section. Could you **walk me through** it step by step?"
+        },
+        {
+          "speaker": "B",
+          "text": "Of course, let's **unpack** it together, starting with the database migration."
+        }
+      ]
+    },
+    {
+      "id": "syn_problem",
+      "type": "synonym",
+      "subtype": null,
+      "name": "Describing Problems",
+      "level": "B2",
+      "topic": "Business",
+      "tip": "issue/concern → polite; blocker → chặn progress; bottleneck → điểm chậm nhất; showstopper → nghiêm trọng nhất, phải fix trước khi ship",
+      "words": [
+        {
+          "term": "issue",
+          "level": "B1",
+          "vi": "vấn đề (trung tính)",
+          "pron": "🇺🇸 🇬🇧 /ˈɪʃuː/",
+          "register": "neutral",
+          "example": "We have an issue with the authentication flow.",
+          "note": "General-purpose, ít cảm xúc hơn 'problem'",
+          "situation": "Trong standup, bạn cần báo cáo có vấn đề với authentication flow — tone trung tính."
+        },
+        {
+          "term": "blocker",
+          "level": "B2",
+          "vi": "vật cản, thứ block progress",
+          "pron": "🇺🇸 /ˈblɑːkər/ 🇬🇧 /ˈblɒkə/",
+          "register": "casual",
+          "example": "The missing API docs are a blocker for the frontend team.",
+          "note": "Scrum/Agile term — dùng trong standup, Jira tickets",
+          "situation": "Bạn không thể tiếp tục task vì đang chờ API docs từ team khác — phải báo cáo trong standup."
+        },
+        {
+          "term": "bottleneck",
+          "level": "B2",
+          "vi": "điểm nghẽn cổ chai, điểm chậm nhất",
+          "pron": "🇺🇸 /ˈbɑːtəlnek/ 🇬🇧 /ˈbɒtəlnek/",
+          "register": "neutral",
+          "example": "The database query is the bottleneck in our pipeline.",
+          "note": "Thường dùng cho performance/process issues",
+          "situation": "Sau khi profile hệ thống, database query là điểm chậm nhất trong toàn bộ pipeline."
+        },
+        {
+          "term": "showstopper",
+          "level": "B2",
+          "vi": "vấn đề nghiêm trọng cản launch",
+          "pron": "🇺🇸 /ˈʃoʊstɑːpər/ 🇬🇧 /ˈʃəʊstɒpə/",
+          "register": "casual",
+          "example": "This data loss bug is a showstopper — we can't ship with it.",
+          "note": "Mức độ nghiêm trọng nhất — release bị chặn hoàn toàn",
+          "situation": "Phát hiện bug data loss ngay trước ngày launch — không thể ship với bug này."
+        }
+      ],
+      "vi_name": "Mô tả vấn đề",
+      "tracks": [
+        "default",
+        "toeic"
+      ],
+      "order": 160,
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "We've got an **issue** with the payment gateway timing out."
+        },
+        {
+          "speaker": "B",
+          "text": "Is it a **blocker** for today's release, or can we work around it?"
+        },
+        {
+          "speaker": "A",
+          "text": "Not a **showstopper** yet, but it's becoming a real **bottleneck** for the checkout flow."
+        },
+        {
+          "speaker": "B",
+          "text": "Okay, let's prioritize fixing it before it turns into something worse."
+        }
+      ]
+    },
+    {
+      "id": "syn_complete",
+      "type": "synonym",
+      "subtype": null,
+      "name": "Finishing Work",
+      "level": "B2",
+      "topic": "Business",
+      "tip": "wrap up → meeting/session; finalize → còn bước review cuối; ship → release sản phẩm; sign off → phê duyệt chính thức",
+      "words": [
+        {
+          "term": "wrap up",
+          "level": "B1",
+          "vi": "kết thúc, hoàn tất (session/meeting)",
+          "pron": "🇺🇸 🇬🇧 /ræp ʌp/",
+          "register": "casual",
+          "example": "Let's wrap up this discussion and move to the next agenda item.",
+          "note": "Thường dùng để kết thúc meeting hoặc conversation",
+          "situation": "Meeting sprint planning đã gần hết giờ, bạn cần kết thúc và capture action items."
+        },
+        {
+          "term": "finalize",
+          "level": "B2",
+          "vi": "hoàn thiện, chốt lại (còn bước review cuối)",
+          "pron": "🇺🇸 🇬🇧 /ˈfaɪnəlaɪz/",
+          "register": "neutral",
+          "example": "We need to finalize the requirements before development starts.",
+          "note": "Ngụ ý còn bước kiểm tra/phê duyệt cuối cùng",
+          "situation": "Requirements đang ở bản draft, cần confirm với stakeholders trước khi dev bắt đầu sprint."
+        },
+        {
+          "term": "ship",
+          "level": "B1",
+          "vi": "release, phát hành sản phẩm/tính năng",
+          "pron": "🇺🇸 🇬🇧 /ʃɪp/",
+          "register": "casual",
+          "example": "We shipped the new dashboard last Friday.",
+          "note": "Tech culture informal — 'ship it' = release it",
+          "situation": "Feature đã pass QA và được PM approve — bạn đã deploy lên production thành công."
+        },
+        {
+          "term": "sign off",
+          "level": "B2",
+          "vi": "phê duyệt, xác nhận hoàn tất",
+          "pron": "🇺🇸 /saɪn ɔːf/ 🇬🇧 /saɪn ɒf/",
+          "register": "neutral",
+          "example": "The PM needs to sign off on this before we deploy.",
+          "note": "Formal approval — thường kèm email confirm hoặc LGTM",
+          "situation": "Legal team cần review và confirm trước khi bạn có thể deploy lên production."
+        }
+      ],
+      "vi_name": "Hoàn thành công việc",
+      "tracks": [
+        "default",
+        "toeic"
+      ],
+      "order": 170,
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "Are we ready to **wrap up** the sprint review?"
+        },
+        {
+          "speaker": "B",
+          "text": "Almost — I just need to **finalize** the release notes."
+        },
+        {
+          "speaker": "A",
+          "text": "Once that's done, can you get the PM to **sign off** on it?"
+        },
+        {
+          "speaker": "B",
+          "text": "Yes, and then we can **ship** the update tonight."
+        }
+      ]
+    },
+    {
+      "id": "syn_important",
+      "type": "synonym",
+      "subtype": null,
+      "name": "Expressing Importance",
+      "level": "B2",
+      "topic": "Business",
+      "tip": "critical/crucial → nếu không làm sẽ có hậu quả; vital → thiếu thì không hoạt động; mission-critical → business không thể dừng; non-negotiable → không có ngoại lệ",
+      "words": [
+        {
+          "term": "critical",
+          "level": "B1",
+          "vi": "cực kỳ quan trọng, quyết định",
+          "pron": "🇺🇸 🇬🇧 /ˈkrɪtɪkəl/",
+          "register": "neutral",
+          "example": "Getting the architecture right is critical for long-term scalability.",
+          "note": "Không làm = có hậu quả. Phân biệt với 'critical feedback' (nhận xét góp ý)",
+          "situation": "Bạn giải thích cho junior dev tại sao viết tests cho payment module là bắt buộc."
+        },
+        {
+          "term": "crucial",
+          "level": "B2",
+          "vi": "thiết yếu, không thể thiếu",
+          "pron": "🇺🇸 🇬🇧 /ˈkruːʃəl/",
+          "register": "neutral",
+          "example": "User feedback is crucial at this stage of development.",
+          "note": "Gần nghĩa với critical — nhấn vào 'không có thì không được'",
+          "situation": "Trong sprint review, bạn nhấn mạnh tầm quan trọng của việc collect user feedback giai đoạn này."
+        },
+        {
+          "term": "mission-critical",
+          "level": "B2",
+          "vi": "không thể gián đoạn, sống còn với business",
+          "pron": "🇺🇸 🇬🇧 /ˈmɪʃən ˈkrɪtɪkəl/",
+          "register": "formal",
+          "example": "The payment service is mission-critical — zero downtime acceptable.",
+          "note": "Ops/DevOps context — implies 24/7 uptime requirement",
+          "situation": "Bạn giải thích với manager tại sao payment service phải đảm bảo 99.99% uptime SLA."
+        },
+        {
+          "term": "non-negotiable",
+          "level": "B2",
+          "vi": "không thể thương lượng, phải giữ nguyên",
+          "pron": "🇺🇸 /ˌnɑːn nɪˈɡoʊʃəbl/ 🇬🇧 /ˌnɒn nɪˈɡəʊʃəbl/",
+          "register": "formal",
+          "example": "Security compliance is non-negotiable.",
+          "note": "Dùng khi muốn nói rõ không có ngoại lệ",
+          "situation": "Security compliance là hard requirement — không có exception dù deadline có tight đến đâu."
+        }
+      ],
+      "vi_name": "Diễn đạt tầm quan trọng",
+      "tracks": [
+        "default",
+        "toeic",
+        "common"
+      ],
+      "order": 120,
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "How urgent is fixing this database bug?"
+        },
+        {
+          "speaker": "B",
+          "text": "It's **critical** — the payment system depends on it."
+        },
+        {
+          "speaker": "A",
+          "text": "And the deadline?"
+        },
+        {
+          "speaker": "B",
+          "text": "**Non-negotiable**, the client demo is tomorrow morning."
+        },
+        {
+          "speaker": "A",
+          "text": "Got it. I'll treat the backup server fix as **crucial** too, since it's part of our **mission-critical** infrastructure."
+        }
+      ]
+    },
+    {
+      "id": "casual_buy_time",
+      "type": "casual",
+      "subtype": "buy_time",
+      "name": "Buying Time to Think",
+      "level": "B2",
+      "topic": "Meetings",
+      "tip": "Dùng khi cần vài giây suy nghĩ — tránh im lặng awkward. Đừng overuse cùng một phrase.",
+      "words": [
+        {
+          "term": "That's a good question.",
+          "level": "B1",
+          "vi": "Câu hỏi hay đấy.",
+          "pron": "",
+          "register": "neutral",
+          "example": "That's a good question — let me think about that for a moment.",
+          "note": "Classic buy-time phrase. Đừng dùng quá nhiều sẽ nghe giả tạo",
+          "situation": "Trong demo với client, họ hỏi về product roadmap — bạn chưa chuẩn bị câu trả lời cụ thể."
+        },
+        {
+          "term": "Let me think about that.",
+          "level": "B1",
+          "vi": "Để tôi suy nghĩ một chút.",
+          "pron": "",
+          "register": "neutral",
+          "example": "Let me think about that — I want to give you a proper answer.",
+          "note": "Honest và professional — không có gì sai khi cần thêm thời gian",
+          "situation": "CTO hỏi về tradeoff của approach bạn đang propose — bạn cần vài giây suy nghĩ kỹ."
+        },
+        {
+          "term": "Off the top of my head...",
+          "level": "B2",
+          "vi": "Ngay lúc này không cần suy nghĩ nhiều...",
+          "pron": "",
+          "register": "casual",
+          "example": "Off the top of my head, I'd say around two weeks — but let me verify.",
+          "note": "Ngụ ý 'đây là rough estimate, chưa chắc chính xác'",
+          "situation": "Trong standup, bạn được hỏi về timeline — bạn có estimate nhưng chưa verify con số chính xác."
+        },
+        {
+          "term": "I'll need to circle back on that.",
+          "level": "B2",
+          "vi": "Tôi cần xem lại và trả lời sau.",
+          "pron": "",
+          "register": "casual",
+          "example": "I don't have that number handy — I'll circle back on that.",
+          "note": "Dùng khi thực sự không biết — tốt hơn là đoán mò",
+          "situation": "Trong meeting, bạn được hỏi về performance metric cụ thể mà bạn không nhớ lúc này."
+        }
+      ],
+      "vi_name": "Câu giờ để suy nghĩ",
+      "tracks": [
+        "default",
+        "toeic",
+        "common"
+      ],
+      "order": 110,
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "Why do you think churn jumped last month?"
+        },
+        {
+          "speaker": "B",
+          "text": "**That's a good question.**"
+        },
+        {
+          "speaker": "A",
+          "text": "Take your time — I want a solid answer, not a guess."
+        },
+        {
+          "speaker": "B",
+          "text": "**Let me think about that** for a second."
+        },
+        {
+          "speaker": "A",
+          "text": "Sure, no rush. Anything come to mind at all?"
+        },
+        {
+          "speaker": "B",
+          "text": "**Off the top of my head**, it might be the pricing change, but **I'll need to circle back on that** once I check the actual numbers."
+        }
+      ]
+    },
+    {
+      "id": "casual_agree",
+      "type": "casual",
+      "subtype": "agree",
+      "name": "Casual Agreement",
+      "level": "B2",
+      "topic": "Slack",
+      "tip": "Dùng thay cho 'yes/ok' trong Slack và informal meetings. Sounds much more native!",
+      "words": [
+        {
+          "term": "Sounds good.",
+          "level": "B1",
+          "vi": "Nghe được đấy / Đồng ý.",
+          "pron": "",
+          "register": "casual",
+          "example": "— Can we move the meeting to 3 PM? — Sounds good to me!",
+          "note": "Extremely common trong tech teams — thân thiện và natural",
+          "situation": "Đồng nghiệp nhắn Slack hỏi có thể dời meeting từ 2PM sang 3PM được không."
+        },
+        {
+          "term": "Absolutely.",
+          "level": "B1",
+          "vi": "Chắc chắn rồi / Hoàn toàn đồng ý.",
+          "pron": "🇺🇸 🇬🇧 /ˈæbsəluːtli/",
+          "register": "neutral",
+          "example": "— Do you think we should prioritize the API first? — Absolutely.",
+          "note": "Stronger than 'yes' — thể hiện enthusiasm và agreement mạnh",
+          "situation": "PM hỏi bạn có đồng ý nên prioritize API layer trước khi làm frontend không."
+        },
+        {
+          "term": "Fair enough.",
+          "level": "B2",
+          "vi": "Hợp lý đấy / Thôi được.",
+          "pron": "",
+          "register": "casual",
+          "example": "— Let's skip the demo and just do a screen share. — Fair enough.",
+          "note": "'Tôi chấp nhận' — không nhất thiết hoàn toàn đồng ý",
+          "situation": "Team lead đề xuất skip formal demo và dùng screen share thay vì setup presentation phức tạp."
+        },
+        {
+          "term": "Makes sense.",
+          "level": "B1",
+          "vi": "Hợp lý / Có lý đấy.",
+          "pron": "",
+          "register": "casual",
+          "example": "— We should test on staging before prod. — Makes sense.",
+          "note": "Thể hiện bạn hiểu và thấy logical — rất tự nhiên",
+          "situation": "Đồng nghiệp giải thích lý do tại sao nên test kỹ trên staging trước khi deploy prod."
+        }
+      ],
+      "vi_name": "Đồng ý thông thường",
+      "tracks": [
+        "default",
+        "toeic",
+        "common"
+      ],
+      "order": 60,
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "Hey, should we push the demo to Thursday instead of Wednesday?"
+        },
+        {
+          "speaker": "B",
+          "text": "**Sounds good**, that gives us an extra day to test."
+        },
+        {
+          "speaker": "A",
+          "text": "And I think we should let Minh present the backend part."
+        },
+        {
+          "speaker": "B",
+          "text": "**Absolutely**, he knows it best."
+        },
+        {
+          "speaker": "A",
+          "text": "One more thing — no fancy slides, just a quick walkthrough."
+        },
+        {
+          "speaker": "B",
+          "text": "**Fair enough**. Honestly that **makes sense** for an internal demo anyway."
+        }
+      ]
+    },
+    {
+      "id": "casual_soft_disagree",
+      "type": "casual",
+      "subtype": "soft_disagree",
+      "name": "Disagreeing Softly",
+      "level": "B2",
+      "topic": "Meetings",
+      "tip": "Tránh 'you're wrong' — dùng question/suggestion thay. Phản biện về vấn đề, không về con người.",
+      "words": [
+        {
+          "term": "I'm not sure about that.",
+          "level": "B1",
+          "vi": "Tôi không chắc về điều đó.",
+          "pron": "",
+          "register": "neutral",
+          "example": "I'm not sure about that — have we looked at the actual metrics?",
+          "note": "Nhẹ nhàng nhất — tạo không gian để discuss thêm",
+          "situation": "PM estimate 1 tuần cho feature phức tạp, bạn nghĩ không đủ nhưng muốn hỏi nhẹ nhàng."
+        },
+        {
+          "term": "Have you considered...?",
+          "level": "B2",
+          "vi": "Bạn đã cân nhắc... chưa?",
+          "pron": "",
+          "register": "neutral",
+          "example": "Have you considered the impact on existing users?",
+          "note": "Polite redirect — đưa thêm góc nhìn mà không bác bỏ trực tiếp",
+          "situation": "Team đang plan feature mới mà không consider impact đến existing users — bạn muốn raise."
+        },
+        {
+          "term": "What if we...?",
+          "level": "B1",
+          "vi": "Nếu chúng ta... thì sao?",
+          "pron": "",
+          "register": "casual",
+          "example": "What if we delayed the launch by one sprint to get more testing done?",
+          "note": "Propose alternative — redirect constructively",
+          "situation": "Team định launch ngay sau dev xong, bạn muốn đề xuất thêm 1 sprint để test kỹ hơn."
+        },
+        {
+          "term": "I see it differently.",
+          "level": "B2",
+          "vi": "Tôi nhìn nhận khác một chút.",
+          "pron": "",
+          "register": "neutral",
+          "example": "I see it differently — I think the risk is higher than we're estimating.",
+          "note": "Rõ ràng nhưng không aggressive — acknowledge sự khác biệt quan điểm",
+          "situation": "Tech lead assess risk là low nhưng bạn thấy ngược lại — muốn express khác biệt quan điểm respectfully."
+        }
+      ],
+      "vi_name": "Phản đối nhẹ nhàng",
+      "tracks": [
+        "default",
+        "toeic"
+      ],
+      "order": 200,
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "I think we should launch the new pricing page next week."
+        },
+        {
+          "speaker": "B",
+          "text": "**I'm not sure about that** — we haven't tested it with real users yet."
+        },
+        {
+          "speaker": "A",
+          "text": "True. What do you suggest?"
+        },
+        {
+          "speaker": "B",
+          "text": "**Have you considered** running it as an A/B test first?"
+        },
+        {
+          "speaker": "A",
+          "text": "Hmm, **what if we** just soft-launch to 10% of traffic?"
+        },
+        {
+          "speaker": "B",
+          "text": "That could work. **I see it differently** though — I'd rather wait for full QA before any traffic hits it."
+        }
+      ]
+    },
+    {
+      "id": "casual_follow_up",
+      "type": "casual",
+      "subtype": "follow_up",
+      "name": "Following Up",
+      "level": "B2",
+      "topic": "Slack",
+      "tip": "Dùng trong email/Slack sau meeting hoặc khi task chưa có phản hồi. Lịch sự hơn 'Hey, did you do it?'",
+      "words": [
+        {
+          "term": "Just following up on...",
+          "level": "B1",
+          "vi": "Tôi chỉ muốn hỏi thêm về...",
+          "pron": "",
+          "register": "neutral",
+          "example": "Just following up on the PR I submitted — any blockers on your end?",
+          "note": "Standard email/Slack opener khi chờ reply",
+          "situation": "Bạn submit PR 2 ngày trước, chưa có reviewer nào comment — muốn nhắc nhẹ."
+        },
+        {
+          "term": "Circling back on...",
+          "level": "B2",
+          "vi": "Quay lại vấn đề... (nhắc nhở)",
+          "pron": "",
+          "register": "casual",
+          "example": "Circling back on the design review — are we still on for Thursday?",
+          "note": "Casual alternative cho 'following up' — phổ biến trong tech teams",
+          "situation": "Design review đã thảo luận hôm qua nhưng chưa confirm có diễn ra Thursday không."
+        },
+        {
+          "term": "Any update on...?",
+          "level": "B1",
+          "vi": "Có cập nhật gì về... chưa?",
+          "pron": "",
+          "register": "casual",
+          "example": "Any update on the server issue from last week?",
+          "note": "Direct và casual — phù hợp Slack hơn email",
+          "situation": "Server issue từ tuần trước chưa thấy update — bạn muốn hỏi thẳng trên Slack."
+        },
+        {
+          "term": "Wanted to check in on...",
+          "level": "B2",
+          "vi": "Muốn hỏi thăm tình hình của...",
+          "pron": "",
+          "register": "neutral",
+          "example": "Wanted to check in on the migration timeline.",
+          "note": "Softer than 'following up' — nghe ít transactional hơn",
+          "situation": "Bạn muốn hỏi thăm tiến độ migration một cách nhẹ nhàng, không tạo áp lực."
+        }
+      ],
+      "vi_name": "Theo dõi tiến độ",
+      "tracks": [
+        "default",
+        "toeic"
+      ],
+      "order": 150,
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "Hey, **just following up on** the API docs you were writing."
+        },
+        {
+          "speaker": "B",
+          "text": "Almost done, just need to add the auth section."
+        },
+        {
+          "speaker": "A",
+          "text": "Cool. Also **circling back on** the staging bug from last week — is it fixed?"
+        },
+        {
+          "speaker": "B",
+          "text": "Yep, deployed the fix yesterday."
+        },
+        {
+          "speaker": "A",
+          "text": "Nice. **Any update on** the client's feedback for the mockups?"
+        },
+        {
+          "speaker": "B",
+          "text": "Not yet, I **wanted to check in on** that today actually."
+        }
+      ]
+    },
+    {
+      "id": "casual_wrap_up",
+      "type": "casual",
+      "subtype": "wrap_up",
+      "name": "Wrapping Up a Meeting",
+      "level": "B2",
+      "topic": "Meetings",
+      "tip": "Dùng để kết thúc meeting có cấu trúc — recap action items trước khi close",
+      "words": [
+        {
+          "term": "Let's wrap up.",
+          "level": "B1",
+          "vi": "Chúng ta kết thúc thôi.",
+          "pron": "",
+          "register": "casual",
+          "example": "We're almost out of time — let's wrap up and capture action items.",
+          "note": "Standard meeting closer",
+          "situation": "Meeting sprint planning đã gần hết 1 tiếng, còn 5 phút — cần kết thúc ngay."
+        },
+        {
+          "term": "To summarize...",
+          "level": "B1",
+          "vi": "Tóm lại...",
+          "pron": "",
+          "register": "neutral",
+          "example": "To summarize: we'll delay the release by one week and add load testing.",
+          "note": "Signal cho recap — giúp mọi người align trước khi rời meeting",
+          "situation": "Sau 30 phút thảo luận về release date, cần recap quyết định cuối trước khi mọi người log off."
+        },
+        {
+          "term": "On that note...",
+          "level": "B2",
+          "vi": "Nhân đây... / Với điều đó...",
+          "pron": "",
+          "register": "neutral",
+          "example": "On that note, I think we've covered everything. Thanks everyone!",
+          "note": "Elegant meeting closer — transition từ thảo luận sang kết thúc",
+          "situation": "Sau khi xong tất cả agenda items, bạn muốn kết thúc meeting lịch sự và gọn gàng."
+        },
+        {
+          "term": "Let's take this offline.",
+          "level": "B2",
+          "vi": "Chúng ta thảo luận riêng sau nhé.",
+          "pron": "",
+          "register": "casual",
+          "example": "This is getting detailed — let's take this offline.",
+          "note": "Khi topic phức tạp cần thảo luận riêng, không chiếm thời gian cả nhóm",
+          "situation": "Cuộc tranh luận kỹ thuật giữa 2 người quá chi tiết, đang chiếm thời gian của cả nhóm 10 người."
+        }
+      ],
+      "vi_name": "Kết thúc cuộc họp",
+      "tracks": [
+        "default",
+        "toeic"
+      ],
+      "order": 180,
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "We're almost out of time, so **let's wrap up**."
+        },
+        {
+          "speaker": "B",
+          "text": "Sure. **To summarize**, we're moving the release to Friday and Minh owns the migration script."
+        },
+        {
+          "speaker": "A",
+          "text": "Right. **On that note**, can someone also check the rollback plan?"
+        },
+        {
+          "speaker": "B",
+          "text": "I'll take that. If there are more questions, **let's take this offline**."
+        }
+      ]
+    },
+    {
+      "id": "theme_pr_review",
+      "type": "thematic",
+      "subtype": null,
+      "name": "Code Review Vocabulary",
+      "level": "B2",
+      "topic": "Tech",
+      "tip": "Những từ/cụm standard trong GitHub/GitLab PR review — cần biết để đọc và viết comment",
+      "words": [
+        {
+          "term": "LGTM",
+          "level": "B1",
+          "vi": "Trông ổn đó! (ý là đồng ý, duyệt PR)",
+          "pron": "",
+          "register": "casual",
+          "example": "LGTM! Nice clean implementation.",
+          "note": "Acronym phổ biến nhất trong code review — = approved",
+          "situation": "Bạn review PR của đồng nghiệp — code clean, logic đúng, tests pass — muốn approve."
+        },
+        {
+          "term": "nit",
+          "level": "B1",
+          "vi": "nhận xét nhỏ (không bắt buộc sửa)",
+          "pron": "🇺🇸 🇬🇧 /nɪt/",
+          "register": "casual",
+          "example": "Nit: this variable name could be more descriptive.",
+          "note": "Short for 'nitpick' — optional to fix, không ảnh hưởng logic",
+          "situation": "Logic PR ổn nhưng tên biến có thể descriptive hơn — muốn comment nhẹ, không blocking."
+        },
+        {
+          "term": "blocking",
+          "level": "B1",
+          "vi": "comment bắt buộc phải fix trước khi merge",
+          "pron": "🇺🇸 /ˈblɑːkɪŋ/ 🇬🇧 /ˈblɒkɪŋ/",
+          "register": "casual",
+          "example": "Blocking: this will cause a memory leak in production.",
+          "note": "Blocking = must fix. Non-blocking = nice to have",
+          "situation": "Bạn phát hiện memory leak nghiêm trọng trong PR — không thể merge với bug này."
+        },
+        {
+          "term": "request changes",
+          "level": "B1",
+          "vi": "yêu cầu chỉnh sửa (không approve)",
+          "pron": "",
+          "register": "neutral",
+          "example": "I'll request changes — the error handling needs work.",
+          "note": "GitHub action — khác với 'comment' (không approve/reject)",
+          "situation": "Error handling trong PR chưa đúng, bạn không approve nhưng cũng không reject hẳn."
+        },
+        {
+          "term": "out of scope",
+          "level": "B2",
+          "vi": "ngoài phạm vi (của PR này)",
+          "pron": "",
+          "register": "neutral",
+          "example": "This refactor is out of scope for this PR — open a separate ticket.",
+          "note": "Quan trọng để keep PRs focused và reviewable",
+          "situation": "PR để fix bug nhưng author thêm cả refactor module khác không liên quan đến issue."
+        }
+      ],
+      "vi_name": "Từ vựng Review Code",
+      "tracks": [
+        "default"
+      ],
+      "order": 370,
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "Just reviewed your PR — overall **LGTM**."
+        },
+        {
+          "speaker": "B",
+          "text": "Awesome, thanks for the fast review!"
+        },
+        {
+          "speaker": "A",
+          "text": "I left one **nit** about variable naming, but it's not a big deal."
+        },
+        {
+          "speaker": "B",
+          "text": "Cool, I'll fix it anyway. Anything more serious?"
+        },
+        {
+          "speaker": "A",
+          "text": "Yeah, the missing null check on line 42 is **blocking** — please fix before merge. Also, the logging change feels **out of scope** here."
+        },
+        {
+          "speaker": "B",
+          "text": "Got it, I'll revert the logging bit and **request changes** on my own PR just to track it properly."
+        }
+      ]
+    },
+    {
+      "id": "theme_meeting_vocab",
+      "type": "thematic",
+      "subtype": null,
+      "name": "Meeting Outcomes",
+      "level": "B2",
+      "topic": "Meetings",
+      "tip": "Những từ dùng sau meeting để document kết quả — biết để viết meeting notes chuẩn",
+      "words": [
+        {
+          "term": "action item",
+          "level": "B1",
+          "vi": "việc cần làm (sau meeting, có người chịu trách nhiệm)",
+          "pron": "🇺🇸 🇬🇧 /ˈækʃən ˈaɪtəm/",
+          "register": "neutral",
+          "example": "Action item: Nguyen to set up load testing by Friday.",
+          "note": "Luôn có owner và deadline — phân biệt với 'todo' chung chung",
+          "situation": "Sau meeting, cần document công việc cụ thể của từng người với owner và deadline rõ ràng."
+        },
+        {
+          "term": "takeaway",
+          "level": "B2",
+          "vi": "điều rút ra, bài học từ meeting",
+          "pron": "🇺🇸 🇬🇧 /ˈteɪkəweɪ/",
+          "register": "neutral",
+          "example": "Key takeaway: we need better monitoring before scaling up.",
+          "note": "Insight/conclusion rút ra từ discussion",
+          "situation": "Sau incident review, bạn muốn note lại insight quan trọng rút ra từ outage này."
+        },
+        {
+          "term": "next steps",
+          "level": "B1",
+          "vi": "các bước tiếp theo",
+          "pron": "",
+          "register": "neutral",
+          "example": "Let's align on next steps before we close out.",
+          "note": "Thường cuối meeting để ensure clarity trước khi mọi người rời đi",
+          "situation": "Trước khi kết thúc planning meeting, cần ensure mọi người biết phải làm gì tiếp theo."
+        },
+        {
+          "term": "owner",
+          "level": "B1",
+          "vi": "người chịu trách nhiệm",
+          "pron": "🇺🇸 /ˈoʊnər/ 🇬🇧 /ˈəʊnə/",
+          "register": "neutral",
+          "example": "Who's the owner for this action item?",
+          "note": "Mỗi task/story cần có owner rõ ràng — tránh 'we all own it'",
+          "situation": "Action item vừa được tạo nhưng chưa ai nhận trách nhiệm — cần assign người chịu trách."
+        }
+      ],
+      "vi_name": "Kết quả cuộc họp",
+      "tracks": [
+        "default",
+        "toeic"
+      ],
+      "order": 190,
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "Okay, let's list our **action items** before we close."
+        },
+        {
+          "speaker": "B",
+          "text": "Sure — Minh will fix the migration script by Friday."
+        },
+        {
+          "speaker": "A",
+          "text": "Good, so he's the **owner** of that one."
+        },
+        {
+          "speaker": "B",
+          "text": "What about the API docs task?"
+        },
+        {
+          "speaker": "A",
+          "text": "I'll take that. Any **takeaways** from today's discussion?"
+        },
+        {
+          "speaker": "B",
+          "text": "Just that we need clearer specs earlier. For **next steps**, let's set up the design review for Monday."
+        }
+      ]
+    },
+    {
+      "id": "theme_feedback",
+      "type": "thematic",
+      "subtype": null,
+      "name": "Giving Constructive Feedback",
+      "level": "B2",
+      "topic": "Discussion",
+      "tip": "Frame feedback về impact và solution, không phải cá nhân. 'The code has an issue' not 'you made a mistake'.",
+      "words": [
+        {
+          "term": "it would be stronger if...",
+          "level": "B2",
+          "vi": "sẽ tốt hơn nếu...",
+          "pron": "",
+          "register": "neutral",
+          "example": "This PR would be stronger if it included unit tests.",
+          "note": "Positive framing — gợi ý cải tiến thay vì chỉ trích",
+          "situation": "Review PR: code logic đúng nhưng thiếu unit tests — muốn suggest thêm mà không harsh."
+        },
+        {
+          "term": "one suggestion would be...",
+          "level": "B2",
+          "vi": "một gợi ý là...",
+          "pron": "",
+          "register": "neutral",
+          "example": "One suggestion would be to extract this into a helper function.",
+          "note": "Softer than 'you should' — tạo không gian để người nhận quyết định",
+          "situation": "Code chạy được nhưng có thể extract helper function để cleaner — muốn suggest nhẹ nhàng."
+        },
+        {
+          "term": "I wonder if...",
+          "level": "B2",
+          "vi": "Tôi tự hỏi liệu... (gợi ý nhẹ nhàng)",
+          "pron": "",
+          "register": "neutral",
+          "example": "I wonder if this edge case has been handled?",
+          "note": "Raise concern mà không accuse — 'perhaps you missed this'",
+          "situation": "Trong code review, bạn nghi ngờ edge case chưa được handle nhưng không chắc chắn."
+        },
+        {
+          "term": "that said...",
+          "level": "B2",
+          "vi": "dù vậy... / tuy nhiên...",
+          "pron": "",
+          "register": "neutral",
+          "example": "The architecture is solid. That said, the error handling needs work.",
+          "note": "Balance feedback — acknowledge strengths trước khi critique",
+          "situation": "Bạn muốn acknowledge điểm mạnh của PR trước khi nêu vấn đề cần cải thiện."
+        }
+      ],
+      "vi_name": "Góp ý xây dựng",
+      "tracks": [
+        "default",
+        "toeic"
+      ],
+      "order": 230,
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "I read your draft — overall it's solid."
+        },
+        {
+          "speaker": "B",
+          "text": "Thanks, any thoughts on the intro?"
+        },
+        {
+          "speaker": "A",
+          "text": "**It would be stronger if** you added a real example there."
+        },
+        {
+          "speaker": "B",
+          "text": "Good point. Anything else?"
+        },
+        {
+          "speaker": "A",
+          "text": "**One suggestion would be** trimming the middle section, it drags a bit. **I wonder if** we even need the third paragraph at all."
+        },
+        {
+          "speaker": "B",
+          "text": "**That said**, I think the conclusion works really well as is."
+        }
+      ]
+    },
+    {
+      "id": "theme_deadline",
+      "type": "thematic",
+      "subtype": null,
+      "name": "Deadline & Time Pressure",
+      "level": "B2",
+      "topic": "Business",
+      "tip": "on track ↔ behind schedule ↔ ahead of schedule. slip = trượt nhẹ (neutral). miss = thất bại (negative).",
+      "words": [
+        {
+          "term": "behind schedule",
+          "level": "B2",
+          "vi": "trễ tiến độ",
+          "pron": "",
+          "register": "neutral",
+          "example": "We're behind schedule by three days — the migration took longer than expected.",
+          "note": "Contrast: 'on track' = đúng tiến độ, 'ahead of schedule' = sớm hơn dự kiến",
+          "situation": "Bạn update status cho PM: migration mất lâu hơn dự kiến, trễ 3 ngày so với plan."
+        },
+        {
+          "term": "crunch time",
+          "level": "B2",
+          "vi": "giai đoạn nước rút, làm overtime trước deadline",
+          "pron": "🇺🇸 🇬🇧 /krʌntʃ taɪm/",
+          "register": "casual",
+          "example": "It's crunch time — everyone needs to prioritize the launch blockers.",
+          "note": "Informal — implies high pressure, possible overtime",
+          "situation": "1 tuần trước launch date, team cần tập trung 100% vào blocking issues."
+        },
+        {
+          "term": "buffer",
+          "level": "B2",
+          "vi": "thời gian dự phòng, đệm",
+          "pron": "🇺🇸 /ˈbʌfər/ 🇬🇧 /ˈbʌfə/",
+          "register": "neutral",
+          "example": "Let's add a two-day buffer to account for unexpected issues.",
+          "note": "Planning term — mọi estimation đều nên có buffer",
+          "situation": "Estimate 2 tuần nhưng muốn add thêm thời gian để cover unexpected issues."
+        },
+        {
+          "term": "slip",
+          "level": "B2",
+          "vi": "trượt deadline, bị lùi",
+          "pron": "🇺🇸 🇬🇧 /slɪp/",
+          "register": "neutral",
+          "example": "The release date slipped by a week due to a critical bug.",
+          "note": "Neutral — không negative như 'miss deadline'",
+          "situation": "Release date phải dời vì phát hiện critical bug muộn — cần thông báo stakeholders."
+        }
+      ],
+      "vi_name": "Deadline & Áp lực thời gian",
+      "tracks": [
+        "default",
+        "toeic"
+      ],
+      "order": 240,
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "How's the migration project going?"
+        },
+        {
+          "speaker": "B",
+          "text": "Honestly, we're a bit **behind schedule** right now."
+        },
+        {
+          "speaker": "A",
+          "text": "How far behind?"
+        },
+        {
+          "speaker": "B",
+          "text": "About three days. We're heading into **crunch time** this week to catch up."
+        },
+        {
+          "speaker": "A",
+          "text": "Do we have any **buffer** before the client demo?"
+        },
+        {
+          "speaker": "B",
+          "text": "A little, but if testing **slips** again, we'll need to push the demo date."
+        }
+      ]
+    },
+    {
+      "id": "coll_raise",
+      "type": "collocation",
+      "subtype": null,
+      "name": "\"Raise\" Collocations",
+      "level": "B2",
+      "topic": "Business",
+      "tip": "raise = đưa vấn đề lên để thảo luận/giải quyết. Khác với 'open' chỉ dùng cho ticket (GitHub/Jira).",
+      "words": [
+        {
+          "term": "raise an issue",
+          "level": "B2",
+          "vi": "nêu ra một vấn đề",
+          "pron": "",
+          "register": "neutral",
+          "example": "I'd like to raise an issue regarding the deployment process.",
+          "note": "Formal way to introduce a problem",
+          "contrast": "drop an issue",
+          "wrong_usage": "❌ 'open an issue' trong meeting — chỉ dùng cho GitHub/Jira ticket",
+          "situation": "Trong retrospective, bạn muốn đưa vấn đề về deployment process lên để team thảo luận."
+        },
+        {
+          "term": "raise concerns",
+          "level": "B2",
+          "vi": "bày tỏ lo ngại",
+          "pron": "",
+          "register": "formal",
+          "example": "Several team members have raised concerns about the timeline.",
+          "note": "Professional cách express worry — tốt hơn 'I'm worried'",
+          "situation": "Bạn lo ngại về security implications của feature mới — muốn voice một cách professional."
+        },
+        {
+          "term": "raise a question",
+          "level": "B1",
+          "vi": "đặt ra câu hỏi",
+          "pron": "",
+          "register": "neutral",
+          "example": "Your proposal raises an interesting question about data privacy.",
+          "note": "Polite way to question something — không trực tiếp phản đối",
+          "situation": "Sau khi nghe proposal về new architecture, bạn muốn hỏi về data privacy implications."
+        },
+        {
+          "term": "raise awareness",
+          "level": "B2",
+          "vi": "nâng cao nhận thức",
+          "pron": "",
+          "register": "neutral",
+          "example": "We need to raise awareness about security best practices.",
+          "note": "Dùng khi vấn đề chưa được team biết/chú ý đến",
+          "situation": "Team chưa ai biết về API security best practices mới — bạn muốn share thông tin này."
+        }
+      ],
+      "vi_name": "Cụm từ với \"Raise\"",
+      "tracks": [
+        "common",
+        "toeic",
+        "default"
+      ],
+      "order": 130,
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "During the client call, did anyone **raise an issue** about the pricing model?"
+        },
+        {
+          "speaker": "B",
+          "text": "Yeah, actually. A few people also **raised concerns** about the rollout timeline."
+        },
+        {
+          "speaker": "A",
+          "text": "Did they **raise a question** about support after launch?"
+        },
+        {
+          "speaker": "B",
+          "text": "Yes, and we should use this chance to **raise awareness** about our new SLA policy too."
+        }
+      ]
+    },
+    {
+      "id": "filler_spoken",
+      "type": "filler",
+      "subtype": "spoken_pause",
+      "name": "Spoken Filler Phrases",
+      "level": "B1",
+      "topic": "Discussion",
+      "tip": "Dùng để fill khoảng lặng tự nhiên khi nói — tránh 'uh... uh...' nhưng đừng overuse một phrase",
+      "words": [
+        {
+          "term": "So...",
+          "level": "B1",
+          "vi": "Vậy... / Thế thì...",
+          "pron": "",
+          "register": "casual",
+          "example": "So... where were we? Oh right, the authentication issue.",
+          "note": "Universal transition khi bắt đầu nói hoặc sau pause",
+          "situation": "Bạn bị interrupt khi đang giải thích solution, muốn resume lại conversation sau khoảng dừng."
+        },
+        {
+          "term": "Actually...",
+          "level": "B1",
+          "vi": "Thực ra... / Thật ra là...",
+          "pron": "🇺🇸 🇬🇧 /ˈæktʃuəli/",
+          "register": "casual",
+          "example": "Actually, I think we should reconsider the approach.",
+          "note": "Introduce correction hoặc different perspective",
+          "situation": "Bạn vừa nói xong một điểm nhưng muốn correct lại hoặc add góc nhìn khác."
+        },
+        {
+          "term": "I mean...",
+          "level": "B1",
+          "vi": "Ý tôi là...",
+          "pron": "",
+          "register": "casual",
+          "example": "It's not that simple. I mean, we have to consider the edge cases too.",
+          "note": "Clarify hoặc elaborate on something just said",
+          "situation": "Bạn vừa dùng technical jargon, muốn elaborate thêm để người nghe non-technical hiểu rõ."
+        },
+        {
+          "term": "You know what I mean?",
+          "level": "B1",
+          "vi": "Bạn hiểu ý tôi không?",
+          "pron": "",
+          "register": "casual",
+          "example": "The performance was just... not great, you know what I mean?",
+          "note": "Check understanding — informal, tránh dùng với senior/executive",
+          "situation": "Bạn vừa mô tả performance issue khá vague, muốn check xem người nghe có hiểu ý không."
+        }
+      ],
+      "vi_name": "Câu đệm khi nói",
+      "tracks": [
+        "common",
+        "default",
+        "toeic",
+        "ielts"
+      ],
+      "order": 40,
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "**So...** I was thinking we should just rewrite the whole module instead of patching it."
+        },
+        {
+          "speaker": "B",
+          "text": "**Actually...** I don't think we have time for a full rewrite this sprint."
+        },
+        {
+          "speaker": "A",
+          "text": "**I mean...** the current code is such a mess that patching it just adds more mess."
+        },
+        {
+          "speaker": "B",
+          "text": "I hear you, but we can't risk breaking prod right before the release, **you know what I mean?**"
+        }
+      ]
+    },
+    {
+      "id": "filler_written",
+      "type": "filler",
+      "subtype": "written_transition",
+      "name": "Written Transition Words",
+      "level": "B2",
+      "topic": "Discussion",
+      "tip": "Dùng trong email, Confluence, PR description. Đừng overuse 'however' — vary your connectors.",
+      "words": [
+        {
+          "term": "However,",
+          "level": "B1",
+          "vi": "Tuy nhiên,",
+          "pron": "🇺🇸 /haʊˈɛvər/ 🇬🇧 /haʊˈevə/",
+          "register": "neutral",
+          "example": "The feature works as expected. However, performance on mobile needs improvement.",
+          "note": "Contrast — phổ biến nhất trong technical writing",
+          "situation": "Trong email gửi PM: feature đã chạy đúng nhưng cần đề cập performance concern trên mobile."
+        },
+        {
+          "term": "Therefore,",
+          "level": "B1",
+          "vi": "Do đó, / Vì vậy,",
+          "pron": "🇺🇸 /ˈðɛrfɔːr/ 🇬🇧 /ˈðeəfɔː/",
+          "register": "formal",
+          "example": "The API is deprecated. Therefore, we need to migrate by Q2.",
+          "note": "Logical consequence — formal trong documents",
+          "situation": "Trong Confluence: API này đã deprecated, cần viết rõ hệ quả và action cần làm."
+        },
+        {
+          "term": "In addition,",
+          "level": "B1",
+          "vi": "Ngoài ra,",
+          "pron": "",
+          "register": "neutral",
+          "example": "We reduced load time by 40%. In addition, memory usage dropped significantly.",
+          "note": "Add more information. Alternatives: Moreover, Furthermore (more formal)",
+          "situation": "Trong release notes: ngoài feature chính, còn có performance improvement cần mention."
+        },
+        {
+          "term": "That said,",
+          "level": "B2",
+          "vi": "Dù vậy, / Tuy nhiên,",
+          "pron": "",
+          "register": "neutral",
+          "example": "The solution is elegant. That said, it adds complexity to the codebase.",
+          "note": "Balance positive và negative — sounds more natural than 'however'",
+          "situation": "Trong PR description: acknowledge architecture decision tốt nhưng cần note complexity thêm."
+        },
+        {
+          "term": "As a result,",
+          "level": "B1",
+          "vi": "Kết quả là,",
+          "pron": "",
+          "register": "neutral",
+          "example": "We deployed the hotfix at midnight. As a result, error rates dropped to zero.",
+          "note": "Show cause-effect — good cho incident reports, post-mortems",
+          "situation": "Trong incident report: sau khi deploy hotfix lúc nửa đêm, kết quả đạt được là gì."
+        }
+      ],
+      "vi_name": "Từ nối văn viết",
+      "tracks": [
+        "common",
+        "toeic",
+        "ielts",
+        "default"
+      ],
+      "order": 430,
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "The report says the new server passed all load tests. **However,** it also flags a memory leak."
+        },
+        {
+          "speaker": "B",
+          "text": "**Therefore,** we shouldn't ship it until that's fixed."
+        },
+        {
+          "speaker": "A",
+          "text": "**In addition,** the leak only shows up after 48 hours of uptime."
+        },
+        {
+          "speaker": "B",
+          "text": "**That said,** most users restart the app daily, so it might not be critical."
+        },
+        {
+          "speaker": "A",
+          "text": "True, but **as a result,** long-running background jobs could still crash overnight."
+        }
+      ]
+    },
+    {
+      "id": "filler_presentation",
+      "type": "filler",
+      "subtype": "presentation",
+      "name": "Presentation Phrases",
+      "level": "B2",
+      "topic": "Meetings",
+      "tip": "Dùng khi trình bày trong meeting hoặc demo — giúp structure bài nói và transition smoothly",
+      "words": [
+        {
+          "term": "Moving on to...",
+          "level": "B1",
+          "vi": "Chuyển sang...",
+          "pron": "",
+          "register": "neutral",
+          "example": "Moving on to the next slide — let's look at the performance metrics.",
+          "note": "Standard presentation transition khi chuyển topic/slide",
+          "situation": "Trong demo với stakeholders, bạn cần chuyển từ architecture overview slide sang live demo."
+        },
+        {
+          "term": "Building on that...",
+          "level": "B2",
+          "vi": "Mở rộng từ ý đó...",
+          "pron": "",
+          "register": "neutral",
+          "example": "Building on that, I'd like to show how this affects our SLA.",
+          "note": "Connect ý tiếp theo với ý vừa nói — flow tốt hơn 'and also'",
+          "situation": "Sau khi trình bày về problem, bạn muốn kết nối smooth sang proposed solution."
+        },
+        {
+          "term": "With that in mind...",
+          "level": "B2",
+          "vi": "Nhớ đến điều đó,",
+          "pron": "",
+          "register": "neutral",
+          "example": "With that in mind, let's look at our proposed solution.",
+          "note": "Bridge từ problem sang solution — rất professional",
+          "situation": "Sau khi show performance metrics đáng lo ngại, bạn muốn transition sang proposed solution."
+        },
+        {
+          "term": "To put it simply...",
+          "level": "B2",
+          "vi": "Nói đơn giản là...",
+          "pron": "",
+          "register": "neutral",
+          "example": "To put it simply, we're trading latency for consistency.",
+          "note": "Dùng khi muốn simplify technical concept cho non-technical audience",
+          "situation": "Bạn vừa giải thích distributed systems concept phức tạp, cần simplify cho non-technical PM."
+        }
+      ],
+      "vi_name": "Câu mở đầu thuyết trình",
+      "tracks": [
+        "default",
+        "toeic",
+        "ielts"
+      ],
+      "order": 380,
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "**Moving on to...** the results section, our conversion rate improved by 12%."
+        },
+        {
+          "speaker": "B",
+          "text": "**Building on that...** we also saw a drop in cart abandonment."
+        },
+        {
+          "speaker": "A",
+          "text": "**With that in mind,** we're proposing to roll this out to all regions next quarter."
+        },
+        {
+          "speaker": "B",
+          "text": "**To put it simply...** slower checkout was costing us sales, and now it isn't."
+        }
+      ]
+    },
+    {
+      "id": "it_bug_report",
+      "type": "thematic",
+      "subtype": null,
+      "name": "Reporting a Bug/Incident",
+      "level": "B2",
+      "topic": "Incident Management",
+      "tip": "bug là từ casual dùng hàng ngày trong chat/standup; defect trang trọng, thường xuất hiện trong báo cáo QA; issue trung tính khi chưa chắc chắn nguyên nhân; incident dùng cho sự cố nghiêm trọng ảnh hưởng production.",
+      "tracks": [
+        "default"
+      ],
+      "words": [
+        {
+          "term": "bug",
+          "level": "A2",
+          "vi": "lỗi (phần mềm)",
+          "pron": "🇺🇸 🇬🇧 /bʌɡ/",
+          "register": "casual",
+          "example": "There's a bug in the login form — users can't reset their password.",
+          "note": "Từ thông dụng nhất, dùng hàng ngày trong chat/standup, không trang trọng.",
+          "situation": "Trong buổi standup hàng ngày, bạn muốn báo nhanh với team rằng chức năng đăng nhập đang gặp trục trặc nhỏ."
+        },
+        {
+          "term": "defect",
+          "level": "B2",
+          "vi": "lỗi, khiếm khuyết (thuật ngữ QA)",
+          "pron": "🇺🇸 🇬🇧 /ˈdiːfɛkt/",
+          "register": "formal",
+          "example": "QA logged three defects in yesterday's regression test cycle.",
+          "note": "Thuật ngữ formal, phổ biến trong tài liệu QA/test report, ít dùng khi nói chuyện casual.",
+          "situation": "Bạn đang điền vào biểu mẫu kiểm thử chính thức (QA report) để ghi nhận điều bất thường vừa phát hiện được trong đợt test hồi quy."
+        },
+        {
+          "term": "reproduce",
+          "level": "B2",
+          "vi": "tái hiện lại (lỗi), làm cho lỗi xảy ra lại",
+          "pron": "🇺🇸 /ˌriːprəˈduːs/ 🇬🇧 /ˌriːprəˈdjuːs/",
+          "register": "neutral",
+          "example": "I can't reproduce the bug on my machine — could you share the exact steps?",
+          "note": "Luôn đi kèm 'steps to reproduce' trong bug report — QA/dev cần bước cụ thể để kiểm chứng lỗi",
+          "situation": "Đồng nghiệp báo có lỗi nhưng bạn thử làm y hệt trên máy mình mà không thấy lỗi xảy ra, cần hỏi thêm bước cụ thể."
+        },
+        {
+          "term": "incident",
+          "level": "B2",
+          "vi": "sự cố (nghiêm trọng, thường ảnh hưởng production)",
+          "pron": "🇺🇸 🇬🇧 /ˈɪnsɪdənt/",
+          "register": "formal",
+          "example": "We declared a P1 incident after the payment service went down for 20 minutes.",
+          "note": "Dùng cho sự cố production nghiêm trọng, thường kèm quy trình phản ứng khẩn cấp và postmortem sau đó.",
+          "situation": "Hệ thống thanh toán bất ngờ ngừng hoạt động hoàn toàn trong giờ cao điểm và bạn cần kích hoạt quy trình ứng phó khẩn cấp của công ty."
+        }
+      ],
+      "vi_name": "Báo cáo lỗi/sự cố",
+      "order": 260,
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "QA just logged a **bug** in the checkout flow — payments are failing intermittently."
+        },
+        {
+          "speaker": "B",
+          "text": "Is it a real **defect**, or just a one-off glitch?"
+        },
+        {
+          "speaker": "A",
+          "text": "I tried to **reproduce** it three times and got the same failure each time."
+        },
+        {
+          "speaker": "B",
+          "text": "Then let's treat it as an **incident** and page the on-call engineer."
+        }
+      ]
+    },
+    {
+      "id": "it_root_cause",
+      "type": "thematic",
+      "subtype": null,
+      "name": "Explaining Root Cause",
+      "level": "B2",
+      "topic": "Root Cause Analysis",
+      "tip": "root cause là thuật ngữ formal, chuẩn dùng trong RCA/postmortem; stem from cũng formal, dạng động từ dùng khi viết báo cáo; turn out to be casual, dùng khi kể lại một phát hiện bất ngờ; boil down to dùng khi tóm gọn một nguyên nhân phức tạp thành một ý chính lúc nói.",
+      "tracks": [
+        "default"
+      ],
+      "words": [
+        {
+          "term": "root cause",
+          "level": "B2",
+          "vi": "nguyên nhân gốc rễ",
+          "pron": "🇺🇸 🇬🇧 /ruːt kɔːz/",
+          "register": "formal",
+          "example": "The postmortem doc identifies a misconfigured load balancer as the root cause.",
+          "note": "Thuật ngữ chuẩn trong RCA (Root Cause Analysis), luôn xuất hiện trong báo cáo postmortem.",
+          "situation": "Trong báo cáo postmortem chính thức sau sự cố, bạn cần chỉ đích danh yếu tố kỹ thuật nào đã thực sự khởi phát toàn bộ chuỗi sự kiện dẫn đến downtime."
+        },
+        {
+          "term": "stem from",
+          "level": "B2",
+          "vi": "bắt nguồn từ, xuất phát từ",
+          "pron": "🇺🇸 /stɛm frʌm/ 🇬🇧 /stɛm frɒm/",
+          "register": "formal",
+          "example": "The memory leak stemmed from an unclosed database connection.",
+          "note": "Formal, thường dùng trong văn viết/báo cáo kỹ thuật, nhấn mạnh mối liên hệ giữa hệ quả và điểm khởi phát.",
+          "situation": "Trong tài liệu kỹ thuật, bạn muốn diễn đạt trang trọng rằng nguyên nhân của vấn đề hiệu năng nằm ở một đoạn code cũ chưa được dọn dẹp, chứ không phải lỗi mới phát sinh."
+        },
+        {
+          "term": "turn out to be",
+          "level": "B1",
+          "vi": "hóa ra là",
+          "pron": "🇺🇸 /tɜrn aʊt tə bi/ 🇬🇧 /tɜːn aʊt tə biː/",
+          "register": "casual",
+          "example": "We spent hours debugging, and it turned out to be a typo in the config file.",
+          "note": "Casual, dùng khi kể lại phát hiện bất ngờ sau một quá trình điều tra.",
+          "situation": "Bạn kể lại với đồng nghiệp trong lúc trò chuyện rằng sau nhiều giờ mò mẫm, nguyên nhân thực sự lại đơn giản đến bất ngờ."
+        },
+        {
+          "term": "boil down to",
+          "level": "B2",
+          "vi": "tóm lại là, quy về",
+          "pron": "🇺🇸 🇬🇧 /bɔɪl daʊn tə/",
+          "register": "neutral",
+          "example": "After all the analysis, it boils down to a race condition in the payment queue.",
+          "note": "Dùng khi muốn rút gọn một nguyên nhân phức tạp thành một ý chính, thường khi giải thích miệng cho người khác.",
+          "situation": "Sau một buổi phân tích dài và nhiều giả thuyết, sếp yêu cầu bạn giải thích trong đúng một câu ngắn gọn nguyên nhân cốt lõi rốt cuộc là gì.",
+          "wrong_usage": "Đừng nhầm với 'come down to' — hai cụm gần nghĩa nhưng 'boil down to' phổ biến hơn khi nói về việc rút gọn một vấn đề kỹ thuật phức tạp."
+        }
+      ],
+      "vi_name": "Giải thích nguyên nhân gốc rễ",
+      "order": 270,
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "Did we find the **root cause** of yesterday's outage yet?"
+        },
+        {
+          "speaker": "B",
+          "text": "It seems to **stem from** a misconfigured cache TTL on the new deploy."
+        },
+        {
+          "speaker": "A",
+          "text": "Really? I thought it would **turn out to be** a database issue."
+        },
+        {
+          "speaker": "B",
+          "text": "Nope, it all **boils down to** one wrong config value."
+        }
+      ]
+    },
+    {
+      "id": "it_estimate",
+      "type": "thematic",
+      "subtype": null,
+      "name": "Estimating & Scoping Work",
+      "level": "B2",
+      "topic": "Estimation & Scoping",
+      "tip": "ballpark figure rất casual, chỉ là ước lượng thô; ETA trung tính, hỏi/đưa mốc thời gian cụ thể; out of scope formal, dùng để từ chối lịch sự yêu cầu vượt phạm vi; buffer dùng khi muốn cộng thêm thời gian dự phòng vào estimate.",
+      "tracks": [
+        "default"
+      ],
+      "words": [
+        {
+          "term": "ballpark figure",
+          "level": "B2",
+          "vi": "con số ước lượng (thô, chưa chính xác)",
+          "pron": "🇺🇸 /ˈbɔːlpɑːrk ˈfɪɡjər/ 🇬🇧 /ˈbɔːlpɑːk ˈfɪɡə/",
+          "register": "casual",
+          "example": "Can you give me a ballpark figure for how long the migration will take?",
+          "note": "Casual, dùng khi hỏi hoặc đưa ra ước lượng nhanh, chưa cần chính xác, thường trong chat/standup.",
+          "situation": "Sếp hỏi nhanh bạn trong Slack xem việc chuyển đổi database sẽ mất khoảng bao lâu, chỉ cần một con số nhanh, không cần chính xác tuyệt đối để lên kế hoạch sơ bộ."
+        },
+        {
+          "term": "ETA",
+          "level": "B1",
+          "vi": "thời gian dự kiến hoàn thành",
+          "pron": "🇺🇸 🇬🇧 /ˌiː tiː ˈeɪ/",
+          "register": "neutral",
+          "example": "What's the ETA on the hotfix for the checkout bug?",
+          "note": "Viết tắt của 'estimated time of arrival', dùng phổ biến trong dev để hỏi mốc hoàn thành, trung tính cả nói và viết.",
+          "situation": "Đồng nghiệp nhắn hỏi bạn khi nào bản vá lỗi thanh toán sẽ được triển khai xong để họ thông báo cho khách hàng."
+        },
+        {
+          "term": "story points",
+          "level": "B2",
+          "vi": "điểm ước lượng (đơn vị đo độ phức tạp công việc, không phải thời gian)",
+          "pron": "🇺🇸 🇬🇧 /ˈstɔːri pɔɪnts/",
+          "register": "neutral",
+          "example": "Let's give this ticket 5 story points — it's more complex than it looks.",
+          "note": "Đơn vị Agile phổ biến, đo độ phức tạp/effort chứ không phải số giờ/ngày cụ thể",
+          "situation": "Trong buổi planning poker, team cần thống nhất một con số đo độ phức tạp cho 1 ticket thay vì nói số ngày cụ thể."
+        },
+        {
+          "term": "pad the estimate",
+          "level": "B2",
+          "vi": "cộng thêm thời gian dự phòng vào ước lượng",
+          "pron": "🇺🇸 🇬🇧 /pæd ði ˈɛstɪmət/",
+          "register": "casual",
+          "example": "I always pad the estimate a bit in case QA finds edge cases.",
+          "note": "Cách nói informal, ngụ ý chủ động thêm dư thời gian để an toàn",
+          "situation": "Bạn đưa ước lượng nhưng biết task này hay phát sinh vấn đề, nên chủ động cộng thêm thời gian an toàn vào con số ban đầu."
+        }
+      ],
+      "vi_name": "Ước lượng & xác định phạm vi công việc",
+      "order": 280,
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "Can you give me a **ballpark figure** for how long the migration will take?"
+        },
+        {
+          "speaker": "B",
+          "text": "Roughly two weeks, but let me confirm the **ETA** after grooming."
+        },
+        {
+          "speaker": "A",
+          "text": "We already sized it at 8 **story points** in planning."
+        },
+        {
+          "speaker": "B",
+          "text": "True, but I always **pad the estimate** a bit for unexpected issues."
+        }
+      ]
+    },
+    {
+      "id": "it_standup",
+      "type": "thematic",
+      "subtype": null,
+      "name": "Standup Status Update",
+      "level": "B2",
+      "topic": "Daily Standup",
+      "tip": "wrap up dùng khi task sắp xong; on track dùng để báo tiến độ đúng kế hoạch; nothing to flag là cách nói ngắn gọn khi không có gì đặc biệt; pick up dùng khi sắp bắt đầu nhận một task mới.",
+      "tracks": [
+        "default"
+      ],
+      "words": [
+        {
+          "term": "carry over",
+          "level": "B2",
+          "vi": "chuyển tiếp (task chưa xong sang hôm sau/sprint sau)",
+          "pron": "🇺🇸 /ˈkæri ˈoʊvər/ 🇬🇧 /ˈkæri ˈəʊvə/",
+          "register": "neutral",
+          "example": "This task didn't get finished yesterday, so it'll carry over to today.",
+          "note": "Rất phổ biến trong standup khi 1 task chưa xong đúng hạn dự kiến",
+          "situation": "Task hôm qua bạn nói sẽ xong nhưng chưa xong, cần báo trong standup hôm nay là việc đó sẽ tiếp tục."
+        },
+        {
+          "term": "on track",
+          "level": "B2",
+          "vi": "đúng tiến độ, đúng kế hoạch",
+          "pron": "🇺🇸 /ɑːn ˈtræk/ 🇬🇧 /ɒn ˈtræk/",
+          "register": "neutral",
+          "example": "The database migration is on track and should be done by Friday as planned.",
+          "note": "Dùng để khẳng định công việc đang tiến triển đúng như kế hoạch, không có gì bất thường.",
+          "situation": "Bạn muốn trấn an team rằng việc chuyển đổi cơ sở dữ liệu vẫn đang diễn ra đúng lịch đã đề ra, không có gì đáng lo."
+        },
+        {
+          "term": "nothing to flag",
+          "level": "B2",
+          "vi": "không có gì đáng báo cáo/lưu ý",
+          "pron": "🇺🇸 🇬🇧 /ˈnʌθɪŋ tə flæg/",
+          "register": "neutral",
+          "example": "Nothing to flag from my side today — everything's going smoothly.",
+          "note": "Cách nói ngắn gọn, phổ biến để báo không có vấn đề hay cập nhật gì đặc biệt.",
+          "situation": "Đến lượt bạn báo cáo trong standup nhưng hôm qua không có chuyện gì đặc biệt xảy ra, mọi việc vẫn diễn ra bình thường."
+        },
+        {
+          "term": "pick up",
+          "level": "B1",
+          "vi": "bắt đầu nhận/làm (task tiếp theo)",
+          "pron": "🇺🇸 🇬🇧 /ˌpɪk ˈʌp/",
+          "register": "neutral",
+          "example": "Once I finish this ticket, I'll pick up the caching bug next.",
+          "note": "Dùng khi báo sắp bắt tay vào một task hoặc ticket mới, thường sau khi xong việc hiện tại.",
+          "situation": "Bạn vừa sắp hoàn thành ticket hiện tại và muốn cho team biết mình sẽ chuyển sang xử lý lỗi cache tiếp theo."
+        }
+      ],
+      "vi_name": "Cập nhật tiến độ trong Standup",
+      "order": 250,
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "The API refactor didn't finish yesterday, so I'll **carry over** the ticket to today."
+        },
+        {
+          "speaker": "B",
+          "text": "Got it. Is the rest of the sprint still **on track**?"
+        },
+        {
+          "speaker": "A",
+          "text": "Yes, **nothing to flag** on my end otherwise."
+        },
+        {
+          "speaker": "B",
+          "text": "Cool, I'll **pick up** the next task in the backlog then."
+        }
+      ]
+    },
+    {
+      "id": "it_escalate",
+      "type": "thematic",
+      "subtype": null,
+      "name": "Escalating / Asking for Help",
+      "level": "B2",
+      "topic": "Blockers & Escalation",
+      "tip": "blocked on nêu rõ nguyên nhân cụ thể khiến bạn không làm tiếp được; I'm stuck diễn tả cảm giác bế tắc không biết làm sao; loop in nghĩa là mời thêm người liên quan vào; escalate là đẩy vấn đề lên cấp cao hơn khi tự xử lý không được.",
+      "tracks": [
+        "default"
+      ],
+      "words": [
+        {
+          "term": "blocked on",
+          "level": "B1",
+          "vi": "bị chặn/vướng bởi (cái gì đó)",
+          "pron": "🇺🇸 /blɑːkt ɑːn/ 🇬🇧 /blɒkt ɒn/",
+          "register": "neutral",
+          "example": "I'm blocked on the API credentials — can someone from the backend team help?",
+          "note": "Dùng khi có nguyên nhân cụ thể (thiếu quyền, phụ thuộc team khác...) khiến bạn không thể tiếp tục.",
+          "situation": "Bạn không thể làm tiếp công việc vì đang thiếu quyền truy cập API từ team backend và cần ai đó cấp cho mình."
+        },
+        {
+          "term": "I'm stuck",
+          "level": "A2",
+          "vi": "tôi đang bế tắc, không biết làm sao tiếp",
+          "pron": "🇺🇸 🇬🇧 /aɪm ˈstʌk/",
+          "register": "casual",
+          "example": "I'm stuck on this bug — I've tried everything and nothing works.",
+          "note": "Cách nói thẳng thắn, thân mật khi thật sự không biết hướng giải quyết, khác với blocked on vốn có nguyên nhân rõ ràng.",
+          "situation": "Bạn đã thử nhiều cách để sửa một lỗi nhưng không có cách nào hiệu quả và không biết phải làm gì tiếp theo."
+        },
+        {
+          "term": "flag to",
+          "level": "B2",
+          "vi": "báo cáo, đưa vấn đề lên cho (ai đó) chú ý",
+          "pron": "🇺🇸 🇬🇧 /flæg tuː/",
+          "register": "neutral",
+          "example": "I'll flag this to the tech lead before it affects the release.",
+          "note": "Nhẹ nhàng hơn 'escalate' — chỉ đơn giản là báo cho ai đó biết, chưa hẳn là leo thang chính thức",
+          "situation": "Bạn phát hiện một rủi ro nhỏ có thể ảnh hưởng đến release, muốn báo cho tech lead biết trước khi nó trở thành vấn đề lớn."
+        },
+        {
+          "term": "escalate",
+          "level": "B2",
+          "vi": "leo thang, đẩy vấn đề lên cấp cao hơn",
+          "pron": "🇺🇸 🇬🇧 /ˈɛskəleɪt/",
+          "register": "formal",
+          "example": "If we don't hear back by tomorrow, we should escalate this to the project manager.",
+          "note": "Dùng khi vấn đề vượt quá khả năng tự giải quyết và cần báo lên người có thẩm quyền cao hơn.",
+          "situation": "Bạn đã chờ phản hồi khá lâu mà không có kết quả và cảm thấy cần đưa vấn đề này lên cấp quản lý để giải quyết."
+        }
+      ],
+      "vi_name": "Leo thang vấn đề / Nhờ giúp đỡ",
+      "order": 290,
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "I'm **blocked on** the staging deploy — the pipeline keeps failing."
+        },
+        {
+          "speaker": "B",
+          "text": "Have you checked the logs? Maybe it's a permissions issue."
+        },
+        {
+          "speaker": "A",
+          "text": "I checked, but honestly **I'm stuck** and don't know what else to try."
+        },
+        {
+          "speaker": "B",
+          "text": "Let's **flag it to** the DevOps team right away."
+        },
+        {
+          "speaker": "A",
+          "text": "If they don't respond in an hour, I'll **escalate** to the team lead."
+        }
+      ]
+    },
+    {
+      "id": "it_tradeoff",
+      "type": "thematic",
+      "subtype": null,
+      "name": "Presenting a Technical Tradeoff",
+      "level": "B2",
+      "topic": "Technical Decisions",
+      "tip": "trade-off là danh từ chỉ sự đánh đổi nói chung; the downside is dùng để nêu điểm bất lợi cụ thể; on the flip side dùng để chuyển sang khía cạnh đối lập; come at the cost of nhấn mạnh cái giá phải trả đi kèm với lợi ích đạt được.",
+      "tracks": [
+        "default"
+      ],
+      "words": [
+        {
+          "term": "trade-off",
+          "level": "B2",
+          "vi": "sự đánh đổi",
+          "pron": "🇺🇸 /ˈtreɪdˌɔːf/ 🇬🇧 /ˈtreɪdˌɒf/",
+          "register": "neutral",
+          "example": "There's a trade-off between using a managed database and running our own for full control.",
+          "note": "Danh từ, dùng để nói chung về việc phải đánh đổi giữa hai lựa chọn hoặc lợi ích khác nhau.",
+          "situation": "Bạn đang giải thích cho team rằng việc chọn dùng dịch vụ cơ sở dữ liệu quản lý sẵn thay vì tự vận hành sẽ phải hy sinh một phần quyền kiểm soát."
+        },
+        {
+          "term": "the downside is",
+          "level": "B1",
+          "vi": "điểm bất lợi là, nhược điểm là",
+          "pron": "🇺🇸 🇬🇧 /ðə ˈdaʊnsaɪd ɪz/",
+          "register": "neutral",
+          "example": "The downside is that this library hasn't been updated in over a year.",
+          "note": "Dùng để nêu trực tiếp một điểm yếu hoặc hạn chế cụ thể của giải pháp đang bàn.",
+          "situation": "Bạn muốn chỉ ra rằng thư viện đang được đề xuất sử dụng đã hơn một năm không có bản cập nhật mới, đây là điều cần cân nhắc."
+        },
+        {
+          "term": "on the flip side",
+          "level": "B2",
+          "vi": "mặt khác, xét theo chiều ngược lại",
+          "pron": "🇺🇸 /ɑːn ðə ˈflɪp saɪd/ 🇬🇧 /ɒn ðə ˈflɪp saɪd/",
+          "register": "neutral",
+          "example": "It'll take longer to build in-house; on the flip side, we'll have full control over the roadmap.",
+          "note": "Dùng để chuyển ý sang khía cạnh đối lập sau khi vừa nêu một điểm ngược lại.",
+          "situation": "Sau khi nói rằng tự xây dựng tính năng sẽ mất nhiều thời gian hơn, bạn muốn nêu thêm một lợi ích đối lập là được toàn quyền kiểm soát lộ trình phát triển."
+        },
+        {
+          "term": "come at the cost of",
+          "level": "C1",
+          "vi": "phải trả giá bằng, đánh đổi bằng",
+          "pron": "🇺🇸 /kʌm æt ðə ˈkɔːst ʌv/ 🇬🇧 /kʌm æt ðə ˈkɒst ʌv/",
+          "register": "formal",
+          "example": "Switching to microservices improves scalability, but it comes at the cost of added operational complexity.",
+          "note": "Dùng khi lợi ích đạt được luôn đi kèm với một cái giá hoặc hạn chế cụ thể phải chấp nhận.",
+          "situation": "Bạn đang giải thích rằng việc chuyển sang kiến trúc microservices sẽ giúp mở rộng tốt hơn, nhưng đổi lại team sẽ phải quản lý một hệ thống phức tạp hơn."
+        }
+      ],
+      "vi_name": "Trình bày sự đánh đổi kỹ thuật",
+      "order": 310,
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "Switching to microservices is a big **trade-off** for our small team."
+        },
+        {
+          "speaker": "B",
+          "text": "**The downside is** we'll need way more DevOps overhead."
+        },
+        {
+          "speaker": "A",
+          "text": "**On the flip side,** each service can scale independently."
+        },
+        {
+          "speaker": "B",
+          "text": "True, but that flexibility will **come at the cost of** simpler deployments."
+        }
+      ]
+    },
+    {
+      "id": "it_simplify_tech",
+      "type": "thematic",
+      "subtype": null,
+      "name": "Explaining Tech to Non-Technical Stakeholders",
+      "level": "B2",
+      "topic": "Stakeholder Communication",
+      "tip": "in layman's terms mở đầu câu khi báo trước sẽ không dùng thuật ngữ chuyên môn; put it simply trung tính, dùng được mọi lúc để tóm gọn; break it down nhấn mạnh việc giải thích tuần tự từng bước; dumb it down hơi suồng sã, cẩn thận vì có thể nghe như xem thường người nghe.",
+      "tracks": [
+        "default"
+      ],
+      "words": [
+        {
+          "term": "in layman's terms",
+          "level": "B2",
+          "vi": "nói theo cách dễ hiểu, không dùng thuật ngữ chuyên môn",
+          "pron": "🇺🇸 /ɪn ˈleɪmənz tɜːrmz/ 🇬🇧 /ɪn ˈleɪmənz tɜːmz/",
+          "register": "neutral",
+          "example": "In layman's terms, the server crashed because it ran out of memory.",
+          "note": "Thường mở đầu câu khi chuẩn bị giải thích cho người ngoài ngành, formal vừa phải.",
+          "situation": "Bạn chuẩn bị giải thích nguyên nhân sự cố hệ thống cho một khách hàng không rành kỹ thuật và muốn báo trước rằng mình sẽ tránh dùng từ chuyên ngành."
+        },
+        {
+          "term": "put it simply",
+          "level": "B1",
+          "vi": "nói một cách đơn giản, tóm gọn lại",
+          "pron": "🇺🇸 🇬🇧 /pʊt ɪt ˈsɪmpli/",
+          "register": "neutral",
+          "example": "To put it simply, our API is slow because of an unoptimized database query.",
+          "note": "Trung tính, dùng phổ biến trong cả văn nói và văn viết để tóm ý.",
+          "situation": "Bạn vừa trình bày một vấn đề khá dài dòng trong cuộc họp và muốn tóm lại ý chính một cách ngắn gọn nhất cho mọi người dễ nắm."
+        },
+        {
+          "term": "break it down",
+          "level": "B1",
+          "vi": "giải thích chi tiết từng bước, chia nhỏ vấn đề ra để dễ hiểu",
+          "pron": "🇺🇸 🇬🇧 /breɪk ɪt daʊn/",
+          "register": "neutral",
+          "example": "Let me break it down: the bug happens because the cache isn't being cleared properly.",
+          "note": "Nhấn mạnh việc chia nhỏ, giải thích tuần tự từng bước một.",
+          "situation": "Sếp không hiểu ngay nguyên nhân gây lỗi nên bạn quyết định giải thích tuần tự từng bước một để mọi người dễ theo dõi."
+        },
+        {
+          "term": "dumb it down",
+          "level": "B2",
+          "vi": "đơn giản hóa xuống mức dễ hiểu nhất (đôi khi mang sắc thái hơi suồng sã)",
+          "pron": "🇺🇸 🇬🇧 /dʌm ɪt daʊn/",
+          "register": "casual",
+          "example": "Can you dumb it down a bit? I don't fully understand what a race condition is.",
+          "note": "Thân mật, đôi khi chính người không chuyên tự yêu cầu dùng cụm này, tránh dùng trong văn bản trang trọng.",
+          "situation": "Một thành viên không chuyên trong cuộc họp nhờ bạn giải thích lại theo cách còn đơn giản hơn nữa vì vẫn chưa hiểu được."
+        }
+      ],
+      "vi_name": "Giải thích công nghệ cho người không chuyên",
+      "order": 320,
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "The client's asking about the caching architecture again, but they're not technical at all."
+        },
+        {
+          "speaker": "B",
+          "text": "Just **put it simply** — tell them it stores frequently used data closer so pages load faster."
+        },
+        {
+          "speaker": "A",
+          "text": "Can you **break it down** into steps for the email? They like details."
+        },
+        {
+          "speaker": "B",
+          "text": "Sure. And honestly, for this audience, **in layman's terms** is the way to go — skip the jargon entirely."
+        },
+        {
+          "speaker": "A",
+          "text": "Should I just **dumb it down** completely, like \"it's a shortcut memory\"?"
+        },
+        {
+          "speaker": "B",
+          "text": "Yeah, that works fine for them."
+        }
+      ]
+    },
+    {
+      "id": "it_apologize",
+      "type": "synonym",
+      "subtype": null,
+      "name": "Taking Responsibility / Apologizing for a Mistake",
+      "level": "B2",
+      "topic": "Accountability",
+      "tip": "my bad chỉ dùng thân mật với đồng nghiệp trên chat; I apologize for the confusion lịch sự trung tính, dùng được cả với khách hàng; I take full responsibility formal khi cần khẳng định rõ ràng ai chịu trách nhiệm; it was an oversight on my part rất formal, thường xuất hiện trong văn bản báo cáo/postmortem.",
+      "tracks": [
+        "default"
+      ],
+      "words": [
+        {
+          "term": "my bad",
+          "level": "B1",
+          "vi": "lỗi của tôi rồi (cách xin lỗi thân mật)",
+          "pron": "🇺🇸 🇬🇧 /maɪ bæd/",
+          "register": "casual",
+          "example": "My bad, I forgot to update the config file before deploying.",
+          "note": "Rất thân mật, chỉ dùng với đồng nghiệp quen trên Slack/chat, không dùng trong báo cáo formal.",
+          "situation": "Bạn vô tình push nhầm code lên nhánh chung và muốn nhắn xin lỗi đồng nghiệp trên Slack một cách nhẹ nhàng, không cần trịnh trọng."
+        },
+        {
+          "term": "I apologize for the confusion",
+          "level": "B2",
+          "vi": "tôi xin lỗi vì đã gây nhầm lẫn/bối rối",
+          "pron": "🇺🇸 /aɪ əˈpɑːləˌdʒaɪz fɔːr ðə kənˈfjuːʒən/ 🇬🇧 /aɪ əˈpɒlədʒaɪz fə ðə kənˈfjuːʒən/",
+          "register": "formal",
+          "example": "I apologize for the confusion — the documentation was outdated.",
+          "note": "Lịch sự, trung tính-formal, dùng được cả với khách hàng hoặc trong email.",
+          "situation": "Bạn vừa gửi nhầm thông tin khiến khách hàng hiểu sai vấn đề và muốn xin lỗi một cách lịch sự trong email."
+        },
+        {
+          "term": "I take full responsibility",
+          "level": "B2",
+          "vi": "tôi xin nhận hoàn toàn trách nhiệm",
+          "pron": "🇺🇸 /aɪ teɪk fʊl rɪˌspɑːnsəˈbɪləti/ 🇬🇧 /aɪ teɪk fʊl rɪˌspɒnsəˈbɪləti/",
+          "register": "formal",
+          "example": "I take full responsibility for the outage; I should have tested the migration script more carefully.",
+          "note": "Formal, thể hiện rõ ràng ai là người chịu trách nhiệm chính, thường dùng khi báo cáo với sếp/khách hàng.",
+          "situation": "Trong cuộc họp với sếp sau sự cố sập hệ thống, bạn muốn khẳng định rõ ràng rằng mình là người chịu trách nhiệm chính."
+        },
+        {
+          "term": "it was an oversight on my part",
+          "level": "C1",
+          "vi": "đó là sơ suất từ phía tôi",
+          "pron": "🇺🇸 /ɪt wəz ən ˈoʊvərsaɪt ɑːn maɪ pɑːrt/ 🇬🇧 /ɪt wəz ən ˈəʊvəsaɪt ɒn maɪ pɑːt/",
+          "register": "formal",
+          "example": "In the postmortem, we noted that it was an oversight on my part to skip the staging environment.",
+          "note": "Rất formal, hay xuất hiện trong văn bản viết như báo cáo phân tích sự cố (postmortem).",
+          "situation": "Khi viết báo cáo phân tích nguyên nhân sự cố gửi cho cả team, bạn cần diễn đạt lỗi của mình một cách trang trọng, đúng văn phong báo cáo."
+        }
+      ],
+      "vi_name": "Nhận lỗi / Xin lỗi vì sai sót",
+      "order": 340,
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "The report went out with last week's numbers instead of this week's."
+        },
+        {
+          "speaker": "B",
+          "text": "**My bad** — I forgot to swap the data source before sending."
+        },
+        {
+          "speaker": "A",
+          "text": "The client's pretty upset. Can you email them today?"
+        },
+        {
+          "speaker": "B",
+          "text": "Yes, I'll say \"**I apologize for the confusion** this caused.\""
+        },
+        {
+          "speaker": "A",
+          "text": "They also want to know who's accountable for it."
+        },
+        {
+          "speaker": "B",
+          "text": "I'll add that \"**I take full responsibility**, and **it was an oversight on my part** during the final review.\""
+        }
+      ]
+    },
+    {
+      "id": "it_negotiate_deadline",
+      "type": "thematic",
+      "subtype": null,
+      "name": "Negotiating a Deadline Extension",
+      "level": "B2",
+      "topic": "Deadline Negotiation",
+      "tip": "push back the deadline trung tính, phổ biến nhất trong giao tiếp hằng ngày; request a deadline extension formal, dùng trong email chính thức; buy some more time mang tính tạm thời, chỉ câu giờ chứ chưa chắc dời hẳn deadline; renegotiate the timeline dùng khi cần đàm phán lại toàn bộ lịch trình chứ không chỉ một mốc.",
+      "tracks": [
+        "default"
+      ],
+      "words": [
+        {
+          "term": "push back the deadline",
+          "level": "B2",
+          "vi": "dời deadline ra sau, đẩy hạn chót lùi lại",
+          "pron": "🇺🇸 🇬🇧 /pʊʃ bæk ðə ˈdɛdlaɪn/",
+          "register": "neutral",
+          "example": "We need to push back the deadline by at least one week to fix these critical bugs.",
+          "note": "Phổ biến, trung tính, dùng được cả trong nói chuyện và email công việc.",
+          "situation": "Team phát hiện còn nhiều lỗi nghiêm trọng chưa fix xong và bạn cần đề xuất dời hạn chót ra sau ít nhất một tuần."
+        },
+        {
+          "term": "request a deadline extension",
+          "level": "B2",
+          "vi": "xin gia hạn deadline (mang tính trang trọng)",
+          "pron": "🇺🇸 🇬🇧 /rɪˈkwɛst ə ˈdɛdlaɪn ɪkˈstɛnʃən/",
+          "register": "formal",
+          "example": "I'd like to formally request a deadline extension given the scope changes.",
+          "note": "Formal, thường dùng trong email chính thức gửi khách hàng hoặc quản lý cấp cao.",
+          "situation": "Bạn cần gửi email trang trọng cho khách hàng để chính thức xin thêm thời gian vì phạm vi công việc đã thay đổi."
+        },
+        {
+          "term": "buy some more time",
+          "level": "B2",
+          "vi": "câu thêm thời gian, tranh thủ có thêm chút thời gian",
+          "pron": "🇺🇸 /baɪ sʌm mɔːr taɪm/ 🇬🇧 /baɪ sʌm mɔː taɪm/",
+          "register": "casual",
+          "example": "Can we buy some more time before the demo? The integration isn't stable yet.",
+          "note": "Thành ngữ, hơi thân mật, hàm ý trì hoãn tạm thời chứ chưa chắc dời hẳn deadline chính thức.",
+          "situation": "Trước buổi demo, phần tích hợp vẫn chưa ổn định nên bạn muốn tranh thủ có thêm chút thời gian trước khi trình diễn."
+        },
+        {
+          "term": "renegotiate the timeline",
+          "level": "C1",
+          "vi": "đàm phán lại toàn bộ mốc thời gian của dự án",
+          "pron": "🇺🇸 /ˌriːnɪˈɡoʊʃieɪt ðə ˈtaɪmlaɪn/ 🇬🇧 /ˌriːnɪˈɡəʊʃieɪt ðə ˈtaɪmlaɪn/",
+          "register": "formal",
+          "example": "Given the new requirements, we should renegotiate the timeline with the client.",
+          "note": "Formal, dùng khi toàn bộ lịch trình dự án cần thay đổi chứ không chỉ một mốc deadline đơn lẻ.",
+          "situation": "Khách hàng vừa bổ sung nhiều yêu cầu mới khiến toàn bộ mốc thời gian dự án cần được bàn lại từ đầu."
+        }
+      ],
+      "vi_name": "Thương lượng gia hạn deadline",
+      "order": 330,
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "The QA team found several critical bugs — we might need extra time."
+        },
+        {
+          "speaker": "B",
+          "text": "Let's ask the PM to **push back the deadline** by a few days."
+        },
+        {
+          "speaker": "A",
+          "text": "I'd rather we go through proper channels first."
+        },
+        {
+          "speaker": "B",
+          "text": "Fair, I'll **request a deadline extension** in writing to the client."
+        },
+        {
+          "speaker": "A",
+          "text": "Even a couple of days would let us **buy some more time** for testing."
+        },
+        {
+          "speaker": "B",
+          "text": "If they push back on that, we may have to **renegotiate the timeline** entirely."
+        }
+      ]
+    },
+    {
+      "id": "it_praise",
+      "type": "synonym",
+      "subtype": null,
+      "name": "Giving Praise / Recognizing Good Work",
+      "level": "B2",
+      "topic": "Feedback & Recognition",
+      "tip": "nice work → khen nhanh, thân mật, nói miệng hoặc chat 1-1; kudos to → khen công khai trên Slack/kênh chung; hats off to → thể hiện sự thán phục trước một việc khó; commend → trang trọng, dùng trong văn bản/đánh giá chính thức.",
+      "tracks": [
+        "default"
+      ],
+      "words": [
+        {
+          "term": "nice work",
+          "level": "B1",
+          "vi": "làm tốt lắm, khá đấy",
+          "pron": "🇺🇸 /naɪs wɜːrk/ 🇬🇧 /naɪs wɜːk/",
+          "register": "casual",
+          "example": "Nice work on fixing that race condition so quickly!",
+          "note": "Câu khen nhanh, thân mật, hay dùng trực tiếp hoặc trong chat 1-1.",
+          "situation": "Đồng nghiệp vừa xử lý xong một lỗi khó chỉ trong vài phút, bạn muốn khen ngay một câu ngắn gọn, thân mật trong buổi họp đứng.",
+          "wrong_usage": "Không dùng trong email trang trọng gửi khách hàng hoặc cấp trên xa lạ — nghe quá xuề xòa, thiếu trang trọng."
+        },
+        {
+          "term": "kudos to",
+          "level": "B2",
+          "vi": "khen ngợi, ghi nhận công lao",
+          "pron": "🇺🇸 /ˈkuːdoʊz tə/ 🇬🇧 /ˈkjuːdɒs tə/",
+          "register": "neutral",
+          "example": "Kudos to the backend team for shipping the migration ahead of schedule.",
+          "note": "Thường dùng để khen công khai một cá nhân hoặc cả nhóm trên kênh chat chung.",
+          "situation": "Bạn muốn ghi nhận công khai cả nhóm backend trên kênh chat chung của công ty vì đã hoàn thành việc chuyển đổi hệ thống sớm hơn hạn định."
+        },
+        {
+          "term": "hats off to",
+          "level": "B2",
+          "vi": "ngả mũ thán phục, đáng khâm phục",
+          "pron": "🇺🇸 /hæts ɔːf tə/ 🇬🇧 /hæts ɒf tə/",
+          "register": "neutral",
+          "example": "Hats off to Minh for debugging that memory leak overnight.",
+          "note": "Thể hiện sự thán phục rõ rệt, thường dùng khi ai đó vừa làm được việc khó hoặc bất ngờ.",
+          "situation": "Một thành viên trong nhóm đã một mình xử lý xong lỗi rò rỉ bộ nhớ hóc búa suốt đêm, bạn muốn bày tỏ sự khâm phục trước cả nhóm."
+        },
+        {
+          "term": "commend",
+          "level": "C1",
+          "vi": "khen ngợi, đánh giá cao (trang trọng)",
+          "pron": "🇺🇸 🇬🇧 /kəˈmɛnd/",
+          "register": "formal",
+          "example": "I'd like to commend Anna for her thorough code review this sprint.",
+          "note": "Dùng trong văn bản trang trọng như đánh giá hiệu suất, email gửi cấp trên hoặc khách hàng.",
+          "situation": "Trong buổi đánh giá hiệu suất quý, bạn cần viết một câu trang trọng để ghi nhận đóng góp của một thành viên trước cấp quản lý.",
+          "wrong_usage": "Không dùng trong tin nhắn Slack thân mật giữa đồng nghiệp thân — nghe cứng nhắc, xa cách."
+        }
+      ],
+      "vi_name": "Khen ngợi / Ghi nhận công việc tốt",
+      "order": 350,
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "The new deployment pipeline cut our release time in half."
+        },
+        {
+          "speaker": "B",
+          "text": "**Nice work** on that — seriously impressive."
+        },
+        {
+          "speaker": "A",
+          "text": "**Kudos to** the whole DevOps team, honestly."
+        },
+        {
+          "speaker": "B",
+          "text": "**Hats off to** Minh especially, he stayed late all week debugging it."
+        },
+        {
+          "speaker": "A",
+          "text": "I'll **commend** him in the next team meeting."
+        }
+      ]
+    },
+    {
+      "id": "it_async_remote",
+      "type": "thematic",
+      "subtype": null,
+      "name": "Async / Remote Communication",
+      "level": "B2",
+      "topic": "Async & Remote Work",
+      "tip": "circle back → hẹn quay lại trả lời sau; by EOD → deadline trong ngày, không cần nói giờ cụ thể; overlap hours → khung giờ trùng nhau giữa các múi giờ để họp trực tiếp; loop in → thêm người vào luồng trao đổi để họ nắm thông tin.",
+      "tracks": [
+        "default"
+      ],
+      "words": [
+        {
+          "term": "circle back",
+          "level": "B2",
+          "vi": "quay lại (bàn tiếp) sau",
+          "pron": "🇺🇸 /ˈsɜːrkəl bæk/ 🇬🇧 /ˈsɜːkəl bæk/",
+          "register": "neutral",
+          "example": "I don't have the answer right now — let's circle back on this after I check with the DevOps team.",
+          "note": "Dùng khi muốn tạm gác vấn đề lại, hẹn quay lại thảo luận/trả lời sau, không cần xử lý đồng bộ ngay.",
+          "situation": "Trong cuộc họp có một câu hỏi kỹ thuật bạn chưa chắc chắn câu trả lời và muốn hẹn trả lời sau khi xác nhận lại với đội hạ tầng."
+        },
+        {
+          "term": "by EOD",
+          "level": "B1",
+          "vi": "trước cuối ngày làm việc",
+          "pron": "🇺🇸 /baɪ ˌiː oʊ ˈdiː/ 🇬🇧 /baɪ ˌiː əʊ ˈdiː/",
+          "register": "neutral",
+          "example": "Can you send the updated PR by EOD so we can review it tomorrow morning?",
+          "note": "Viết tắt phổ biến trong email/chat để chỉ deadline trong ngày, không cần nêu giờ cụ thể.",
+          "situation": "Bạn nhắn đồng nghiệp yêu cầu họ gửi bản sửa đổi trước khi kết thúc ngày làm việc hôm nay."
+        },
+        {
+          "term": "overlap hours",
+          "level": "B2",
+          "vi": "khung giờ trùng (giữa các múi giờ)",
+          "pron": "🇺🇸 /ˈoʊvərlæp ˈaʊərz/ 🇬🇧 /ˈəʊvəlæp ˈaʊəz/",
+          "register": "neutral",
+          "example": "Since the team is split between Hanoi and San Francisco, our overlap hours are limited to just two hours a day, so we schedule live meetings then.",
+          "note": "Chỉ khung giờ hai bên cùng online do lệch múi giờ, dùng khi lên lịch họp giữa các nhóm ở xa nhau.",
+          "situation": "Nhóm của bạn ở Hà Nội còn đối tác ở California, hai bên cần tìm ra khung giờ hiếm hoi mà cả hai múi giờ đều đang trong giờ làm việc để họp trực tiếp."
+        },
+        {
+          "term": "loop in",
+          "level": "B2",
+          "vi": "thêm ai đó vào luồng trao đổi",
+          "pron": "🇺🇸 🇬🇧 /luːp ɪn/",
+          "register": "casual",
+          "example": "Let's loop in the QA lead before we merge this to make sure nothing breaks.",
+          "note": "Nghĩa là thêm ai đó vào email/thread/kênh chat để họ nắm thông tin hoặc góp ý kịp thời.",
+          "situation": "Trước khi gộp một thay đổi lớn vào hệ thống, bạn muốn thêm trưởng nhóm kiểm thử vào luồng trao đổi để họ biết và có thể góp ý kịp thời."
+        }
+      ],
+      "vi_name": "Giao tiếp bất đồng bộ / làm việc từ xa",
+      "order": 360,
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "Can we **loop in** the design team on this thread?"
+        },
+        {
+          "speaker": "B",
+          "text": "Sure, I'll add them now. When are you free to sync given the time difference?"
+        },
+        {
+          "speaker": "A",
+          "text": "We only have about two hours of **overlap hours** with their timezone."
+        },
+        {
+          "speaker": "B",
+          "text": "Okay, let's use that window tomorrow morning."
+        },
+        {
+          "speaker": "A",
+          "text": "I need to run to another meeting — can we **circle back** on the details after?"
+        },
+        {
+          "speaker": "B",
+          "text": "Sure, just send me the notes **by EOD** and I'll review them tonight."
+        }
+      ]
+    },
+    {
+      "id": "it_requirements_clarify",
+      "type": "thematic",
+      "subtype": null,
+      "name": "Clarifying Requirements & Scope",
+      "level": "B2",
+      "topic": "Requirements Gathering",
+      "tip": "flesh out → đề nghị bổ sung chi tiết cho một yêu cầu còn sơ sài; could you elaborate on → hỏi lại lịch sự một ý còn mơ hồ; nail down → chốt cụ thể một điều còn chung chung; align on → thống nhất chung giữa các bên trước khi triển khai.",
+      "tracks": [
+        "default"
+      ],
+      "words": [
+        {
+          "term": "flesh out",
+          "level": "B2",
+          "vi": "làm rõ, bổ sung chi tiết (cho một ý tưởng/yêu cầu còn sơ sài)",
+          "pron": "🇺🇸 🇬🇧 /flɛʃ aʊt/",
+          "register": "neutral",
+          "example": "Can you flesh out this requirement a bit more? I need concrete acceptance criteria.",
+          "note": "Dùng khi yêu cầu còn quá chung chung, cần thêm chi tiết cụ thể",
+          "situation": "PM gửi một yêu cầu tính năng rất sơ sài, bạn cần đề nghị họ bổ sung thêm chi tiết cụ thể trước khi bắt tay code."
+        },
+        {
+          "term": "could you elaborate on",
+          "level": "B2",
+          "vi": "bạn có thể giải thích rõ hơn về... không",
+          "pron": "🇺🇸 /kʊd juː ɪˈlæbəreɪt ɑːn/ 🇬🇧 /kʊd juː ɪˈlæbəreɪt ɒn/",
+          "register": "formal",
+          "example": "Could you elaborate on what 'real-time' means here — are we talking milliseconds or a few seconds?",
+          "note": "Cách lịch sự, trang trọng để yêu cầu giải thích rõ hơn một ý còn mơ hồ trong yêu cầu.",
+          "situation": "Trong tài liệu yêu cầu có một cụm từ mô tả tốc độ xử lý nhưng không rõ là vài mili giây hay vài giây, bạn muốn hỏi lại người phụ trách nghiệp vụ cho rõ ràng một cách lịch sự."
+        },
+        {
+          "term": "nail down",
+          "level": "B2",
+          "vi": "chốt cụ thể, xác định rõ ràng",
+          "pron": "🇺🇸 🇬🇧 /neɪl daʊn/",
+          "register": "neutral",
+          "example": "Before we start coding, we need to nail down exactly which fields are required on this form.",
+          "note": "Nghĩa là chốt cụ thể, chi tiết một điều còn chung chung, thường dùng trước khi bắt tay vào làm.",
+          "situation": "Trước khi bắt đầu viết code, một biểu mẫu nhập liệu vẫn chưa rõ trường nào là bắt buộc, bạn muốn cùng nhóm thống nhất dứt điểm chi tiết này."
+        },
+        {
+          "term": "align on",
+          "level": "C1",
+          "vi": "thống nhất, đạt được sự đồng thuận về",
+          "pron": "🇺🇸 /əˈlaɪn ɑːn/ 🇬🇧 /əˈlaɪn ɒn/",
+          "register": "neutral",
+          "example": "Let's align on the API contract with the mobile team before either side starts building.",
+          "note": "Nghĩa là đạt được sự thống nhất/hiểu chung giữa các bên trước khi triển khai, tránh làm sai hướng.",
+          "situation": "Nhóm phát triển phía máy chủ và nhóm phát triển ứng dụng di động cần đạt được hiểu biết chung về định dạng dữ liệu trao đổi trước khi mỗi bên bắt đầu xây dựng, để tránh làm lệch hướng nhau."
+        }
+      ],
+      "vi_name": "Làm rõ yêu cầu & phạm vi công việc",
+      "order": 300,
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "This ticket just says \"improve the search feature\" — that's way too vague."
+        },
+        {
+          "speaker": "B",
+          "text": "Yeah, we need to **flesh out** what \"improve\" actually means here."
+        },
+        {
+          "speaker": "A",
+          "text": "**Could you elaborate on** which part is slow — the query itself or the UI rendering?"
+        },
+        {
+          "speaker": "B",
+          "text": "Good question, let me ask the client that."
+        },
+        {
+          "speaker": "A",
+          "text": "Once we know, let's **nail down** the exact scope before estimating."
+        },
+        {
+          "speaker": "B",
+          "text": "Agreed, we should also **align on** priorities with the PM."
+        }
+      ]
+    },
+    {
+      "id": "ielts_linking_words",
+      "type": "filler",
+      "subtype": null,
+      "name": "Essay Linking Words (Cohesion)",
+      "level": "B2",
+      "topic": "Academic Writing",
+      "tip": "Furthermore/Moreover dùng để bổ sung luận điểm cùng chiều, Nevertheless dùng để nhượng bộ trước khi bảo vệ quan điểm, còn Consequently nhấn mạnh quan hệ nhân-quả rõ ràng hơn As a result.",
+      "tracks": [
+        "ielts"
+      ],
+      "words": [
+        {
+          "term": "Furthermore,",
+          "level": "B2",
+          "vi": "hơn nữa, thêm vào đó",
+          "pron": "🇺🇸 /ˈfɜːrðərˌmɔːr/ 🇬🇧 /ˈfɜːðəmɔː/",
+          "register": "formal",
+          "example": "Furthermore, the study fails to account for regional variations in income.",
+          "note": "Dùng để thêm luận điểm bổ sung mang tính học thuật, thường mở đầu câu mới trong đoạn văn nghị luận.",
+          "situation": "Bạn vừa nêu một luận điểm trong bài luận và muốn bổ sung thêm một lý do nữa để củng cố lập luận, đặt ở đầu câu tiếp theo."
+        },
+        {
+          "term": "Moreover,",
+          "level": "B2",
+          "vi": "hơn nữa, không những thế",
+          "pron": "🇺🇸 /mɔːrˈoʊvər/ 🇬🇧 /mɔːˈrəʊvə/",
+          "register": "formal",
+          "example": "Moreover, the policy would place an unfair burden on small businesses.",
+          "note": "Gần nghĩa với luận điểm bổ sung nhưng thiên về nhấn mạnh mức độ quan trọng hơn của ý sắp nêu.",
+          "situation": "Bạn muốn nhấn mạnh rằng luận điểm sắp nêu ra quan trọng và nặng ký hơn luận điểm vừa trình bày trước đó trong đoạn văn."
+        },
+        {
+          "term": "Nevertheless,",
+          "level": "C1",
+          "vi": "tuy nhiên, mặc dù vậy",
+          "pron": "🇺🇸 /ˌnevərðəˈles/ 🇬🇧 /ˌnevəðəˈles/",
+          "register": "formal",
+          "example": "Nevertheless, some economists remain skeptical about the policy's long-term benefits.",
+          "note": "Diễn đạt sự nhượng bộ mạnh hơn cách nối tương phản thông thường, thừa nhận điều vừa nói nhưng vẫn giữ quan điểm đối lập.",
+          "situation": "Bạn vừa thừa nhận một điểm yếu hoặc phản biện hợp lý, nhưng muốn khẳng định lập luận của mình vẫn đứng vững bất chấp điều đó."
+        },
+        {
+          "term": "Consequently,",
+          "level": "B2",
+          "vi": "do đó, vì vậy (nhấn mạnh quan hệ nhân quả)",
+          "pron": "🇺🇸 /ˈkɑːnsəkwentli/ 🇬🇧 /ˈkɒnsɪkwəntli/",
+          "register": "formal",
+          "example": "Consequently, many young people are choosing to delay homeownership.",
+          "note": "Nhấn mạnh rõ quan hệ nguyên nhân - kết quả trực tiếp, thường dùng khi hệ quả gần như tất yếu.",
+          "situation": "Bạn vừa nêu một nguyên nhân cụ thể và muốn dẫn ra hệ quả tất yếu xảy ra từ nguyên nhân đó."
+        }
+      ],
+      "vi_name": "Từ nối nâng cao trong bài luận",
+      "order": 440,
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "I think your paragraph needs stronger transitions between ideas."
+        },
+        {
+          "speaker": "B",
+          "text": "You're right. I could start with \"**Furthermore,** technology has reduced production costs.\""
+        },
+        {
+          "speaker": "A",
+          "text": "Then add another supporting point, maybe \"**Moreover,** it has created new job opportunities.\""
+        },
+        {
+          "speaker": "B",
+          "text": "But I also want to acknowledge the downside — \"**Nevertheless,** automation has displaced some workers.\""
+        },
+        {
+          "speaker": "A",
+          "text": "Good, then conclude with \"**Consequently,** governments must invest in retraining programs.\""
+        }
+      ]
+    },
+    {
+      "id": "ielts_opinion_writing",
+      "type": "synonym",
+      "subtype": null,
+      "name": "Expressing Opinion in Writing",
+      "level": "C1",
+      "topic": "IELTS Essay",
+      "tip": "Cách nêu quan điểm khách quan chung như một mệnh đề bị động phù hợp mở bài, cách khẳng định cá nhân mạnh mẽ phù hợp thân bài, còn cách nêu góc nhìn riêng nhẹ nhàng hơn khi chưa cần lập luận gay gắt.",
+      "tracks": [
+        "ielts"
+      ],
+      "words": [
+        {
+          "term": "It is widely believed that",
+          "level": "C1",
+          "vi": "người ta tin rộng rãi rằng, nhiều người cho rằng",
+          "pron": "🇺🇸 🇬🇧 /ɪt ɪz ˈwaɪdli bɪˈliːvd ðæt/",
+          "register": "formal",
+          "example": "It is widely believed that technology has made people less patient.",
+          "note": "Nêu quan điểm khách quan, không gán trực tiếp cho bản thân người viết, phù hợp mở bài.",
+          "situation": "Bạn muốn giới thiệu một quan điểm phổ biến trong xã hội trước khi đưa ra ý kiến riêng của mình ở phần sau bài luận."
+        },
+        {
+          "term": "I would argue that",
+          "level": "C1",
+          "vi": "tôi cho rằng, tôi lập luận rằng",
+          "pron": "🇺🇸 /aɪ wʊd ˈɑːrɡjuː ðæt/ 🇬🇧 /aɪ wʊd ˈɑːɡjuː ðæt/",
+          "register": "formal",
+          "example": "I would argue that stricter regulations are necessary to protect consumers.",
+          "note": "Nêu quan điểm cá nhân một cách chắc chắn, có tính thuyết phục, thường dùng ở thân bài.",
+          "situation": "Bạn muốn khẳng định rõ ràng lập trường cá nhân của mình về một vấn đề đang gây tranh cãi."
+        },
+        {
+          "term": "From my perspective,",
+          "level": "B2",
+          "vi": "theo quan điểm của tôi",
+          "pron": "🇺🇸 /frʌm maɪ pərˈspektɪv/ 🇬🇧 /frɒm maɪ pəˈspektɪv/",
+          "register": "formal",
+          "example": "From my perspective, the benefits of remote work outweigh the drawbacks.",
+          "note": "Cách nêu ý kiến cá nhân nhẹ nhàng hơn cách khẳng định lập luận mạnh, phù hợp khi chưa cần lập luận quá gay gắt.",
+          "situation": "Bạn muốn mở đầu một đoạn văn bằng cách nêu góc nhìn riêng của mình một cách khiêm tốn trước khi giải thích thêm."
+        },
+        {
+          "term": "Many would contend that",
+          "level": "C1",
+          "vi": "nhiều người sẽ lập luận rằng",
+          "pron": "🇺🇸 🇬🇧 /ˈmeni wʊd kənˈtend ðæt/",
+          "register": "formal",
+          "example": "Many would contend that economic growth should not come at the expense of the environment.",
+          "note": "Dùng để giới thiệu một luận điểm phản biện hoặc quan điểm đối lập trước khi người viết phân tích hoặc bác bỏ.",
+          "situation": "Bạn muốn trình bày một lập luận đối lập trước khi tự mình phản biện lại nó trong đoạn văn tiếp theo."
+        }
+      ],
+      "vi_name": "Cách nêu quan điểm trong bài viết",
+      "order": 450,
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "How should I open my opinion essay on social media's impact on teenagers?"
+        },
+        {
+          "speaker": "B",
+          "text": "You could start with \"**It is widely believed that** social media harms teenagers' mental health.\""
+        },
+        {
+          "speaker": "A",
+          "text": "Then how do I state my own view clearly?"
+        },
+        {
+          "speaker": "B",
+          "text": "Try \"**I would argue that** the effects depend more on usage patterns than the platform itself.\""
+        },
+        {
+          "speaker": "A",
+          "text": "Should I add a personal angle too?"
+        },
+        {
+          "speaker": "B",
+          "text": "Yes — \"**From my perspective,** moderation matters more than avoidance, though **many would contend that** total restriction is unrealistic anyway.\""
+        }
+      ]
+    },
+    {
+      "id": "ielts_compare_contrast",
+      "type": "synonym",
+      "subtype": null,
+      "name": "Comparing & Contrasting",
+      "level": "B2",
+      "topic": "Academic Writing",
+      "tip": "Cách nối hai mệnh đề trong cùng một câu để đối lập trực tiếp khác với cách mở đầu câu bằng danh từ đối lập, còn cách nêu điểm tương đồng và cách nhấn mạnh sự đối lập rõ rệt giữa hai vế lại phục vụ hai mục đích ngược nhau.",
+      "tracks": [
+        "ielts"
+      ],
+      "words": [
+        {
+          "term": "whereas",
+          "level": "B2",
+          "vi": "trong khi đó, trái lại",
+          "pron": "🇺🇸 /wɛrˈæz/ 🇬🇧 /weərˈæz/",
+          "register": "formal",
+          "example": "City dwellers often rely on public transport, whereas rural residents depend on private vehicles.",
+          "note": "Dùng để nối hai mệnh đề trong cùng một câu, nhấn mạnh sự khác biệt trực tiếp giữa hai đối tượng.",
+          "situation": "Bạn muốn viết một câu duy nhất thể hiện rõ sự đối lập giữa hai nhóm đối tượng đang so sánh."
+        },
+        {
+          "term": "unlike",
+          "level": "B2",
+          "vi": "không giống như, khác với",
+          "pron": "🇺🇸 🇬🇧 /ʌnˈlaɪk/",
+          "register": "neutral",
+          "example": "Unlike traditional classrooms, online courses allow students to learn at their own pace.",
+          "note": "Thường đứng đầu câu, theo sau là danh từ hoặc cụm danh từ để nêu điểm khác biệt.",
+          "situation": "Bạn muốn mở đầu câu bằng cách nêu ra đối tượng đối lập trước khi mô tả đặc điểm của đối tượng chính."
+        },
+        {
+          "term": "similarly",
+          "level": "B2",
+          "vi": "tương tự như vậy",
+          "pron": "🇺🇸 /ˈsɪmələrli/ 🇬🇧 /ˈsɪmɪləli/",
+          "register": "formal",
+          "example": "Similarly, developing countries face challenges in accessing quality healthcare.",
+          "note": "Dùng để nối hai ý có điểm chung, đặt ở đầu câu sau khi đã nêu một ý tương đồng trước đó.",
+          "situation": "Bạn vừa trình bày một đặc điểm của đối tượng thứ nhất và muốn chỉ ra đối tượng thứ hai cũng có đặc điểm tương tự."
+        },
+        {
+          "term": "by contrast",
+          "level": "C1",
+          "vi": "ngược lại, trái lại",
+          "pron": "🇺🇸 /baɪ ˈkɑːntræst/ 🇬🇧 /baɪ ˈkɒntrɑːst/",
+          "register": "formal",
+          "example": "Urban areas offer more job opportunities; by contrast, rural regions often struggle with unemployment.",
+          "note": "Nhấn mạnh sự đối lập rõ rệt giữa hai vế, thường đặt sau dấu chấm phẩy hoặc đầu câu mới.",
+          "situation": "Bạn vừa mô tả đặc điểm của một đối tượng và muốn nhấn mạnh đối tượng còn lại có đặc điểm hoàn toàn trái ngược."
+        }
+      ],
+      "vi_name": "So sánh và đối chiếu",
+      "order": 470,
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "How do I compare these two graphs in my essay?"
+        },
+        {
+          "speaker": "B",
+          "text": "You could write \"the urban population grew steadily, **whereas** the rural population declined.\""
+        },
+        {
+          "speaker": "A",
+          "text": "What about the energy usage data — it's quite different too."
+        },
+        {
+          "speaker": "B",
+          "text": "Try \"**unlike** urban areas, rural regions depend mainly on renewable sources.\""
+        },
+        {
+          "speaker": "A",
+          "text": "And the trend in the third graph looks the same as the first one."
+        },
+        {
+          "speaker": "B",
+          "text": "Then say \"**similarly**, the third graph shows a steady increase.\" If you wanted to highlight a difference instead, you'd use \"**by contrast**.\""
+        }
+      ]
+    },
+    {
+      "id": "ielts_examples_evidence",
+      "type": "synonym",
+      "subtype": null,
+      "name": "Giving Examples & Evidence",
+      "level": "B2",
+      "topic": "Academic Writing",
+      "tip": "\"for instance\" là cách trung tính, thông dụng nhất; \"a case in point\" nhấn mạnh đây là ví dụ tiêu biểu nhất; \"this is exemplified by\" dùng để mở đầu cả một câu minh họa trang trọng; \"as evidenced by\" dùng khi dẫn số liệu/nghiên cứu cụ thể làm bằng chứng.",
+      "tracks": [
+        "ielts"
+      ],
+      "words": [
+        {
+          "term": "for instance",
+          "level": "B1",
+          "vi": "ví dụ như, chẳng hạn",
+          "pron": "🇺🇸 /fər ˈɪnstəns/ 🇬🇧 /fə ˈɪnstəns/",
+          "register": "neutral",
+          "example": "Many countries have adopted renewable energy policies; Germany, for instance, aims to generate 80% of its electricity from renewables by 2030.",
+          "note": "Cách phổ biến nhất, trung tính, dùng được cả trong văn viết lẫn văn nói, có thể chèn giữa câu.",
+          "situation": "Trong bài luận, bạn muốn đưa ra một ví dụ đơn giản, thông dụng để minh họa cho luận điểm vừa nêu mà không cần nhấn mạnh đặc biệt."
+        },
+        {
+          "term": "a case in point",
+          "level": "B2",
+          "vi": "một ví dụ điển hình",
+          "pron": "🇺🇸 🇬🇧 /ə ˈkeɪs ɪn pɔɪnt/",
+          "register": "formal",
+          "example": "Urban air pollution has severe health consequences; the rise in respiratory illnesses in Beijing is a case in point.",
+          "note": "Nhấn mạnh đây là ví dụ tiêu biểu, rõ ràng nhất, thường đặt cuối câu sau dấu phẩy hoặc chấm phẩy.",
+          "situation": "Bạn muốn nhấn mạnh rằng ví dụ sắp đưa ra là minh chứng tiêu biểu, rõ ràng nhất cho luận điểm, chứ không phải một ví dụ ngẫu nhiên."
+        },
+        {
+          "term": "this is exemplified by",
+          "level": "C1",
+          "vi": "điều này được minh họa/thể hiện qua",
+          "pron": "🇺🇸 /ðɪs ɪz ɪɡˈzɛmplɪfaɪd baɪ/ 🇬🇧 /ðɪs ɪz ɪɡˈzemplɪfaɪd baɪ/",
+          "register": "formal",
+          "example": "Globalisation has intensified economic interdependence; this is exemplified by the rapid spread of supply-chain disruptions during the pandemic.",
+          "note": "Cấu trúc trang trọng, mở đầu một câu riêng để dẫn dắt ví dụ cụ thể minh họa cho ý vừa nêu.",
+          "situation": "Bạn đang viết một câu học thuật riêng để dẫn dắt và minh họa cụ thể cho luận điểm vừa trình bày ở câu trước."
+        },
+        {
+          "term": "as evidenced by",
+          "level": "C1",
+          "vi": "như được chứng minh/thể hiện qua (bằng số liệu, dẫn chứng)",
+          "pron": "🇺🇸 /æz ˈɛvɪdənst baɪ/ 🇬🇧 /æz ˈevɪdənst baɪ/",
+          "register": "formal",
+          "example": "The policy has had a measurable impact on public health, as evidenced by a 15% drop in smoking rates over the past decade.",
+          "note": "Dùng khi dẫn chứng có số liệu hoặc kết quả nghiên cứu cụ thể, mang tính học thuật cao nhất trong nhóm.",
+          "situation": "Bạn muốn dẫn ra một con số hoặc kết quả nghiên cứu cụ thể để làm bằng chứng khách quan cho lập luận của mình."
+        }
+      ],
+      "vi_name": "Đưa Ra Ví Dụ & Bằng Chứng",
+      "order": 460,
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "When explaining the effects of urbanization, you should give concrete examples — **for instance**, the rise in traffic congestion."
+        },
+        {
+          "speaker": "B",
+          "text": "Good idea. Air pollution in Beijing is **a case in point**; it's gotten far worse since the population boom."
+        },
+        {
+          "speaker": "A",
+          "text": "Right, and **this is exemplified by** the sharp drop in air quality readings over the past decade."
+        },
+        {
+          "speaker": "B",
+          "text": "We should also cite the data, **as evidenced by** the WHO's recent report on urban health."
+        }
+      ]
+    },
+    {
+      "id": "ielts_hedging",
+      "type": "synonym",
+      "subtype": null,
+      "name": "Hedging Language (Academic Caution)",
+      "level": "C1",
+      "topic": "Academic Writing",
+      "tip": "\"tends to\" giảm nhẹ mức chắc chắn của một xu hướng/hành vi; \"to some extent\" giới hạn phạm vi đúng của một nhận định; \"arguably\" thể hiện quan điểm cá nhân có căn cứ nhưng vẫn có thể tranh luận; \"it could be argued that\" là cách hedging trang trọng nhất để mở đầu một luận điểm chưa chắc chắn tuyệt đối.",
+      "tracks": [
+        "ielts"
+      ],
+      "words": [
+        {
+          "term": "tends to",
+          "level": "B2",
+          "vi": "có xu hướng",
+          "pron": "🇺🇸 /tɛndz tu/ 🇬🇧 /tendz tu/",
+          "register": "neutral",
+          "example": "Governments tend to prioritise short-term economic growth over long-term environmental sustainability.",
+          "note": "Đi cùng chủ ngữ và động từ để giảm nhẹ tính tuyệt đối, tránh khẳng định chắc chắn 100%.",
+          "situation": "Bạn muốn mô tả một khuynh hướng chung thường xảy ra, nhưng không muốn khẳng định nó luôn luôn đúng trong mọi trường hợp."
+        },
+        {
+          "term": "to some extent",
+          "level": "B2",
+          "vi": "ở một mức độ nào đó, phần nào",
+          "pron": "🇺🇸 /tə sʌm ɪkˈstɛnt/ 🇬🇧 /tə sʌm ɪkˈstent/",
+          "register": "neutral",
+          "example": "To some extent, technology has reduced face-to-face communication among young people, though other factors also play a role.",
+          "note": "Thường đứng đầu câu để giới hạn phạm vi một nhận định thay vì khẳng định tuyệt đối.",
+          "situation": "Bạn đồng ý một phần với một nhận định nhưng muốn thể hiện rõ rằng nó không đúng hoàn toàn trong mọi trường hợp."
+        },
+        {
+          "term": "arguably",
+          "level": "C1",
+          "vi": "có thể nói là, xét cho cùng (theo quan điểm có căn cứ)",
+          "pron": "🇺🇸 /ˈɑːrɡjuəbli/ 🇬🇧 /ˈɑːɡjuəbli/",
+          "register": "formal",
+          "example": "Arguably, the most significant driver of climate change is the burning of fossil fuels.",
+          "note": "Thường đặt đầu câu, thể hiện đây là quan điểm cá nhân có căn cứ nhưng vẫn có thể bị phản biện.",
+          "situation": "Bạn đưa ra một nhận định mà bạn tin là hợp lý và có thể bảo vệ bằng lý lẽ, nhưng vẫn thừa nhận người khác có thể không đồng ý."
+        },
+        {
+          "term": "it could be argued that",
+          "level": "C1",
+          "vi": "có thể lập luận rằng",
+          "pron": "🇺🇸 /ɪt kʊd bi ˈɑːrɡjuːd ðæt/ 🇬🇧 /ɪt kʊd bi ˈɑːɡjuːd ðæt/",
+          "register": "formal",
+          "example": "It could be argued that stricter regulations on plastic use would significantly reduce ocean pollution.",
+          "note": "Cấu trúc hedging trang trọng nhất trong nhóm, mở đầu một luận điểm mà không khẳng định đó là sự thật tuyệt đối.",
+          "situation": "Bạn muốn trình bày một luận điểm học thuật một cách thận trọng, tránh nghe như đang áp đặt ý kiến của mình là chân lý."
+        }
+      ],
+      "vi_name": "Ngôn Ngữ Giảm Nhẹ Mức Độ Chắc Chắn (Học Thuật)",
+      "order": 480,
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "Do you think remote work really boosts productivity?"
+        },
+        {
+          "speaker": "B",
+          "text": "It **tends to** improve focus, but it depends a lot on the person."
+        },
+        {
+          "speaker": "A",
+          "text": "**To some extent**, sure — though extroverts might actually struggle more."
+        },
+        {
+          "speaker": "B",
+          "text": "**Arguably**, the bigger benefit is less commuting stress rather than output itself."
+        },
+        {
+          "speaker": "A",
+          "text": "That's true. **It could be argued that** work-life balance matters more than raw productivity anyway."
+        }
+      ]
+    },
+    {
+      "id": "ielts_agree_disagree_academic",
+      "type": "synonym",
+      "subtype": null,
+      "name": "Speaking Part 3 — Agreeing/Disagreeing (Academic)",
+      "level": "C1",
+      "topic": "IELTS Speaking",
+      "tip": "\"I couldn't agree more\" thể hiện đồng ý tuyệt đối, nhiệt tình; \"that's a fair point, but\" công nhận ý đối phương rồi mới phản biện; \"I see it differently\" là cách bất đồng lịch sự, không gay gắt; \"up to a point\" thể hiện đồng ý một phần, có giới hạn.",
+      "tracks": [
+        "ielts"
+      ],
+      "words": [
+        {
+          "term": "I couldn't agree more",
+          "level": "B2",
+          "vi": "tôi hoàn toàn đồng ý",
+          "pron": "🇺🇸 /aɪ ˈkʊdənt əˈɡriː mɔːr/ 🇬🇧 /aɪ ˈkʊdənt əˈɡriː mɔː/",
+          "register": "neutral",
+          "example": "I couldn't agree more that early childhood education has a lasting impact on cognitive development.",
+          "note": "Thể hiện sự đồng ý mạnh mẽ, tuyệt đối, phù hợp khi thực sự tán thành hoàn toàn quan điểm đối phương.",
+          "situation": "Giám khảo đưa ra một nhận định mà bạn hoàn toàn tán thành và muốn thể hiện sự đồng tình một cách nhiệt tình, dứt khoát."
+        },
+        {
+          "term": "that's a fair point, but",
+          "level": "B2",
+          "vi": "đó là một ý hợp lý, nhưng",
+          "pron": "🇺🇸 /ðæts ə fɛr pɔɪnt bʌt/ 🇬🇧 /ðæts ə feə pɔɪnt bʌt/",
+          "register": "neutral",
+          "example": "That's a fair point, but I think the economic benefits of tourism often outweigh its environmental costs.",
+          "note": "Công nhận ý kiến đối phương trước khi đưa ra quan điểm phản biện, giữ được sự lịch sự trong tranh luận.",
+          "situation": "Bạn muốn thừa nhận lập luận của người khác có phần hợp lý trước khi nêu ra quan điểm khác của mình."
+        },
+        {
+          "term": "I see it differently",
+          "level": "C1",
+          "vi": "tôi nhìn nhận vấn đề này theo cách khác",
+          "pron": "🇺🇸 /aɪ ˈsiː ɪt ˈdɪfrəntli/ 🇬🇧 /aɪ ˈsiː ɪt ˈdɪfrəntli/",
+          "register": "formal",
+          "example": "I see it differently; in my view, technological unemployment is a far greater concern than automation's benefits suggest.",
+          "note": "Cách bất đồng lịch sự, học thuật, tránh dùng trực tiếp từ 'disagree' nên nghe nhẹ nhàng hơn.",
+          "situation": "Bạn không đồng tình với quan điểm vừa nêu nhưng muốn diễn đạt sự bất đồng một cách tế nhị, không gây căng thẳng."
+        },
+        {
+          "term": "up to a point",
+          "level": "C1",
+          "vi": "đúng đến một mức độ nào đó (không hoàn toàn)",
+          "pron": "🇺🇸 🇬🇧 /ʌp tə ə pɔɪnt/",
+          "register": "neutral",
+          "example": "I agree with the idea up to a point, but I don't think social media is entirely responsible for declining attention spans.",
+          "note": "Thể hiện đồng ý một phần, có giới hạn, thường đi kèm mệnh đề nêu phần không đồng ý.",
+          "situation": "Bạn đồng ý với một phần của nhận định nhưng muốn làm rõ rằng sự đồng ý đó có giới hạn, không phải toàn bộ."
+        }
+      ],
+      "vi_name": "Đồng Ý/Không Đồng Ý Học Thuật (Speaking Part 3)",
+      "order": 490,
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "Some people think social media does more harm than good. What's your view?"
+        },
+        {
+          "speaker": "B",
+          "text": "**I couldn't agree more** — it's fueled a lot of anxiety among teenagers."
+        },
+        {
+          "speaker": "A",
+          "text": "**That's a fair point, but** it has also connected people across the world in ways never possible before."
+        },
+        {
+          "speaker": "B",
+          "text": "Hmm, **I see it differently** — I think the isolation it causes outweighs those benefits."
+        },
+        {
+          "speaker": "A",
+          "text": "I'd agree with you **up to a point**, but not entirely."
+        }
+      ]
+    },
+    {
+      "id": "ielts_describing_trends",
+      "type": "thematic",
+      "subtype": null,
+      "name": "Describing Trends/Data (Task 1 Writing)",
+      "level": "B2",
+      "topic": "IELTS Writing Task 1",
+      "tip": "Sharp/gradual mô tả tốc độ biến động (nhanh vs từ từ), remained stable dùng khi số liệu gần như không đổi, còn peaked at dùng để nêu điểm cao nhất kèm con số cụ thể.",
+      "tracks": [
+        "ielts"
+      ],
+      "words": [
+        {
+          "term": "a sharp increase",
+          "level": "B2",
+          "vi": "sự gia tăng mạnh, tăng vọt",
+          "pron": "🇺🇸 /ə ʃɑːrp ɪnˈkriːs/ 🇬🇧 /ə ʃɑːp ɪnˈkriːs/",
+          "register": "formal",
+          "example": "There was a sharp increase in the number of smartphone users between 2010 and 2015.",
+          "note": "Dùng khi số liệu tăng nhanh và mạnh trong khoảng thời gian ngắn",
+          "situation": "Biểu đồ cho thấy số liệu tăng vọt chỉ trong một khoảng thời gian ngắn, cần nhấn mạnh mức độ tăng rất nhanh và rõ rệt."
+        },
+        {
+          "term": "peaked at",
+          "level": "B2",
+          "vi": "đạt đỉnh ở mức, cao nhất là",
+          "pron": "🇺🇸 🇬🇧 /piːkt æt/",
+          "register": "formal",
+          "example": "Sales peaked at $2 million in December before falling sharply.",
+          "note": "Dùng khi cần chỉ rõ điểm cao nhất của số liệu, thường kèm con số cụ thể",
+          "situation": "Đường biểu diễn trên biểu đồ đạt đến điểm cao nhất tại một mốc cụ thể trước khi đổi hướng, và bạn cần nêu rõ con số tại điểm đó."
+        },
+        {
+          "term": "remained stable",
+          "level": "B2",
+          "vi": "duy trì ổn định, không đổi",
+          "pron": "🇺🇸 /rɪˈmeɪnd ˈsteɪbl̩/ 🇬🇧 /rɪˈmeɪnd ˈsteɪbl̩/",
+          "register": "formal",
+          "example": "The unemployment rate remained stable at around 5% throughout the decade.",
+          "note": "Dùng khi số liệu gần như không thay đổi trong suốt một giai đoạn",
+          "situation": "Số liệu trên biểu đồ gần như không biến động, giữ nguyên ở một mức trong suốt cả một giai đoạn dài."
+        },
+        {
+          "term": "a gradual decline",
+          "level": "B2",
+          "vi": "sự suy giảm từ từ, giảm dần",
+          "pron": "🇺🇸 /ə ˈɡrædʒuəl dɪˈklaɪn/ 🇬🇧 /ə ˈɡrædʒuəl dɪˈklaɪn/",
+          "register": "formal",
+          "example": "The graph shows a gradual decline in birth rates from 2000 to 2020.",
+          "note": "Dùng khi số liệu giảm từ từ, đều đặn theo thời gian, trái ngược với giảm đột ngột",
+          "situation": "Biểu đồ cho thấy số liệu đi xuống nhưng diễn ra chậm rãi, đều đặn qua nhiều năm chứ không đột ngột."
+        }
+      ],
+      "vi_name": "Mô tả xu hướng/số liệu (Task 1)",
+      "order": 500,
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "Looking at the graph, sales showed **a sharp increase** in March."
+        },
+        {
+          "speaker": "B",
+          "text": "Right, and then it **peaked at** around 500 units in April."
+        },
+        {
+          "speaker": "A",
+          "text": "After that, it **remained stable** for a couple of months."
+        },
+        {
+          "speaker": "B",
+          "text": "Then in the second half of the year, there's **a gradual decline** toward December."
+        }
+      ]
+    },
+    {
+      "id": "ielts_concluding_essay",
+      "type": "synonym",
+      "subtype": null,
+      "name": "Concluding an Essay",
+      "level": "C1",
+      "topic": "Academic Writing",
+      "tip": "In conclusion và to sum up dùng để mở đầu đoạn kết bài trang trọng tương đương nhau, overall ngắn gọn hơn cho một nhận định tổng quát, còn all things considered nhấn mạnh đã cân nhắc mọi khía cạnh trước khi kết luận.",
+      "tracks": [
+        "ielts"
+      ],
+      "words": [
+        {
+          "term": "in conclusion",
+          "level": "B2",
+          "vi": "kết luận lại, tóm lại",
+          "pron": "🇺🇸 /ɪn kənˈkluːʒn/ 🇬🇧 /ɪn kənˈkluːʒn/",
+          "register": "formal",
+          "example": "In conclusion, governments should invest more in public transportation to reduce traffic congestion.",
+          "note": "Cách mở đầu đoạn kết bài phổ biến và trang trọng nhất trong academic essay",
+          "situation": "Bạn cần mở đầu đoạn văn cuối cùng của bài luận để tóm tắt lại quan điểm chính đã trình bày."
+        },
+        {
+          "term": "to sum up",
+          "level": "B2",
+          "vi": "tóm lại, tóm gọn lại",
+          "pron": "🇺🇸 /tə sʌm ʌp/ 🇬🇧 /tə sʌm ʌp/",
+          "register": "formal",
+          "example": "To sum up, the advantages of remote work outweigh its drawbacks for most employees.",
+          "note": "Trang trọng, nhấn mạnh việc tóm gọn lại các luận điểm đã nêu trước khi kết thúc",
+          "situation": "Sau khi đã trình bày nhiều luận điểm/dẫn chứng trong bài, bạn muốn dùng một cụm để tổng hợp và gói gọn lại tất cả các ý đó trước khi khép lại bài luận — khác với 'in conclusion' vốn chỉ đơn thuần là cách mở đầu đoạn kết bài thông thường."
+        },
+        {
+          "term": "overall,",
+          "level": "B2",
+          "vi": "nhìn chung, tổng thể thì",
+          "pron": "🇺🇸 /ˌoʊvərˈɔːl/ 🇬🇧 /ˌəʊvərˈɔːl/",
+          "register": "neutral",
+          "example": "Overall, the benefits of studying abroad are greater than the challenges it presents.",
+          "note": "Ngắn gọn hơn, dùng khi đưa ra một nhận định tổng quát cuối cùng mà không cần liệt kê lại chi tiết",
+          "situation": "Bạn muốn đưa ra một nhận định tổng quát, ngắn gọn để khép lại bài viết mà không nhắc lại từng luận điểm."
+        },
+        {
+          "term": "all things considered",
+          "level": "C1",
+          "vi": "xét cho cùng, cân nhắc mọi mặt thì",
+          "pron": "🇺🇸 /ɔːl θɪŋz kənˈsɪdərd/ 🇬🇧 /ɔːl θɪŋz kənˈsɪdəd/",
+          "register": "formal",
+          "example": "All things considered, stricter environmental regulations are necessary despite the short-term economic costs.",
+          "note": "Trang trọng, hàm ý đã cân nhắc kỹ mọi khía cạnh trước khi đưa ra kết luận cuối cùng",
+          "situation": "Bạn muốn nhấn mạnh rằng đã cân nhắc kỹ tất cả các mặt lợi và hại trước khi đưa ra kết luận cuối cùng."
+        }
+      ],
+      "vi_name": "Kết luận bài luận",
+      "order": 510,
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "How should I wrap up this essay on climate policy?"
+        },
+        {
+          "speaker": "B",
+          "text": "You could start with **in conclusion** to signal you're closing the argument."
+        },
+        {
+          "speaker": "A",
+          "text": "Or I could just say **to sum up** the main points instead — simpler, right?"
+        },
+        {
+          "speaker": "B",
+          "text": "Either works. **Overall,** the essay makes a strong case for renewable investment."
+        },
+        {
+          "speaker": "A",
+          "text": "And **all things considered**, I think that's the conclusion the evidence supports."
+        }
+      ]
+    },
+    {
+      "id": "toeic_email_etiquette",
+      "type": "thematic",
+      "subtype": null,
+      "name": "Email Etiquette",
+      "level": "B2",
+      "topic": "Business Email",
+      "tip": "'I am writing to inquire about' mở đầu email khi cần hỏi thông tin; 'Please find attached' dùng khi có tệp đính kèm; 'I look forward to hearing from you' là câu kết thể hiện đang chờ phản hồi; 'Best regards' là chữ ký kết thúc email trang trọng, phổ biến hơn 'Sincerely' trong giao tiếp công việc hàng ngày.",
+      "tracks": [
+        "toeic"
+      ],
+      "words": [
+        {
+          "term": "I am writing to inquire about",
+          "level": "B2",
+          "vi": "Tôi viết thư này để hỏi về...",
+          "pron": "🇺🇸 /ɪnˈkwaɪər/ 🇬🇧 /ɪnˈkwaɪə/",
+          "register": "formal",
+          "example": "I am writing to inquire about the status of our recent order #4521.",
+          "note": "Cụm mở đầu email trang trọng khi cần hỏi thông tin, không dùng cho email khiếu nại",
+          "situation": "Bạn cần mở đầu một email trang trọng gửi đối tác để hỏi về tình trạng đơn hàng vẫn chưa nhận được phản hồi."
+        },
+        {
+          "term": "Please find attached",
+          "level": "B1",
+          "vi": "Vui lòng xem tệp đính kèm",
+          "pron": "🇺🇸 🇬🇧 /əˈtætʃt/",
+          "register": "formal",
+          "example": "Please find attached the revised contract for your review.",
+          "note": "Dùng khi email có gửi kèm tệp, thường đứng ngay trước tên tài liệu",
+          "situation": "Bạn gửi email kèm theo bản hợp đồng đã chỉnh sửa và muốn báo cho đối tác biết tài liệu đã được gửi kèm."
+        },
+        {
+          "term": "I look forward to hearing from you",
+          "level": "B1",
+          "vi": "Tôi mong sớm nhận được phản hồi từ bạn",
+          "pron": "🇺🇸 /ˈfɔːrwərd/ 🇬🇧 /ˈfɔːwəd/",
+          "register": "formal",
+          "example": "I look forward to hearing from you at your earliest convenience.",
+          "note": "Câu kết phổ biến nhất trong email trang trọng, thể hiện đang chờ hồi âm",
+          "situation": "Bạn kết thúc một email công việc và muốn thể hiện lịch sự rằng mình đang chờ đối phương trả lời."
+        },
+        {
+          "term": "Best regards",
+          "level": "A2",
+          "vi": "Trân trọng",
+          "pron": "🇺🇸 /rɪˈɡɑːrdz/ 🇬🇧 /rɪˈɡɑːdz/",
+          "register": "formal",
+          "example": "Best regards, John Smith, Sales Manager.",
+          "note": "Chữ ký kết thúc email công việc, trang trọng vừa phải, phổ biến hơn 'Sincerely'",
+          "situation": "Bạn cần chọn cách ký tên kết thúc một email công việc thể hiện sự chuyên nghiệp nhưng không quá xa cách."
+        }
+      ],
+      "vi_name": "Phép lịch sự trong Email",
+      "order": 390,
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "I'm drafting an email to the supplier about the delay. I'll start with **I am writing to inquire about** the shipment status."
+        },
+        {
+          "speaker": "B",
+          "text": "Good. Don't forget to write **Please find attached** the original invoice."
+        },
+        {
+          "speaker": "A",
+          "text": "Got it. I'll close with **I look forward to hearing from you** soon."
+        },
+        {
+          "speaker": "B",
+          "text": "And sign off with **Best regards** — that's the tone this client expects."
+        }
+      ]
+    },
+    {
+      "id": "toeic_customer_service",
+      "type": "thematic",
+      "subtype": null,
+      "name": "Customer Service Phrases",
+      "level": "C1",
+      "topic": "Customer Service",
+      "tip": "'I apologize for the inconvenience' mở đầu khi công ty có lỗi; 'Let me look into that for you' trấn an khách hàng rằng vấn đề đang được xử lý; 'I'll escalate this to my supervisor' dùng khi vượt thẩm quyền xử lý; 'Is there anything else I can help with?' dùng để kết thúc một lượt hỗ trợ.",
+      "tracks": [
+        "toeic"
+      ],
+      "words": [
+        {
+          "term": "I apologize for the inconvenience",
+          "level": "B2",
+          "vi": "Tôi xin lỗi vì sự bất tiện này",
+          "pron": "🇺🇸 🇬🇧 /ˌɪnkənˈviːniəns/",
+          "register": "formal",
+          "example": "I apologize for the inconvenience this delay has caused you.",
+          "note": "Lời xin lỗi chuẩn mực khi đại diện công ty nhận trách nhiệm, không mang tính cá nhân",
+          "situation": "Bạn là nhân viên tổng đài và cần mở đầu bằng một lời xin lỗi khách hàng vì đơn hàng của họ bị giao trễ."
+        },
+        {
+          "term": "Let me look into that for you",
+          "level": "B1",
+          "vi": "Để tôi kiểm tra việc này giúp bạn",
+          "pron": "",
+          "register": "neutral",
+          "example": "Let me look into that for you and get back to you within 24 hours.",
+          "note": "Dùng để trấn an khách hàng rằng vấn đề đang được xử lý, chưa hứa kết quả cụ thể",
+          "situation": "Khách hàng phàn nàn về một khoản phí lạ trong hóa đơn và bạn cần cho họ biết bạn sẽ tìm hiểu nguyên nhân trước khi trả lời chính thức."
+        },
+        {
+          "term": "I'll escalate this to my supervisor",
+          "level": "C1",
+          "vi": "Tôi sẽ chuyển việc này lên cấp trên của tôi",
+          "pron": "🇺🇸 🇬🇧 /ˈɛskəleɪt/",
+          "register": "formal",
+          "example": "If we can't resolve this today, I'll escalate this to my supervisor.",
+          "note": "Dùng khi vấn đề vượt quá thẩm quyền xử lý của nhân viên tuyến đầu",
+          "situation": "Một khách hàng yêu cầu mức hoàn tiền vượt quá thẩm quyền bạn được phép tự quyết định, bạn cần báo rằng sẽ chuyển vấn đề lên người có quyền hạn cao hơn."
+        },
+        {
+          "term": "Is there anything else I can help with?",
+          "level": "A2",
+          "vi": "Bạn còn cần tôi hỗ trợ gì thêm không?",
+          "pron": "",
+          "register": "neutral",
+          "example": "Is there anything else I can help with before we close this ticket?",
+          "note": "Câu hỏi chuẩn để kết thúc lịch sự một lượt hỗ trợ khách hàng",
+          "situation": "Bạn vừa giải quyết xong yêu cầu của khách hàng qua điện thoại và muốn hỏi xem họ có vấn đề nào khác cần xử lý trước khi kết thúc cuộc gọi không."
+        }
+      ],
+      "vi_name": "Cụm từ dịch vụ khách hàng",
+      "order": 410,
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "My order arrived damaged and I'm really frustrated."
+        },
+        {
+          "speaker": "B",
+          "text": "**I apologize for the inconvenience** this has caused you."
+        },
+        {
+          "speaker": "A",
+          "text": "Can you fix it today?"
+        },
+        {
+          "speaker": "B",
+          "text": "**Let me look into that for you** — actually, this needs a specialist's approval."
+        },
+        {
+          "speaker": "A",
+          "text": "Please make it quick, then."
+        },
+        {
+          "speaker": "B",
+          "text": "Understood. **I'll escalate this to my supervisor** right away. **Is there anything else I can help with?**"
+        }
+      ]
+    },
+    {
+      "id": "toeic_telephone_english",
+      "type": "thematic",
+      "subtype": null,
+      "name": "Telephone English",
+      "level": "B2",
+      "topic": "Phone Calls",
+      "tip": "'Could you hold the line, please?' dùng khi cần người gọi chờ máy; 'I'll put you through to' khi chuyển cuộc gọi sang bộ phận khác; 'Can I take a message?' khi người cần gặp đang vắng mặt; 'The line is a bit unclear' để báo chất lượng cuộc gọi kém mà không đổ lỗi cho ai.",
+      "tracks": [
+        "toeic"
+      ],
+      "words": [
+        {
+          "term": "Could you hold the line, please?",
+          "level": "B1",
+          "vi": "Bạn có thể giữ máy một chút được không?",
+          "pron": "🇺🇸 /hoʊld/ 🇬🇧 /həʊld/",
+          "register": "formal",
+          "example": "Could you hold the line, please? I'll transfer you to the right department.",
+          "note": "Dùng khi cần người gọi chờ trong lúc bạn xử lý hoặc chuẩn bị chuyển máy",
+          "situation": "Bạn nhận cuộc gọi nhưng cần vài giây để tìm thông tin, bạn lịch sự đề nghị người gọi chờ máy."
+        },
+        {
+          "term": "I'll put you through to",
+          "level": "B2",
+          "vi": "Tôi sẽ chuyển máy cho bạn đến...",
+          "pron": "",
+          "register": "neutral",
+          "example": "I'll put you through to the technical support team now.",
+          "note": "Cụm cố định 'put someone through to' nghĩa là chuyển cuộc gọi sang người/bộ phận khác",
+          "situation": "Người gọi muốn nói chuyện với phòng kỹ thuật và bạn cần thông báo rằng bạn sắp chuyển cuộc gọi của họ sang bộ phận đó."
+        },
+        {
+          "term": "Can I take a message?",
+          "level": "A2",
+          "vi": "Tôi có thể ghi lại lời nhắn được không?",
+          "pron": "",
+          "register": "neutral",
+          "example": "He's not at his desk right now — can I take a message?",
+          "note": "Dùng khi người được gọi vắng mặt, đề nghị ghi lại lời nhắn thay vì bỏ lỡ cuộc gọi",
+          "situation": "Người mà khách muốn gặp hiện không có mặt tại bàn làm việc, bạn đề nghị ghi lại nội dung để chuyển lại sau."
+        },
+        {
+          "term": "The line is a bit unclear",
+          "level": "B2",
+          "vi": "Đường truyền hơi không rõ",
+          "pron": "🇺🇸 /ʌnˈklɪr/ 🇬🇧 /ʌnˈklɪə/",
+          "register": "neutral",
+          "example": "Sorry, the line is a bit unclear — could you repeat that last part?",
+          "note": "Cách lịch sự để báo chất lượng cuộc gọi kém mà không đổ lỗi cho người kia",
+          "situation": "Trong lúc gọi điện, giọng của đối phương bị rè và bạn cần báo rằng chất lượng âm thanh đang có vấn đề để họ nói lại."
+        }
+      ],
+      "vi_name": "Tiếng Anh qua điện thoại",
+      "order": 400,
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "Hi, I'd like to speak with Mr. Tran in the finance department."
+        },
+        {
+          "speaker": "B",
+          "text": "Sure, **could you hold the line, please?**"
+        },
+        {
+          "speaker": "A",
+          "text": "No problem, go ahead."
+        },
+        {
+          "speaker": "B",
+          "text": "**I'll put you through to** his line now."
+        },
+        {
+          "speaker": "A",
+          "text": "Sorry, **the line is a bit unclear** — I don't think it's connecting."
+        },
+        {
+          "speaker": "B",
+          "text": "Let me try again. If it drops, **can I take a message?**"
+        }
+      ]
+    },
+    {
+      "id": "toeic_negotiate_price",
+      "type": "thematic",
+      "subtype": null,
+      "name": "Negotiating Price & Terms",
+      "level": "C1",
+      "topic": "Negotiation",
+      "tip": "'Is there any room for negotiation?' dùng mở đầu để thăm dò thiện chí thương lượng; 'We can offer a discount if' đưa ra điều kiện đổi lại việc giảm giá; 'That's not quite within our budget' để từ chối lịch sự một mức giá; 'Let's meet in the middle' khi đề xuất mỗi bên nhân nhượng để đạt thỏa thuận chung.",
+      "tracks": [
+        "toeic"
+      ],
+      "words": [
+        {
+          "term": "Is there any room for negotiation?",
+          "level": "B2",
+          "vi": "Có thể thương lượng thêm được không?",
+          "pron": "🇺🇸 /nɪˌɡoʊʃiˈeɪʃən/ 🇬🇧 /nɪˌɡəʊʃiˈeɪʃən/",
+          "register": "formal",
+          "example": "Is there any room for negotiation on the delivery timeline?",
+          "note": "Câu hỏi mở đầu thăm dò xem đối tác có sẵn sàng thương lượng thêm không",
+          "situation": "Bạn nhận được báo giá ban đầu từ nhà cung cấp và muốn hỏi thăm dò xem con số đó có thể thay đổi được không."
+        },
+        {
+          "term": "We can offer a discount if",
+          "level": "B2",
+          "vi": "Chúng tôi có thể giảm giá nếu...",
+          "pron": "🇺🇸 🇬🇧 /ˈdɪskaʊnt/",
+          "register": "formal",
+          "example": "We can offer a discount if you commit to a one-year contract.",
+          "note": "Dùng để đưa ra điều kiện đổi lại việc giảm giá, thường kèm mệnh đề 'if'",
+          "situation": "Bạn là bên bán và muốn đề xuất mức giá thấp hơn với điều kiện đối tác cam kết một hợp đồng dài hạn."
+        },
+        {
+          "term": "That's not quite within our budget",
+          "level": "B2",
+          "vi": "Mức đó không hoàn toàn nằm trong ngân sách của chúng tôi",
+          "pron": "🇺🇸 🇬🇧 /ˈbʌdʒɪt/",
+          "register": "formal",
+          "example": "That's not quite within our budget — could you revise the quote?",
+          "note": "Cách từ chối lịch sự một mức giá mà không nói thẳng là 'quá đắt'",
+          "situation": "Đối tác đưa ra một mức giá cao hơn dự tính và bạn cần từ chối một cách lịch sự để mở đường thương lượng tiếp."
+        },
+        {
+          "term": "Let's meet in the middle",
+          "level": "C1",
+          "vi": "Hãy cùng nhượng bộ, gặp nhau ở điểm giữa",
+          "pron": "",
+          "register": "neutral",
+          "example": "You're asking for 10% and we're offering 5% — let's meet in the middle at 7%.",
+          "note": "Thành ngữ chỉ việc mỗi bên nhượng bộ một phần để đạt thỏa thuận chung",
+          "situation": "Hai bên đang đàm phán và khoảng cách giữa hai mức đề xuất còn khá xa, bạn muốn đề xuất mỗi bên nhân nhượng một chút để đạt thỏa thuận."
+        }
+      ],
+      "vi_name": "Đàm phán giá cả & điều khoản",
+      "order": 420,
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "We like the proposal, but **is there any room for negotiation?**"
+        },
+        {
+          "speaker": "B",
+          "text": "**We can offer a discount if** you sign a one-year contract."
+        },
+        {
+          "speaker": "A",
+          "text": "**That's not quite within our budget**, even with the discount."
+        },
+        {
+          "speaker": "B",
+          "text": "I understand. **Let's meet in the middle** — how about 12% off instead of 8%?"
+        }
+      ]
+    },
+    {
+      "id": "common_small_talk",
+      "type": "casual",
+      "subtype": null,
+      "name": "Small Talk & Greetings",
+      "level": "A2",
+      "topic": "Social",
+      "tip": "How's it going?/Take care dùng hàng ngày, thân mật; Long time no see chỉ dùng khi lâu ngày mới gặp lại; What have you been up to? mời đối phương kể chuyện gần đây, không chỉ là câu chào xã giao đơn thuần.",
+      "tracks": [
+        "common",
+        "default"
+      ],
+      "words": [
+        {
+          "term": "How's it going?",
+          "level": "A2",
+          "vi": "Dạo này thế nào?, khỏe không?",
+          "pron": "🇺🇸 /haʊz ɪt ˈɡoʊɪŋ/ 🇬🇧 /haʊz ɪt ˈɡəʊɪŋ/",
+          "register": "casual",
+          "example": "Hey Mike! How's it going?",
+          "note": "Câu chào phổ biến giữa bạn bè, thân mật hơn 'How are you?'",
+          "situation": "Bạn tình cờ gặp một người bạn cũ ở siêu thị và muốn hỏi thăm nhanh xem dạo này cuộc sống của người đó ra sao."
+        },
+        {
+          "term": "Long time no see!",
+          "level": "A2",
+          "vi": "Lâu quá không gặp!",
+          "pron": "🇺🇸 /lɔːŋ taɪm noʊ siː/ 🇬🇧 /lɒŋ taɪm nəʊ siː/",
+          "register": "casual",
+          "example": "Long time no see! You look great.",
+          "note": "Chỉ dùng khi gặp lại ai đó sau một thời gian dài không liên lạc",
+          "situation": "Bạn bất ngờ gặp lại một người bạn học cũ mà đã nhiều năm rồi chưa hề gặp mặt hay nói chuyện."
+        },
+        {
+          "term": "What have you been up to?",
+          "level": "B1",
+          "vi": "Dạo này bạn làm gì rồi?, có gì mới không?",
+          "pron": "🇺🇸 /wʌt hæv juː bɪn ʌp tuː/ 🇬🇧 /wɒt hæv juː biːn ʌp tuː/",
+          "register": "neutral",
+          "example": "So, what have you been up to since college?",
+          "note": "Câu hỏi mở, mời người nghe kể chuyện gần đây của họ",
+          "situation": "Sau khi chào hỏi xong, bạn muốn hỏi thêm để biết bạn mình gần đây đã trải qua những chuyện gì, đang làm gì."
+        },
+        {
+          "term": "Take care!",
+          "level": "A2",
+          "vi": "Bảo trọng nhé!, giữ gìn sức khỏe nhé!",
+          "pron": "🇺🇸 /teɪk kɛr/ 🇬🇧 /teɪk keə/",
+          "register": "casual",
+          "example": "I have to go now. Take care!",
+          "note": "Lời chào tạm biệt thân thiện, ngụ ý quan tâm đối phương",
+          "situation": "Bạn đang kết thúc cuộc gọi điện thoại với người thân và muốn chúc họ những điều tốt đẹp trước khi cúp máy."
+        }
+      ],
+      "vi_name": "Chào hỏi & Nói chuyện phiếm",
+      "order": 10,
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "**Long time no see!**"
+        },
+        {
+          "speaker": "B",
+          "text": "I know! **How's it going?**"
+        },
+        {
+          "speaker": "A",
+          "text": "Pretty good, thanks. **What have you been up to** lately?"
+        },
+        {
+          "speaker": "B",
+          "text": "Just the usual, work and gym. Anyway, I need to head out now."
+        },
+        {
+          "speaker": "A",
+          "text": "Sure, **take care!**"
+        },
+        {
+          "speaker": "B",
+          "text": "You too, see you soon!"
+        }
+      ]
+    },
+    {
+      "id": "common_making_plans",
+      "type": "casual",
+      "subtype": null,
+      "name": "Making Plans / Invitations",
+      "level": "B1",
+      "topic": "Daily Life",
+      "tip": "Do you want to hang out?/Are you free this weekend? dùng để chủ động rủ rê, mời cụ thể; Let's grab a coffee sometime mang tính xã giao, không ràng buộc thời gian; I'm down for that là câu đáp lại đồng ý tham gia, không phải lời mời.",
+      "tracks": [
+        "common",
+        "default"
+      ],
+      "words": [
+        {
+          "term": "Do you want to hang out?",
+          "level": "A2",
+          "vi": "Bạn có muốn đi chơi/tụ tập không?",
+          "pron": "🇺🇸 /duː juː wɑːnt tuː hæŋ aʊt/ 🇬🇧 /duː juː wɒnt tuː hæŋ aʊt/",
+          "register": "casual",
+          "example": "Do you want to hang out this Friday?",
+          "note": "Rủ đi chơi thoải mái, không cần nói rõ làm gì cụ thể",
+          "situation": "Bạn muốn rủ một người bạn thân đi chơi cùng vào cuối tuần dù chưa nghĩ ra hoạt động cụ thể nào."
+        },
+        {
+          "term": "Are you free this weekend?",
+          "level": "A2",
+          "vi": "Cuối tuần này bạn có rảnh không?",
+          "pron": "🇺🇸 /ɑːr juː friː ðɪs ˈwiːkɛnd/ 🇬🇧 /ɑː juː friː ðɪs ˈwiːkɛnd/",
+          "register": "neutral",
+          "example": "Are you free this weekend? I'd love to catch up.",
+          "note": "Hỏi thăm lịch trống trước khi đề xuất kế hoạch cụ thể",
+          "situation": "Trước khi mời bạn đi ăn tối, bạn muốn kiểm tra xem đối phương có thời gian rảnh vào hai ngày tới hay không."
+        },
+        {
+          "term": "Let's grab a coffee sometime",
+          "level": "B1",
+          "vi": "Khi nào đó mình đi uống cà phê nhé",
+          "pron": "🇺🇸 /lɛts ɡræb ə ˈkɔːfi ˈsʌmtaɪm/ 🇬🇧 /lɛts ɡræb ə ˈkɒfi ˈsʌmtaɪm/",
+          "register": "casual",
+          "example": "It was great running into you — let's grab a coffee sometime!",
+          "note": "Lời mời xã giao, không chốt thời gian cụ thể",
+          "situation": "Bạn tình cờ gặp lại một người quen lâu ngày không gặp và muốn ngỏ ý hẹn gặp lại vào một dịp nào đó trong tương lai mà không cần chốt ngày ngay."
+        },
+        {
+          "term": "I'm down for that",
+          "level": "B1",
+          "vi": "Mình đồng ý, mình tham gia đó",
+          "pron": "🇺🇸 /aɪm daʊn fɔːr ðæt/ 🇬🇧 /aɪm daʊn fɔː ðæt/",
+          "register": "casual",
+          "example": "A movie night on Saturday? I'm down for that!",
+          "note": "Cách nói thân mật để đồng ý tham gia một kế hoạch, phổ biến trong tiếng Anh-Mỹ",
+          "situation": "Một người bạn vừa đề xuất một hoạt động vào cuối tuần và bạn muốn thể hiện sự hào hứng đồng ý tham gia một cách thoải mái, không trang trọng."
+        }
+      ],
+      "vi_name": "Lên kế hoạch & Rủ rê",
+      "order": 20,
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "Hey, **are you free this weekend**?"
+        },
+        {
+          "speaker": "B",
+          "text": "I think so, why?"
+        },
+        {
+          "speaker": "A",
+          "text": "**Do you want to hang out**? We could catch a movie or something."
+        },
+        {
+          "speaker": "B",
+          "text": "Sure, or **let's grab a coffee sometime** instead, less noisy."
+        },
+        {
+          "speaker": "A",
+          "text": "Sounds good, coffee it is."
+        },
+        {
+          "speaker": "B",
+          "text": "**I'm down for that**, see you Saturday!"
+        }
+      ]
+    },
+    {
+      "id": "common_shopping",
+      "type": "casual",
+      "subtype": null,
+      "name": "Shopping & Bargaining",
+      "level": "A2",
+      "topic": "Shopping",
+      "tip": "How much does this cost? là câu hỏi giá cơ bản; Can I get a discount? dùng khi muốn mặc cả, xin giảm giá; I'm just browsing dùng để từ chối khéo sự trợ giúp của nhân viên; Do you have this in a different size? chỉ dùng riêng khi cần đổi kích cỡ sản phẩm.",
+      "tracks": [
+        "common",
+        "default"
+      ],
+      "words": [
+        {
+          "term": "How much does this cost?",
+          "level": "A1",
+          "vi": "Cái này giá bao nhiêu?",
+          "pron": "🇺🇸 /haʊ mʌtʃ dʌz ðɪs kɔːst/ 🇬🇧 /haʊ mʌtʃ dʌz ðɪs kɒst/",
+          "register": "neutral",
+          "example": "Excuse me, how much does this cost?",
+          "note": "Câu hỏi giá cơ bản, dùng được ở mọi cửa hàng",
+          "situation": "Bạn đang xem một món đồ trong cửa hàng nhưng không thấy bảng giá nên muốn hỏi nhân viên."
+        },
+        {
+          "term": "Can I get a discount?",
+          "level": "B1",
+          "vi": "Cho mình xin giảm giá được không?",
+          "pron": "🇺🇸 /kæn aɪ ɡɛt ə ˈdɪskaʊnt/ 🇬🇧 /kæn aɪ ɡɛt ə ˈdɪskaʊnt/",
+          "register": "neutral",
+          "example": "I'm buying three — can I get a discount?",
+          "note": "Dùng khi mặc cả hoặc mua số lượng nhiều để xin giảm giá",
+          "situation": "Bạn định mua nhiều món cùng lúc tại một khu chợ và muốn hỏi xem người bán có thể bớt giá cho bạn không."
+        },
+        {
+          "term": "I'm just browsing",
+          "level": "A2",
+          "vi": "Tôi chỉ xem thôi, chưa mua",
+          "pron": "🇺🇸 /aɪm dʒʌst ˈbraʊzɪŋ/ 🇬🇧 /aɪm dʒʌst ˈbraʊzɪŋ/",
+          "register": "neutral",
+          "example": "Do you need any help? — No thanks, I'm just browsing.",
+          "note": "Cách lịch sự để từ chối sự trợ giúp của nhân viên khi chưa muốn mua",
+          "situation": "Nhân viên bán hàng tới hỏi bạn có cần giúp gì không, nhưng bạn chỉ mới đang xem qua các sản phẩm chứ chưa có ý định mua ngay."
+        },
+        {
+          "term": "Do you have this in a different size?",
+          "level": "A2",
+          "vi": "Cái này có cỡ khác không?",
+          "pron": "🇺🇸 /duː juː hæv ðɪs ɪn ə ˈdɪfrənt saɪz/ 🇬🇧 /duː juː hæv ðɪs ɪn ə ˈdɪfrənt saɪz/",
+          "register": "neutral",
+          "example": "This looks nice, but do you have this in a different size?",
+          "note": "Câu hỏi tiêu chuẩn khi mua quần áo/giày cần đổi cỡ",
+          "situation": "Bạn thử một chiếc áo trong cửa hàng nhưng thấy hơi chật nên muốn hỏi nhân viên xem còn cỡ nào khác không."
+        }
+      ],
+      "vi_name": "Mua sắm & Trả giá",
+      "order": 90,
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "**I'm just browsing** for now, thanks."
+        },
+        {
+          "speaker": "B",
+          "text": "Sure, take your time!"
+        },
+        {
+          "speaker": "A",
+          "text": "Actually, **how much does this cost**?"
+        },
+        {
+          "speaker": "B",
+          "text": "That one's $45."
+        },
+        {
+          "speaker": "A",
+          "text": "**Can I get a discount**? Also, **do you have this in a different size**?"
+        },
+        {
+          "speaker": "B",
+          "text": "Let me check the back for you."
+        }
+      ]
+    },
+    {
+      "id": "common_directions",
+      "type": "thematic",
+      "subtype": null,
+      "name": "Asking for / Giving Directions",
+      "level": "A2",
+      "topic": "Directions",
+      "tip": "\"How do I get to...?\" dùng để hỏi đường; \"Go straight and turn left\" là câu chỉ dẫn cụ thể; \"It's just around the corner\" nhấn mạnh khoảng cách rất gần; \"You can't miss it\" trấn an rằng địa điểm rất dễ nhận ra, không thể đi lạc.",
+      "tracks": [
+        "common",
+        "default"
+      ],
+      "words": [
+        {
+          "term": "How do I get to...?",
+          "level": "A2",
+          "vi": "Làm sao để đến...?",
+          "pron": "🇺🇸 🇬🇧 /haʊ duː aɪ ɡet tuː/",
+          "register": "neutral",
+          "example": "Excuse me, how do I get to the train station from here?",
+          "note": "Câu hỏi đường phổ biến và lịch sự nhất, dùng khi không biết cách đến một địa điểm cụ thể.",
+          "situation": "Bạn đang đứng giữa một con phố lạ và muốn hỏi một người qua đường cách đến nhà ga xe lửa."
+        },
+        {
+          "term": "Go straight and turn left",
+          "level": "A2",
+          "vi": "Đi thẳng rồi rẽ trái",
+          "pron": "🇺🇸 /ɡoʊ streɪt ænd tɜrn left/ 🇬🇧 /ɡəʊ streɪt ənd tɜːn left/",
+          "register": "neutral",
+          "example": "Go straight and turn left at the second traffic light, then you'll see the bakery.",
+          "note": "Câu chỉ đường cơ bản, kết hợp hướng đi thẳng và hướng rẽ để dẫn đường cụ thể.",
+          "situation": "Một người lạ hỏi bạn đường đến tiệm bánh, và bạn giải thích họ cần đi qua hai ngã tư rồi rẽ ở đâu."
+        },
+        {
+          "term": "It's just around the corner",
+          "level": "B1",
+          "vi": "Nó ở ngay góc phố thôi, rất gần đây",
+          "pron": "🇺🇸 /ɪts dʒʌst əˈraʊnd ðə ˈkɔrnər/ 🇬🇧 /ɪts dʒʌst əˈraʊnd ðə ˈkɔːnə/",
+          "register": "casual",
+          "example": "Don't worry, the pharmacy is just around the corner — you'll be there in two minutes.",
+          "note": "Diễn tả một nơi rất gần, thường dùng để trấn an người hỏi đường là không cần đi xa.",
+          "situation": "Bạn muốn trấn an một du khách rằng hiệu thuốc họ đang tìm không hề xa, chỉ cách vài bước chân thôi."
+        },
+        {
+          "term": "You can't miss it",
+          "level": "B1",
+          "vi": "Bạn chắc chắn sẽ thấy nó thôi, dễ tìm lắm",
+          "pron": "🇺🇸 /juː kænt mɪs ɪt/ 🇬🇧 /juː kɑːnt mɪs ɪt/",
+          "register": "casual",
+          "example": "The hotel is right next to the big red sign — you can't miss it.",
+          "note": "Câu trấn an thường nói cuối cùng khi chỉ đường, ý là địa điểm rất dễ nhận ra.",
+          "situation": "Sau khi chỉ đường chi tiết, bạn muốn khẳng định với người hỏi rằng địa điểm đó rất dễ nhận ra, không thể đi lạc được."
+        }
+      ],
+      "vi_name": "Hỏi đường và Chỉ đường",
+      "order": 80,
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "Excuse me, **how do I get to** the train station?"
+        },
+        {
+          "speaker": "B",
+          "text": "Sure! **Go straight and turn left** at the next light."
+        },
+        {
+          "speaker": "A",
+          "text": "Okay, is it far from here?"
+        },
+        {
+          "speaker": "B",
+          "text": "No, **it's just around the corner**."
+        },
+        {
+          "speaker": "A",
+          "text": "Great, thanks!"
+        },
+        {
+          "speaker": "B",
+          "text": "No problem, **you can't miss it**."
+        }
+      ]
+    },
+    {
+      "id": "common_opinions_everyday",
+      "type": "synonym",
+      "subtype": null,
+      "name": "Expressing Opinions (Everyday)",
+      "level": "A2",
+      "topic": "Opinions",
+      "tip": "\"If you ask me,\" và \"Personally, I think\" dùng để nêu ý kiến rõ ràng, thân mật; \"I'm not really into\" diễn tả không thích một cách nhẹ nhàng; \"I'm on the fence about\" dùng khi còn phân vân, chưa nghiêng hẳn về bên nào.",
+      "tracks": [
+        "common",
+        "default"
+      ],
+      "words": [
+        {
+          "term": "If you ask me,",
+          "level": "B1",
+          "vi": "Theo tôi thì, nếu bạn hỏi tôi thì",
+          "pron": "🇺🇸 /ɪf juː æsk miː/ 🇬🇧 /ɪf juː ɑːsk miː/",
+          "register": "casual",
+          "example": "If you ask me, the new café down the street has way better coffee.",
+          "note": "Cách nêu ý kiến cá nhân thân mật, thường dùng khi bạn muốn chen ý kiến riêng vào dù không ai hỏi trực tiếp.",
+          "situation": "Trong lúc bạn bè đang bàn xem quán cà phê nào ngon hơn, bạn muốn góp ý kiến riêng của mình dù không ai hỏi trực tiếp."
+        },
+        {
+          "term": "Personally, I think",
+          "level": "A2",
+          "vi": "Cá nhân tôi thì nghĩ là",
+          "pron": "🇺🇸 /ˈpɜːrsənəli aɪ θɪŋk/ 🇬🇧 /ˈpɜːsənəli aɪ θɪŋk/",
+          "register": "neutral",
+          "example": "Personally, I think the movie was way too long.",
+          "note": "Cách nêu quan điểm cá nhân trung tính, dùng được trong hầu hết tình huống hằng ngày.",
+          "situation": "Bạn vừa xem xong một bộ phim cùng bạn bè và muốn chia sẻ nhận xét riêng của mình về độ dài của phim."
+        },
+        {
+          "term": "I'm not really into",
+          "level": "A2",
+          "vi": "Tôi không thực sự thích/hứng thú với",
+          "pron": "🇺🇸 /aɪm nɑt ˈrɪəli ˈɪntuː/ 🇬🇧 /aɪm nɒt ˈrɪəli ˈɪntuː/",
+          "register": "casual",
+          "example": "I'm not really into horror movies, to be honest.",
+          "note": "Cách nói nhẹ nhàng để bày tỏ không thích thứ gì đó, ít gay gắt hơn \"I hate\".",
+          "situation": "Bạn bè rủ bạn đi xem một thể loại phim mà bạn không hợp gu, và bạn muốn từ chối một cách nhẹ nhàng."
+        },
+        {
+          "term": "I'm on the fence about",
+          "level": "B1",
+          "vi": "Tôi vẫn đang phân vân/lưỡng lự về",
+          "pron": "🇺🇸 /aɪm ɑn ðə fɛns əˈbaʊt/ 🇬🇧 /aɪm ɒn ðə fens əˈbaʊt/",
+          "register": "casual",
+          "example": "I'm on the fence about moving to a new apartment — it's nice, but the rent is high.",
+          "note": "Idiom diễn tả trạng thái chưa quyết định được, chưa nghiêng hẳn về bên nào.",
+          "situation": "Bạn đang cân nhắc có nên chuyển sang một căn hộ mới hay không vì tuy đẹp nhưng giá thuê hơi cao, và bạn chưa quyết định được."
+        }
+      ],
+      "vi_name": "Bày tỏ ý kiến (hằng ngày)",
+      "order": 30,
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "Have you seen that new sci-fi movie everyone's talking about?"
+        },
+        {
+          "speaker": "B",
+          "text": "Not yet. **I'm on the fence about** watching it, honestly."
+        },
+        {
+          "speaker": "A",
+          "text": "**If you ask me,** it's overhyped."
+        },
+        {
+          "speaker": "B",
+          "text": "**Personally, I think** the trailer looked cool though."
+        },
+        {
+          "speaker": "A",
+          "text": "Maybe, but **I'm not really into** sci-fi anyway."
+        },
+        {
+          "speaker": "B",
+          "text": "Fair enough, different tastes I guess."
+        }
+      ]
+    },
+    {
+      "id": "common_apologizing_everyday",
+      "type": "synonym",
+      "subtype": null,
+      "name": "Apologizing (Everyday)",
+      "level": "A2",
+      "topic": "Apologies",
+      "tip": "\"My bad!\" chỉ dùng cho lỗi rất nhỏ, thân mật; \"Sorry, I didn't mean to\" nhấn mạnh việc không cố ý; \"I feel really bad about\" thể hiện sự áy náy chân thành; \"I owe you an apology\" dùng khi muốn nhận lỗi một cách nghiêm túc hơn.",
+      "tracks": [
+        "common",
+        "default"
+      ],
+      "words": [
+        {
+          "term": "My bad!",
+          "level": "A2",
+          "vi": "Lỗi của tôi! Tại tôi!",
+          "pron": "🇺🇸 🇬🇧 /maɪ bæd/",
+          "register": "casual",
+          "example": "Oh, my bad! I didn't realize this was your seat.",
+          "note": "Cách xin lỗi rất thân mật, thường dùng cho những lỗi nhỏ nhặt giữa bạn bè.",
+          "situation": "Bạn vô tình ngồi nhầm ghế của bạn mình trong quán cà phê và nhận ra ngay sau đó."
+        },
+        {
+          "term": "Sorry, I didn't mean to",
+          "level": "A2",
+          "vi": "Xin lỗi, tôi không cố ý",
+          "pron": "🇺🇸 /ˈsɔri aɪ ˈdɪdənt miːn tuː/ 🇬🇧 /ˈsɒri aɪ ˈdɪdənt miːn tuː/",
+          "register": "neutral",
+          "example": "Sorry, I didn't mean to step on your foot!",
+          "note": "Dùng khi vô tình làm điều gì đó không hay, nhấn mạnh rằng bạn không có chủ đích.",
+          "situation": "Bạn vô tình giẫm phải chân người đứng cạnh trên một chuyến xe buýt đông đúc."
+        },
+        {
+          "term": "I feel really bad about",
+          "level": "B1",
+          "vi": "Tôi cảm thấy rất áy náy về",
+          "pron": "🇺🇸 🇬🇧 /aɪ fiːl ˈrɪəli bæd əˈbaʊt/",
+          "register": "neutral",
+          "example": "I feel really bad about forgetting your birthday yesterday.",
+          "note": "Diễn tả sự áy náy chân thành, thường được nói kèm với lý do cụ thể.",
+          "situation": "Bạn vừa nhớ ra là mình đã quên mất sinh nhật của một người bạn thân vào hôm qua."
+        },
+        {
+          "term": "I owe you an apology",
+          "level": "B1",
+          "vi": "Tôi nợ bạn một lời xin lỗi",
+          "pron": "🇺🇸 /aɪ oʊ juː ən əˈpɑlədʒi/ 🇬🇧 /aɪ əʊ juː ən əˈpɒlədʒi/",
+          "register": "neutral",
+          "example": "I owe you an apology for snapping at you earlier — I was just having a bad day.",
+          "note": "Cách xin lỗi nghiêm túc, thừa nhận rõ ràng rằng mình đã sai và cần xin lỗi.",
+          "situation": "Bạn đã lỡ cáu gắt vô cớ với một người bạn lúc nãy và giờ muốn xin lỗi một cách nghiêm túc."
+        }
+      ],
+      "vi_name": "Xin lỗi (hằng ngày)",
+      "order": 100,
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "Hey, you spilled coffee on my laptop!"
+        },
+        {
+          "speaker": "B",
+          "text": "Oh no, **my bad!** **Sorry, I didn't mean to** knock it over."
+        },
+        {
+          "speaker": "A",
+          "text": "It's okay, just be careful."
+        },
+        {
+          "speaker": "B",
+          "text": "**I feel really bad about** it, really."
+        },
+        {
+          "speaker": "A",
+          "text": "Don't worry about it."
+        },
+        {
+          "speaker": "B",
+          "text": "Still, **I owe you an apology** for being so clumsy."
+        }
+      ]
+    },
+    {
+      "id": "interview_common_qa",
+      "type": "thematic",
+      "subtype": null,
+      "name": "Answering Common Interview Questions",
+      "vi_name": "Trả lời các câu hỏi phỏng vấn thường gặp",
+      "level": "B2",
+      "topic": "Job Interview",
+      "tip": "I'd describe myself as... dùng mở đầu phần giới thiệu bản thân, ngắn gọn và tự nhiên hơn hẳn việc liệt kê lại CV; one of my strengths is... dùng khi được hỏi về điểm mạnh, nên nối ngay ví dụ cụ thể để tránh sáo rỗng; something I'm working on is... là cách nói giảm nhẹ, tích cực khi nói về điểm yếu — tuyệt đối không dùng thẳng 'my weakness is' vì nghe tiêu cực và thiếu chủ động; what drew me to this role is... dùng để trả lời 'vì sao muốn ứng tuyển vị trí này', nên gắn với chi tiết cụ thể của công ty/sản phẩm thay vì lý do chung chung như lương thưởng; I'm looking for new challenges dùng khi giải thích lý do rời công việc hiện tại/cũ, luôn giữ giọng tích cực, hướng về tương lai, không bao giờ nói xấu công ty hay sếp cũ dù lý do thật sự là gì.",
+      "tracks": [
+        "default"
+      ],
+      "order": 520,
+      "words": [
+        {
+          "term": "I'd describe myself as...",
+          "level": "B1",
+          "vi": "Tôi tự nhận mình là... (mở đầu phần giới thiệu bản thân)",
+          "pron": "🇺🇸 🇬🇧 /aɪd dɪˈskraɪb maɪˈsɛlf æz/",
+          "register": "neutral",
+          "example": "I'd describe myself as a detail-oriented developer who enjoys solving tricky bugs.",
+          "note": "Mở đầu tự nhiên và an toàn cho câu 'Tell me about yourself', tránh liệt kê lại CV khô khan; nên nối ngay với 1-2 tính từ kèm ví dụ cụ thể.",
+          "situation": "Nhà tuyển dụng mở đầu buổi phỏng vấn bằng câu 'Tell me about yourself' và bạn cần một câu mở đầu tự nhiên thay vì đọc lại CV."
+        },
+        {
+          "term": "one of my strengths is...",
+          "level": "B1",
+          "vi": "một trong những điểm mạnh của tôi là...",
+          "pron": "🇺🇸 🇬🇧 /wʌn əv maɪ ˈstrɛŋθs ɪz/",
+          "register": "neutral",
+          "example": "One of my strengths is being able to debug production issues quickly under pressure.",
+          "note": "Nên theo sau bằng một ví dụ cụ thể chứng minh, tránh liệt kê chung chung như 'hard-working' vì nghe sáo rỗng và thiếu thuyết phục.",
+          "situation": "Nhà tuyển dụng hỏi 'What is your greatest strength?' và bạn cần câu dẫn để đi vào một ví dụ cụ thể liên quan đến công việc."
+        },
+        {
+          "term": "something I'm working on is...",
+          "level": "B2",
+          "vi": "một điều tôi vẫn đang cải thiện là... (cách nói giảm nhẹ về điểm yếu)",
+          "pron": "🇺🇸 /ˈsʌmθɪŋ aɪm ˈwɝːkɪŋ ɑːn ɪz/ 🇬🇧 /ˈsʌmθɪŋ aɪm ˈwɜːkɪŋ ɒn ɪz/",
+          "register": "neutral",
+          "example": "Something I'm working on is speaking up earlier when I foresee a technical risk, instead of waiting until it becomes a bigger issue.",
+          "note": "Cách nói giảm nhẹ, tích cực hơn hẳn 'my weakness is...' — nên đi kèm hành động cụ thể đang làm để cải thiện, và tránh chọn điểm yếu cốt lõi của vị trí đang ứng tuyển.",
+          "situation": "Nhà tuyển dụng hỏi về điểm yếu (weakness) và bạn cần cách trả lời khéo léo, không phủ nhận có điểm yếu nhưng cũng không tự hạ thấp bản thân."
+        },
+        {
+          "term": "what drew me to this role is...",
+          "level": "B2",
+          "vi": "điều khiến tôi bị thu hút bởi vị trí này là...",
+          "pron": "🇺🇸 /wʌt druː mi tuː ðɪs roʊl ɪz/ 🇬🇧 /wɒt druː mi tuː ðɪs rəʊl ɪz/",
+          "register": "neutral",
+          "example": "What drew me to this role is the chance to work on a product used by millions of users every day.",
+          "note": "Câu trả lời cho 'Why do you want this job?' — nên nhắc đến điểm cụ thể của công ty/vị trí (sản phẩm, công nghệ, đội nhóm) thay vì trả lời chung chung như 'good salary'.",
+          "situation": "Nhà tuyển dụng hỏi 'Why do you want to work here?' và bạn cần một câu mở đầu để giải thích lý do ứng tuyển một cách chuyên nghiệp."
+        },
+        {
+          "term": "I'm looking for new challenges",
+          "level": "B1",
+          "vi": "tôi đang tìm kiếm những thử thách mới (cách nói khéo lý do muốn nghỉ việc cũ)",
+          "pron": "🇺🇸 /aɪm ˈlʊkɪŋ fɔːr nuː ˈtʃælɪndʒɪz/ 🇬🇧 /aɪm ˈlʊkɪŋ fə njuː ˈtʃælɪndʒɪz/",
+          "register": "neutral",
+          "example": "I'm looking for new challenges after three years in the same role, and I feel ready to take on more responsibility.",
+          "note": "Cách nói tích cực, an toàn khi giải thích lý do rời công ty cũ — tuyệt đối tránh nói xấu sếp/đồng nghiệp cũ dù lý do thật có thể tiêu cực.",
+          "situation": "Nhà tuyển dụng hỏi 'Why are you leaving your current job?' và bạn cần một lý do nghe chuyên nghiệp, tích cực, không đổ lỗi cho công ty cũ."
+        }
+      ],
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "So, tell me about yourself."
+        },
+        {
+          "speaker": "B",
+          "text": "**I'd describe myself as** a backend developer who loves optimizing slow systems."
+        },
+        {
+          "speaker": "A",
+          "text": "Great. What would you say is one of your strengths?"
+        },
+        {
+          "speaker": "B",
+          "text": "**One of my strengths is** staying calm and methodical when production breaks."
+        },
+        {
+          "speaker": "A",
+          "text": "And is there something you're working on improving?"
+        },
+        {
+          "speaker": "B",
+          "text": "**Something I'm working on is** raising concerns earlier instead of trying to fix everything myself first."
+        }
+      ]
+    },
+    {
+      "id": "interview_experience",
+      "type": "thematic",
+      "subtype": null,
+      "name": "Describing Experience & Achievements",
+      "vi_name": "Mô tả kinh nghiệm & thành tích",
+      "level": "B2",
+      "topic": "Job Interview",
+      "tip": "was responsible for dùng để nêu phạm vi/nhiệm vụ được giao, phù hợp mở đầu câu trả lời theo STAR (phần Task); led a team of nhấn mạnh vai trò lãnh đạo, nên nêu rõ số người để nhà tuyển dụng hình dung quy mô; successfully delivered nhấn mạnh việc hoàn thành đúng cam kết, nên gắn kèm mốc thời gian hoặc so sánh với kế hoạch ban đầu; contributed to khiêm tốn hơn led, phù hợp khi bạn là một mắt xích trong team lớn chứ không phải người dẫn dắt chính; which resulted in là cách nối câu chuẩn để đưa ra con số đo lường cụ thể (phần Result trong STAR) — luôn nên đi kèm % hoặc số liệu thực tế để câu trả lời thuyết phục hơn.",
+      "tracks": [
+        "default"
+      ],
+      "order": 530,
+      "words": [
+        {
+          "term": "was responsible for",
+          "level": "B1",
+          "vi": "chịu trách nhiệm về",
+          "pron": "🇺🇸 /wəz rɪˈspɑːnsəbəl fɔːr/ 🇬🇧 /wəz rɪˈspɒnsəbl fɔː/",
+          "register": "neutral",
+          "example": "I was responsible for maintaining the CI/CD pipeline across three microservices.",
+          "note": "Dùng để mô tả phạm vi công việc/hệ thống mình phụ trách — nên nêu chi tiết cụ thể (hệ thống nào, quy mô nào) thay vì nói chung chung.",
+          "situation": "Nhà tuyển dụng hỏi 'What was your role in that project?' và bạn cần mô tả rõ phần công việc mình phụ trách trong việc vận hành pipeline CI/CD cho nhiều microservice."
+        },
+        {
+          "term": "led a team of",
+          "level": "B2",
+          "vi": "dẫn dắt một nhóm gồm",
+          "pron": "🇺🇸 🇬🇧 /lɛd ə tiːm ʌv/",
+          "register": "neutral",
+          "example": "I led a team of four engineers through the database migration project.",
+          "note": "Nên nêu rõ số lượng người trong team để nhà tuyển dụng hình dung được quy mô vai trò lãnh đạo của bạn.",
+          "situation": "Nhà tuyển dụng hỏi bạn đã từng có kinh nghiệm quản lý/lãnh đạo chưa, và bạn muốn kể về việc dẫn dắt một nhóm nhỏ thực hiện dự án migrate database."
+        },
+        {
+          "term": "successfully delivered",
+          "level": "B2",
+          "vi": "hoàn thành/bàn giao thành công",
+          "pron": "🇺🇸 /səkˈsɛsfəli dɪˈlɪvərd/ 🇬🇧 /səkˈsɛsfəli dɪˈlɪvəd/",
+          "register": "neutral",
+          "example": "We successfully delivered the new checkout feature two weeks ahead of schedule.",
+          "note": "Nhấn mạnh việc hoàn thành đúng hoặc sớm hạn — nên đi kèm mốc thời gian hoặc so sánh với kế hoạch ban đầu để câu trả lời thuyết phục hơn.",
+          "situation": "Bạn muốn kể về một dự án đã hoàn thành tốt, cụ thể là tính năng checkout được launch sớm hơn deadline đề ra."
+        },
+        {
+          "term": "contributed to",
+          "level": "B1",
+          "vi": "đóng góp vào",
+          "pron": "🇺🇸 /kənˈtrɪbjətɪd tuː/ 🇬🇧 /kənˈtrɪbjuːtɪd tuː/",
+          "register": "neutral",
+          "example": "I contributed to redesigning the onboarding flow, working closely with two other frontend developers.",
+          "note": "Dùng khiêm tốn hơn 'led' khi bạn là một phần của team lớn hơn chứ không phải người chủ trì — vẫn nên nêu rõ phần việc cụ thể mình đã làm.",
+          "situation": "Nhà tuyển dụng hỏi về một dự án mà bạn không phải người dẫn dắt chính, và bạn muốn mô tả phần việc cụ thể mình đóng góp trong việc redesign luồng onboarding."
+        },
+        {
+          "term": "which resulted in",
+          "level": "B2",
+          "vi": "dẫn đến kết quả là, mang lại kết quả là",
+          "pron": "🇺🇸 🇬🇧 /wɪtʃ rɪˈzʌltɪd ɪn/",
+          "register": "neutral",
+          "example": "I optimized the slow database queries, which resulted in a 40% reduction in page load time.",
+          "note": "Luôn nên đi kèm con số cụ thể (%, thời gian, chi phí) ngay sau cụm này để chứng minh tác động thực tế — đây là điểm mấu chốt để câu trả lời STAR thuyết phục.",
+          "situation": "Nhà tuyển dụng hỏi 'What was the measurable impact of your work?' và bạn muốn nêu rõ con số cụ thể sau khi tối ưu database, ví dụ giảm 40% thời gian tải trang."
+        }
+      ],
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "Can you tell me about a project you're proud of?"
+        },
+        {
+          "speaker": "B",
+          "text": "Sure. I **was responsible for** the backend of our payment system."
+        },
+        {
+          "speaker": "A",
+          "text": "What was your specific role in the team?"
+        },
+        {
+          "speaker": "B",
+          "text": "I **led a team of** three developers to redesign the checkout flow."
+        },
+        {
+          "speaker": "A",
+          "text": "And what was the outcome?"
+        },
+        {
+          "speaker": "B",
+          "text": "We **successfully delivered** the new flow a week ahead of schedule, **which resulted in** a 25% drop in cart abandonment."
+        }
+      ]
+    },
+    {
+      "id": "interview_logistics",
+      "type": "thematic",
+      "subtype": null,
+      "name": "Salary & Logistics Questions",
+      "vi_name": "Câu hỏi về lương & thủ tục hậu cần khi phỏng vấn",
+      "level": "B2",
+      "topic": "Job Interview",
+      "tip": "My expected salary is in the range of... là cách nêu con số cụ thể nhưng vẫn để ngỏ khoảng thương lượng, phù hợp khi nhà tuyển dụng hỏi thẳng; I'm flexible on salary depending on the overall package mềm mỏng hơn, dùng khi muốn tránh chốt số ngay và nhấn mạnh cân nhắc cả benefits chứ không chỉ lương cứng; I'm available to start with two weeks' notice là câu chuẩn để thông báo thời gian bàn giao công việc cũ, thể hiện sự chuyên nghiệp thay vì bỏ ngang; What does the onboarding process look like? hỏi về hậu cần cụ thể (ngày bắt đầu, thiết bị, đào tạo) nên phù hợp hỏi gần cuối; What does success look like in this role in the first six months? là câu hỏi ngược cấp quản lý, mang tính chiến lược hơn, thể hiện bạn quan tâm đến kỳ vọng dài hạn chứ không chỉ thủ tục.",
+      "tracks": [
+        "default"
+      ],
+      "order": 540,
+      "words": [
+        {
+          "term": "My expected salary is in the range of...",
+          "level": "B2",
+          "vi": "Mức lương mong muốn của tôi nằm trong khoảng...",
+          "pron": "🇺🇸 /maɪ ɪkˈspɛktɪd ˈsæləri ɪz ɪn ðə reɪndʒ ʌv/ 🇬🇧 /maɪ ɪkˈspektɪd ˈsæləri ɪz ɪn ðə reɪndʒ ɒv/",
+          "register": "neutral",
+          "example": "My expected salary is in the range of 25 to 30 million VND per month, depending on the responsibilities.",
+          "note": "Nêu một khoảng (range) thay vì một con số cố định giúp bạn giữ chỗ để thương lượng, tránh bị ép giá thấp hơn mong muốn.",
+          "situation": "Nhà tuyển dụng hỏi thẳng bạn mong muốn mức lương bao nhiêu cho vị trí developer đang ứng tuyển."
+        },
+        {
+          "term": "I'm flexible on salary depending on the overall package.",
+          "level": "B2",
+          "vi": "Tôi khá linh hoạt về lương, tùy vào toàn bộ gói phúc lợi.",
+          "pron": "🇺🇸 /aɪm ˈflɛksəbl ɑːn ˈsæləri dɪˈpɛndɪŋ ɑːn ðə ˌoʊvərˈɔːl ˈpækɪdʒ/ 🇬🇧 /aɪm ˈfleksəbl ɒn ˈsæləri dɪˈpendɪŋ ɒn ði ˌəʊvərˈɔːl ˈpækɪdʒ/",
+          "register": "neutral",
+          "example": "I'm flexible on salary depending on the overall package, including bonus and remote work options.",
+          "note": "Cách trả lời ngoại giao khi chưa muốn chốt con số cụ thể, đồng thời khéo léo nhắc rằng benefits cũng ảnh hưởng đến quyết định.",
+          "situation": "Bạn chưa nắm rõ chế độ đãi ngộ (bonus, bảo hiểm, remote) của công ty nên chưa muốn đưa ra một con số lương cứng ngay."
+        },
+        {
+          "term": "I'm available to start with two weeks' notice.",
+          "level": "B2",
+          "vi": "Tôi có thể bắt đầu sau khi báo trước công ty cũ hai tuần.",
+          "pron": "🇺🇸 /aɪm əˈveɪləbl tuː stɑːrt wɪð tuː wiːks ˈnoʊtɪs/ 🇬🇧 /aɪm əˈveɪləbl tə stɑːt wɪð tuː wiːks ˈnəʊtɪs/",
+          "register": "neutral",
+          "example": "I'm currently employed, so I'm available to start with two weeks' notice after signing.",
+          "note": "Notice period thường là thời gian hợp đồng cũ yêu cầu báo trước — nêu rõ con số cụ thể thể hiện sự chuyên nghiệp, không bỏ ngang công ty cũ.",
+          "situation": "Bạn đang làm việc ở công ty hiện tại và nhà tuyển dụng hỏi khi nào bạn có thể bắt đầu công việc mới."
+        },
+        {
+          "term": "What does the onboarding process look like?",
+          "level": "B1",
+          "vi": "Quy trình onboarding (hòa nhập nhân viên mới) diễn ra như thế nào?",
+          "pron": "🇺🇸 /wʌt dʌz ði ˈɑːnbɔːrdɪŋ ˈprɑːsɛs lʊk laɪk/ 🇬🇧 /wɒt dʌz ði ˈɒnbɔːdɪŋ ˈprəʊses lʊk laɪk/",
+          "register": "neutral",
+          "example": "What does the onboarding process look like — will there be a training period before I join the team?",
+          "note": "Câu hỏi hậu cần thực tế, giúp bạn hình dung ngày đầu đi làm, thiết bị, đào tạo — nên hỏi ở cuối buổi phỏng vấn khi phần chuyên môn đã xong.",
+          "situation": "Cuối buổi phỏng vấn, nhà tuyển dụng hỏi bạn có câu hỏi nào không, và bạn muốn biết cụ thể những ngày đầu tiên sẽ như thế nào."
+        },
+        {
+          "term": "What does success look like in this role in the first six months?",
+          "level": "B2",
+          "vi": "Thành công trong vai trò này ở 6 tháng đầu được đánh giá như thế nào?",
+          "pron": "🇺🇸 /wʌt dʌz səkˈsɛs lʊk laɪk ɪn ðɪs roʊl ɪn ðə fɜːrst sɪks mʌnθs/ 🇬🇧 /wɒt dʌz səkˈses lʊk laɪk ɪn ðɪs rəʊl ɪn ðə fɜːst sɪks mʌnθs/",
+          "register": "formal",
+          "example": "Before we wrap up, what does success look like in this role in the first six months?",
+          "note": "Câu hỏi chiến lược, formal, thể hiện bạn nghiêm túc muốn hiểu kỳ vọng công việc lâu dài chứ không chỉ hỏi thủ tục — thường gây ấn tượng tốt với người phỏng vấn.",
+          "situation": "Bạn muốn kết thúc buổi phỏng vấn bằng một câu hỏi thể hiện tư duy dài hạn, gây ấn tượng với người phỏng vấn cấp quản lý."
+        }
+      ],
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "Before we finish, could you tell me your salary expectations?"
+        },
+        {
+          "speaker": "B",
+          "text": "Sure. **My expected salary is in the range of 25 to 30 million VND**, but **I'm flexible on salary depending on the overall package**."
+        },
+        {
+          "speaker": "A",
+          "text": "Understood. And when would you be able to join us if we move forward?"
+        },
+        {
+          "speaker": "B",
+          "text": "**I'm available to start with two weeks' notice** since I'm still employed."
+        },
+        {
+          "speaker": "A",
+          "text": "Great, that works for us. Do you have any questions for me?"
+        },
+        {
+          "speaker": "B",
+          "text": "Yes — **what does success look like in this role in the first six months**?"
+        }
+      ]
+    }
+  ]
+}

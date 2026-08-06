@@ -1,0 +1,27 @@
+{
+  "tracks": [
+    {
+      "id": "default",
+      "name": "IT",
+      "file": "vocab.json"
+    },
+    {
+      "id": "common",
+      "name": "Common",
+      "file": "vocab_common.json",
+      "shared": true
+    },
+    {
+      "id": "toeic",
+      "name": "TOEIC",
+      "file": "vocab_toeic.json",
+      "shared": true
+    },
+    {
+      "id": "ielts",
+      "name": "IELTS",
+      "file": "vocab_ielts.json",
+      "shared": true
+    }
+  ]
+}

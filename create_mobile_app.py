@@ -50,6 +50,23 @@ def load_clusters(path: Path) -> list:
         data = json.load(f)
     return data.get("clusters", [])
 
+def load_patterns(path: Path) -> list:
+    if not path.exists():
+        return []
+    with open(path, encoding="utf-8") as f:
+        data = json.load(f)
+    return data.get("patterns", [])
+
+_DEFAULT_TRACK = [{"id": "default", "name": "Mặc định", "file": "vocab.json"}]
+
+def load_tracks(user_dir: Path) -> list:
+    path = user_dir / "tracks.json"
+    if not path.exists():
+        return _DEFAULT_TRACK
+    with open(path, encoding="utf-8") as f:
+        data = json.load(f)
+    return data.get("tracks") or _DEFAULT_TRACK
+
 def main():
     print("[BUILD] Generating multi-user offline PWA...")
 
@@ -58,28 +75,54 @@ def main():
         users_data = json.load(f)
 
     vocab_data_map = {}
-    clusters_data_map = {}
+    shared_vocab_data = {}
+    tracks_data_map = {}
+
+    shared_dir = BASE_DIR / "data" / "shared"
+    clusters_path = shared_dir / "clusters.json"
+    patterns_path = shared_dir / "patterns.json"
+    # Cluster/Pattern dùng chung cho MỌI user -- load 1 lần duy nhất thay vì lặp lại per-user,
+    # tránh nhân bản JSON 3 lần trong vocab.js (patterns đã sửa từ trước; cluster sửa cùng đợt
+    # với vocab track shared dưới đây, vì cùng 1 nguyên nhân: dữ liệu giống hệt nhau không cần
+    # lặp theo user).
+    clusters_data = load_clusters(clusters_path)
+    patterns_data = load_patterns(patterns_path)
 
     for u in users_data.get("users", []):
         uid = u["id"]
-        vocab_path = BASE_DIR / "data" / uid / "vocab.json"
-        clusters_path = BASE_DIR / "clusters.json"
+        user_dir = BASE_DIR / "data" / uid
 
-        vocab_data_map[uid] = load_vocab(vocab_path)
-        clusters_data_map[uid] = load_clusters(clusters_path)
+        tracks = load_tracks(user_dir)
+        vocab_data_map[uid] = {}
+        for t in tracks:
+            if t.get("shared"):
+                # Track dùng chung (vd Common/TOEIC/IELTS) -- load 1 lần duy nhất vào
+                # shared_vocab_data, KHÔNG lặp lại cho từng user (trước đây mỗi user có 1 bản
+                # riêng y hệt nhau, nhân JSON lên 3 lần cho 3 user dùng chung track này).
+                if t["id"] not in shared_vocab_data:
+                    shared_vocab_data[t["id"]] = load_vocab(shared_dir / t["file"])
+            else:
+                vocab_data_map[uid][t["id"]] = load_vocab(user_dir / t["file"])
+        tracks_data_map[uid] = [
+            {"id": t["id"], "name": t["name"], "shared": bool(t.get("shared"))} for t in tracks
+        ]
 
     # Build safe user list: strip PIN, embed SHA-256 hash for offline auth
     safe_users = []
     for u in users_data.get("users", []):
         safe_u = {k: v for k, v in u.items() if k != 'pin'}
         safe_u['pin_hash'] = _hash_pin(u.get('pin', ''))
+        safe_u['no_pin'] = not u.get('pin')
         safe_users.append(safe_u)
 
     # Generate vocab.js with ALL data
     js_content = f"""// Auto-generated offline data bundle
 const USERS_DATA = {json.dumps(safe_users, ensure_ascii=False, indent=2)};
 const VOCAB_DATA_MAP = {json.dumps(vocab_data_map, ensure_ascii=False, indent=2)};
-const CLUSTERS_DATA_MAP = {json.dumps(clusters_data_map, ensure_ascii=False, indent=2)};
+const SHARED_VOCAB_DATA = {json.dumps(shared_vocab_data, ensure_ascii=False, indent=2)};
+const TRACKS_DATA_MAP = {json.dumps(tracks_data_map, ensure_ascii=False, indent=2)};
+const CLUSTERS_DATA = {json.dumps(clusters_data, ensure_ascii=False, indent=2)};
+const PATTERNS_DATA = {json.dumps(patterns_data, ensure_ascii=False, indent=2)};
 """
     with open(VOCAB_JS, "w", encoding="utf-8") as f:
         f.write(js_content)
@@ -100,16 +143,47 @@ const CLUSTERS_DATA_MAP = {json.dumps(clusters_data_map, ensure_ascii=False, ind
 <script>
 // ── OFFLINE MOCK API INTERCEPTOR ─────────────────────────────────────────────
 (function() {
+    // Migrate legacy single-track progress (flat 'vocab_progress_<uid>' key) to the new
+    // per-track key 'vocab_progress_<uid>_<trackId>', so an existing offline install doesn't lose data.
+    (function migrateLegacyProgress() {
+        try {
+            USERS_DATA.forEach(u => {
+                const legacyKey = 'vocab_progress_' + u.id;
+                const legacy = localStorage.getItem(legacyKey);
+                if (legacy === null) return;
+                const tracks = TRACKS_DATA_MAP[u.id] || [{id: 'default'}];
+                const newKey = 'vocab_progress_' + u.id + '_' + tracks[0].id;
+                if (localStorage.getItem(newKey) === null) localStorage.setItem(newKey, legacy);
+                localStorage.removeItem(legacyKey);
+            });
+        } catch(e) {}
+    })();
+
     function getUid() { return localStorage.getItem('vocabUserId'); }
+    function getTrackId() {
+        const uid = getUid();
+        const tracks = TRACKS_DATA_MAP[uid] || [{id: 'default'}];
+        const saved = uid && localStorage.getItem('vocabTrackId_' + uid);
+        if (saved && tracks.some(t => t.id === saved)) return saved;
+        return tracks[0].id;
+    }
+    // Track "shared" (Common/TOEIC/IELTS) chỉ lưu 1 bản dùng chung trong SHARED_VOCAB_DATA
+    // (không lặp lại theo từng user) -- tra field "shared" trên TRACKS_DATA_MAP để biết lấy
+    // đúng nguồn.
+    function getVocabForTrack(uid, trackId) {
+        const track = (TRACKS_DATA_MAP[uid] || []).find(t => t.id === trackId);
+        if (track && track.shared) return SHARED_VOCAB_DATA[trackId] || [];
+        return (VOCAB_DATA_MAP[uid] || {})[trackId] || [];
+    }
     window.getProgress = function() {
         const uid = getUid();
         if (!uid) return {};
-        try { return JSON.parse(localStorage.getItem('vocab_progress_' + uid) || '{}'); } catch(e) { return {}; }
+        try { return JSON.parse(localStorage.getItem('vocab_progress_' + uid + '_' + getTrackId()) || '{}'); } catch(e) { return {}; }
     };
     window.saveProgressData = function(data) {
         const uid = getUid();
         if (!uid) return;
-        try { localStorage.setItem('vocab_progress_' + uid, JSON.stringify(data)); } catch(e) {}
+        try { localStorage.setItem('vocab_progress_' + uid + '_' + getTrackId(), JSON.stringify(data)); } catch(e) {}
     };
     const offlineFetch = window.fetch;
     window.fetch = async function(resource, config) {
@@ -145,10 +219,15 @@ const CLUSTERS_DATA_MAP = {json.dumps(clusters_data_map, ensure_ascii=False, ind
                 return errorResponse("Unauthorized", 401);
             }
 
+            if (resource === '/api/tracks') {
+                const tracks = TRACKS_DATA_MAP[uid] || [{id: 'default', name: 'Mặc định'}];
+                return jsonResponse({ tracks, default: tracks[0].id });
+            }
+
             if (resource === '/api/start-day') {
                 const p = window.getProgress();
                 const today = new Date().toLocaleDateString('en-CA');
-                const vocab = VOCAB_DATA_MAP[uid] || [];
+                const vocab = getVocabForTrack(uid, getTrackId());
 
                 const vocabKeys = new Set(vocab.map(item => item.key));
                 let today_n = 0;
@@ -188,16 +267,30 @@ const CLUSTERS_DATA_MAP = {json.dumps(clusters_data_map, ensure_ascii=False, ind
 
             if (resource === '/api/clusters') {
                 const p = window.getProgress();
-                const clusters = (CLUSTERS_DATA_MAP[uid] || []).map(c => {
-                    const st = p[c.id] || {};
-                    return { ...c, fav: Boolean(st.fav), known: Boolean(st.known), introduced_date: st.date || null };
-                });
+                const trackId = getTrackId();
+                const clusters = CLUSTERS_DATA
+                    .filter(c => (c.tracks || []).includes(trackId))
+                    .map(c => {
+                        const st = p[c.id] || {};
+                        return { ...c, fav: Boolean(st.fav), known: Boolean(st.known), introduced_date: st.date || null };
+                    });
                 return jsonResponse({ clusters });
+            }
+
+            if (resource === '/api/patterns') {
+                const p = window.getProgress();
+                // Luyện Pattern dùng chung cho mọi user/track (không lọc theo track như vocab/cluster).
+                const patterns = PATTERNS_DATA
+                    .map(pt => {
+                        const st = p[pt.id] || {};
+                        return { ...pt, fav: Boolean(st.fav), known: Boolean(st.known), introduced_date: st.date || null };
+                    });
+                return jsonResponse({ patterns });
             }
 
             if (resource === '/api/history') {
                 const p = window.getProgress();
-                const vocab = VOCAB_DATA_MAP[uid] || [];
+                const vocab = getVocabForTrack(uid, getTrackId());
                 const termMap = {};
                 for (const c of vocab) termMap[c.key] = c.term;
 
@@ -240,7 +333,7 @@ const CLUSTERS_DATA_MAP = {json.dumps(clusters_data_map, ensure_ascii=False, ind
             }
 
             if (resource === '/api/reset') {
-                localStorage.removeItem('vocab_progress_' + uid);
+                localStorage.removeItem('vocab_progress_' + uid + '_' + getTrackId());
                 return jsonResponse({ ok: true });
             }
 
@@ -344,4 +437,3 @@ self.addEventListener('fetch', e => {
 
 if __name__ == "__main__":
     main()
-

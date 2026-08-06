@@ -1,0 +1,1426 @@
+{
+  "cards": [
+    {
+      "key": "cluster_1_7",
+      "term": "back down",
+      "example": "(The council eventually backed down on their plan to build a highway.)",
+      "vi": "nhượng bộ",
+      "pron": "🇺🇸 /bæk daʊn/ 🇬🇧 /bæk daʊn/",
+      "topic": "General",
+      "deck": "B2",
+      "pos": "v.",
+      "collocations": [
+        "back down from a position",
+        "back down on an issue"
+      ],
+      "synonyms": [
+        "concede",
+        "yield"
+      ],
+      "antonyms": [
+        "stand firm"
+      ],
+      "en_def": "To admit that you were wrong or that you have been defeated.",
+      "cluster": "cluster_1",
+      "day": 1,
+      "en_def_vi": "Thừa nhận rằng mình đã sai hoặc đã thất bại.",
+      "collocations_vi": {
+        "back down from a position": "từ bỏ một lập trường",
+        "back down on an issue": "nhượng bộ về một vấn đề"
+      },
+      "synonyms_vi": {
+        "concede": "nhượng bộ",
+        "yield": "chịu nhượng bộ"
+      },
+      "example_vi": "Cuối cùng hội đồng đã nhượng bộ, từ bỏ kế hoạch xây dựng đường cao tốc.",
+      "antonyms_vi": {
+        "stand firm": "giữ vững lập trường, không nhượng bộ"
+      }
+    },
+    {
+      "key": "cluster_1_8",
+      "term": "off the beaten track",
+      "example": "(We prefer finding small villages off the beaten track rather than crowded resorts.)",
+      "vi": "nơi hẻo lánh, ít người tới",
+      "pron": "🇺🇸 /ɔːf ðə ˈbiːtn træk/ 🇬🇧 /ɒf ðə ˈbiːtn træk/",
+      "topic": "General",
+      "deck": "C1",
+      "pos": "idiom",
+      "collocations": [
+        "go off the beaten track",
+        "places off the beaten track"
+      ],
+      "synonyms": [
+        "remote",
+        "isolated"
+      ],
+      "antonyms": [
+        "on the beaten track"
+      ],
+      "en_def": "In or into an isolated place, away from frequently traveled routes.",
+      "cluster": "cluster_1",
+      "day": 1,
+      "en_def_vi": "Ở nơi hẻo lánh, tách biệt khỏi các tuyến đường thường xuyên qua lại.",
+      "collocations_vi": {
+        "go off the beaten track": "đi đến nơi hẻo lánh, ít người tới",
+        "places off the beaten track": "những nơi hẻo lánh, ít người tới"
+      },
+      "synonyms_vi": {
+        "remote": "xa xôi, hẻo lánh",
+        "isolated": "biệt lập"
+      },
+      "example_vi": "Chúng tôi thích tìm những ngôi làng nhỏ ở nơi hẻo lánh, ít người tới hơn là những khu nghỉ dưỡng đông đúc.",
+      "antonyms_vi": {
+        "on the beaten track": "nơi quen thuộc, tuyến đường đông người qua lại"
+      }
+    },
+    {
+      "key": "cluster_2_4",
+      "term": "see off",
+      "example": "(My whole family came to the airport to see me off.)",
+      "vi": "tiễn ai đó",
+      "pron": "🇺🇸 /siː ɔːf/ 🇬🇧 /siː ɒf/",
+      "topic": "General",
+      "deck": "B2",
+      "pos": "v.",
+      "collocations": [
+        "see someone off at the station",
+        "go to see off"
+      ],
+      "synonyms": [
+        "say goodbye to"
+      ],
+      "antonyms": [
+        "meet"
+      ],
+      "en_def": "To go to a station, airport, etc. to say goodbye to someone who is leaving.",
+      "cluster": "cluster_2",
+      "day": 2,
+      "en_def_vi": "Đến ga, sân bay, v.v. để tiễn biệt người sắp đi.",
+      "collocations_vi": {
+        "see someone off at the station": "tiễn ai đó ở nhà ga",
+        "go to see off": "đi tiễn"
+      },
+      "synonyms_vi": {
+        "say goodbye to": "nói lời tạm biệt với"
+      },
+      "example_vi": "Cả gia đình tôi đã ra sân bay để tiễn tôi.",
+      "antonyms_vi": {
+        "meet": "đón ai đó"
+      }
+    },
+    {
+      "key": "cluster_2_8",
+      "term": "a clean bill of health",
+      "example": "(After exhaustive tests, the athlete was given a clean bill of health.)",
+      "vi": "giấy chứng nhận hoàn toàn khỏe mạnh",
+      "pron": "🇺🇸 /ə kliːn bɪl əv helθ/ 🇬🇧 /ə kliːn bɪl əv helθ/",
+      "topic": "General",
+      "deck": "C1",
+      "pos": "n.",
+      "collocations": [
+        "give a clean bill of health",
+        "receive a clean bill of health"
+      ],
+      "synonyms": [
+        "completely healthy",
+        "fit as a fiddle"
+      ],
+      "antonyms": [],
+      "en_def": "A report that says somebody is completely healthy.",
+      "cluster": "cluster_2",
+      "day": 2,
+      "en_def_vi": "Bản báo cáo xác nhận ai đó hoàn toàn khỏe mạnh.",
+      "collocations_vi": {
+        "give a clean bill of health": "chứng nhận hoàn toàn khỏe mạnh",
+        "receive a clean bill of health": "nhận được chứng nhận hoàn toàn khỏe mạnh"
+      },
+      "synonyms_vi": {
+        "completely healthy": "hoàn toàn khỏe mạnh",
+        "fit as a fiddle": "khỏe như vâm"
+      },
+      "example_vi": "Sau các cuộc kiểm tra kỹ lưỡng, vận động viên này được xác nhận hoàn toàn khỏe mạnh.",
+      "antonyms_vi": {}
+    },
+    {
+      "key": "cluster_4_9",
+      "term": "blow out of proportion",
+      "example": "(The media completely blew the minor incident out of proportion.)",
+      "vi": "phóng đại, thổi phồng",
+      "pron": "🇺🇸 /bloʊ aʊt əv prəˈpɔːrʃn/ 🇬🇧 /bləʊ aʊt əv prəˈpɔːʃn/",
+      "topic": "General",
+      "deck": "C1",
+      "pos": "idiom",
+      "collocations": [
+        "blow something out of proportion",
+        "be blown out of proportion"
+      ],
+      "synonyms": [
+        "exaggerate",
+        "overstate"
+      ],
+      "antonyms": [
+        "downplay"
+      ],
+      "en_def": "To make something seem more important, worse, etc. than it really is.",
+      "cluster": "cluster_4",
+      "day": 4,
+      "en_def_vi": "Làm cho thứ gì đó có vẻ quan trọng hơn, tệ hơn, v.v. so với thực tế.",
+      "collocations_vi": {
+        "blow something out of proportion": "thổi phồng việc gì đó",
+        "be blown out of proportion": "bị thổi phồng lên"
+      },
+      "synonyms_vi": {
+        "exaggerate": "phóng đại",
+        "overstate": "nói quá lên"
+      },
+      "example_vi": "Truyền thông đã hoàn toàn thổi phồng sự việc nhỏ nhặt này.",
+      "antonyms_vi": {
+        "downplay": "giảm nhẹ, xem nhẹ tầm quan trọng"
+      }
+    },
+    {
+      "key": "cluster_14_6",
+      "term": "drift apart",
+      "example": "(As they got older, the brothers slowly drifted apart.)",
+      "vi": "xa cách",
+      "pron": "🇺🇸 /drɪft əˈpɑːrt/ 🇬🇧 /drɪft əˈpɑːt/",
+      "topic": "General",
+      "deck": "B2",
+      "pos": "v.",
+      "collocations": [
+        "drift apart over time",
+        "slowly drift apart"
+      ],
+      "synonyms": [
+        "grow apart",
+        "become distant"
+      ],
+      "antonyms": [],
+      "en_def": "To become less friendly or close to someone.",
+      "cluster": "cluster_14",
+      "day": 14,
+      "en_def_vi": "Trở nên kém thân thiết hoặc xa cách với ai đó.",
+      "collocations_vi": {
+        "drift apart over time": "dần xa cách theo thời gian",
+        "slowly drift apart": "từ từ xa cách nhau"
+      },
+      "synonyms_vi": {
+        "grow apart": "trở nên xa cách",
+        "become distant": "trở nên xa lạ, hờ hững"
+      },
+      "example_vi": "Khi lớn tuổi hơn, hai anh em dần dần xa cách nhau.",
+      "antonyms_vi": {}
+    },
+    {
+      "key": "cluster_22_8",
+      "term": "slip of the tongue",
+      "example": "(Calling him by her ex's name was just a slip of the tongue.)",
+      "vi": "lỡ lời, nói nhịu",
+      "pron": "🇺🇸 /slɪp əv ðə tʌŋ/ 🇬🇧 /slɪp əv ðə tʌŋ/",
+      "topic": "General",
+      "deck": "C1",
+      "pos": "idiom",
+      "collocations": [
+        "a mere slip of the tongue",
+        "make a slip of the tongue"
+      ],
+      "synonyms": [
+        "lapsus linguae",
+        "misstatement"
+      ],
+      "antonyms": [],
+      "en_def": "Something that you say by accident when you intended to say something else.",
+      "cluster": "cluster_22",
+      "day": 22,
+      "en_def_vi": "Điều mà bạn lỡ nói ra khi định nói điều khác.",
+      "collocations_vi": {
+        "a mere slip of the tongue": "chỉ là lỡ lời",
+        "make a slip of the tongue": "lỡ lời, nói nhịu"
+      },
+      "synonyms_vi": {
+        "lapsus linguae": "lỡ lời",
+        "misstatement": "sự nói nhầm"
+      },
+      "example_vi": "Việc gọi anh ấy bằng tên của người yêu cũ chỉ là một lần lỡ lời.",
+      "antonyms_vi": {}
+    },
+    {
+      "key": "cluster_22_9",
+      "term": "a blank canvas",
+      "example": "(The new city was a blank canvas for the ambitious architect.)",
+      "vi": "một sự khởi đầu mới, trang giấy trắng",
+      "pron": "🇺🇸 /ə blæŋk ˈkænvəs/ 🇬🇧 /ə blæŋk ˈkænvəs/",
+      "topic": "General",
+      "deck": "C1",
+      "pos": "idiom",
+      "collocations": [
+        "start with a blank canvas",
+        "treat it as a blank canvas"
+      ],
+      "synonyms": [
+        "fresh start",
+        "clean slate"
+      ],
+      "antonyms": [],
+      "en_def": "A situation in which nothing has yet been planned or decided, so that someone is free to decide what should happen or be done.",
+      "cluster": "cluster_22",
+      "day": 22,
+      "en_def_vi": "Tình huống mà chưa có gì được lên kế hoạch hay quyết định, nên ai đó được tự do quyết định điều nên xảy ra hoặc nên làm.",
+      "collocations_vi": {
+        "start with a blank canvas": "bắt đầu với một trang giấy trắng",
+        "treat it as a blank canvas": "xem đó như một khởi đầu hoàn toàn mới"
+      },
+      "synonyms_vi": {
+        "fresh start": "khởi đầu mới",
+        "clean slate": "khởi đầu lại từ đầu"
+      },
+      "example_vi": "Thành phố mới là một trang giấy trắng cho vị kiến trúc sư đầy tham vọng.",
+      "antonyms_vi": {}
+    },
+    {
+      "key": "cluster_29_8",
+      "term": "a home from home",
+      "example": "(The guesthouse owners were so welcoming that it felt like a home from home.)",
+      "vi": "ngôi nhà thứ hai (nơi quen thuộc, thoải mái)",
+      "pron": "🇺🇸 /ə hoʊm frəm hoʊm/ 🇬🇧 /ə həʊm frəm həʊm/",
+      "topic": "General",
+      "deck": "C1",
+      "pos": "idiom",
+      "collocations": [
+        "feel like a home from home",
+        "create a home from home"
+      ],
+      "synonyms": [
+        "second home",
+        "comfortable retreat"
+      ],
+      "antonyms": [],
+      "en_def": "A place where you feel as comfortable as you do in your own home.",
+      "cluster": "cluster_29",
+      "day": 29,
+      "en_def_vi": "Một nơi mà bạn cảm thấy thoải mái như ở chính ngôi nhà của mình.",
+      "collocations_vi": {
+        "feel like a home from home": "cảm thấy như ở ngôi nhà thứ hai của mình",
+        "create a home from home": "tạo ra một không gian như ngôi nhà thứ hai"
+      },
+      "synonyms_vi": {
+        "second home": "ngôi nhà thứ hai",
+        "comfortable retreat": "nơi trú ẩn thoải mái"
+      },
+      "example_vi": "Chủ nhà nghỉ thân thiện đến mức nơi đó cảm giác như ngôi nhà thứ hai vậy.",
+      "antonyms_vi": {}
+    },
+    {
+      "term": "abyss",
+      "level": "C1",
+      "vi": "vực thẳm",
+      "pron": "🇺🇸 /əˈbɪs/ 🇬🇧 /əˈbɪs/",
+      "register": "academic",
+      "example": "We know very little about the creatures that live in the ocean abyss.",
+      "note": "Dùng nhiều trong văn chương để chỉ hố sâu không đáy.",
+      "situation": "Vùng nước cực kỳ sâu và tăm tối dưới đáy đại dương.",
+      "pos": "n.",
+      "collocations": [
+        "ocean abyss",
+        "dark abyss"
+      ],
+      "synonyms": [
+        "chasm",
+        "void"
+      ],
+      "en_def": "A deep or seemingly bottomless chasm.",
+      "deck": "C1",
+      "key": "cluster_30_9",
+      "cluster": "cluster_30",
+      "day": 30,
+      "phonetic_distractors": [
+        "assess",
+        "ups",
+        "kiss",
+        "above",
+        "bit"
+      ],
+      "ipa_distractors": {
+        "assess": "/əˈses/",
+        "ups": "/ʌps/",
+        "kiss": "/kɪs/",
+        "above": "/əbˈʌv/",
+        "bit": "/bɪt/"
+      },
+      "en_def_vi": "Một khe vực sâu hoặc dường như không đáy.",
+      "collocations_vi": {
+        "ocean abyss": "vực thẳm đại dương",
+        "dark abyss": "vực thẳm tối tăm"
+      },
+      "synonyms_vi": {
+        "chasm": "hố sâu, vực thẳm",
+        "void": "khoảng trống, hư không"
+      },
+      "example_vi": "Chúng ta biết rất ít về những sinh vật sống trong vực thẳm đại dương.",
+      "antonyms": [],
+      "antonyms_vi": {}
+    },
+    {
+      "term": "submersible",
+      "level": "C1",
+      "vi": "tàu lặn nhỏ",
+      "pron": "🇺🇸 /səbˈmɜːrsəbl/ 🇬🇧 /səbˈmɜːsəbl/",
+      "register": "academic",
+      "example": "Unmanned submersibles can reach depths that are too dangerous for humans.",
+      "note": "Khác với submarine, submersible thường không có khả năng tự hoạt động độc lập lâu dài.",
+      "situation": "Thiết bị lặn chuyên dụng dùng trong nghiên cứu khoa học.",
+      "pos": "n.",
+      "collocations": [
+        "manned submersible",
+        "deep-sea submersible"
+      ],
+      "synonyms": [
+        "underwater vehicle"
+      ],
+      "en_def": "A submarine or other underwater vehicle, especially one designed for research or exploration.",
+      "deck": "C2",
+      "key": "cluster_31_8",
+      "cluster": "cluster_31",
+      "day": 31,
+      "phonetic_distractors": [
+        "submitted",
+        "submission",
+        "vulnerable",
+        "sustainable",
+        "symmetrical"
+      ],
+      "ipa_distractors": {
+        "submitted": "/səbmˈɪtɪd/",
+        "submission": "/səbmˈɪʃən/",
+        "vulnerable": "/ˈvʌlnərəbəl/",
+        "sustainable": "/səˈsteɪnəbl/",
+        "symmetrical": "/sɪˈmetrɪkl/"
+      },
+      "en_def_vi": "Một tàu ngầm hoặc phương tiện hoạt động dưới nước khác, đặc biệt được thiết kế để nghiên cứu hoặc thám hiểm.",
+      "collocations_vi": {
+        "manned submersible": "tàu lặn có người lái",
+        "deep-sea submersible": "tàu lặn biển sâu"
+      },
+      "synonyms_vi": {
+        "underwater vehicle": "phương tiện lặn dưới nước"
+      },
+      "example_vi": "Các tàu lặn không người lái có thể xuống đến những độ sâu quá nguy hiểm đối với con người.",
+      "antonyms": [],
+      "antonyms_vi": {}
+    },
+    {
+      "term": "calcification",
+      "level": "C1",
+      "vi": "sự vôi hóa",
+      "pron": "🇺🇸 /ˌkælsɪfɪˈkeɪʃn/ 🇬🇧 /ˌkælsɪfɪˈkeɪʃn/",
+      "register": "academic",
+      "example": "Ocean acidification reduces the rate of coral calcification.",
+      "note": "Thuật ngữ chuyên ngành sinh học/địa chất.",
+      "situation": "Quá trình tích tụ canxi tạo nên bộ xương cứng của san hô.",
+      "pos": "n.",
+      "collocations": [
+        "coral calcification",
+        "rate of calcification"
+      ],
+      "synonyms": [
+        "hardening",
+        "ossification"
+      ],
+      "en_def": "The accumulation of calcium salts in a body tissue or hard physical structure.",
+      "deck": "C2",
+      "key": "cluster_32_9",
+      "cluster": "cluster_32",
+      "day": 32,
+      "en_def_vi": "Sự tích tụ muối canxi trong mô cơ thể hoặc trong một cấu trúc vật lý cứng.",
+      "collocations_vi": {
+        "coral calcification": "sự vôi hóa san hô",
+        "rate of calcification": "tốc độ vôi hóa"
+      },
+      "synonyms_vi": {
+        "hardening": "sự cứng hóa",
+        "ossification": "sự cốt hóa"
+      },
+      "example_vi": "Sự axit hóa đại dương làm giảm tốc độ vôi hóa của san hô.",
+      "antonyms": [],
+      "antonyms_vi": {}
+    },
+    {
+      "key": "cluster_33_8",
+      "term": "part and parcel",
+      "example": "(Stress is part and parcel of modern city life.)",
+      "vi": "phần thiết yếu, không thể thiếu",
+      "pron": "🇺🇸 /pɑːrt ænd ˈpɑːrsl/ 🇬🇧 /pɑːt ænd ˈpɑːsl/",
+      "topic": "General",
+      "deck": "C1",
+      "pos": "idiom",
+      "collocations": [
+        "be part and parcel of"
+      ],
+      "synonyms": [
+        "essential element",
+        "integral part"
+      ],
+      "antonyms": [],
+      "en_def": "An essential and unavoidable feature of something.",
+      "cluster": "cluster_33",
+      "day": 33,
+      "en_def_vi": "Một đặc điểm thiết yếu và không thể tránh khỏi của một điều gì đó.",
+      "collocations_vi": {
+        "be part and parcel of": "là một phần thiết yếu của"
+      },
+      "synonyms_vi": {
+        "essential element": "yếu tố thiết yếu",
+        "integral part": "phần không thể tách rời"
+      },
+      "example_vi": "Căng thẳng là một phần không thể thiếu của cuộc sống thành thị hiện đại.",
+      "antonyms_vi": {}
+    },
+    {
+      "key": "cluster_36_9",
+      "term": "caught red-handed",
+      "example": "(He was caught red-handed stealing money from the cash register.)",
+      "vi": "bị bắt quả tang",
+      "pron": "🇺🇸 /kɔːt red ˈhændɪd/ 🇬🇧 /kɔːt red ˈhændɪd/",
+      "topic": "General",
+      "deck": "C1",
+      "pos": "idiom",
+      "collocations": [
+        "be caught red-handed",
+        "catch someone red-handed"
+      ],
+      "synonyms": [
+        "caught in the act"
+      ],
+      "antonyms": [],
+      "en_def": "Found or discovered while in the act of committing a crime or doing something wrong.",
+      "cluster": "cluster_36",
+      "day": 36,
+      "en_def_vi": "Bị phát hiện ngay trong lúc đang thực hiện một hành vi phạm tội hoặc làm điều sai trái.",
+      "collocations_vi": {
+        "be caught red-handed": "bị bắt quả tang",
+        "catch someone red-handed": "bắt quả tang ai đó"
+      },
+      "synonyms_vi": {
+        "caught in the act": "bị bắt tại trận"
+      },
+      "example_vi": "Anh ta bị bắt quả tang khi đang lấy trộm tiền từ quầy thu ngân.",
+      "antonyms_vi": {}
+    },
+    {
+      "term": "terraform",
+      "level": "C1",
+      "vi": "địa khai hóa",
+      "pron": "🇺🇸 /ˈter.ə.fɔːrm/ 🇬🇧 /ˈter.ə.fɔːm/",
+      "register": "academic",
+      "example": "To make Mars completely habitable, we might need to terraform the entire planet.",
+      "note": "Quá trình biến đổi môi trường hành tinh giống như Trái đất.",
+      "situation": "Bàn về các chiến lược sinh tồn dài hạn trong tương lai xa.",
+      "pos": "v.",
+      "collocations": [
+        "terraform a planet",
+        "terraforming process"
+      ],
+      "en_def": "To change the environment of a planet so that it is more like Earth and could support human life.",
+      "deck": "C2",
+      "key": "cluster_42_9",
+      "cluster": "cluster_42",
+      "day": 42,
+      "en_def_vi": "Thay đổi môi trường của một hành tinh để nó giống Trái đất hơn và có thể duy trì sự sống của con người.",
+      "collocations_vi": {
+        "terraform a planet": "địa khai hóa một hành tinh",
+        "terraforming process": "quá trình địa khai hóa"
+      },
+      "synonyms_vi": {
+        "earth-shape": "định hình giống Trái Đất"
+      },
+      "example_vi": "Để biến Sao Hỏa thành nơi hoàn toàn có thể sinh sống được, chúng ta có thể cần địa khai hóa toàn bộ hành tinh này.",
+      "antonyms": [],
+      "antonyms_vi": {}
+    },
+    {
+      "key": "cluster_43_9",
+      "term": "out of this world",
+      "example": "(The view of the Earth from the ISS is truly out of this world.)",
+      "vi": "tuyệt vời, phi thường",
+      "pron": "🇺🇸 /aʊt əv ðɪs wɜrld/ 🇬🇧 /aʊt əv ðɪs wɜːld/",
+      "topic": "General",
+      "deck": "C1",
+      "pos": "idiom",
+      "collocations": [
+        "taste out of this world",
+        "look out of this world"
+      ],
+      "synonyms": [
+        "extraordinary",
+        "unbelievable"
+      ],
+      "antonyms": [
+        "terrible"
+      ],
+      "en_def": "Extremely good or impressive.",
+      "cluster": "cluster_43",
+      "day": 43,
+      "en_def_vi": "Cực kỳ tốt hoặc ấn tượng.",
+      "collocations_vi": {
+        "taste out of this world": "hương vị tuyệt vời khó tả",
+        "look out of this world": "trông tuyệt đẹp phi thường"
+      },
+      "synonyms_vi": {
+        "extraordinary": "phi thường",
+        "unbelievable": "khó tin"
+      },
+      "example_vi": "Cảnh nhìn Trái Đất từ Trạm Vũ trụ Quốc tế thực sự tuyệt vời phi thường.",
+      "antonyms_vi": {
+        "terrible": "tệ hại, kinh khủng"
+      }
+    },
+    {
+      "key": "cluster_44_9",
+      "term": "flesh and blood",
+      "example": "(You can't treat him like a stranger; he is your own flesh and blood.)",
+      "vi": "máu mủ ruột thịt",
+      "pron": "🇺🇸 /fleʃ ænd blʌd/ 🇬🇧 /fleʃ ænd blʌd/",
+      "topic": "General",
+      "deck": "C1",
+      "pos": "idiom",
+      "collocations": [
+        "one's own flesh and blood"
+      ],
+      "synonyms": [
+        "family",
+        "kin"
+      ],
+      "antonyms": [],
+      "en_def": "Someone from your own family.",
+      "cluster": "cluster_44",
+      "day": 44,
+      "en_def_vi": "Một người trong chính gia đình bạn.",
+      "collocations_vi": {
+        "one's own flesh and blood": "máu mủ ruột thịt của chính mình"
+      },
+      "synonyms_vi": {
+        "family": "gia đình",
+        "kin": "họ hàng thân thích"
+      },
+      "example_vi": "Bạn không thể đối xử với anh ấy như người xa lạ; anh ấy là máu mủ ruột thịt của bạn.",
+      "antonyms_vi": {}
+    },
+    {
+      "key": "cluster_45_8",
+      "term": "with flying colors",
+      "example": "(Despite his initial struggles, he passed his final exams with flying colors.)",
+      "vi": "vượt qua xuất sắc",
+      "pron": "🇺🇸 /wɪθ ˈflaɪɪŋ ˈkʌlərz/ 🇬🇧 /wɪθ ˈflaɪɪŋ ˈkʌləz/",
+      "topic": "General",
+      "deck": "C1",
+      "pos": "adj.",
+      "collocations": [
+        "pass an exam with flying colors",
+        "graduate with flying colors"
+      ],
+      "synonyms": [
+        "succeed easily",
+        "excel"
+      ],
+      "antonyms": [],
+      "en_def": "To pass an examination or a test very easily and with a high mark.",
+      "cluster": "cluster_45",
+      "day": 45,
+      "en_def_vi": "Vượt qua một kỳ thi hoặc bài kiểm tra một cách dễ dàng và đạt điểm cao.",
+      "collocations_vi": {
+        "pass an exam with flying colors": "vượt qua kỳ thi một cách xuất sắc",
+        "graduate with flying colors": "tốt nghiệp xuất sắc"
+      },
+      "synonyms_vi": {
+        "succeed easily": "thành công dễ dàng",
+        "excel": "vượt trội"
+      },
+      "example_vi": "Mặc dù ban đầu gặp nhiều khó khăn, anh ấy đã vượt qua kỳ thi cuối kỳ một cách xuất sắc.",
+      "antonyms_vi": {}
+    },
+    {
+      "key": "cluster_46_5",
+      "term": "stumble over",
+      "example": "(She was so nervous that she stumbled over her words.)",
+      "vi": "nói vấp, ấp úng",
+      "pron": "🇺🇸 /ˈstʌmbəl ˈoʊvər/ 🇬🇧 /ˈstʌmbəl ˈəʊvə/",
+      "topic": "General",
+      "deck": "B2",
+      "pos": "v.",
+      "collocations": [
+        "stumble over words",
+        "stumble over a speech"
+      ],
+      "synonyms": [
+        "stammer",
+        "falter"
+      ],
+      "antonyms": [],
+      "en_def": "To make a mistake, such as repeating something or pausing for too long, while speaking or reading aloud.",
+      "cluster": "cluster_46",
+      "day": 46,
+      "en_def_vi": "Mắc lỗi, chẳng hạn như lặp lại điều gì đó hoặc ngừng quá lâu, khi nói hoặc đọc to.",
+      "collocations_vi": {
+        "stumble over words": "nói vấp từ ngữ",
+        "stumble over a speech": "ấp úng khi diễn thuyết"
+      },
+      "synonyms_vi": {
+        "stammer": "nói lắp",
+        "falter": "ấp úng ngập ngừng"
+      },
+      "example_vi": "Cô ấy quá lo lắng đến mức nói vấp váp, ấp úng.",
+      "antonyms_vi": {}
+    },
+    {
+      "key": "cluster_48_8",
+      "term": "outscore",
+      "example": "(In the second half, the home team completely outscored their rivals.)",
+      "vi": "ghi điểm nhiều hơn",
+      "pron": "🇺🇸 /ˌaʊtˈskɔːr/ 🇬🇧 /ˌaʊtˈskɔː/",
+      "topic": "Sports",
+      "deck": "C1",
+      "pos": "v.",
+      "collocations": [
+        "outscore opponents",
+        "heavily outscore"
+      ],
+      "synonyms": [
+        "outplay",
+        "beat"
+      ],
+      "antonyms": [],
+      "en_def": "To score more points than someone else.",
+      "cluster": "cluster_48",
+      "day": 48,
+      "phonetic_distractors": [
+        "outsource",
+        "outdoor",
+        "store",
+        "outdoors",
+        "scored"
+      ],
+      "ipa_distractors": {
+        "outsource": "/ˈaʊtsɔːrs/",
+        "outdoor": "/ˈaʊtdˌɔːr/",
+        "store": "/stɔːr/",
+        "outdoors": "/ˈaʊtdˈɔːrz/",
+        "scored": "/skɔːrd/"
+      },
+      "en_def_vi": "Ghi được nhiều điểm hơn người khác.",
+      "collocations_vi": {
+        "outscore opponents": "ghi điểm nhiều hơn đối thủ",
+        "heavily outscore": "vượt trội hẳn về điểm số"
+      },
+      "synonyms_vi": {
+        "outplay": "chơi vượt trội hơn",
+        "beat": "đánh bại"
+      },
+      "example_vi": "Trong hiệp hai, đội chủ nhà đã hoàn toàn ghi điểm vượt trội so với đối thủ.",
+      "antonyms_vi": {}
+    },
+    {
+      "key": "cluster_50_8",
+      "term": "paint a picture",
+      "example": "(The author's vivid language paints a picture of life in the 19th century.)",
+      "vi": "mô tả sinh động",
+      "pron": "🇺🇸 /peɪnt ə ˈpɪktʃər/ 🇬🇧 /peɪnt ə ˈpɪktʃə/",
+      "topic": "General",
+      "deck": "C1",
+      "pos": "idiom",
+      "collocations": [
+        "paint a bleak picture",
+        "paint a vivid picture"
+      ],
+      "synonyms": [
+        "describe vividly",
+        "illustrate"
+      ],
+      "antonyms": [],
+      "en_def": "To describe something in a way that makes it easy to imagine.",
+      "cluster": "cluster_50",
+      "day": 50,
+      "en_def_vi": "Mô tả điều gì đó theo cách khiến người khác dễ hình dung.",
+      "collocations_vi": {
+        "paint a bleak picture": "vẽ nên một bức tranh ảm đạm",
+        "paint a vivid picture": "mô tả một cách sinh động"
+      },
+      "synonyms_vi": {
+        "describe vividly": "mô tả sinh động",
+        "illustrate": "minh họa"
+      },
+      "example_vi": "Ngôn từ sống động của tác giả mô tả sinh động cuộc sống ở thế kỷ 19.",
+      "antonyms_vi": {}
+    },
+    {
+      "key": "cluster_58_8",
+      "term": "hustle and bustle",
+      "example": "(I love the hustle and bustle of city life, but sometimes it gets tiring.)",
+      "vi": "sự hối hả và nhộn nhịp",
+      "pron": "🇺🇸 /ˈhʌsl ænd ˈbʌsl/ 🇬🇧 /ˈhʌsl ænd ˈbʌsl/",
+      "topic": "General",
+      "deck": "C1",
+      "pos": "idiom",
+      "collocations": [
+        "the hustle and bustle of city life"
+      ],
+      "synonyms": [
+        "commotion",
+        "busy activity"
+      ],
+      "antonyms": [
+        "peace and quiet"
+      ],
+      "en_def": "Noise and activity, typical of a busy place.",
+      "cluster": "cluster_58",
+      "day": 58,
+      "en_def_vi": "Tiếng ồn và sự náo nhiệt, đặc trưng của một nơi đông đúc, bận rộn.",
+      "collocations_vi": {
+        "the hustle and bustle of city life": "sự hối hả nhộn nhịp của cuộc sống thành thị"
+      },
+      "synonyms_vi": {
+        "commotion": "sự huyên náo",
+        "busy activity": "hoạt động nhộn nhịp"
+      },
+      "example_vi": "Tôi thích sự hối hả và nhộn nhịp của cuộc sống thành phố, nhưng đôi khi nó khiến tôi mệt mỏi.",
+      "antonyms_vi": {
+        "peace and quiet": "sự yên bình, tĩnh lặng"
+      }
+    },
+    {
+      "key": "cluster_59_9",
+      "term": "concrete jungle",
+      "example": "(Many residents escape the concrete jungle on weekends to enjoy nature.)",
+      "vi": "rừng bê tông (thành phố ngột ngạt)",
+      "pron": "🇺🇸 /ˈkɑːnkriːt ˈdʒʌŋɡl/ 🇬🇧 /ˈkɒŋkriːt ˈdʒʌŋɡl/",
+      "topic": "General",
+      "deck": "C1",
+      "pos": "idiom",
+      "collocations": [
+        "escape the concrete jungle",
+        "live in a concrete jungle"
+      ],
+      "synonyms": [
+        "urban sprawl"
+      ],
+      "antonyms": [],
+      "en_def": "An ugly network of buildings in a city where it is unpleasant to live.",
+      "cluster": "cluster_59",
+      "day": 59,
+      "en_def_vi": "Một mạng lưới các tòa nhà xấu xí trong thành phố, nơi không dễ chịu để sinh sống (khu ổ chuột).",
+      "collocations_vi": {
+        "escape the concrete jungle": "thoát khỏi rừng bê tông",
+        "live in a concrete jungle": "sống trong rừng bê tông"
+      },
+      "synonyms_vi": {
+        "urban sprawl (loosely)": "đô thị lan rộng (nghĩa gần đúng)",
+        "metropolis": "siêu đô thị"
+      },
+      "example_vi": "Nhiều cư dân trốn khỏi rừng bê tông vào cuối tuần để tận hưởng thiên nhiên.",
+      "antonyms_vi": {}
+    },
+    {
+      "key": "cluster_62_8",
+      "term": "make history",
+      "example": "(The athlete made history by winning eight gold medals in one Olympics.)",
+      "vi": "đi vào lịch sử",
+      "pron": "🇺🇸 /meɪk ˈhɪstəri/ 🇬🇧 /meɪk ˈhɪstəri/",
+      "topic": "General",
+      "deck": "C1",
+      "pos": "idiom",
+      "collocations": [
+        "make history by",
+        "set out to make history"
+      ],
+      "synonyms": [
+        "go down in history",
+        "be groundbreaking"
+      ],
+      "antonyms": [],
+      "en_def": "To do something important that has not been done before and will be recorded in historical records.",
+      "cluster": "cluster_62",
+      "day": 62,
+      "en_def_vi": "Làm một điều quan trọng chưa từng được thực hiện trước đây và sẽ được ghi vào lịch sử.",
+      "collocations_vi": {
+        "make history by": "đi vào lịch sử bằng cách",
+        "set out to make history": "quyết tâm làm nên lịch sử"
+      },
+      "synonyms_vi": {
+        "go down in history": "đi vào sử sách",
+        "be groundbreaking": "mang tính đột phá"
+      },
+      "example_vi": "Vận động viên này đã đi vào lịch sử khi giành tám huy chương vàng trong một kỳ Olympic.",
+      "antonyms_vi": {}
+    },
+    {
+      "key": "cluster_68_8",
+      "term": "jump the gun",
+      "example": "(They jumped the gun and announced their victory before the final results were confirmed.)",
+      "vi": "hành động hấp tấp, vội vàng",
+      "pron": "🇺🇸 /dʒʌmp ðə ɡʌn/ 🇬🇧 /dʒʌmp ðə ɡʌn/",
+      "topic": "General",
+      "deck": "C1",
+      "pos": "idiom",
+      "collocations": [
+        "accused of jumping the gun"
+      ],
+      "synonyms": [
+        "act prematurely",
+        "be hasty"
+      ],
+      "antonyms": [],
+      "en_def": "To do something too soon, especially without thinking carefully about it.",
+      "cluster": "cluster_68",
+      "day": 68,
+      "en_def_vi": "Làm điều gì đó quá sớm, đặc biệt là không suy nghĩ kỹ càng.",
+      "collocations_vi": {
+        "accused of jumping the gun": "bị cáo buộc hành động hấp tấp/trước thời hạn"
+      },
+      "synonyms_vi": {
+        "act prematurely": "hành động quá sớm, hấp tấp",
+        "be hasty": "vội vàng, hấp tấp"
+      },
+      "example_vi": "Họ đã hành động hấp tấp khi công bố chiến thắng trước khi kết quả cuối cùng được xác nhận.",
+      "antonyms_vi": {}
+    },
+    {
+      "term": "ferment",
+      "level": "C1",
+      "vi": "lên men",
+      "pron": "🇺🇸 /fɚˈment/ 🇬🇧 /fəˈment/",
+      "register": "academic",
+      "example": "You need to leave the fruit juice to ferment for several days.",
+      "note": "Động từ chính mô tả sự biến đổi hóa học nhờ vi sinh vật.",
+      "situation": "Quá trình ủ rượu hoặc làm kim chi.",
+      "pos": "v.",
+      "collocations": [
+        "ferment naturally",
+        "allow to ferment"
+      ],
+      "synonyms": [
+        "brew"
+      ],
+      "en_def": "(Of a substance, especially a liquid) to change chemically through the action of yeast or bacteria, often producing alcohol or gas.",
+      "deck": "C1",
+      "key": "cluster_74_8",
+      "cluster": "cluster_74",
+      "day": 74,
+      "phonetic_distractors": [
+        "vermont",
+        "meant",
+        "cement",
+        "forget",
+        "percent"
+      ],
+      "ipa_distractors": {
+        "vermont": "/vɚmˈɑːnt/",
+        "meant": "/mɛnt/",
+        "cement": "/səmˈɛnt/",
+        "forget": "/fɚɡˈɛt/",
+        "percent": "/pɚsˈɛnt/"
+      },
+      "en_def_vi": "(nói về một chất, đặc biệt là chất lỏng) biến đổi về mặt hóa học nhờ tác động của men hoặc vi khuẩn, thường tạo ra cồn hoặc khí.",
+      "collocations_vi": {
+        "ferment naturally": "lên men tự nhiên",
+        "allow to ferment": "để cho lên men"
+      },
+      "synonyms_vi": {
+        "brew": "ủ (rượu, bia)"
+      },
+      "example_vi": "Bạn cần để nước trái cây lên men trong vài ngày.",
+      "antonyms": [],
+      "antonyms_vi": {}
+    },
+    {
+      "key": "cluster_74_9",
+      "term": "once in a blue moon",
+      "example": "(A solar eclipse of this magnitude happens only once in a blue moon.)",
+      "vi": "rất hiếm khi",
+      "pron": "🇺🇸 /wʌns ɪn ə blu mun/ 🇬🇧 /wʌns ɪn ə bluː muːn/",
+      "topic": "General",
+      "deck": "C1",
+      "pos": "idiom",
+      "collocations": [
+        "happen once in a blue moon",
+        "occur once in a blue moon"
+      ],
+      "synonyms": [
+        "rarely",
+        "seldom"
+      ],
+      "antonyms": [
+        "often"
+      ],
+      "en_def": "Not very often.",
+      "cluster": "cluster_74",
+      "day": 74,
+      "en_def_vi": "Không thường xuyên xảy ra.",
+      "collocations_vi": {
+        "happen once in a blue moon": "hiếm khi xảy ra",
+        "occur once in a blue moon": "hiếm khi xảy ra"
+      },
+      "synonyms_vi": {
+        "rarely": "hiếm khi",
+        "seldom": "ít khi"
+      },
+      "example_vi": "Một hiện tượng nhật thực có quy mô như thế này rất hiếm khi xảy ra.",
+      "antonyms_vi": {
+        "often": "thường xuyên"
+      }
+    },
+    {
+      "term": "knead",
+      "level": "C1",
+      "vi": "nhào (bột)",
+      "pron": "🇺🇸 /niːd/ 🇬🇧 /niːd/",
+      "register": "neutral",
+      "example": "Knead the dough for ten minutes until it becomes smooth.",
+      "note": "Chữ 'k' là âm câm.",
+      "situation": "Mô tả động tác dùng tay nhồi bột.",
+      "pos": "v.",
+      "collocations": [
+        "knead the dough",
+        "knead gently"
+      ],
+      "synonyms": [
+        "massage",
+        "work"
+      ],
+      "en_def": "To work (moistened flour or clay) into dough or paste with the hands.",
+      "deck": "C1",
+      "key": "cluster_84_9",
+      "cluster": "cluster_84",
+      "day": 84,
+      "phonetic_distractors": [
+        "feed",
+        "seed",
+        "weed",
+        "neo",
+        "reed"
+      ],
+      "ipa_distractors": {
+        "feed": "/fiːd/",
+        "seed": "/siːd/",
+        "weed": "/wiːd/",
+        "neo": "/nˈiːoʊ/",
+        "reed": "/riːd/"
+      },
+      "en_def_vi": "Dùng tay nhào bột đã làm ẩm hoặc đất sét thành khối bột hoặc hỗn hợp sệt.",
+      "collocations_vi": {
+        "knead the dough": "nhào bột",
+        "knead gently": "nhào nhẹ nhàng"
+      },
+      "synonyms_vi": {
+        "massage": "nhào, xoa bóp",
+        "work": "nhào nặn"
+      },
+      "example_vi": "Nhào bột trong mười phút cho đến khi bột mịn.",
+      "antonyms": [],
+      "antonyms_vi": {}
+    },
+    {
+      "key": "cluster_88_8",
+      "term": "water under the bridge",
+      "example": "(We had a dispute years ago, but that's all water under the bridge now.)",
+      "vi": "chuyện đã qua, không còn quan trọng",
+      "pron": "🇺🇸 /ˈwɔtər ˈʌndər ðə brɪdʒ/ 🇬🇧 /ˈwɔːtə ˈʌndə ðə brɪdʒ/",
+      "topic": "General",
+      "deck": "C1",
+      "pos": "idiom",
+      "collocations": [
+        "be water under the bridge"
+      ],
+      "synonyms": [
+        "forgiven and forgotten",
+        "past"
+      ],
+      "antonyms": [],
+      "en_def": "Problems that someone has had in the past that they do not worry about because they happened a long time ago.",
+      "cluster": "cluster_88",
+      "day": 88,
+      "en_def_vi": "Những vấn đề ai đó từng gặp phải trong quá khứ mà họ không còn lo lắng nữa vì chúng đã xảy ra từ lâu.",
+      "collocations_vi": {
+        "be water under the bridge": "là chuyện đã qua rồi, không còn quan trọng"
+      },
+      "synonyms_vi": {
+        "forgiven and forgotten": "đã tha thứ và quên đi",
+        "past": "chuyện quá khứ"
+      },
+      "example_vi": "Chúng tôi từng có mâu thuẫn nhiều năm trước, nhưng giờ chuyện đó đã qua rồi.",
+      "antonyms_vi": {}
+    },
+    {
+      "key": "cluster_92_8",
+      "term": "the black sheep",
+      "example": "(He has always been the black sheep of the family because of his artistic choices.)",
+      "vi": "kẻ lập dị, thành viên cá biệt",
+      "pron": "🇺🇸 /ðə blæk ʃiːp/ 🇬🇧 /ðə blæk ʃiːp/",
+      "topic": "General",
+      "deck": "C1",
+      "pos": "idiom",
+      "collocations": [
+        "the black sheep of the family"
+      ],
+      "synonyms": [
+        "outcast",
+        "rebel"
+      ],
+      "antonyms": [],
+      "en_def": "A person who has done something bad that brings embarrassment or shame to his or her family.",
+      "cluster": "cluster_92",
+      "day": 92,
+      "en_def_vi": "Một người đã làm điều gì đó xấu khiến gia đình mình bị bẽ mặt hoặc xấu hổ.",
+      "collocations_vi": {
+        "the black sheep of the family": "đứa con cá biệt trong gia đình"
+      },
+      "synonyms_vi": {
+        "outcast": "kẻ bị ruồng bỏ",
+        "rebel": "kẻ nổi loạn"
+      },
+      "example_vi": "Anh ấy luôn là kẻ lập dị của gia đình vì những lựa chọn nghệ thuật của mình.",
+      "antonyms_vi": {}
+    },
+    {
+      "term": "sauté",
+      "level": "C1",
+      "vi": "áp chảo, xào nhanh",
+      "pron": "🇺🇸 /sɔːˈteɪ/ 🇬🇧 /ˈsəʊ.teɪ/",
+      "register": "academic/neutral",
+      "example": "Sauté the onions until they are translucent.",
+      "note": "Từ mượn tiếng Pháp, chỉ kỹ thuật xào với ít dầu lửa to.",
+      "situation": "Xào hành tây để làm sốt.",
+      "pos": "v.",
+      "collocations": [
+        "sauté lightly",
+        "sauté in butter"
+      ],
+      "synonyms": [
+        "pan-fry"
+      ],
+      "en_def": "To fry quickly in a little hot fat.",
+      "deck": "C1",
+      "key": "cluster_92_9",
+      "cluster": "cluster_92",
+      "day": 92,
+      "en_def_vi": "Chiên nhanh với một ít mỡ nóng.",
+      "collocations_vi": {
+        "sauté lightly": "áp chảo nhẹ",
+        "sauté in butter": "áp chảo với bơ"
+      },
+      "synonyms_vi": {
+        "pan-fry": "chiên/áp chảo"
+      },
+      "example_vi": "Áp chảo hành tây cho đến khi chúng trong lại.",
+      "antonyms": [],
+      "antonyms_vi": {}
+    },
+    {
+      "key": "cluster_99_4",
+      "term": "whip up",
+      "example": "(The artist whipped up a quick sketch of the scenery.)",
+      "vi": "tạo ra (nhanh chóng), kích động",
+      "pron": "🇺🇸 /wɪp ʌp/ 🇬🇧 /wɪp ʌp/",
+      "topic": "General",
+      "deck": "B2",
+      "pos": "v.",
+      "collocations": [
+        "whip up enthusiasm",
+        "whip up a masterpiece"
+      ],
+      "synonyms": [
+        "create quickly",
+        "generate"
+      ],
+      "antonyms": [],
+      "en_def": "To make or create something quickly.",
+      "cluster": "cluster_99",
+      "day": 99,
+      "en_def_vi": "Tạo ra hoặc chế tạo thứ gì đó một cách nhanh chóng.",
+      "collocations_vi": {
+        "whip up enthusiasm": "khơi dậy sự nhiệt tình",
+        "whip up a masterpiece": "tạo ra một kiệt tác nhanh chóng"
+      },
+      "synonyms_vi": {
+        "create quickly": "tạo ra nhanh chóng",
+        "generate": "tạo ra"
+      },
+      "example_vi": "Người họa sĩ đã nhanh chóng phác thảo lại phong cảnh.",
+      "antonyms_vi": {}
+    },
+    {
+      "term": "aromatic",
+      "level": "C1",
+      "vi": "có mùi thơm",
+      "pron": "🇺🇸 /ˌer.əˈmæt̬.ɪk/ 🇬🇧 /ˌær.əˈmæt.ɪk/",
+      "register": "academic",
+      "example": "Cinnamon is a sweet and aromatic spice.",
+      "note": "Từ vựng trang trọng để diễn tả mùi hương dễ chịu của thức ăn.",
+      "situation": "Miêu tả hương vị một món ăn cao cấp.",
+      "pos": "adj.",
+      "collocations": [
+        "aromatic herbs",
+        "aromatic smell"
+      ],
+      "synonyms": [
+        "fragrant",
+        "scented"
+      ],
+      "en_def": "Having a pleasant and distinctive smell.",
+      "deck": "C1",
+      "key": "cluster_102_8",
+      "cluster": "cluster_102",
+      "day": 102,
+      "phonetic_distractors": [
+        "dramatic",
+        "automatic",
+        "dramatically",
+        "promoting",
+        "romantic"
+      ],
+      "ipa_distractors": {
+        "dramatic": "/drəˈmætɪk/",
+        "automatic": "/ˌɔːtəmˈætɪk/",
+        "dramatically": "/drəˈmætɪkli/",
+        "promoting": "/prəmˈoʊtɪŋ/",
+        "romantic": "/roʊmˈæntɪk/"
+      },
+      "en_def_vi": "Có mùi thơm dễ chịu và đặc trưng.",
+      "collocations_vi": {
+        "aromatic herbs": "thảo mộc thơm",
+        "aromatic smell": "mùi thơm"
+      },
+      "synonyms_vi": {
+        "fragrant": "thơm ngát",
+        "scented": "có hương thơm"
+      },
+      "example_vi": "Quế là một loại gia vị ngọt và có mùi thơm.",
+      "antonyms": [
+        "odorless"
+      ],
+      "antonyms_vi": {
+        "odorless": "không mùi"
+      }
+    },
+    {
+      "term": "mesmerizing",
+      "level": "C1",
+      "vi": "đầy mê hoặc, thu hút",
+      "pron": "🇺🇸 /ˈmɛzməˌraɪzɪŋ/ 🇬🇧 /ˈmezməraɪzɪŋ/",
+      "register": "academic",
+      "example": "Her performance was truly mesmerizing.",
+      "note": "Chỉ trạng thái như bị thôi miên bởi điều gì đó quá thu hút.",
+      "situation": "Mô tả một cảnh tượng, tiết mục nghệ thuật đẹp đến mức không thể rời mắt.",
+      "pos": "adj.",
+      "collocations": [
+        "mesmerizing performance",
+        "mesmerizing beauty"
+      ],
+      "synonyms": [
+        "captivating",
+        "spellbinding"
+      ],
+      "en_def": "Holding the attention of someone to the exclusion of all else or so as to transfix them.",
+      "deck": "C1",
+      "key": "cluster_103_9",
+      "cluster": "cluster_103",
+      "day": 103,
+      "phonetic_distractors": [
+        "encouraging",
+        "exercises",
+        "surprising",
+        "rendering",
+        "messaging"
+      ],
+      "ipa_distractors": {
+        "encouraging": "/ɛnkˈɜːrɪdʒɪŋ/",
+        "exercises": "/ˈek.sɚ.saɪz/",
+        "surprising": "/sɚprˈaɪzɪŋ/",
+        "rendering": "/rˈɛndɚɪŋ/",
+        "messaging": "/mˈɛsɪdʒɪŋ/"
+      },
+      "en_def_vi": "Giữ sự chú ý của ai đó đến mức loại trừ mọi thứ khác, hoặc khiến họ như bị thôi miên.",
+      "collocations_vi": {
+        "mesmerizing performance": "màn trình diễn mê hoặc",
+        "mesmerizing beauty": "vẻ đẹp mê hoặc"
+      },
+      "synonyms_vi": {
+        "captivating": "quyến rũ, cuốn hút",
+        "spellbinding": "hớp hồn, mê hoặc"
+      },
+      "example_vi": "Màn trình diễn của cô ấy thực sự đầy mê hoặc.",
+      "antonyms": [
+        "boring"
+      ],
+      "antonyms_vi": {
+        "boring": "nhàm chán"
+      }
+    },
+    {
+      "key": "cluster_105_4",
+      "term": "swell up",
+      "example": "(Her ankle began to swell up after the injury.)",
+      "vi": "sưng tấy",
+      "pron": "🇺🇸 /swel ʌp/ 🇬🇧 /swel ʌp/",
+      "topic": "General",
+      "deck": "B2",
+      "pos": "v.",
+      "collocations": [
+        "ankles swell up",
+        "eyes swell up"
+      ],
+      "synonyms": [
+        "puff up",
+        "become swollen"
+      ],
+      "antonyms": [
+        "shrink"
+      ],
+      "en_def": "To become larger and rounder than normal, often because of an injury or illness.",
+      "cluster": "cluster_105",
+      "day": 105,
+      "en_def_vi": "Trở nên to hơn và tròn hơn bình thường, thường là do chấn thương hoặc bệnh tật.",
+      "collocations_vi": {
+        "ankles swell up": "mắt cá chân sưng lên",
+        "eyes swell up": "mắt sưng lên"
+      },
+      "synonyms_vi": {
+        "puff up": "phồng lên, sưng lên",
+        "become swollen": "trở nên sưng tấy"
+      },
+      "example_vi": "Mắt cá chân của cô ấy bắt đầu sưng tấy sau chấn thương.",
+      "antonyms_vi": {
+        "shrink": "co lại, xẹp xuống"
+      }
+    },
+    {
+      "key": "cluster_109_8",
+      "term": "blind somebody with science",
+      "example": "(The presenter blinded us with science instead of giving a simple summary.)",
+      "vi": "làm ai bối rối bằng thuật ngữ chuyên môn",
+      "pron": "🇺🇸 /blaɪnd ˈsʌmbədi wɪð ˈsaɪəns/ 🇬🇧 /blaɪnd ˈsʌmbədi wɪð ˈsaɪəns/",
+      "topic": "General",
+      "deck": "C2",
+      "pos": "idiom",
+      "collocations": [
+        "blind the audience with science"
+      ],
+      "synonyms": [
+        "confuse",
+        "baffle"
+      ],
+      "antonyms": [],
+      "en_def": "To confuse someone by using difficult or technical words.",
+      "cluster": "cluster_109",
+      "day": 109,
+      "en_def_vi": "Làm ai đó bối rối bằng cách sử dụng những từ ngữ khó hiểu hoặc mang tính kỹ thuật.",
+      "collocations_vi": {
+        "blind the audience with science": "làm khán giả bối rối bằng thuật ngữ chuyên môn"
+      },
+      "synonyms_vi": {
+        "confuse": "làm bối rối",
+        "baffle": "làm bối rối, khó hiểu"
+      },
+      "example_vi": "Người thuyết trình đã khiến chúng tôi bối rối bằng những thuật ngữ chuyên môn thay vì đưa ra một bản tóm tắt đơn giản.",
+      "antonyms_vi": {}
+    },
+    {
+      "key": "cluster_111_8",
+      "term": "a double-edged sword",
+      "example": "(Globalization is a double-edged sword, bringing both prosperity and cultural loss.)",
+      "vi": "con dao hai lưỡi",
+      "pron": "🇺🇸 /ə ˌdʌbl ˈedʒd sɔːrd/ 🇬🇧 /ə ˌdʌbl ˈedʒd sɔːd/",
+      "topic": "General",
+      "deck": "C1",
+      "pos": "idiom",
+      "collocations": [
+        "act as a double-edged sword",
+        "prove to be a double-edged sword"
+      ],
+      "synonyms": [
+        "mixed blessing"
+      ],
+      "antonyms": [],
+      "en_def": "Something that has both good and bad consequences.",
+      "cluster": "cluster_111",
+      "day": 111,
+      "en_def_vi": "Một điều mang lại cả hậu quả tốt lẫn xấu.",
+      "collocations_vi": {
+        "act as a double-edged sword": "đóng vai trò như con dao hai lưỡi",
+        "prove to be a double-edged sword": "hóa ra là con dao hai lưỡi"
+      },
+      "synonyms_vi": {
+        "mixed blessing": "điều vừa có lợi vừa có hại"
+      },
+      "example_vi": "Toàn cầu hóa là con dao hai lưỡi, vừa mang lại sự thịnh vượng vừa gây ra sự mai một văn hóa.",
+      "antonyms_vi": {}
+    },
+    {
+      "key": "cluster_113_8",
+      "term": "pull through",
+      "example": "(The doctor said it was a severe heart attack, but he managed to pull through.)",
+      "vi": "hồi phục sau bạo bệnh",
+      "pron": "🇺🇸 /pʊl θruː/ 🇬🇧 /pʊl θruː/",
+      "topic": "General",
+      "deck": "C1",
+      "pos": "v.",
+      "collocations": [
+        "pull through a crisis",
+        "miraculously pull through"
+      ],
+      "synonyms": [
+        "survive",
+        "recover"
+      ],
+      "antonyms": [
+        "succumb"
+      ],
+      "en_def": "To get better after a serious illness or injury.",
+      "cluster": "cluster_113",
+      "day": 113,
+      "en_def_vi": "Trở nên khỏe lại sau một căn bệnh nghiêm trọng hoặc chấn thương.",
+      "collocations_vi": {
+        "pull through a crisis": "vượt qua khủng hoảng",
+        "miraculously pull through": "hồi phục một cách kỳ diệu"
+      },
+      "synonyms_vi": {
+        "survive": "sống sót",
+        "recover": "hồi phục"
+      },
+      "example_vi": "Bác sĩ nói đó là một cơn đau tim nghiêm trọng, nhưng ông ấy đã vượt qua và hồi phục.",
+      "antonyms_vi": {
+        "succumb": "gục ngã, không qua khỏi (bệnh tật)"
+      }
+    },
+    {
+      "key": "cluster_116_8",
+      "term": "move the goalposts",
+      "example": "(Every time I try to meet their requirements, they move the goalposts.)",
+      "vi": "thay đổi luật lệ (gây bất lợi)",
+      "pron": "🇺🇸 /muv ðə ˈɡoʊlˌpoʊsts/ 🇬🇧 /muːv ðə ˈɡəʊlˌpəʊsts/",
+      "topic": "General",
+      "deck": "C1",
+      "pos": "idiom",
+      "collocations": [
+        "always moving the goalposts"
+      ],
+      "synonyms": [
+        "change the rules",
+        "shift the parameters"
+      ],
+      "antonyms": [],
+      "en_def": "To change the rules while someone is trying to do something in order to make it more difficult for them.",
+      "cluster": "cluster_116",
+      "day": 116,
+      "en_def_vi": "Thay đổi luật chơi trong khi ai đó đang cố gắng làm điều gì đó nhằm khiến việc đó trở nên khó khăn hơn cho họ.",
+      "collocations_vi": {
+        "always moving the goalposts": "luôn thay đổi luật chơi (gây bất lợi)"
+      },
+      "synonyms_vi": {
+        "change the rules": "thay đổi luật lệ",
+        "shift the parameters": "thay đổi các tiêu chí/thông số"
+      },
+      "example_vi": "Mỗi lần tôi cố gắng đáp ứng yêu cầu của họ, họ lại thay đổi luật chơi.",
+      "antonyms_vi": {}
+    }
+  ]
+}
