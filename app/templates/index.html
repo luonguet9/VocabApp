@@ -282,6 +282,12 @@ h1 { font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; ga
   transition: transform 0.4s ease;
 }
 .card.flipped { transform: rotateX(180deg); }
+/* Hiệu ứng trượt khi chuyển thẻ (Next/Prev hoặc vuốt) -- áp lên #cardWrap (khác .card, vốn đã
+   dùng transform riêng cho hiệu ứng lật), nên 2 hiệu ứng không xung đột transform với nhau. */
+@keyframes cardSlideInLeft  { from { transform: translateX(-32px); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
+@keyframes cardSlideInRight { from { transform: translateX(32px);  opacity: 0; } to { transform: translateX(0); opacity: 1; } }
+.card-wrap.slide-in-left  { animation: cardSlideInLeft 0.22s ease; }
+.card-wrap.slide-in-right { animation: cardSlideInRight 0.22s ease; }
 
 .card-face {
   position: absolute; width: 100%; height: 100%;
@@ -2542,6 +2548,19 @@ function flipCard() {
   }
 }
 
+function navigateFlash(dir) {
+  const btn = document.getElementById(dir === 'prev' ? 'btnNavPrev' : 'btnNavNext');
+  if (btn.disabled) return;
+  if (dir === 'prev') flashIdx--; else flashIdx++;
+  flipped = false;
+  renderFlash();
+  const wrap = document.getElementById('cardWrap');
+  const inClass = dir === 'prev' ? 'slide-in-left' : 'slide-in-right';
+  wrap.classList.remove('slide-in-left', 'slide-in-right');
+  void wrap.offsetWidth; // force reflow để animation chạy lại dù bấm liên tiếp cùng hướng
+  wrap.classList.add(inClass);
+}
+
 function markCard(known) {
   const c = flashCards[flashIdx];
   setKnown(c, known);
@@ -2556,20 +2575,20 @@ const SWIPE_THRESHOLD_PX = 60;
 function bindFlashEvents() {
   const wrap = document.getElementById('cardWrap');
 
-  // Swipe left/right: only after card is flipped
-  // Right → known ✅  |  Left → unknown ❌
+  // Swipe left/right: thuần điều hướng, không đánh dấu -- Trái → thẻ sau, Phải → thẻ trước
+  // (giống hệt btnNavNext/btnNavPrev, hoạt động bất kể thẻ đã lật hay chưa)
   let _tx = 0, _ty = 0;
   wrap.addEventListener('touchstart', e => {
     _tx = e.touches[0].clientX;
     _ty = e.touches[0].clientY;
   }, { passive: true });
   wrap.addEventListener('touchend', e => {
-    if (!flipped) return;
     const dx = e.changedTouches[0].clientX - _tx;
     const dy = e.changedTouches[0].clientY - _ty;
     if (Math.abs(dx) < SWIPE_THRESHOLD_PX || Math.abs(dx) < Math.abs(dy)) return;
     e.preventDefault(); // suppress synthesized click
-    markCard(dx > 0);
+    if (dx > 0) { document.getElementById('btnNavPrev').click(); }
+    else { document.getElementById('btnNavNext').click(); }
   });
 
   wrap.addEventListener('click', e => {
@@ -2589,12 +2608,8 @@ function bindFlashEvents() {
   });
   document.getElementById('btnKnow').addEventListener('click', () => markCard(true));
   document.getElementById('btnUnknown').addEventListener('click', () => markCard(false));
-  document.getElementById('btnNavPrev').addEventListener('click', () => {
-    if (flashIdx > 0) { flashIdx--; flipped = false; renderFlash(); }
-  });
-  document.getElementById('btnNavNext').addEventListener('click', () => {
-    flashIdx++; flipped = false; renderFlash();
-  });
+  document.getElementById('btnNavPrev').addEventListener('click', () => navigateFlash('prev'));
+  document.getElementById('btnNavNext').addEventListener('click', () => navigateFlash('next'));
   document.getElementById('btnFav').addEventListener('click', () => {
     const c = flashCards[flashIdx];
     toggleFav(c);
@@ -3783,6 +3798,7 @@ document.getElementById('quizSection').addEventListener('click', e => {
       document.getElementById('clusterPracticePane').classList.remove('hidden');
       updatePracticeBackBar();
       ensureClusterData().then(() => {
+        if (practiceSubMode !== 'cluster_pane') return; // user đã rời màn hình này
         buildDeckBar();
         buildClusterTypeBar();
         updateCqCounts();
@@ -3797,6 +3813,7 @@ document.getElementById('quizSection').addEventListener('click', e => {
     updatePracticeBackBar();
     cqFilter = cqFilterBtn.dataset.cqfilter;
     ensureClusterData().then(() => {
+      if (practiceSubMode !== 'cluster_quiz') return; // user đã rời màn hình này
       buildDeckBar();
       buildClusterTypeBar();
       startClusterQuiz();
@@ -3826,7 +3843,9 @@ let _clusterPromise = null;
 let _userGen = 0;  // tăng mỗi lần loadCards() chạy (đổi user) -- dùng để bỏ qua response /api/clusters lỗi thời
 
 let patternData = [], patternCards = [], patternIdx = 0, patternPhase = 1; // phase 1=Input, 2=Shadowing, 3=Production
-let patternProdIdx = 0, patternProdRevealed = false;
+// patternProdCache: {patternId: prompt} -- chọn ngẫu nhiên 1 lần khi vào Production cho unit hiện
+// tại, giữ nguyên khi re-render (vd bấm "Xem câu mẫu"), chỉ reset khi chuyển sang unit khác.
+let patternProdCache = null, patternProdRevealed = false;
 let _patternPromise = null;
 let patQuizQuestions = [], patQuizIdx = 0, patQuizScore = 0, patQuizWrong = 0;
 let patternScopeFilter = 'all'; // 'all' | 'compare' (chỉ các pattern có confusable_with)
@@ -3903,6 +3922,7 @@ async function ensureClusterData() {
 async function activateClusters() {
   document.getElementById('clusterCard').innerHTML = '<div class="loading">Đang tải clusters...</div>';
   await ensureClusterData();
+  if (mode !== 'cluster') return; // user đã chuyển tab khác trước khi fetch xong -- không ghi đè UI tab hiện tại
   buildDeckBar();
   buildClusterTypeBar();
   startClusters();
@@ -4004,17 +4024,20 @@ function groupPatternUnits(list) {
 async function startPatternLearn() {
   document.getElementById('patternCard').innerHTML = '<div class="loading">Đang tải pattern...</div>';
   await ensurePatternData();
+  if (mode !== 'pattern' || practiceSubMode !== 'pattern_learn') return; // user đã rời màn hình này
   buildPatternScopeBar();
   const sorted = [...getFilteredPatternData()].sort((a, b) => (a.order ?? 999) - (b.order ?? 999));
   patternCards = groupPatternUnits(sorted);
-  patternIdx = 0; patternPhase = 1; patternProdIdx = 0; patternProdRevealed = false;
+  patternIdx = 0; patternPhase = 1; patternProdCache = null; patternProdRevealed = false;
   renderPatternPhase();
 }
 
 function pickProductionPrompt(p) {
+  if (!patternProdCache) patternProdCache = {};
+  if (patternProdCache[p.id]) return patternProdCache[p.id];
   const prompts = p.production_prompts || [];
   if (!prompts.length) return null;
-  return prompts[Math.floor(Math.random() * prompts.length)];
+  return (patternProdCache[p.id] = prompts[Math.floor(Math.random() * prompts.length)]);
 }
 
 function renderPatternPhase() {
@@ -4222,10 +4245,10 @@ function buildPatternProductionSingle(p) {
 
 document.getElementById('patternLearnArea').addEventListener('click', e => {
   if (e.target.closest('#btnPatternPrev')) {
-    if (patternIdx > 0) { patternIdx--; patternPhase = 1; patternProdRevealed = false; renderPatternPhase(); } return;
+    if (patternIdx > 0) { patternIdx--; patternPhase = 1; patternProdCache = null; patternProdRevealed = false; renderPatternPhase(); } return;
   }
   if (e.target.closest('#btnPatternNext')) {
-    patternIdx++; patternPhase = 1; patternProdRevealed = false; renderPatternPhase(); return;
+    patternIdx++; patternPhase = 1; patternProdCache = null; patternProdRevealed = false; renderPatternPhase(); return;
   }
   const nextBtn = e.target.closest('[data-nextphase]');
   if (nextBtn) { patternPhase = parseInt(nextBtn.dataset.nextphase, 10); renderPatternPhase(); return; }
@@ -4240,7 +4263,7 @@ document.getElementById('patternLearnArea').addEventListener('click', e => {
     patternProdRevealed = true; renderPatternPhase(); return;
   }
   if (e.target.closest('#btnPatternSkip')) {
-    patternIdx++; patternPhase = 1; patternProdRevealed = false; renderPatternPhase(); return;
+    patternIdx++; patternPhase = 1; patternProdCache = null; patternProdRevealed = false; renderPatternPhase(); return;
   }
   const rateBtn = e.target.closest('[data-rate]');
   if (rateBtn) {
@@ -4254,7 +4277,7 @@ document.getElementById('patternLearnArea').addEventListener('click', e => {
       }
     });
     renderChecklistBadge();
-    patternIdx++; patternPhase = 1; patternProdRevealed = false; renderPatternPhase();
+    patternIdx++; patternPhase = 1; patternProdCache = null; patternProdRevealed = false; renderPatternPhase();
     return;
   }
 });
@@ -4329,6 +4352,7 @@ function buildPatQuestions() {
 async function startPatternQuiz() {
   document.getElementById('patQ').textContent = 'Đang tải...';
   await ensurePatternData();
+  if (mode !== 'quiz' || practiceSubMode !== 'pattern_quiz') return; // user đã rời màn hình này
   buildPatternScopeBar();
   patQuizQuestions = buildPatQuestions();
   patQuizIdx = 0; patQuizScore = 0; patQuizWrong = 0;
@@ -4762,3 +4786,4 @@ lucide.createIcons();
 </script>
 </body>
 </html>
+
